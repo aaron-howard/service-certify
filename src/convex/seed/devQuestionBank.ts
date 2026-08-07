@@ -23803,20 +23803,22 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"questionType": "multi",
 		"prompt": "Which two plugins are included in the PPM Standard plugin bundle for Strategic Portfolio Management? (Choose two.)",
 		"choices": [
-			"Project Portfolio Suite",
 			"Hardware Asset Management",
-			"Financial Planning",
-			"Security Incident Response"
+			"Security Incident Response",
+			"Project Portfolio Suite",
+			"Financial Planning"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"correctIndexes": [
-			0,
-			1
+			2,
+			3
 		],
-		"explanation": "The PPM Standard bundle includes Project Portfolio Suite and Financial Planning as core SPM foundation plugins.",
+		"explanation": "PPM Standard installs Project Portfolio Suite and Financial Planning (along with Rate Model and Ideation with PPM). Hardware Asset Management and Security Incident Response are not part of that bundle.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-business-management/strategic-portfolio-management/spm-implementation-overview.html"
-		]
+			"https://www.servicenow.com/docs/r/it-business-management/ppm-collaboration/plugins-installed-with-PPS-finance.html",
+			"https://www.servicenow.com/docs/r/it-business-management/ppm-collaboration/t_ActivateProjectPortfolioSuiteWithFinancials.html"
+		],
+		"domain": "SPM Implementation Overview"
 	},
 	{
 		"trackCode": "CIS-SPM",
@@ -23832,7 +23834,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"explanation": "SPM implementation preparation includes configuring portfolio structure, fiscal calendars, and persona access before teams begin planning and execution workflows.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-business-management/strategic-portfolio-management/spm-implementation-overview.html"
-		]
+		],
+		"domain": "SPM Implementation Overview"
 	},
 	{
 		"trackCode": "CIS-SPM",
@@ -23845,15 +23848,16 @@ export const DEV_PRACTICE_QUESTIONS = [
 			"Capex",
 			"Opex"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"correctIndexes": [
-			0,
-			1
+			2,
+			3
 		],
-		"explanation": "Expense lines use the Expense type field with Capex and Opex values to distinguish capital from operating spend in financial planning.",
+		"explanation": "Expense lines use Capex for capital expense and Opex for operating expense. Revenue and Depreciation are not Expense type values for that classification.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-business-management/financial-planning/expense-lines.html"
-		]
+			"https://www.servicenow.com/docs/r/it-business-management/project-management/expense-line-form.html"
+		],
+		"domain": "SPM Financials"
 	},
 	{
 		"trackCode": "CIS-SPM",
@@ -23869,7 +23873,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"explanation": "Cost types classify financial entries such as labor, hardware, and services so cost plans and expense lines roll up consistently.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-business-management/financial-planning/cost-type-and-rate-types.html"
-		]
+		],
+		"domain": "SPM Financials"
 	},
 	{
 		"trackCode": "CIS-SPM",
@@ -23885,7 +23890,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"explanation": "Rate types and rate models apply role-based rates to planned or actual hours so financial plans reflect labor cost accurately.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-business-management/financial-planning/rate-models.html"
-		]
+		],
+		"domain": "SPM Financials"
 	},
 	{
 		"trackCode": "CIS-SPM",
@@ -23901,7 +23907,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"explanation": "Cost plans capture planned financial detail at the investment level, including expense lines that classify spend by type and fiscal period.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-business-management/financial-planning/financial-planning-overview.html"
-		]
+		],
+		"domain": "SPM Financials"
 	},
 	{
 		"trackCode": "CIS-SPM",
@@ -23917,7 +23924,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"explanation": "Budget plans distribute approved funding across portfolios and investments, providing the financial ceiling that cost plans reference during planning cycles.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-business-management/financial-planning/financial-planning-overview.html"
-		]
+		],
+		"domain": "SPM Financials"
 	},
 	{
 		"trackCode": "CIS-SPM",
@@ -23933,7 +23941,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"explanation": "Expense lines depend on consistent rate type, cost type, and fiscal period values so cost plan totals reconcile when rates are updated.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-business-management/financial-planning/expense-lines.html"
-		]
+		],
+		"domain": "SPM Financials"
 	},
 	{
 		"trackCode": "CIS-SPM",
@@ -23949,7 +23958,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"explanation": "Rate models associate rate types with resource roles so planned and actual labor costs reflect role-specific billing rates.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-business-management/financial-planning/rate-models.html"
-		]
+		],
+		"domain": "SPM Financials"
 	},
 	{
 		"trackCode": "CIS-SPM",
@@ -23965,7 +23975,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"explanation": "Now Create for SPM helps teams draft portfolio-related content such as business cases and planning narratives using generative AI within SPM workflows.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-business-management/now-create-for-spm/now-create-spm.html"
-		]
+		],
+		"domain": "SPM Financials"
 	},
 	{
 		"trackCode": "CIS-SPM",
@@ -23981,7 +23992,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"explanation": "Variance analysis starts by comparing planned versus actual expense lines grouped by cost type and period to identify where overspend occurred.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-business-management/financial-planning/financial-planning-overview.html"
-		]
+		],
+		"domain": "SPM Financials"
 	},
 	{
 		"trackCode": "CIS-SPM",
@@ -23997,7 +24009,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"explanation": "Resource managers use Resource Management Workspace to view allocations, identify conflicts, and balance capacity across portfolio work.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-business-management/resource-management/resource-management-workspace.html"
-		]
+		],
+		"domain": "Resource Management"
 	},
 	{
 		"trackCode": "CIS-SPM",
@@ -24013,7 +24026,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"explanation": "Planning attribute values are defined on the Employee profile so resource plans and assignments can match people to work based on skills, location, and other criteria.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-business-management/resource-management/planning-attributes.html"
-		]
+		],
+		"domain": "Resource Management"
 	},
 	{
 		"trackCode": "CIS-SPM",
@@ -24029,7 +24043,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"explanation": "Resource assignments connect employees or groups to planned hours on investments, forming the basis for capacity and utilization reporting.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-business-management/resource-management/resource-assignment.html"
-		]
+		],
+		"domain": "Resource Management"
 	},
 	{
 		"trackCode": "CIS-SPM",
@@ -24045,7 +24060,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"explanation": "Users with the Resource Management Workspace role can access allocation views, resolve conflicts, and manage staffing across portfolio investments.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-business-management/resource-management/resource-management-workspace.html"
-		]
+		],
+		"domain": "Resource Management"
 	},
 	{
 		"trackCode": "CIS-SPM",
@@ -24061,7 +24077,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"explanation": "Resource Management Workspace surfaces allocation conflicts on a timeline so managers can adjust assignments before work starts.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-business-management/resource-management/resource-management-workspace.html"
-		]
+		],
+		"domain": "Resource Management"
 	},
 	{
 		"trackCode": "CIS-SPM",
@@ -24077,7 +24094,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"explanation": "Capacity planning compares resource availability to planned and requested work so portfolio decisions reflect realistic delivery constraints.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-business-management/resource-management/capacity-planning.html"
-		]
+		],
+		"domain": "Resource Management"
 	},
 	{
 		"trackCode": "CIS-SPM",
@@ -24093,7 +24111,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"explanation": "Resource schedules define working hours, holidays, and time off so capacity calculations exclude periods when staff cannot be assigned.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-business-management/resource-management/resource-schedules.html"
-		]
+		],
+		"domain": "Resource Management"
 	},
 	{
 		"trackCode": "CIS-SPM",
@@ -24109,7 +24128,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"explanation": "Planning attributes are defined in Resource Management configuration and then linked to the Employee profile so values can be maintained per person.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-business-management/resource-management/planning-attributes.html"
-		]
+		],
+		"domain": "Resource Management"
 	},
 	{
 		"trackCode": "CIS-SPM",
@@ -24125,7 +24145,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"explanation": "Planning attributes on employee profiles enable filtered resource selection when building plans and assignments for portfolio work.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-business-management/resource-management/planning-attributes.html"
-		]
+		],
+		"domain": "Resource Management"
 	},
 	{
 		"trackCode": "CIS-SPM",
@@ -24141,7 +24162,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"explanation": "Resource plans may include soft bookings during planning; hard assignments confirm committed staff once funding and scheduling are approved.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-business-management/resource-management/resource-assignment.html"
-		]
+		],
+		"domain": "Resource Management"
 	},
 	{
 		"trackCode": "CIS-SPM",
@@ -24157,7 +24179,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"explanation": "Overallocation views compare assigned hours to available capacity from resource schedules, flagging staffing conflicts early.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-business-management/resource-management/resource-management-workspace.html"
-		]
+		],
+		"domain": "Resource Management"
 	},
 	{
 		"trackCode": "CIS-SPM",
@@ -24173,7 +24196,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"explanation": "Resource schedule templates set default working time patterns that roll up to individual employee schedules for capacity calculations.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-business-management/resource-management/resource-schedules.html"
-		]
+		],
+		"domain": "Resource Management"
 	},
 	{
 		"trackCode": "CIS-SPM",
@@ -24189,7 +24213,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"explanation": "Delivery delays often trace to staffing bottlenecks; reviewing utilization and overallocation reveals whether capacity matches approved work.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-business-management/resource-management/capacity-planning.html"
-		]
+		],
+		"domain": "Resource Management"
 	},
 	{
 		"trackCode": "CIS-SPM",
@@ -24205,7 +24230,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"explanation": "Resource plans specify staffing needs by role and period, while assignments name the individuals or groups fulfilling that planned effort.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-business-management/resource-management/resource-management-overview.html"
-		]
+		],
+		"domain": "Resource Management"
 	},
 	{
 		"trackCode": "CIS-SPM",
@@ -24221,7 +24247,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"explanation": "Resource Management uses Employee profile records to maintain planning attributes, schedules, and role information for staffing decisions.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-business-management/resource-management/resource-management-overview.html"
-		]
+		],
+		"domain": "Resource Management"
 	},
 	{
 		"trackCode": "CIS-SPM",
@@ -24237,7 +24264,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"explanation": "Capacity forecasts combine resource plan requirements with assignment data to show both planned demand and confirmed staffing across the portfolio.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-business-management/resource-management/capacity-planning.html"
-		]
+		],
+		"domain": "Resource Management"
 	},
 	{
 		"trackCode": "CIS-SPM",
@@ -24253,7 +24281,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"explanation": "Group assignments allow resource plans to reserve capacity from a team before specific members are named in individual assignments.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-business-management/resource-management/resource-assignment.html"
-		]
+		],
+		"domain": "Resource Management"
 	},
 	{
 		"trackCode": "CIS-SPM",
@@ -24269,7 +24298,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"explanation": "Role separation limits resource managers to allocation tasks in RM Workspace while financial administrators maintain cost and budget plans.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-business-management/resource-management/resource-management-workspace.html"
-		]
+		],
+		"domain": "Resource Management"
 	},
 	{
 		"trackCode": "CIS-SPM",
@@ -24285,7 +24315,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"explanation": "Multiple resource schedule templates support regional working patterns; each employee inherits the schedule matching their location or business unit.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-business-management/resource-management/resource-schedules.html"
-		]
+		],
+		"domain": "Resource Management"
 	},
 	{
 		"trackCode": "CIS-SPM",
@@ -24301,7 +24332,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"explanation": "Resource Management Workspace dashboards aggregate allocation and utilization data so leaders can assess staffing across the portfolio in one view.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-business-management/resource-management/resource-management-workspace.html"
-		]
+		],
+		"domain": "Resource Management"
 	},
 	{
 		"trackCode": "CIS-SPM",
@@ -24317,7 +24349,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"explanation": "Effective planning attributes enable accurate staff filtering when building resource plans, reducing manual searches and mismatched assignments.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-business-management/resource-management/planning-attributes.html"
-		]
+		],
+		"domain": "Resource Management"
 	},
 	{
 		"trackCode": "CIS-SPM",
@@ -24333,7 +24366,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"explanation": "Idea Portal is the central application where employees submit ideas, participate in evaluation, and follow progress before ideas convert to demands or investments.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-business-management/idea-management/idea-portal.html"
-		]
+		],
+		"domain": "Idea and Demand"
 	},
 	{
 		"trackCode": "CIS-SPM",
@@ -24349,7 +24383,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"explanation": "Demand Workbench gives portfolio teams a unified view to rank, assess, and disposition demand items through the intake pipeline.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-business-management/demand-management/demand-workbench.html"
-		]
+		],
+		"domain": "Idea and Demand"
 	},
 	{
 		"trackCode": "CIS-SPM",
@@ -24365,7 +24400,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"explanation": "Demand states control the intake workflow, moving records through assessment, qualification, approval, and conversion stages with defined transitions.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-business-management/demand-management/demand-states.html"
-		]
+		],
+		"domain": "Idea and Demand"
 	},
 	{
 		"trackCode": "CIS-SPM",
@@ -24381,7 +24417,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"explanation": "Demand assessment templates define scored criteria so intake teams evaluate and compare demand items consistently during portfolio reviews.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-business-management/demand-management/demand-assessments.html"
-		]
+		],
+		"domain": "Idea and Demand"
 	},
 	{
 		"trackCode": "CIS-SPM",
@@ -24397,7 +24434,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"explanation": "Idea Portal provides submitters with visibility into idea status, reviewer feedback, and progression through evaluation stages.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-business-management/idea-management/idea-portal.html"
-		]
+		],
+		"domain": "Idea and Demand"
 	},
 	{
 		"trackCode": "CIS-SPM",
@@ -24413,28 +24451,31 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"explanation": "Approved ideas convert to demand records so they enter the governed intake, assessment, and funding workflow managed in Demand Workbench.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-business-management/demand-management/demand-management-overview.html"
-		]
+		],
+		"domain": "Idea and Demand"
 	},
 	{
 		"trackCode": "CIS-SPM",
 		"order": 38,
 		"questionType": "multi",
-		"prompt": "Which two demand states indicate that intake evaluation is underway but funding has not yet been approved? (Choose two.)",
+		"prompt": "Which two demand states indicate evaluation is underway before the demand can be Approved? (Choose two.)",
 		"choices": [
 			"Closed Complete",
 			"Cancelled",
-			"Qualified",
-			"Assessment In Progress"
+			"Screening",
+			"Qualified"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"correctIndexes": [
-			0,
-			1
+			2,
+			3
 		],
-		"explanation": "Assessment In Progress and Qualified are mid-pipeline states where demand items are being evaluated before final approval and conversion.",
+		"explanation": "Screening initiates stakeholder assessments; Qualified means the demand is ready for review and can be Approved. Closed Complete and Cancelled are not demand lifecycle states for that mid-pipeline evaluation.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-business-management/demand-management/demand-states.html"
-		]
+			"https://www.servicenow.com/docs/r/it-business-management/demand-management/r_UsingDemandManagement.html",
+			"https://www.servicenow.com/docs/r/it-business-management/demand-management/exploring-demand-management.html"
+		],
+		"domain": "Idea and Demand"
 	},
 	{
 		"trackCode": "CIS-SPM",
@@ -24450,7 +24491,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"explanation": "Demand assessments capture strategic alignment and priority scores that workbench views use to rank and filter intake for portfolio decisions.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-business-management/demand-management/demand-workbench.html"
-		]
+		],
+		"domain": "Idea and Demand"
 	},
 	{
 		"trackCode": "CIS-SPM",
@@ -24466,7 +24508,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"explanation": "Idea assessments use structured criteria so reviewers score submissions consistently before ideas advance toward demand conversion.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-business-management/idea-management/idea-portal.html"
-		]
+		],
+		"domain": "Idea and Demand"
 	},
 	{
 		"trackCode": "CIS-SPM",
@@ -24482,7 +24525,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"explanation": "Deferral allows portfolio teams to retain strategically valuable demand in the pipeline with transparent rationale when capacity constraints prevent immediate approval.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-business-management/demand-management/demand-workbench.html"
-		]
+		],
+		"domain": "Idea and Demand"
 	},
 	{
 		"trackCode": "CIS-SPM",
@@ -24498,7 +24542,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"explanation": "Idea Portal evaluation workflows route submissions to designated reviewers across departments so ideas receive structured feedback before promotion.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-business-management/idea-management/idea-portal.html"
-		]
+		],
+		"domain": "Idea and Demand"
 	},
 	{
 		"trackCode": "CIS-SPM",
@@ -24514,7 +24559,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"explanation": "Demand assessments should include quantified benefits; incomplete data warrants requesting updates before the item moves to qualification or approval.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-business-management/demand-management/demand-assessments.html"
-		]
+		],
+		"domain": "Idea and Demand"
 	},
 	{
 		"trackCode": "CIS-SPM",
@@ -24531,7 +24577,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-business-management/demand-management/demand-management-overview.html",
 			"https://www.servicenow.com/docs/r/it-business-management/idea-management/idea-portal.html"
-		]
+		],
+		"domain": "Idea and Demand"
 	},
 	{
 		"trackCode": "CIS-SPM",
@@ -24547,7 +24594,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"explanation": "Demand Management promotes approved demands into execution records such as projects, enhancements, changes, or defects depending on the intake category.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-business-management/demand-management/c_DemandManagement.html"
-		]
+		],
+		"domain": "Idea and Demand"
 	},
 	{
 		"trackCode": "CIS-SPM",
@@ -24563,7 +24611,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"explanation": "Demand tasks let managers delegate feasibility, cost, and effort assessments to subject matter experts while the demand remains in the intake pipeline.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-business-management/demand-management/c_DemandManagement.html"
-		]
+		],
+		"domain": "Idea and Demand"
 	},
 	{
 		"trackCode": "CIS-SPM",
@@ -24579,7 +24628,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"explanation": "Demand Management bubble charts plot assessment dimensions such as value and effort so portfolio teams compare intake items visually during prioritization.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-business-management/demand-management/c_DemandManagement.html"
-		]
+		],
+		"domain": "Idea and Demand"
 	},
 	{
 		"trackCode": "CIS-SPM",
@@ -24595,7 +24645,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"explanation": "Project Workspace centralizes planning, financials, resources, RIDAC, status reports, and analytics so project managers work from a single delivery hub.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-business-management/project-workspace/project-workspace-landing-page.html"
-		]
+		],
+		"domain": "Project Management"
 	},
 	{
 		"trackCode": "CIS-SPM",
@@ -24611,7 +24662,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"explanation": "Project and project task states control lifecycle progression through initiating, planning, executing, and closed stages with defined transitions.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-business-management/project-management/customize-project-task-states.html"
-		]
+		],
+		"domain": "Project Management"
 	},
 	{
 		"trackCode": "CIS-SPM",
@@ -24627,7 +24679,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"explanation": "Project Workspace is accessed from the Project application menu and provides the Next Experience interface for planning and managing investments.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-business-management/project-workspace/access-the-project-workspace.html"
-		]
+		],
+		"domain": "Project Management"
 	},
 	{
 		"trackCode": "CIS-SPM",
@@ -24643,7 +24696,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"explanation": "Setting sn_invst_pln.enable_budget_allocation_v2 to true activates the flexible budget allocation experience for projects in Project Workspace.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-business-management/project-workspace/enable-fin-budget-pws.html"
-		]
+		],
+		"domain": "Project Management"
 	},
 	{
 		"trackCode": "CIS-SPM",
@@ -24659,7 +24713,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"explanation": "Parent-child project hierarchies roll up progress, cost, and schedule data so program and portfolio views reflect consolidated delivery status.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-business-management/program-management/t_CreateAProgram.html"
-		]
+		],
+		"domain": "Project Management"
 	},
 	{
 		"trackCode": "CIS-SPM",
@@ -24675,7 +24730,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"explanation": "Selecting a parent project on a child record creates a subproject hierarchy that maintains consolidated visibility across related work streams.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-business-management/program-management/t_CreateAProgram.html"
-		]
+		],
+		"domain": "Project Management"
 	},
 	{
 		"trackCode": "CIS-SPM",
@@ -24691,7 +24747,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"explanation": "Project tasks form the work breakdown structure in Project Workspace and hold planned dates, hours, assignments, and dependency relationships.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-business-management/project-workspace/project-workspace-landing-page.html"
-		]
+		],
+		"domain": "Project Management"
 	},
 	{
 		"trackCode": "CIS-SPM",
@@ -24707,7 +24764,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"explanation": "Finish-to-Start dependencies require the predecessor task to complete before the successor task can begin, controlling schedule sequencing.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-business-management/project-management/r_EditTasks.html"
-		]
+		],
+		"domain": "Project Management"
 	},
 	{
 		"trackCode": "CIS-SPM",
@@ -24723,7 +24781,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"explanation": "Project templates provide predefined phases and tasks so teams launch new investments with consistent structure instead of building schedules from scratch.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-business-management/project-management/t_CreateAProject.html"
-		]
+		],
+		"domain": "Project Management"
 	},
 	{
 		"trackCode": "CIS-SPM",
@@ -24739,7 +24798,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"explanation": "RIDAC encompasses risks, issues, decisions, actions, and change requests; issue records document obstacles that may impact project delivery.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-business-management/project-management/ppm-collab-overview.html"
-		]
+		],
+		"domain": "Project Management"
 	},
 	{
 		"trackCode": "CIS-SPM",
@@ -24755,7 +24815,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"explanation": "Schedule baselines snapshot planned task dates so managers compare current progress against the saved plan to identify variance.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-business-management/project-workspace/create-project-baselines-in-project-workspace.html"
-		]
+		],
+		"domain": "Project Management"
 	},
 	{
 		"trackCode": "CIS-SPM",
@@ -24771,7 +24832,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"explanation": "Project status reports consolidate schedule, financial, and risk updates for stakeholders and are managed from the Project Workspace Status Reports page.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-business-management/project-workspace/view-status-report-in-project-workspace.html"
-		]
+		],
+		"domain": "Project Management"
 	},
 	{
 		"trackCode": "CIS-SPM",
@@ -24787,7 +24849,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"explanation": "The Gantt chart displays tasks, durations, and dependency connectors so managers evaluate schedule risk and predecessor relationships visually.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-business-management/project-management/r_EditTasks.html"
-		]
+		],
+		"domain": "Project Management"
 	},
 	{
 		"trackCode": "CIS-SPM",
@@ -24803,7 +24866,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"explanation": "Project Workspace Analytics surfaces schedule and health diagnostics so managers investigate variance without leaving the delivery workspace.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-business-management/project-workspace/project-workspace-landing-page.html"
-		]
+		],
+		"domain": "Project Management"
 	},
 	{
 		"trackCode": "CIS-SPM",
@@ -24819,7 +24883,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"explanation": "Project phase tracks the current lifecycle stage such as initiating, planning, executing, and closing as work progresses through governance gates.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-business-management/project-management/t_CreateAProject.html"
-		]
+		],
+		"domain": "Project Management"
 	},
 	{
 		"trackCode": "CIS-SPM",
@@ -24835,7 +24900,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"explanation": "Predecessor relationships support lag and lead time values that offset start or finish dates, directly affecting downstream milestone timing.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-business-management/project-workspace/update-the-dependency-details-for-tasks-from-project-workspace.html"
-		]
+		],
+		"domain": "Project Management"
 	},
 	{
 		"trackCode": "CIS-SPM",
@@ -24851,7 +24917,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"explanation": "Percent complete rolls up task and milestone progress to show how much of the approved scope has been delivered at a given point.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-business-management/project-management/t_CreateAProject.html"
-		]
+		],
+		"domain": "Project Management"
 	},
 	{
 		"trackCode": "CIS-SPM",
@@ -24867,7 +24934,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"explanation": "Milestones mark significant delivery checkpoints on the project schedule and are tracked for on-time completion during governance reviews.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-business-management/project-management/t_CreateAProject.html"
-		]
+		],
+		"domain": "Project Management"
 	},
 	{
 		"trackCode": "CIS-SPM",
@@ -24883,7 +24951,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"explanation": "Deliverables document required outputs with acceptance criteria so teams verify that contractual or compliance artifacts are produced before closure.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-business-management/project-management/t_CreateAProject.html"
-		]
+		],
+		"domain": "Project Management"
 	},
 	{
 		"trackCode": "CIS-SPM",
@@ -24899,7 +24968,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"explanation": "Projects can include a test phase when the Test Management plugin is active, providing a dedicated stage for quality validation activities.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-business-management/project-management/t_CreateAProject.html"
-		]
+		],
+		"domain": "Project Management"
 	},
 	{
 		"trackCode": "CIS-SPM",
@@ -24915,7 +24985,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"explanation": "Agile and Hybrid project types require the Agile Development 2.0 plugin and support iterative delivery tracking within Project Workspace.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-business-management/project-management/t_CreateAProject.html"
-		]
+		],
+		"domain": "Project Management"
 	},
 	{
 		"trackCode": "CIS-SPM",
@@ -24931,7 +25002,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"explanation": "Change requests within the RIDAC framework document scope changes that require review before the approved schedule or deliverables are modified.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-business-management/project-management/ppm-collab-overview.html"
-		]
+		],
+		"domain": "Project Management"
 	},
 	{
 		"trackCode": "CIS-SPM",
@@ -24947,7 +25019,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"explanation": "Projects are closed once deliverables are accepted and remaining tasks are resolved, moving the investment to its completed lifecycle state.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-business-management/project-management/t_CreateAProject.html"
-		]
+		],
+		"domain": "Project Management"
 	},
 	{
 		"trackCode": "CIS-SPM",
@@ -24963,7 +25036,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"explanation": "The Financials page in Project Workspace displays cost plans, budgets, expense lines, and variance data for project financial governance.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-business-management/project-workspace/project-workspace-landing-page.html"
-		]
+		],
+		"domain": "Project Management"
 	},
 	{
 		"trackCode": "CIS-SPM",
@@ -24979,7 +25053,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"explanation": "Resource assignments name the individuals or groups fulfilling planned hours on a resource plan, committing staffing to project tasks.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-business-management/resource-management/t_CreateResourcePlanProjectTask.html"
-		]
+		],
+		"domain": "Project Management"
 	},
 	{
 		"trackCode": "CIS-SPM",
@@ -24995,7 +25070,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"explanation": "Status reports and program-level dashboards consolidate delivery health indicators so executives review portfolio execution without manual data collection.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-business-management/program-management/t_CreateAProgram.html"
-		]
+		],
+		"domain": "Project Management"
 	},
 	{
 		"trackCode": "CIS-SPM",
@@ -25011,7 +25087,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"explanation": "Time sheet policies define the requirements for users to record time worked, including week start day, rate type visibility, and approval routing.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-business-management/time-card-management/worker-portal.html"
-		]
+		],
+		"domain": "Timecard Management"
 	},
 	{
 		"trackCode": "CIS-SPM",
@@ -25027,7 +25104,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"explanation": "Project time categories classify non-task time such as meetings and training on time cards so labor reporting captures all worked hours accurately.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-business-management/time-card-management/worker-portal.html"
-		]
+		],
+		"domain": "Timecard Management"
 	},
 	{
 		"trackCode": "CIS-SPM",
@@ -25043,7 +25121,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"explanation": "The Rate type column appears in Time Sheet Portal only when Allow multiple rate types is selected on the user's time sheet policy.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-business-management/time-card-management/worker-portal.html"
-		]
+		],
+		"domain": "Timecard Management"
 	},
 	{
 		"trackCode": "CIS-SPM",
@@ -25059,7 +25138,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"explanation": "The Week starts on field in a time sheet policy sets the first day displayed in the Time Sheet section of Time Sheet Portal.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-business-management/time-card-management/worker-portal.html"
-		]
+		],
+		"domain": "Timecard Management"
 	},
 	{
 		"trackCode": "CIS-SPM",
@@ -25075,7 +25155,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"explanation": "Time sheet policies define approvers and routing rules so submitted time sheets move through approval, rejection, or recall workflows.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-business-management/time-card-management/worker-portal.html"
-		]
+		],
+		"domain": "Timecard Management"
 	},
 	{
 		"trackCode": "CIS-SPM",
@@ -25091,7 +25172,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"explanation": "Portfolio Planning Workspace enhances traditional project and product portfolio management with lenses, roadmaps, and planning items for waterfall delivery.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-business-management/portfolio-planning/demand-form-ppw.html"
-		]
+		],
+		"domain": "Portfolio Planning Workspace"
 	},
 	{
 		"trackCode": "CIS-SPM",
@@ -25107,7 +25189,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"explanation": "Portfolio Planning Workspace lenses let managers switch planning perspectives such as Project Portfolio, Product, Organization, and Project Program.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-business-management/scenario-planning-in-spw/setting-up-alignment-planner-workspace.html"
-		]
+		],
+		"domain": "Portfolio Planning Workspace"
 	},
 	{
 		"trackCode": "CIS-SPM",
@@ -25123,7 +25206,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"explanation": "Portfolio Planning Workspace supports Project, Demand, and Program as standard planning items that managers add to portfolio plans and roadmaps.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-business-management/portfolio-planning/demand-form-ppw.html"
-		]
+		],
+		"domain": "Portfolio Planning Workspace"
 	},
 	{
 		"trackCode": "CIS-SPM",
@@ -25139,7 +25223,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"explanation": "The sn_align_core.apw_user role allows users to view, prioritize, and manage planning items within Portfolio Planning Workspace.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-business-management/scenario-planning-in-spw/setting-up-alignment-planner-workspace.html"
-		]
+		],
+		"domain": "Portfolio Planning Workspace"
 	},
 	{
 		"trackCode": "CIS-SPM",
@@ -25155,7 +25240,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"explanation": "Scenario planning in Portfolio Planning Workspace lets teams compare alternative funding and sequencing choices before committing portfolio changes.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-business-management/scenario-planning-in-spw/setting-up-alignment-planner-workspace.html"
-		]
+		],
+		"domain": "Portfolio Planning Workspace"
 	},
 	{
 		"trackCode": "CIS-SPM",
@@ -25171,7 +25257,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"explanation": "Portfolio plans in APW are created and shared so planning managers collaborate on prioritized work and roadmap content for a portfolio.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-business-management/scenario-planning-in-spw/setting-up-alignment-planner-workspace.html"
-		]
+		],
+		"domain": "Portfolio Planning Workspace"
 	},
 	{
 		"trackCode": "CIS-SPM",
@@ -25187,7 +25274,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"explanation": "Timeline roadmap views in Portfolio Planning Workspace display planning items across time so executives see when work is scheduled to deliver.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-business-management/portfolio-planning/demand-form-ppw.html"
-		]
+		],
+		"domain": "Portfolio Planning Workspace"
 	},
 	{
 		"trackCode": "CIS-SPM",
@@ -25203,7 +25291,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"explanation": "The PMO dashboard provides consolidated views of investment financials, demand and project pipeline, and calendar dates for portfolio oversight.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-business-management/ppm-collaboration/project-portfolio-content-pack.html"
-		]
+		],
+		"domain": "SPM Platform Analytics and Dashboards"
 	},
 	{
 		"trackCode": "CIS-SPM",
@@ -25219,7 +25308,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"explanation": "The Platform Analytics PPM Standard content pack delivers preconfigured dashboards through guided setup with minimal Performance Analytics configuration.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-business-management/ppm-collaboration/project-portfolio-content-pack.html"
-		]
+		],
+		"domain": "SPM Platform Analytics and Dashboards"
 	},
 	{
 		"trackCode": "CIS-SPM",
@@ -25235,28 +25325,30 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"explanation": "SPM Better Together integrations connect portfolio planning and delivery with complementary ServiceNow applications for unified operational visibility.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-business-management/scenario-planning-in-spw/better-together-with-other-apps-spw.html"
-		]
+		],
+		"domain": "SPM Better Together"
 	},
 	{
 		"trackCode": "CIS-SPM",
 		"order": 89,
 		"questionType": "multi",
-		"prompt": "Which two ServiceNow security applications commonly integrate with SPM for vulnerability and incident visibility? (Choose two.)",
+		"prompt": "Which two ServiceNow applications does Strategic Planning Better Together documentation describe as integration partners? (Choose two.)",
 		"choices": [
-			"Discovery for MID Server heartbeat interval configuration tuning",
 			"Vulnerability Response for grouping and remediating vulnerable items",
+			"Collaborative Work Management for planning and roadmapping Boards in a portfolio plan",
 			"Hardware Asset Management for disposal certificate generation only",
-			"Security Incident Response for managing security incident workflows"
+			"Digital Portfolio Management for roadmap planning access for DPM managers"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"correctIndexes": [
-			0,
+			1,
 			3
 		],
-		"explanation": "SPM Better Together integrations include Security Operations applications such as Vulnerability Response and Security Incident Response for cross-domain visibility.",
+		"explanation": "Better Together docs describe integrations with Collaborative Work Management (CWM Boards as planning items) and Digital Portfolio Management (roadmap planning for DPM managers), among others such as Enterprise Architecture and Digital Product Release—not Vulnerability Response or Hardware Asset Management disposal workflows.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-business-management/scenario-planning-in-spw/better-together-with-other-apps-spw.html"
-		]
+		],
+		"domain": "SPM Better Together"
 	},
 	{
 		"trackCode": "CIS-TPRM",
