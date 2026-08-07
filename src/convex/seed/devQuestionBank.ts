@@ -9616,7 +9616,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 0,
 		"explanation": "ITAM is the management of IT assets across their lifecycle, covering ownership, location, usage, cost, and value delivery.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-asset-management/it-asset-management.html"
+			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/exploring-ham.html",
+			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/ham-landing-page.html"
 		],
 		"domain": "IT Asset Management Overview and Fundamentals"
 	},
@@ -9633,7 +9634,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 3,
 		"explanation": "The ITAM suite comprises SAM, HAM, and Cloud Cost Management applications for software, hardware, and cloud spend visibility.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-asset-management/it-asset-management.html"
+			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/exploring-ham.html",
+			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/ham-landing-page.html"
 		],
 		"domain": "IT Asset Management Overview and Fundamentals"
 	},
@@ -9858,17 +9860,17 @@ export const DEV_PRACTICE_QUESTIONS = [
 	{
 		"trackCode": "CIS-HAM",
 		"order": 14,
-		"prompt": "Warehouse staff receive pallets at the dock without desktop access. Which HAM capability supports barcode scanning from mobile devices?",
+		"prompt": "Purchase order receiving creates a laptop asset whose serial number already exists on a CMDB CI. With IRE-based CI creation enabled for that model category, what is the expected result?",
 		"choices": [
-			"Service Mapping entry point discovery for application dependency maps",
-			"Mobile asset scanning for receiving and on-site audit validation",
-			"Automated software reclamation from unused installations across the estate",
-			"Cloud subscription chargeback allocation rules for multi-account billing"
+			"Asset creation fails because the serial number is already present on an existing CI or asset",
+			"The platform silently merges both records into a consumable quantity without review",
+			"A second asset is created and both records keep the same serial number indefinitely",
+			"Discovery deletes the existing CI so the new asset can reuse the serial without conflict"
 		],
-		"correctIndex": 1,
-		"explanation": "Mobile asset scanning enables receiving and audit activities at the stockroom or user location using barcode or RFID capture.",
+		"correctIndex": 0,
+		"explanation": "When IRE-based CI creation is in use for eligible model categories, serial numbers must be unique; asset creation fails if the serial already exists on a CI or asset.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/exploring-ham.html"
+			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/c_ManagingAssets.html"
 		],
 		"domain": "Data Integrity Attributes and Data Sources"
 	},
@@ -9960,15 +9962,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 	{
 		"trackCode": "CIS-HAM",
 		"order": 20,
-		"prompt": "CMDB integration requires governed CI creation when assets are received with serial numbers. Which property enables IRE-based CI creation from assets?",
+		"prompt": "CMDB integration requires governed CI creation when assets are received with serial numbers. Which system property enables IRE-based CI creation from assets?",
 		"choices": [
-			"Use of the CMDB Identification and Reconciliation engine for eligible CI classes",
-			"Immediate retirement of assets without approval workflows or disposal evidence",
-			"Bypass of stockroom receiving checkpoints for all open transfer orders",
-			"Automatic software entitlement imports from vendor spreadsheets without model mapping"
+			"glide.asset.create_ci_with_ire",
+			"glide.create_alm_asset.async",
+			"csdm.lifecycle.sync.between.ci.and.asset.activated",
+			"sn_itam_enable_cache_for_asset_ci_mapping"
 		],
 		"correctIndex": 0,
-		"explanation": "When enabled, eligible CI classes with serial-number identification and no dependent relationships can be created from assets through IRE.",
+		"explanation": "glide.asset.create_ci_with_ire enables CI creation from assets through the CMDB Identification and Reconciliation engine for eligible CI classes that identify on serial number and have no dependent relationships.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/c_ManagingAssets.html"
 		],
@@ -10021,8 +10023,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 3,
 		"explanation": "Opting in allows ServiceNow to improve normalization rules using anonymized customer model data while delivering tailored content updates.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-asset-management/it-asset-management.html",
-			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/hardware-normalization.html"
+			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/hardware-normalization.html",
+			"https://www.servicenow.com/docs/r/it-asset-management/create-itam-content-request.html"
 		],
 		"domain": "Data Integrity Attributes and Data Sources"
 	},
@@ -10232,7 +10234,6 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 0,
 		"explanation": "Discovery supplies current hardware attributes that HAM can reconcile with models, serials, and asset classes for trustworthy records.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-asset-management/it-asset-management.html",
 			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/c_ManagingAssets.html"
 		],
 		"domain": "Practical Management of IT Assets"
@@ -10268,7 +10269,6 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 2,
 		"explanation": "Weekly content updates deliver manufacturer, device type, and lifecycle normalization data to keep hardware and consumable models accurate.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-asset-management/it-asset-management.html",
 			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/hardware-normalization.html"
 		],
 		"domain": "Practical Management of IT Assets"
@@ -10941,8 +10941,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 2,
 		"explanation": "Modern HAM programs reconcile Discovery and cloud source data into governed hardware models with consistent lifecycle tracking.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-asset-management/it-asset-management.html",
-			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/c_ManagingAssets.html"
+			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/c_ManagingAssets.html",
+			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/exploring-ham.html"
 		],
 		"domain": "Operational Integration of IT Asset Management Processes"
 	},
@@ -10959,7 +10959,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 1,
 		"explanation": "Integrated ITAM connects SAM subscription management with HAM hardware custody and financial ownership for complete spend visibility.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-asset-management/it-asset-management.html"
+			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/exploring-ham.html",
+			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/ham-landing-page.html"
 		],
 		"domain": "Operational Integration of IT Asset Management Processes"
 	},

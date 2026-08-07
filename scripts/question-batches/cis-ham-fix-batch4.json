@@ -1,0 +1,160 @@
+[
+	{
+		"trackCode": "CIS-HAM",
+		"order": 14,
+		"prompt": "Purchase order receiving creates a laptop asset whose serial number already exists on a CMDB CI. With IRE-based CI creation enabled for that model category, what is the expected result?",
+		"choices": [
+			"Asset creation fails because the serial number is already present on an existing CI or asset",
+			"The platform silently merges both records into a consumable quantity without review",
+			"A second asset is created and both records keep the same serial number indefinitely",
+			"Discovery deletes the existing CI so the new asset can reuse the serial without conflict"
+		],
+		"correctIndex": 0,
+		"explanation": "When IRE-based CI creation is in use for eligible model categories, serial numbers must be unique; asset creation fails if the serial already exists on a CI or asset.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/c_ManagingAssets.html"
+		],
+		"domain": "Data Integrity Attributes and Data Sources"
+	},
+	{
+		"trackCode": "CIS-HAM",
+		"order": 20,
+		"prompt": "CMDB integration requires governed CI creation when assets are received with serial numbers. Which system property enables IRE-based CI creation from assets?",
+		"choices": [
+			"glide.asset.create_ci_with_ire",
+			"glide.create_alm_asset.async",
+			"csdm.lifecycle.sync.between.ci.and.asset.activated",
+			"sn_itam_enable_cache_for_asset_ci_mapping"
+		],
+		"correctIndex": 0,
+		"explanation": "glide.asset.create_ci_with_ire enables CI creation from assets through the CMDB Identification and Reconciliation engine for eligible CI classes that identify on serial number and have no dependent relationships.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/c_ManagingAssets.html"
+		],
+		"domain": "Data Integrity Attributes and Data Sources"
+	},
+	{
+		"trackCode": "CIS-HAM",
+		"order": 0,
+		"prompt": "A CIO asks the implementation team to draft a three-year IT Asset Management program roadmap. Which scope best aligns with ServiceNow ITAM guidance?",
+		"choices": [
+			"Manage hardware, software, and cloud spend across procurement, deployment, maintenance, and retirement with governed data and financial controls",
+			"Track CMDB classes only without inventory, procurement, or lifecycle financial context for hardware estates",
+			"Defend software publisher audits exclusively without hardware stockroom or fulfillment automation",
+			"Map network topology from cloud APIs without linking assets to ownership, cost, or disposal workflows"
+		],
+		"correctIndex": 0,
+		"explanation": "ITAM is the management of IT assets across their lifecycle, covering ownership, location, usage, cost, and value delivery.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/exploring-ham.html",
+			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/ham-landing-page.html"
+		],
+		"domain": "IT Asset Management Overview and Fundamentals"
+	},
+	{
+		"trackCode": "CIS-HAM",
+		"order": 1,
+		"prompt": "An enterprise wants unified visibility across on-premises laptops, SaaS subscriptions, and AWS EC2 instances. Which ServiceNow ITAM design supports that outcome?",
+		"choices": [
+			"Deploy Incident Management, Problem Management, and Change Management modules without any asset applications",
+			"Rely on Discovery and Service Mapping alone without SAM, HAM, or cloud cost applications",
+			"Use Performance Analytics dashboards only without normalized asset or entitlement records",
+			"Integrate Hardware Asset Management, Software Asset Management, and Cloud Cost Management under a shared ITAM governance model"
+		],
+		"correctIndex": 3,
+		"explanation": "The ITAM suite comprises SAM, HAM, and Cloud Cost Management applications for software, hardware, and cloud spend visibility.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/exploring-ham.html",
+			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/ham-landing-page.html"
+		],
+		"domain": "IT Asset Management Overview and Fundamentals"
+	},
+	{
+		"trackCode": "CIS-HAM",
+		"order": 23,
+		"prompt": "Why would an organization opt in to the Hardware Asset Management Content Service?",
+		"choices": [
+			"Remove all hardware models from the product catalog automatically after opt-in",
+			"Replace stock rules with manual spreadsheet ordering for every stockroom location",
+			"Disable weekly manufacturer updates from the hardware content library permanently",
+			"Share anonymized unnormalized model data to improve recognition and receive content updates"
+		],
+		"correctIndex": 3,
+		"explanation": "Opting in allows ServiceNow to improve normalization rules using anonymized customer model data while delivering tailored content updates.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/hardware-normalization.html",
+			"https://www.servicenow.com/docs/r/it-asset-management/create-itam-content-request.html"
+		],
+		"domain": "Data Integrity Attributes and Data Sources"
+	},
+	{
+		"trackCode": "CIS-HAM",
+		"order": 35,
+		"prompt": "Which Discovery outcome most directly improves hardware asset record accuracy in HAM?",
+		"choices": [
+			"Current hardware attributes and serial numbers reconciled with modeled asset classes",
+			"Automatic closure of open transfer orders at the time each discovery schedule completes",
+			"Conversion of every open incident into an asset task without stockroom validation",
+			"Removal of all CMDB relationships for network gear discovered on corporate subnets"
+		],
+		"correctIndex": 0,
+		"explanation": "Discovery supplies current hardware attributes that HAM can reconcile with models, serials, and asset classes for trustworthy records.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/c_ManagingAssets.html"
+		],
+		"domain": "Practical Management of IT Assets"
+	},
+	{
+		"trackCode": "CIS-HAM",
+		"order": 37,
+		"prompt": "How do weekly HAM content updates improve data integrity?",
+		"choices": [
+			"They replace stock rules with static reorder spreadsheets for every stockroom manager",
+			"They retire all assets exceeding five years of age automatically without approval",
+			"They supply manufacturer and device type normalization content for hardware models",
+			"They remove consumable inventory from stockroom audits and barcode scan workflows"
+		],
+		"correctIndex": 2,
+		"explanation": "Weekly content updates deliver manufacturer, device type, and lifecycle normalization data to keep hardware and consumable models accurate.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/hardware-normalization.html"
+		],
+		"domain": "Practical Management of IT Assets"
+	},
+	{
+		"trackCode": "CIS-HAM",
+		"order": 75,
+		"prompt": "Infrastructure teams deploy Windows and Linux VMs in AWS and Azure alongside on-premises servers. How should HAM track those hybrid assets?",
+		"choices": [
+			"Convert every VM into a consumable quantity without CI or asset linkage",
+			"Disable model normalization for cloud-discovered records to speed imports",
+			"Combine Discovery and cloud inventory feeds with normalized models and lifecycle states for virtual and physical hardware assets",
+			"Track only on-premises serial numbers and ignore cloud instances in the asset table"
+		],
+		"correctIndex": 2,
+		"explanation": "Modern HAM programs reconcile Discovery and cloud source data into governed hardware models with consistent lifecycle tracking.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/c_ManagingAssets.html",
+			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/exploring-ham.html"
+		],
+		"domain": "Operational Integration of IT Asset Management Processes"
+	},
+	{
+		"trackCode": "CIS-HAM",
+		"order": 76,
+		"prompt": "A SaaS team procures 5,000 collaboration seats while HAM manages corporate laptops. Which ITAM approach prevents duplicate spend and orphan assignments?",
+		"choices": [
+			"Retire laptop assets automatically when any SaaS subscription is activated",
+			"Coordinate SAM subscription records with HAM hardware assets through shared requester, cost center, and lifecycle governance",
+			"Track SaaS seats only in spreadsheets outside ServiceNow to avoid SAM licensing",
+			"Disable HAM catalog fulfillment whenever SAM records exist for the same user"
+		],
+		"correctIndex": 1,
+		"explanation": "Integrated ITAM connects SAM subscription management with HAM hardware custody and financial ownership for complete spend visibility.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/exploring-ham.html",
+			"https://www.servicenow.com/docs/r/it-asset-management/hardware-asset-management/ham-landing-page.html"
+		],
+		"domain": "Operational Integration of IT Asset Management Processes"
+	}
+]
