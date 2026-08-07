@@ -1,0 +1,36 @@
+[
+	{
+		"trackCode": "CAD",
+		"order": 36,
+		"prompt": "Contractors should read Contract records but never create or delete them. Which ACL design on the Contract table supports that?",
+		"choices": [
+			"A single write ACL that implicitly grants read, create, update, and delete together",
+			"A client script that sets g_form.setReadOnly true, which replaces table ACL evaluation",
+			"A table read ACL that includes the contractor role, without granting create or delete to that role",
+			"A UI Policy on Contract that hides the New button and therefore removes delete rights"
+		],
+		"correctIndex": 2,
+		"explanation": "ACLs are evaluated per operation. Granting read for the contractor role allows viewing records; create and delete remain denied when those users do not pass create/delete ACL conditions. Client scripts and UI Policies do not replace table ACL evaluation for record operations.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/australia-platform-security/page/administer/access-control-list/concept/access-control-rules.html",
+			"https://www.servicenow.com/docs/r/application-development/access-control-rules.html"
+		]
+	},
+	{
+		"trackCode": "CAD",
+		"order": 50,
+		"prompt": "A business rule in scope x_acme_app calls new x_other_app.Utils().calculate() and fails with a cross-scope access error. What must an administrator configure?",
+		"choices": [
+			"A new inbound email action in x_other_app",
+			"An import set staging table shared between scopes",
+			"A UI Policy on the Utils Script Include form",
+			"A cross-scope access privilege authorizing x_acme_app to access the x_other_app Script Include"
+		],
+		"correctIndex": 3,
+		"explanation": "Scoped applications cannot call another scope's Script Includes at runtime unless a cross-scope (restricted caller) access privilege explicitly authorizes that access. Runtime Access to Application Tables controls table data access, not Script Include execution across scopes.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/australia-application-development/page/build/applications/concept/restricted-caller-access-privilege.html",
+			"https://www.servicenow.com/docs/r/application-development/c_ApplicationAccessSettings.html"
+		]
+	}
+]

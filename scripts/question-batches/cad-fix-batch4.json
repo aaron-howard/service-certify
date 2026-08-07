@@ -1,0 +1,19 @@
+[
+	{
+		"trackCode": "CAD",
+		"order": 31,
+		"prompt": "An onSubmit client script must display a confirmation dialog when Estimated Cost exceeds 50000 and cancel submit if the user declines. Which approach meets that requirement?",
+		"choices": [
+			"Call confirm() with the warning text, then return false when the user cancels",
+			"Call g_form.addInfoMessage or showErrorBox, which always wait for OK and Cancel",
+			"Call gs.addInfoMessage in the client script, which blocks submit until the user replies",
+			"Call current.setAbortAction in the onSubmit script to halt client-side rendering"
+		],
+		"correctIndex": 0,
+		"explanation": "Client scripts use the browser confirm() dialog for OK/Cancel prompts. Returning false from onSubmit cancels the submission when the user declines. g_form messaging methods show informational or field errors but do not present a confirmation dialog that waits for cancel.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/australia-api-reference/page/script/useful-scripts/concept/c_ScriptingAlertInfoAndErrorMsgs.html",
+			"https://www.servicenow.com/docs/r/application-development/client-scripts.html"
+		]
+	}
+]

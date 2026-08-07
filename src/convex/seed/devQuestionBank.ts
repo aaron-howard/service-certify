@@ -1,7 +1,8 @@
+// @ts-nocheck — large generated bank exceeds TS2590 union limits
 import type { DevPracticeQuestionRow } from './devQuestionBank.types';
 
 /** Dev question bank; merge batches: `node scripts/extract-questions-from-transcripts.mjs --merge-batches` */
-export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
+export const DEV_PRACTICE_QUESTIONS = [
 	{
 		"trackCode": "CAD",
 		"order": 0,
@@ -16,7 +17,8 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"explanation": "App Engine Studio provides a guided low-code workspace to design scoped applications, including tables, forms, roles, and related artifacts in one flow.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/app-eng-studio-overview.html"
-		]
+		],
+		"domain": "Designing and Creating an Application"
 	},
 	{
 		"trackCode": "CAD",
@@ -32,7 +34,8 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"explanation": "A scoped application provides namespace isolation so other applications cannot access its tables and logic unless cross-scope privileges are granted.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/c_ApplicationScope.html"
-		]
+		],
+		"domain": "Designing and Creating an Application"
 	},
 	{
 		"trackCode": "CAD",
@@ -48,7 +51,8 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"explanation": "Table extension creates a child table that inherits the parent table's fields and behavior while allowing additional custom fields.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/table-extension.html"
-		]
+		],
+		"domain": "Designing and Creating an Application"
 	},
 	{
 		"trackCode": "CAD",
@@ -64,7 +68,8 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"explanation": "Application menus group modules that appear in the Application Navigator and route users to the application's lists, forms, and other content.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/application-menus-modules.html"
-		]
+		],
+		"domain": "Designing and Creating an Application"
 	},
 	{
 		"trackCode": "CAD",
@@ -80,7 +85,8 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"explanation": "A reference field stores a pointer to a single record on another table, enabling one-to-many relationships and form navigation via the reference.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/reference-field.html"
-		]
+		],
+		"domain": "Designing and Creating an Application"
 	},
 	{
 		"trackCode": "CAD",
@@ -96,7 +102,8 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"explanation": "Scoped applications isolate their artifacts; cross-scope access requires explicit privileges rather than open global access.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/c_ApplicationScope.html"
-		]
+		],
+		"domain": "Designing and Creating an Application"
 	},
 	{
 		"trackCode": "CAD",
@@ -112,7 +119,8 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"explanation": "Scoped applications suit packaged solutions with isolated artifacts, controlled access, and independent versioning compared to ad hoc global changes.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/c_ApplicationScope.html"
-		]
+		],
+		"domain": "Designing and Creating an Application"
 	},
 	{
 		"trackCode": "CAD",
@@ -128,7 +136,8 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"explanation": "Number maintenance on a string field auto-generates sequential values with an optional prefix when records are created.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/number-maintenance.html"
-		]
+		],
+		"domain": "Designing and Creating an Application"
 	},
 	{
 		"trackCode": "CAD",
@@ -144,7 +153,8 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"explanation": "Many-to-many relationships use an intermediate table so each side can associate with multiple records on the other table.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/many-to-many-relationships.html"
-		]
+		],
+		"domain": "Designing and Creating an Application"
 	},
 	{
 		"trackCode": "CAD",
@@ -160,7 +170,8 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"explanation": "Field labels are defined on dictionary entries; updating the Column label changes how the field appears on forms and lists.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/dictionary-entries.html"
-		]
+		],
+		"domain": "Designing and Creating an Application"
 	},
 	{
 		"trackCode": "CAD",
@@ -176,7 +187,8 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"explanation": "App Engine Management Center provides centralized visibility into scoped applications, versions, and deployment status across the environment.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/app-engine-management-center.html"
-		]
+		],
+		"domain": "Managing Applications"
 	},
 	{
 		"trackCode": "CAD",
@@ -192,7 +204,8 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"explanation": "An extended table inherits parent fields and can add its own; records remain queryable through the parent where configured.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/table-extension.html"
-		]
+		],
+		"domain": "Designing and Creating an Application"
 	},
 	{
 		"trackCode": "CAD",
@@ -208,7 +221,8 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"explanation": "Choice fields provide a fixed list of values on the same table without requiring a related table or reference relationship.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/field-types.html"
-		]
+		],
+		"domain": "Designing and Creating an Application"
 	},
 	{
 		"trackCode": "CAD",
@@ -224,7 +238,8 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"explanation": "Scoped application tables include the application scope prefix in the table name, such as x_vendor_app_table.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/c_ApplicationScope.html"
-		]
+		],
+		"domain": "Designing and Creating an Application"
 	},
 	{
 		"trackCode": "CAD",
@@ -240,7 +255,8 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"explanation": "Workflow Studio provides visual flow design for approvals and automation activities integrated with platform records.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/build-workflows/workflow-studio.html"
-		]
+		],
+		"domain": "Application Automation"
 	},
 	{
 		"trackCode": "CAD",
@@ -256,7 +272,8 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"explanation": "Related lists display associated records on a form based on reference or other configured relationships between tables.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/related-lists.html"
-		]
+		],
+		"domain": "Application User Interface"
 	},
 	{
 		"trackCode": "CAD",
@@ -272,7 +289,8 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"explanation": "Runtime Access to Application Tables defines whether other scopes can read scoped application tables at runtime.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/c_RuntimeAccessToAppTables.html"
-		]
+		],
+		"domain": "Security and Restricting Access"
 	},
 	{
 		"trackCode": "CAD",
@@ -288,7 +306,8 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"explanation": "Scoped applications are published or exported as application packages and installed on target instances rather than copied record by record.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/publish-application-to-store.html"
-		]
+		],
+		"domain": "Designing and Creating an Application"
 	},
 	{
 		"trackCode": "CAD",
@@ -304,7 +323,8 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"explanation": "UI Actions can expose form buttons whose client scripts perform client logic and invoke GlideAjax to execute server-side code.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/ui-actions.html"
-		]
+		],
+		"domain": "Application User Interface"
 	},
 	{
 		"trackCode": "CAD",
@@ -320,7 +340,8 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"explanation": "Form sections and layout on the table's form view control how fields are grouped and displayed on the record form.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/form-views.html"
-		]
+		],
+		"domain": "Designing and Creating an Application"
 	},
 	{
 		"trackCode": "CAD",
@@ -336,7 +357,8 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"explanation": "onLoad client scripts run when the form loads, making them appropriate for initializing field values before user interaction.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/client-scripts.html"
-		]
+		],
+		"domain": "Application User Interface"
 	},
 	{
 		"trackCode": "CAD",
@@ -352,7 +374,8 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"explanation": "onSubmit client scripts validate immediately before submission; returning false cancels the save and allows displaying a message to the user.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/client-scripts.html"
-		]
+		],
+		"domain": "Application User Interface"
 	},
 	{
 		"trackCode": "CAD",
@@ -368,7 +391,8 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"explanation": "The g_form object provides client-side methods to show, hide, and set mandatory state on form fields during script execution.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/g-form.html"
-		]
+		],
+		"domain": "Application User Interface"
 	},
 	{
 		"trackCode": "CAD",
@@ -384,7 +408,8 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"explanation": "UI Policies declaratively set fields mandatory, read-only, or visible based on conditions without requiring client scripting.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/ui-policies.html"
-		]
+		],
+		"domain": "Application User Interface"
 	},
 	{
 		"trackCode": "CAD",
@@ -400,7 +425,8 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"explanation": "GlideAjax invokes a client-callable Script Include on the server and returns data asynchronously to the client script.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/glideajax.html"
-		]
+		],
+		"domain": "Application User Interface"
 	},
 	{
 		"trackCode": "CAD",
@@ -416,7 +442,8 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"explanation": "onChange client scripts receive oldValue and newValue parameters; oldValue holds the field value before the user's change.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/client-scripts.html"
-		]
+		],
+		"domain": "Application User Interface"
 	},
 	{
 		"trackCode": "CAD",
@@ -438,7 +465,8 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/business-rules.html",
 			"https://www.servicenow.com/docs/r/application-development/ui-policies.html"
-		]
+		],
+		"domain": "Application User Interface"
 	},
 	{
 		"trackCode": "CAD",
@@ -454,7 +482,8 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"explanation": "The isLoading parameter in onChange scripts is true during initial form load, allowing scripts to avoid running logic prematurely.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/client-scripts.html"
-		]
+		],
+		"domain": "Application User Interface"
 	},
 	{
 		"trackCode": "CAD",
@@ -470,7 +499,8 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"explanation": "Catalog client scripts run against catalog item variables and can set visibility or read-only state based on variable changes.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/catalog-client-scripts.html"
-		]
+		],
+		"domain": "Application User Interface"
 	},
 	{
 		"trackCode": "CAD",
@@ -486,7 +516,8 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"explanation": "UI Actions support conditions on form context and roles to control when custom buttons appear and execute.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/ui-actions.html"
-		]
+		],
+		"domain": "Application User Interface"
 	},
 	{
 		"trackCode": "CAD",
@@ -502,23 +533,26 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"explanation": "UI Policies can declaratively show or hide fields based on form conditions without writing client scripts.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/ui-policies.html"
-		]
+		],
+		"domain": "Application User Interface"
 	},
 	{
 		"trackCode": "CAD",
 		"order": 31,
-		"prompt": "An onSubmit client script must display a confirmation dialog when Estimated Cost exceeds 50000 and cancel submit if the user declines. Which g_form method shows the message?",
+		"prompt": "An onSubmit client script must display a confirmation dialog when Estimated Cost exceeds 50000 and cancel submit if the user declines. Which approach meets that requirement?",
 		"choices": [
-			"g_form.addInfoMessage or showErrorBox depending on severity, with return false to cancel",
-			"GlideAjax.getReference to fetch a modal template from an external URL",
-			"gs.addInfoMessage in the client script, which always blocks submit automatically",
-			"current.setAbortAction in the onSubmit script to halt client-side rendering"
+			"Call confirm() with the warning text, then return false when the user cancels",
+			"Call g_form.addInfoMessage or showErrorBox, which always wait for OK and Cancel",
+			"Call gs.addInfoMessage in the client script, which blocks submit until the user replies",
+			"Call current.setAbortAction in the onSubmit script to halt client-side rendering"
 		],
 		"correctIndex": 0,
-		"explanation": "Client scripts use g_form messaging methods to inform users; returning false from onSubmit cancels the submission.",
+		"explanation": "Client scripts use the browser confirm() dialog for OK/Cancel prompts. Returning false from onSubmit cancels the submission when the user declines. g_form messaging methods show informational or field errors but do not present a confirmation dialog that waits for cancel.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/application-development/g-form.html"
-		]
+			"https://www.servicenow.com/docs/bundle/australia-api-reference/page/script/useful-scripts/concept/c_ScriptingAlertInfoAndErrorMsgs.html",
+			"https://www.servicenow.com/docs/r/application-development/client-scripts.html"
+		],
+		"domain": "Application User Interface"
 	},
 	{
 		"trackCode": "CAD",
@@ -534,7 +568,8 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"explanation": "GlideAjax response objects expose getAnswer for simple return values and getReference for reference field payloads from Script Includes.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/glideajax.html"
-		]
+		],
+		"domain": "Application User Interface"
 	},
 	{
 		"trackCode": "CAD",
@@ -550,7 +585,8 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"explanation": "Reverse if false on a UI Policy removes applied actions when the condition becomes false, restoring prior field state.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/ui-policies.html"
-		]
+		],
+		"domain": "Application User Interface"
 	},
 	{
 		"trackCode": "CAD",
@@ -566,7 +602,8 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"explanation": "onSubmit client scripts return false to prevent form submission when client-side validation fails.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/client-scripts.html"
-		]
+		],
+		"domain": "Application User Interface"
 	},
 	{
 		"trackCode": "CAD",
@@ -582,23 +619,26 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"explanation": "UI Policies handle straightforward field visibility and mandatory rules declaratively, reducing script maintenance for simple form behavior.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/ui-policies.html"
-		]
+		],
+		"domain": "Application User Interface"
 	},
 	{
 		"trackCode": "CAD",
 		"order": 36,
-		"prompt": "Contractors should read Contract records but never create or delete them. Which ACL type and operation combination should you define on the Contract table?",
+		"prompt": "Contractors should read Contract records but never create or delete them. Which ACL design on the Contract table supports that?",
 		"choices": [
 			"A single write ACL that implicitly grants read, create, update, and delete together",
 			"A client script that sets g_form.setReadOnly true, which replaces table ACL evaluation",
-			"A UI Policy on Contract that hides the New button and therefore removes delete rights",
-			"A read ACL granting access and separate create/delete ACLs that deny those operations"
+			"A table read ACL that includes the contractor role, without granting create or delete to that role",
+			"A UI Policy on Contract that hides the New button and therefore removes delete rights"
 		],
-		"correctIndex": 3,
-		"explanation": "ACLs are evaluated per operation; read access is controlled separately from create, write, and delete permissions on a table.",
+		"correctIndex": 2,
+		"explanation": "ACLs are evaluated per operation. Granting read for the contractor role allows viewing records; create and delete remain denied when those users do not pass create/delete ACL conditions. Client scripts and UI Policies do not replace table ACL evaluation for record operations.",
 		"sourceUrls": [
+			"https://www.servicenow.com/docs/bundle/australia-platform-security/page/administer/access-control-list/concept/access-control-rules.html",
 			"https://www.servicenow.com/docs/r/application-development/access-control-rules.html"
-		]
+		],
+		"domain": "Security and Restricting Access"
 	},
 	{
 		"trackCode": "CAD",
@@ -614,7 +654,8 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"explanation": "Roles are assigned to users and referenced in ACL conditions to restrict operations on tables and related resources.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/access-control-rules.html"
-		]
+		],
+		"domain": "Security and Restricting Access"
 	},
 	{
 		"trackCode": "CAD",
@@ -630,7 +671,8 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"explanation": "Field-level ACLs restrict access to specific columns independently of table-level read permissions.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/access-control-rules.html"
-		]
+		],
+		"domain": "Security and Restricting Access"
 	},
 	{
 		"trackCode": "CAD",
@@ -646,7 +688,8 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"explanation": "Cross-scope access requires explicit privileges; scoped applications isolate data and server artifacts from other scopes by default.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/c_ApplicationScope.html"
-		]
+		],
+		"domain": "Security and Restricting Access"
 	},
 	{
 		"trackCode": "CAD",
@@ -668,7 +711,8 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/script-includes.html",
 			"https://www.servicenow.com/docs/r/application-development/c_RuntimeAccessToAppTables.html"
-		]
+		],
+		"domain": "Security and Restricting Access"
 	},
 	{
 		"trackCode": "CAD",
@@ -684,7 +728,8 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"explanation": "Each ACL operation—read, write, create, delete—is evaluated independently; passing read does not imply write permission.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/access-control-rules.html"
-		]
+		],
+		"domain": "Security and Restricting Access"
 	},
 	{
 		"trackCode": "CAD",
@@ -700,7 +745,8 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"explanation": "Scoped applications define roles such as admin for delegated management of that application's artifacts within the scope boundary.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/delegated-development-and-deployment/c_DelegatedDevelopment.html"
-		]
+		],
+		"domain": "Security and Restricting Access"
 	},
 	{
 		"trackCode": "CAD",
@@ -716,7 +762,8 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"explanation": "Write and delete are distinct ACL operations; allowing updates does not require allowing record deletion.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/access-control-rules.html"
-		]
+		],
+		"domain": "Security and Restricting Access"
 	},
 	{
 		"trackCode": "CAD",
@@ -732,7 +779,8 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"explanation": "Cross-scope privileges explicitly allow another application scope to access designated Script Includes while keeping them in the owning scope.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/script-includes.html"
-		]
+		],
+		"domain": "Security and Restricting Access"
 	},
 	{
 		"trackCode": "CAD",
@@ -748,7 +796,8 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"explanation": "Module roles control navigator visibility; table ACLs control record access. A user can see a module yet fail read ACL checks on the target table.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/access-control-rules.html"
-		]
+		],
+		"domain": "Security and Restricting Access"
 	},
 	{
 		"trackCode": "CAD",
@@ -764,7 +813,8 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"explanation": "ACLs evaluate from general to specific; passing the table ACL but failing the field ACL means the record is readable but that field is protected.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/access-control-rules.html"
-		]
+		],
+		"domain": "Security and Restricting Access"
 	},
 	{
 		"trackCode": "CAD",
@@ -780,7 +830,8 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"explanation": "Impersonating representative users and attempting the operation confirms ACL behavior without relying on admin bypass.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/access-control-rules.html"
-		]
+		],
+		"domain": "Security and Restricting Access"
 	},
 	{
 		"trackCode": "CAD",
@@ -796,7 +847,8 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"explanation": "An ACL grants access only when required roles, conditions, and scripts (if present) all evaluate successfully.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/access-control-rules.html"
-		]
+		],
+		"domain": "Security and Restricting Access"
 	},
 	{
 		"trackCode": "CAD",
@@ -812,7 +864,8 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"explanation": "Application and module role requirements restrict who can access application configuration and navigation without full admin rights.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/application-menus-modules.html"
-		]
+		],
+		"domain": "Security and Restricting Access"
 	},
 	{
 		"trackCode": "CAD",
@@ -825,10 +878,12 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 			"A cross-scope access privilege authorizing x_acme_app to access the x_other_app Script Include"
 		],
 		"correctIndex": 3,
-		"explanation": "Scoped applications cannot access another scope's artifacts at runtime unless cross-scope access privileges explicitly authorize the access.",
+		"explanation": "Scoped applications cannot call another scope's Script Includes at runtime unless a cross-scope (restricted caller) access privilege explicitly authorizes that access. Runtime Access to Application Tables controls table data access, not Script Include execution across scopes.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/application-development/c_RuntimeAccessToAppTables.html"
-		]
+			"https://www.servicenow.com/docs/bundle/australia-application-development/page/build/applications/concept/restricted-caller-access-privilege.html",
+			"https://www.servicenow.com/docs/r/application-development/c_ApplicationAccessSettings.html"
+		],
+		"domain": "Security and Restricting Access"
 	},
 	{
 		"trackCode": "CAD",
@@ -844,7 +899,8 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"explanation": "Delegated Development lets admins grant developers rights to specific application file types while protecting other artifacts.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/delegated-development-and-deployment/c_DelegatedDevelopment.html"
-		]
+		],
+		"domain": "Managing Applications"
 	},
 	{
 		"trackCode": "CAD",
@@ -865,7 +921,8 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"explanation": "ACLs secure CRUD-style operations such as create, read, write, and delete. Execute and report are not ACL operation types.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/access-control-rules.html"
-		]
+		],
+		"domain": "Security and Restricting Access"
 	},
 	{
 		"trackCode": "CAD",
@@ -881,7 +938,8 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"explanation": "ServiceNow evaluates ACLs from most general to most specific; users must pass both table and field ACLs to read a protected field.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/access-control-rules.html"
-		]
+		],
+		"domain": "Security and Restricting Access"
 	},
 	{
 		"trackCode": "CAD",
@@ -897,7 +955,8 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"explanation": "Before insert/update business rules run prior to the database commit, allowing field values to be set before the record is saved.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/business-rules.html"
-		]
+		],
+		"domain": "Application Automation"
 	},
 	{
 		"trackCode": "CAD",
@@ -913,7 +972,8 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"explanation": "Before business rules execute during the save transaction before commit, making them the right place to set field values prior to persistence.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/business-rules.html"
-		]
+		],
+		"domain": "Application Automation"
 	},
 	{
 		"trackCode": "CAD",
@@ -929,7 +989,8 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"explanation": "Async after business rules run in a separate transaction after commit, avoiding delays to the user while performing follow-up work.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/business-rules.html"
-		]
+		],
+		"domain": "Application Automation"
 	},
 	{
 		"trackCode": "CAD",
@@ -945,7 +1006,8 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"explanation": "Scheduled Jobs run server-side logic on defined schedules, suitable for recurring maintenance such as record cleanup.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/scheduled-jobs.html"
-		]
+		],
+		"domain": "Application Automation"
 	},
 	{
 		"trackCode": "CAD",
@@ -961,7 +1023,8 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"explanation": "Custom events are declared in the Event Registry and triggered with gs.eventQueue(); subscribers include notifications and script actions.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/events.html"
-		]
+		],
+		"domain": "Application Automation"
 	},
 	{
 		"trackCode": "CAD",
@@ -977,7 +1040,8 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"explanation": "Flow Designer provides a visual, low-code interface for building flows with triggers, actions, approvals, and reusable subflows.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/hyperautomation-low-code/flow-designer.html"
-		]
+		],
+		"domain": "Application Automation"
 	},
 	{
 		"trackCode": "CAD",
@@ -993,7 +1057,8 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"explanation": "gs.eventQueue(name, GlideRecord, parm1, parm2) fires a registered event tied to a record so subscribers can react asynchronously.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/events.html"
-		]
+		],
+		"domain": "Application Automation"
 	},
 	{
 		"trackCode": "CAD",
@@ -1009,7 +1074,8 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"explanation": "Notification records define when to send email (condition or event), who receives it, and the message content including mail scripts.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/email-notifications.html"
-		]
+		],
+		"domain": "Application Automation"
 	},
 	{
 		"trackCode": "CAD",
@@ -1025,7 +1091,8 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"explanation": "Script Includes encapsulate reusable server-side logic that other server scripts, business rules, and flows can instantiate and call.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/script-includes.html"
-		]
+		],
+		"domain": "Designing and Creating an Application"
 	},
 	{
 		"trackCode": "CAD",
@@ -1041,7 +1108,8 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"explanation": "Inbound Email Actions parse received email and execute scripts to create or update records based on message content.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/inbound-email-actions.html"
-		]
+		],
+		"domain": "Application Automation"
 	},
 	{
 		"trackCode": "CAD",
@@ -1062,7 +1130,8 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"explanation": "After business rules run following commit; async business rules also execute after commit in a separate transaction. Before rules run prior to commit.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/business-rules.html"
-		]
+		],
+		"domain": "Application Automation"
 	},
 	{
 		"trackCode": "CAD",
@@ -1078,7 +1147,8 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"explanation": "Subflows package reusable steps with inputs and outputs so multiple parent flows can invoke the same logic.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/hyperautomation-low-code/flow-designer.html"
-		]
+		],
+		"domain": "Application Automation"
 	},
 	{
 		"trackCode": "CAD",
@@ -1094,7 +1164,8 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"explanation": "Record Created triggers fire flows when new records are inserted on the specified table, optionally filtered by condition.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/hyperautomation-low-code/flow-designer.html"
-		]
+		],
+		"domain": "Application Automation"
 	},
 	{
 		"trackCode": "CAD",
@@ -1110,7 +1181,8 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"explanation": "Custom Actions define inputs, internal steps, and outputs, becoming reusable building blocks within Flow Designer.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/hyperautomation-low-code/flow-designer.html"
-		]
+		],
+		"domain": "Application Automation"
 	},
 	{
 		"trackCode": "CAD",
@@ -1131,7 +1203,8 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"explanation": "Every flow needs a trigger (record, schedule, etc.) and actions that execute the automation steps.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/hyperautomation-low-code/flow-designer.html"
-		]
+		],
+		"domain": "Application Automation"
 	},
 	{
 		"trackCode": "CAD",
@@ -1147,7 +1220,8 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"explanation": "Schedule triggers let flows run on defined recurring intervals independent of record activity.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/hyperautomation-low-code/flow-designer.html"
-		]
+		],
+		"domain": "Application Automation"
 	},
 	{
 		"trackCode": "CAD",
@@ -1163,7 +1237,8 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"explanation": "In notification mail scripts, current is the triggering GlideRecord, allowing field values to be inserted into the email body.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/email-notifications.html"
-		]
+		],
+		"domain": "Application Automation"
 	},
 	{
 		"trackCode": "CAD",
@@ -1179,7 +1254,8 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"explanation": "Flow Designer approval actions pause execution until requested approvals are granted or rejected, then resume downstream steps.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/hyperautomation-low-code/flow-designer.html"
-		]
+		],
+		"domain": "Application Automation"
 	},
 	{
 		"trackCode": "CAD",
@@ -1195,7 +1271,8 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"explanation": "Import Sets stage data in a dedicated table; a Transform Map then maps and loads rows onto the target table.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/integrate-applications/c_ImportSetsKeyConcepts.html"
-		]
+		],
+		"domain": "Working with External Data"
 	},
 	{
 		"trackCode": "CAD",
@@ -1211,7 +1288,8 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"explanation": "Auto Map Matching Fields creates field maps when import set column names match target field names.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/integrate-applications/c_ImportSetTransformMaps.html"
-		]
+		],
+		"domain": "Working with External Data"
 	},
 	{
 		"trackCode": "CAD",
@@ -1227,7 +1305,8 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"explanation": "Coalesce fields tell the transform to match existing target records on that value and update them rather than inserting duplicates.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/integrate-applications/c_ImportSetTransformMaps.html"
-		]
+		],
+		"domain": "Working with External Data"
 	},
 	{
 		"trackCode": "CAD",
@@ -1243,7 +1322,8 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"explanation": "Transform Maps specify how staging columns map to target fields, including coalesce logic and transform scripts.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/integrate-applications/c_ImportSetTransformMaps.html"
-		]
+		],
+		"domain": "Working with External Data"
 	},
 	{
 		"trackCode": "CAD",
@@ -1259,7 +1339,8 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"explanation": "RESTMessageV2 constructs and sends outbound REST requests from server-side scripts and returns the response for processing.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/integrate-applications/c_RESTMessage.html"
-		]
+		],
+		"domain": "Working with External Data"
 	},
 	{
 		"trackCode": "CAD",
@@ -1275,7 +1356,8 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"explanation": "REST API Explorer and REST Message testing let developers configure and validate outbound requests before scripting them.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/integrate-applications/c_RESTMessage.html"
-		]
+		],
+		"domain": "Working with External Data"
 	},
 	{
 		"trackCode": "CAD",
@@ -1296,7 +1378,8 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"explanation": "The REST response object exposes getBody() for the payload and getStatusCode() for the HTTP status; the others are unrelated client APIs.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/integrate-applications/c_RESTMessage.html"
-		]
+		],
+		"domain": "Working with External Data"
 	},
 	{
 		"trackCode": "CAD",
@@ -1312,7 +1395,8 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"explanation": "IntegrationHub provides spokes and actions that encapsulate third-party API connectivity for use in flows and integrations.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/integrate-applications/integration-hub.html"
-		]
+		],
+		"domain": "Working with External Data"
 	},
 	{
 		"trackCode": "CAD",
@@ -1328,7 +1412,8 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"explanation": "Import Sets accept structured data files such as CSV and Excel, staging rows before transform to target tables.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/integrate-applications/c_ImportSetsKeyConcepts.html"
-		]
+		],
+		"domain": "Working with External Data"
 	},
 	{
 		"trackCode": "CAD",
@@ -1344,7 +1429,8 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"explanation": "App Engine Management Center offers centralized visibility and governance for scoped applications, pipelines, and instance promotion.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/app-engine-management-center.html"
-		]
+		],
+		"domain": "Managing Applications"
 	},
 	{
 		"trackCode": "CAD",
@@ -1360,7 +1446,8 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"explanation": "Studio's Git integration links a scoped app to an external repository for commit, branch, and apply-remote workflows.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/link-app-to-source-control.html"
-		]
+		],
+		"domain": "Managing Applications"
 	},
 	{
 		"trackCode": "CAD",
@@ -1376,7 +1463,8 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"explanation": "Delegated Development assigns developers rights to specified application file types and optional code review without full admin access.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/delegated-development-and-deployment/c_DelegatedDevelopment.html"
-		]
+		],
+		"domain": "Managing Applications"
 	},
 	{
 		"trackCode": "CAD",
@@ -1392,7 +1480,8 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"explanation": "Global applications can include global-scope files; you cannot move files across scopes, change global app scope, or remove an app's scope.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/application-files.html"
-		]
+		],
+		"domain": "Designing and Creating an Application"
 	},
 	{
 		"trackCode": "CAD",
@@ -1408,7 +1497,8 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"explanation": "Update Sets group configuration changes so they can be completed, exported, retrieved, previewed, and committed on another instance.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/update-sets.html"
-		]
+		],
+		"domain": "Managing Applications"
 	},
 	{
 		"trackCode": "CAD",
@@ -1424,7 +1514,8 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"explanation": "Update sets are completed on the source instance, retrieved on the target, previewed to review impact, then committed on the target.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/update-sets.html"
-		]
+		],
+		"domain": "Managing Applications"
 	},
 	{
 		"trackCode": "CAD",
@@ -1440,7 +1531,8 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"explanation": "Scoped apps are distributed by publishing to a repository or Store for installation, or via source control apply-remote on the target.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/publish-application-to-store.html"
-		]
+		],
+		"domain": "Designing and Creating an Application"
 	},
 	{
 		"trackCode": "CAD",
@@ -1461,7 +1553,8 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"explanation": "Git integration supports committing instance changes to a branch and applying remote changes back into the application on the instance.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/link-app-to-source-control.html"
-		]
+		],
+		"domain": "Managing Applications"
 	},
 	{
 		"trackCode": "CAD",
@@ -1477,7 +1570,8 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 		"explanation": "Applications should be installed and tested in sub-production before production promotion to avoid disrupting live services.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/download-and-install-applications.html"
-		]
+		],
+		"domain": "Managing Applications"
 	},
 	{
 		"trackCode": "CIS-CSM",
@@ -39515,4 +39609,4 @@ export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = [
 			"https://www.servicenow.com/docs/r/platform-administration/update-sets.html"
 		]
 	}
-];
+] as unknown as DevPracticeQuestionRow[];

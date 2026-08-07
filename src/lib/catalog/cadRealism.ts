@@ -15,6 +15,10 @@ export const CAD_DOMAIN_TARGETS = {
 	'Managing Applications': 9
 } as const;
 
+export type CadDomain = keyof typeof CAD_DOMAIN_TARGETS;
+
+export const CAD_DOMAINS = Object.keys(CAD_DOMAIN_TARGETS) as CadDomain[];
+
 /**
  * Legacy template wrappers used by the pre-rewrite CAD bank. These leak the
  * "quiz template" tone and are banned in both stems and choices.
@@ -72,6 +76,7 @@ export type CadQuestionRow = {
 	questionType?: QuestionType;
 	correctIndexes?: number[];
 	correctIndex?: number;
+	domain?: string;
 };
 
 export function fourWordOpener(text: string): string {
@@ -114,6 +119,12 @@ export function validateCadQuestion(q: CadQuestionRow): string[] {
 		issues.push(`order ${q.order}: missing sourceUrls`);
 	}
 
+	if (!q.domain) {
+		issues.push(`order ${q.order}: missing domain tag`);
+	} else if (!(q.domain in CAD_DOMAIN_TARGETS)) {
+		issues.push(`order ${q.order}: unknown domain ${q.domain}`);
+	}
+
 	// Multi-select integrity: correctIndexes must be a valid 2+ subset and
 	// correctIndex must equal the lowest correct index.
 	if (q.questionType === 'multi') {
@@ -152,6 +163,32 @@ export function validateCadScenarioRatio(rows: CadQuestionRow[]): string[] {
 	return [];
 }
 
+export function validateCadDomainQuotas(rows: CadQuestionRow[]): string[] {
+	const cad = rows.filter((q) => q.trackCode === 'CAD');
+	if (cad.length === 0) return [];
+
+	const issues: string[] = [];
+	const domainCounts = Object.fromEntries(CAD_DOMAINS.map((d) => [d, 0])) as Record<
+		CadDomain,
+		number
+	>;
+
+	for (const q of cad) {
+		if (q.domain && q.domain in CAD_DOMAIN_TARGETS) {
+			domainCounts[q.domain as CadDomain]++;
+		}
+	}
+
+	for (const [domain, target] of Object.entries(CAD_DOMAIN_TARGETS) as [CadDomain, number][]) {
+		const actual = domainCounts[domain] ?? 0;
+		if (actual !== target) {
+			issues.push(`domain ${domain}: expected ${target}, got ${actual}`);
+		}
+	}
+
+	return issues;
+}
+
 export function validateCadTrack(rows: CadQuestionRow[]): string[] {
 	const issues: string[] = [];
 
@@ -160,6 +197,7 @@ export function validateCadTrack(rows: CadQuestionRow[]): string[] {
 	}
 
 	issues.push(...validateCadScenarioRatio(rows));
+	issues.push(...validateCadDomainQuotas(rows));
 
 	const openerCounts = new Map<string, number>();
 	for (const q of rows) {
