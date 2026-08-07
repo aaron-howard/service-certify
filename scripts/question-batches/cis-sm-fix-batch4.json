@@ -1,0 +1,55 @@
+[
+	{
+		"trackCode": "CIS-SM",
+		"order": 12,
+		"prompt": "On a service map, a CI node displays a warning icon. What does ServiceNow documentation say this typically indicates?",
+		"choices": [
+			"The CI was retired from the CMDB and must be removed manually by the service owner",
+			"Service Mapping failed to connect to the CI or failed to recognize it due to an inaccurate pattern",
+			"The application service reached end-of-life and mapping was permanently disabled",
+			"A pending change request blocked all discovery probes until approval completes"
+		],
+		"correctIndex": 1,
+		"explanation": "Service Mapping docs state that warning icons mark CIs that could not be mapped correctly, typically because Service Mapping failed to connect to the CI or failed to recognize it due to an inaccurate pattern.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/t_TBSMapProcess.html",
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/fix-errors-by-discovery-messages.html"
+		],
+		"domain": "Service Mapping Pattern Design"
+	},
+	{
+		"trackCode": "CIS-SM",
+		"order": 13,
+		"prompt": "An implementer must collect additional attributes without editing a pattern identification section. Which Pattern Designer approach should they use?",
+		"choices": [
+			"Delete the out-of-box identification section and recreate discovery steps from a blank pattern",
+			"Disable all shared libraries so only connection sections run during mapping",
+			"Add an extension section that applies a shared library after successful identification",
+			"Convert the application pattern into an infrastructure pattern to skip identification"
+		],
+		"correctIndex": 2,
+		"explanation": "Extension sections enhance patterns without changing identification sections. The MID Server runs extension sections after identification and only if at least one identification section completes successfully.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery-and-service-mapping-patterns/modify-pattern-using-extensions.html"
+		],
+		"domain": "Service Mapping Pattern Design"
+	},
+	{
+		"trackCode": "CIS-SM",
+		"order": 53,
+		"prompt": "Discovery Status shows failed Windows probe results, and administrators need the raw MID Server payloads. Which queue stores those Discovery messages?",
+		"choices": [
+			"ECC Queue records carrying input and output probe or sensor messages for Discovery",
+			"Event Management alert console filtered by CI class and severity only",
+			"Service Mapping candidate review queue for machine-learning suggestions",
+			"CMDB Health task list limited to completeness remediation work"
+		],
+		"correctIndex": 0,
+		"explanation": "The ECC Queue is the connection point between the instance and MID Servers. It stores input and output Discovery messages with probe/sensor activity and XML payloads used for troubleshooting.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/r_DiscoveryStatusECCQueue.html",
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/c_DiscoveryTroubleshooting.html"
+		],
+		"domain": "Discovery Configuration"
+	}
+]
