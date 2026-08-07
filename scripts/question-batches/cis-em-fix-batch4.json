@@ -1,0 +1,74 @@
+[
+	{
+		"trackCode": "CIS-EM",
+		"order": 13,
+		"prompt": "When multiple event rules could match the same incoming event, what does selecting Apply additional matching rules enable?",
+		"choices": [
+			"Only the rule with the highest Order value runs and all other matches are discarded",
+			"Matching rules run sequentially in ascending Order so each can apply its processing logic",
+			"Rules execute once each in alphabetical name order regardless of the Order field",
+			"The platform randomly selects one matching rule and ignores the remaining matches"
+		],
+		"correctIndex": 1,
+		"explanation": "Apply additional matching rules runs multiple matching event rules in ascending Order. Without that option, Event Management does not process every matching rule as a sequential chain by default.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/event-management/create-event-rule.html",
+			"https://www.servicenow.com/docs/r/it-operations-management/event-management/event-rules.html"
+		],
+		"domain": "Event Configuration and Use"
+	},
+	{
+		"trackCode": "CIS-EM",
+		"order": 4,
+		"prompt": "During architecture planning, why do Event Management teams prioritize accurate CMDB data?",
+		"choices": [
+			"Connectors uninstall discovery credentials when CI classes are incomplete in the CMDB",
+			"Listeners reject all TLS connections unless hardware models are fully normalized first",
+			"Alert assignment groups are deleted automatically when CI counts fall below thresholds",
+			"CI binding links events and alerts to ownership, impact, and service context"
+		],
+		"correctIndex": 3,
+		"explanation": "Accurate CI records enable event and alert binding so teams can assess impact, route work, and understand ownership during operational response.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/event-management/ci-binding-alert.html",
+			"https://www.servicenow.com/docs/r/it-operations-management/event-management/ci-binding-process-flow.html"
+		],
+		"domain": "Architecture and Discovery"
+	},
+	{
+		"trackCode": "CIS-EM",
+		"order": 7,
+		"prompt": "How does Discovery data quality affect Event Management outcomes in most implementations?",
+		"choices": [
+			"Discovery status has no relationship to alert assignment routing or CI binding rules",
+			"Poor CI data only affects software license reclamation jobs scheduled overnight",
+			"Accurate CI records improve event-to-CI binding and service impact analysis",
+			"Discovery eliminates the need for event field mapping configurations on connectors"
+		],
+		"correctIndex": 2,
+		"explanation": "Reliable CMDB data from Discovery and other sources improves binding accuracy, which supports better triage, routing, and business impact assessment.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/event-management/ci-binding-alert.html",
+			"https://www.servicenow.com/docs/r/it-operations-management/event-management/ci-binding-process-flow.html"
+		],
+		"domain": "Architecture and Discovery"
+	},
+	{
+		"trackCode": "CIS-EM",
+		"order": 8,
+		"prompt": "During a major outage, events flood in from SNMP traps, a pull connector, and email notifications. Which processing path should operators expect Event Management to follow?",
+		"choices": [
+			"Ingestion, normalization, rule evaluation, correlation, and alert generation on affected CIs",
+			"Immediate incident creation, change approval, and closure for every inbound event without filtering",
+			"Hardware stockroom receiving, transfer orders, and serialized asset retirement for each signal",
+			"Publisher true-up imports followed by entitlement optimization dashboard refresh only"
+		],
+		"correctIndex": 0,
+		"explanation": "The event pipeline standardizes incoming data, applies rules and correlation, and can generate alerts when conditions warrant operational action.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/event-management/event-rules.html",
+			"https://www.servicenow.com/docs/r/it-operations-management/event-management/connectors-and-listeners.html"
+		],
+		"domain": "Architecture and Discovery"
+	}
+]
