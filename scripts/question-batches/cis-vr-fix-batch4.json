@@ -1,0 +1,130 @@
+[
+	{
+		"trackCode": "CIS-VR",
+		"order": 21,
+		"questionType": "multi",
+		"prompt": "Which two statements accurately describe NIST NVD integrations available in Vulnerability Response? (Choose two.)",
+		"choices": [
+			"The NIST NVD Integration - API (CVE only) is active by default and runs daily",
+			"The NIST NVD Integration - API (CPE only) is inactive by default until an administrator activates it",
+			"Each NVD integration feed is limited to vulnerabilities that share one CVSS base score",
+			"NVD integrations exclude CPE data and cannot enrich third-party vulnerability library entries"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "Base NVD integrations include CVE-only (active daily by default) and CPE-only (inactive until activated). CVSS score buckets and CPE exclusion are not how the NVD API integrations work.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/nvd-vuln-integration.html"
+		],
+		"domain": "Getting Data into Vulnerability Response"
+	},
+	{
+		"trackCode": "CIS-VR",
+		"order": 54,
+		"prompt": "An administrator changed a remediation task rule and needs existing Open remediation tasks rebuilt to match. Which documented action applies the change?",
+		"choices": [
+			"Enable sn_sec_rem.rerun_task_rules before any rule can evaluate new scanner findings",
+			"Disable all assignment rules so remediation tasks regenerate without grouping filters",
+			"Clear the CMDB class cache so vulnerable items lose their configuration item references",
+			"Use the Reapply action on the remediation task rule to delete and recreate Open tasks for that rule"
+		],
+		"correctIndex": 3,
+		"explanation": "Docs describe Reapply on the remediation task rule page: it deletes and recreates Open remediation tasks created by that rule. There is no documented sn_sec_rem.rerun_task_rules property for this behavior.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/vulnerability-groups.html",
+			"https://www.servicenow.com/docs/r/security-management/sem-configure-remediation-task-rules.html"
+		],
+		"domain": "Tools to Manage Vulnerability Response"
+	},
+	{
+		"trackCode": "CIS-VR",
+		"order": 33,
+		"prompt": "A VR administrator plans assignment rules based on Qualys host tags imported during asset integrations. What prerequisite does Qualys guidance specify for tag-driven rules?",
+		"choices": [
+			"Run the Qualys Host List integration to import host tags before creating assignment or remediation task rules",
+			"Deactivate NVD integrations permanently because host tags replace all CVE-based prioritization logic",
+			"Convert host tags into HR department codes before any vulnerable items can reference CMDB CIs",
+			"Install Field Service Management because host tags are available only on work order task records"
+		],
+		"correctIndex": 0,
+		"explanation": "Qualys prerequisites require the Qualys Host List integration to import host tags before creating assignment or remediation task rules that filter on those tags.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/qualys-prerequisites.html",
+			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/qualys-config-in-SA.html"
+		],
+		"domain": "Getting Data into Vulnerability Response"
+	},
+	{
+		"trackCode": "CIS-VR",
+		"order": 53,
+		"questionType": "multi",
+		"prompt": "Which three actions can remediation owners perform from the IT Remediation Workspace on assigned work? (Choose three.)",
+		"choices": [
+			"Request a vulnerability exception with approver sign-off and expiration tracking",
+			"Create a change request linked to the remediation task for governed patch deployment",
+			"Request a false positive with a documented reason on the vulnerable item or remediation task",
+			"Configure NVD feed synchronization schedules and MID Server credential stores"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1, 2],
+		"explanation": "Remediation owners request exceptions, create linked change requests, and request false positives from the IT Remediation Workspace; NVD configuration remains an admin function.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/it-remediation-workspace/it-remediation-workspace-landing-page.html",
+			"https://www.servicenow.com/docs/r/security-management/it-remediation-workspace/vr-ws-request-exception.html",
+			"https://www.servicenow.com/docs/r/security-management/it-remediation-workspace/vr-ws-mark-fp.html"
+		],
+		"domain": "Tools to Manage Vulnerability Response"
+	},
+	{
+		"trackCode": "CIS-VR",
+		"order": 58,
+		"prompt": "What happens when an approved vulnerability exception request reaches its expiration date in VR?",
+		"choices": [
+			"All remediation tasks close as false positives regardless of actual exposure status",
+			"The exception converts to a permanent approved state without further governance review",
+			"The system permanently deletes all related vulnerable items from the production database",
+			"Impacted vulnerable items or remediation tasks revert to the Open state for renewed remediation"
+		],
+		"correctIndex": 3,
+		"explanation": "When an exception expires, the impacted VI or remediation task reverts to Open so accepted risk cannot continue without renewed remediation or a new exception.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/vr-exception-management.html"
+		],
+		"domain": "Automating Vulnerability Response"
+	},
+	{
+		"trackCode": "CIS-VR",
+		"order": 11,
+		"prompt": "How do vulnerability calculators help the Vulnerability Response application prioritize work at scale?",
+		"choices": [
+			"They combine severity, exploitability, and asset context into scores on each vulnerable item",
+			"They replace all assignment rules so every finding routes to the system administrator user",
+			"They import scanner credentials and MID Server routing tables during every integration run",
+			"They convert every vulnerable item into a priority-one incident without remediation task grouping"
+		],
+		"correctIndex": 0,
+		"explanation": "Vulnerability calculators and calculator rules set Risk Score on vulnerable items using technical and business criteria so teams can prioritize remediation.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/vuln-calculators-rules.html"
+		],
+		"domain": "VR Applications and Modules"
+	},
+	{
+		"trackCode": "CIS-VR",
+		"order": 10,
+		"prompt": "A vulnerability manager wants proactive alerts when critical exposure appears on watched configuration items or business services. Which Vulnerability Manager Workspace feature supports that?",
+		"choices": [
+			"Project portfolio cost plans that forecast capital expenditure for internal initiatives",
+			"Discovery patterns that classify SNMP printers without creating vulnerable item records",
+			"Catalog record producers that open laptop refresh requests for each reported detection",
+			"Watch topics that notify managers when monitored entities meet defined vulnerability conditions"
+		],
+		"correctIndex": 3,
+		"explanation": "Watch topics in the Vulnerability Manager Workspace alert managers when monitored CIs or services meet configured vulnerability exposure criteria.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/vulnerability-manager-workspace/vulnerability-manager-workspace-landing-page.html",
+			"https://www.servicenow.com/docs/r/security-management/vulnerability-manager-workspace/vr-ws-wtopic-related-items-v18.html"
+		],
+		"domain": "VR Applications and Modules"
+	}
+]
