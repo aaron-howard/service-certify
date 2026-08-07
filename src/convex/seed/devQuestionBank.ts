@@ -22405,12 +22405,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 0,
 		"prompt": "A managed service provider is implementing ServiceNow Multitenant Platform Architecture on a single production instance. Which outcome does domain separation deliver for tenant operations?",
 		"choices": [
-			"Forces every tenant to share identical process definitions without override capability",
 			"Removes the need for ACLs because domains enforce all authorization automatically",
-			"Segregates application data, UI, and business logic while supporting hierarchical tenant modeling",
-			"Creates a dedicated database schema per tenant with no shared platform code"
+			"Forces every tenant to share identical process definitions without override capability",
+			"Creates a dedicated database schema per tenant with no shared platform code",
+			"Segregates application data, UI, and business logic while supporting hierarchical tenant modeling"
 		],
-		"correctIndex": 2,
+		"correctIndex": 3,
 		"explanation": "Domain separation (Multitenant Platform Architecture) segregates data, UI, and business logic on one instance and supports nested tenant hierarchies with cross-tenant intelligence.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-security/bp-dom-sep-definition.html"
@@ -22439,12 +22439,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 2,
 		"prompt": "During tenant onboarding, user records must automatically inherit the correct domain when created. Which assignment pattern is the standard default?",
 		"choices": [
-			"Grant the user the domain_admin role without a domain value",
-			"Assign the user to a company that is linked to the target domain",
+			"Manually set sys_domain on every user record after import",
 			"Leave the user in global and rely on visibility domains for all access",
-			"Manually set sys_domain on every user record after import"
+			"Assign the user to a company that is linked to the target domain",
+			"Grant the user the domain_admin role without a domain value"
 		],
-		"correctIndex": 1,
+		"correctIndex": 2,
 		"explanation": "Assigning users to a company mapped to a domain automatically places the user in that domain; records they create inherit the same domain.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-security/c_DomainAssignment.html"
@@ -22474,16 +22474,16 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"questionType": "multi",
 		"prompt": "Which are true of a domain record marked as Primary? (Choose three.)",
 		"choices": [
-			"It appears as the top-level domain in Domain Map",
 			"The primary domain cannot have a parent domain",
-			"It must be linked to the Service Provider company record",
-			"Only one domain can be marked as primary at a time"
+			"It appears as the top-level domain in Domain Map",
+			"Only one domain can be marked as primary at a time",
+			"It must be linked to the Service Provider company record"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
 			1,
-			3
+			2
 		],
 		"explanation": "The primary domain is the single top-level node in Domain Map with no parent; selecting a new primary replaces the previous designation.",
 		"sourceUrls": [
@@ -22514,12 +22514,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 6,
 		"prompt": "A service provider structures its domain hierarchy so tenants can be grouped by service tier and region. What hierarchy design principle supports that segmentation?",
 		"choices": [
-			"Create one domain per user so segmentation follows individual accounts",
-			"Model organizational groupings as intermediate parent domains with customer tenants as children beneath them",
+			"Place every tenant directly under global with no intermediate structure or grouping",
 			"Use contains relationships instead of hierarchy for all tenant placement decisions",
-			"Place every tenant directly under global with no intermediate structure or grouping"
+			"Model organizational groupings as intermediate parent domains with customer tenants as children beneath them",
+			"Create one domain per user so segmentation follows individual accounts"
 		],
-		"correctIndex": 1,
+		"correctIndex": 2,
 		"explanation": "Intermediate parent domains let providers apply shared processes and reporting by segment while each customer tenant remains isolated below its group.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-security/bp-domain-hierarchy.html"
@@ -22539,7 +22539,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 0,
 		"explanation": "SLA definitions are process-separated, so providers can override targets per tenant domain while retaining shared defaults for common tiers.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/australia-platform-administration/page/administer/domain-separation/concept/process-separation.html",
+			"https://www.servicenow.com/docs/r/platform-security/process-separation.html",
 			"https://www.servicenow.com/docs/r/platform-security/bp-dom-sep-definition.html"
 		],
 		"domain": "MSP Operations Strategy"
@@ -22549,12 +22549,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 8,
 		"prompt": "Finance asks the MSP platform team to support per-customer billing based on service consumption. Which platform capability supports a chargeback model on a domain-separated instance?",
 		"choices": [
+			"Removing sys_domain from task tables so billing queries run faster",
 			"Manual monthly record counts performed by each tenant administrator",
-			"Domain and company attribution on operational records enabling per-tenant usage reporting",
 			"A single shared report that counts all incidents without tenant segmentation",
-			"Removing sys_domain from task tables so billing queries run faster"
+			"Domain and company attribution on operational records enabling per-tenant usage reporting"
 		],
-		"correctIndex": 1,
+		"correctIndex": 3,
 		"explanation": "Because records carry domain and company context, providers can report consumption per tenant and feed usage data into billing and chargeback processes.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-security/bp-dom-sep-definition.html",
@@ -22591,8 +22591,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "An MSP wants to benchmark incident trends across all customers while keeping tenant data isolated. Which capability of the multitenant architecture supports that goal?",
 		"choices": [
 			"Cross-customer intelligence where parent domain operators analyze aggregated data across child tenants",
-			"Disabling data separation on reporting tables during business hours",
 			"Granting all tenants visibility into each other's records for transparency",
+			"Disabling data separation on reporting tables during business hours",
 			"Copying every tenant's incidents into the global domain each night for reporting"
 		],
 		"correctIndex": 0,
@@ -22608,10 +22608,10 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 11,
 		"prompt": "A provider's shared service desk works incidents for forty tenants from one MSP operations domain. Which operating model decision keeps technicians productive without weakening tenant isolation?",
 		"choices": [
-			"Move all tenant incidents into the MSP domain so technicians avoid the domain picker",
+			"Assign every technician a separate user account in each of the forty tenant domains",
 			"Grant the MSP operations domain access to tenant data through governed contains or visibility design",
 			"Give technicians the admin role so domain restrictions no longer apply to them",
-			"Assign every technician a separate user account in each of the forty tenant domains"
+			"Move all tenant incidents into the MSP domain so technicians avoid the domain picker"
 		],
 		"correctIndex": 1,
 		"explanation": "A shared service desk model uses governed cross-domain access so MSP staff work tenant records in place while tenants keep isolated data ownership.",
@@ -22627,19 +22627,19 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"questionType": "multi",
 		"prompt": "An MSP defines SLA governance for tenants sharing one instance. Which practices support consistent multi-tenant SLA operations? (Choose two.)",
 		"choices": [
-			"Standardize baseline SLA definitions globally and override per tenant only where contracts differ",
 			"Let each technician create personal SLA definitions without change control",
 			"Report SLA attainment per tenant domain so account teams see customer-specific performance",
+			"Standardize baseline SLA definitions globally and override per tenant only where contracts differ",
 			"Suppress SLA breach notifications for tenants on lower-cost contracts"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"correctIndexes": [
-			0,
+			1,
 			2
 		],
 		"explanation": "Multi-tenant SLA governance combines shared baselines with contract-driven overrides and per-tenant attainment reporting for account accountability.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/australia-platform-administration/page/administer/domain-separation/concept/process-separation.html",
+			"https://www.servicenow.com/docs/r/platform-security/process-separation.html",
 			"https://www.servicenow.com/docs/r/platform-security/bp-dom-sep-definition.html"
 		],
 		"domain": "MSP Operations Strategy"
@@ -22649,15 +22649,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 13,
 		"prompt": "A new customer signs with the MSP and must be operational in two weeks. Which onboarding sequence establishes the tenant correctly?",
 		"choices": [
-			"Grant the customer admin access to the instance so they self-provision the domain",
-			"Create the tenant domain and company mapping, load foundational data, configure process overrides, then validate separation",
+			"Load all users into global first and move them into a domain after go-live",
 			"Configure process overrides before the tenant domain or company record exists",
-			"Load all users into global first and move them into a domain after go-live"
+			"Grant the customer admin access to the instance so they self-provision the domain",
+			"Create the tenant domain and company mapping, load foundational data, configure process overrides, then validate separation"
 		],
-		"correctIndex": 1,
+		"correctIndex": 3,
 		"explanation": "Tenant onboarding follows a repeatable sequence: establish the domain and company linkage, load foundational data into that scope, apply tenant-specific processes, and validate isolation before go-live.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/australia-platform-administration/page/administer/domain-separation/task/plan-domain-separation-implementation.html",
+			"https://www.servicenow.com/docs/r/platform-security/plan-domain-separation-implementation.html",
 			"https://www.servicenow.com/docs/r/platform-security/c_DomainAssignment.html"
 		],
 		"domain": "Customer Onboarding and Tenant Lifecycle"
@@ -22667,12 +22667,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 14,
 		"prompt": "The MSP onboards several tenants each month and wants domain creation to be consistent and fast. Which automation pattern reduces manual onboarding effort?",
 		"choices": [
+			"Automate domain creation from the company record so new customers receive a correctly placed tenant domain",
 			"Reuse one existing tenant domain for every new customer to avoid hierarchy growth",
 			"Create domains only after the first incident is logged for the new customer",
-			"Automate domain creation from the company record so new customers receive a correctly placed tenant domain",
 			"Have administrators hand-build each domain hierarchy node and retype company details"
 		],
-		"correctIndex": 2,
+		"correctIndex": 0,
 		"explanation": "Automating domain generation from company records standardizes tenant creation, reduces errors, and keeps hierarchy placement consistent across onboardings.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-security/c_DomainAssignment.html",
@@ -22686,15 +22686,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "During onboarding, a tenant requests custom form behavior that conflicts with the provider's shared baseline. How should the MSP handle tenant customization requests?",
 		"choices": [
 			"Apply the change directly to global records so all tenants receive it immediately",
-			"Reject all customization because domain separation prohibits tenant-specific behavior",
+			"Evaluate the request against governance standards and implement it as a domain-scoped override where approved",
 			"Let the tenant edit global UI policies themselves with a temporary admin role",
-			"Evaluate the request against governance standards and implement it as a domain-scoped override where approved"
+			"Reject all customization because domain separation prohibits tenant-specific behavior"
 		],
-		"correctIndex": 3,
+		"correctIndex": 1,
 		"explanation": "Tenant customizations should pass provider governance and land as domain-scoped overrides so shared baselines remain intact for other customers.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/australia-platform-administration/page/administer/domain-separation/concept/process-separation.html",
-			"https://www.servicenow.com/docs/bundle/australia-platform-administration/page/administer/domain-separation/task/plan-domain-separation-implementation.html"
+			"https://www.servicenow.com/docs/r/platform-security/process-separation.html",
+			"https://www.servicenow.com/docs/r/platform-security/plan-domain-separation-implementation.html"
 		],
 		"domain": "Customer Onboarding and Tenant Lifecycle"
 	},
@@ -22703,15 +22703,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 16,
 		"prompt": "A customer contract ends and the MSP must decommission the tenant. Which offboarding approach protects data obligations and instance health?",
 		"choices": [
-			"Extract and archive tenant data per contract, deactivate users and access, then retire the domain and its overrides",
 			"Reassign the departing tenant's records to another active customer domain",
 			"Delete the tenant domain immediately so its records disappear from all queries",
+			"Extract and archive tenant data per contract, deactivate users and access, then retire the domain and its overrides",
 			"Leave the domain, users, and integrations active indefinitely in case the customer returns"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Tenant decommissioning follows contractual data handling, access removal, and orderly retirement of the domain and its process overrides.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/australia-platform-administration/page/administer/domain-separation/task/plan-domain-separation-implementation.html",
+			"https://www.servicenow.com/docs/r/platform-security/plan-domain-separation-implementation.html",
 			"https://www.servicenow.com/docs/r/platform-security/bp-dom-sep-definition.html"
 		],
 		"domain": "Customer Onboarding and Tenant Lifecycle"
@@ -22721,15 +22721,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 17,
 		"prompt": "A growing tenant outgrows the shared instance and must migrate to a dedicated instance. What migration consideration is most important for the MSP?",
 		"choices": [
-			"Recreate the tenant's history manually by retyping closed records into the new instance",
-			"Export the tenant's domain-scoped data and configuration completely while excluding other tenants' records",
 			"Move only global process records because tenant data cannot leave the source instance",
-			"Clone the entire shared instance to the new environment including every other customer's data"
+			"Recreate the tenant's history manually by retyping closed records into the new instance",
+			"Clone the entire shared instance to the new environment including every other customer's data",
+			"Export the tenant's domain-scoped data and configuration completely while excluding other tenants' records"
 		],
-		"correctIndex": 1,
+		"correctIndex": 3,
 		"explanation": "Tenant migration requires cleanly extracting the domain's data and configuration without exposing co-tenant records, then rebuilding equivalent processes on the target.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/australia-platform-administration/page/administer/domain-separation/task/plan-domain-separation-implementation.html",
+			"https://www.servicenow.com/docs/r/platform-security/plan-domain-separation-implementation.html",
 			"https://www.servicenow.com/docs/r/platform-security/bp-domain-sep-recommended.html"
 		],
 		"domain": "Customer Onboarding and Tenant Lifecycle"
@@ -22739,15 +22739,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 18,
 		"prompt": "Before a new tenant goes live, the MSP runs an onboarding validation. Which check most directly confirms data separation is working?",
 		"choices": [
-			"Count the number of business rules in global and compare to last month",
-			"Ensure every tenant user holds the domain_admin role before first login",
 			"Verify tenant users see only their domain's records and cannot query other tenants' data",
+			"Ensure every tenant user holds the domain_admin role before first login",
+			"Count the number of business rules in global and compare to last month",
 			"Confirm the tenant logo renders correctly on the login page for all users"
 		],
-		"correctIndex": 2,
+		"correctIndex": 0,
 		"explanation": "Go-live validation exercises tenant user sessions to prove visibility boundaries hold, confirming domain assignment and ACL behavior before production use.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/australia-platform-administration/page/administer/domain-separation/task/plan-domain-separation-implementation.html",
+			"https://www.servicenow.com/docs/r/platform-security/plan-domain-separation-implementation.html",
 			"https://www.servicenow.com/docs/r/platform-security/c_DomainVisibility.html"
 		],
 		"domain": "Customer Onboarding and Tenant Lifecycle"
@@ -22759,18 +22759,18 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "Which activities belong to ongoing tenant lifecycle management on a domain-separated MSP instance? (Choose two.)",
 		"choices": [
 			"Planning tenant offboarding steps including data archival and domain retirement",
-			"Renaming the global domain after each new customer signs a contract",
 			"Rebuilding the entire domain hierarchy whenever any single tenant churns",
-			"Reviewing tenant-specific overrides and access grants as the customer's services change"
+			"Reviewing tenant-specific overrides and access grants as the customer's services change",
+			"Renaming the global domain after each new customer signs a contract"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			3
+			2
 		],
 		"explanation": "Tenant lifecycle management maintains overrides and access as services evolve and executes orderly offboarding; it does not require destabilizing the shared hierarchy.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/australia-platform-administration/page/administer/domain-separation/task/plan-domain-separation-implementation.html",
+			"https://www.servicenow.com/docs/r/platform-security/plan-domain-separation-implementation.html",
 			"https://www.servicenow.com/docs/r/platform-security/bp-domain-hierarchy.html"
 		],
 		"domain": "Customer Onboarding and Tenant Lifecycle"
@@ -22780,12 +22780,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 20,
 		"prompt": "MSP operators must work with tenant incident data without making the MSP domain a parent of tenant domains. Which relationship grants that cross-hierarchy data access?",
 		"choices": [
-			"Setting sys_domain to global on all tenant incidents",
-			"A contains domain relationship from MSP to the tenant domain",
 			"Promoting the MSP domain to primary over TOP",
-			"Assigning every tenant user to the MSP domain"
+			"Setting sys_domain to global on all tenant incidents",
+			"Assigning every tenant user to the MSP domain",
+			"A contains domain relationship from MSP to the tenant domain"
 		],
-		"correctIndex": 1,
+		"correctIndex": 3,
 		"explanation": "Contains domains relate domains outside strict parent-child hierarchy and grant the containing domain visibility to contained domain data without inheriting MSP process logic into tenants.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-security/c_DomainVisibility.html"
@@ -22797,12 +22797,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 21,
 		"prompt": "An SP security review compares visibility domains and contains domains for granting MSP technicians access to a restricted customer domain. What is the key distinction?",
 		"choices": [
-			"Visibility domains grant explicit user or group access; contains domains grant an entire domain access to another domain's data",
+			"Contains domains apply only to process tables; visibility domains apply only to task tables",
 			"Visibility domains are inherited by child domains; contains domains are never used with the domain picker",
-			"Visibility domains affect process inheritance; contains domains affect UI themes only",
-			"Contains domains apply only to process tables; visibility domains apply only to task tables"
+			"Visibility domains grant explicit user or group access; contains domains grant an entire domain access to another domain's data",
+			"Visibility domains affect process inheritance; contains domains affect UI themes only"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Visibility domains are user-to-domain or group-to-domain grants, while contains domains are domain-to-domain relationships that make contained data visible to users in the containing domain.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-security/c_DomainVisibility.html"
@@ -22815,9 +22815,9 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"questionType": "multi",
 		"prompt": "In which domains can a user see an assignment group? (Choose three.)",
 		"choices": [
-			"Child domains of the assignment group's domain",
-			"The parent domain of the assignment group's domain",
 			"Domains linked through a contains relationship to the assignment group's domain",
+			"The parent domain of the assignment group's domain",
+			"Child domains of the assignment group's domain",
 			"Domains granted through visibility domain configuration on the user's group membership"
 		],
 		"correctIndex": 0,
@@ -22837,9 +22837,9 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 23,
 		"prompt": "An SP process administrator needs to view all process override records across the domain hierarchy from a process table. What role is required to use the Expand Domain Scope feature?",
 		"choices": [
-			"admin",
-			"domain_expand_scope",
 			"domain_admin",
+			"domain_expand_scope",
+			"admin",
 			"security_admin"
 		],
 		"correctIndex": 1,
@@ -22854,12 +22854,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 24,
 		"prompt": "An instance architect plans broad visibility domain grants for dozens of MSP support groups. Why do ServiceNow recommended practices discourage excessive visibility domain use?",
 		"choices": [
-			"Visibility domains prevent the domain picker from listing child domains",
+			"Visibility domains disable ACL evaluation for affected tables entirely",
 			"Visibility domains force all affected users into the global domain session scope",
-			"Visibility domains add OR conditions to queries and should be a last resort after hierarchy and contains design",
-			"Visibility domains disable ACL evaluation for affected tables entirely"
+			"Visibility domains prevent the domain picker from listing child domains",
+			"Visibility domains add OR conditions to queries and should be a last resort after hierarchy and contains design"
 		],
-		"correctIndex": 2,
+		"correctIndex": 3,
 		"explanation": "Visibility domains expand database queries with OR conditions that can degrade performance; recommended practice favors proper hierarchy and contains relationships first.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-security/bp-contains-domain-visibility.html"
@@ -22871,12 +22871,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 25,
 		"prompt": "A domain administrator must place a contractor user in the Initech domain even though the user's company maps to a different tenant domain. Which field supports that manual domain override on the user record?",
 		"choices": [
-			"Managed domain on the user record in a managed domain configuration",
-			"Primary check box on the Domain record",
 			"Default domain on the Company record",
+			"Primary check box on the Domain record",
+			"Managed domain on the user record in a managed domain configuration",
 			"sys_overrides on the user record"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "In a managed domain, the Managed domain field lets administrators manually select the user's domain instead of inheriting automatically from the company record.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-security/bp-terms-conditions.html"
@@ -22888,10 +22888,10 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 26,
 		"prompt": "An MSP engineer selects the ACME domain from the domain picker before triaging incidents. Which data becomes visible in list and form views for that session?",
 		"choices": [
-			"Only records explicitly tagged global regardless of hierarchy",
-			"Records in the ACME domain and its child domains based on session scope",
 			"All records in every domain where the user holds the itil role",
-			"Records in the ACME domain and all parent domains above ACME"
+			"Records in the ACME domain and its child domains based on session scope",
+			"Records in the ACME domain and all parent domains above ACME",
+			"Only records explicitly tagged global regardless of hierarchy"
 		],
 		"correctIndex": 1,
 		"explanation": "Session scope reflects the selected domain and its child domains; users see data in their home or picked domain plus domains below them in the hierarchy.",
@@ -22906,8 +22906,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "Performance review shows slow list queries after an SP team added many contains relationships across tenant domains. What is the underlying cause?",
 		"choices": [
 			"Contains relationships add OR conditions to domain queries, increasing query complexity",
-			"Contains relationships disable domain path indexing on affected tables",
 			"Contains relationships move all contained records into the global domain",
+			"Contains relationships disable domain path indexing on affected tables",
 			"Contains relationships require a separate MID Server per contained domain"
 		],
 		"correctIndex": 0,
@@ -22922,12 +22922,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 28,
 		"prompt": "MSP technicians in a shared support group need persistent access to the Initech tenant domain without individual user configuration. Where should the architect define that access?",
 		"choices": [
-			"Primary check box on the Initech domain record",
+			"Contains domains related list on each incident record",
 			"sys_overrides field on the Group table definition",
-			"Visibility domains related list on the support group record",
-			"Contains domains related list on each incident record"
+			"Primary check box on the Initech domain record",
+			"Visibility domains related list on the support group record"
 		],
-		"correctIndex": 2,
+		"correctIndex": 3,
 		"explanation": "Assigning visibility domains to a group grants all group members access to the specified domain; users inherit group visibility domains through membership.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-security/c_DomainVisibility.html"
@@ -22941,14 +22941,14 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "Which statements describe characteristics of a contains domain relationship? (Choose three.)",
 		"choices": [
 			"It is a many-to-many domain-to-domain relationship independent of parent-child hierarchy",
-			"It automatically makes the containing domain the parent of the contained domain",
 			"Visibility through contains is controlled by the domain picker selection",
+			"It automatically makes the containing domain the parent of the contained domain",
 			"It grants visibility to data in the contained domain without affecting process flow"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			2,
+			1,
 			3
 		],
 		"explanation": "Contains domains are many-to-many data visibility links outside hierarchy, do not change process inheritance, and respect domain picker context when viewing contained data.",
@@ -22962,12 +22962,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 30,
 		"prompt": "An MSP administrator working in the parent TOP domain creates an incident while impersonating a tenant workflow. Can users in a child tenant domain see that incident by default?",
 		"choices": [
-			"No, data in a parent domain is not visible to users in child domains below it",
 			"Yes, but only when the incident priority is set to Critical",
 			"Yes, child domains always inherit visibility to all parent domain records",
+			"No, data in a parent domain is not visible to users in child domains below it",
 			"No, unless the incident sys_domain field is set to global"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Data visibility rises up the hierarchy—parents see child data—but child domain users cannot see records that exist only in a parent domain above them.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-security/bp-domain-hierarchy.html"
@@ -22979,12 +22979,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 31,
 		"prompt": "An ACME ITIL user with domain_expand_scope edits an incident in the ACME APJ child domain with record scope active. Which users appear when selecting Assigned to?",
 		"choices": [
-			"Users in parent domains above the incident domain but not the incident domain itself",
-			"Users with the required role in the incident's domain or global only",
 			"Only users who share the same company as the assigned-to field",
-			"All active users across every tenant domain on the instance"
+			"Users in parent domains above the incident domain but not the incident domain itself",
+			"All active users across every tenant domain on the instance",
+			"Users with the required role in the incident's domain or global only"
 		],
-		"correctIndex": 1,
+		"correctIndex": 3,
 		"explanation": "With record scope active, reference fields constrain choices to the record's domain and global; toggling to session scope expands to the user's domain and child domains.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-security/bp-terms-conditions.html"
@@ -22996,12 +22996,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 32,
 		"prompt": "A change task is created from a change request assigned to the ACME tenant domain. Which domain value applies to the new change task record?",
 		"choices": [
-			"The change task is assigned to global unless manually updated",
-			"The change task domain is determined by the assignment group only",
 			"The change task inherits the domain of the parent change request record",
+			"The change task domain is determined by the assignment group only",
+			"The change task is assigned to global unless manually updated",
 			"The change task always inherits the creating user's home domain"
 		],
-		"correctIndex": 2,
+		"correctIndex": 0,
 		"explanation": "Related child records inherit the parent record's domain by default, so a change task created from an ACME change request stays in the ACME domain.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-security/c_DomainAssignment.html"
@@ -23015,14 +23015,14 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "Which properties define a domain-separated ServiceNow application for service provider deployments? (Choose three.)",
 		"choices": [
 			"Business logic separation supporting tenant-specific policies and overrides",
-			"Hierarchical modeling with nested multitenancy and parent access to child resources",
 			"Mandatory separate MID Server infrastructure per tenant domain",
-			"Data separation so tenants see only authorized records"
+			"Data separation so tenants see only authorized records",
+			"Hierarchical modeling with nested multitenancy and parent access to child resources"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			1,
+			2,
 			3
 		],
 		"explanation": "Domain-separated applications provide data separation, business logic separation, hierarchical modeling, UI separation, and cross-customer intelligence—not separate MID infrastructure per tenant.",
@@ -23037,8 +23037,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "A developer proposes adding sys_domain to the Dictionary Entry [sys_dictionary] table for tenant-specific field labels. What does ServiceNow recommend?",
 		"choices": [
 			"Do not domain-separate platform sys_ tables because it can produce unexpected results",
-			"Domain-separate all sys_ tables to maximize tenant isolation",
 			"Domain-separate sys_dictionary but never sys_properties",
+			"Domain-separate all sys_ tables to maximize tenant isolation",
 			"Use visibility domains on sys_dictionary instead of sys_domain"
 		],
 		"correctIndex": 0,
@@ -23053,15 +23053,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 35,
 		"prompt": "A domain administrator edits a business rule that was authored in the global domain. What does the platform do automatically to support process separation?",
 		"choices": [
-			"Deletes the global rule so only the domain copy remains active",
-			"Sets the sys_overrides field to reference the parent record being replaced",
 			"Copies the rule into every child domain without administrator action",
-			"Moves the original global rule into the administrator's personal scope"
+			"Deletes the global rule so only the domain copy remains active",
+			"Moves the original global rule into the administrator's personal scope",
+			"Sets the sys_overrides field to reference the parent record being replaced"
 		],
-		"correctIndex": 1,
+		"correctIndex": 3,
 		"explanation": "When a domain admin modifies process logic owned by a higher domain, the system creates an override and populates sys_overrides to link the domain record to the parent it replaces.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/australia-platform-administration/page/administer/domain-separation/concept/process-separation.html"
+			"https://www.servicenow.com/docs/r/platform-security/process-separation.html"
 		],
 		"domain": "Process Separation"
 	},
@@ -23070,15 +23070,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 36,
 		"prompt": "A subsidiary needs a domain-specific email notification without altering the global template. What is the recommended override workflow?",
 		"choices": [
-			"Deactivate the global notification and create a new record with no reference",
+			"Edit the global notification in place and restrict it with a domain condition",
 			"Export the notification to an update set and import it into the subsidiary MID Server",
-			"Duplicate the notification in the target domain and set sys_overrides to the global record",
-			"Edit the global notification in place and restrict it with a domain condition"
+			"Deactivate the global notification and create a new record with no reference",
+			"Duplicate the notification in the target domain and set sys_overrides to the global record"
 		],
-		"correctIndex": 2,
+		"correctIndex": 3,
 		"explanation": "Process overrides preserve the parent record while the domain copy references it through sys_overrides, keeping global logic intact for other domains.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/australia-platform-administration/page/administer/domain-separation/concept/process-separation.html"
+			"https://www.servicenow.com/docs/r/platform-security/process-separation.html"
 		],
 		"domain": "Process Separation"
 	},
@@ -23088,14 +23088,14 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "A service provider must present different assignment group choices on incident forms per operating company. Which configuration supports domain-specific pick lists?",
 		"choices": [
 			"System properties that store comma-separated group names for all domains",
-			"Choice lists scoped to the domain with optional overrides of global lists",
 			"Import sets that overwrite sys_choice records nightly from a spreadsheet",
+			"Choice lists scoped to the domain with optional overrides of global lists",
 			"Client scripts that hard-code group sys_ids in each domain"
 		],
-		"correctIndex": 1,
+		"correctIndex": 2,
 		"explanation": "Choice lists are process-separated and can be overridden per domain so each operating company sees governed values without sharing one global list.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/australia-platform-administration/page/administer/domain-separation/concept/process-separation.html"
+			"https://www.servicenow.com/docs/r/platform-security/process-separation.html"
 		],
 		"domain": "Process Separation"
 	},
@@ -23105,36 +23105,37 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"questionType": "multi",
 		"prompt": "Which process artifacts can domain administrators create or override within their domain? (Choose two.)",
 		"choices": [
+			"UI policies that govern form behavior for domain users",
 			"System properties that apply instance-wide to every domain",
 			"Email notifications tailored to domain-specific workflows",
-			"UI policies that govern form behavior for domain users",
 			"CMDB class models that redefine the global data schema"
 		],
-		"correctIndex": 1,
+		"correctIndex": 0,
 		"correctIndexes": [
-			1,
+			0,
 			2
 		],
 		"explanation": "Domain teams can maintain process-separated artifacts such as UI policies and email notifications; system properties and core data models remain global concerns.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/australia-platform-administration/page/administer/domain-separation/concept/process-separation.html"
+			"https://www.servicenow.com/docs/r/platform-security/process-separation.html"
 		],
 		"domain": "Process Separation"
 	},
 	{
 		"trackCode": "CIS-SP",
 		"order": 39,
-		"prompt": "Which is a process-separated entity?",
+		"prompt": "Which is a process-separated entity that supports tenant-specific business logic overrides?",
 		"choices": [
+			"Dictionary field definitions on sys_dictionary",
 			"Email Notifications",
 			"System Properties",
-			"Tasks",
-			"Script Includes"
+			"Tasks"
 		],
-		"correctIndex": 0,
-		"explanation": "Email notifications are process-separated and can be overridden per domain. Tasks and script includes are data-separated, and system properties are global.",
+		"correctIndex": 1,
+		"explanation": "Business logic separation covers tenant-specific policies such as email notifications, business rules, client scripts, UI policies, and UI actions. System properties and dictionary definitions are global; task rows are data records, not process overrides.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/australia-platform-administration/page/administer/domain-separation/concept/process-separation.html"
+			"https://www.servicenow.com/docs/r/platform-security/c_DomainSeparation.html",
+			"https://www.servicenow.com/docs/r/platform-security/bp-terms-conditions.html"
 		],
 		"domain": "Process Separation"
 	},
@@ -23143,15 +23144,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 40,
 		"prompt": "A global administrator reviewing UI policies needs to see override records created in child domains. Which related link should be used on the process table list?",
 		"choices": [
-			"Export to XML",
-			"Expand Domain Scope",
 			"Merge Update Sets",
-			"Run Point Scan"
+			"Expand Domain Scope",
+			"Run Point Scan",
+			"Export to XML"
 		],
 		"correctIndex": 1,
 		"explanation": "Expand Domain Scope on process tables in the global domain reveals override records and domain-specific process logic maintained by delegated administrators.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/australia-platform-administration/page/administer/domain-separation/concept/process-separation.html"
+			"https://www.servicenow.com/docs/r/platform-security/process-separation.html"
 		],
 		"domain": "Process Separation"
 	},
@@ -23161,36 +23162,37 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"questionType": "multi",
 		"prompt": "A domain team must stop using a process override without deleting the parent global record. Which approaches align with domain separation best practices? (Choose two.)",
 		"choices": [
-			"Mark the override inactive and expect the platform to ignore it automatically",
-			"Set a condition of sys_id is empty on the override record",
 			"Set the override condition to false so it never evaluates",
+			"Set a condition of sys_id is empty on the override record",
+			"Mark the override inactive and expect the platform to ignore it automatically",
 			"Delete the global parent record so the override becomes standalone"
 		],
-		"correctIndex": 1,
+		"correctIndex": 0,
 		"correctIndexes": [
-			1,
-			2
+			0,
+			1
 		],
 		"explanation": "Inactive override records are ignored; deactivation is achieved by conditions that never evaluate, such as false or sys_id is empty, while preserving the parent record.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/australia-platform-security/page/administer/company-and-domain-separation/concept/c_DomainSeparation.html"
+			"https://www.servicenow.com/docs/r/platform-security/c_DomainSeparation.html"
 		],
 		"domain": "Process Separation"
 	},
 	{
 		"trackCode": "CIS-SP",
 		"order": 42,
-		"prompt": "A domain administrator sets a process override to inactive expecting it to stop firing in that domain. What actually happens?",
+		"prompt": "An MSP relates the shared-services domain to a tenant domain with a Contains relationship so operators can see tenant incidents. What does that Contains relationship not change?",
 		"choices": [
-			"All business rules in the domain are disabled until the override is reactivated",
-			"The parent record is automatically deleted from the global domain",
-			"The platform ignores the inactive override and the parent process may still run",
-			"The override runs in every child domain below the administrator's scope"
+			"Access to records in the contained domain and its child domains for contains users",
+			"Whether child domains inherit process definitions from their parent hierarchy",
+			"Which incident records operators can query across those domains",
+			"Visibility of tenant data for users whose home domain contains the tenant"
 		],
-		"correctIndex": 2,
-		"explanation": "Inactive override records are ignored by the platform; to suppress behavior, set a condition that never evaluates rather than relying on the active flag alone.",
+		"correctIndex": 1,
+		"explanation": "Contains domains grant data visibility independent of parent-child hierarchy. They do not change process flow: processes still follow the hierarchy (process flows down; data rises up). Contains relationships affect data access only.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/australia-platform-security/page/administer/company-and-domain-separation/concept/c_DomainSeparation.html"
+			"https://www.servicenow.com/docs/r/platform-security/c_DomainVisibility.html",
+			"https://www.servicenow.com/docs/r/platform-security/bp-domain-hierarchy.html"
 		],
 		"domain": "Process Separation"
 	},
@@ -23200,14 +23202,14 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "What mechanism assigns records to the default domain?",
 		"choices": [
 			"UI policies evaluated on form load",
-			"Discovery schedules tagging CIs by subnet",
 			"Business Rules",
+			"Discovery schedules tagging CIs by subnet",
 			"Inbound email actions parsing message headers"
 		],
-		"correctIndex": 2,
+		"correctIndex": 1,
 		"explanation": "Business rules commonly set the domain field on insert or update so new records land in the correct default domain for the operating company.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/australia-platform-administration/page/administer/domain-separation/concept/domain-separation.html"
+			"https://www.servicenow.com/docs/r/platform-security/domain-separation.html"
 		],
 		"domain": "Process Separation"
 	},
@@ -23216,15 +23218,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 44,
 		"prompt": "A subsidiary wants a different incident form layout without affecting other operating companies. Which UI configuration approach fits process separation?",
 		"choices": [
-			"Disable the form for all domains and require list-only editing",
+			"Modify the global form and hide sections with client-side display:none scripts",
 			"Create a domain-specific form view or override UI policies for that domain",
 			"Copy the incident table into a scoped application with a new name",
-			"Modify the global form and hide sections with client-side display:none scripts"
+			"Disable the form for all domains and require list-only editing"
 		],
 		"correctIndex": 1,
 		"explanation": "Form views and UI policies are process-separated, allowing domain-specific presentation while global defaults remain available to other domains.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/australia-platform-administration/page/administer/domain-separation/concept/process-separation.html"
+			"https://www.servicenow.com/docs/r/platform-security/process-separation.html"
 		],
 		"domain": "Process Separation"
 	},
@@ -23234,19 +23236,20 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"questionType": "multi",
 		"prompt": "Which automation types are process-separated and can be overridden per domain? (Choose two.)",
 		"choices": [
-			"Flows authored for domain-specific fulfillment steps",
 			"Task records stored on operational tables",
 			"Client scripts that control on-load form behavior",
+			"Business rules that enforce domain-specific create and update logic",
 			"System dictionary entries that define the physical schema"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"correctIndexes": [
-			0,
+			1,
 			2
 		],
-		"explanation": "Flows and client scripts are process artifacts that support domain overrides; task rows are data records and dictionary definitions are global platform structure.",
+		"explanation": "Business rules and client scripts are process artifacts that support domain overrides through sys_overrides. Task rows are data records, and dictionary definitions are global platform structure. Workflow Studio flows are domain-aware but do not use the same override pattern.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/australia-platform-administration/page/administer/domain-separation/concept/process-separation.html"
+			"https://www.servicenow.com/docs/r/platform-security/c_DomainSeparation.html",
+			"https://www.servicenow.com/docs/r/platform-security/bp-terms-conditions.html"
 		],
 		"domain": "Process Separation"
 	},
@@ -23255,15 +23258,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 46,
 		"prompt": "A domain manager maintains catalog workflows but cannot alter global ACL design. Which statement describes data-driven process responsibilities?",
 		"choices": [
-			"Data-driven processes eliminate the need for update set promotion",
-			"Domain managers maintain selected process elements while instance owners govern platform-wide process creation",
 			"Only global administrators may view catalog records in any domain",
-			"Domain managers own every table, field, and ACL on the instance without restriction"
+			"Data-driven processes eliminate the need for update set promotion",
+			"Domain managers own every table, field, and ACL on the instance without restriction",
+			"Domain managers maintain selected process elements while instance owners govern platform-wide process creation"
 		],
-		"correctIndex": 1,
+		"correctIndex": 3,
 		"explanation": "Delegated administration lets domain managers maintain approved data-driven process areas while instance owners retain responsibility for core platform process design.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/australia-platform-administration/page/administer/domain-separation/concept/process-separation.html"
+			"https://www.servicenow.com/docs/r/platform-security/process-separation.html"
 		],
 		"domain": "Process Separation"
 	},
@@ -23272,33 +23275,33 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 47,
 		"prompt": "A developer captures a UI policy change while working in a child domain. How should the update set record the domain context?",
 		"choices": [
-			"Move all captured items into the global domain before completing the set",
-			"Reject capture unless the administrator impersonates the global domain",
 			"Strip the domain field so the change applies globally on commit",
+			"Reject capture unless the administrator impersonates the global domain",
+			"Move all captured items into the global domain before completing the set",
 			"Tag captured records with the domain where the change was made"
 		],
 		"correctIndex": 3,
 		"explanation": "Update sets preserve the domain context of captured process records so promotion applies changes to the intended domain rather than forcing global scope.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/australia-platform-administration/page/administer/update-sets/concept/update-sets.html",
-			"https://www.servicenow.com/docs/bundle/australia-platform-administration/page/administer/domain-separation/concept/process-separation.html"
+			"https://www.servicenow.com/docs/r/platform-administration/update-sets/update-sets.html",
+			"https://www.servicenow.com/docs/r/platform-security/process-separation.html"
 		],
 		"domain": "Process Separation"
 	},
 	{
 		"trackCode": "CIS-SP",
 		"order": 48,
-		"prompt": "What domain will a record be written to when applying an update set?",
+		"prompt": "After importing an update set into a domain-separated target instance, what should the implementer validate because the platform does not capture it in the update set?",
 		"choices": [
-			"The record's domain from the source instance",
-			"The domain of the administrator applying the update set",
-			"A new process domain created automatically during commit",
-			"Always the global domain regardless of source context"
+			"Domain path values and hierarchy alignment for affected records",
+			"That ACLs were deleted for all child domains during commit",
+			"That the domain picker was permanently disabled for tenant users",
+			"That every task number regenerated with a new prefix automatically"
 		],
 		"correctIndex": 0,
-		"explanation": "Update set application honors the domain stamped on captured records from the source instance so process overrides land in the correct domain on the target.",
+		"explanation": "The platform does not capture sys_domain_path values in update sets to avoid hierarchy mismatches between instances. After import, validate the domain hierarchy and domain path values for affected records.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/australia-platform-administration/page/administer/update-sets/concept/update-sets.html"
+			"https://www.servicenow.com/docs/r/platform-security/bp-no-domain-path-in-scripts.html"
 		],
 		"domain": "Process Separation"
 	},
@@ -23307,32 +23310,33 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 49,
 		"prompt": "A service provider plans domain-separated catalog items for multiple operating companies. What must be in place before catalog process separation can work?",
 		"choices": [
-			"A defined domain hierarchy with domain separation enabled and governed roles assigned",
-			"Deletion of all global catalog items so domains start with empty tables",
 			"Disabling update sets for catalog tables to prevent cross-domain capture",
+			"Deletion of all global catalog items so domains start with empty tables",
+			"A defined domain hierarchy with domain separation enabled and governed roles assigned",
 			"Converting every catalog item into a scoped application manually"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Domain-separated catalog management requires an established domain hierarchy, separation enabled, and roles that restrict catalog administration to the appropriate domain.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/australia-platform-administration/page/administer/domain-separation/task/plan-domain-separation-implementation.html"
+			"https://www.servicenow.com/docs/r/platform-security/plan-domain-separation-implementation.html"
 		],
 		"domain": "Process Separation"
 	},
 	{
 		"trackCode": "CIS-SP",
 		"order": 50,
-		"prompt": "Two operating companies need different Flow Designer automations for the same catalog item. How should the implementation specialist configure process separation?",
+		"prompt": "Two operating companies need different Workflow Studio automations for the same catalog item on one MSP instance. How should the implementation specialist configure domain-aware flows?",
 		"choices": [
-			"Author domain-specific flow overrides while retaining the global flow as the parent reference",
-			"Copy the catalog item table into Excel for each domain and reimport weekly",
-			"Disable Flow Designer globally and move logic into background scripts only",
-			"Store both flows in the global domain and filter with unrelated UI policies"
+			"Create uniquely named domain-specific flows for each tenant domain and manage them from the correct domain context",
+			"Author a single global flow and mark child domains as sys_overrides children of that flow",
+			"Store both flows in a sibling domain and rely on Contains domains to hide them from operators",
+			"Disable Flow Designer globally and move logic into background scripts only"
 		],
 		"correctIndex": 0,
-		"explanation": "Flows are process-separated; domain-specific automations should override parent flows through the standard sys_overrides pattern rather than replacing global logic in place.",
+		"explanation": "Workflow Studio content belongs to the creator's domain (or domain picker context) and supports domain-specific flows, actions, and subflows. Flows do not override each other through sys_overrides; use unique names and edit content in the domain it belongs to. Parent-domain flows may still run when their triggers match.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/australia-platform-administration/page/administer/domain-separation/concept/process-separation.html"
+			"https://www.servicenow.com/docs/r/build-workflows/flow-designer-domain-separation.html",
+			"https://www.servicenow.com/docs/r/platform-security/domain-separated-apps.html"
 		],
 		"domain": "Process Separation"
 	},
@@ -23343,19 +23347,19 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "A service provider is promoting update sets between domain-separated sub-production and production instances. Which practices reduce deployment risk? (Choose two.)",
 		"choices": [
 			"Test process overrides in the target domain with expand scope audits after promotion",
-			"Verify captured records retain the intended domain before committing the update set",
 			"Skip regression of business rules because domains isolate logic automatically",
+			"Verify captured records retain the intended domain before committing the update set",
 			"Force all captured records into the global domain to simplify comparison"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			1
+			2
 		],
 		"explanation": "Domain-aware promotion requires validating captured domain context and regression-testing overrides in the target environment; forcing global scope or skipping tests increases risk.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/australia-platform-administration/page/administer/update-sets/concept/update-sets.html",
-			"https://www.servicenow.com/docs/bundle/australia-platform-administration/page/administer/domain-separation/concept/process-separation.html"
+			"https://www.servicenow.com/docs/r/platform-administration/update-sets/update-sets.html",
+			"https://www.servicenow.com/docs/r/platform-security/process-separation.html"
 		],
 		"domain": "Process Separation"
 	},
@@ -23364,12 +23368,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 52,
 		"prompt": "When an administrator in a child domain modifies a business rule that exists in the global domain, what does the platform do?",
 		"choices": [
+			"Creates a domain-specific override record linked through sys_overrides instead of updating the global record",
 			"Moves the global record into the child domain by changing its Domain field value",
 			"Deletes the global business rule and copies it into the child domain table",
-			"Creates a domain-specific override record linked through sys_overrides instead of updating the global record",
 			"Disables business rules globally until the override record is manually removed"
 		],
-		"correctIndex": 2,
+		"correctIndex": 0,
 		"explanation": "Process administration converts attempted updates to higher-domain policies into domain-specific inserts with sys_overrides pointing to the original record.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-security/c_DelegatedAdministration.html"
@@ -23381,12 +23385,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 53,
 		"prompt": "Process administration determines which policies apply during a transaction. Which precedence rule is correct?",
 		"choices": [
-			"Policies from sibling domains are merged before any domain-specific rule is applied",
-			"The record's domain is evaluated first, then policies are searched up the hierarchy to global",
 			"The logged-in user's home domain always overrides the domain on the record being processed",
-			"Global policies execute exclusively and child domains cannot customize process behavior"
+			"Policies from sibling domains are merged before any domain-specific rule is applied",
+			"Global policies execute exclusively and child domains cannot customize process behavior",
+			"The record's domain is evaluated first, then policies are searched up the hierarchy to global"
 		],
-		"correctIndex": 1,
+		"correctIndex": 3,
 		"explanation": "Delegated administration starts with the record domain and walks up the domain hierarchy until a matching policy is found.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-security/c_DelegatedAdministration.html",
@@ -23399,16 +23403,16 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 54,
 		"prompt": "A service provider must load tenant reference data into domain-separated tables. What should the transform map ensure for each inserted row?",
 		"choices": [
-			"The target record domain aligns with the tenant scope defined for that data load",
+			"All rows load into global regardless of the source file tenant identifier",
 			"Domain assignment is deferred until end users open the records in the portal",
-			"The sys_domain field is cleared so ACLs route records automatically after insert",
-			"All rows load into global regardless of the source file tenant identifier"
+			"The target record domain aligns with the tenant scope defined for that data load",
+			"The sys_domain field is cleared so ACLs route records automatically after insert"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Domain-aware foundational loads must stamp records with the correct tenant domain so queries, references, and ACLs enforce separation.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/import-sets/concept/c_ImportSets.html",
-			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/domain-separation/concept/domain-separation.html"
+			"https://www.servicenow.com/docs/r/integrate-applications/system-import-sets/c_ImportSets.html",
+			"https://www.servicenow.com/docs/r/platform-security/domain-separation.html"
 		],
 		"domain": "Foundational Data Management"
 	},
@@ -23417,15 +23421,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 55,
 		"prompt": "During a tenant bulk user load, a transform map maps a source company code to a sys_user.company reference. What reduces cross-domain reference errors?",
 		"choices": [
-			"Disable reference fields on sys_user during import to improve transform throughput",
-			"Qualify company lookups to the target tenant domain and validate matches before insert",
 			"Import users into global and reassign domains with a UI action after the load completes",
+			"Qualify company lookups to the target tenant domain and validate matches before insert",
+			"Disable reference fields on sys_user during import to improve transform throughput",
 			"Coalesce exclusively on email while ignoring company reference resolution"
 		],
 		"correctIndex": 1,
 		"explanation": "Reference resolution must respect domain visibility so imported users link to company records in the same tenant scope.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/import-sets/task/t_CreateATransformMap.html",
+			"https://www.servicenow.com/docs/r/integrate-applications/system-import-sets/t_CreateATransformMap.html",
 			"https://www.servicenow.com/docs/r/platform-security/bp-dom-sep-definition.html"
 		],
 		"domain": "Foundational Data Management"
@@ -23436,20 +23440,20 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"questionType": "multi",
 		"prompt": "A recurring tenant location import must update existing rows instead of creating duplicates. Which transform map settings should the implementation team configure? (Choose two.)",
 		"choices": [
-			"Disable transform scripts to prevent any field mapping from executing",
-			"Map the domain column so updates stay within the correct tenant scope",
 			"Mark stable natural keys as coalesce fields on the transform map",
+			"Map the domain column so updates stay within the correct tenant scope",
+			"Disable transform scripts to prevent any field mapping from executing",
 			"Set Run business rules to false on every production import run"
 		],
-		"correctIndex": 1,
+		"correctIndex": 0,
 		"correctIndexes": [
-			1,
-			2
+			0,
+			1
 		],
 		"explanation": "Coalesce fields enable upsert behavior while explicit domain mapping keeps updates scoped to the intended tenant.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/import-sets/concept/c_Coalescing.html",
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/import-sets/task/t_CreateATransformMap.html"
+			"https://www.servicenow.com/docs/r/integrate-applications/system-import-sets/c_Coalescing.html",
+			"https://www.servicenow.com/docs/r/integrate-applications/system-import-sets/t_CreateATransformMap.html"
 		],
 		"domain": "Foundational Data Management"
 	},
@@ -23458,15 +23462,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 57,
 		"prompt": "In domain-separated foundational data loads, why is staging data in an import set table before transform execution recommended?",
 		"choices": [
-			"It replaces the need for coalesce logic on the transform map",
+			"It bypasses ACL evaluation permanently for all subsequent target table updates",
 			"It automatically assigns sys_overrides for every imported row in process tables",
-			"It isolates raw source payloads for validation and transformation before updating tenant production tables",
-			"It bypasses ACL evaluation permanently for all subsequent target table updates"
+			"It replaces the need for coalesce logic on the transform map",
+			"It isolates raw source payloads for validation and transformation before updating tenant production tables"
 		],
-		"correctIndex": 2,
+		"correctIndex": 3,
 		"explanation": "Import set staging provides a controlled landing zone to validate and transform inbound data before promoting records into tenant tables.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/import-sets/concept/c_ImportSets.html"
+			"https://www.servicenow.com/docs/r/integrate-applications/system-import-sets/c_ImportSets.html"
 		],
 		"domain": "Foundational Data Management"
 	},
@@ -23476,14 +23480,14 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "A transform must set a reference to a catalog item owned by another tenant. What design choice respects domain separation?",
 		"choices": [
 			"Restrict lookups and reference resolution to items visible in the record's target domain",
-			"Resolve references from any domain by selecting the highest sys_id value",
 			"Disable domain on the reference field dictionary entry for the target table",
+			"Resolve references from any domain by selecting the highest sys_id value",
 			"Copy catalog items into global before each import run completes"
 		],
 		"correctIndex": 0,
 		"explanation": "Reference fields in multi-domain environments must resolve within the tenant scope of the record being created or updated.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/import-sets/task/t_CreateATransformMap.html",
+			"https://www.servicenow.com/docs/r/integrate-applications/system-import-sets/t_CreateATransformMap.html",
 			"https://www.servicenow.com/docs/r/platform-security/bp-dom-sep-definition.html"
 		],
 		"domain": "Foundational Data Management"
@@ -23494,20 +23498,20 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"questionType": "multi",
 		"prompt": "Before enabling scheduled tenant data loads in production, which controls should be validated? (Choose two.)",
 		"choices": [
-			"All imports execute as the System Administrator account in the global domain only",
+			"Coalesce keys uniquely identify records within each tenant's data set",
 			"Transform maps assign sys_domain values consistent with tenant scope for new and updated rows",
 			"Business rules are globally deactivated during every scheduled load window",
-			"Coalesce keys uniquely identify records within each tenant's data set"
+			"All imports execute as the System Administrator account in the global domain only"
 		],
-		"correctIndex": 1,
+		"correctIndex": 0,
 		"correctIndexes": [
-			1,
-			3
+			0,
+			1
 		],
 		"explanation": "Production tenant loads require correct domain stamping and stable coalesce keys to prevent cross-tenant defects and duplicate records.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/import-sets/concept/c_ImportSets.html",
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/import-sets/concept/c_Coalescing.html"
+			"https://www.servicenow.com/docs/r/integrate-applications/system-import-sets/c_ImportSets.html",
+			"https://www.servicenow.com/docs/r/integrate-applications/system-import-sets/c_Coalescing.html"
 		],
 		"domain": "Foundational Data Management"
 	},
@@ -23516,15 +23520,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 60,
 		"prompt": "An import populates incident records that reference configuration items in the same tenant domain. What failure mode should reference integrity checks catch early?",
 		"choices": [
-			"Mobile offline cache entries expiring before transform completion",
-			"Orphaned references pointing to CIs that are missing or belong to a different domain",
 			"Service portal widgets rendering in the wrong theme for imported incidents",
-			"Duplicate sys_overrides records on process tables used by the import job"
+			"Mobile offline cache entries expiring before transform completion",
+			"Duplicate sys_overrides records on process tables used by the import job",
+			"Orphaned references pointing to CIs that are missing or belong to a different domain"
 		],
-		"correctIndex": 1,
+		"correctIndex": 3,
 		"explanation": "Reference integrity validation identifies broken or cross-domain dependencies before transformed records enter production workflows.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/import-sets/concept/c_Coalescing.html",
+			"https://www.servicenow.com/docs/r/integrate-applications/system-import-sets/c_Coalescing.html",
 			"https://www.servicenow.com/docs/r/platform-security/bp-dom-sep-definition.html"
 		],
 		"domain": "Foundational Data Management"
@@ -23534,15 +23538,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 61,
 		"prompt": "After a tenant data load, multiple rows appear in the Transform Errors related list. What is the best first troubleshooting step?",
 		"choices": [
-			"Disable domain separation until the load completes successfully",
-			"Rebuild the domain hierarchy to match the source file column order",
 			"Review transform error records and import set run history for script or mapping failures",
+			"Rebuild the domain hierarchy to match the source file column order",
+			"Disable domain separation until the load completes successfully",
 			"Delete the target table and rerun the import without coalesce fields"
 		],
-		"correctIndex": 2,
+		"correctIndex": 0,
 		"explanation": "Import set run history and transform error logs provide row-level failure detail needed to diagnose mapping and script issues.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/import-sets/concept/c_ImportSets.html"
+			"https://www.servicenow.com/docs/r/integrate-applications/system-import-sets/c_ImportSets.html"
 		],
 		"domain": "Foundational Data Management"
 	},
@@ -23552,15 +23556,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "When a transform map inserts a new company record for a tenant, how should the domain field typically be set?",
 		"choices": [
 			"Leave sys_domain empty and rely on the Default domain for all company inserts",
-			"Force every company into global so child tenants inherit visibility automatically",
+			"Assign sys_domain to the tenant domain the company belongs to before related records are created",
 			"Copy the administrator's current picker domain regardless of company ownership",
-			"Assign sys_domain to the tenant domain the company belongs to before related records are created"
+			"Force every company into global so child tenants inherit visibility automatically"
 		],
-		"correctIndex": 3,
+		"correctIndex": 1,
 		"explanation": "Foundational company loads must establish the correct tenant domain early because related entities inherit that domain context.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/domain-separation/concept/domain-separation.html",
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/import-sets/task/t_CreateATransformMap.html"
+			"https://www.servicenow.com/docs/r/platform-security/domain-separation.html",
+			"https://www.servicenow.com/docs/r/integrate-applications/system-import-sets/t_CreateATransformMap.html"
 		],
 		"domain": "Foundational Data Management"
 	},
@@ -23570,20 +23574,20 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"questionType": "multi",
 		"prompt": "Which practices improve repeatable foundational data migrations across tenant domains? (Choose two.)",
 		"choices": [
-			"Version transform maps and data quality scripts so rehearsal runs produce predictable outcomes",
-			"Define completeness and referential integrity gates before cutover to production",
 			"Edit production records manually during each test without documenting changes",
+			"Define completeness and referential integrity gates before cutover to production",
+			"Version transform maps and data quality scripts so rehearsal runs produce predictable outcomes",
 			"Remove coalesce fields after the first successful dry run to speed imports"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"correctIndexes": [
-			0,
-			1
+			1,
+			2
 		],
 		"explanation": "Repeatable tenant migrations depend on versioned transform logic and measurable quality gates rather than ad hoc production edits.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/import-sets/concept/c_TransformEventScripts.html",
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/data-management/concept/c_DataManagement.html"
+			"https://www.servicenow.com/docs/r/integrate-applications/system-import-sets/c_TransformEventScripts.html",
+			"https://www.servicenow.com/docs/r/platform-administration/data-management/c_DataManagement.html"
 		],
 		"domain": "Foundational Data Management"
 	},
@@ -23592,15 +23596,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 64,
 		"prompt": "A multi-domain import links users to departments through reference fields. What validation prevents silent data defects?",
 		"choices": [
+			"Skip reference checks when the source file has fewer than one thousand rows",
 			"Clear sys_domain on departments so references resolve by display name alone",
-			"Confirm referenced department records exist in the same domain as the user being loaded",
 			"Require all reference fields to point to records in the global domain only",
-			"Skip reference checks when the source file has fewer than one thousand rows"
+			"Confirm referenced department records exist in the same domain as the user being loaded"
 		],
-		"correctIndex": 1,
+		"correctIndex": 3,
 		"explanation": "Cross-domain reference defects are avoided by validating that lookup targets exist within the tenant domain of the record being imported.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/import-sets/concept/c_Coalescing.html",
+			"https://www.servicenow.com/docs/r/integrate-applications/system-import-sets/c_Coalescing.html",
 			"https://www.servicenow.com/docs/r/platform-security/bp-dom-sep-definition.html"
 		],
 		"domain": "Foundational Data Management"
@@ -23610,12 +23614,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 65,
 		"prompt": "According to domain separation support levels, which description matches the Basic category?",
 		"choices": [
-			"Support is limited to adding a domain column with no tenant-aware routing at run time",
-			"Instance owners cannot configure the application to function across multiple tenants",
 			"Business logic ensures records are created and queried within the proper tenant domain for SP use cases",
+			"Instance owners cannot configure the application to function across multiple tenants",
+			"Support is limited to adding a domain column with no tenant-aware routing at run time",
 			"Tenants independently configure all process policies without provider-managed overrides"
 		],
-		"correctIndex": 2,
+		"correctIndex": 0,
 		"explanation": "Basic support requires application logic to route data to the correct tenant domain at run time across UI, reporting, and aggregations.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-security/bp-domain-levels.html"
@@ -23628,11 +23632,11 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "Service Catalog is rated Standard for domain separation support. Which outcome can a service provider achieve at that level?",
 		"choices": [
 			"Guarantee tenants can alter core engine code for the catalog application independently",
-			"Prevent any catalog data from being stored with a domain value on base tables",
 			"Run catalog fulfillment without considering the user's or record's domain context",
-			"Configure tenant-specific catalog behavior and process parameters while preserving shared platform governance"
+			"Configure tenant-specific catalog behavior and process parameters while preserving shared platform governance",
+			"Prevent any catalog data from being stored with a domain value on base tables"
 		],
-		"correctIndex": 3,
+		"correctIndex": 2,
 		"explanation": "Standard support includes Basic data routing plus provider-managed per-tenant process configuration for defined catalog use cases.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-security/domain-separated-apps.html",
@@ -23646,8 +23650,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "Knowledge Management supports Standard domain separation. What does that enable in a multi-tenant service provider instance?",
 		"choices": [
 			"Domain-aware knowledge content and provider-managed process differences per tenant customer",
-			"Exclusive storage of articles in global with no tenant visibility controls",
 			"Automatic deletion of articles when a child domain is created",
+			"Exclusive storage of articles in global with no tenant visibility controls",
 			"Removal of user criteria because domain separation replaces all content filtering"
 		],
 		"correctIndex": 0,
@@ -23664,15 +23668,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"questionType": "multi",
 		"prompt": "Which statements correctly describe Standard domain separation support in supported applications? (Choose two.)",
 		"choices": [
-			"Indicates the application has no sys_domain column on its primary data tables",
-			"Includes Basic-level tenant data routing at application run time",
 			"Allows service provider administrators to configure per-tenant process behavior for defined use cases",
-			"Permits tenants to modify core application source code for each domain"
+			"Indicates the application has no sys_domain column on its primary data tables",
+			"Permits tenants to modify core application source code for each domain",
+			"Includes Basic-level tenant data routing at application run time"
 		],
-		"correctIndex": 1,
+		"correctIndex": 0,
 		"correctIndexes": [
-			1,
-			2
+			0,
+			3
 		],
 		"explanation": "Standard support builds on Basic data routing and adds provider-managed per-tenant process configuration without tenant source-code changes.",
 		"sourceUrls": [
@@ -23686,12 +23690,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 69,
 		"prompt": "Mobile is supported at Basic domain separation level. What must the instance owner ensure for mobile clients in an MSP environment?",
 		"choices": [
-			"Mobile experiences respect tenant domain context after platform web domain separation is configured",
+			"Mobile removes sys_domain from forms so field workers can edit any tenant record",
 			"Domain separation on mobile requires disabling the domain separation plugin on web",
-			"Each mobile device stores all tenant data locally without domain filtering",
-			"Mobile removes sys_domain from forms so field workers can edit any tenant record"
+			"Mobile experiences respect tenant domain context after platform web domain separation is configured",
+			"Each mobile device stores all tenant data locally without domain filtering"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Mobile domain separation extends platform web configuration so native clients honor tenant domain context at run time.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/mobile/mobile-domain-separation.html"
@@ -23703,12 +23707,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 70,
 		"prompt": "Service Portal is listed as No support for domain separation in the application matrix. What is a typical provider mitigation?",
 		"choices": [
-			"Disable the Service Portal plugin for every child domain permanently",
-			"Merge all portal pages into one global site without access controls",
 			"Use domain-aware user criteria and separate portal experiences to scope content per tenant",
+			"Merge all portal pages into one global site without access controls",
+			"Disable the Service Portal plugin for every child domain permanently",
 			"Rely on sys_overrides on incident tables to filter portal search results"
 		],
-		"correctIndex": 2,
+		"correctIndex": 0,
 		"explanation": "When native domain support is absent, providers commonly scope portal content with user criteria and tenant-specific portal configurations.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-security/domain-separated-apps.html",
@@ -23721,12 +23725,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 71,
 		"prompt": "A development team builds a custom scoped application that tenants will use on the shared MSP instance. Which design consideration makes the app domain-aware?",
 		"choices": [
-			"Rely on the application scope alone since scope isolation replaces domain separation",
+			"Store all application data in global because scoped apps cannot participate in domain separation",
 			"Duplicate the entire application once per tenant with hard-coded customer names",
-			"Add sys_domain to the application's data tables and honor domain context in queries and business logic",
-			"Store all application data in global because scoped apps cannot participate in domain separation"
+			"Rely on the application scope alone since scope isolation replaces domain separation",
+			"Add sys_domain to the application's data tables and honor domain context in queries and business logic"
 		],
-		"correctIndex": 2,
+		"correctIndex": 3,
 		"explanation": "Custom applications must include the domain field on their tables and apply domain-aware logic; application scope controls code boundaries, not tenant data separation.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-security/c_DomainAssignment.html",
@@ -23740,8 +23744,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "Before using domain separation with Customer Service Management, which setup step aligns accounts to tenant isolation?",
 		"choices": [
 			"Enable CSM account-to-domain generation so new accounts receive matching tenant domains",
-			"Create one shared account record referenced by every tenant contact",
 			"Disable the domain separation plugin because CSM manages only global accounts",
+			"Create one shared account record referenced by every tenant contact",
 			"Move all agents to the global domain and disable account-domain mapping"
 		],
 		"correctIndex": 0,
@@ -23756,10 +23760,10 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 73,
 		"prompt": "Discovery in IT Operations Management is rated Standard for domain separation. What does that indicate for an MSP operating multiple tenants?",
 		"choices": [
-			"Discovery requires separate ServiceNow instances per tenant and cannot run domain-separated",
+			"Discovery ignores sys_domain on all CI tables and writes exclusively to global",
 			"Discovery can route and manage tenant-scoped discovery data with provider-configurable process differences",
 			"Discovery support is limited to data-only separation without any process configuration",
-			"Discovery ignores sys_domain on all CI tables and writes exclusively to global"
+			"Discovery requires separate ServiceNow instances per tenant and cannot run domain-separated"
 		],
 		"correctIndex": 1,
 		"explanation": "Standard ITOM Discovery support includes tenant data routing plus provider-managed per-tenant process configuration for discovery use cases.",
@@ -23776,19 +23780,19 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "When planning domain support across ITSM, CSM, and ITOM applications on one MSP instance, which practices reduce rollout risk? (Choose two.)",
 		"choices": [
 			"Review each application's documented support level before promising tenant-specific behavior",
-			"Assume every application provides Enhanced tenant self-administration by default",
 			"Pilot domain-aware workflows with representative tenants before enterprise-wide cutover",
+			"Assume every application provides Enhanced tenant self-administration by default",
 			"Disable process overrides globally to simplify initial catalog and knowledge deployments"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			2
+			1
 		],
 		"explanation": "MSP rollouts should align expectations to documented support levels and validate cross-application behavior in a limited pilot before broad deployment.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-security/domain-separated-apps.html",
-			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/domain-separation/task/plan-domain-separation-implementation.html"
+			"https://www.servicenow.com/docs/r/platform-security/plan-domain-separation-implementation.html"
 		],
 		"domain": "Domain Support in Applications"
 	},

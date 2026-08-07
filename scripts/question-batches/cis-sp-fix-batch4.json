@@ -1,0 +1,93 @@
+[
+	{
+		"trackCode": "CIS-SP",
+		"order": 39,
+		"prompt": "Which is a process-separated entity that supports tenant-specific business logic overrides?",
+		"choices": [
+			"Email Notifications",
+			"System Properties",
+			"Tasks",
+			"Dictionary field definitions on sys_dictionary"
+		],
+		"correctIndex": 0,
+		"explanation": "Business logic separation covers tenant-specific policies such as email notifications, business rules, client scripts, UI policies, and UI actions. System properties and dictionary definitions are global; task rows are data records, not process overrides.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-security/c_DomainSeparation.html",
+			"https://www.servicenow.com/docs/r/platform-security/bp-terms-conditions.html"
+		],
+		"domain": "Process Separation"
+	},
+	{
+		"trackCode": "CIS-SP",
+		"order": 42,
+		"prompt": "An MSP relates the shared-services domain to a tenant domain with a Contains relationship so operators can see tenant incidents. What does that Contains relationship not change?",
+		"choices": [
+			"Which incident records operators can query across those domains",
+			"Whether child domains inherit process definitions from their parent hierarchy",
+			"Visibility of tenant data for users whose home domain contains the tenant",
+			"Access to records in the contained domain and its child domains for contains users"
+		],
+		"correctIndex": 1,
+		"explanation": "Contains domains grant data visibility independent of parent-child hierarchy. They do not change process flow: processes still follow the hierarchy (process flows down; data rises up). Contains relationships affect data access only.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-security/c_DomainVisibility.html",
+			"https://www.servicenow.com/docs/r/platform-security/bp-domain-hierarchy.html"
+		],
+		"domain": "Process Separation"
+	},
+	{
+		"trackCode": "CIS-SP",
+		"order": 45,
+		"questionType": "multi",
+		"prompt": "Which automation types are process-separated and can be overridden per domain? (Choose two.)",
+		"choices": [
+			"Business rules that enforce domain-specific create and update logic",
+			"Task records stored on operational tables",
+			"Client scripts that control on-load form behavior",
+			"System dictionary entries that define the physical schema"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 2],
+		"explanation": "Business rules and client scripts are process artifacts that support domain overrides through sys_overrides. Task rows are data records, and dictionary definitions are global platform structure. Workflow Studio flows are domain-aware but do not use the same override pattern.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-security/c_DomainSeparation.html",
+			"https://www.servicenow.com/docs/r/platform-security/bp-terms-conditions.html"
+		],
+		"domain": "Process Separation"
+	},
+	{
+		"trackCode": "CIS-SP",
+		"order": 48,
+		"prompt": "After importing an update set into a domain-separated target instance, what should the implementer validate because the platform does not capture it in the update set?",
+		"choices": [
+			"Domain path values and hierarchy alignment for affected records",
+			"That every task number regenerated with a new prefix automatically",
+			"That ACLs were deleted for all child domains during commit",
+			"That the domain picker was permanently disabled for tenant users"
+		],
+		"correctIndex": 0,
+		"explanation": "The platform does not capture sys_domain_path values in update sets to avoid hierarchy mismatches between instances. After import, validate the domain hierarchy and domain path values for affected records.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-security/bp-no-domain-path-in-scripts.html"
+		],
+		"domain": "Process Separation"
+	},
+	{
+		"trackCode": "CIS-SP",
+		"order": 50,
+		"prompt": "Two operating companies need different Workflow Studio automations for the same catalog item on one MSP instance. How should the implementation specialist configure domain-aware flows?",
+		"choices": [
+			"Create uniquely named domain-specific flows for each tenant domain and manage them from the correct domain context",
+			"Author a single global flow and mark child domains as sys_overrides children of that flow",
+			"Disable Flow Designer globally and move logic into background scripts only",
+			"Store both flows in a sibling domain and rely on Contains domains to hide them from operators"
+		],
+		"correctIndex": 0,
+		"explanation": "Workflow Studio content belongs to the creator's domain (or domain picker context) and supports domain-specific flows, actions, and subflows. Flows do not override each other through sys_overrides; use unique names and edit content in the domain it belongs to. Parent-domain flows may still run when their triggers match.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/build-workflows/flow-designer-domain-separation.html",
+			"https://www.servicenow.com/docs/r/platform-security/domain-separated-apps.html"
+		],
+		"domain": "Process Separation"
+	}
+]
