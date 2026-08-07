@@ -318,10 +318,11 @@ function mergeQuestions(existing, incoming) {
 }
 
 function writeBank(all) {
-	const body = `import type { DevPracticeQuestionRow } from './devQuestionBank.types';
+	const body = `// @ts-nocheck — large generated bank exceeds TS2590 union limits
+import type { DevPracticeQuestionRow } from './devQuestionBank.types';
 
 /** Dev question bank; merge batches: \`node scripts/extract-questions-from-transcripts.mjs --merge-batches\` */
-export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = ${JSON.stringify(all, null, '\t')};
+export const DEV_PRACTICE_QUESTIONS = ${JSON.stringify(all, null, '\t')} as unknown as DevPracticeQuestionRow[];
 `;
 	fs.writeFileSync(outPath, body, 'utf8');
 	console.log('Wrote', outPath, 'count=', all.length);
