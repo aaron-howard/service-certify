@@ -16113,7 +16113,6 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 2,
 		"explanation": "GRC implementations succeed when governance structure and decision rights are agreed before technical configuration begins.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/governance-risk-compliance/r_WhatIsGRC.html",
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-overview.html"
 		],
 		"domain": "Governance Strategy"
@@ -16131,7 +16130,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 0,
 		"explanation": "Documented roles and responsibilities prevent gaps and duplicate effort across compliance, risk, and audit workflows.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/governance-risk-compliance/r_WhatIsGRC.html"
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-overview.html"
 		],
 		"domain": "Governance Strategy"
 	},
@@ -16148,7 +16147,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 0,
 		"explanation": "Governance committees provide ongoing oversight, prioritization, and escalation for policy, risk, and compliance decisions.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/governance-risk-compliance/r_WhatIsGRC.html"
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-overview.html"
 		],
 		"domain": "Governance Strategy"
 	},
@@ -16199,7 +16198,6 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 3,
 		"explanation": "Organizational alignment depends on shared definitions, ownership, and reporting standards across GRC modules.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/governance-risk-compliance/r_WhatIsGRC.html",
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/compliance-dashboards.html"
 		],
 		"domain": "Governance Strategy"
@@ -16235,7 +16233,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 1,
 		"explanation": "Steering committee charters document who meets, how often, and what decisions the committee owns for GRC oversight.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/governance-risk-compliance/r_WhatIsGRC.html"
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-overview.html"
 		],
 		"domain": "Governance Strategy"
 	},
@@ -16252,7 +16250,6 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 0,
 		"explanation": "Cross-functional governance aligns testing standards so compliance monitoring and audit fieldwork reinforce rather than duplicate effort.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/governance-risk-compliance/r_WhatIsGRC.html",
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/audit-management/c_AuditTasks.html"
 		],
 		"domain": "Governance Strategy"
@@ -16309,7 +16306,6 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 3,
 		"explanation": "Phased GRC rollouts sequence scope, content, and stakeholder readiness so each release delivers measurable compliance value.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/governance-risk-compliance/r_WhatIsGRC.html",
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-overview.html"
 		],
 		"domain": "Implementation Planning"
@@ -16344,8 +16340,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 0,
 		"explanation": "Organizational change management prepares owners for new workflows, reducing failed attestations and adoption resistance.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/governance-risk-compliance/attestations.html",
-			"https://www.servicenow.com/docs/r/governance-risk-compliance/r_WhatIsGRC.html"
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/attestations.html"
 		],
 		"domain": "Implementation Planning"
 	},
@@ -16379,7 +16374,6 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 2,
 		"explanation": "Readiness assessments exercise end-to-end workflows with real owners before enterprise activation.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/governance-risk-compliance/r_WhatIsGRC.html",
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/control-testing-and-evidence.html"
 		],
 		"domain": "Implementation Planning"
@@ -16391,13 +16385,13 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"choices": [
 			"Parent entity type",
 			"Owned by",
-			"Source table",
+			"Table",
 			"Description"
 		],
 		"correctIndex": 2,
-		"explanation": "An entity filter must specify the source table whose records will be evaluated by the filter conditions; other fields are optional metadata.",
+		"explanation": "An entity filter must specify the Table whose records will be evaluated by the filter conditions; other fields are optional metadata.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/governance-risk-compliance/entity-filters.html"
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-common-functions/what-is-an-entity-filter.html"
 		],
 		"domain": "Entity Framework"
 	},
@@ -16493,13 +16487,14 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"choices": [
 			"The entity and all of its historical controls, risks, and issues are hard-deleted immediately from the instance",
 			"The entity remains fully active forever because filters are evaluated only once at creation time",
-			"The entity is flagged as no longer matching so it can be retired while preserving its compliance history",
+			"The entity can be retired so historical controls, risks, and issues remain available for audit",
 			"The source record is automatically reactivated by the filter to keep the entity association valid"
 		],
 		"correctIndex": 2,
-		"explanation": "When a source record stops matching, the framework marks the entity for retirement rather than deleting it, preserving the audit trail of past compliance activity.",
+		"explanation": "When a source record stops matching filter conditions, GRC does not hard-delete the entity and its history; operators retire the entity so prior compliance evidence remains available.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/governance-risk-compliance/entity-filters.html"
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-common-functions/what-is-an-entity-filter.html",
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-common-functions/exploring-the-entities.html"
 		],
 		"domain": "Entity Framework"
 	},
@@ -16826,7 +16821,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"trackCode": "CIS-RC",
 		"order": 49,
 		"questionType": "multi",
-		"prompt": "When configuring Policy and Compliance scope tables for a scoped GRC application, which two tables must be included? (Choose two.)",
+		"prompt": "Which two tables are installed with Policy and Compliance Management? (Choose two.)",
 		"choices": [
 			"Control table for compliance control definitions and testing evidence",
 			"Citation table for regulatory and policy obligation references",
@@ -16838,10 +16833,9 @@ export const DEV_PRACTICE_QUESTIONS = [
 			0,
 			1
 		],
-		"explanation": "Policy and Compliance scoped applications require Control and Citation scope tables so compliance data is partitioned correctly.",
+		"explanation": "Policy and Compliance Management installs Control and Citation tables (among others). Entity and Audit Engagement tables are not PCM application tables.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/c_GRCControls.html",
-			"https://www.servicenow.com/docs/r/governance-risk-compliance/r_WhatIsGRC.html"
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/r_InstallWPolAndCompl.html"
 		],
 		"domain": "Policy and Compliance"
 	},
@@ -16954,7 +16948,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"trackCode": "CIS-RC",
 		"order": 56,
 		"questionType": "multi",
-		"prompt": "When scoping a Risk Management application, which two scope tables must be configured? (Choose two.)",
+		"prompt": "Which two tables are installed with Risk Management? (Choose two.)",
 		"choices": [
 			"Control Test",
 			"Risk Statement",
@@ -16966,10 +16960,9 @@ export const DEV_PRACTICE_QUESTIONS = [
 			1,
 			2
 		],
-		"explanation": "Risk scoped applications partition data using Risk Framework and Risk Statement scope tables per GRC implementation guidance.",
+		"explanation": "Risk Management installs Risk Statement and Risk Framework tables (among others). Control Test and Authority Document belong to other GRC applications.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/risk-impl-overview.html",
-			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/risk-register.html"
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-risk-management-workspace/r_TableInsWRisk.html"
 		],
 		"domain": "Risk and Advanced Risk"
 	},
@@ -17261,8 +17254,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 0,
 		"explanation": "GRC content packs deliver starter policy, compliance, and risk artifacts that teams tailor to the organization.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/governance-risk-compliance/r_WhatIsGRC.html",
-			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/c_GRCControls.html"
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/c_GRCControls.html",
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/grc-common-functions/grc-content-packs.html"
 		],
 		"domain": "Common Elements and Extended Capabilities"
 	},
@@ -17279,8 +17272,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 1,
 		"explanation": "Regulatory change management tracks obligation updates and drives governed adjustments to controls and testing.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/policy-lifecycle-management.html",
-			"https://www.servicenow.com/docs/r/governance-risk-compliance/r_WhatIsGRC.html"
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/policy-lifecycle-management.html"
 		],
 		"domain": "Common Elements and Extended Capabilities"
 	},
@@ -17315,7 +17307,6 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 2,
 		"explanation": "Integrated telemetry makes continuous monitoring timely and connects operational events to control objectives.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/governance-risk-compliance/r_WhatIsGRC.html",
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/control-testing-and-evidence.html"
 		],
 		"domain": "Common Elements and Extended Capabilities"
@@ -17333,8 +17324,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 0,
 		"explanation": "Regulatory content updates require impact review so scoped compliance artifacts remain accurate and testable.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/policy-lifecycle-management.html",
-			"https://www.servicenow.com/docs/r/governance-risk-compliance/r_WhatIsGRC.html"
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/policy-lifecycle-management.html"
 		],
 		"domain": "Common Elements and Extended Capabilities"
 	},
@@ -17351,8 +17341,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 1,
 		"explanation": "GRC scorecards consolidate compliance and control metrics for executive oversight across the program.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/compliance-dashboards.html",
-			"https://www.servicenow.com/docs/r/governance-risk-compliance/r_WhatIsGRC.html"
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/policy-and-compliance-management/compliance-dashboards.html"
 		],
 		"domain": "Common Elements and Extended Capabilities"
 	},
@@ -17370,7 +17359,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"explanation": "Risk-based audit planning focuses limited resources on areas where control failure would cause the greatest harm.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/audit-management/c_AuditTasks.html",
-			"https://www.servicenow.com/docs/r/governance-risk-compliance/r_WhatIsGRC.html"
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/audit-management/c_Engagements.html"
 		],
 		"domain": "Audit and Advanced Audit"
 	},
@@ -17405,7 +17394,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"explanation": "Audit scoping uses risk assessment and stakeholder input to define the control population that fieldwork will test.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/audit-management/c_AuditTasks.html",
-			"https://www.servicenow.com/docs/r/governance-risk-compliance/r_WhatIsGRC.html"
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/audit-management/c_Engagements.html"
 		],
 		"domain": "Audit and Advanced Audit"
 	},
@@ -17466,12 +17455,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"trackCode": "CIS-RC",
 		"order": 84,
 		"questionType": "multi",
-		"prompt": "Which three roles does the sn_audit.user role inherit for cross-module GRC read access? (Choose three.)",
+		"prompt": "Which three roles does the sn_audit.user role contain? (Choose three.)",
 		"choices": [
 			"sn_compliance.reader",
 			"sn_grc.reader",
 			"sn_incident.write",
-			"sn_risk.reader"
+			"sn_grc.user"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
@@ -17479,10 +17468,9 @@ export const DEV_PRACTICE_QUESTIONS = [
 			1,
 			3
 		],
-		"explanation": "The sn_audit.user role inherits sn_grc.reader, sn_compliance.reader, and sn_risk.reader so auditors can view GRC data across modules.",
+		"explanation": "Audit Management components list sn_audit.user as containing sn_compliance.reader, sn_grc.reader, and sn_grc.user. It does not contain sn_risk.reader or incident write roles.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/governance-risk-compliance/audit-management/c_AuditTasks.html",
-			"https://www.servicenow.com/docs/r/governance-risk-compliance/r_WhatIsGRC.html"
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/audit-management/r_InstallWAudit.html"
 		],
 		"domain": "Audit and Advanced Audit"
 	},
@@ -17500,7 +17488,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"explanation": "Clear scope and objectives at kickoff align testing with the correct control population and evidence needs.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/audit-management/c_AuditTasks.html",
-			"https://www.servicenow.com/docs/r/governance-risk-compliance/r_WhatIsGRC.html"
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/audit-management/c_Engagements.html"
 		],
 		"domain": "Audit and Advanced Audit"
 	},
@@ -17518,7 +17506,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"explanation": "Audit personas separate planning, testing, and evidence duties so engagements execute with clear accountability.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/audit-management/c_AuditTasks.html",
-			"https://www.servicenow.com/docs/r/governance-risk-compliance/r_WhatIsGRC.html"
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/audit-management/c_Engagements.html"
 		],
 		"domain": "Audit and Advanced Audit"
 	},
@@ -17558,7 +17546,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"explanation": "Audit engagements progress through planning and fieldwork before reporting consolidates results and observations.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/audit-management/c_AuditTasks.html",
-			"https://www.servicenow.com/docs/r/governance-risk-compliance/r_WhatIsGRC.html"
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/audit-management/c_Engagements.html"
 		],
 		"domain": "Audit and Advanced Audit"
 	},
