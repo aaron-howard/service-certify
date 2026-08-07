@@ -13089,18 +13089,18 @@ export const DEV_PRACTICE_QUESTIONS = [
 	{
 		"trackCode": "CIS-ITSM",
 		"order": 20,
-		"prompt": "Problem coordinators want valid new problems to enter assessment without manual state clicks on every record. Which workflow design should govern the New to Assess transition?",
+		"prompt": "Problem coordinators want new problems to enter Assess as soon as required intake fields are complete, without agents manually changing state. What configuration controls that New to Assess transition?",
 		"choices": [
-			"Problem state UI policy",
-			"Update Problem State to Assess business rule",
-			"Problem state UI action",
-			"ProblemUtils script include"
+			"A UI policy that hides the State field on every problem form view",
+			"A catalog client script that sets producer.state to Assess on submit",
+			"Mandatory fields configured on the Assess Dialog Form View for the problem form",
+			"A MID Server probe that rewrites problem state during discovery"
 		],
-		"correctIndex": 1,
-		"explanation": "The Update Problem State to Assess business rule controls automatic transition from New to Assess when configured conditions are met on the Problem table.",
+		"correctIndex": 2,
+		"explanation": "When mandatory Assess Dialog Form View fields are completed on create or update, the problem moves from New to Assess automatically. UI policies and catalog scripts do not drive that Problem Management state transition.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-service-management/problem-management/problem-mgmt-lifecycle.html",
-			"https://www.servicenow.com/docs/r/it-service-management/problem-management/assess-a-problem.html"
+			"https://www.servicenow.com/docs/r/it-service-management/problem-management/create-a-problem-v2.html",
+			"https://www.servicenow.com/docs/r/it-service-management/problem-management/add-field-in-assess-dialog-form.html"
 		],
 		"domain": "Problem Management"
 	},
@@ -13245,86 +13245,86 @@ export const DEV_PRACTICE_QUESTIONS = [
 	{
 		"trackCode": "CIS-ITSM",
 		"order": 29,
-		"prompt": "In ServiceNow Change Management, why is a change request created?",
+		"prompt": "A problem coordinator needs SMEs to complete investigation work that is not root-cause analysis. Which problem task type should they create?",
 		"choices": [
-			"To log routine password reset requests from the service catalog",
-			"To execute CMDB identification rules without governance or approval",
-			"To implement a controlled process for modifying approved and supported configuration items",
-			"To replace Incident Management for all unplanned service outages"
+			"A Standard change approval task on the Conflict calendar",
+			"General",
+			"An Employee Center catalog checkout task",
+			"A Discovery credential rotation task"
 		],
-		"correctIndex": 2,
-		"explanation": "Change requests record planned modifications to supported CIs with risk, type, schedule, and approval controls.",
+		"correctIndex": 1,
+		"explanation": "Problem tasks are either Root Cause Analysis or General. General covers all other SME work that is not RCA on the parent problem.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-service-management/change-management/t_CreateAChange.html",
-			"https://www.servicenow.com/docs/r/it-service-management/change-management/using-change-management.html"
+			"https://www.servicenow.com/docs/r/it-service-management/problem-management/create-problem-task.html"
 		],
 		"domain": "Problem Management"
 	},
 	{
 		"trackCode": "CIS-ITSM",
 		"order": 30,
-		"prompt": "Conflict detection in Change Management can identify scheduling conflicts for which of the following reasons?",
+		"prompt": "Several configuration items share the same underlying failure tracked on one problem. How should the coordinator associate those CIs for impact analysis?",
 		"choices": [
-			"The change schedule occurs during a blackout period for the affected configuration item",
-			"The change requester's department is outside the corporate hierarchy",
-			"The incident priority matrix assigns Critical to all changes automatically",
-			"The catalog item uses more than four variables on the record producer"
+			"Convert each CI into a separate problem task of type Catalog Fulfillment",
+			"Delete the Configuration Item field so related lists cannot be used",
+			"Use the Configuration Item field for the primary CI and Affected CIs or Impacted Services/CIs related lists for additional CIs",
+			"Store CI names only in work notes so CMDB relationships stay empty"
 		],
-		"correctIndex": 0,
-		"explanation": "Conflict detection evaluates CIs, planned dates, maintenance windows, blackout schedules, and other active changes to surface scheduling conflicts.",
+		"correctIndex": 2,
+		"explanation": "Use the primary Configuration Item field when one CI is the cause, and the Affected CIs or Impacted Services/CIs related lists when multiple CIs are impacted by the same problem.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-service-management/change-management/c_ConflictDetection.html"
+			"https://www.servicenow.com/docs/r/it-service-management/problem-management/add-multiple-cis-to-problem.html"
 		],
 		"domain": "Problem Management"
 	},
 	{
 		"trackCode": "CIS-ITSM",
 		"order": 31,
-		"prompt": "How does a Standard change differ from a Normal change in ServiceNow Change Management?",
+		"prompt": "An administrator must require an additional field before problems can leave New and enter Assess. Where do they add that mandatory assess field?",
 		"choices": [
-			"Standard changes bypass all state models and are implemented without documentation",
-			"Standard changes always require two CAB authorization steps for every request",
-			"Standard changes may be created only by users who have no ITIL roles assigned",
-			"Standard changes are pre-authorized, low-risk changes that follow a streamlined process without CAB authorization for each request"
+			"On the Assess Dialog Form View form section for the problem table",
+			"On a Standard change template variable set",
+			"On the Autoclose Incidents scheduled job context",
+			"On the Employee Center portal theme CSS"
 		],
-		"correctIndex": 3,
-		"explanation": "Standard changes are frequently implemented, pre-approved procedures that do not require group-level or CAB authorization on each request.",
+		"correctIndex": 0,
+		"explanation": "Assess Dialog Form View (System UI > Form Sections) defines which fields must be completed for a problem to move from New to Assess.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-service-management/change-management/change-types.html"
+			"https://www.servicenow.com/docs/r/it-service-management/problem-management/add-field-in-assess-dialog-form.html",
+			"https://www.servicenow.com/docs/r/it-service-management/problem-management/create-a-problem-v2.html"
 		],
 		"domain": "Problem Management"
 	},
 	{
 		"trackCode": "CIS-ITSM",
 		"order": 32,
-		"prompt": "When should an implementation team select the Emergency change type?",
+		"prompt": "A service desk agent opens an incident that shares an underlying cause with other tickets. How can they generate a problem from that incident?",
 		"choices": [
-			"When a fix must be implemented as soon as possible to resolve a major incident or apply a critical patch",
-			"Only when the change can wait for a scheduled maintenance window with no urgency",
-			"For every routine catalog hardware request submitted through the service portal",
-			"Whenever a user opens a self-service password reset catalog item"
+			"Run Conflict Detection on the incident Conflict calendar",
+			"Use Create Problem from the incident context menu so configured attributes copy to the new problem",
+			"Convert the incident into a Standard change template automatically",
+			"Assign the incident to portfolio_viewer so a problem is created overnight"
 		],
-		"correctIndex": 0,
-		"explanation": "Emergency changes address urgent fix-on-fail or fail-or-fail situations and move quickly to Authorize state for CAB approval group review.",
+		"correctIndex": 1,
+		"explanation": "Create Problem on the incident context menu creates a related problem and can copy attributes listed in com.snc.problem.create_from_incident.attributes.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-service-management/change-management/change-types.html"
+			"https://www.servicenow.com/docs/r/it-service-management/problem-management/create-a-problem-v2.html"
 		],
 		"domain": "Problem Management"
 	},
 	{
 		"trackCode": "CIS-ITSM",
 		"order": 33,
-		"prompt": "Which statement best describes a Normal change request?",
+		"prompt": "A problem manager is not satisfied with the analysis after the problem was resolved, and the issue resurfaces. Which action reopens investigation in the best-practice state model?",
 		"choices": [
-			"Any service change that is not a Standard or Emergency change and requires full assessment and authorization",
-			"A pre-approved catalog template change that skips risk assessment entirely",
-			"A change record generated automatically by MID Server discovery with no fulfiller involvement",
-			"A change type that never requires peer, change manager, or CAB authorization"
+			"Disable the Problem Management plugin so incidents auto-close immediately",
+			"Delete the related list so On Hold incidents are ignored",
+			"Click Re-analyze so the problem returns to the Root Cause Analysis state",
+			"Grant every caller admin so they can close their own incidents"
 		],
-		"correctIndex": 0,
-		"explanation": "Normal changes follow the prescriptive lifecycle with assessments and approvals such as peer review, change management, and CAB authorization.",
+		"correctIndex": 2,
+		"explanation": "Re-analyze reopens the problem for further investigation and moves it to the Root Cause Analysis state in the Madrid best-practice state model.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-service-management/change-management/change-types.html"
+			"https://www.servicenow.com/docs/r/it-service-management/problem-management/investigate-root-cause.html"
 		],
 		"domain": "Problem Management"
 	},
@@ -13519,17 +13519,17 @@ export const DEV_PRACTICE_QUESTIONS = [
 	{
 		"trackCode": "CIS-ITSM",
 		"order": 45,
-		"prompt": "Change managers in multiple regions must define blackout and maintenance windows without granting full change admin rights. Which access model should the program design?",
+		"prompt": "Change managers in multiple regions must define blackout and maintenance windows without inventing custom ACLs. Which role does Change Management documentation require to create those schedules?",
 		"choices": [
-			"sn_itsm_chg_admin.change_schedules_config",
-			"sn_incident_write for all change schedule records",
 			"catalog_admin without Change Management schedule permissions",
-			"itil_admin as the only role that can edit blackout windows"
+			"sn_incident_write for all change schedule records",
+			"sn_itsm_chg_admin.change_schedules_config",
+			"itil_admin or admin"
 		],
-		"correctIndex": 0,
-		"explanation": "The change_schedules_config role on sn_itsm_chg_admin grants access to configure blackout and maintenance schedules from the Change schedules console.",
+		"correctIndex": 3,
+		"explanation": "Creating blackout and maintenance schedules requires the itil_admin or admin role. The invented change_schedules_config permission is not the documented requirement.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-service-management/configure-schedules-for-simplified-change-management.html"
+			"https://www.servicenow.com/docs/r/it-service-management/change-management/t_CreateBlkoutMaintSched.html"
 		],
 		"domain": "Change Management"
 	},

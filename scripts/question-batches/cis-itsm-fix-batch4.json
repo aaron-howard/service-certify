@@ -1,0 +1,123 @@
+[
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 20,
+		"prompt": "Problem coordinators want new problems to enter Assess as soon as required intake fields are complete, without agents manually changing state. What configuration controls that New to Assess transition?",
+		"choices": [
+			"A UI policy that hides the State field on every problem form view",
+			"A catalog client script that sets producer.state to Assess on submit",
+			"Mandatory fields configured on the Assess Dialog Form View for the problem form",
+			"A MID Server probe that rewrites problem state during discovery"
+		],
+		"correctIndex": 2,
+		"explanation": "When mandatory Assess Dialog Form View fields are completed on create or update, the problem moves from New to Assess automatically. UI policies and catalog scripts do not drive that Problem Management state transition.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-service-management/problem-management/create-a-problem-v2.html",
+			"https://www.servicenow.com/docs/r/it-service-management/problem-management/add-field-in-assess-dialog-form.html"
+		],
+		"domain": "Problem Management"
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 29,
+		"prompt": "A problem coordinator needs SMEs to complete investigation work that is not root-cause analysis. Which problem task type should they create?",
+		"choices": [
+			"A Standard change approval task on the Conflict calendar",
+			"General",
+			"An Employee Center catalog checkout task",
+			"A Discovery credential rotation task"
+		],
+		"correctIndex": 1,
+		"explanation": "Problem tasks are either Root Cause Analysis or General. General covers all other SME work that is not RCA on the parent problem.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-service-management/problem-management/create-problem-task.html"
+		],
+		"domain": "Problem Management"
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 30,
+		"prompt": "Several configuration items share the same underlying failure tracked on one problem. How should the coordinator associate those CIs for impact analysis?",
+		"choices": [
+			"Convert each CI into a separate problem task of type Catalog Fulfillment",
+			"Delete the Configuration Item field so related lists cannot be used",
+			"Use the Configuration Item field for the primary CI and Affected CIs or Impacted Services/CIs related lists for additional CIs",
+			"Store CI names only in work notes so CMDB relationships stay empty"
+		],
+		"correctIndex": 2,
+		"explanation": "Use the primary Configuration Item field when one CI is the cause, and the Affected CIs or Impacted Services/CIs related lists when multiple CIs are impacted by the same problem.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-service-management/problem-management/add-multiple-cis-to-problem.html"
+		],
+		"domain": "Problem Management"
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 31,
+		"prompt": "An administrator must require an additional field before problems can leave New and enter Assess. Where do they add that mandatory assess field?",
+		"choices": [
+			"On the Assess Dialog Form View form section for the problem table",
+			"On a Standard change template variable set",
+			"On the Autoclose Incidents scheduled job context",
+			"On the Employee Center portal theme CSS"
+		],
+		"correctIndex": 0,
+		"explanation": "Assess Dialog Form View (System UI > Form Sections) defines which fields must be completed for a problem to move from New to Assess.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-service-management/problem-management/add-field-in-assess-dialog-form.html",
+			"https://www.servicenow.com/docs/r/it-service-management/problem-management/create-a-problem-v2.html"
+		],
+		"domain": "Problem Management"
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 32,
+		"prompt": "A service desk agent opens an incident that shares an underlying cause with other tickets. How can they generate a problem from that incident?",
+		"choices": [
+			"Run Conflict Detection on the incident Conflict calendar",
+			"Use Create Problem from the incident context menu so configured attributes copy to the new problem",
+			"Convert the incident into a Standard change template automatically",
+			"Assign the incident to portfolio_viewer so a problem is created overnight"
+		],
+		"correctIndex": 1,
+		"explanation": "Create Problem on the incident context menu creates a related problem and can copy attributes listed in com.snc.problem.create_from_incident.attributes.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-service-management/problem-management/create-a-problem-v2.html"
+		],
+		"domain": "Problem Management"
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 33,
+		"prompt": "A problem manager is not satisfied with the analysis after the problem was resolved, and the issue resurfaces. Which action reopens investigation in the best-practice state model?",
+		"choices": [
+			"Disable the Problem Management plugin so incidents auto-close immediately",
+			"Delete the related list so On Hold incidents are ignored",
+			"Click Re-analyze so the problem returns to the Root Cause Analysis state",
+			"Grant every caller admin so they can close their own incidents"
+		],
+		"correctIndex": 2,
+		"explanation": "Re-analyze reopens the problem for further investigation and moves it to the Root Cause Analysis state in the Madrid best-practice state model.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-service-management/problem-management/investigate-root-cause.html"
+		],
+		"domain": "Problem Management"
+	},
+	{
+		"trackCode": "CIS-ITSM",
+		"order": 45,
+		"prompt": "Change managers in multiple regions must define blackout and maintenance windows without inventing custom ACLs. Which role does Change Management documentation require to create those schedules?",
+		"choices": [
+			"catalog_admin without Change Management schedule permissions",
+			"sn_incident_write for all change schedule records",
+			"sn_itsm_chg_admin.change_schedules_config",
+			"itil_admin or admin"
+		],
+		"correctIndex": 3,
+		"explanation": "Creating blackout and maintenance schedules requires the itil_admin or admin role. The invented change_schedules_config permission is not the documented requirement.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-service-management/change-management/t_CreateBlkoutMaintSched.html"
+		],
+		"domain": "Change Management"
+	}
+]
