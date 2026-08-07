@@ -28148,11 +28148,11 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "The executive sponsor asks for next year's platform roadmap. Which input set should the associate platform owner gather first?",
 		"choices": [
 			"Informal developer preferences without linking them to business outcomes",
-			"Stated business objectives, current adoption metrics, and open risk or compliance gaps",
 			"Every open incident record sorted by oldest create date",
-			"A complete export of all sys_script records regardless of scope"
+			"A complete export of all sys_script records regardless of scope",
+			"Stated business objectives, current adoption metrics, and open risk or compliance gaps"
 		],
-		"correctIndex": 1,
+		"correctIndex": 3,
 		"explanation": "Roadmap planning starts with business objectives, measured adoption, and known risks so investments align to outcomes the sponsor cares about.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
@@ -28164,12 +28164,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 1,
 		"prompt": "Finance asks why a major platform initiative needs external security assessment budget before approval. Which strategic justification should the associate platform owner provide?",
 		"choices": [
-			"Independent assessment validates risk posture and supports investment decisions tied to compliance obligations",
-			"External testing eliminates the need for any internal security team involvement afterward",
 			"Security assessments should occur only after production defects are reported by users",
+			"External testing eliminates the need for any internal security team involvement afterward",
+			"Independent assessment validates risk posture and supports investment decisions tied to compliance obligations",
 			"Budget for assessments is optional because cloud hosting removes all customer responsibility"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Platform owners connect security assessment investment to risk validation and compliance drivers that executives weigh during portfolio funding decisions.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html",
@@ -28182,12 +28182,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 2,
 		"prompt": "Self-service adoption is low because employees abandon the portal after two clicks. Which UX consideration should the platform owner prioritize with the design team?",
 		"choices": [
+			"Simplify navigation paths and reduce steps to complete common requests",
 			"Hide catalog categories until users complete mandatory training videos",
-			"Remove mobile access to force desktop-only interactions",
 			"Display every available module on the homepage regardless of audience",
-			"Simplify navigation paths and reduce steps to complete common requests"
+			"Remove mobile access to force desktop-only interactions"
 		],
-		"correctIndex": 3,
+		"correctIndex": 0,
 		"explanation": "Associate platform owners advocate for streamlined self-service journeys so users can complete frequent tasks with minimal friction.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-user-interface/platform-user-interface.html"
@@ -28202,13 +28202,13 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"choices": [
 			"Submit platform initiatives with business value, dependencies, and capacity estimates",
 			"Exclude upgrade and maintenance work because only new features belong in portfolio planning",
-			"Align proposed work to enterprise priorities documented in the portfolio intake process",
-			"Bypass the PMO intake form to accelerate individual team requests"
+			"Bypass the PMO intake form to accelerate individual team requests",
+			"Align proposed work to enterprise priorities documented in the portfolio intake process"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			2
+			3
 		],
 		"explanation": "PMO engagement requires structured demand with value and dependencies tied to enterprise priorities; bypassing intake or omitting maintenance creates planning blind spots.",
 		"sourceUrls": [
@@ -28264,12 +28264,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 5,
 		"prompt": "A department requests funding for a custom integration that duplicates an existing catalog capability. Which strategic response should the associate platform owner recommend first?",
 		"choices": [
+			"Facilitate a business case review comparing reuse, total cost of ownership, and expected outcomes before approving new build",
 			"Reject all custom work without reviewing whether existing investments can be extended",
 			"Approve the build immediately because duplicate solutions increase team autonomy",
-			"Facilitate a business case review comparing reuse, total cost of ownership, and expected outcomes before approving new build",
 			"Defer the decision indefinitely until every legacy system is retired"
 		],
-		"correctIndex": 2,
+		"correctIndex": 0,
 		"explanation": "Associate platform owners evaluate investment requests against reuse options, cost, and measurable outcomes before adding redundant scope to the roadmap.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
@@ -28281,12 +28281,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 6,
 		"prompt": "Business units want to build their own low-code apps without waiting for central IT. What is the associate platform owner's first citizen development step under senior guidance?",
 		"choices": [
-			"Grant every business user the admin role so delivery is never delayed",
-			"Prohibit all citizen development until every legacy process is retired",
 			"Skip documentation because low-code tools eliminate the need for standards",
-			"Define guardrails, approved scopes, and an intake path before broad self-service building begins"
+			"Grant every business user the admin role so delivery is never delayed",
+			"Define guardrails, approved scopes, and an intake path before broad self-service building begins",
+			"Prohibit all citizen development until every legacy process is retired"
 		],
-		"correctIndex": 3,
+		"correctIndex": 2,
 		"explanation": "Citizen development succeeds when guardrails, scope boundaries, and intake are established before teams create unsupportable applications.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/servicenow-platform/servicenow-platform.html"
@@ -28298,12 +28298,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 7,
 		"prompt": "Leadership asks why the organization should follow a defined SDLC on the Now Platform. Which benefit should the associate platform owner highlight?",
 		"choices": [
-			"Structured phases reduce production defects and improve traceability from requirement to release",
+			"Following an SDLC guarantees zero skipped updates after upgrades",
 			"SDLC adoption removes the need for change advisory review on all work",
-			"An SDLC eliminates the need for any sub-production testing environments",
-			"Following an SDLC guarantees zero skipped updates after upgrades"
+			"Structured phases reduce production defects and improve traceability from requirement to release",
+			"An SDLC eliminates the need for any sub-production testing environments"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "A defined SDLC improves quality and auditability by connecting requirements, build, test, and promotion steps rather than ad hoc production edits.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/application-development.html"
@@ -28316,15 +28316,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"questionType": "multi",
 		"prompt": "The executive sponsor asks which strategic platform risks should appear on the quarterly roadmap review. (Choose two.)",
 		"choices": [
-			"Open compliance or audit findings that constrain new scope until remediated",
-			"Adoption gaps on funded capabilities that undermine expected business value",
 			"Count of personal dashboards created without linking to enterprise priorities",
+			"Adoption gaps on funded capabilities that undermine expected business value",
+			"Open compliance or audit findings that constrain new scope until remediated",
 			"Individual developer preference for a specific script editor color theme"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"correctIndexes": [
-			0,
-			1
+			1,
+			2
 		],
 		"explanation": "Strategic roadmap reviews surface adoption and compliance risks that affect value realization—not cosmetic preferences or unrelated usage counts.",
 		"sourceUrls": [
@@ -28403,12 +28403,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 11,
 		"prompt": "A sponsor asks why CMDB quality matters when setting platform strategy for change and incident processes. Which answer best reflects associate-level CMDB context?",
 		"choices": [
-			"CMDB records replace the need for any discovery or integration governance",
-			"CMDB quality affects only hardware asset tracking and not service workflows",
 			"Populating the CMDB once at go-live eliminates all future data stewardship",
-			"Accurate configuration items and relationships improve impact analysis for changes and outages"
+			"Accurate configuration items and relationships improve impact analysis for changes and outages",
+			"CMDB records replace the need for any discovery or integration governance",
+			"CMDB quality affects only hardware asset tracking and not service workflows"
 		],
-		"correctIndex": 3,
+		"correctIndex": 1,
 		"explanation": "Platform strategy tied to ITSM outcomes depends on trustworthy CI and dependency data so teams can assess blast radius during changes and incidents.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/configuration-management/cmdb.html"
@@ -28421,9 +28421,9 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "Business leaders disagree on whether a new employee service should launch on the shared platform or a standalone tool. Which strategic alignment step should the associate platform owner take first?",
 		"choices": [
 			"Document business outcomes, integration needs, and total cost of ownership for each option against enterprise platform standards",
+			"Default to the platform without validating whether outcomes justify shared investment",
 			"Postpone the decision until every unrelated project in the portfolio completes",
-			"Select the standalone tool because it avoids any shared governance review",
-			"Default to the platform without validating whether outcomes justify shared investment"
+			"Select the standalone tool because it avoids any shared governance review"
 		],
 		"correctIndex": 0,
 		"explanation": "Platform strategy decisions compare outcomes, integration fit, and cost against enterprise standards before committing shared capacity.",
@@ -28502,12 +28502,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 15,
 		"prompt": "The PMO reports overlapping platform projects funded by different departments. Which associate platform owner action best supports portfolio alignment?",
 		"choices": [
-			"Cancel all active projects until a new vendor is selected",
+			"Facilitate a cross-functional review to consolidate duplicate efforts and clarify executive priorities",
 			"Move every initiative to production simultaneously to show progress",
-			"Allow each department to continue independently without shared milestones",
-			"Facilitate a cross-functional review to consolidate duplicate efforts and clarify executive priorities"
+			"Cancel all active projects until a new vendor is selected",
+			"Allow each department to continue independently without shared milestones"
 		],
-		"correctIndex": 3,
+		"correctIndex": 0,
 		"explanation": "PMO engagement includes reconciling duplicate demand and aligning work to shared priorities so capacity is not wasted on redundant delivery.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
@@ -28520,8 +28520,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "Two teams propose competing solutions for the same business outcome with different build and license costs. Which strategic guidance should the associate platform owner provide?",
 		"choices": [
 			"Compare expected value, reuse of existing platform investments, and ongoing support burden before recommending one path",
-			"Defer all decisions until a new vendor completes an unrelated proof of concept",
 			"Select the option with the lowest initial license quote without validating fulfillment impact",
+			"Defer all decisions until a new vendor completes an unrelated proof of concept",
 			"Approve both solutions in parallel so teams can decide later which to retire"
 		],
 		"correctIndex": 0,
@@ -28536,10 +28536,10 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 17,
 		"prompt": "Employee feedback shows the new workspace theme fails accessibility checks on mobile devices. Which UX action should the associate platform owner prioritize?",
 		"choices": [
-			"Disable mobile access entirely so accessibility testing is unnecessary",
+			"Defer all UX fixes until the next major upgrade cycle with no interim work",
 			"Ignore feedback because power users primarily work on desktop",
 			"Partner with design leads to remediate accessibility gaps before broad rollout continues",
-			"Defer all UX fixes until the next major upgrade cycle with no interim work"
+			"Disable mobile access entirely so accessibility testing is unnecessary"
 		],
 		"correctIndex": 2,
 		"explanation": "Platform owners advocate for inclusive experiences and should address accessibility findings before scaling a workspace that excludes part of the workforce.",
@@ -28554,14 +28554,14 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"questionType": "multi",
 		"prompt": "The sponsor requests a business case for expanding self-service on the Now Platform. Which elements should the associate platform owner include? (Choose two.)",
 		"choices": [
-			"Baseline adoption metrics and target improvement tied to measurable business outcomes",
 			"A list of every open developer task regardless of business priority",
 			"Estimated effort, dependencies, and risk mitigations for the proposed roadmap wave",
+			"Baseline adoption metrics and target improvement tied to measurable business outcomes",
 			"A commitment to skip user feedback because delivery velocity is the only success measure"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"correctIndexes": [
-			0,
+			1,
 			2
 		],
 		"explanation": "Business cases combine outcome baselines, targets, effort, dependencies, and risks— not undifferentiated task lists or ignored adoption feedback.",
@@ -28619,11 +28619,11 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "Quarterly business reviews show strong project delivery but flat self-service adoption. Which strategic response fits associate platform owner guidance?",
 		"choices": [
 			"Shift every remaining developer to incident queue assignment full time",
-			"Diagnose adoption barriers and adjust the roadmap to include enablement and UX improvements",
 			"Report only on-time delivery metrics and omit user feedback from executive materials",
-			"Pause all new features indefinitely because adoption cannot change after one slow quarter"
+			"Pause all new features indefinitely because adoption cannot change after one slow quarter",
+			"Diagnose adoption barriers and adjust the roadmap to include enablement and UX improvements"
 		],
-		"correctIndex": 1,
+		"correctIndex": 3,
 		"explanation": "Strategy balances delivery with adoption; associate platform owners should surface usage gaps and reprioritize enablement rather than ignoring user experience.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
@@ -28652,12 +28652,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 22,
 		"prompt": "A business unit hires analysts who will build low-code workflows. Which people enablement should the associate platform owner schedule under senior guidance?",
 		"choices": [
+			"Immediate admin role assignment so new hires never wait for support",
 			"Mandatory certification in unrelated products before any ServiceNow access",
-			"Role-based training on approved tools, intake steps, and when to escalate to platform admins",
 			"Self-study only with no office hours or office-of-platform contact",
-			"Immediate admin role assignment so new hires never wait for support"
+			"Role-based training on approved tools, intake steps, and when to escalate to platform admins"
 		],
-		"correctIndex": 1,
+		"correctIndex": 3,
 		"explanation": "Targeted training and clear escalation paths help new builders contribute safely without granting unnecessary privileged access on day one.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/servicenow-platform/servicenow-platform.html"
@@ -28751,12 +28751,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 26,
 		"prompt": "IT operations and security each maintain separate ticketing tools that overlap with planned ServiceNow capabilities. How should the platform owner begin resolving the conflict?",
 		"choices": [
-			"Document overlapping processes, quantify duplicate effort, and align sponsors on a consolidated target state",
-			"Defer consolidation until every legacy contract expires regardless of user impact",
 			"Grant both teams permanent admin rights in production to preserve parallel workflows",
-			"Mandate immediate shutdown of both tools without stakeholder workshops"
+			"Document overlapping processes, quantify duplicate effort, and align sponsors on a consolidated target state",
+			"Mandate immediate shutdown of both tools without stakeholder workshops",
+			"Defer consolidation until every legacy contract expires regardless of user impact"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"explanation": "Tool conflicts are resolved by mapping overlap, quantifying pain, and securing sponsor alignment on consolidation—not abrupt shutdowns or indefinite delay.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
@@ -28768,12 +28768,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 27,
 		"prompt": "Before scheduling enablement sessions for a new ServiceNow workflow, which OCM step should the platform owner complete first?",
 		"choices": [
-			"Publish production update sets without user communication",
+			"Assess stakeholder impact, resistance risks, and role-specific readiness needs",
 			"Skip discovery because the technical configuration is already complete",
-			"Disable legacy access for all users on day one of training",
-			"Assess stakeholder impact, resistance risks, and role-specific readiness needs"
+			"Publish production update sets without user communication",
+			"Disable legacy access for all users on day one of training"
 		],
-		"correctIndex": 3,
+		"correctIndex": 0,
 		"explanation": "OCM begins with impact and readiness assessment so enablement targets the right audiences and addresses likely resistance before go-live.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
@@ -28829,15 +28829,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"questionType": "multi",
 		"prompt": "Executive sponsors seem disengaged midway through a ServiceNow program. Which sponsorship engagement actions should the platform owner take? (Choose two.)",
 		"choices": [
-			"Remove sponsors from communications so delivery teams can work without interference",
-			"Schedule focused sponsor briefings with concise evidence of progress and remaining risks",
 			"Reconfirm business outcomes, baseline metrics, and visible wins tied to sponsor priorities",
+			"Schedule focused sponsor briefings with concise evidence of progress and remaining risks",
+			"Remove sponsors from communications so delivery teams can work without interference",
 			"Pause all enablement until a new steering committee is formed from scratch"
 		],
-		"correctIndex": 1,
+		"correctIndex": 0,
 		"correctIndexes": [
-			1,
-			2
+			0,
+			1
 		],
 		"explanation": "Re-engaging sponsors requires refreshed outcome alignment and concise evidence of value; excluding sponsors or halting enablement undermines adoption.",
 		"sourceUrls": [
@@ -28851,8 +28851,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "During OCM planning, leaders confuse the platform owner role with the Community Champion role. Which responsibility belongs to the platform owner rather than a champion?",
 		"choices": [
 			"Coordinating cross-functional adoption strategy, sponsor alignment, and program-level governance",
-			"Replacing line managers as approvers for every catalog request",
 			"Collecting informal hallway feedback with no tie to readiness metrics",
+			"Replacing line managers as approvers for every catalog request",
 			"Delivering peer coaching in a single department without escalation paths"
 		],
 		"correctIndex": 0,
@@ -28867,12 +28867,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 31,
 		"prompt": "A platform owner is asked how knowledge management supports post-go-live operations. Which practice best answers the question?",
 		"choices": [
-			"Store fixes only in closed incident records with no searchable reuse",
+			"Govern article lifecycle, ownership, and quality reviews so proven solutions are findable",
 			"Publish every draft article directly to end users without approval",
 			"Disable article feedback so agents are not distracted by ratings",
-			"Govern article lifecycle, ownership, and quality reviews so proven solutions are findable"
+			"Store fixes only in closed incident records with no searchable reuse"
 		],
-		"correctIndex": 3,
+		"correctIndex": 0,
 		"explanation": "Sustainable knowledge management relies on governed article lifecycle, ownership, and quality so users can find trusted solutions after rollout.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/knowledge-management/knowledge-management.html"
@@ -28884,12 +28884,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 32,
 		"prompt": "Procurement is evaluating external support for a ServiceNow implementation. Which supplier type typically delivers hands-on configuration using the Now Create methodology?",
 		"choices": [
-			"A certified ServiceNow implementation partner engaged under a scoped statement of work",
 			"A generic staffing broker providing temporary admins without methodology oversight",
 			"An unrelated hardware leasing firm with no platform delivery credentials",
+			"A certified ServiceNow implementation partner engaged under a scoped statement of work",
 			"An internal audit function that only reviews financial controls"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Implementation partners apply ServiceNow delivery methodology and certified skills under governed SOWs; staffing brokers or unrelated vendors do not fulfill that role.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
@@ -28902,10 +28902,10 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"questionType": "multi",
 		"prompt": "The communications lead asks which factors must be defined in a platform rollout communication plan. Which elements should the platform owner include? (Choose two.)",
 		"choices": [
-			"A single generic email sent once with no follow-up schedule",
 			"Technical table schemas without linking messages to business outcomes",
-			"Cadence and accountable owners for each communication stream",
-			"Target audiences mapped to message content and delivery channels"
+			"A single generic email sent once with no follow-up schedule",
+			"Target audiences mapped to message content and delivery channels",
+			"Cadence and accountable owners for each communication stream"
 		],
 		"correctIndex": 2,
 		"correctIndexes": [
@@ -28966,12 +28966,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 35,
 		"prompt": "A business unit wants to engage a ServiceNow partner for a phased rollout. What should the platform owner expect the partner to bring to the engagement?",
 		"choices": [
-			"A structured Now Create delivery approach with phased planning, build, test, and deploy activities",
-			"A guarantee that no organizational change management will be required",
+			"Exclusive authority to override internal change governance without documentation",
 			"Unlimited production admin credentials shared across all partner staff",
-			"Exclusive authority to override internal change governance without documentation"
+			"A guarantee that no organizational change management will be required",
+			"A structured Now Create delivery approach with phased planning, build, test, and deploy activities"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Qualified partners follow ServiceNow's structured delivery methodology across phases; they do not bypass governance or eliminate OCM needs.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
@@ -29000,10 +29000,10 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 37,
 		"prompt": "A team is starting its first Now Create deployment for a scoped application. Which stage should occur before configuration work begins in sub-production?",
 		"choices": [
+			"Hypercare support with end-user surveys only",
 			"Immediate bulk import of update sets into the production instance",
-			"Production cutover with rollback plans finalized",
 			"Discovery and planning that confirms scope, outcomes, and readiness criteria",
-			"Hypercare support with end-user surveys only"
+			"Production cutover with rollback plans finalized"
 		],
 		"correctIndex": 2,
 		"explanation": "Now Create deployments begin with discovery and planning to align scope and success criteria before build and test activities start.",
@@ -29018,14 +29018,14 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"questionType": "multi",
 		"prompt": "Developers propose making urgent fixes directly in the production instance. Which development location practices should the platform owner enforce instead? (Choose two.)",
 		"choices": [
-			"Treat production as the default workspace for all configuration experiments",
-			"Skip test validation whenever the change appears small or low risk",
 			"Build and capture changes in a dedicated development instance before promotion",
+			"Skip test validation whenever the change appears small or low risk",
+			"Treat production as the default workspace for all configuration experiments",
 			"Validate promoted packages in a test instance with regression coverage"
 		],
-		"correctIndex": 2,
+		"correctIndex": 0,
 		"correctIndexes": [
-			2,
+			0,
 			3
 		],
 		"explanation": "Governed delivery requires development in non-production instances and validation in test before production commit; production-first edits bypass controls.",
@@ -29083,12 +29083,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 40,
 		"prompt": "Two teams need to move scoped application changes from development to production. Which code promotion method aligns with ServiceNow governance expectations?",
 		"choices": [
-			"Direct edits on production during business hours without change records",
-			"Tracked update sets or application repository versions promoted through test with preview and approval",
 			"Shared personal developer accounts that bypass update set capture",
-			"Email XML exports of records to production admins for manual paste"
+			"Direct edits on production during business hours without change records",
+			"Email XML exports of records to production admins for manual paste",
+			"Tracked update sets or application repository versions promoted through test with preview and approval"
 		],
-		"correctIndex": 1,
+		"correctIndex": 3,
 		"explanation": "Governed promotion uses captured change packages—update sets or app repo versions—previewed in test and approved before production commit.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/system-update-sets.html"
@@ -29100,12 +29100,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 41,
 		"prompt": "Leadership asks why a strict Waterfall schedule is a poor fit for iterative ServiceNow enhancements. Which drawback should the platform owner highlight?",
 		"choices": [
-			"Late stakeholder feedback because working increments are not demonstrated until the end of a long phase",
+			"Excessive daily standups that prevent developers from writing code",
 			"Mandatory backlog refinement that eliminates the need for documentation",
-			"Too many sprint retrospectives that slow executive decision making",
-			"Excessive daily standups that prevent developers from writing code"
+			"Late stakeholder feedback because working increments are not demonstrated until the end of a long phase",
+			"Too many sprint retrospectives that slow executive decision making"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Waterfall defers demonstrable increments, delaying feedback and adaptation—problematic for platform programs that benefit from iterative validation.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/application-development.html"
@@ -29117,12 +29117,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 42,
 		"prompt": "A delivery team must choose an SDLC approach for ongoing platform enhancements. Which benefit best explains why Agile is commonly recommended on ServiceNow programs?",
 		"choices": [
-			"It delivers working increments in short cycles so stakeholders can inspect and adapt frequently",
-			"It eliminates the need for test instances and change approvals",
 			"It prevents developers from collaborating with business owners during delivery",
+			"It eliminates the need for test instances and change approvals",
+			"It delivers working increments in short cycles so stakeholders can inspect and adapt frequently",
 			"It requires all requirements to be frozen before any configuration begins"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Agile SDLC emphasizes short iterations and frequent stakeholder feedback, improving alignment as platform capabilities evolve.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/application-development.html"
@@ -29135,15 +29135,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"questionType": "multi",
 		"prompt": "A squad new to Scrum asks which ceremony purposes are correct for ServiceNow delivery. Which pairings should the platform owner confirm? (Choose two.)",
 		"choices": [
-			"Daily stand-up: a session where the product owner assigns every task for the day",
-			"Retrospective: inspect team process and agree improvements for the next sprint",
 			"Sprint review: demonstrate completed work and gather stakeholder feedback",
+			"Retrospective: inspect team process and agree improvements for the next sprint",
+			"Daily stand-up: a session where the product owner assigns every task for the day",
 			"Sprint planning: reopen stories already accepted in prior sprints for re-voting"
 		],
-		"correctIndex": 1,
+		"correctIndex": 0,
 		"correctIndexes": [
-			1,
-			2
+			0,
+			1
 		],
 		"explanation": "Reviews showcase increments for feedback and retrospectives improve process; stand-ups synchronize the team and planning selects new sprint work.",
 		"sourceUrls": [
@@ -29201,9 +29201,9 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "During sprint execution, external teams keep pulling developers into unplanned work. Which Agile role is accountable for shielding the team and escalating the impediment?",
 		"choices": [
 			"The scrum master, who protects sprint focus and removes blockers",
+			"The Community Champion, who approves production deployments",
 			"The steering committee, which assigns daily tasks to each developer",
-			"The product owner, who rewrites all acceptance criteria mid-sprint",
-			"The Community Champion, who approves production deployments"
+			"The product owner, who rewrites all acceptance criteria mid-sprint"
 		],
 		"correctIndex": 0,
 		"explanation": "The scrum master facilitates process and removes impediments, including protecting the team from distractions that threaten sprint commitments.",
@@ -29252,10 +29252,10 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"questionType": "multi",
 		"prompt": "Before promoting a release package from test to production, which SDLC controls should the platform owner require? (Choose two.)",
 		"choices": [
-			"Committing directly on production to shorten the release calendar",
 			"Skipping test whenever the developer is confident in the change",
-			"Documented UAT and regression sign-off in the sub-production environment",
-			"Preview-validated update sets or app versions with collisions resolved"
+			"Committing directly on production to shorten the release calendar",
+			"Preview-validated update sets or app versions with collisions resolved",
+			"Documented UAT and regression sign-off in the sub-production environment"
 		],
 		"correctIndex": 2,
 		"correctIndexes": [
@@ -29333,12 +29333,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 51,
 		"prompt": "A platform owner is defining the release promotion process for scoped application updates. Which practice aligns with ServiceNow governance expectations?",
 		"choices": [
+			"Allow developers to commit update sets in production whenever test capacity is unavailable",
 			"Retire the test instance once production reaches the target family release",
-			"Capture changes in development, preview and resolve conflicts in test, then commit with approved change records",
 			"Merge parallel update sets without preview because naming conventions prevent collisions",
-			"Allow developers to commit update sets in production whenever test capacity is unavailable"
+			"Capture changes in development, preview and resolve conflicts in test, then commit with approved change records"
 		],
-		"correctIndex": 1,
+		"correctIndex": 3,
 		"explanation": "Controlled promotion flows move tracked changes through preview, test validation, and approved production commit rather than bypassing environments.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/system-update-sets.html"
@@ -29394,14 +29394,14 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "Operations needs a full production copy in a lower environment to reproduce a complex integration defect. Which cloning scenario best fits this requirement?",
 		"choices": [
 			"Copy individual update sets from production without cloning instance data",
-			"Schedule a full instance clone with post-clone cleanup and suspended outbound integrations",
 			"Export selected tables to CSV and import them manually without clone profiles",
-			"Grant developers direct read-only SQL access to the production database"
+			"Grant developers direct read-only SQL access to the production database",
+			"Schedule a full instance clone with post-clone cleanup and suspended outbound integrations"
 		],
-		"correctIndex": 1,
+		"correctIndex": 3,
 		"explanation": "Full instance clones provide representative data and configuration for troubleshooting when paired with cleanup scripts and integration safeguards.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/instance-clone/concept/instance-clone.html"
+			"https://www.servicenow.com/docs/r/platform-administration/instance-clone/instance-clone.html"
 		],
 		"domain": "Technology"
 	},
@@ -29412,18 +29412,18 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "A team maintains seeded reference data in sub-production that must survive recurring production clones. Which capabilities should the platform owner configure? (Choose two.)",
 		"choices": [
 			"Clone data preservers for the protected reference tables",
-			"Clone exclusions for tables that should not overwrite preserved datasets",
 			"Unrestricted admin access for every developer in the cloned target",
+			"Clone exclusions for tables that should not overwrite preserved datasets",
 			"Automatic rollback of all plugins after each clone completes"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			1
+			2
 		],
 		"explanation": "Data preservers protect designated datasets during clones while exclusions prevent unwanted tables from overwriting preserved reference data.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/instance-clone/concept/clone-data-preservation.html"
+			"https://www.servicenow.com/docs/r/platform-administration/instance-clone/clone-data-preservation.html"
 		],
 		"domain": "Technology"
 	},
@@ -29432,12 +29432,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 55,
 		"prompt": "When planning a major family upgrade, which components should a platform owner treat as critical to validate before production cutover?",
 		"choices": [
-			"Homepage theme colors, personal dashboard layouts, and user avatar images",
-			"Historical chat transcripts unrelated to platform configuration",
 			"Individual browser bookmark collections stored outside the instance",
-			"Custom integrations, scoped applications, MID Server connectivity, and security hardening settings"
+			"Homepage theme colors, personal dashboard layouts, and user avatar images",
+			"Custom integrations, scoped applications, MID Server connectivity, and security hardening settings",
+			"Historical chat transcripts unrelated to platform configuration"
 		],
-		"correctIndex": 3,
+		"correctIndex": 2,
 		"explanation": "Upgrade planning emphasizes integrations, application scope, connectivity, and security posture because failures in these areas disrupt core platform operations.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/instance-administration/upgrade-center.html"
@@ -29450,15 +29450,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"questionType": "multi",
 		"prompt": "Which are features in ServiceNow Security Center? (Choose two.)",
 		"choices": [
-			"Security hardening",
+			"Catalog item bundling",
 			"Update set batch preview",
-			"Security metrics",
-			"Catalog item bundling"
+			"Security hardening",
+			"Security metrics"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"correctIndexes": [
-			0,
-			2
+			2,
+			3
 		],
 		"explanation": "Security Center provides hardening settings with compliance scoring and built-in security metrics dashboards for monitoring instance posture.",
 		"sourceUrls": [
@@ -29472,15 +29472,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 57,
 		"prompt": "Developers request weekly full clones of production into a shared development instance. Which cloning scenario creates the highest operational risk if cleanup is skipped?",
 		"choices": [
-			"Copying a single scoped application repository without instance data",
-			"Cloned production data triggering outbound email and live integration calls from a non-production instance",
 			"Cloning a sandbox with no production data into an empty developer instance",
-			"Refreshing a personal developer instance from a sanitized sub-production template"
+			"Refreshing a personal developer instance from a sanitized sub-production template",
+			"Copying a single scoped application repository without instance data",
+			"Cloned production data triggering outbound email and live integration calls from a non-production instance"
 		],
-		"correctIndex": 1,
+		"correctIndex": 3,
 		"explanation": "Production clones without post-clone sanitization can expose sensitive data and trigger unintended external actions from lower environments.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/instance-clone/concept/instance-clone.html"
+			"https://www.servicenow.com/docs/r/platform-administration/instance-clone/instance-clone.html"
 		],
 		"domain": "Technology"
 	},
@@ -29523,7 +29523,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		],
 		"explanation": "Platform service areas divide core runtime, administration, integration, and security responsibilities that platform owners must understand at associate level.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/now-platform/concept/c_NowPlatform.html"
+			"https://www.servicenow.com/docs/r/servicenow-platform/now-platform/c_NowPlatform.html"
 		],
 		"domain": "Technology"
 	},
@@ -29532,12 +29532,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 59,
 		"prompt": "Before a major store release, the delivery lead asks how to regression-test custom applications efficiently. Which associate-level technology capability should the platform owner recommend?",
 		"choices": [
-			"Manual spot checks on production only after the release window opens",
-			"Disabling all business rules during testing to avoid false failures",
 			"Skipping automated tests because update sets already capture every change",
-			"Automated Test Framework test suites executed in sub-production before promotion"
+			"Automated Test Framework test suites executed in sub-production before promotion",
+			"Manual spot checks on production only after the release window opens",
+			"Disabling all business rules during testing to avoid false failures"
 		],
-		"correctIndex": 3,
+		"correctIndex": 1,
 		"explanation": "Automated Test Framework supports repeatable regression coverage in lower environments, reducing production surprises after platform or application updates.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/automated-test-framework.html"
@@ -29574,7 +29574,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 2,
 		"explanation": "Organizations with unified governance and limited isolation needs typically benefit from one production instance with disciplined promotion paths.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/now-platform/concept/c_NowPlatform.html"
+			"https://www.servicenow.com/docs/r/servicenow-platform/now-platform/c_NowPlatform.html"
 		],
 		"domain": "Technology"
 	},
@@ -29644,19 +29644,19 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"questionType": "multi",
 		"prompt": "After a security patch is applied in test, which next steps should the platform owner require before production deployment? (Choose two.)",
 		"choices": [
-			"Approved change record with defined rollback criteria and maintenance window",
+			"Immediate production deployment without change tracking to minimize delay",
 			"Permanent deferral of all future patches until the next family upgrade",
 			"Documented regression results for affected integrations and critical workflows",
-			"Immediate production deployment without change tracking to minimize delay"
+			"Approved change record with defined rollback criteria and maintenance window"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"correctIndexes": [
-			0,
-			2
+			2,
+			3
 		],
 		"explanation": "Patch promotion requires validated test evidence and governed change approval with rollback planning before touching production.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/vancouver-platform-administration/page/administer/upgrade-center/concept/uc-upgrade-plan.html"
+			"https://www.servicenow.com/docs/r/platform-administration/upgrade-center/uc-upgrade-plan.html"
 		],
 		"domain": "Technology"
 	},
@@ -29665,15 +29665,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 65,
 		"prompt": "Which statement best describes a technical characteristic of the ServiceNow Platform Core service?",
 		"choices": [
-			"It provides the shared data model, workflow engine, and runtime foundation for all applications",
 			"It replaces the need for any user access controls or audit logging",
 			"It exclusively manages third-party hardware asset serial numbers",
+			"It provides the shared data model, workflow engine, and runtime foundation for all applications",
 			"It hosts only email notification templates without supporting business logic"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Platform Core delivers the foundational runtime, tables, and workflow capabilities that every ServiceNow application builds upon.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/now-platform/concept/c_NowPlatform.html"
+			"https://www.servicenow.com/docs/r/servicenow-platform/now-platform/c_NowPlatform.html"
 		],
 		"domain": "Technology"
 	},
@@ -29682,12 +29682,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 66,
 		"prompt": "Which capability best reflects the Now Intelligence service area on the platform?",
 		"choices": [
-			"Disabling all dashboards to reduce storage consumption",
-			"Analytics, machine learning, and performance insights that support data-driven decisions",
 			"Manual spreadsheet imports as the only reporting option",
-			"Physical data center rack provisioning for on-premises customers"
+			"Disabling all dashboards to reduce storage consumption",
+			"Physical data center rack provisioning for on-premises customers",
+			"Analytics, machine learning, and performance insights that support data-driven decisions"
 		],
-		"correctIndex": 1,
+		"correctIndex": 3,
 		"explanation": "Now Intelligence encompasses analytics, AI, and performance capabilities that help organizations measure and improve platform outcomes.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-analytics-and-reporting/performance-analytics/performance-analytics-overview.html"
@@ -29733,8 +29733,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		],
 		"explanation": "Associate platform owners recognize major product families and the business capabilities each supports when guiding portfolio and licensing decisions.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/now-platform/concept/c_NowPlatform.html",
-			"https://www.servicenow.com/docs/bundle/washingtondc-servicenow-platform/page/product/service-catalog/concept/c_ServiceCatalog.html"
+			"https://www.servicenow.com/docs/r/servicenow-platform/now-platform/c_NowPlatform.html",
+			"https://www.servicenow.com/docs/r/servicenow-platform/service-catalog/c_ServiceCatalog.html"
 		],
 		"domain": "Technology"
 	},
@@ -29744,11 +29744,11 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "An auditor asks where to find ServiceNow cloud compliance attestations and security documentation. Which resource should the platform owner reference?",
 		"choices": [
 			"The instance login banner text alone",
-			"The ServiceNow TRUST Center and compliance documentation portal",
 			"A developer's personal wiki page without vendor attestation",
-			"Unverified third-party exam preparation forums"
+			"Unverified third-party exam preparation forums",
+			"The ServiceNow TRUST Center and compliance documentation portal"
 		],
-		"correctIndex": 1,
+		"correctIndex": 3,
 		"explanation": "The TRUST Center publishes compliance certifications, security white papers, and shared-responsibility guidance for customer audit needs.",
 		"sourceUrls": [
 			"https://www.servicenow.com/company/trust/compliance.html",
@@ -29801,12 +29801,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 71,
 		"prompt": "A department wants to connect HR and finance systems to ServiceNow workflows. Which Integration Services characteristic best supports this goal?",
 		"choices": [
-			"Blocking all inbound and outbound integration traffic permanently",
-			"Reusable spokes, REST APIs, and orchestrated flows with managed credentials",
 			"Hard-coded credentials embedded in every client script without rotation",
-			"One-off custom endpoints per team with no connection governance"
+			"One-off custom endpoints per team with no connection governance",
+			"Blocking all inbound and outbound integration traffic permanently",
+			"Reusable spokes, REST APIs, and orchestrated flows with managed credentials"
 		],
-		"correctIndex": 1,
+		"correctIndex": 3,
 		"explanation": "Integration Services emphasize managed connections, reusable integration patterns, and API-based connectivity rather than ad hoc bespoke endpoints.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/integrate-applications/integrationhub/integrationhub.html"
@@ -29835,12 +29835,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 73,
 		"prompt": "Which Security and Compliance platform characteristic should an associate platform owner emphasize when briefing executives?",
 		"choices": [
-			"Elimination of all role-based access to speed up development",
-			"Disabling encryption because the cloud provider handles all data protection",
 			"Granting admin privileges to all requesters for faster self-service",
-			"Layered access controls, hardening guidance, and audit evidence supporting regulatory alignment"
+			"Layered access controls, hardening guidance, and audit evidence supporting regulatory alignment",
+			"Elimination of all role-based access to speed up development",
+			"Disabling encryption because the cloud provider handles all data protection"
 		],
-		"correctIndex": 3,
+		"correctIndex": 1,
 		"explanation": "Security and Compliance services combine access management, hardening tools such as Security Center, and audit capabilities for governance and regulatory needs.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-security/security-center/sec-center-v2.html"
@@ -29854,19 +29854,19 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "Before requesting a production clone, which preparations align with platform owner technology governance? (Choose two.)",
 		"choices": [
 			"Define clone profile requirements including data preservers, exclusions, and cleanup scripts",
+			"Skip clone profiles to minimize duration regardless of data sensitivity",
 			"Enable live outbound email from the cloned instance to speed user acceptance testing",
-			"Verify maintenance window approval and post-clone integration suspension plans",
-			"Skip clone profiles to minimize duration regardless of data sensitivity"
+			"Verify maintenance window approval and post-clone integration suspension plans"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			2
+			3
 		],
 		"explanation": "Clone governance requires profile design for data handling and approved windows with safeguards that prevent unintended external impact from cloned environments.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/instance-clone/concept/instance-clone.html",
-			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/instance-clone/concept/clone-data-preservation.html"
+			"https://www.servicenow.com/docs/r/platform-administration/instance-clone/instance-clone.html",
+			"https://www.servicenow.com/docs/r/platform-administration/instance-clone/clone-data-preservation.html"
 		],
 		"domain": "Technology"
 	},
@@ -29883,8 +29883,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 1,
 		"explanation": "LDAP integration supports scheduled synchronization from Active Directory with attribute mapping and governed service credentials for identity lifecycle management.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/user-administration/concept/c_LDAPIntegration.html",
-			"https://www.servicenow.com/docs/bundle/washingtondc-integrate-applications/page/administer/integration-hub/concept/integration-hub.html"
+			"https://www.servicenow.com/docs/r/platform-administration/user-administration/c_LDAPIntegration.html",
+			"https://www.servicenow.com/docs/r/integrate-applications/integration-hub/integration-hub.html"
 		],
 		"domain": "Technology"
 	},
@@ -29893,16 +29893,16 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 76,
 		"prompt": "Before expanding application service mapping, a platform owner discovers location and company records are incomplete. Which data governance principle explains why those records must be corrected first?",
 		"choices": [
-			"Analytical data stored only in Performance Analytics indicator snapshots",
-			"Foundational data that provides organizational context for downstream CMDB modeling",
 			"Transactional data that records daily incident volume by assignment group",
+			"Foundational data that provides organizational context for downstream CMDB modeling",
+			"Analytical data stored only in Performance Analytics indicator snapshots",
 			"Ephemeral session data cleared automatically after each user logout event"
 		],
 		"correctIndex": 1,
 		"explanation": "CSDM foundation data such as companies and locations establishes organizational context that application services and configuration items depend on.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/washingtondc-cloud-governance-suite/page/product/common-service-data-model/concept/csdm-foundation-data.html",
-			"https://www.servicenow.com/docs/bundle/washingtondc-cloud-governance-suite/page/product/common-service-data-model/concept/csdm-overview.html"
+			"https://www.servicenow.com/docs/r/servicenow-platform/common-service-data-model-csdm/csdm-foundation-data.html",
+			"https://www.servicenow.com/docs/r/servicenow-platform/common-service-data-model-csdm/csdm-overview.html"
 		],
 		"domain": "Data"
 	},
@@ -29911,16 +29911,16 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 77,
 		"prompt": "An operations director asks for a one-time export of open change records filtered by assignment group for an audit packet. Which capability should the platform owner recommend?",
 		"choices": [
-			"Standard reporting with list filters and export to share the current record set",
+			"Performance Analytics indicator with quarterly targets and automated threshold alerts",
 			"IntegrationHub spoke that polls the change table every minute for trend scoring",
-			"Strategic Planning Workspace initiative linked to a portfolio investment theme",
-			"Performance Analytics indicator with quarterly targets and automated threshold alerts"
+			"Standard reporting with list filters and export to share the current record set",
+			"Strategic Planning Workspace initiative linked to a portfolio investment theme"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Ad hoc filtered exports of current records are best served by native reporting; Performance Analytics is designed for trend-based KPI monitoring over time.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/reporting/concept/reporting-overview.html",
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalyticsAdministration.html"
+			"https://www.servicenow.com/docs/r/now-intelligence/reporting/reporting-overview.html",
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/c_PerformanceAnalyticsAdministration.html"
 		],
 		"domain": "Data"
 	},
@@ -29963,8 +29963,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		],
 		"explanation": "Platform owners distinguish foundation data, transactional records, ad hoc reporting, and PA indicators because each supports different governance and decision-making needs.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/washingtondc-cloud-governance-suite/page/product/common-service-data-model/concept/csdm-overview.html",
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalyticsAdministration.html"
+			"https://www.servicenow.com/docs/r/servicenow-platform/common-service-data-model-csdm/csdm-overview.html",
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/c_PerformanceAnalyticsAdministration.html"
 		],
 		"domain": "Data"
 	},
@@ -29972,22 +29972,22 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"trackCode": "CPOA",
 		"order": 79,
 		"questionType": "multi",
-		"prompt": "Leadership adopted Strategic Planning Workspace to connect platform investments to business outcomes. Which practices should the platform owner establish? (Choose two.)",
+		"prompt": "Which practices help keep CSDM foundation data trustworthy before dependent CMDB modeling expands? (Choose two.)",
 		"choices": [
-			"Link strategic objectives to measurable platform KPIs reviewed on a regular cadence",
-			"Replace all CMDB foundation data reviews because strategy workspace supersedes CSDM",
-			"Define value-driven metrics with baselines before funding new platform initiatives",
-			"Track only technical uptime metrics without tying them to business objectives"
+			"Track only technical uptime metrics without reviewing organizational master data",
+			"Replace all CMDB foundation reviews because reporting exports supersede CSDM",
+			"Monitor foundation metrics on the CSDM Data Foundations dashboard on a regular cadence",
+			"Certify company and location records for completeness and documented ownership"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"correctIndexes": [
-			0,
-			2
+			2,
+			3
 		],
-		"explanation": "Strategic Planning Workspace gains value when initiatives connect to measurable outcomes with baselines and recurring KPI review—not isolated technical metrics or abandoned data stewardship.",
+		"explanation": "Foundation data such as company and location must be complete and owned before application services and CI relationships scale. The CSDM Data Foundations dashboard surfaces foundation metrics so owners can remediate gaps. Reporting exports and uptime metrics do not replace foundation stewardship.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/washingtondc-impact/page/impact/strategic-planning-workspace/concept/strategic-planning-workspace.html",
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalyticsAdministration.html"
+			"https://www.servicenow.com/docs/r/servicenow-platform/common-service-data-model-csdm/csdm-foundations-dashboard.html",
+			"https://www.servicenow.com/docs/r/servicenow-platform/common-service-data-model-csdm/csdm-overview.html"
 		],
 		"domain": "Data"
 	},
@@ -29996,51 +29996,51 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 80,
 		"prompt": "Executive sponsors question whether platform spending is improving service delivery. Which data-driven response best demonstrates why trustworthy data matters to platform ownership?",
 		"choices": [
-			"Defer all metrics until every CMDB CI reaches one hundred percent completeness",
-			"Present trend KPIs sourced from governed indicators with documented data ownership",
 			"Report only total user count because volume proves platform value automatically",
-			"Share anecdotal feedback from one team without validating record completeness"
+			"Defer all metrics until every CMDB CI reaches one hundred percent completeness",
+			"Share anecdotal feedback from one team without validating record completeness",
+			"Present trend KPIs sourced from governed indicators with documented data ownership"
 		],
-		"correctIndex": 1,
+		"correctIndex": 3,
 		"explanation": "Platform owners justify investment with governed, trend-based KPIs backed by clear data ownership—not unverified anecdotes or unrelated volume counts.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalyticsAdministration.html",
-			"https://www.servicenow.com/docs/bundle/washingtondc-cloud-governance-suite/page/product/common-service-data-model/concept/csdm-overview.html"
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/c_PerformanceAnalyticsAdministration.html",
+			"https://www.servicenow.com/docs/r/servicenow-platform/common-service-data-model-csdm/csdm-overview.html"
 		],
 		"domain": "Data"
 	},
 	{
 		"trackCode": "CPOA",
 		"order": 81,
-		"prompt": "A regulated agency must demonstrate that configuration and access data supports audit requirements. Which ServiceNow resource should the platform owner reference first?",
+		"prompt": "A regulated agency must keep high-growth operational tables within retention limits while preserving evidence for audits. Which data practice should the associate platform owner prioritize?",
 		"choices": [
-			"Catalog item icon library standards for request presentation consistency",
+			"Table rotation and archival policies sized to regulatory retention requirements",
 			"Virtual Agent conversation script templates for password reset deflection",
-			"Cloud Governance Suite compliance guidance and data stewardship practices",
+			"Catalog item icon library standards for request presentation consistency",
 			"UI theme designer defaults for the employee service portal homepage"
 		],
-		"correctIndex": 2,
-		"explanation": "Cloud Governance Suite and CSDM stewardship guidance help platform owners align configuration data and access controls with compliance expectations.",
+		"correctIndex": 0,
+		"explanation": "Table rotation and archival control volume on high-growth tables while keeping retention aligned to policy. Portal theming and catalog icons do not address operational data retention or audit evidence volume.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/washingtondc-cloud-governance-suite/page/product/cloud-governance-suite/concept/cloud-governance-suite.html",
-			"https://www.servicenow.com/docs/bundle/washingtondc-platform-security/page/administer/security/concept/c_Hardening.html"
+			"https://www.servicenow.com/docs/r/platform-administration/table-administration/c_TableRotationAndArchival.html"
 		],
 		"domain": "Data"
 	},
 	{
 		"trackCode": "CPOA",
 		"order": 82,
-		"prompt": "Portfolio leaders want to prioritize three competing platform initiatives for the next fiscal year. Which Strategic Planning Workspace outcome should the platform owner deliver?",
+		"prompt": "Application service owners report CI relationships that point to blank company and location values. What should the associate platform owner do first?",
 		"choices": [
-			"A complete disablement of all non-production instances to reduce storage cost",
-			"An unrestricted admin role grant so sponsors can edit production records directly",
-			"A ranked initiative list with linked objectives, expected value, and accountable sponsors",
-			"A single global update set containing every team's in-flight customization"
+			"Bundle every team's in-flight customization into a single global update set",
+			"Remediate incomplete foundation data before expanding application service mapping",
+			"Grant unrestricted admin so sponsors can edit production CI records directly",
+			"Disable all non-production instances to reduce storage cost before remediating data"
 		],
-		"correctIndex": 2,
-		"explanation": "Strategic Planning Workspace supports prioritizing initiatives against objectives and expected value with clear sponsorship—not ad hoc production access or environment shortcuts.",
+		"correctIndex": 1,
+		"explanation": "CSDM foundation data such as company and location provides organizational context that application services and CI relationships depend on. Expanding mapping over incomplete foundation data amplifies quality issues.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/washingtondc-impact/page/impact/strategic-planning-workspace/concept/strategic-planning-workspace.html"
+			"https://www.servicenow.com/docs/r/servicenow-platform/common-service-data-model-csdm/csdm-overview.html",
+			"https://www.servicenow.com/docs/r/servicenow-platform/common-service-data-model-csdm/csdm-foundations-dashboard.html"
 		],
 		"domain": "Data"
 	},
@@ -30083,8 +30083,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		],
 		"explanation": "Compliance scenarios span master data certification, retention controls, analytics integrity, and access governance—each addressing a distinct risk platform owners must manage.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/washingtondc-cloud-governance-suite/page/product/common-service-data-model/concept/csdm-foundation-data.html",
-			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/table-administration/concept/c_TableRotationAndArchival.html"
+			"https://www.servicenow.com/docs/r/servicenow-platform/common-service-data-model-csdm/csdm-foundation-data.html",
+			"https://www.servicenow.com/docs/r/platform-administration/table-administration/c_TableRotationAndArchival.html"
 		],
 		"domain": "Data"
 	},
@@ -30094,38 +30094,38 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"questionType": "multi",
 		"prompt": "An internal audit flagged inconsistent incident categorization that skews executive dashboards. Which remediation steps should the platform owner prioritize? (Choose two.)",
 		"choices": [
+			"Review Performance Analytics indicator sources to confirm they reference governed fields",
 			"Allow each team to create private category values without a shared reference list",
-			"Define data ownership and validation rules for categorization fields used in KPIs",
 			"Disable all breakdowns so dashboards show only aggregate totals without detail",
-			"Review Performance Analytics indicator sources to confirm they reference governed fields"
+			"Define data ownership and validation rules for categorization fields used in KPIs"
 		],
-		"correctIndex": 1,
+		"correctIndex": 0,
 		"correctIndexes": [
-			1,
+			0,
 			3
 		],
 		"explanation": "Audit findings on skewed dashboards require governed categorization ownership and validated PA sources—not hidden breakdowns or unconstrained local values.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalyticsAdministration.html",
-			"https://www.servicenow.com/docs/bundle/washingtondc-cloud-governance-suite/page/product/cloud-governance-suite/concept/cloud-governance-suite.html"
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/c_PerformanceAnalyticsAdministration.html",
+			"https://www.servicenow.com/docs/r/cloud-governance-suite/cloud-governance-suite.html"
 		],
 		"domain": "Data"
 	},
 	{
 		"trackCode": "CPOA",
 		"order": 85,
-		"prompt": "A platform owner is selecting KPIs for a quarterly business review on request fulfillment. Which metric best reflects a value-driven outcome rather than raw activity volume?",
+		"prompt": "A platform owner is defining Performance Analytics indicators for request fulfillment reviews. Which practice keeps KPI trends decision-ready?",
 		"choices": [
-			"Count of update sets created by developers during the reporting period",
-			"Number of active UI policies configured on the Request Item table",
-			"Total number of catalog items published regardless of usage or fulfillment quality",
-			"Average time from request submission to fulfilled delivery against a defined target"
+			"Count every catalog click as the sole success metric without fulfillment targets",
+			"Document data ownership and validate indicator sources against governed fields",
+			"Disable indicator collection so dashboards never conflict with list reports",
+			"Allow each team to redefine categorization fields without a shared standard"
 		],
-		"correctIndex": 3,
-		"explanation": "Value-driven metrics tie to outcomes such as fulfillment cycle time against targets—not catalog volume or development artifact counts unrelated to service delivery.",
+		"correctIndex": 1,
+		"explanation": "Decision-ready KPIs depend on owned fields and validated indicator sources. Activity-only counts, disabled collection, or unmanaged categorization fields produce trends leaders cannot trust.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalyticsAdministration.html",
-			"https://www.servicenow.com/docs/bundle/washingtondc-impact/page/impact/strategic-planning-workspace/concept/strategic-planning-workspace.html"
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/c_PerformanceAnalyticsAdministration.html",
+			"https://www.servicenow.com/docs/r/servicenow-platform/common-service-data-model-csdm/csdm-overview.html"
 		],
 		"domain": "Data"
 	},
@@ -30135,20 +30135,20 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"questionType": "multi",
 		"prompt": "A service desk manager needs both a weekly trend of mean time to resolve and a same-day list of breached incidents for escalation. Which capability pairing should the platform owner recommend? (Choose two.)",
 		"choices": [
-			"IntegrationHub flow that deletes resolved incidents to improve trend appearance",
-			"Performance Analytics indicator tracking resolution time with weekly aggregation",
 			"Operational report filtered to breached incidents exported for the current day",
-			"Strategic Planning Workspace initiative record replacing all operational dashboards"
+			"Strategic Planning Workspace initiative record replacing all operational dashboards",
+			"IntegrationHub flow that deletes resolved incidents to improve trend appearance",
+			"Performance Analytics indicator tracking resolution time with weekly aggregation"
 		],
-		"correctIndex": 1,
+		"correctIndex": 0,
 		"correctIndexes": [
-			1,
-			2
+			0,
+			3
 		],
 		"explanation": "Trend monitoring belongs in Performance Analytics while point-in-time breach lists are operational reports—each serves a distinct associate-level analytics need.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalyticsAdministration.html",
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/reporting/concept/reporting-overview.html"
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/c_PerformanceAnalyticsAdministration.html",
+			"https://www.servicenow.com/docs/r/now-intelligence/reporting/reporting-overview.html"
 		],
 		"domain": "Data"
 	},
@@ -30165,8 +30165,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 2,
 		"explanation": "Strategic governance establishes enterprise direction and guardrails; portfolio governance prioritizes investments; technical governance executes standards within those boundaries.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/instance-administration/concept/platform-governance.html",
-			"https://www.servicenow.com/docs/bundle/washingtondc-impact/page/impact/impact.html"
+			"https://www.servicenow.com/docs/r/platform-administration/instance-administration/platform-governance.html",
+			"https://www.servicenow.com/docs/r/impact/impact.html"
 		],
 		"domain": "ServiceNow Governance"
 	},
@@ -30209,8 +30209,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		],
 		"explanation": "Platform governance spans data and compliance tooling, subscription oversight, council direction, and vendor support resources platform owners must coordinate.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/washingtondc-cloud-governance-suite/page/product/cloud-governance-suite/concept/cloud-governance-suite.html",
-			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/instance-administration/concept/platform-governance.html"
+			"https://www.servicenow.com/docs/r/cloud-governance-suite/cloud-governance-suite.html",
+			"https://www.servicenow.com/docs/r/platform-administration/instance-administration/platform-governance.html"
 		],
 		"domain": "ServiceNow Governance"
 	},
@@ -30219,16 +30219,16 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 89,
 		"prompt": "Finance asks the platform owner to explain which document records the products and quantities the organization is entitled to use. Which artifact should be referenced?",
 		"choices": [
-			"Subscription entitlement baseline aligned to contracted SKUs and product modules",
+			"Update set batch label naming convention used by the development team",
 			"HealthScan report listing skipped security hardening recommendations",
-			"Clone schedule calendar showing last production-to-test refresh dates",
-			"Update set batch label naming convention used by the development team"
+			"Subscription entitlement baseline aligned to contracted SKUs and product modules",
+			"Clone schedule calendar showing last production-to-test refresh dates"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Subscription and entitlement baselines document contracted products and limits that platform teams must operate within during provisioning and true-up cycles.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/washingtondc-cloud-governance-suite/page/product/cloud-governance-suite/concept/cloud-governance-suite.html",
-			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/subscription-management/concept/subscription-management.html"
+			"https://www.servicenow.com/docs/r/cloud-governance-suite/cloud-governance-suite.html",
+			"https://www.servicenow.com/docs/r/platform-administration/subscription-management.html"
 		],
 		"domain": "ServiceNow Governance"
 	},
@@ -30237,16 +30237,16 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 90,
 		"prompt": "After HR Service Delivery go-live, fulfillment agent headcount doubled but finance sees no matching subscription increase. Which licensing distinction should the platform owner clarify first?",
 		"choices": [
-			"Capacity licensing replaces all role-based entitlements for ITSM and HR products",
-			"Every internal employee automatically consumes a fulfiller license when logging in once",
 			"Fulfiller licenses apply to agents performing work on records, separate from requester access",
+			"Every internal employee automatically consumes a fulfiller license when logging in once",
+			"Capacity licensing replaces all role-based entitlements for ITSM and HR products",
 			"Requester and fulfiller licenses are interchangeable without product-specific rules"
 		],
-		"correctIndex": 2,
+		"correctIndex": 0,
 		"explanation": "Fulfiller, requester, and capacity licensing models apply differently by role and product; platform owners must map active roles to the correct subscription types.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/washingtondc-cloud-governance-suite/page/product/cloud-governance-suite/concept/cloud-governance-suite.html",
-			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/subscription-management/concept/subscription-management.html"
+			"https://www.servicenow.com/docs/r/cloud-governance-suite/cloud-governance-suite.html",
+			"https://www.servicenow.com/docs/r/platform-administration/subscription-management.html"
 		],
 		"domain": "ServiceNow Governance"
 	},
@@ -30255,16 +30255,16 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 91,
 		"prompt": "A business unit wants to publish twenty new catalog items that trigger workflow for specialized agents. What licensing consideration should the platform owner raise during intake review?",
 		"choices": [
-			"Catalog items inherit only hardware asset licenses regardless of workflow design",
+			"Catalog visibility alone never affects licensing because browsing is unrestricted",
 			"Service catalog licensing applies exclusively to external customer portals",
-			"New fulfillment workflows may increase licensed agent roles tied to subscribed products",
-			"Catalog visibility alone never affects licensing because browsing is unrestricted"
+			"Catalog items inherit only hardware asset licenses regardless of workflow design",
+			"New fulfillment workflows may increase licensed agent roles tied to subscribed products"
 		],
-		"correctIndex": 2,
+		"correctIndex": 3,
 		"explanation": "Catalog items that route work to specialized fulfillers can increase consumption of product-specific agent licenses beyond requester access alone.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/washingtondc-cloud-governance-suite/page/product/cloud-governance-suite/concept/cloud-governance-suite.html",
-			"https://www.servicenow.com/docs/bundle/washingtondc-servicenow-platform/page/product/service-catalog/concept/c_ServiceCatalog.html"
+			"https://www.servicenow.com/docs/r/cloud-governance-suite/cloud-governance-suite.html",
+			"https://www.servicenow.com/docs/r/servicenow-platform/service-catalog/c_ServiceCatalog.html"
 		],
 		"domain": "ServiceNow Governance"
 	},
@@ -30307,8 +30307,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		],
 		"explanation": "Subscription governance combines documented entitlements, role mapping, usage monitoring, and finance-ready reporting—each an associate-level platform owner responsibility.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/washingtondc-cloud-governance-suite/page/product/cloud-governance-suite/concept/cloud-governance-suite.html",
-			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/subscription-management/concept/subscription-management.html"
+			"https://www.servicenow.com/docs/r/cloud-governance-suite/cloud-governance-suite.html",
+			"https://www.servicenow.com/docs/r/platform-administration/subscription-management.html"
 		],
 		"domain": "ServiceNow Governance"
 	},
@@ -30317,16 +30317,16 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 93,
 		"prompt": "An integration team proposes four options to connect a legacy payroll system: LDAP, IntegrationHub spoke, third-party connector, and custom REST. Who should approve the pattern that aligns with enterprise integration standards?",
 		"choices": [
-			"Platform governance reviewing fit to standards, licensing, and operational support",
+			"End users voting on the connector with the simplest UI configuration screen",
 			"Vendor sales representatives selecting the option bundled in the latest promotion",
 			"The developer with the shortest backlog regardless of security review status",
-			"End users voting on the connector with the simplest UI configuration screen"
+			"Platform governance reviewing fit to standards, licensing, and operational support"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Platform governance evaluates integration options against enterprise standards, security, licensing implications, and long-term support—not individual convenience or vendor promotions.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/washingtondc-integrate-applications/page/administer/integration-hub/concept/integration-hub.html",
-			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/instance-administration/concept/platform-governance.html"
+			"https://www.servicenow.com/docs/r/integrate-applications/integration-hub/integration-hub.html",
+			"https://www.servicenow.com/docs/r/platform-administration/instance-administration/platform-governance.html"
 		],
 		"domain": "ServiceNow Governance"
 	},
@@ -30348,8 +30348,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		],
 		"explanation": "True-up readiness requires matching activated products and role growth to contracted entitlements—not cosmetic portal settings or unrelated operational metrics.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/washingtondc-cloud-governance-suite/page/product/cloud-governance-suite/concept/cloud-governance-suite.html",
-			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/subscription-management/concept/subscription-management.html"
+			"https://www.servicenow.com/docs/r/cloud-governance-suite/cloud-governance-suite.html",
+			"https://www.servicenow.com/docs/r/platform-administration/subscription-management.html"
 		],
 		"domain": "ServiceNow Governance"
 	},
@@ -30358,16 +30358,16 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 95,
 		"prompt": "A new cohort of platform builders must reach role-based certification before taking on scoped application work. Which ServiceNow enablement resource should the associate platform owner recommend?",
 		"choices": [
-			"Third-party exam prep forums as the sole source of platform standards",
 			"Disabling all training because update sets document every required skill",
-			"Unrestricted production admin access so learners can experiment without guidance",
-			"ServiceNow Learning paths and role-based certification aligned to builder and admin personas"
+			"Third-party exam prep forums as the sole source of platform standards",
+			"ServiceNow Learning paths and role-based certification aligned to builder and admin personas",
+			"Unrestricted production admin access so learners can experiment without guidance"
 		],
-		"correctIndex": 3,
+		"correctIndex": 2,
 		"explanation": "ServiceNow Learning provides official role-based paths and certifications that platform owners use to standardize enablement before teams take on delivery responsibilities.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/instance-administration/concept/platform-governance.html",
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/now-platform/concept/c_NowPlatform.html"
+			"https://www.servicenow.com/docs/r/platform-administration/instance-administration/platform-governance.html",
+			"https://www.servicenow.com/docs/r/servicenow-platform/now-platform/c_NowPlatform.html"
 		],
 		"domain": "ServiceNow Governance"
 	},
@@ -30384,8 +30384,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 0,
 		"explanation": "Application portfolio governance evaluates fit to the ServiceNow product portfolio, integration standards, and licensed entitlements—not preferences or unrelated promotions.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/washingtondc-cloud-governance-suite/page/product/cloud-governance-suite/concept/cloud-governance-suite.html",
-			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/instance-administration/concept/platform-governance.html"
+			"https://www.servicenow.com/docs/r/cloud-governance-suite/cloud-governance-suite.html",
+			"https://www.servicenow.com/docs/r/platform-administration/instance-administration/platform-governance.html"
 		],
 		"domain": "ServiceNow Governance"
 	},
@@ -30428,8 +30428,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		],
 		"explanation": "Platform governance references shared data models, standard integrations, official learning paths, and Cloud Governance Suite practices across common ownership scenarios.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/washingtondc-cloud-governance-suite/page/product/cloud-governance-suite/concept/cloud-governance-suite.html",
-			"https://www.servicenow.com/docs/bundle/washingtondc-integrate-applications/page/administer/integration-hub/concept/integration-hub.html"
+			"https://www.servicenow.com/docs/r/cloud-governance-suite/cloud-governance-suite.html",
+			"https://www.servicenow.com/docs/r/integrate-applications/integration-hub/integration-hub.html"
 		],
 		"domain": "ServiceNow Governance"
 	},
@@ -30451,26 +30451,26 @@ export const DEV_PRACTICE_QUESTIONS = [
 		],
 		"explanation": "Strategic governance sets direction and guardrails while portfolio governance prioritizes programs; technical governance supports quality without replacing incident operations or CAB roles.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/instance-administration/concept/platform-governance.html",
-			"https://www.servicenow.com/docs/bundle/washingtondc-impact/page/impact/impact.html"
+			"https://www.servicenow.com/docs/r/platform-administration/instance-administration/platform-governance.html",
+			"https://www.servicenow.com/docs/r/impact/impact.html"
 		],
 		"domain": "ServiceNow Governance"
 	},
 	{
 		"trackCode": "CPOA",
 		"order": 99,
-		"prompt": "As the CPOA bank reaches its final orders, which outcome best summarizes a mature ServiceNow governance model for an associate platform owner?",
+		"prompt": "Which outcome best summarizes a mature ServiceNow governance model for an associate platform owner?",
 		"choices": [
+			"Predictable delivery with controlled risk, verified entitlements, and measurable value",
 			"Complete elimination of KPI reviews once initial adoption targets are met",
-			"Unlimited customization without standards to maximize team autonomy",
 			"All development performed directly in production to eliminate environment cost",
-			"Predictable delivery with controlled risk, verified entitlements, and measurable value"
+			"Unlimited customization without standards to maximize team autonomy"
 		],
-		"correctIndex": 3,
+		"correctIndex": 0,
 		"explanation": "Mature platform governance balances predictable delivery and controlled risk with verified licensing and value transparency—not unconstrained customization or abandoned measurement.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/washingtondc-platform-administration/page/administer/instance-administration/concept/platform-governance.html",
-			"https://www.servicenow.com/docs/bundle/washingtondc-cloud-governance-suite/page/product/cloud-governance-suite/concept/cloud-governance-suite.html"
+			"https://www.servicenow.com/docs/r/platform-administration/instance-administration/platform-governance.html",
+			"https://www.servicenow.com/docs/r/cloud-governance-suite/cloud-governance-suite.html"
 		],
 		"domain": "ServiceNow Governance"
 	},
