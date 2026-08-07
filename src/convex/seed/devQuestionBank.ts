@@ -27115,7 +27115,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 3,
 		"explanation": "Watch topics in the Vulnerability Manager Workspace alert managers when monitored CIs or services meet configured vulnerability exposure criteria.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/vulnerability-manager-workspace.html"
+			"https://www.servicenow.com/docs/r/security-management/vulnerability-manager-workspace/vulnerability-manager-workspace-landing-page.html",
+			"https://www.servicenow.com/docs/r/security-management/vulnerability-manager-workspace/vr-ws-wtopic-related-items-v18.html"
 		],
 		"domain": "VR Applications and Modules"
 	},
@@ -27130,9 +27131,9 @@ export const DEV_PRACTICE_QUESTIONS = [
 			"They convert every vulnerable item into a priority-one incident without remediation task grouping"
 		],
 		"correctIndex": 0,
-		"explanation": "Calculators weight technical and business factors so prioritization reflects both exploit potential and operational impact on each vulnerable item.",
+		"explanation": "Vulnerability calculators and calculator rules set Risk Score on vulnerable items using technical and business criteria so teams can prioritize remediation.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/vulnerability-calculators.html"
+			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/vuln-calculators-rules.html"
 		],
 		"domain": "VR Applications and Modules"
 	},
@@ -27298,19 +27299,19 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"trackCode": "CIS-VR",
 		"order": 21,
 		"questionType": "multi",
-		"prompt": "Which two statements accurately describe NIST NVD vulnerability data feeds used by Vulnerability Response? (Choose two.)",
+		"prompt": "Which two statements accurately describe NIST NVD integrations available in Vulnerability Response? (Choose two.)",
 		"choices": [
-			"Year feeds organize CVE records by the four-digit year prefix in the CVE identifier",
-			"Modified feeds include vulnerabilities published or updated within the previous eight days",
-			"Each feed contains only vulnerabilities that share the same CVSS base score numeric value",
-			"NVD feeds exclude CPE data and cannot enrich third-party vulnerability library entries"
+			"The NIST NVD Integration - API (CVE only) is active by default and runs daily",
+			"The NIST NVD Integration - API (CPE only) is inactive by default until an administrator activates it",
+			"Each NVD integration feed is limited to vulnerabilities that share one CVSS base score",
+			"NVD integrations exclude CPE data and cannot enrich third-party vulnerability library entries"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
 			1
 		],
-		"explanation": "NVD year feeds group CVE data by identifier year prefix, and the modified feed tracks recently published or changed entries within an eight-day window.",
+		"explanation": "Base NVD integrations include CVE-only (active daily by default) and CPE-only (inactive until activated). CVSS score buckets and CPE exclusion are not how the NVD API integrations work.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/nvd-vuln-integration.html"
 		],
@@ -27499,24 +27500,25 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 2,
 		"explanation": "Security Operations integration guidance recommends vulnerability data frameworks, import sets, and transforms to normalize and correlate multi-source scan data consistently.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/security-management/security-operations/c_BestPractisesIntegrations.html"
+			"https://www.servicenow.com/docs/r/security-management/c_BestPractisesIntegrations.html"
 		],
 		"domain": "Getting Data into Vulnerability Response"
 	},
 	{
 		"trackCode": "CIS-VR",
 		"order": 33,
-		"prompt": "A VR administrator plans assignment rules based on Qualys host tags imported during asset integrations. What prerequisite does Rapid7 and Qualys guidance specify for tag-driven rules?",
+		"prompt": "A VR administrator plans assignment rules based on Qualys host tags imported during asset integrations. What prerequisite does Qualys guidance specify for tag-driven rules?",
 		"choices": [
-			"Run the asset list integration to import host tags before creating assignment or remediation task rules",
+			"Run the Qualys Host List integration to import host tags before creating assignment or remediation task rules",
 			"Deactivate NVD integrations permanently because host tags replace all CVE-based prioritization logic",
 			"Convert host tags into HR department codes before any vulnerable items can reference CMDB CIs",
 			"Install Field Service Management because host tags are available only on work order task records"
 		],
 		"correctIndex": 0,
-		"explanation": "Scanner integration setup checklists require asset or host tag imports before creating Vulnerability Response assignment or remediation rules that depend on tag values.",
+		"explanation": "Qualys prerequisites require the Qualys Host List integration to import host tags before creating assignment or remediation task rules that filter on those tags.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/install-and-configure-r7.html"
+			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/qualys-prerequisites.html",
+			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/qualys-config-in-SA.html"
 		],
 		"domain": "Getting Data into Vulnerability Response"
 	},
@@ -27618,7 +27620,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 0,
 		"explanation": "Vulnerability Response synchronizes remediation task and vulnerable item states through roll-up and roll-down logic across the remediation lifecycle.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/vulnerability-response/remediation-workflows.html"
+			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/vulnerabillity-states.html"
 		],
 		"domain": "Tools to Manage Vulnerability Response"
 	},
@@ -27635,7 +27637,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 0,
 		"explanation": "The IT Remediation Workspace lets remediation owners create change requests linked to remediation tasks for governed patch deployment.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/vulnerability-response/it-remediation-workspace.html"
+			"https://www.servicenow.com/docs/r/security-management/it-remediation-workspace/it-remediation-workspace-landing-page.html"
 		],
 		"domain": "Tools to Manage Vulnerability Response"
 	},
@@ -27652,7 +27654,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 0,
 		"explanation": "Vulnerability Response supports third-party security defect workflows so teams coordinate vendor remediation with tracked ownership and status.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/vulnerability-response/remediation-workflows.html"
+			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/vulnerabillity-states.html"
 		],
 		"domain": "Tools to Manage Vulnerability Response"
 	},
@@ -27669,7 +27671,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 0,
 		"explanation": "Assignment rules evaluate vulnerable item attributes—including classification values set earlier—to route work to the correct remediation group.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/vulnerability-response/assignment-rules.html"
+			"https://www.servicenow.com/docs/r/security-management/sem-configure-assignment-rules.html"
 		],
 		"domain": "Tools to Manage Vulnerability Response"
 	},
@@ -27686,7 +27688,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 3,
 		"explanation": "Remediation task rules create actionable task groupings so teams remediate related findings together using consistent ownership and fix patterns.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/vulnerability-response/remediation-task-rules.html"
+			"https://www.servicenow.com/docs/r/security-management/sem-configure-remediation-task-rules.html"
 		],
 		"domain": "Tools to Manage Vulnerability Response"
 	},
@@ -27703,7 +27705,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 0,
 		"explanation": "Remediation target rules derive due dates from vulnerability lifecycle dates so SLA targets align with when exposure was identified or updated.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/vulnerability-response/remediation-target-rules.html"
+			"https://www.servicenow.com/docs/r/security-management/sem-configure-remediation-target-rules.html"
 		],
 		"domain": "Tools to Manage Vulnerability Response"
 	},
@@ -27720,7 +27722,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 0,
 		"explanation": "Match First execution stops at the first satisfied rule, giving administrators explicit control over which target date logic wins.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/vulnerability-response/remediation-target-rules.html"
+			"https://www.servicenow.com/docs/r/security-management/sem-configure-remediation-target-rules.html"
 		],
 		"domain": "Tools to Manage Vulnerability Response"
 	},
@@ -27737,7 +27739,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 0,
 		"explanation": "The Vulnerability Manager Workspace targets vulnerability program owners with strategic monitoring and prioritization capabilities.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/vulnerability-response/vulnerability-manager-workspace.html"
+			"https://www.servicenow.com/docs/r/security-management/vulnerability-manager-workspace/vulnerability-manager-workspace-landing-page.html"
 		],
 		"domain": "Tools to Manage Vulnerability Response"
 	},
@@ -27754,7 +27756,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 2,
 		"explanation": "The sn_vul.remediation_owner persona role grants users access to remediation tasks and vulnerable items assigned to them or their groups in the IT Remediation Workspace.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/vulnerability-response/vr-persona-overview.html"
+			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/vr-persona-overview.html"
 		],
 		"domain": "Tools to Manage Vulnerability Response"
 	},
@@ -27771,7 +27773,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 0,
 		"explanation": "The Vulnerability Manager Workspace surfaces remediation effort views so managers monitor backlog concentration and owner group workload.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/vulnerability-manager-workspace.html"
+			"https://www.servicenow.com/docs/r/security-management/vulnerability-manager-workspace/vulnerability-manager-workspace-landing-page.html"
 		],
 		"domain": "Tools to Manage Vulnerability Response"
 	},
@@ -27793,8 +27795,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"questionType": "multi",
 		"explanation": "Classification rules categorize intake data and assignment rules route vulnerable items to remediation groups; password and LDAP jobs are unrelated platform functions.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/vulnerability-response/classification-rules.html",
-			"https://www.servicenow.com/docs/r/vulnerability-response/assignment-rules.html"
+			"https://www.servicenow.com/docs/r/security-management/sem-configure-classification-rules.html",
+			"https://www.servicenow.com/docs/r/security-management/sem-configure-assignment-rules.html"
 		],
 		"domain": "Tools to Manage Vulnerability Response"
 	},
@@ -27811,7 +27813,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 0,
 		"explanation": "When classification data changes, reapply assignment rules realigns ownership on open items without waiting for new scanner imports.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/vulnerability-response/assignment-rules.html"
+			"https://www.servicenow.com/docs/r/security-management/sem-configure-assignment-rules.html"
 		],
 		"domain": "Tools to Manage Vulnerability Response"
 	},
@@ -27828,7 +27830,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 0,
 		"explanation": "Cohesive task groups let one team execute a single remediation pattern across many related vulnerable items.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/vulnerability-response/remediation-task-rules.html"
+			"https://www.servicenow.com/docs/r/security-management/sem-configure-remediation-task-rules.html"
 		],
 		"domain": "Tools to Manage Vulnerability Response"
 	},
@@ -27845,7 +27847,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 1,
 		"explanation": "Match First prevents lower-priority rules from overriding a higher-priority grouping decision on the same record.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/vulnerability-response/remediation-task-rules.html"
+			"https://www.servicenow.com/docs/r/security-management/sem-configure-remediation-task-rules.html"
 		],
 		"domain": "Tools to Manage Vulnerability Response"
 	},
@@ -27857,7 +27859,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"choices": [
 			"Request a vulnerability exception with approver sign-off and expiration tracking",
 			"Create a change request linked to the remediation task for governed patch deployment",
-			"Mark a finding as false positive with a documented close reason on the record",
+			"Request a false positive with a documented reason on the vulnerable item or remediation task",
 			"Configure NVD feed synchronization schedules and MID Server credential stores"
 		],
 		"correctIndex": 0,
@@ -27866,26 +27868,29 @@ export const DEV_PRACTICE_QUESTIONS = [
 			1,
 			2
 		],
-		"explanation": "Remediation owners request exceptions, create linked change requests, and disposition false positives from the IT Remediation Workspace; NVD configuration is an admin function.",
+		"explanation": "Remediation owners request exceptions, create linked change requests, and request false positives from the IT Remediation Workspace; NVD configuration remains an admin function.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/vulnerability-response/it-remediation-workspace.html"
+			"https://www.servicenow.com/docs/r/security-management/it-remediation-workspace/it-remediation-workspace-landing-page.html",
+			"https://www.servicenow.com/docs/r/security-management/it-remediation-workspace/vr-ws-request-exception.html",
+			"https://www.servicenow.com/docs/r/security-management/it-remediation-workspace/vr-ws-mark-fp.html"
 		],
 		"domain": "Tools to Manage Vulnerability Response"
 	},
 	{
 		"trackCode": "CIS-VR",
 		"order": 54,
-		"prompt": "Which system property must be enabled before administrators can rerun remediation task rules on existing records?",
+		"prompt": "An administrator changed a remediation task rule and needs existing Open remediation tasks rebuilt to match. Which documented action applies the change?",
 		"choices": [
-			"sn_vul.disable_cmdb_correlation set to true during every scanner import",
-			"com.snc.change_management.auto_close enabled on production change records",
-			"glide.ui.view.layout set to classic rendering for all security workspaces",
-			"sn_sec_rem.rerun_task_rules set to true"
+			"Enable sn_sec_rem.rerun_task_rules before any rule can evaluate new scanner findings",
+			"Disable all assignment rules so remediation tasks regenerate without grouping filters",
+			"Clear the CMDB class cache so vulnerable items lose their configuration item references",
+			"Use the Reapply action on the remediation task rule to delete and recreate Open tasks for that rule"
 		],
 		"correctIndex": 3,
-		"explanation": "The sn_sec_rem.rerun_task_rules property must be active before assignment and remediation task rules can be reapplied on existing vulnerable items.",
+		"explanation": "Docs describe Reapply on the remediation task rule page: it deletes and recreates Open remediation tasks created by that rule. There is no documented sn_sec_rem.rerun_task_rules property for this behavior.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/vulnerability-response/remediation-task-rules.html"
+			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/vulnerability-groups.html",
+			"https://www.servicenow.com/docs/r/security-management/sem-configure-remediation-task-rules.html"
 		],
 		"domain": "Tools to Manage Vulnerability Response"
 	},
@@ -27919,7 +27924,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 1,
 		"explanation": "Classification rules run at ingestion to categorize findings so downstream assignment and remediation configurations use stable field values.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/vulnerability-response/classification-rules.html"
+			"https://www.servicenow.com/docs/r/security-management/sem-configure-classification-rules.html"
 		],
 		"domain": "Automating Vulnerability Response"
 	},
@@ -27936,24 +27941,24 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 0,
 		"explanation": "Return status from patch orchestration tools keeps vulnerability records accurate and supports automated close-out after verified remediation.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/vulnerability-response/remediation-workflows.html"
+			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/vulnerabillity-states.html"
 		],
 		"domain": "Automating Vulnerability Response"
 	},
 	{
 		"trackCode": "CIS-VR",
 		"order": 58,
-		"prompt": "What happens when a vulnerability exception request nears its expiration date in VR?",
+		"prompt": "What happens when an approved vulnerability exception request reaches its expiration date in VR?",
 		"choices": [
 			"All remediation tasks close as false positives regardless of actual exposure status",
 			"The exception converts to a permanent approved state without further governance review",
 			"The system permanently deletes all related vulnerable items from the production database",
-			"A review workflow triggers revalidation, remediation planning, or closure of accepted risk"
+			"Impacted vulnerable items or remediation tasks revert to the Open state for renewed remediation"
 		],
 		"correctIndex": 3,
-		"explanation": "Expiring exceptions must be reassessed so accepted risk does not continue without accountable review and updated remediation plans.",
+		"explanation": "When an exception expires, the impacted VI or remediation task reverts to Open so accepted risk cannot continue without renewed remediation or a new exception.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/vulnerability-response/vulnerability-exceptions.html"
+			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/vr-exception-management.html"
 		],
 		"domain": "Automating Vulnerability Response"
 	},
@@ -27970,7 +27975,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 0,
 		"explanation": "Exception rules automate deferral for known accepted-risk scenarios, reducing repetitive manual exception submissions on intake.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/vulnerability-response/exception-rules.html"
+			"https://www.servicenow.com/docs/r/security-management/sem-exception-rules-overview.html"
 		],
 		"domain": "Automating Vulnerability Response"
 	},
@@ -27987,7 +27992,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 0,
 		"explanation": "Verified remediation should close vulnerable items in a resolved state that documents how exposure was eliminated.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/vulnerability-response/close-out-remediation.html"
+			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/vulnerabillity-states.html"
 		],
 		"domain": "Automating Vulnerability Response"
 	},
@@ -28004,7 +28009,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 2,
 		"explanation": "Deferred state preserves visibility of accepted risk while maintaining traceability to the governing exception record.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/vulnerability-response/vulnerability-exceptions.html"
+			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/vr-exception-management.html"
 		],
 		"domain": "Automating Vulnerability Response"
 	},
@@ -28021,7 +28026,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 0,
 		"explanation": "Documented close reasons explain why findings were dismissed and support later reassessment if conditions change.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/vulnerability-response/false-positive-management.html"
+			"https://www.servicenow.com/docs/r/security-management/it-remediation-workspace/vr-ws-mark-fp.html"
 		],
 		"domain": "Automating Vulnerability Response"
 	},
@@ -28044,8 +28049,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"questionType": "multi",
 		"explanation": "Classification, assignment, and remediation task rules automate categorization, routing, and grouping; spreadsheet export is a manual workaround.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/vulnerability-response/classification-rules.html",
-			"https://www.servicenow.com/docs/r/vulnerability-response/remediation-task-rules.html"
+			"https://www.servicenow.com/docs/r/security-management/sem-configure-classification-rules.html",
+			"https://www.servicenow.com/docs/r/security-management/sem-configure-remediation-task-rules.html"
 		],
 		"domain": "Automating Vulnerability Response"
 	},
@@ -28062,7 +28067,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 0,
 		"explanation": "Cancelling stale approvals keeps vulnerable item state aligned with the remediation task disposition and prevents orphaned review work.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/vulnerability-response/false-positive-management.html"
+			"https://www.servicenow.com/docs/r/security-management/it-remediation-workspace/vr-ws-mark-fp.html"
 		],
 		"domain": "Automating Vulnerability Response"
 	},
@@ -28079,7 +28084,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 0,
 		"explanation": "Bidirectional integrations return patch and verification status from orchestration tools so VR records reflect actual remediation outcomes.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/security-management/security-operations/c_BestPractisesIntegrations.html"
+			"https://www.servicenow.com/docs/r/security-management/c_BestPractisesIntegrations.html"
 		],
 		"domain": "Automating Vulnerability Response"
 	},
@@ -28096,7 +28101,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 0,
 		"explanation": "Time-bounded exceptions with review cadence ensure leadership reassesses risk instead of silently extending exposure.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/vulnerability-response/vulnerability-exceptions.html"
+			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/vr-exception-management.html"
 		],
 		"domain": "Automating Vulnerability Response"
 	},
@@ -28130,7 +28135,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 0,
 		"explanation": "State change approvals enforce governance checkpoints before disposition changes take effect on vulnerable items.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/vulnerability-response/vulnerability-exceptions.html"
+			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/vr-exception-management.html"
 		],
 		"domain": "Automating Vulnerability Response"
 	},
@@ -28147,7 +28152,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 0,
 		"explanation": "Effective automation reduces handoffs and keeps newly imported findings progressing through governed workflows.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/vulnerability-response/remediation-workflows.html"
+			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/vulnerabillity-states.html"
 		],
 		"domain": "Automating Vulnerability Response"
 	},
@@ -28164,7 +28169,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 1,
 		"explanation": "VR overview dashboards surface severity distribution and aging so managers can spot backlog concentration and SLA risk.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/vulnerability-response/vr-dashboards.html"
+			"https://www.servicenow.com/docs/r/security-management/vulnerability-manager-workspace/vr-ws-dashboards.html"
 		],
 		"domain": "VR Dashboards and Reports"
 	},
@@ -28181,7 +28186,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 0,
 		"explanation": "Performance Analytics provides time-series visibility into remediation velocity and policy adherence for program tuning.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/vulnerability-response/vr-performance-analytics.html"
+			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/vulnerability-mgmnt-pa-dashboard.html"
 		],
 		"domain": "VR Dashboards and Reports"
 	},
@@ -28198,7 +28203,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 3,
 		"explanation": "Service-level vulnerability reporting shows where risk concentrates and which owner groups need escalation support.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/vulnerability-response/vr-reporting.html"
+			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/vulnerability-mgmnt-pa-dashboard.html"
 		],
 		"domain": "VR Dashboards and Reports"
 	},
@@ -28220,7 +28225,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"questionType": "multi",
 		"explanation": "Executive consumers need concise overview tiles and a small set of decisive health indicators rather than operational record-level detail.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/vulnerability-response/ciso-dashboards.html"
+			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/vulnerability-mgmnt-CISO-dashboard.html"
 		],
 		"domain": "VR Dashboards and Reports"
 	},
@@ -28237,7 +28242,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 0,
 		"explanation": "Time-based severity trends combined with closure velocity show whether remediation capacity is outpacing newly discovered critical risk.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/vulnerability-response/vr-dashboards.html"
+			"https://www.servicenow.com/docs/r/security-management/vulnerability-manager-workspace/vr-ws-dashboards.html"
 		],
 		"domain": "VR Dashboards and Reports"
 	},
