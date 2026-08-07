@@ -5678,34 +5678,34 @@ export const DEV_PRACTICE_QUESTIONS = [
 	{
 		"trackCode": "CIS-DISCO",
 		"order": 0,
-		"prompt": "During horizontal Discovery, a device matches a classification record but no discovery pattern is linked to that classification. What is the expected outcome?",
+		"prompt": "During horizontal Discovery, a device matches a classification that uses the Horizontal Pattern probe but no pattern is specified on that probe. What is the expected outcome?",
 		"choices": [
-			"Discovery fails for that device because the classification has no associated pattern",
-			"The device is automatically assigned to cmdb_ci_computer and skips all probe execution",
 			"An unknown CI is created and the schedule continues without any logged error message",
-			"Identification rules bypass the missing pattern and populate attributes from SNMP only"
+			"Identification rules bypass the missing pattern and populate attributes from SNMP only",
+			"Discovery stops after the Classification stage and does not run identification or exploration for that device",
+			"The device is automatically assigned to cmdb_ci_computer and skips all probe execution"
 		],
-		"correctIndex": 0,
-		"explanation": "Each classification must reference a discovery pattern; without that link, horizontal discovery cannot execute the collection logic needed to classify the device.",
+		"correctIndex": 2,
+		"explanation": "Docs state that using the Horizontal Pattern probe without a pattern specified causes discovery to stop after classification, so identification and exploration do not run for that device.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery-patterns-overview.html"
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/c-UsingPatternsForHorizontalDiscovery.html"
 		],
 		"domain": "Discovery Pattern Design"
 	},
 	{
 		"trackCode": "CIS-DISCO",
 		"order": 1,
-		"prompt": "A Discovery status log shows the error \"No credentials would authenticate\" during the Classification phase for several Linux hosts. What does this message indicate?",
+		"prompt": "An implementer finishes a new horizontal discovery pattern for a custom application class. What must be configured so Discovery launches that pattern after Classification?",
 		"choices": [
-			"The schedule excluded the subnet ranges where those Linux hosts are deployed",
-			"The classification record is missing a CI identifier mapping for the Linux server class",
-			"No configured credential could successfully authenticate to the target during Classification",
-			"The MID Server lost ECC queue connectivity and stopped processing probe responses"
+			"Enable Event Management correlation rules so alerts rewrite classification criteria automatically",
+			"Add the Horizontal Pattern probe to the classifier Triggers probes list and select the pattern in the Pattern column",
+			"Delete all legacy identification probes and rely on IRE alone to invent pattern steps at runtime",
+			"Store the pattern name only in a discovery schedule description field without updating classifiers"
 		],
-		"correctIndex": 2,
-		"explanation": "This error means Discovery attempted available credentials during Classification and none succeeded, so further pattern steps cannot run on those targets.",
+		"correctIndex": 1,
+		"explanation": "Horizontal pattern execution requires the Horizontal Pattern probe on the classifier with the intended pattern selected; schedule notes or unrelated event rules do not launch the pattern.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-operations-management/discovery/probes-and-sensors.html"
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/c-UsingPatternsForHorizontalDiscovery.html"
 		],
 		"domain": "Discovery Pattern Design"
 	},
@@ -5731,12 +5731,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 3,
 		"prompt": "A Tomcat process is detected on a Linux host during horizontal Discovery. The implementer must decide whether to create an application CI or only update the OS CI. Which pattern component makes that decision?",
 		"choices": [
-			"The Identification section evaluates collected signals to determine whether the pattern applies before deeper steps run",
 			"The schedule behavior setting assigns every open port to cmdb_ci_appl_tomcat without conditional checks",
 			"The ECC queue topic routes probe payloads directly into reconciliation without classification",
-			"The credential alias order determines which CI class is inserted regardless of process data"
+			"The credential alias order determines which CI class is inserted regardless of process data",
+			"The Identification section evaluates collected signals to determine whether the pattern applies before deeper steps run"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Identification sections contain conditional logic that determines if a device or workload matches the pattern before connection and extension steps execute.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery-patterns-overview.html"
@@ -5749,11 +5749,11 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "An implementer adds a Match/Parse Variable operation after an SSH command step in Pattern Designer. What is the primary purpose of that operation?",
 		"choices": [
 			"Import software entitlement records from a publisher CSV into the asset application",
-			"Extract structured values from command output and store them in pattern variables for later steps",
 			"Convert event management alert rules into discovery schedule definitions automatically",
-			"Assign incident priority based on the severity field returned by the remote command"
+			"Assign incident priority based on the severity field returned by the remote command",
+			"Extract structured values from command output and store them in pattern variables for later steps"
 		],
-		"correctIndex": 1,
+		"correctIndex": 3,
 		"explanation": "Match/Parse Variable steps parse command or probe output and populate pattern variables that downstream identification or connection steps can reference.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/discovery/create-a-discovery-pattern.html"
@@ -5765,12 +5765,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 5,
 		"prompt": "When should a Parse File operation be used in a horizontal discovery pattern?",
 		"choices": [
-			"To rotate Discovery credential passwords stored in the instance credential table",
 			"To rebuild MID Server cluster membership after a failover event completes",
-			"To read configuration or log file contents from a target host and extract attribute values",
-			"To generate executive dashboard PDFs summarizing CMDB completeness by business unit"
+			"To rotate Discovery credential passwords stored in the instance credential table",
+			"To generate executive dashboard PDFs summarizing CMDB completeness by business unit",
+			"To read configuration or log file contents from a target host and extract attribute values"
 		],
-		"correctIndex": 2,
+		"correctIndex": 3,
 		"explanation": "Parse File steps retrieve file content from targets—such as application config files—and extract structured data needed for identification or attribute population.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/discovery/create-a-discovery-pattern.html"
@@ -5782,9 +5782,9 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 6,
 		"prompt": "Regular expression operations in Pattern Designer are most commonly used to do what?",
 		"choices": [
-			"Calculate CMDB health scores from duplicate CI counts per reconciliation policy",
-			"Extract ports, paths, version tokens, or connection strings from unstructured text output",
 			"Assign discovery_admin roles to operators who edit horizontal pattern libraries",
+			"Extract ports, paths, version tokens, or connection strings from unstructured text output",
+			"Calculate CMDB health scores from duplicate CI counts per reconciliation policy",
 			"Generate machine learning labels for cloud tag-based service classification workflows"
 		],
 		"correctIndex": 1,
@@ -5799,12 +5799,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 7,
 		"prompt": "What is the purpose of Connection sections in a horizontal discovery pattern?",
 		"choices": [
-			"Set blackout windows that prevent schedules from running during maintenance periods",
-			"Map procurement purchase order lines to hardware asset records after receiving",
 			"Define how the pattern discovers relationships between CIs after identification succeeds",
-			"Configure ECC queue topics used when MID Servers report probe execution failures"
+			"Configure ECC queue topics used when MID Servers report probe execution failures",
+			"Map procurement purchase order lines to hardware asset records after receiving",
+			"Set blackout windows that prevent schedules from running during maintenance periods"
 		],
-		"correctIndex": 2,
+		"correctIndex": 0,
 		"explanation": "Connection sections contain steps that explore dependencies and create relationships between identified configuration items.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery-patterns-overview.html"
@@ -5817,11 +5817,11 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "In Pattern Designer, why are discovery patterns organized into sections with ordered steps?",
 		"choices": [
 			"To force every output into a single cmdb_ci record regardless of device type",
-			"To bypass authentication checks during SSH and WMI command execution",
+			"To structure collection logic so troubleshooting, reuse, and maintenance remain clear",
 			"To skip identification and reconciliation for performance-critical schedules",
-			"To structure collection logic so troubleshooting, reuse, and maintenance remain clear"
+			"To bypass authentication checks during SSH and WMI command execution"
 		],
-		"correctIndex": 3,
+		"correctIndex": 1,
 		"explanation": "Sections and sequenced steps organize discovery logic into readable, testable units that implementers can debug and evolve independently.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/discovery/create-a-discovery-pattern.html"
@@ -5833,12 +5833,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 9,
 		"prompt": "An operations team needs horizontal discovery to identify Apache Tomcat application CIs on Linux servers. Which pattern design approach is most appropriate?",
 		"choices": [
-			"Convert every Linux server CI to cmdb_ci_business_app before the next schedule run",
 			"Rely solely on port scanning without any pattern-based classification or exploration steps",
-			"Disable all identification rules globally so Tomcat CIs are created manually",
-			"Build or extend a horizontal pattern with identification logic keyed to Tomcat process or config signatures"
+			"Build or extend a horizontal pattern with identification logic keyed to Tomcat process or config signatures",
+			"Convert every Linux server CI to cmdb_ci_business_app before the next schedule run",
+			"Disable all identification rules globally so Tomcat CIs are created manually"
 		],
-		"correctIndex": 3,
+		"correctIndex": 1,
 		"explanation": "Application identification requires pattern logic—often process, port, or config checks—that matches Tomcat signatures and populates the correct CI class.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/discovery/c-UsingPatternsForHorizontalDiscovery.html"
@@ -5850,12 +5850,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 10,
 		"prompt": "How do horizontal discovery patterns differ from relying solely on legacy probe customizations?",
 		"choices": [
-			"Patterns provide modular, maintainable logic that is easier to test and govern over time",
-			"Patterns bypass the Identification and Reconciliation Engine for all CI classes",
 			"Patterns write only to asset tables and never update configuration item records",
-			"Patterns disable credential testing so MID Servers execute scans faster"
+			"Patterns disable credential testing so MID Servers execute scans faster",
+			"Patterns bypass the Identification and Reconciliation Engine for all CI classes",
+			"Patterns provide modular, maintainable logic that is easier to test and govern over time"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Horizontal patterns offer structured, reusable flows for interpreting discovery results compared with scattered probe script customizations.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/discovery/c-UsingPatternsForHorizontalDiscovery.html"
@@ -5868,9 +5868,9 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "Which pattern designer practice best supports reusable discovery logic across similar platforms?",
 		"choices": [
 			"Hardcode specific MID Server names in every step to keep routing deterministic",
-			"Remove conditional branches to increase execution speed under heavy load",
+			"Embed environment-specific hostnames directly in reusable production pattern steps",
 			"Compose shared sub-patterns with conditional paths for vendor or OS variants",
-			"Embed environment-specific hostnames directly in reusable production pattern steps"
+			"Remove conditional branches to increase execution speed under heavy load"
 		],
 		"correctIndex": 2,
 		"explanation": "Reusable sub-patterns and conditional flow reduce duplication and improve maintainability when the same logic applies across platform variants.",
@@ -5884,12 +5884,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 12,
 		"prompt": "Why is validating step output important when testing a pattern in Pattern Designer?",
 		"choices": [
-			"It disables relationship creation for low-confidence dependency mappings",
 			"It replaces credential validation with direct API impersonation on the target",
-			"It guarantees every CI update bypasses identification collision detection",
-			"It confirms each step returns expected data before downstream CMDB writes occur"
+			"It confirms each step returns expected data before downstream CMDB writes occur",
+			"It disables relationship creation for low-confidence dependency mappings",
+			"It guarantees every CI update bypasses identification collision detection"
 		],
-		"correctIndex": 3,
+		"correctIndex": 1,
 		"explanation": "Checking outputs at each step catches parsing or command issues before they propagate into incorrect CMDB attribute or relationship updates.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/discovery/create-a-discovery-pattern.html"
@@ -5902,11 +5902,11 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "A horizontal pattern completes identification but populates incorrect attribute values on Windows servers. What should be reviewed first?",
 		"choices": [
 			"Procurement reorder thresholds for spare parts in the hardware asset catalog",
-			"Pattern debug output, parse variable assignments, and WMI or command step results",
 			"Event connector deduplication rules that suppress monitoring alert ingestion",
+			"Pattern debug output, parse variable assignments, and WMI or command step results",
 			"Change advisory board templates used for standard infrastructure deployments"
 		],
-		"correctIndex": 1,
+		"correctIndex": 2,
 		"explanation": "Debug traces and step output reveal whether collection commands succeeded and whether parsing logic mapped values to the intended CI fields.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery-pattern-best-practices.html"
@@ -5918,12 +5918,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 14,
 		"prompt": "After ServiceNow publishes updated horizontal pattern library content, what action may be required in a customer instance?",
 		"choices": [
-			"Review and merge vendor pattern updates with custom copies while preserving local extensions",
 			"Convert every classification record to manual CI import without pattern references",
+			"Disable MID Server clustering to force single-node pattern execution everywhere",
 			"Delete all discovery schedules so patterns regenerate from event management rules",
-			"Disable MID Server clustering to force single-node pattern execution everywhere"
+			"Review and merge vendor pattern updates with custom copies while preserving local extensions"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Pattern library updates can overwrite or merge with instance patterns, so teams reconcile customizations and test behavior after content refresh.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/discovery/manage-discovery-pattern-versions.html"
@@ -5935,12 +5935,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 15,
 		"prompt": "WMI-based scripting steps in horizontal discovery patterns are commonly used to collect what from Windows hosts?",
 		"choices": [
-			"Running processes, services, and OS configuration attributes via Windows Management Instrumentation",
-			"OAuth tokens from Azure Active Directory for cloud tag synchronization workflows",
 			"SNMP trap definitions exported from third-party network monitoring appliances",
-			"Change calendar entries linked to maintenance windows in the ITSM application"
+			"Change calendar entries linked to maintenance windows in the ITSM application",
+			"Running processes, services, and OS configuration attributes via Windows Management Instrumentation",
+			"OAuth tokens from Azure Active Directory for cloud tag synchronization workflows"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "WMI steps query Windows hosts for process lists, service details, and other OS-level data used to identify applications and populate CI attributes.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/discovery/c-UsingPatternsForHorizontalDiscovery.html"
@@ -5952,12 +5952,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 16,
 		"prompt": "SSH-based pattern steps require which prerequisite before they can execute on a Linux target?",
 		"choices": [
+			"A tag-based mapping rule published to the cloud provider resource group",
 			"A valid SSH Discovery credential authorized to run the configured commands on the host",
 			"An active Event Management connector subscribed to the host syslog stream",
-			"A business service record in the Operational Status of Retired state",
-			"A tag-based mapping rule published to the cloud provider resource group"
+			"A business service record in the Operational Status of Retired state"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"explanation": "SSH steps depend on Discovery credentials that authenticate to the host and authorize execution of the remote commands defined in the pattern.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/discovery/probes-and-sensors.html"
@@ -5986,12 +5986,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 18,
 		"prompt": "When designing horizontal patterns, why should implementers use conditional steps for command output variation?",
 		"choices": [
-			"Conditional steps permanently disable pattern versioning across all MID Servers",
 			"Conditional branches handle platform or vendor differences without brittle single-path logic",
 			"Conditional paths force every device into cmdb_ci_computer regardless of scan results",
-			"Conditional logic removes the need for any credential testing before schedule runs"
+			"Conditional logic removes the need for any credential testing before schedule runs",
+			"Conditional steps permanently disable pattern versioning across all MID Servers"
 		],
-		"correctIndex": 1,
+		"correctIndex": 0,
 		"explanation": "Conditional and defensive pattern logic handles environment variation and reduces brittle discovery outcomes when command output differs across targets.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery-pattern-best-practices.html"
@@ -6004,9 +6004,9 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "What is a common cause of horizontal pattern fragility after platform upgrades?",
 		"choices": [
 			"Brittle custom parsing with limited validation around changing command output formats",
-			"Using out-of-box patterns with controlled configuration extensions only",
 			"Maintaining modular pattern segments with explicit error-handling paths",
-			"Executing pattern tests in lower tiers before production promotion"
+			"Executing pattern tests in lower tiers before production promotion",
+			"Using out-of-box patterns with controlled configuration extensions only"
 		],
 		"correctIndex": 0,
 		"explanation": "Highly fragile parsing logic can break when command output formats or dependencies change across environments and releases.",
@@ -6020,9 +6020,9 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 20,
 		"prompt": "Why should custom horizontal patterns be tested in a lower environment before broad production deployment?",
 		"choices": [
-			"Lower environments permanently disable production pattern rollback capabilities",
-			"Testing preloads all credential aliases for every network zone automatically",
 			"Sub-production tests remove the need for peer review documentation entirely",
+			"Testing preloads all credential aliases for every network zone automatically",
+			"Lower environments permanently disable production pattern rollback capabilities",
 			"Pre-production validation confirms data quality and runtime behavior before CMDB impact"
 		],
 		"correctIndex": 3,
@@ -6037,12 +6037,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 21,
 		"prompt": "Which governance action most improves long-term horizontal pattern quality in a Discovery program?",
 		"choices": [
-			"Permit emergency production edits without peer review or test evidence",
-			"Suppress execution logs globally to keep retention costs consistently low",
 			"Version pattern changes with documented ownership and test results attached",
-			"Delay all pattern maintenance until incidents force urgent correction"
+			"Delay all pattern maintenance until incidents force urgent correction",
+			"Suppress execution logs globally to keep retention costs consistently low",
+			"Permit emergency production edits without peer review or test evidence"
 		],
-		"correctIndex": 2,
+		"correctIndex": 0,
 		"explanation": "Versioned change control with test evidence supports safe evolution of discovery patterns and faster troubleshooting when issues arise.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/discovery/manage-discovery-pattern-versions.html"
@@ -6055,9 +6055,9 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "During horizontal discovery, what is the relationship between a classification record and its linked pattern?",
 		"choices": [
 			"The classification defines the device type match criteria and references the pattern that collects its details",
-			"The classification replaces probes entirely and stores all CMDB attributes without MID Server execution",
 			"The classification schedules port scans independently of any discovery behavior configuration",
-			"The classification maps procurement purchase orders to hardware asset lifecycle states"
+			"The classification maps procurement purchase orders to hardware asset lifecycle states",
+			"The classification replaces probes entirely and stores all CMDB attributes without MID Server execution"
 		],
 		"correctIndex": 0,
 		"explanation": "Classifications match discovered devices to CI types and point to the pattern that executes the collection logic for that class.",
@@ -6071,12 +6071,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 23,
 		"prompt": "How should an implementer troubleshoot inconsistent CI updates from a horizontal discovery pattern?",
 		"choices": [
-			"Convert the schedule to manual ad hoc mode permanently for every subnet in scope",
 			"Review pattern debug output, classification results, and probe or sensor logs for the failing targets",
-			"Disable identification and reconciliation globally until the pattern is rewritten",
-			"Delete all CIs in the affected class and wait for the next full schedule cycle"
+			"Convert the schedule to manual ad hoc mode permanently for every subnet in scope",
+			"Delete all CIs in the affected class and wait for the next full schedule cycle",
+			"Disable identification and reconciliation globally until the pattern is rewritten"
 		],
-		"correctIndex": 1,
+		"correctIndex": 0,
 		"explanation": "Pattern diagnostics combined with classification and probe logs reveal whether failures occur during matching, collection, parsing, or CMDB write steps.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery-pattern-best-practices.html"
@@ -6089,15 +6089,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"questionType": "multi",
 		"prompt": "Which two validations are recommended before promoting a custom horizontal discovery pattern to production? (Choose two.)",
 		"choices": [
-			"Debug-mode testing confirms identification steps produce expected CIs on a known target host",
-			"A peer review verifies credential references and parsing logic for fragile command output",
 			"All discovery schedules are disabled globally for thirty days during promotion",
+			"A peer review verifies credential references and parsing logic for fragile command output",
+			"Debug-mode testing confirms identification steps produce expected CIs on a known target host",
 			"Every business service record is converted to a manual CI relationship import"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"correctIndexes": [
-			0,
-			1
+			1,
+			2
 		],
 		"explanation": "Production promotion requires verified pattern output on representative targets and review of credentials and parsing logic to prevent CMDB quality regressions.",
 		"sourceUrls": [
@@ -6110,15 +6110,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 25,
 		"prompt": "When defining Discovery scope for a large enterprise network, why should administrators segment address space into explicit IP ranges?",
 		"choices": [
-			"Control discovery scope and reduce unnecessary probe traffic across wide address blocks",
-			"Force every endpoint into a single MID queue regardless of network segmentation design",
 			"Prevent ECC records from being created so queue tables remain nearly empty always",
-			"Bypass classification for unknown hosts until manual CI mapping is completed by operators"
+			"Bypass classification for unknown hosts until manual CI mapping is completed by operators",
+			"Force every endpoint into a single MID queue regardless of network segmentation design",
+			"Control discovery scope and reduce unnecessary probe traffic across wide address blocks"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Scoped IP range definitions limit where Discovery scans, improving performance and reducing network and credential noise.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery.html"
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/create-a-discovery-schedule.html"
 		],
 		"domain": "Discovery Configuration"
 	},
@@ -6128,14 +6128,14 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "What is the most important outcome of assigning a Discovery behavior to a specific IP range?",
 		"choices": [
 			"Automatically normalize CMDB classes by subnet with no reconciliation policy needed",
-			"Enable distinct scan settings—such as ports and frequency—that match each network segment",
+			"Turn off CI identification rules so each range can write records independently",
 			"Remove the need to manage credentials separately for protocol-specific discovery access",
-			"Turn off CI identification rules so each range can write records independently"
+			"Enable distinct scan settings—such as ports and frequency—that match each network segment"
 		],
-		"correctIndex": 1,
+		"correctIndex": 3,
 		"explanation": "Range-level behavior assignment allows scan strategy, frequency, and port choices to match each environment's requirements.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery.html"
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/create-a-discovery-schedule.html"
 		],
 		"domain": "Discovery Configuration"
 	},
@@ -6144,15 +6144,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 27,
 		"prompt": "A Discovery admin must scan corporate subnets but exclude partner-owned address space. Which configuration approach is best?",
 		"choices": [
-			"Scan all ranges first and filter unwanted partner hosts after CI creation completes",
 			"Define approved include ranges and explicit exclude ranges for prohibited partner subnets",
-			"Lower probe priority globally so partner addresses are naturally skipped during scans",
-			"Disable sensors for partner-owned devices while still scanning one broad network set"
+			"Disable sensors for partner-owned devices while still scanning one broad network set",
+			"Scan all ranges first and filter unwanted partner hosts after CI creation completes",
+			"Lower probe priority globally so partner addresses are naturally skipped during scans"
 		],
-		"correctIndex": 1,
+		"correctIndex": 0,
 		"explanation": "Include and exclude range controls let teams target only approved address space and avoid scanning prohibited segments.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery.html"
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/create-a-discovery-schedule.html"
 		],
 		"domain": "Discovery Configuration"
 	},
@@ -6162,14 +6162,14 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "Why should Discovery administrators deploy MID Servers in clusters for production environments?",
 		"choices": [
 			"Clusters provide failover and load distribution so discovery workloads remain resilient",
-			"Clusters eliminate the ECC queue by executing all probes directly on the instance server",
 			"Clusters replace credential aliases with a single shared root account for every protocol",
+			"Clusters eliminate the ECC queue by executing all probes directly on the instance server",
 			"Clusters force all schedules to run synchronously across every datacenter globally"
 		],
 		"correctIndex": 0,
 		"explanation": "MID Server clusters improve availability and throughput by distributing probe work and supporting failover when a node is unavailable.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery.html"
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/mid-server-for-discovery.html"
 		],
 		"domain": "Discovery Configuration"
 	},
@@ -6178,12 +6178,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 29,
 		"prompt": "In Discovery architecture, what is the ECC Queue's core role during a scheduled scan?",
 		"choices": [
-			"Carry probe requests to MID Servers and return results for instance-side sensor handling",
 			"Act as a fallback credential vault used when protocol authentication records are missing",
+			"Run schedule timing calculations independently from MID Server processing responsibilities",
 			"Store historical CMDB relationship snapshots for downstream impact analysis reporting",
-			"Run schedule timing calculations independently from MID Server processing responsibilities"
+			"Carry probe requests to MID Servers and return results for instance-side sensor handling"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "ECC Queue is the communication channel between the instance and MID Servers, carrying commands and returned payloads.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/discovery/probes-and-sensors.html"
@@ -6195,15 +6195,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 30,
 		"prompt": "A datacenter team needs nightly scans of three subnets but must avoid peak business hours on one production VLAN. How should the Discovery schedule be configured?",
 		"choices": [
+			"Route all schedules through a single MID Server cluster without separate timing or scope controls",
 			"Define scoped IP ranges, attach the correct behavior, and set run windows that match each segment's operational constraints",
 			"Run one global schedule at the highest frequency and rely on reconciliation to suppress off-hours CI updates",
-			"Disable identification during business hours so probes execute without writing CMDB records",
-			"Route all schedules through a single MID Server cluster without separate timing or scope controls"
+			"Disable identification during business hours so probes execute without writing CMDB records"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"explanation": "Schedules bind scope, targets or ranges, timing, and discovery behavior into an executable plan tailored to each network segment.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery.html"
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/create-a-discovery-schedule.html"
 		],
 		"domain": "Discovery Configuration"
 	},
@@ -6229,15 +6229,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 32,
 		"prompt": "Classification succeeds on a Windows server, but no application CIs appear after the run completes. Status shows Identification ran but Exploration was skipped. Why are all Discovery phases required?",
 		"choices": [
-			"Only Port Scanning and Classification are required; Identification and Exploration are optional optimizations for large subnets",
 			"Each phase builds on the prior step—port scan finds targets, classification determines type, identification matches or creates CIs, and exploration collects deeper attributes",
 			"Identification replaces Exploration whenever horizontal patterns are linked to classifications",
-			"Exploration can run before Classification when credentials are unavailable, so earlier phases are interchangeable"
+			"Exploration can run before Classification when credentials are unavailable, so earlier phases are interchangeable",
+			"Only Port Scanning and Classification are required; Identification and Exploration are optional optimizations for large subnets"
 		],
-		"correctIndex": 1,
+		"correctIndex": 0,
 		"explanation": "Discovery progresses through port scanning to find devices, classification to determine type, identification to create or match CIs, and exploration to gather deeper details.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery.html"
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/c-UsingPatternsForHorizontalDiscovery.html"
 		],
 		"domain": "Discovery Configuration"
 	},
@@ -6247,14 +6247,14 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "During a CIS-Discovery implementation, what role do Discovery credential records serve?",
 		"choices": [
 			"Map external event severities into incident priorities for connector ingestion",
-			"Assign discovered hardware to financial stockrooms based on lifecycle transitions",
 			"Provide protocol-specific authentication for probes and patterns accessing target systems",
-			"Replace MID Server validation checks by embedding readiness tests inside each credential"
+			"Replace MID Server validation checks by embedding readiness tests inside each credential",
+			"Assign discovered hardware to financial stockrooms based on lifecycle transitions"
 		],
-		"correctIndex": 2,
+		"correctIndex": 1,
 		"explanation": "Discovery credentials store authentication details needed for protocol access so probes and patterns can retrieve configuration from targets.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery.html"
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery-credentials.html"
 		],
 		"domain": "Discovery Configuration"
 	},
@@ -6263,15 +6263,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 34,
 		"prompt": "A team wants frequent cloud discovery but weekly on-premises scans. Which schedule design is best?",
 		"choices": [
+			"Disable schedule behaviors and execute all scans manually through ad hoc operator actions",
 			"Create separate schedules that match each environment's volatility and operational windows",
 			"Use a single global schedule running at the highest frequency for every infrastructure type",
-			"Trigger discovery only when event rules create incidents in the operations queue",
-			"Disable schedule behaviors and execute all scans manually through ad hoc operator actions"
+			"Trigger discovery only when event rules create incidents in the operations queue"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"explanation": "Different infrastructure domains often require different scan cadence and windows to balance CMDB freshness and production impact.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery.html"
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/create-a-discovery-schedule.html"
 		],
 		"domain": "Discovery Configuration"
 	},
@@ -6288,7 +6288,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 3,
 		"explanation": "Ordered credential execution improves efficiency and lowers failed authentication attempts during discovery runs.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery.html"
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery-credentials.html"
 		],
 		"domain": "Discovery Configuration"
 	},
@@ -6297,12 +6297,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 36,
 		"prompt": "A credential test succeeds for SSH but Linux devices still fail classification. What should be checked next?",
 		"choices": [
-			"Whether credential order, IP targeting, and pattern conditions match the failing devices",
 			"Whether procurement rules are creating cost center assignments for new server models",
 			"Whether depreciation classes were recalculated for asset records in the same subnet",
-			"Whether incident response workflows were triggered by event deduplication policy updates"
+			"Whether incident response workflows were triggered by event deduplication policy updates",
+			"Whether credential order, IP targeting, and pattern conditions match the failing devices"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Credential success alone is not enough; matching logic, range targeting, and pattern prerequisites must align with the discovery target profile.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/discovery/probes-and-sensors.html"
@@ -6315,11 +6315,11 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "During Discovery troubleshooting, subnet status stays in \"Scanning\" with no probes returning. Which record type should be reviewed first?",
 		"choices": [
 			"Asset inventory records to verify purchase status for scanned network endpoints",
-			"ECC queue records tied to the run for probe requests, responses, and processing outcomes",
 			"Table dictionary entries to inspect field label translations for discovery forms",
-			"Navigation module definitions to confirm role visibility for discovery administrators"
+			"Navigation module definitions to confirm role visibility for discovery administrators",
+			"ECC queue records tied to the run for probe requests, responses, and processing outcomes"
 		],
-		"correctIndex": 1,
+		"correctIndex": 3,
 		"explanation": "Probe activity is exchanged through ECC Queue, making it the quickest way to identify execution or communication failures during a run.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/discovery/probes-and-sensors.html"
@@ -6331,15 +6331,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 38,
 		"prompt": "A platform team runs containerized workloads on managed Kubernetes clusters in AWS. Which Discovery approach best supports hybrid inventory of nodes and workloads?",
 		"choices": [
-			"Run network port scans against pod IP ranges without cloud or credential integration",
 			"Disable horizontal patterns and rely on manual CI imports for every pod namespace",
-			"Scan only RFC1918 address space from a single on-premises MID Server without cloud API credentials",
-			"Combine cloud discovery schedules for the cluster API with horizontal patterns that classify container workloads on discovered nodes"
+			"Run network port scans against pod IP ranges without cloud or credential integration",
+			"Combine cloud discovery schedules for the cluster API with horizontal patterns that classify container workloads on discovered nodes",
+			"Scan only RFC1918 address space from a single on-premises MID Server without cloud API credentials"
 		],
-		"correctIndex": 3,
+		"correctIndex": 2,
 		"explanation": "Hybrid environments typically combine cloud API enumeration with pattern-based collection on discovered infrastructure to populate container-related CIs.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery.html"
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/cloud-operations-disco-create-schedule.html"
 		],
 		"domain": "Discovery Configuration"
 	},
@@ -6348,15 +6348,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 39,
 		"prompt": "A large subnet schedule consistently times out before completing exploration on all hosts. Which performance tuning action should be tried first?",
 		"choices": [
-			"Reduce scan scope with smaller IP ranges, tune behavior timeouts, and verify MID Server capacity for the workload",
-			"Disable identification so probes skip CMDB writes and finish faster regardless of data quality",
 			"Remove all credential records so classification completes without authentication delays",
+			"Disable identification so probes skip CMDB writes and finish faster regardless of data quality",
+			"Reduce scan scope with smaller IP ranges, tune behavior timeouts, and verify MID Server capacity for the workload",
 			"Increase probe parallelism globally without adjusting schedule scope or MID cluster sizing"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Performance issues are often resolved by scoping scans appropriately, tuning behavior settings, and ensuring adequate MID Server resources.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery.html"
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/create-a-discovery-schedule.html"
 		],
 		"domain": "Discovery Configuration"
 	},
@@ -6366,14 +6366,14 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "An admin must discover EC2 instances and Azure VMs using provider API credentials rather than subnet scanning alone. Which schedule type should be configured?",
 		"choices": [
 			"Cloud discovery schedule scoped to each provider account and selected regions",
-			"Network discovery schedule limited to RFC1918 ranges behind the corporate firewall",
+			"Configuration-only schedule that imports CMDB exports without live provider API calls",
 			"Service discovery schedule that maps catalog entry points without cloud enumeration",
-			"Configuration-only schedule that imports CMDB exports without live provider API calls"
+			"Network discovery schedule limited to RFC1918 ranges behind the corporate firewall"
 		],
 		"correctIndex": 0,
 		"explanation": "Cloud discovery schedules use provider API credentials to enumerate resources in configured accounts and regions.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery-status.html"
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/cloud-operations-disco-create-schedule.html"
 		],
 		"domain": "Discovery Configuration"
 	},
@@ -6382,12 +6382,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 41,
 		"prompt": "A customer needs to reuse the same login across multiple Windows discovery schedules. Which credential feature supports this?",
 		"choices": [
-			"Classification probe that embeds username tokens in pattern steps",
 			"Schedule behavior flag that disables authentication for trusted zones",
-			"Credential alias that maps one credential record to multiple schedules",
-			"Shared ECC queue topic bound to a single subnet range per alias"
+			"Shared ECC queue topic bound to a single subnet range per alias",
+			"Classification probe that embeds username tokens in pattern steps",
+			"Credential alias that maps one credential record to multiple schedules"
 		],
-		"correctIndex": 2,
+		"correctIndex": 3,
 		"explanation": "Credential aliases let one tested credential record serve multiple schedules without duplicating secret material.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery-credentials.html"
@@ -6400,8 +6400,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "An admin adds a /24 subnet to a discovery schedule but excludes a smaller range within it. What controls this behavior?",
 		"choices": [
 			"IP address range inclusion with excluded address ranges on the schedule",
-			"Reconciliation rule priority that suppresses CI creation in excluded zones",
 			"MID Server cluster failover order for overlapping network segments",
+			"Reconciliation rule priority that suppresses CI creation in excluded zones",
 			"Classification criteria that skip devices without open SNMP ports"
 		],
 		"correctIndex": 0,
@@ -6416,10 +6416,10 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 43,
 		"prompt": "After a pilot run, duplicate Linux server CIs appear because a second CI Identifier was added to cmdb_ci_linux_server during testing. What is the correct identification configuration per class?",
 		"choices": [
-			"Add one identifier per attribute returned by the classification probe to maximize match attempts",
 			"Remove all identifiers when horizontal patterns populate serial numbers automatically",
+			"Configure two identifiers minimum so reconciliation can compare competing serial numbers on every insert",
 			"Maintain one CI Identifier per CI Class so IRE matches discovery payloads to a single authoritative key set",
-			"Configure two identifiers minimum so reconciliation can compare competing serial numbers on every insert"
+			"Add one identifier per attribute returned by the classification probe to maximize match attempts"
 		],
 		"correctIndex": 2,
 		"explanation": "ServiceNow Discovery identification expects one CI Identifier per CI Class to match incoming data to existing records reliably.",
@@ -6433,12 +6433,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 44,
 		"prompt": "Classification fails with \"No credentials would authenticate\" during the Classification phase. What is the most likely cause?",
 		"choices": [
-			"No valid discovery credential is assigned or credentials fail authentication on the target",
-			"The horizontal pattern attached to the classification lacks a parse step",
 			"Identification rules are missing for the inferred CI class on the subnet",
-			"Reconciliation precedence favors a lower-trust import feed over discovery"
+			"Reconciliation precedence favors a lower-trust import feed over discovery",
+			"No valid discovery credential is assigned or credentials fail authentication on the target",
+			"The horizontal pattern attached to the classification lacks a parse step"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "This error indicates discovery could not authenticate with any configured credential during classification probing.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/discovery/troubleshoot-discovery-errors.html"
@@ -6450,12 +6450,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 45,
 		"prompt": "After the first production discovery wave, 180 new Linux server CIs appear but 60 match existing SCCM import records by serial number. Which CMDB process prevents duplicate records?",
 		"choices": [
+			"Schedule exclusion ranges suppress CI creation whenever an import feed updated the same subnet",
 			"Identification rules in IRE match discovery payloads to existing CIs using authoritative identifiers before inserting new records",
 			"Discovery behavior settings automatically merge duplicate rows without referencing identification keys",
-			"ECC queue processing deduplicates payloads before sensors write to the CMDB foundation tables",
-			"Schedule exclusion ranges suppress CI creation whenever an import feed updated the same subnet"
+			"ECC queue processing deduplicates payloads before sensors write to the CMDB foundation tables"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"explanation": "IRE identification rules locate existing CIs using configured identifiers so discovery updates matched records instead of creating duplicates.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-identification-and-reconciliation.html"
@@ -6468,8 +6468,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "CMDB Health shows completeness for cmdb_ci_server dropped 15% after enabling a new discovery schedule. What should the implementer review first?",
 		"choices": [
 			"Identification and reconciliation coverage for the classes the schedule populates, including required attributes and source precedence",
-			"MID Server OS patch levels across every cluster before reviewing any CMDB metrics",
 			"Service catalog item pricing for hardware requests triggered by the discovery run",
+			"MID Server OS patch levels across every cluster before reviewing any CMDB metrics",
 			"Navigation module visibility for the discovery_admin role on the instance"
 		],
 		"correctIndex": 0,
@@ -6484,10 +6484,10 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 47,
 		"prompt": "Discovery updates the OS version field on Linux servers, but a weekly import feed is authoritative for that attribute. How should the conflict be resolved?",
 		"choices": [
-			"Delete discovery-created CIs after each run and rely solely on the import feed for server inventory",
 			"Remove identification rules so both sources insert separate records for the same serial number",
+			"Disable exploration probes so discovery never writes attributes that imports also supply",
 			"Configure reconciliation rules with source precedence so the import feed wins the OS version attribute on matched CIs",
-			"Disable exploration probes so discovery never writes attributes that imports also supply"
+			"Delete discovery-created CIs after each run and rely solely on the import feed for server inventory"
 		],
 		"correctIndex": 2,
 		"explanation": "Reconciliation rules with source precedence control which feed owns each attribute when discovery and imports update the same CI.",
@@ -6501,12 +6501,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 48,
 		"prompt": "Discovery matched an existing server CI but also created a duplicate with a slightly different hostname after overlapping schedules scanned the same subnet. What is the first remediation step?",
 		"choices": [
-			"Verify identification rule keys cover hostname variants, then merge duplicates using deduplication tools",
-			"Delete both CIs and disable all discovery schedules until the next quarterly audit cycle",
 			"Convert both records to consumable asset models without reviewing identification configuration",
-			"Assign both servers to one schedule and remove reconciliation rules to simplify matching"
+			"Assign both servers to one schedule and remove reconciliation rules to simplify matching",
+			"Verify identification rule keys cover hostname variants, then merge duplicates using deduplication tools",
+			"Delete both CIs and disable all discovery schedules until the next quarterly audit cycle"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Duplicate remediation starts with identification coverage review, then deduplication merges records once authoritative keys are confirmed.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management/deduplicate-cis.html"
@@ -6519,15 +6519,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"questionType": "multi",
 		"prompt": "Stakeholders require sign-off after the first production discovery wave. Which CMDB Health metrics best validate data quality? (Choose two.)",
 		"choices": [
+			"Count of service catalog requests submitted by discovery operators",
 			"Completeness scores for in-scope CI classes populated by discovery",
 			"Duplicate CI counts trending down after identification tuning",
-			"MID Server memory utilization during off-peak maintenance windows",
-			"Count of service catalog requests submitted by discovery operators"
+			"MID Server memory utilization during off-peak maintenance windows"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"correctIndexes": [
-			0,
-			1
+			1,
+			2
 		],
 		"explanation": "Completeness and duplicate metrics directly reflect whether discovery identification and updates are producing trustworthy CMDB data.",
 		"sourceUrls": [
@@ -6540,12 +6540,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 50,
 		"prompt": "A horizontal pattern sensor returns probe data, but no cmdb_ci_linux_server record appears after the run. Which IRE troubleshooting path applies first?",
 		"choices": [
-			"Increase ICMP timeout values globally so port scanning completes before sensor execution",
 			"Review identification rule matches, sensor payload fields, and class-level identifier coverage for the target CI class",
 			"Remove credential aliases so classification skips authentication and writes directly to the CMDB",
-			"Disable reconciliation so every sensor payload inserts a new CI regardless of existing records"
+			"Disable reconciliation so every sensor payload inserts a new CI regardless of existing records",
+			"Increase ICMP timeout values globally so port scanning completes before sensor execution"
 		],
-		"correctIndex": 1,
+		"correctIndex": 0,
 		"explanation": "Missing CIs after successful probes usually indicate identification rule gaps, incomplete payload fields, or class identifier misconfiguration in IRE.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-identification-and-reconciliation.html"
@@ -6558,9 +6558,9 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "Before broad production schedules, the CMDB team validates foundation classes for servers, databases, and network gear. Why is this prerequisite important?",
 		"choices": [
 			"Discovery updates assume stable class hierarchy and attribute definitions exist before IRE writes begin",
-			"Foundation validation removes the requirement for credentials on Linux and Windows targets",
 			"Class validation automatically deploys MID Servers into every network segment in scope",
-			"CMDB foundation checks disable reconciliation for the first thirty discovery runs"
+			"CMDB foundation checks disable reconciliation for the first thirty discovery runs",
+			"Foundation validation removes the requirement for credentials on Linux and Windows targets"
 		],
 		"correctIndex": 0,
 		"explanation": "Discovery writes depend on well-defined CI classes and attributes; foundation validation prevents misclassified or incomplete updates.",
@@ -6574,12 +6574,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 52,
 		"prompt": "An implementer must extend identification keys for a custom application class before promoting a new horizontal pattern. Which workspace should govern that change?",
 		"choices": [
-			"Incident assignment rules that map discovered hosts to resolver groups by subnet",
 			"ECC queue topic configuration that embeds identifier keys inside probe payloads",
-			"Discovery Status form edits that override IRE rules for one schedule without class review",
-			"CI Class Manager with CMDB governance approval so class attributes and identifiers remain consistent"
+			"Incident assignment rules that map discovered hosts to resolver groups by subnet",
+			"CI Class Manager with CMDB governance approval so class attributes and identifiers remain consistent",
+			"Discovery Status form edits that override IRE rules for one schedule without class review"
 		],
-		"correctIndex": 3,
+		"correctIndex": 2,
 		"explanation": "CI Class Manager is the governance workspace for class schema, attributes, and identification configuration that Discovery relies on.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-class-manager.html"
@@ -6591,12 +6591,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 53,
 		"prompt": "Discovery sends a payload for a Windows server that shares a serial number with an existing CI created by an import feed. How does IRE handle the update?",
 		"choices": [
-			"Identification rules match the payload to the existing CI using configured identifiers instead of inserting a duplicate",
-			"Reconciliation creates a second CI so each data source maintains its own serial number record",
 			"Discovery bypasses identification whenever an import feed updated the same class within seven days",
+			"Reconciliation creates a second CI so each data source maintains its own serial number record",
+			"Identification rules match the payload to the existing CI using configured identifiers instead of inserting a duplicate",
 			"ECC queue processing converts the payload into an incident when a serial number collision is detected"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Identification rules define the keys and logic used to locate an existing CI or insert a new one from discovery data.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-identification-and-reconciliation.html"
@@ -6608,12 +6608,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 54,
 		"prompt": "Discovery and a nightly import both update the hostname field on the same database CI. Which configuration ensures consistent attribute stewardship?",
 		"choices": [
-			"Reconciliation rules with defined source precedence for the hostname attribute on the database class",
-			"Disabling exploration probes so only the import feed may write hostname values after discovery",
 			"Deleting the CI after each conflict and forcing discovery to insert a replacement record",
-			"Assigning every import row to cmdb_ci regardless of the inferred device type"
+			"Assigning every import row to cmdb_ci regardless of the inferred device type",
+			"Disabling exploration probes so only the import feed may write hostname values after discovery",
+			"Reconciliation rules with defined source precedence for the hostname attribute on the database class"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Reconciliation rules govern attribute-level merge behavior when multiple data sources update the same CI.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management/reconciliation-rules.html"
@@ -6626,9 +6626,9 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "Why configure data source precedence in reconciliation for Discovery feeds?",
 		"choices": [
 			"Higher-trust sources win attribute updates when multiple feeds supply the same field",
-			"Lower-numbered schedules always cancel probes from higher-numbered schedules",
+			"MID Server logs rotate faster when precedence tiers are defined per subnet",
 			"Discovery imports bypass identification whenever precedence ranks above manual entry",
-			"MID Server logs rotate faster when precedence tiers are defined per subnet"
+			"Lower-numbered schedules always cancel probes from higher-numbered schedules"
 		],
 		"correctIndex": 0,
 		"explanation": "Source precedence ensures authoritative feeds control attribute values when discovery and other sources update the same CI.",
@@ -6642,12 +6642,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 56,
 		"prompt": "Duplicate CIs appear after overlapping discovery schedules scan the same subnet. What CMDB control addresses this?",
 		"choices": [
-			"Assigning a unique MID Server to every CI class without shared credentials",
 			"Converting discovery schedules to cloud-only mode for hybrid environments",
-			"Identification rules that match on authoritative keys plus deduplication remediation",
-			"Disabling all sensors so probe data never writes to the CMDB foundation tables"
+			"Disabling all sensors so probe data never writes to the CMDB foundation tables",
+			"Assigning a unique MID Server to every CI class without shared credentials",
+			"Identification rules that match on authoritative keys plus deduplication remediation"
 		],
-		"correctIndex": 2,
+		"correctIndex": 3,
 		"explanation": "Strong identification keys prevent duplicates, and deduplication tools merge records when overlapping scans create matches on the same device.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-identification-and-reconciliation.html"
@@ -6660,14 +6660,14 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "Which IRE components govern how Discovery data updates the CMDB? (Choose two.)",
 		"choices": [
 			"Identification rules that locate or create CI records",
-			"Reconciliation rules that apply source precedence to attributes",
 			"Discovery behavior settings that tune ICMP timeout intervals",
+			"Reconciliation rules that apply source precedence to attributes",
 			"ECC queue topics that transport probe payloads to MID Servers"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			1
+			2
 		],
 		"questionType": "multi",
 		"explanation": "IRE uses identification rules to match or create CIs and reconciliation rules to merge attribute updates from discovery and other sources.",
@@ -6681,12 +6681,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 58,
 		"prompt": "CMDB Health shows rising duplicate counts and declining completeness for server classes after overlapping schedules run. Which dashboard signal best indicates Discovery data quality is degrading?",
 		"choices": [
-			"Duplicate CI counts increasing alongside falling completeness scores for in-scope discovered classes",
-			"MID Server JVM heap usage spikes during scheduled maintenance windows only",
 			"Higher volume of service catalog requests from operators reviewing discovery status",
-			"Expanding navigation module count for roles with discovery administration access"
+			"Expanding navigation module count for roles with discovery administration access",
+			"MID Server JVM heap usage spikes during scheduled maintenance windows only",
+			"Duplicate CI counts increasing alongside falling completeness scores for in-scope discovered classes"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "CMDB Health tracks duplicate rates and completeness, which directly reflect discovery identification and update quality.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management/cmdb-foundation-data.html"
@@ -6699,9 +6699,9 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "A discovery program needs to add a new identifier attribute to cmdb_ci_db_instance before the next release. Who should own that class change?",
 		"choices": [
 			"CMDB governance owners coordinating updates through CI Class Manager with appropriate change controls",
-			"Any operator with the itil role editing cmdb_ci records ad hoc in production without review",
+			"Discovery schedule owners acting independently without configuration management consultation",
 			"External monitoring vendors updating class schemas through email requests to the help desk",
-			"Discovery schedule owners acting independently without configuration management consultation"
+			"Any operator with the itil role editing cmdb_ci records ad hoc in production without review"
 		],
 		"correctIndex": 0,
 		"explanation": "Identification keys are class-level CMDB governance decisions managed through CI Class Manager with appropriate stewardship.",
@@ -6716,8 +6716,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "Network operations requests a pre-launch impact assessment before the first full production discovery window. Which analysis belongs in that assessment?",
 		"choices": [
 			"Expected probe volume, credential authentication attempts, firewall paths, and change windows for in-scope subnets",
-			"Finalized reconciliation precedence for every attribute on legacy imported CIs enterprise-wide",
 			"Complete service mapping dependency graphs for all business capabilities before any pilot scan",
+			"Finalized reconciliation precedence for every attribute on legacy imported CIs enterprise-wide",
 			"Annual hardware disposal workflows for assets not seen during exploration probes"
 		],
 		"correctIndex": 0,
@@ -6732,10 +6732,10 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 61,
 		"prompt": "The program sponsor asks for measurable KPIs before go-live. Which Discovery engagement metrics best track readiness and ongoing quality?",
 		"choices": [
-			"Count of horizontal patterns cloned in sub-production regardless of test evidence",
 			"Number of ECC messages processed when all schedules are disabled indefinitely",
+			"Total navigation modules visible to the discovery_admin role after each content upgrade",
 			"Discovery completeness by class, CI accuracy or duplicate rates, and schedule failure percentages against agreed targets",
-			"Total navigation modules visible to the discovery_admin role after each content upgrade"
+			"Count of horizontal patterns cloned in sub-production regardless of test evidence"
 		],
 		"correctIndex": 2,
 		"explanation": "Engagement KPIs focus on coverage completeness, CMDB accuracy, and reliable schedule execution against defined success criteria.",
@@ -6749,12 +6749,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 62,
 		"prompt": "Before enabling full enterprise scope, the team runs a limited pilot schedule. Which cutover validation step confirms readiness to expand?",
 		"choices": [
-			"Review pilot CMDB results, credential success rates, MID reachability, and stakeholder sign-off against documented success criteria",
-			"Retire all existing CIs so the expanded schedule starts from empty foundation tables",
 			"Disable identification globally until every business service map is finalized",
-			"Promote every custom pattern to production without sub-production debug testing"
+			"Promote every custom pattern to production without sub-production debug testing",
+			"Review pilot CMDB results, credential success rates, MID reachability, and stakeholder sign-off against documented success criteria",
+			"Retire all existing CIs so the expanded schedule starts from empty foundation tables"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Cutover validation compares pilot outcomes—data quality, connectivity, and credential results—to agreed criteria before expanding scope.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery-implementation-overview.html"
@@ -6766,12 +6766,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 63,
 		"prompt": "At project kickoff, what engagement readiness activity aligns stakeholders on Discovery scope?",
 		"choices": [
+			"Disabling MID Server validation to accelerate the first schedule execution",
 			"Workshops documenting in-scope networks, cloud accounts, and success criteria",
 			"Immediate production scanning of all RFC1918 ranges before credential testing",
-			"Retiring existing CMDB CIs so discovery starts from an empty foundation table",
-			"Disabling MID Server validation to accelerate the first schedule execution"
+			"Retiring existing CMDB CIs so discovery starts from an empty foundation table"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"explanation": "Stakeholder workshops establish agreed scope, ownership, and success criteria before configuration and scanning begin.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery-implementation-overview.html"
@@ -6800,12 +6800,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 65,
 		"prompt": "What MID Server requirement most often blocks Discovery engagement readiness sign-off?",
 		"choices": [
-			"A minimum of ten MID Servers installed even when only one subnet is in scope",
 			"Validated MID Servers placed in each zone with connectivity to targets and the instance",
 			"Disabled ECC queue processing so probes execute synchronously on the instance",
-			"MID Servers running on the same operating system version as every discovered host"
+			"MID Servers running on the same operating system version as every discovered host",
+			"A minimum of ten MID Servers installed even when only one subnet is in scope"
 		],
-		"correctIndex": 1,
+		"correctIndex": 0,
 		"explanation": "Engagement readiness requires validated MID Servers with network reachability to scoped targets and reliable instance communication.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/discovery/mid-server-for-discovery.html"
@@ -6818,9 +6818,9 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "Which dashboard helps assess Discovery readiness and ongoing execution health?",
 		"choices": [
 			"Discovery dashboard showing schedule status, failures, and coverage trends",
-			"Change management calendar displaying approved infrastructure freeze windows only",
 			"Employee onboarding portal tracking new hire provisioning task completion rates",
-			"Software normalization workspace comparing publisher detection rule effectiveness"
+			"Software normalization workspace comparing publisher detection rule effectiveness",
+			"Change management calendar displaying approved infrastructure freeze windows only"
 		],
 		"correctIndex": 0,
 		"explanation": "The Discovery dashboard surfaces schedule execution status, failures, and coverage metrics for readiness and operations reviews.",
@@ -6834,12 +6834,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 67,
 		"prompt": "When articulating Discovery business value to executives, which message resonates most?",
 		"choices": [
-			"Continuous scanning guarantees zero duplicate CIs without identification configuration",
 			"Discovery eliminates firewall reviews because MID Servers bypass network segmentation",
-			"Discovery replaces the need for any CMDB governance or data stewardship roles",
-			"Accurate CI inventory reduces incident resolution time and change risk across services"
+			"Continuous scanning guarantees zero duplicate CIs without identification configuration",
+			"Accurate CI inventory reduces incident resolution time and change risk across services",
+			"Discovery replaces the need for any CMDB governance or data stewardship roles"
 		],
-		"correctIndex": 3,
+		"correctIndex": 2,
 		"explanation": "Executives care about operational outcomes: trustworthy CI data improves incident response, change planning, and service reliability.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery-implementation-overview.html"
@@ -6851,12 +6851,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 68,
 		"prompt": "Network teams request a pre-scan checklist before opening firewall ports for MID Servers. Which items belong on that list?",
 		"choices": [
-			"Source MID IPs, destination subnets, required protocols, and return path verification",
-			"Finalized reconciliation precedence for every attribute on imported legacy CIs",
 			"Approved hardware disposal workflows for assets not seen during exploration",
+			"Finalized reconciliation precedence for every attribute on imported legacy CIs",
+			"Source MID IPs, destination subnets, required protocols, and return path verification",
 			"Service catalog item prices for each class of infrastructure the schedule may find"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Firewall change requests need MID source addresses, target subnets, protocol/port requirements, and verified bidirectional connectivity.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/discovery/mid-server-for-discovery.html"
@@ -6868,15 +6868,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 69,
 		"prompt": "Which artifacts demonstrate Discovery Engagement Readiness before go-live? (Choose two.)",
 		"choices": [
-			"Tested credentials and validated MID Server connectivity to scoped targets",
-			"Signed scope document with network, cloud, and operational ownership contacts",
 			"Production incident major incident process workflow diagrams for every team",
-			"Complete service mapping dependency graphs for all business capabilities globally"
+			"Complete service mapping dependency graphs for all business capabilities globally",
+			"Signed scope document with network, cloud, and operational ownership contacts",
+			"Tested credentials and validated MID Server connectivity to scoped targets"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"correctIndexes": [
-			0,
-			1
+			2,
+			3
 		],
 		"questionType": "multi",
 		"explanation": "Go-live readiness requires proven connectivity and credentials plus documented scope and ownership; unrelated process artifacts are not prerequisites.",
@@ -6890,12 +6890,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 70,
 		"prompt": "What measurable outcome indicates a Discovery engagement met its readiness objectives?",
 		"choices": [
-			"All horizontal patterns are cloned and customized before any out-of-box test",
 			"Discovery status records show zero ECC messages for every run indefinitely",
-			"Scheduled scans complete with expected CI coverage and acceptable failure rates",
-			"Every employee receives a CMDB training certificate within the first week"
+			"Every employee receives a CMDB training certificate within the first week",
+			"All horizontal patterns are cloned and customized before any out-of-box test",
+			"Scheduled scans complete with expected CI coverage and acceptable failure rates"
 		],
-		"correctIndex": 2,
+		"correctIndex": 3,
 		"explanation": "Successful engagements deliver reliable schedule execution, expected coverage, and manageable failure rates against defined success criteria.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery-dashboard.html"
@@ -6907,12 +6907,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 71,
 		"prompt": "How should change management integrate with Discovery rollout milestones?",
 		"choices": [
-			"Discovery configuration changes follow approved change records with rollback plans",
-			"Discovery bypasses change control because scans are read-only network operations",
 			"Only MID Server OS patches require changes; schedule edits are informal updates",
+			"Discovery bypasses change control because scans are read-only network operations",
+			"Discovery configuration changes follow approved change records with rollback plans",
 			"Production discovery schedules may not be modified until two years post go-live"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Discovery configuration affects production CMDB data and network access, so changes should follow governed change management with rollback planning.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery-implementation-overview.html"
@@ -6924,12 +6924,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 72,
 		"prompt": "What training should Discovery administrators receive before taking operational ownership?",
 		"choices": [
-			"Schedule management, credential testing, status troubleshooting, and IRE basics",
-			"Advanced service catalog designer scripting for hardware request fulfillment only",
 			"Vendor-specific ERP procurement workflows unrelated to configuration data",
-			"Event correlation pack authoring for third-party monitoring integrations exclusively"
+			"Event correlation pack authoring for third-party monitoring integrations exclusively",
+			"Advanced service catalog designer scripting for hardware request fulfillment only",
+			"Schedule management, credential testing, status troubleshooting, and IRE basics"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Discovery admins need hands-on skills for schedules, credentials, troubleshooting, and understanding how updates flow through IRE.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/discovery/set-up-discovery.html"
@@ -6942,9 +6942,9 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "After go-live, what support model sustains Discovery engagement outcomes?",
 		"choices": [
 			"Defined escalation paths among discovery, network, credential, and CMDB teams",
-			"A single shared admin account used by all teams for emergency production edits",
+			"Outsourcing every troubleshooting task to the platform vendor without internal runbooks",
 			"Suspension of all discovery schedules until monthly executive steering reviews conclude",
-			"Outsourcing every troubleshooting task to the platform vendor without internal runbooks"
+			"A single shared admin account used by all teams for emergency production edits"
 		],
 		"correctIndex": 0,
 		"explanation": "Sustained outcomes require clear escalation among teams that own discovery configuration, network access, credentials, and CMDB governance.",
@@ -6958,12 +6958,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 74,
 		"prompt": "Which continuous improvement practice keeps Discovery aligned with evolving infrastructure?",
 		"choices": [
-			"Annual deletion of all CIs followed by a single full rescan without validation",
 			"Removing MID Server health checks to reduce operational monitoring overhead",
-			"Periodic review of scope, credentials, IRE rules, and dashboard KPIs with stakeholders",
-			"Permanent freeze of discovery patterns to the versions active on day one"
+			"Permanent freeze of discovery patterns to the versions active on day one",
+			"Annual deletion of all CIs followed by a single full rescan without validation",
+			"Periodic review of scope, credentials, IRE rules, and dashboard KPIs with stakeholders"
 		],
-		"correctIndex": 2,
+		"correctIndex": 3,
 		"explanation": "Regular reviews of scope, credentials, IRE configuration, and KPIs keep discovery current as infrastructure and ownership change.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery-dashboard.html"
