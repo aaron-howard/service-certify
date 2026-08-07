@@ -1,0 +1,240 @@
+[
+	{
+		"trackCode": "CIS-DISCO",
+		"order": 0,
+		"prompt": "During horizontal Discovery, a device matches a classification that uses the Horizontal Pattern probe but no pattern is specified on that probe. What is the expected outcome?",
+		"choices": [
+			"Discovery stops after the Classification stage and does not run identification or exploration for that device",
+			"The device is automatically assigned to cmdb_ci_computer and skips all probe execution",
+			"An unknown CI is created and the schedule continues without any logged error message",
+			"Identification rules bypass the missing pattern and populate attributes from SNMP only"
+		],
+		"correctIndex": 0,
+		"explanation": "Docs state that using the Horizontal Pattern probe without a pattern specified causes discovery to stop after classification, so identification and exploration do not run for that device.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/c-UsingPatternsForHorizontalDiscovery.html"
+		],
+		"domain": "Discovery Pattern Design"
+	},
+	{
+		"trackCode": "CIS-DISCO",
+		"order": 1,
+		"prompt": "An implementer finishes a new horizontal discovery pattern for a custom application class. What must be configured so Discovery launches that pattern after Classification?",
+		"choices": [
+			"Add the Horizontal Pattern probe to the classifier Triggers probes list and select the pattern in the Pattern column",
+			"Delete all legacy identification probes and rely on IRE alone to invent pattern steps at runtime",
+			"Store the pattern name only in a discovery schedule description field without updating classifiers",
+			"Enable Event Management correlation rules so alerts rewrite classification criteria automatically"
+		],
+		"correctIndex": 0,
+		"explanation": "Horizontal pattern execution requires the Horizontal Pattern probe on the classifier with the intended pattern selected; schedule notes or unrelated event rules do not launch the pattern.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/c-UsingPatternsForHorizontalDiscovery.html"
+		],
+		"domain": "Discovery Pattern Design"
+	},
+	{
+		"trackCode": "CIS-DISCO",
+		"order": 25,
+		"prompt": "When defining Discovery scope for a large enterprise network, why should administrators segment address space into explicit IP ranges?",
+		"choices": [
+			"Control discovery scope and reduce unnecessary probe traffic across wide address blocks",
+			"Force every endpoint into a single MID queue regardless of network segmentation design",
+			"Prevent ECC records from being created so queue tables remain nearly empty always",
+			"Bypass classification for unknown hosts until manual CI mapping is completed by operators"
+		],
+		"correctIndex": 0,
+		"explanation": "Scoped IP range definitions limit where Discovery scans, improving performance and reducing network and credential noise.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/create-a-discovery-schedule.html"
+		],
+		"domain": "Discovery Configuration"
+	},
+	{
+		"trackCode": "CIS-DISCO",
+		"order": 26,
+		"prompt": "What is the most important outcome of assigning a Discovery behavior to a specific IP range?",
+		"choices": [
+			"Automatically normalize CMDB classes by subnet with no reconciliation policy needed",
+			"Enable distinct scan settings—such as ports and frequency—that match each network segment",
+			"Remove the need to manage credentials separately for protocol-specific discovery access",
+			"Turn off CI identification rules so each range can write records independently"
+		],
+		"correctIndex": 1,
+		"explanation": "Range-level behavior assignment allows scan strategy, frequency, and port choices to match each environment's requirements.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/create-a-discovery-schedule.html"
+		],
+		"domain": "Discovery Configuration"
+	},
+	{
+		"trackCode": "CIS-DISCO",
+		"order": 27,
+		"prompt": "A Discovery admin must scan corporate subnets but exclude partner-owned address space. Which configuration approach is best?",
+		"choices": [
+			"Scan all ranges first and filter unwanted partner hosts after CI creation completes",
+			"Define approved include ranges and explicit exclude ranges for prohibited partner subnets",
+			"Lower probe priority globally so partner addresses are naturally skipped during scans",
+			"Disable sensors for partner-owned devices while still scanning one broad network set"
+		],
+		"correctIndex": 1,
+		"explanation": "Include and exclude range controls let teams target only approved address space and avoid scanning prohibited segments.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/create-a-discovery-schedule.html"
+		],
+		"domain": "Discovery Configuration"
+	},
+	{
+		"trackCode": "CIS-DISCO",
+		"order": 28,
+		"prompt": "Why should Discovery administrators deploy MID Servers in clusters for production environments?",
+		"choices": [
+			"Clusters provide failover and load distribution so discovery workloads remain resilient",
+			"Clusters eliminate the ECC queue by executing all probes directly on the instance server",
+			"Clusters replace credential aliases with a single shared root account for every protocol",
+			"Clusters force all schedules to run synchronously across every datacenter globally"
+		],
+		"correctIndex": 0,
+		"explanation": "MID Server clusters improve availability and throughput by distributing probe work and supporting failover when a node is unavailable.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/mid-server-for-discovery.html"
+		],
+		"domain": "Discovery Configuration"
+	},
+	{
+		"trackCode": "CIS-DISCO",
+		"order": 30,
+		"prompt": "A datacenter team needs nightly scans of three subnets but must avoid peak business hours on one production VLAN. How should the Discovery schedule be configured?",
+		"choices": [
+			"Define scoped IP ranges, attach the correct behavior, and set run windows that match each segment's operational constraints",
+			"Run one global schedule at the highest frequency and rely on reconciliation to suppress off-hours CI updates",
+			"Disable identification during business hours so probes execute without writing CMDB records",
+			"Route all schedules through a single MID Server cluster without separate timing or scope controls"
+		],
+		"correctIndex": 0,
+		"explanation": "Schedules bind scope, targets or ranges, timing, and discovery behavior into an executable plan tailored to each network segment.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/create-a-discovery-schedule.html"
+		],
+		"domain": "Discovery Configuration"
+	},
+	{
+		"trackCode": "CIS-DISCO",
+		"order": 32,
+		"prompt": "Classification succeeds on a Windows server, but no application CIs appear after the run completes. Status shows Identification ran but Exploration was skipped. Why are all Discovery phases required?",
+		"choices": [
+			"Only Port Scanning and Classification are required; Identification and Exploration are optional optimizations for large subnets",
+			"Each phase builds on the prior step—port scan finds targets, classification determines type, identification matches or creates CIs, and exploration collects deeper attributes",
+			"Identification replaces Exploration whenever horizontal patterns are linked to classifications",
+			"Exploration can run before Classification when credentials are unavailable, so earlier phases are interchangeable"
+		],
+		"correctIndex": 1,
+		"explanation": "Discovery progresses through port scanning to find devices, classification to determine type, identification to create or match CIs, and exploration to gather deeper details.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/c-UsingPatternsForHorizontalDiscovery.html"
+		],
+		"domain": "Discovery Configuration"
+	},
+	{
+		"trackCode": "CIS-DISCO",
+		"order": 33,
+		"prompt": "During a CIS-Discovery implementation, what role do Discovery credential records serve?",
+		"choices": [
+			"Map external event severities into incident priorities for connector ingestion",
+			"Assign discovered hardware to financial stockrooms based on lifecycle transitions",
+			"Provide protocol-specific authentication for probes and patterns accessing target systems",
+			"Replace MID Server validation checks by embedding readiness tests inside each credential"
+		],
+		"correctIndex": 2,
+		"explanation": "Discovery credentials store authentication details needed for protocol access so probes and patterns can retrieve configuration from targets.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery-credentials.html"
+		],
+		"domain": "Discovery Configuration"
+	},
+	{
+		"trackCode": "CIS-DISCO",
+		"order": 34,
+		"prompt": "A team wants frequent cloud discovery but weekly on-premises scans. Which schedule design is best?",
+		"choices": [
+			"Create separate schedules that match each environment's volatility and operational windows",
+			"Use a single global schedule running at the highest frequency for every infrastructure type",
+			"Trigger discovery only when event rules create incidents in the operations queue",
+			"Disable schedule behaviors and execute all scans manually through ad hoc operator actions"
+		],
+		"correctIndex": 0,
+		"explanation": "Different infrastructure domains often require different scan cadence and windows to balance CMDB freshness and production impact.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/create-a-discovery-schedule.html"
+		],
+		"domain": "Discovery Configuration"
+	},
+	{
+		"trackCode": "CIS-DISCO",
+		"order": 35,
+		"prompt": "When multiple credentials are configured for a Discovery schedule, why is credential ordering important?",
+		"choices": [
+			"It prevents identification and reconciliation from creating duplicate configuration items",
+			"It ensures all probes are pinned to one MID regardless of subnet availability",
+			"It allows event connector integrations to reuse protocol accounts without mapping rules",
+			"It reduces failed logins and scan duration by trying the most likely credentials first"
+		],
+		"correctIndex": 3,
+		"explanation": "Ordered credential execution improves efficiency and lowers failed authentication attempts during discovery runs.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery-credentials.html"
+		],
+		"domain": "Discovery Configuration"
+	},
+	{
+		"trackCode": "CIS-DISCO",
+		"order": 38,
+		"prompt": "A platform team runs containerized workloads on managed Kubernetes clusters in AWS. Which Discovery approach best supports hybrid inventory of nodes and workloads?",
+		"choices": [
+			"Run network port scans against pod IP ranges without cloud or credential integration",
+			"Disable horizontal patterns and rely on manual CI imports for every pod namespace",
+			"Scan only RFC1918 address space from a single on-premises MID Server without cloud API credentials",
+			"Combine cloud discovery schedules for the cluster API with horizontal patterns that classify container workloads on discovered nodes"
+		],
+		"correctIndex": 3,
+		"explanation": "Hybrid environments typically combine cloud API enumeration with pattern-based collection on discovered infrastructure to populate container-related CIs.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/cloud-operations-disco-create-schedule.html"
+		],
+		"domain": "Discovery Configuration"
+	},
+	{
+		"trackCode": "CIS-DISCO",
+		"order": 39,
+		"prompt": "A large subnet schedule consistently times out before completing exploration on all hosts. Which performance tuning action should be tried first?",
+		"choices": [
+			"Reduce scan scope with smaller IP ranges, tune behavior timeouts, and verify MID Server capacity for the workload",
+			"Disable identification so probes skip CMDB writes and finish faster regardless of data quality",
+			"Remove all credential records so classification completes without authentication delays",
+			"Increase probe parallelism globally without adjusting schedule scope or MID cluster sizing"
+		],
+		"correctIndex": 0,
+		"explanation": "Performance issues are often resolved by scoping scans appropriately, tuning behavior settings, and ensuring adequate MID Server resources.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/create-a-discovery-schedule.html"
+		],
+		"domain": "Discovery Configuration"
+	},
+	{
+		"trackCode": "CIS-DISCO",
+		"order": 40,
+		"prompt": "An admin must discover EC2 instances and Azure VMs using provider API credentials rather than subnet scanning alone. Which schedule type should be configured?",
+		"choices": [
+			"Cloud discovery schedule scoped to each provider account and selected regions",
+			"Network discovery schedule limited to RFC1918 ranges behind the corporate firewall",
+			"Service discovery schedule that maps catalog entry points without cloud enumeration",
+			"Configuration-only schedule that imports CMDB exports without live provider API calls"
+		],
+		"correctIndex": 0,
+		"explanation": "Cloud discovery schedules use provider API credentials to enumerate resources in configured accounts and regions.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/cloud-operations-disco-create-schedule.html"
+		],
+		"domain": "Discovery Configuration"
+	}
+]
