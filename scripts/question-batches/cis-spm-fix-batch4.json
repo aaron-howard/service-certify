@@ -1,0 +1,80 @@
+[
+	{
+		"trackCode": "CIS-SPM",
+		"order": 0,
+		"questionType": "multi",
+		"prompt": "Which two plugins are included in the PPM Standard plugin bundle for Strategic Portfolio Management? (Choose two.)",
+		"choices": [
+			"Hardware Asset Management",
+			"Security Incident Response",
+			"Project Portfolio Suite",
+			"Financial Planning"
+		],
+		"correctIndex": 2,
+		"correctIndexes": [2, 3],
+		"explanation": "PPM Standard installs Project Portfolio Suite and Financial Planning (along with Rate Model and Ideation with PPM). Hardware Asset Management and Security Incident Response are not part of that bundle.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-business-management/ppm-collaboration/plugins-installed-with-PPS-finance.html",
+			"https://www.servicenow.com/docs/r/it-business-management/ppm-collaboration/t_ActivateProjectPortfolioSuiteWithFinancials.html"
+		],
+		"domain": "SPM Implementation Overview"
+	},
+	{
+		"trackCode": "CIS-SPM",
+		"order": 2,
+		"questionType": "multi",
+		"prompt": "On an expense line, which two Expense type values classify spend as capital or operating expenditure? (Choose two.)",
+		"choices": [
+			"Revenue",
+			"Depreciation",
+			"Capex",
+			"Opex"
+		],
+		"correctIndex": 2,
+		"correctIndexes": [2, 3],
+		"explanation": "Expense lines use Capex for capital expense and Opex for operating expense. Revenue and Depreciation are not Expense type values for that classification.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-business-management/project-management/expense-line-form.html"
+		],
+		"domain": "SPM Financials"
+	},
+	{
+		"trackCode": "CIS-SPM",
+		"order": 38,
+		"questionType": "multi",
+		"prompt": "Which two demand states indicate evaluation is underway before the demand can be Approved? (Choose two.)",
+		"choices": [
+			"Closed Complete",
+			"Cancelled",
+			"Screening",
+			"Qualified"
+		],
+		"correctIndex": 2,
+		"correctIndexes": [2, 3],
+		"explanation": "Screening initiates stakeholder assessments; Qualified means the demand is ready for review and can be Approved. Closed Complete and Cancelled are not demand lifecycle states for that mid-pipeline evaluation.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-business-management/demand-management/r_UsingDemandManagement.html",
+			"https://www.servicenow.com/docs/r/it-business-management/demand-management/exploring-demand-management.html"
+		],
+		"domain": "Idea and Demand"
+	},
+	{
+		"trackCode": "CIS-SPM",
+		"order": 89,
+		"questionType": "multi",
+		"prompt": "Which two ServiceNow applications does Strategic Planning Better Together documentation describe as integration partners? (Choose two.)",
+		"choices": [
+			"Vulnerability Response for grouping and remediating vulnerable items",
+			"Collaborative Work Management for planning and roadmapping Boards in a portfolio plan",
+			"Hardware Asset Management for disposal certificate generation only",
+			"Digital Portfolio Management for roadmap planning access for DPM managers"
+		],
+		"correctIndex": 1,
+		"correctIndexes": [1, 3],
+		"explanation": "Better Together docs describe integrations with Collaborative Work Management (CWM Boards as planning items) and Digital Portfolio Management (roadmap planning for DPM managers), among others such as Enterprise Architecture and Digital Product Release—not Vulnerability Response or Hardware Asset Management disposal workflows.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-business-management/scenario-planning-in-spw/better-together-with-other-apps-spw.html"
+		],
+		"domain": "SPM Better Together"
+	}
+]

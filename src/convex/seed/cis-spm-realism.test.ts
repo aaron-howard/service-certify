@@ -3,9 +3,11 @@ import { DEV_PRACTICE_QUESTIONS } from '../../convex/seed/devQuestionBank';
 import {
 	BANNED_CHOICE_PREFIXES,
 	BANNED_STEM_PREFIXES,
+	CIS_SPM_DOMAIN_TARGETS,
 	STEM_OPENER_CAP,
 	containsBannedChoicePrefix,
 	containsBannedStemPrefix,
+	domainForOrder,
 	fourWordOpener,
 	validateCisSpmTrack
 } from '$lib/catalog/cisSpmRealism';
@@ -29,6 +31,19 @@ describe('CIS-SPM v2 realism (full track)', () => {
 
 	it('passes shared realism validation', () => {
 		expect(validateCisSpmTrack(proofBatch)).toEqual([]);
+	});
+
+	it('tags domains to blueprint order quotas', () => {
+		const counts = Object.fromEntries(
+			Object.keys(CIS_SPM_DOMAIN_TARGETS).map((d) => [d, 0])
+		) as Record<string, number>;
+		for (const q of proofBatch) {
+			expect(q.domain).toBe(domainForOrder(q.order));
+			counts[q.domain!]++;
+		}
+		for (const [domain, target] of Object.entries(CIS_SPM_DOMAIN_TARGETS)) {
+			expect(counts[domain]).toBe(target);
+		}
 	});
 
 	it('does not use banned choice wrapper prefixes', () => {

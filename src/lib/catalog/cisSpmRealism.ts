@@ -16,6 +16,20 @@ export const CIS_SPM_DOMAIN_TARGETS = {
 	'SPM Better Together': 2
 } as const;
 
+export type CisSpmDomain = keyof typeof CIS_SPM_DOMAIN_TARGETS;
+
+export function domainForOrder(order: number): CisSpmDomain {
+	if (order <= 1) return 'SPM Implementation Overview';
+	if (order <= 10) return 'SPM Financials';
+	if (order <= 31) return 'Resource Management';
+	if (order <= 47) return 'Idea and Demand';
+	if (order <= 73) return 'Project Management';
+	if (order <= 78) return 'Timecard Management';
+	if (order <= 85) return 'Portfolio Planning Workspace';
+	if (order <= 87) return 'SPM Platform Analytics and Dashboards';
+	return 'SPM Better Together';
+}
+
 export const BANNED_CHOICE_PREFIXES = [
 	'Typically,',
 	'Operationally,',
@@ -53,6 +67,7 @@ export type CisSpmQuestionRow = {
 	prompt: string;
 	choices: string[];
 	sourceUrls: string[];
+	domain?: string;
 	questionType?: QuestionType;
 	correctIndexes?: number[];
 	correctIndex?: number;
@@ -121,12 +136,42 @@ export function validateCisSpmQuestion(q: CisSpmQuestionRow): string[] {
 	return issues;
 }
 
+export function validateCisSpmDomainTags(rows: CisSpmQuestionRow[]): string[] {
+	const issues: string[] = [];
+	const domainCounts = Object.fromEntries(
+		Object.keys(CIS_SPM_DOMAIN_TARGETS).map((d) => [d, 0])
+	) as Record<string, number>;
+
+	for (const q of rows) {
+		if (q.trackCode !== 'CIS-SPM') continue;
+		if (!q.domain) {
+			issues.push(`order ${q.order}: missing domain tag`);
+			continue;
+		}
+		const expected = domainForOrder(q.order);
+		if (q.domain !== expected) {
+			issues.push(`order ${q.order}: domain ${q.domain} does not match order quota ${expected}`);
+		}
+		domainCounts[q.domain] = (domainCounts[q.domain] ?? 0) + 1;
+	}
+
+	for (const [domain, target] of Object.entries(CIS_SPM_DOMAIN_TARGETS)) {
+		if (domainCounts[domain] !== target) {
+			issues.push(`domain ${domain}: expected ${target}, got ${domainCounts[domain] ?? 0}`);
+		}
+	}
+
+	return issues;
+}
+
 export function validateCisSpmTrack(rows: CisSpmQuestionRow[]): string[] {
 	const issues: string[] = [];
 
 	for (const q of rows) {
 		issues.push(...validateCisSpmQuestion(q));
 	}
+
+	issues.push(...validateCisSpmDomainTags(rows));
 
 	const openerCounts = new Map<string, number>();
 	for (const q of rows) {
