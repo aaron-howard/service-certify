@@ -9,6 +9,9 @@ const BOILERPLATE_SUFFIXES = [
 	' even when prerequisite data quality and ownership are not confirmed'
 ];
 
+/** Padding / batch-tracking tags left by older length-balance tooling. */
+const BOILERPLATE_TAG_RE = /\([A-Z][A-Z0-9-]*-\d+-w\d+\)/;
+
 const TRACKS = Object.keys(OFFICIAL_EXAM_QUESTION_COUNTS);
 
 function rowsFor(trackCode: string) {
@@ -26,6 +29,7 @@ describe('track question choice quality', () => {
 						for (const suffix of BOILERPLATE_SUFFIXES) {
 							expect(choice).not.toContain(suffix);
 						}
+						expect(choice).not.toMatch(BOILERPLATE_TAG_RE);
 					}
 				}
 			});

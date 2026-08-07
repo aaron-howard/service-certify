@@ -3,6 +3,7 @@ import { DEV_PRACTICE_QUESTIONS } from '../../convex/seed/devQuestionBank';
 import {
 	BANNED_CHOICE_PREFIXES,
 	BANNED_STEM_PREFIXES,
+	CSA_DOMAIN_TARGETS,
 	CSA_SCENARIO_MIN_RATIO,
 	STEM_OPENER_CAP,
 	containsBannedChoicePrefix,
@@ -68,6 +69,22 @@ describe('CSA v2 realism (full track)', () => {
 	it('uses mostly scenario-style admin application prompts', () => {
 		const scenarioCount = proofBatch.filter((q) => isScenarioStylePrompt(q.prompt)).length;
 		expect(scenarioCount / proofBatch.length).toBeGreaterThanOrEqual(CSA_SCENARIO_MIN_RATIO);
+	});
+
+	it('tags each question with a blueprint domain and hits bank quotas', () => {
+		const domainCounts = Object.fromEntries(
+			Object.keys(CSA_DOMAIN_TARGETS).map((d) => [d, 0])
+		) as Record<string, number>;
+
+		for (const q of proofBatch) {
+			expect(q.domain).toBeTruthy();
+			expect(q.domain! in CSA_DOMAIN_TARGETS).toBe(true);
+			domainCounts[q.domain!] = (domainCounts[q.domain!] ?? 0) + 1;
+		}
+
+		for (const [domain, target] of Object.entries(CSA_DOMAIN_TARGETS)) {
+			expect(domainCounts[domain]).toBe(target);
+		}
 	});
 
 	it('documents banned legacy patterns for future full-track rewrite', () => {

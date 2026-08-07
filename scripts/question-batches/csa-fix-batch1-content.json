@@ -1,0 +1,87 @@
+[
+	{
+		"trackCode": "CSA",
+		"order": 18,
+		"prompt": "A manager wants every service desk agent to see the same default columns on the incident list, while one senior agent keeps a personal layout. How do these two needs coexist?",
+		"choices": [
+			"An admin configures the table's default list layout, and individual personalizations override it only for the user who made them",
+			"Default layouts and personal layouts cannot exist on the same table",
+			"Ask the senior agent to change the system-wide list layout each morning for their shift",
+			"Personal layouts automatically become the default for the entire company"
+		],
+		"correctIndex": 0,
+		"explanation": "The admin-defined list layout is the default everyone inherits; a user's personalized column set is stored per user and affects only that user's view.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-user-interface/list-personalization.html"
+		],
+		"domain": "Configuring Applications for Collaboration"
+	},
+	{
+		"trackCode": "CSA",
+		"order": 34,
+		"prompt": "Leadership wants employees to reach the catalog, knowledge articles, and their open tickets from a single branded web experience without using the platform back end. What should be offered?",
+		"choices": [
+			"An employee-facing portal experience such as Employee Center configured with those self-service features",
+			"Grant every employee the admin role so they can open lists in the classic navigator",
+			"A shared login to an administrator account",
+			"A monthly PDF newsletter summarizing ticket statuses"
+		],
+		"correctIndex": 0,
+		"explanation": "Employee Center (or a Service Portal) delivers a consumer-style front end for catalog ordering, knowledge, and ticket tracking, keeping end users out of the platform UI.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-user-interface/employee-center.html"
+		],
+		"domain": "Self Service and Automation"
+	},
+	{
+		"trackCode": "CSA",
+		"order": 41,
+		"prompt": "The knowledge manager requires that draft articles be reviewed and approved before customers can find them in search. Which knowledge management capability enforces this?",
+		"choices": [
+			"A publish workflow on the knowledge base that routes articles through review before they reach the Published state",
+			"A rule deleting all draft articles after seven days",
+			"A list layout hiding the article body from readers",
+			"A reminder email asking authors to be careful when they click Publish"
+		],
+		"correctIndex": 0,
+		"explanation": "Each knowledge base specifies publish and retire workflows; a review-based publish workflow keeps articles in draft/review states until approvers move them to Published, when they become searchable by the audience.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/knowledge-management/knowledge-workflows.html"
+		],
+		"domain": "Self Service and Automation"
+	},
+	{
+		"trackCode": "CSA",
+		"order": 44,
+		"prompt": "Whenever an incident is created with Priority 1, the major incident manager must get an alert and a follow-up task must be generated automatically. How should an administrator implement this in Flow Designer?",
+		"choices": [
+			"Build a flow triggered on incident creation with a priority condition, then add actions to send the notification and create the task",
+			"Watch the incident list all day and react manually whenever a Priority 1 appears",
+			"Add a mandatory checkbox asking callers to notify the manager themselves",
+			"Lower the priority of new incidents so the Priority 1 condition never occurs"
+		],
+		"correctIndex": 0,
+		"explanation": "A record-triggered flow filtered to Priority 1 incidents can chain actions such as Send Email (or notification) and Create Record for the follow-up task, automating the whole response without code.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/build-workflows/flow-designer.html"
+		],
+		"domain": "Self Service and Automation"
+	},
+	{
+		"trackCode": "CSA",
+		"order": 72,
+		"prompt": "A table ACL must allow employees to create incidents but prevent them from deleting any incident record. How do you model that?",
+		"choices": [
+			"A create ACL that grants the employee role, without a delete ACL that grants that role",
+			"One ACL that grants admin to everyone",
+			"Remove the incident table from the dictionary",
+			"Load incidents only through Discovery"
+		],
+		"correctIndex": 0,
+		"explanation": "ACLs are evaluated per operation. Granting create for the employee role allows inserts; delete remains denied when those users do not pass any delete ACL conditions. There is no separate explicit-deny ACL type for classic table operations.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-security/access-control-rules.html"
+		],
+		"domain": "Database Management and Platform Security"
+	}
+]
