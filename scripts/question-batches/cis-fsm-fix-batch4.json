@@ -1,0 +1,92 @@
+[
+	{
+		"trackCode": "CIS-FSM",
+		"order": 12,
+		"prompt": "Dispatchers assign repair tasks to technicians who carry van stock and hold required certifications for covered locations. Which Field Service group type represents those field executors?",
+		"choices": [
+			"Change Advisory Board groups that approve production change requests",
+			"Work Groups that execute field tasks at covered locations with required skills and parts",
+			"Qualifier Groups that only review draft work orders before any agent is assigned",
+			"Problem Management coordinator groups that own root-cause analysis queues"
+		],
+		"correctIndex": 1,
+		"explanation": "Work Groups represent field agents who execute dispatched tasks at covered locations. Qualifier Groups and Dispatch Groups support qualification and scheduling, but Work Groups are the executors who perform the onsite work.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/field-service-management/workforce-optimization-for-field-service/setting-up-field-service-user-groups.html"
+		],
+		"domain": "Field Service Management Fundamentals"
+	},
+	{
+		"trackCode": "CIS-FSM",
+		"order": 7,
+		"questionType": "multi",
+		"prompt": "Operations wants the geolocation map to show field agents' latest positions for customer experience tracking. Which two items must be enabled? (Choose two.)",
+		"choices": [
+			"The Geolocation plugin activated on the instance",
+			"The sn_fsm_customer_ex.work.management.cx.share_agent_details property set to true",
+			"The Field technician feedback survey enabled for every closed work order",
+			"The Location history map report scheduled to run once per week only"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "Customer Experience tracking updates the geolocation map with each agent's latest location when Geolocation is active and sn_fsm_customer_ex.work.management.cx.share_agent_details is true. Surveys and weekly history reports are not the enablement pair for live agent location sharing.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/field-service-management/customer-experience-components.html",
+			"https://www.servicenow.com/docs/r/field-service-management/field-service-scheduling/dispatch-map-in-dispatcher-workspace.html"
+		],
+		"domain": "Field Service Management Fundamentals"
+	},
+	{
+		"trackCode": "CIS-FSM",
+		"order": 41,
+		"prompt": "Planners must document how initiators and qualifiers create work orders from templates during cutover. Which task documentation defines manual work order creation steps?",
+		"choices": [
+			"Configure SAML integration for external identity providers on the instance",
+			"Create work orders guidance under Work Order Management",
+			"Author discovery patterns for cloud middleware classification in datacenter ranges",
+			"Build employee onboarding flows in HR Service Delivery case management only"
+		],
+		"correctIndex": 1,
+		"explanation": "Work Order Management documentation covers creating work orders manually and from templates so planners can capture cutover procedures for initiators and qualifiers.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/field-service-management/work-order-management/t_CreateAWorkOrder.html"
+		],
+		"domain": "Implementing Field Service Processes"
+	},
+	{
+		"trackCode": "CIS-FSM",
+		"order": 61,
+		"prompt": "An administrator associates a survey question set with a work order task type. When does the agent see the questionnaire?",
+		"choices": [
+			"After every change request linked to the account reaches the Implement state",
+			"Immediately upon login to the service portal before requesting service",
+			"Only after the work order has been closed for at least seven days",
+			"When configured trigger conditions are met on the assigned task form"
+		],
+		"correctIndex": 3,
+		"explanation": "Questionnaires associated with work order task types appear when the configured trigger conditions on the task are met, so agents complete required questions during the work.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/field-service-management/work-order-management/create-questionnaire-for-work-order.html",
+			"https://www.servicenow.com/docs/r/field-service-management/smart-assessment-questionnaire.html"
+		],
+		"domain": "Implementing Field Service Processes"
+	},
+	{
+		"trackCode": "CIS-FSM",
+		"order": 80,
+		"prompt": "Major incidents require onsite technician response but ITSM agents create incidents first. How should FSM integrate with Incident Management for escalation?",
+		"choices": [
+			"Generate work orders from qualifying incidents so field tasks inherit context, assets, and customer location data",
+			"Close incidents automatically when any draft work order is saved in Awaiting Qualification state",
+			"Disable work order creation from incidents so dispatch uses only ad hoc spreadsheet uploads",
+			"Convert every incident to a catalog request item without linking field tasks or assets"
+		],
+		"correctIndex": 0,
+		"explanation": "Creating work orders from incidents connects ITSM response to field execution while preserving customer, asset, and location context.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/field-service-management/work-order-management/t_CreateAWorkOrder.html",
+			"https://www.servicenow.com/docs/r/field-service-management/Work-order-fsm.html"
+		],
+		"domain": "Implementing Related Processes"
+	}
+]
