@@ -273,16 +273,23 @@ function hashString(seed) {
 
 function readBank() {
 	const raw = fs.readFileSync(bankPath, 'utf8');
-	const match = raw.match(/DEV_PRACTICE_QUESTIONS[^=]*=\s*(\[[\s\S]*\]);/);
-	if (!match) throw new Error('Could not parse devQuestionBank.ts');
-	return JSON.parse(match[1]);
+	const marker = 'export const DEV_PRACTICE_QUESTIONS';
+	const markerAt = raw.indexOf(marker);
+	if (markerAt < 0) throw new Error('Could not find DEV_PRACTICE_QUESTIONS');
+	const start = raw.indexOf('[', markerAt);
+	const castEnd = raw.lastIndexOf('] as unknown as DevPracticeQuestionRow[]');
+	const plainEnd = raw.lastIndexOf('];');
+	const end = castEnd >= 0 ? castEnd : plainEnd;
+	if (start < 0 || end < 0) throw new Error('Could not parse devQuestionBank.ts');
+	return JSON.parse(raw.slice(start, end + 1));
 }
 
 function writeBank(all) {
-	const body = `import type { DevPracticeQuestionRow } from './devQuestionBank.types';
+	const body = `// @ts-nocheck — large generated bank exceeds TS2590 union limits
+import type { DevPracticeQuestionRow } from './devQuestionBank.types';
 
 /** Dev question bank; merge batches: \`node scripts/extract-questions-from-transcripts.mjs --merge-batches\` */
-export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = ${JSON.stringify(all, null, '\t')};
+export const DEV_PRACTICE_QUESTIONS = ${JSON.stringify(all, null, '\t')} as unknown as DevPracticeQuestionRow[];
 `;
 	fs.writeFileSync(bankPath, body, 'utf8');
 }
@@ -325,21 +332,16 @@ function pickClause(seed, usedNormalized) {
 function padChoice(original, seed, usedNormalized, targetLen) {
 	let text = original;
 	let attempt = 0;
-	while (text.length <= targetLen && attempt < CLAUSE_POOL.length) {
+	while (text.length <= targetLen && attempt < CLAUSE_POOL.length * 2) {
 		const clause = pickClause(`${seed}:${attempt}`, usedNormalized);
-		const candidate = text + clause;
+		const candidate = `${text}${clause}`;
 		const key = candidate.trim().toLowerCase();
 		if (!usedNormalized.has(key)) {
 			text = candidate;
 			usedNormalized.add(key);
-			break;
+			if (text.length > targetLen) break;
 		}
 		attempt++;
-	}
-	if (text.length <= targetLen) {
-		const filler = ` (${seed.replace(/[^a-z0-9]+/gi, '-').slice(0, 40)})`;
-		text += filler;
-		usedNormalized.add(text.trim().toLowerCase());
 	}
 	return text;
 }

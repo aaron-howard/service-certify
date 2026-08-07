@@ -134,9 +134,15 @@ function extractLargestJsonArrayFromJsonl(filePath) {
 function readExistingBank() {
 	if (!fs.existsSync(outPath)) return [];
 	const raw = fs.readFileSync(outPath, 'utf8');
-	const match = raw.match(/DEV_PRACTICE_QUESTIONS[^=]*=\s*(\[[\s\S]*\]);/);
-	if (!match) return [];
-	return JSON.parse(match[1]);
+	const marker = 'export const DEV_PRACTICE_QUESTIONS';
+	const markerAt = raw.indexOf(marker);
+	if (markerAt < 0) return [];
+	const start = raw.indexOf('[', markerAt);
+	const castEnd = raw.lastIndexOf('] as unknown as DevPracticeQuestionRow[]');
+	const plainEnd = raw.lastIndexOf('];');
+	const end = castEnd >= 0 ? castEnd : plainEnd;
+	if (start < 0 || end < 0) return [];
+	return JSON.parse(raw.slice(start, end + 1));
 }
 
 function loadJsonBatch(filePath) {

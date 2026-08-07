@@ -13,6 +13,10 @@ export const CSA_DOMAIN_TARGETS = {
 	'Data Migration and Integration': 12
 } as const;
 
+export type CsaDomain = keyof typeof CSA_DOMAIN_TARGETS;
+
+export const CSA_DOMAINS = Object.keys(CSA_DOMAIN_TARGETS) as CsaDomain[];
+
 export const BANNED_CHOICE_PREFIXES = [
 	'Typically,',
 	'Operationally,',
@@ -69,6 +73,7 @@ export type CsaQuestionRow = {
 	questionType?: QuestionType;
 	correctIndexes?: number[];
 	correctIndex?: number;
+	domain?: string;
 };
 
 export function fourWordOpener(text: string): string {
@@ -111,6 +116,12 @@ export function validateCsaQuestion(q: CsaQuestionRow): string[] {
 		issues.push(`order ${q.order}: missing sourceUrls`);
 	}
 
+	if (!q.domain) {
+		issues.push(`order ${q.order}: missing domain tag`);
+	} else if (!(q.domain in CSA_DOMAIN_TARGETS)) {
+		issues.push(`order ${q.order}: unknown domain ${q.domain}`);
+	}
+
 	if (q.questionType === 'multi') {
 		const idxs = q.correctIndexes ?? [];
 		if (idxs.length < 2) {
@@ -147,6 +158,32 @@ export function validateCsaScenarioRatio(rows: CsaQuestionRow[]): string[] {
 	return [];
 }
 
+export function validateCsaDomainQuotas(rows: CsaQuestionRow[]): string[] {
+	const csa = rows.filter((q) => q.trackCode === 'CSA');
+	if (csa.length === 0) return [];
+
+	const issues: string[] = [];
+	const domainCounts = Object.fromEntries(CSA_DOMAINS.map((d) => [d, 0])) as Record<
+		CsaDomain,
+		number
+	>;
+
+	for (const q of csa) {
+		if (q.domain && q.domain in CSA_DOMAIN_TARGETS) {
+			domainCounts[q.domain as CsaDomain]++;
+		}
+	}
+
+	for (const [domain, target] of Object.entries(CSA_DOMAIN_TARGETS) as [CsaDomain, number][]) {
+		const actual = domainCounts[domain] ?? 0;
+		if (actual !== target) {
+			issues.push(`domain ${domain}: expected ${target}, got ${actual}`);
+		}
+	}
+
+	return issues;
+}
+
 export function validateCsaTrack(rows: CsaQuestionRow[]): string[] {
 	const issues: string[] = [];
 
@@ -155,6 +192,7 @@ export function validateCsaTrack(rows: CsaQuestionRow[]): string[] {
 	}
 
 	issues.push(...validateCsaScenarioRatio(rows));
+	issues.push(...validateCsaDomainQuotas(rows));
 
 	const openerCounts = new Map<string, number>();
 	for (const q of rows) {

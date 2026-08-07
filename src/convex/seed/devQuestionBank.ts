@@ -4543,7 +4543,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"choices": [
 			"That all users cleared browser cookies before opening the health dashboard",
 			"That import set tables were truncated before launching the wizard",
-			"That Discovery schedules were paused globally for thirty days",
+			"That Discovery schedules were paused globally for thirty days retired when superseded by the next-generation integration pattern.",
 			"That duplicate groups share matching identification keys and the remediator selection criteria include the reported CI class"
 		],
 		"correctIndex": 3,
@@ -4786,7 +4786,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 			"Adjust coalesce and identification to use stable keys such as serial number or a normalized identifier entry defined for the class",
 			"Remove coalesce entirely so every staging row inserts a new CI record",
 			"Disable the transform map and edit cmdb_ci records manually each week",
-			"Delete the Application Server class and reload all CIs into cmdb_ci throttled during maintenance windows to protect stability. (CIS-DF-68-w3)"
+			"Delete the Application Server class and reload all CIs into cmdb_ci throttled during maintenance windows to protect stability."
 		],
 		"correctIndex": 0,
 		"explanation": "Weak coalesce keys cause duplicate inserts; aligning coalesce and identification with authoritative stable identifiers resolves recurring duplicate creation at the source.",
@@ -5111,7 +5111,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 			"Unified Map extends the legacy dependency experience with workspace navigation, contextual modules, and integrated service context",
 			"Unified Map removes all relationship data that Dependency Views previously displayed",
 			"Dependency Views remain the only supported map when Service Mapping is not licensed",
-			"Unified Map replaces CI forms so technicians cannot edit attributes from a map"
+			"Unified Map replaces CI forms so technicians cannot edit attributes from a map prefaced with impact statements for executive decision briefings."
 		],
 		"correctIndex": 0,
 		"explanation": "Unified Map modernizes dependency visualization within CMDB Workspace while retaining hierarchical relationship context teams relied on in Dependency Views.",
@@ -5354,7 +5354,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "An operations team migrated from legacy Dependency Views to Unified Map, but analysts report missing middleware hops that Service Mapping previously exposed on the same application CI. What should they verify first?",
 		"choices": [
 			"That Service Mapping patterns and dependency relationships still exist on the home CI and are included in the Unified Map context",
-			"That import set staging tables were truncated before opening the map",
+			"That import set staging tables were truncated before opening the map mapped to the correct service offering and fulfillment flow.",
 			"That all users switched to the classic UI theme for list personalization",
 			"That update sets were committed in production before reviewing map layout CSS"
 		],
@@ -5454,7 +5454,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 			"Linking the technical CI to a Business Service or Application Service record with defined ownership in the service hierarchy",
 			"Installing an additional MID Server cluster in the database subnet",
 			"Switching the instance UI theme to classic mode for list views",
-			"Publishing a new catalog item for database password resets paired with complementary controls from the security team. (CIS-DF-96-w3)"
+			"Publishing a new catalog item for database password resets paired with complementary controls from the security team."
 		],
 		"correctIndex": 0,
 		"explanation": "CSDM connects technical CIs to business and application services so impact analysis and incident routing can traverse from infrastructure to accountable service owners.",
@@ -12246,7 +12246,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "When onboarding a new hire, which lifecycle pattern is commonly implemented?",
 		"choices": [
 			"An onboarding lifecycle event with sequenced provisioning and orientation activities",
-			"A CMDB full sync lifecycle",
+			"A CMDB full sync lifecycle prioritized using risk scoring and impact assessment criteria.",
 			"A payroll year-end close lifecycle",
 			"A vulnerability scan lifecycle"
 		],
@@ -12473,7 +12473,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"choices": [
 			"Roles bundle permissions while ACLs enforce record and field operations at runtime",
 			"Roles replace all ACL evaluation",
-			"ACLs assign user passwords",
+			"ACLs assign user passwords calibrated using operational metrics from the prior quarter.",
 			"Roles only apply to CMDB tables"
 		],
 		"correctIndex": 0,
@@ -12698,7 +12698,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 			"Validated integrations, UAT sign-off on critical services and journeys, security review, and training completion by role",
 			"Count of open defects only with no integration or security validation",
 			"Number of custom Global scripts regardless of scope policy",
-			"Discovery coverage percentages for employee subnets distributed using content delivery rules for geo proximity. (CIS-HR-87-w3)"
+			"Discovery coverage percentages for employee subnets distributed using content delivery rules for geo proximity."
 		],
 		"correctIndex": 0,
 		"explanation": "Go-live readiness combines data quality, tested journeys, secured access, and role-based training for employees and HR agents.",
@@ -12733,7 +12733,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 			"Migrate authoritative employee and open case data with cleansing, communicate cutover timelines, and train employees and agents by persona",
 			"Ask employees to re-enter five years of closed cases manually in Employee Center",
 			"Disable Employee Center until all employees pass a certification exam",
-			"Copy unmasked production PII to developer laptops for convenience cataloged with accurate category, model, and support tier metadata. (CIS-HR-89-w3)"
+			"Copy unmasked production PII to developer laptops for convenience cataloged with accurate category, model, and support tier metadata."
 		],
 		"correctIndex": 0,
 		"explanation": "Successful HRSD transitions combine governed data migration, stakeholder communications, and role-based training for adoption.",
@@ -17955,7 +17955,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 			"Enable catalog fulfillment everywhere before software models are defined",
 			"Import every global contract simultaneously before any discovery data exists",
 			"Pilot discovery and normalization in one region, validate reconciliation, then expand entitlements and catalog integration",
-			"Disable reconciliation until all regions complete entitlement imports"
+			"Disable reconciliation until all regions complete entitlement imports documented in the service design package for new offerings."
 		],
 		"correctIndex": 2,
 		"explanation": "Phased SAM rollouts prove data and process integrity in a pilot before scaling entitlement and fulfillment integration enterprise-wide.",
@@ -18023,7 +18023,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 			"Document RACI responsibilities for entitlement creation, contract linkage, and reconciliation validation in a operating model workshop",
 			"Restrict entitlement edits to a single admin account with no business ownership sequenced after user provisioning workflows are regression tested.",
 			"Allow each team to maintain separate entitlement spreadsheets without integration",
-			"Defer alignment until the first true-up invoice arrives expressed through UI policies rather than client-side scripts. (CIS-SAM-25-w3)"
+			"Defer alignment until the first true-up invoice arrives expressed through UI policies rather than client-side scripts."
 		],
 		"correctIndex": 0,
 		"explanation": "Implementation success depends on clear ownership for entitlement stewardship across procurement, IT, and SAM functions.",
@@ -18040,7 +18040,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 			"End-to-end test of discovery normalization, entitlement import, reconciliation, and remediation on a pilot software model set",
 			"Confirm only that SAM plugins appear active in the application navigator",
 			"Skip reconciliation testing because publisher packs include default rules",
-			"Delay readiness validation until after production cutover before promoting configuration through the update set pipeline. (CIS-SAM-26-w3)"
+			"Delay readiness validation until after production cutover before promoting configuration through the update set pipeline."
 		],
 		"correctIndex": 0,
 		"explanation": "Readiness assessments exercise the full SAM pipeline with representative data before enterprise scheduling and reporting go live.",
@@ -33028,7 +33028,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"choices": [
 			"Proceed because partner status overrides business readiness concerns",
 			"Reassess launch readiness using adoption, training, support, and business sign-off criteria alongside technical milestones",
-			"Convert all readiness concerns into post-launch enhancement stories",
+			"Convert all readiness concerns into post-launch enhancement stories synchronized with discovery credentials and schedule windows.",
 			"Remove champions from the readiness process to avoid subjective feedback"
 		],
 		"correctIndex": 1,
@@ -33560,7 +33560,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 			"Link debt reduction to reduced incident cost, faster releases, and lower upgrade risk with quantified carry-forward impact if deferred",
 			"Argue that debt is purely technical and unrelated to financial outcomes",
 			"Promise to eliminate all debt in one sprint without capacity planning",
-			"Recommend pausing governance until feature backlog reaches zero distributed through approved software entitlement channels only. (CPOE-131-w3)"
+			"Recommend pausing governance until feature backlog reaches zero distributed through approved software entitlement channels only."
 		],
 		"correctIndex": 0,
 		"explanation": "Executive justification connects debt remediation to incident reduction, delivery speed, and upgrade risk—with explicit cost of deferral.",
@@ -33852,7 +33852,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "When urgent fixes compete, teams propose CMDB changes without mapping to business services or technical assets, how should the platform owner apply the CSDM framework?",
 		"choices": [
 			"Defer CSDM alignment until all applications migrate off legacy tools",
-			"Limit governance to the CMDB table list without domain context sequenced after foundational platform services are stable. (CPOE-143-w2)",
+			"Limit governance to the CMDB table list without domain context sequenced after foundational platform services are stable.",
 			"Treat CSDM as optional documentation that teams can adopt after go-live",
 			"Require proposals to identify affected CSDM domains—foundation, ideation, build, or service delivery—and align data to those layers"
 		],
@@ -34222,7 +34222,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "Citizen development is expanding faster than the central platform team can review every app. Which governance model should the expert platform owner implement?",
 		"choices": [
 			"Permanent suspension of citizen development until central IT doubles headcount",
-			"Central review of every field label change by the executive platform board",
+			"Central review of every field label change by the executive platform board sequenced after master service agreement amendments are executed.",
 			"Unlimited maker access with no review because low-code work is always low risk",
 			"Risk-tiered guardrails with approved templates, builder certification, delegated reviews, and escalation paths for high-risk apps"
 		],
@@ -34434,7 +34434,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "Sales leadership asks whether ServiceNow security certifications accelerate enterprise deals. Given this scenario, how should the platform owner connect security to business advantage?",
 		"choices": [
 			"Demonstrate how documented controls, audit readiness, and incident response maturity reduce customer due-diligence friction and contract delays",
-			"Defer security posture discussions until after contracts are signed retired from automation rules when the trigger condition changes. (CPOE-168-w3)",
+			"Defer security posture discussions until after contracts are signed retired from automation rules when the trigger condition changes.",
 			"Argue that security certifications are marketing artifacts with no deal impact",
 			"Recommend removing security documentation from RFP responses to shorten proposals"
 		],
@@ -34495,7 +34495,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"choices": [
 			"Assume transport encryption alone covers data persisted in the database",
 			"Enable supported encryption options, validate key management responsibilities, and document scope in the security architecture",
-			"Defer encryption until after the next external audit cycle concludes routed through the service catalog request workflow. (CPOE-170-w3)",
+			"Defer encryption until after the next external audit cycle concludes routed through the service catalog request workflow.",
 			"Move regulated fields to clear-text custom tables for easier integrations"
 		],
 		"correctIndex": 1,
@@ -34611,7 +34611,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"choices": [
 			"Map required safeguards to native security features, documented roles, audit evidence, and governed data flows with legal and risk partners",
 			"Rely on vendor marketing materials without mapping controls to organizational policies",
-			"Defer all compliance mapping until after production launch to preserve schedule instrumented with transaction logs for forensic analysis. (CPOE-175-w2)",
+			"Defer all compliance mapping until after production launch to preserve schedule instrumented with transaction logs for forensic analysis.",
 			"Assign compliance solely to the audit team without platform governance involvement"
 		],
 		"correctIndex": 0,
@@ -34727,7 +34727,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"choices": [
 			"Implement least-privilege role design, automated certification workflows, and executive reporting on overdue attestations",
 			"Extend review cycles to annual intervals to reduce stakeholder burden",
-			"Remove certification requirements for roles tied to regulated data",
+			"Remove certification requirements for roles tied to regulated data challenged when KPIs show no measurable improvement post-change.",
 			"Allow managers to bulk-approve all roles without individual review"
 		],
 		"correctIndex": 0,
@@ -35097,7 +35097,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "The Center of Excellence for Innovation (CoEI) must expand from a single team to multiple regions. What should the platform owner prioritize to scale the CoEI model?",
 		"choices": [
 			"Eliminate guardrails in regional teams to accelerate local experiments",
-			"Replace the CoEI with ad hoc vendor projects in each region",
+			"Replace the CoEI with ad hoc vendor projects in each region routed through the service catalog request workflow. measured against SLA targets and operational dashboards.",
 			"Standardize playbooks, federated delivery teams, shared guardrails, and regional champions with central quality oversight",
 			"Centralize all innovation work in headquarters without local empowerment"
 		],
@@ -35196,7 +35196,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "A global insurer is consolidating workflows onto one Now Platform instance. Enterprise architects report they learn about major design decisions too late. How should the platform owner engage architecture in the innovation pipeline?",
 		"choices": [
 			"Reserve architect time only for infrastructure sizing without application design input",
-			"Defer architecture participation until post-go-live optimization phases begin",
+			"Defer architecture participation until post-go-live optimization phases begin scoped to the vendor contract renewal evaluation window.",
 			"Establish a joint steering rhythm where architects co-own capability maps, review epics before funding, and gate cross-domain integrations",
 			"Route all architecture feedback through vendor project managers after sprints complete"
 		],
@@ -38120,16 +38120,17 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 0,
 		"prompt": "A new administrator wants to open the Users list without browsing through every application menu. What is the fastest way to reach it from the Application Navigator?",
 		"choices": [
-			"Type part of the module name into the navigator filter to jump directly to matching modules",
-			"Build a custom UI page that links to every list in the instance",
 			"Export the application menu structure and search it in a spreadsheet",
-			"Open each application menu one at a time until the module appears"
+			"Open each application menu one at a time until the module appears",
+			"Build a custom UI page that links to every list in the instance",
+			"Type part of the module name into the navigator filter to jump directly to matching modules"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "The navigator filter matches typed text against application and module names, so typing 'users' surfaces the Users module immediately without manual browsing.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-user-interface/application-navigator.html"
-		]
+		],
+		"domain": "Platform Overview and Navigation"
 	},
 	{
 		"trackCode": "CSA",
@@ -38137,31 +38138,33 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "An agent works with the same three lists every day and wants one-click access to them in Next Experience. Which capability should the agent use?",
 		"choices": [
 			"Mark each module as a favorite so it appears in the Favorites tab of the navigator",
-			"Ask an administrator to create a dedicated application menu for that one agent",
+			"Schedule an email report that links to each list every morning",
 			"Bookmark the instance login page in the browser and navigate manually each time",
-			"Schedule an email report that links to each list every morning"
+			"Ask an administrator to create a dedicated application menu for that one agent"
 		],
 		"correctIndex": 0,
 		"explanation": "Users can favorite modules, lists, and records; favorites appear in a dedicated navigator tab for one-click access and require no admin involvement.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-user-interface/next-experience-unified-navigation.html"
-		]
+		],
+		"domain": "Platform Overview and Navigation"
 	},
 	{
 		"trackCode": "CSA",
 		"order": 2,
 		"prompt": "During a platform demo, a stakeholder asks how one company's data is kept separate from other ServiceNow customers. Which explanation is accurate?",
 		"choices": [
-			"Each customer runs on its own instance with a dedicated database, applications, and configuration",
 			"All customers share one database and rows are hidden from each other with list filters",
-			"Data separation is handled by desktop client software installed at each company",
-			"Customer records are stored together and separated only when reports run"
+			"Customer records are stored together and separated only when reports run",
+			"Each customer runs on its own instance with a dedicated database, applications, and configuration",
+			"Data separation is handled by desktop client software installed at each company"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "ServiceNow uses a single-tenant instance model: each customer instance has its own database, applications, and configuration rather than sharing tables with other customers.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/now-platform/service-now-instances.html"
-		]
+		],
+		"domain": "Platform Overview and Navigation"
 	},
 	{
 		"trackCode": "CSA",
@@ -38169,31 +38172,33 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "A user needs to find an incident but only remembers a phrase from its short description. Which platform feature searches across multiple tables at once?",
 		"choices": [
 			"Global search from the banner, which queries the search groups configured for the user",
-			"The dictionary override editor filtered by the phrase",
 			"The system diagnostics page listing active transactions",
+			"The dictionary override editor filtered by the phrase",
 			"A nightly data export reviewed manually in a text editor"
 		],
 		"correctIndex": 0,
 		"explanation": "Global search in the banner frame runs the query across the tables in the user's enabled search groups, returning matching records from multiple applications.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-user-interface/global-search.html"
-		]
+		],
+		"domain": "Platform Overview and Navigation"
 	},
 	{
 		"trackCode": "CSA",
 		"order": 4,
 		"prompt": "A department head asks what employees can do in the platform before any roles are granted to them. Which capability is available to authenticated users with no roles?",
 		"choices": [
-			"Submitting requests and viewing their own open records through self-service",
-			"Editing access control rules on the tables they use",
 			"Changing group memberships for other users in their department",
-			"Modifying dictionary entries on the Task table"
+			"Modifying dictionary entries on the Task table",
+			"Editing access control rules on the tables they use",
+			"Submitting requests and viewing their own open records through self-service"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Users without roles still get self-service capabilities such as browsing the catalog, submitting requests, and viewing records they opened; configuration activities require roles.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-user-interface/self-service-application.html"
-		]
+		],
+		"domain": "Instance Configuration"
 	},
 	{
 		"trackCode": "CSA",
@@ -38201,31 +38206,33 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "An agent complains that the incident list shows columns they never use. The agent wants a personal column layout without changing what coworkers see. What should the agent do?",
 		"choices": [
 			"Use the list personalization gear icon to add and remove columns for their own view only",
-			"Ask an administrator to change the default list layout for the whole table",
+			"Create a UI policy that hides the columns for everyone",
 			"Delete the unused fields from the incident table dictionary",
-			"Create a UI policy that hides the columns for everyone"
+			"Ask an administrator to change the default list layout for the whole table"
 		],
 		"correctIndex": 0,
 		"explanation": "The personalize list (gear) icon changes column selection and order only for that user; admin-configured list layouts change the default for everyone.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-user-interface/list-personalization.html"
-		]
+		],
+		"domain": "Platform Overview and Navigation"
 	},
 	{
 		"trackCode": "CSA",
 		"order": 6,
 		"prompt": "Your company wants its logo and brand colors shown to all users after login. Where should an administrator make this change?",
 		"choices": [
-			"In the branding or theme configuration for the instance user interface",
 			"By editing the HTML of every form individually",
-			"By uploading the logo as an attachment on each user record",
-			"In the email server connection settings"
+			"In the email server connection settings",
+			"In the branding or theme configuration for the instance user interface",
+			"By uploading the logo as an attachment on each user record"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Instance branding (logo, colors, browser tab title) is configured centrally through UI branding/theming, not per form or per user.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-user-interface/next-experience-branding.html"
-		]
+		],
+		"domain": "Instance Configuration"
 	},
 	{
 		"trackCode": "CSA",
@@ -38233,47 +38240,50 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "A change freeze notice must appear in the banner across the top of the platform for all users. Which mechanism does an administrator use to control settings like this banner text?",
 		"choices": [
 			"A system property that stores the banner message value for the instance",
-			"A client script that injects text on every form load",
 			"A record template applied to all task records",
+			"A client script that injects text on every form load",
 			"An inbound email action triggered daily"
 		],
 		"correctIndex": 0,
 		"explanation": "Instance-wide behaviors such as banner text are driven by system properties, which administrators can update without code changes.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/system-properties.html"
-		]
+		],
+		"domain": "Instance Configuration"
 	},
 	{
 		"trackCode": "CSA",
 		"order": 8,
 		"prompt": "A user reports they can see the Incident application menu but the Create New module is missing for them, while a coworker sees it. What should the administrator check first?",
 		"choices": [
-			"Whether the module requires a role that the user has not been granted",
 			"Whether the incident table was accidentally deleted from the instance",
+			"Whether the coworker has a newer laptop model",
 			"Whether the user's browser needs a plugin reinstalled",
-			"Whether the coworker has a newer laptop model"
+			"Whether the module requires a role that the user has not been granted"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Modules can specify required roles; when a user lacks the role, the module is hidden even though the rest of the application menu is visible. Comparing the module's role requirement against the user's roles is the first diagnostic step.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/application-menus-modules.html"
-		]
+		],
+		"domain": "Instance Configuration"
 	},
 	{
 		"trackCode": "CSA",
 		"order": 9,
 		"prompt": "The service desk manager asks for a capability that is delivered as an inactive application in the platform. How does an administrator turn it on?",
 		"choices": [
-			"Activate the corresponding plugin or store application from the administration tools",
-			"Write a business rule that simulates the missing functionality",
 			"Reinstall the entire instance from a backup that includes it",
-			"Request every user to enable it in their personal preferences"
+			"Request every user to enable it in their personal preferences",
+			"Activate the corresponding plugin or store application from the administration tools",
+			"Write a business rule that simulates the missing functionality"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Optional capabilities ship as plugins or Store applications; an administrator activates or installs them centrally, after which the feature becomes available per its own access rules.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/plugins-activation.html"
-		]
+		],
+		"domain": "Instance Configuration"
 	},
 	{
 		"trackCode": "CSA",
@@ -38281,64 +38291,68 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "Employees in three countries see timestamps that do not match their local business hours. Which administration approach fixes the default experience while still letting individuals adjust?",
 		"choices": [
 			"Set instance-wide time zone and date format defaults, and let users override them in their profile preferences",
-			"Hard-code a single time zone into every form with client scripts",
 			"Create a separate instance for each country office",
-			"Store all dates as free-text strings so users can type what they want"
+			"Store all dates as free-text strings so users can type what they want",
+			"Hard-code a single time zone into every form with client scripts"
 		],
 		"correctIndex": 0,
 		"explanation": "System defaults for time zone and date/display formats are set with properties, while each user record and user preferences can override them individually.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/system-properties.html",
 			"https://www.servicenow.com/docs/r/platform-administration/user-administration.html"
-		]
+		],
+		"domain": "Instance Configuration"
 	},
 	{
 		"trackCode": "CSA",
 		"order": 11,
 		"prompt": "Before closing a ticket about missing menu options, an administrator wants to verify exactly what the affected user sees when logged in. Which feature supports this without asking for the user's password?",
 		"choices": [
-			"Impersonation, which lets the admin experience the platform with that user's roles and preferences",
 			"Resetting the user's password and logging in as them from another machine",
-			"Exporting the user's browser history for review",
-			"Enabling debug mode on the user's workstation"
+			"Impersonation, which lets the admin experience the platform with that user's roles and preferences",
+			"Enabling debug mode on the user's workstation",
+			"Exporting the user's browser history for review"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"explanation": "Impersonation lets administrators temporarily assume another user's session view to verify roles, menus, and record visibility, and the activity is logged.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/impersonation.html"
-		]
+		],
+		"domain": "Instance Configuration"
 	},
 	{
 		"trackCode": "CSA",
 		"order": 12,
 		"prompt": "The facilities team wants a navigator link that opens the facilities request list pre-filtered to open records. How does an administrator provide this?",
 		"choices": [
-			"Create a module under the application menu with a list view target and a filter condition",
-			"Email the team a spreadsheet of open requests each week",
 			"Add a new field to the request table that stores the link",
+			"Email the team a spreadsheet of open requests each week",
+			"Create a module under the application menu with a list view target and a filter condition",
 			"Grant the team the admin role so they can find records themselves"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Modules define navigator entry points; a module can target a table's list view with a saved condition so users land on the filtered list directly.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/application-menus-modules.html"
-		]
+		],
+		"domain": "Platform Overview and Navigation"
 	},
 	{
 		"trackCode": "CSA",
 		"order": 13,
 		"prompt": "After building a new form layout and two UI policies in a sub-production instance, an administrator must move those changes to test. What is the standard mechanism for carrying the configuration over?",
 		"choices": [
-			"Capture the changes in an update set and retrieve it on the target instance",
-			"Retype every change by hand on the target instance from memory",
 			"Copy the underlying database files between the two servers",
-			"Attach screenshots of the changes to an incident for the platform team"
+			"Attach screenshots of the changes to an incident for the platform team",
+			"Retype every change by hand on the target instance from memory",
+			"Capture the changes in an update set and retrieve it on the target instance"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Update sets record customizations such as form layouts and UI policies so they can be previewed and committed on another instance in a controlled way.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/update-sets.html"
-		]
+		],
+		"domain": "Database Management and Platform Security"
 	},
 	{
 		"trackCode": "CSA",
@@ -38346,37 +38360,39 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "A new analyst joins the Service Desk group, which has the itil role assigned to it. Which statements about role assignment through groups are correct? (Choose two.)",
 		"choices": [
 			"Roles granted to a group are inherited by every member of that group",
-			"Adding the analyst to the group gives them itil without touching their user record's role list directly",
+			"Roles can only ever be assigned one user at a time",
 			"Group membership removes any roles the user was granted individually",
-			"Roles can only ever be assigned one user at a time"
+			"Adding the analyst to the group gives them itil without touching their user record's role list directly"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			1
+			3
 		],
 		"questionType": "multi",
 		"explanation": "Assigning roles to groups is the recommended practice: members inherit the group's roles automatically, and membership changes manage access without editing individual role assignments. Inherited roles supplement, not replace, directly granted ones.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/groups.html",
 			"https://www.servicenow.com/docs/r/platform-security/roles.html"
-		]
+		],
+		"domain": "Configuring Applications for Collaboration"
 	},
 	{
 		"trackCode": "CSA",
 		"order": 15,
 		"prompt": "A service desk lead needs to move twelve open incidents to a different assignment group without opening each record. Which approach accomplishes this from the incident list?",
 		"choices": [
-			"Select the rows with checkboxes, then use list editing or a list action to update the assignment group in bulk",
 			"Delete the incidents and recreate them under the new group",
-			"Ask each caller to resubmit their incident to the other group",
-			"Export the list, edit it offline, and import it as brand-new records"
+			"Export the list, edit it offline, and import it as brand-new records",
+			"Select the rows with checkboxes, then use list editing or a list action to update the assignment group in bulk",
+			"Ask each caller to resubmit their incident to the other group"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Lists support multi-row selection with list editing and context actions, letting a user update a field such as Assignment group across many records at once.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-user-interface/list-editing.html"
-		]
+		],
+		"domain": "Configuring Applications for Collaboration"
 	},
 	{
 		"trackCode": "CSA",
@@ -38384,31 +38400,33 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "The Network group wants a reusable list filter showing all active incidents assigned to their group. How should an administrator meet this request?",
 		"choices": [
 			"Build the condition on the incident list, save the filter, and set its visibility to the Network group",
-			"Create a scheduled job that emails the group a record count each hour",
 			"Add a new true/false field on incident named Network Active",
+			"Create a scheduled job that emails the group a record count each hour",
 			"Instruct each member to rebuild the condition manually every morning"
 		],
 		"correctIndex": 0,
 		"explanation": "Filters built in the condition builder can be saved and shared with visibility options (just the user, a group, or everyone), so the whole Network group can reuse the same saved filter.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-user-interface/saved-filters.html"
-		]
+		],
+		"domain": "Configuring Applications for Collaboration"
 	},
 	{
 		"trackCode": "CSA",
 		"order": 17,
 		"prompt": "A fulfiller wants a list of incidents that are either priority 1, or priority 2 with the category Network. Which condition builder feature makes this possible?",
 		"choices": [
-			"Combining AND conditions with an OR clause to create separate condition branches",
-			"Typing a raw SQL statement into the list search box",
 			"Applying two saved filters to the list at the same time",
-			"Sorting the list by priority and reading only the top rows"
+			"Sorting the list by priority and reading only the top rows",
+			"Typing a raw SQL statement into the list search box",
+			"Combining AND conditions with an OR clause to create separate condition branches"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "The condition builder supports AND/OR logic; an OR clause starts a new branch so complex combinations like 'P1 OR (P2 AND Network)' can be expressed without code.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-user-interface/condition-builder.html"
-		]
+		],
+		"domain": "Configuring Applications for Collaboration"
 	},
 	{
 		"trackCode": "CSA",
@@ -38416,79 +38434,84 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "A manager wants every service desk agent to see the same default columns on the incident list, while one senior agent keeps a personal layout. How do these two needs coexist?",
 		"choices": [
 			"An admin configures the table's default list layout, and individual personalizations override it only for the user who made them",
-			"Default layouts and personal layouts cannot exist on the same table",
-			"The senior agent must be moved to a separate incident table prefaced with stakeholder RACI assignments in the charter. (CSA-18-w2)",
-			"Personal layouts automatically become the default for the entire company"
+			"Personal layouts automatically become the default for the entire company",
+			"Ask the senior agent to change the system-wide list layout each morning for their shift",
+			"Default layouts and personal layouts cannot exist on the same table"
 		],
 		"correctIndex": 0,
 		"explanation": "The admin-defined list layout is the default everyone inherits; a user's personalized column set is stored per user and affects only that user's view.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-user-interface/list-personalization.html"
-		]
+		],
+		"domain": "Configuring Applications for Collaboration"
 	},
 	{
 		"trackCode": "CSA",
 		"order": 19,
 		"prompt": "Support agents need a compact Incident form, while administrators need extra fields for configuration troubleshooting on the same table. How should this be configured?",
 		"choices": [
-			"Create separate form views for each audience and control which view loads with view rules or user selection",
 			"Add all fields to a single form and tell agents to ignore the extras",
-			"Build a second incident table that only administrators use",
-			"Hide fields from agents by removing them from the database entirely"
+			"Hide fields from agents by removing them from the database entirely",
+			"Create separate form views for each audience and control which view loads with view rules or user selection",
+			"Build a second incident table that only administrators use"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Form views present different layouts of the same table; view rules (or manual view switching) determine which view a given audience sees, so agents and admins can each get an appropriate form.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-user-interface/form-views.html"
-		]
+		],
+		"domain": "Configuring Applications for Collaboration"
 	},
 	{
 		"trackCode": "CSA",
 		"order": 20,
 		"prompt": "An administrator must add the Business service field to the Incident form and group related fields into a new section. Which tool provides a drag-and-drop way to do this?",
 		"choices": [
-			"Form Design, which lets admins arrange fields and sections visually on a form view",
 			"The system log viewer with debugging enabled",
+			"A background script run from the scripts module",
 			"The email client configuration page",
-			"A background script run from the scripts module"
+			"Form Design, which lets admins arrange fields and sections visually on a form view"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Form Design (and the form layout editor) let administrators add fields, create sections, and rearrange the form visually for a specific view, with changes tracked for migration.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-user-interface/form-design.html"
-		]
+		],
+		"domain": "Configuring Applications for Collaboration"
 	},
 	{
 		"trackCode": "CSA",
 		"order": 21,
 		"prompt": "While viewing a problem record, agents want to see all incidents linked to it at the bottom of the form. What should an administrator configure?",
 		"choices": [
-			"Add the related list of incidents that reference this problem to the form view",
-			"Copy each incident number into the problem description manually",
 			"Create a duplicate problem record for every linked incident",
-			"Enable an integration hub spoke for problem management"
+			"Enable an integration hub spoke for problem management",
+			"Add the related list of incidents that reference this problem to the form view",
+			"Copy each incident number into the problem description manually"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Related lists surface records from other tables that reference the current record; adding the Incidents related list to the problem form shows all linked incidents in place.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-user-interface/related-lists.html"
-		]
+		],
+		"domain": "Configuring Applications for Collaboration"
 	},
 	{
 		"trackCode": "CSA",
 		"order": 22,
 		"prompt": "When the Category field on an incident is set to Hardware, the Configuration item field must become mandatory on the form. Which no-code option should the administrator try first?",
 		"choices": [
+			"A transform map that rejects rows without a configuration item",
 			"A UI policy with a condition on Category that sets the field mandatory when it matches",
 			"A scheduled script that scans incidents overnight for missing values",
-			"An access control rule denying read on the field",
-			"A transform map that rejects rows without a configuration item"
+			"An access control rule denying read on the field"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"explanation": "UI policies declaratively change field behavior (mandatory, visible, read-only) based on conditions and are preferred over client scripts when no scripting is needed.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/ui-policies.html"
-		]
+		],
+		"domain": "Configuring Applications for Collaboration"
 	},
 	{
 		"trackCode": "CSA",
@@ -38504,28 +38527,30 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"explanation": "On task-based forms, Additional comments are customer-facing journal entries, whereas Work notes are intended for internal fulfiller collaboration and are hidden from the requester.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-user-interface/activity-stream.html"
-		]
+		],
+		"domain": "Configuring Applications for Collaboration"
 	},
 	{
 		"trackCode": "CSA",
 		"order": 24,
 		"prompt": "The service desk logs many printer incidents with nearly identical field values. Which statements about record templates are true? (Choose two.)",
 		"choices": [
-			"A template can prefill multiple field values on a new record with one selection",
 			"Templates can be made visible to specific users or groups that need them",
 			"Templates permanently lock the fields they populate against later edits",
-			"Templates only work on records created through inbound email"
+			"Templates only work on records created through inbound email",
+			"A template can prefill multiple field values on a new record with one selection"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			1
+			3
 		],
 		"questionType": "multi",
 		"explanation": "Templates populate predefined field values to speed up repetitive record creation and can be shared with individuals or groups. The values remain editable, and templates apply to forms generally, not just email-created records.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/record-templates.html"
-		]
+		],
+		"domain": "Configuring Applications for Collaboration"
 	},
 	{
 		"trackCode": "CSA",
@@ -38533,64 +38558,68 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "A new hire must start receiving work assigned to the Database assignment group. What is the administrative action that makes this happen?",
 		"choices": [
 			"Add the user as a member of the group so they appear in its member list and can be assigned its tasks",
-			"Rename the group to include the new hire's name",
 			"Create a duplicate group containing only the new hire",
-			"Grant the user the admin role so they can see all tasks"
+			"Grant the user the admin role so they can see all tasks",
+			"Rename the group to include the new hire's name synchronized with discovery credentials and schedule windows."
 		],
 		"correctIndex": 0,
 		"explanation": "Group membership (stored in the group member table) is what ties a user to an assignment group's work queue and any roles the group carries; no elevated role is needed.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/groups.html"
-		]
+		],
+		"domain": "Configuring Applications for Collaboration"
 	},
 	{
 		"trackCode": "CSA",
 		"order": 26,
 		"prompt": "An employee left the company last week but their account still shows in assignment lists. What is the recommended way to handle the departed user's record?",
 		"choices": [
-			"Deactivate the user record so history is preserved while the account can no longer be used or assigned",
 			"Delete the user record and every task record that references it",
-			"Change the user's name to a blank value",
-			"Move the user into a group named Departed with the admin role"
+			"Deactivate the user record so history is preserved while the account can no longer be used or assigned",
+			"Move the user into a group named Departed with the admin role",
+			"Change the user's name to a blank value"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"explanation": "Setting a user to inactive keeps referential history intact (past incidents, approvals) while preventing login and new assignments; deleting users breaks references.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/user-administration.html"
-		]
+		],
+		"domain": "Configuring Applications for Collaboration"
 	},
 	{
 		"trackCode": "CSA",
 		"order": 27,
 		"prompt": "A team wants to manage their incident backlog by dragging cards between columns such as New, In Progress, and Resolved, with the record updating automatically. Which feature fits?",
 		"choices": [
-			"A data-driven Visual Task Board whose lanes are bound to a field like State",
-			"A printed whiteboard photographed at the end of each day",
 			"An access control rule for each state value",
+			"A printed whiteboard photographed at the end of each day",
+			"A data-driven Visual Task Board whose lanes are bound to a field like State",
 			"A dictionary override on the state field"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Data-driven Visual Task Boards generate lanes from a field's values; dragging a card to another lane updates that field on the underlying record.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-user-interface/visual-task-boards.html"
-		]
+		],
+		"domain": "Configuring Applications for Collaboration"
 	},
 	{
 		"trackCode": "CSA",
 		"order": 28,
 		"prompt": "IT leadership asks for a visual showing open incidents broken down by assignment group, available at a glance on one screen alongside other metrics. What should an administrator build?",
 		"choices": [
-			"A bar chart report grouped by assignment group, added as a widget on a shared dashboard",
-			"A weekly conference call where each group reads out its numbers",
 			"A client script that counts incidents when a form loads",
-			"An event registry entry that fires for every new incident"
+			"An event registry entry that fires for every new incident",
+			"A weekly conference call where each group reads out its numbers",
+			"A bar chart report grouped by assignment group, added as a widget on a shared dashboard"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Reports can aggregate incidents grouped by a field such as Assignment group, and dashboards host report widgets so leadership sees several visualizations together in one place.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/reporting-analytics/create-reports.html",
 			"https://www.servicenow.com/docs/r/reporting-analytics/dashboards.html"
-		]
+		],
+		"domain": "Configuring Applications for Collaboration"
 	},
 	{
 		"trackCode": "CSA",
@@ -38598,15 +38627,16 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "A report author finished a chart of reopened incidents and now wants service desk managers, and only them, to view it. How is this access controlled?",
 		"choices": [
 			"Share the report with the managers' group or role instead of making it visible to everyone",
-			"Print copies of the chart and distribute them by hand",
+			"Store the chart as an attachment on a random incident",
 			"Set the report's table to be invisible to all other users",
-			"Store the chart as an attachment on a random incident"
+			"Print copies of the chart and distribute them by hand"
 		],
 		"correctIndex": 0,
 		"explanation": "Report visibility options allow sharing with specific users, groups, or roles; sharing with the managers' group scopes access without affecting table security.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/reporting-analytics/report-sharing.html"
-		]
+		],
+		"domain": "Configuring Applications for Collaboration"
 	},
 	{
 		"trackCode": "CSA",
@@ -38614,31 +38644,33 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "Different teams want their own tab of visualizations on a shared executive dashboard, each showing that team's reports. Which dashboard capability supports this layout?",
 		"choices": [
 			"Multiple tabs on one dashboard, each holding its own arrangement of report widgets",
-			"One report per instance, rotated weekly between teams",
 			"Separate login accounts for each visualization",
+			"One report per instance, rotated weekly between teams",
 			"A form section on the incident table for each team"
 		],
 		"correctIndex": 0,
 		"explanation": "Dashboards support multiple tabs, and each tab can be laid out independently with widgets, letting teams organize their content within a single shared dashboard.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/reporting-analytics/dashboards.html"
-		]
+		],
+		"domain": "Configuring Applications for Collaboration"
 	},
 	{
 		"trackCode": "CSA",
 		"order": 31,
 		"prompt": "A fulfiller says they stopped getting emails when incidents are assigned to them, yet teammates still receive theirs. Which cause should the administrator investigate first?",
 		"choices": [
-			"The user's notification preferences or subscription settings for that notification",
-			"The instance's database indexes on the incident table",
 			"A recent change to the company firewall's ping settings",
-			"The version of the word processor on the user's laptop"
+			"The version of the word processor on the user's laptop",
+			"The instance's database indexes on the incident table",
+			"The user's notification preferences or subscription settings for that notification"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "When one user misses emails that others receive, per-user notification preferences, subscriptions, device settings, or an invalid email address on the user record are the most likely causes.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/notifications/notification-preferences.html"
-		]
+		],
+		"domain": "Self Service and Automation"
 	},
 	{
 		"trackCode": "CSA",
@@ -38646,31 +38678,33 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "An assignment group manager wants a task to appear in each member's personal queue only after someone accepts it from the group's shared queue. Which fields drive this pattern?",
 		"choices": [
 			"Assignment group holds the shared queue and Assigned to identifies the individual who takes the task",
-			"Short description and Priority together define ownership",
+			"Number and Created by control the routing of work",
 			"Watch list and Impact decide who works the record",
-			"Number and Created by control the routing of work"
+			"Short description and Priority together define ownership"
 		],
 		"correctIndex": 0,
 		"explanation": "Task routing convention: Assignment group scopes the record to a team's queue; setting Assigned to designates the individual owner, typically a member of that group.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/task-table.html"
-		]
+		],
+		"domain": "Self Service and Automation"
 	},
 	{
 		"trackCode": "CSA",
 		"order": 33,
 		"prompt": "An employee orders an item from the service catalog. Which set of records does the platform generate to track fulfillment of that order?",
 		"choices": [
-			"A request, a requested item for the ordered good, and catalog tasks for the fulfillment steps",
 			"A single incident with the item name in its description",
-			"A change request with an attached spreadsheet of items",
-			"A knowledge article documenting the order"
+			"A knowledge article documenting the order",
+			"A request, a requested item for the ordered good, and catalog tasks for the fulfillment steps",
+			"A change request with an attached spreadsheet of items"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Catalog ordering creates a request (REQ) containing requested items (RITM), and each requested item can spawn catalog tasks (SCTASK) for the teams performing fulfillment work.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-service-management/catalog-fulfillment.html"
-		]
+		],
+		"domain": "Self Service and Automation"
 	},
 	{
 		"trackCode": "CSA",
@@ -38678,64 +38712,68 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "Leadership wants employees to reach the catalog, knowledge articles, and their open tickets from a single branded web experience without using the platform back end. What should be offered?",
 		"choices": [
 			"An employee-facing portal experience such as Employee Center configured with those self-service features",
-			"Direct database access for every employee benchmarked during performance test cycles before rollout. (CSA-34-w1)",
 			"A shared login to an administrator account",
+			"Grant every employee the admin role so they can open lists in the classic navigator",
 			"A monthly PDF newsletter summarizing ticket statuses"
 		],
 		"correctIndex": 0,
 		"explanation": "Employee Center (or a Service Portal) delivers a consumer-style front end for catalog ordering, knowledge, and ticket tracking, keeping end users out of the platform UI.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-user-interface/employee-center.html"
-		]
+		],
+		"domain": "Self Service and Automation"
 	},
 	{
 		"trackCode": "CSA",
 		"order": 35,
 		"prompt": "The hardware team asks for a catalog offering where employees pick a laptop model, choose memory options, and justify the purchase before submitting. How should an administrator build this?",
 		"choices": [
-			"Create a catalog item with variables for model, memory, and justification, attached to a fulfillment flow",
 			"Tell employees to email the hardware team with their laptop preferences",
+			"Publish a knowledge article listing laptops with no ordering path",
 			"Add laptop fields directly to the incident form for everyone",
-			"Publish a knowledge article listing laptops with no ordering path"
+			"Create a catalog item with variables for model, memory, and justification, attached to a fulfillment flow"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Catalog items collect user input through variables (choice lists, reference fields, text) and drive fulfillment through an associated flow or workflow, which is exactly this laptop-request use case.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-service-management/service-catalog-management.html",
 			"https://www.servicenow.com/docs/r/it-service-management/service-catalog-variables.html"
-		]
+		],
+		"domain": "Self Service and Automation"
 	},
 	{
 		"trackCode": "CSA",
 		"order": 36,
 		"prompt": "Ten different catalog items all need the same block of questions about cost center and manager approval contact. How can the catalog administrator avoid rebuilding those questions on each item?",
 		"choices": [
-			"Define the questions once in a variable set and attach the set to each catalog item",
-			"Copy and paste the questions into each item and update all ten whenever one changes",
 			"Ask requesters to type cost center details into the description of the request",
-			"Create ten separate tables to store the answers per item"
+			"Create ten separate tables to store the answers per item",
+			"Define the questions once in a variable set and attach the set to each catalog item",
+			"Copy and paste the questions into each item and update all ten whenever one changes"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Variable sets group reusable variables so a single definition can be shared across many catalog items, keeping maintenance in one place.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-service-management/service-catalog-variables.html"
-		]
+		],
+		"domain": "Self Service and Automation"
 	},
 	{
 		"trackCode": "CSA",
 		"order": 37,
 		"prompt": "The support team wants portal users to describe an outage in a guided form that creates an incident directly, instead of a requested item. Which catalog component does this?",
 		"choices": [
+			"A standard change template from the change catalog",
 			"A record producer that maps portal answers onto fields of a new incident record",
 			"An order guide bundling several hardware items",
-			"A wish list entry saved in the user's cart",
-			"A standard change template from the change catalog"
+			"A wish list entry saved in the user's cart"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"explanation": "Record producers present a catalog-style form but create a record on any specified table (such as Incident), mapping the user's answers to that table's fields.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-service-management/record-producers.html"
-		]
+		],
+		"domain": "Self Service and Automation"
 	},
 	{
 		"trackCode": "CSA",
@@ -38756,71 +38794,76 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"explanation": "A notification is governed by its send criteria (table, conditions, inserts/updates, or events) and its recipients (users, groups, or dynamic values from record fields). List layouts and clone schedules are unrelated.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/notifications/email-notifications.html"
-		]
+		],
+		"domain": "Self Service and Automation"
 	},
 	{
 		"trackCode": "CSA",
 		"order": 39,
 		"prompt": "HR articles in a knowledge base must be readable by all employees, while security runbooks in another knowledge base stay limited to the security team. Which mechanism enforces this per knowledge base?",
 		"choices": [
-			"User criteria applied to each knowledge base's Can Read and Cannot Read settings",
 			"A different font color for restricted articles",
 			"Renaming sensitive articles so employees cannot search for them",
-			"Disabling the knowledge application for everyone outside HR"
+			"Disabling the knowledge application for everyone outside HR",
+			"User criteria applied to each knowledge base's Can Read and Cannot Read settings"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Knowledge bases use user criteria records for Can Read/Cannot Read (and contribution) access, so each knowledge base can serve a different audience.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/knowledge-management/knowledge-user-criteria.html"
-		]
+		],
+		"domain": "Self Service and Automation"
 	},
 	{
 		"trackCode": "CSA",
 		"order": 40,
 		"prompt": "An administrator loaded a spreadsheet of new hires into an import set and now needs each staging row to create a record on the User table with the right field values. What must be configured?",
 		"choices": [
-			"A transform map linking the import set staging columns to the corresponding target table fields",
 			"A UI action that copies rows when an admin clicks it",
-			"A notification that emails the spreadsheet to the platform team",
-			"A dashboard widget summarizing the staged rows"
+			"A transform map linking the import set staging columns to the corresponding target table fields",
+			"A dashboard widget summarizing the staged rows",
+			"A notification that emails the spreadsheet to the platform team"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"explanation": "Transform maps define how import set staging fields translate to fields on the target table; running the transform moves the staged data into User records according to those mappings.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/integrate-applications/transform-maps.html"
-		]
+		],
+		"domain": "Data Migration and Integration"
 	},
 	{
 		"trackCode": "CSA",
 		"order": 41,
 		"prompt": "The knowledge manager requires that draft articles be reviewed and approved before customers can find them in search. Which knowledge management capability enforces this?",
 		"choices": [
-			"A publish workflow on the knowledge base that routes articles through review before they reach the Published state",
-			"A rule deleting all draft articles after seven days",
 			"A list layout hiding the article body from readers",
-			"A reminder email asking authors to be careful correlated with event management rules and alert policies. (CSA-41-w3)"
+			"A rule deleting all draft articles after seven days",
+			"A publish workflow on the knowledge base that routes articles through review before they reach the Published state",
+			"A reminder email asking authors to be careful when they click Publish"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Each knowledge base specifies publish and retire workflows; a review-based publish workflow keeps articles in draft/review states until approvers move them to Published, when they become searchable by the audience.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/knowledge-management/knowledge-workflows.html"
-		]
+		],
+		"domain": "Self Service and Automation"
 	},
 	{
 		"trackCode": "CSA",
 		"order": 42,
 		"prompt": "During a data load, an administrator wants to confirm what the platform did with a CSV file before any records reach the target table. Where does imported data sit at this stage?",
 		"choices": [
-			"In a staging table generated for the import set, where rows wait until a transform runs",
-			"Directly inside the target table with a hidden flag",
 			"In the email outbox as unsent messages",
-			"In the browser cache of the administrator's session"
+			"In the browser cache of the administrator's session",
+			"Directly inside the target table with a hidden flag",
+			"In a staging table generated for the import set, where rows wait until a transform runs"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Loading data creates an import set whose rows live in a staging table; nothing touches the target table until a transform map is executed, which is what makes review and re-runs safe.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/integrate-applications/import-sets.html"
-		]
+		],
+		"domain": "Data Migration and Integration"
 	},
 	{
 		"trackCode": "CSA",
@@ -38828,68 +38871,72 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "A process owner is learning Flow Designer to automate task routing. Which statements describe the building blocks of a flow? (Choose two.)",
 		"choices": [
 			"A trigger starts the flow, such as a record being created or updated, or a schedule",
-			"Actions and flow logic define the steps executed after the trigger fires",
 			"Every flow must be written entirely in server-side script with no visual editor",
-			"Flows can only run against the incident table"
+			"Flows can only run against the incident table",
+			"Actions and flow logic define the steps executed after the trigger fires"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			1
+			3
 		],
 		"questionType": "multi",
 		"explanation": "Flows consist of a trigger (record-based or scheduled) plus a sequence of actions and logic in a natural-language visual editor; they work across tables and require no hand-written script for common automation.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/build-workflows/flow-designer.html"
-		]
+		],
+		"domain": "Self Service and Automation"
 	},
 	{
 		"trackCode": "CSA",
 		"order": 44,
 		"prompt": "Whenever an incident is created with Priority 1, the major incident manager must get an alert and a follow-up task must be generated automatically. How should an administrator implement this in Flow Designer?",
 		"choices": [
+			"Watch the incident list all day and react manually whenever a Priority 1 appears",
 			"Build a flow triggered on incident creation with a priority condition, then add actions to send the notification and create the task",
-			"Watch the incident list all day and react manually to red rows constrained by privacy impact assessment recommendations. (CSA-44-w1)",
-			"Add a mandatory checkbox asking callers to notify the manager themselves",
-			"Lower the priority of new incidents so the situation never occurs documented in the continuity plan attachment for the service. (CSA-44-w3)"
+			"Lower the priority of new incidents so the Priority 1 condition never occurs",
+			"Add a mandatory checkbox asking callers to notify the manager themselves documented in the continuity plan attachment for the service."
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"explanation": "A record-triggered flow filtered to Priority 1 incidents can chain actions such as Send Email (or notification) and Create Record for the follow-up task, automating the whole response without code.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/build-workflows/flow-designer.html"
-		]
+		],
+		"domain": "Self Service and Automation"
 	},
 	{
 		"trackCode": "CSA",
 		"order": 45,
 		"prompt": "You are the administrator for a new laptop catalog item. Hiring managers must supply asset tag and delivery location before checkout completes. Where do you configure those inputs?",
 		"choices": [
-			"Catalog item variables on the item record",
-			"Incident table dictionary attributes only",
 			"MID Server probe parameters",
+			"Incident table dictionary attributes only",
+			"Catalog item variables on the item record",
 			"Update set comparison filters"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Catalog variables collect user-supplied values on the request form and pass them into fulfillment flows.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-service-management/service-catalog-variables.html"
-		]
+		],
+		"domain": "Self Service and Automation"
 	},
 	{
 		"trackCode": "CSA",
 		"order": 46,
 		"prompt": "Agents report that suggested knowledge no longer appears when they open incidents. Which configuration area should you review first?",
 		"choices": [
-			"Knowledge properties and search integration on the incident form",
-			"Transform map coalesce keys for staging tables",
 			"Discovery schedule credentials",
-			"Payroll deduction business rules"
+			"Payroll deduction business rules",
+			"Transform map coalesce keys for staging tables",
+			"Knowledge properties and search integration on the incident form"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Knowledge deflection on incidents depends on knowledge base settings and how the incident form invokes search.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/knowledge-management/knowledge-search.html"
-		]
+		],
+		"domain": "Self Service and Automation"
 	},
 	{
 		"trackCode": "CSA",
@@ -38897,31 +38944,33 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "Your Virtual Agent bot cannot resolve password resets and must offer a live agent after two failed attempts. What do you configure?",
 		"choices": [
 			"A handoff topic or live-agent escalation path in Virtual Agent Designer",
-			"A table ACL that denies read on sys_user",
+			"A CMDB identification entry",
 			"A coalesce rule on the import set",
-			"A CMDB identification entry"
+			"A table ACL that denies read on sys_user"
 		],
 		"correctIndex": 0,
 		"explanation": "Virtual Agent Designer defines conversation topics and escalation to human agents when automated resolution fails.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/now-platform/virtual-agent.html"
-		]
+		],
+		"domain": "Self Service and Automation"
 	},
 	{
 		"trackCode": "CSA",
 		"order": 48,
 		"prompt": "The facilities team wants a simple portal form that creates an incident immediately without generating a requested item. What catalog artifact should you build?",
 		"choices": [
-			"A record producer tied to the incident table",
 			"An order guide with three RITMs",
-			"A transform map on sys_import_set_row",
-			"A scheduled import of CSV attachments"
+			"A scheduled import of CSV attachments",
+			"A record producer tied to the incident table",
+			"A transform map on sys_import_set_row"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Record producers present catalog-style forms that insert records directly on a target table such as incident.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-service-management/record-producers.html"
-		]
+		],
+		"domain": "Self Service and Automation"
 	},
 	{
 		"trackCode": "CSA",
@@ -38929,47 +38978,50 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "A software entitlement request must route to the software manager group for approval before provisioning tasks start. How should you automate that routing?",
 		"choices": [
 			"Attach a flow or workflow to the catalog item for approval and fulfillment",
-			"Disable ACLs on sc_req_item during checkout",
 			"Load approvers through a one-time import set without a transform",
+			"Disable ACLs on sc_req_item during checkout",
 			"Rely on homepage gauges to notify managers"
 		],
 		"correctIndex": 0,
 		"explanation": "Catalog fulfillment flows and workflows orchestrate approvals and downstream tasks after submission.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-service-management/catalog-fulfillment.html"
-		]
+		],
+		"domain": "Self Service and Automation"
 	},
 	{
 		"trackCode": "CSA",
 		"order": 50,
 		"prompt": "Contractors should browse catalog and knowledge in a branded workspace while IT staff keep the classic navigator. Which experience do you enable for them?",
 		"choices": [
-			"Employee Center or Service Portal with appropriate roles",
-			"The CMDB workspace exclusively",
 			"The update set retrieval console",
-			"The MID Server installation wizard"
+			"The MID Server installation wizard",
+			"Employee Center or Service Portal with appropriate roles",
+			"The CMDB workspace exclusively"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Employee Center and Service Portal deliver self-service catalog and knowledge to end users outside the admin UI.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-user-interface/service-portal.html"
-		]
+		],
+		"domain": "Self Service and Automation"
 	},
 	{
 		"trackCode": "CSA",
 		"order": 51,
 		"prompt": "You create u_project_task as a table extension of Task. Which fields are available on new records without redefining them?",
 		"choices": [
+			"Fields from sys_import_set_row only",
 			"Number, Opened by, Assignment group, and State from the parent Task table",
 			"Only the sys_id and nothing else from Task",
-			"Fields from cmdb_ci only",
-			"Fields from sys_import_set_row only"
+			"Fields from cmdb_ci only"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"explanation": "Extended tables inherit columns defined on the parent table such as Task numbering, assignment, and state.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/table-extension.html"
-		]
+		],
+		"domain": "Database Management and Platform Security"
 	},
 	{
 		"trackCode": "CSA",
@@ -38991,23 +39043,25 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-security/roles.html",
 			"https://www.servicenow.com/docs/r/platform-administration/groups.html"
-		]
+		],
+		"domain": "Database Management and Platform Security"
 	},
 	{
 		"trackCode": "CSA",
 		"order": 53,
 		"prompt": "After extending Task for u_change_task, agents complain the State field is missing on the form although it exists on Incident. What most likely explains the behavior?",
 		"choices": [
-			"The form layout for the extended table was never customized to include inherited fields",
 			"Task extensions cannot inherit any parent fields",
 			"State is stripped by every import set load",
-			"Coalesce always removes choice fields"
+			"Coalesce always removes choice fields",
+			"The form layout for the extended table was never customized to include inherited fields"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Inherited fields exist in the schema but must be placed on the extended table form like any other column.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/table-extension.html"
-		]
+		],
+		"domain": "Database Management and Platform Security"
 	},
 	{
 		"trackCode": "CSA",
@@ -39016,37 +39070,39 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "A new analytics team needs workspace access next week. Which administrator actions should you complete? (Choose three.)",
 		"choices": [
 			"Create or verify user records and assign appropriate roles",
-			"Share or publish reports and dashboards they require",
 			"Grant table and field access through ACLs or scoped application access",
-			"Delete all business rules globally before go-live"
+			"Delete all business rules globally before go-live",
+			"Share or publish reports and dashboards they require"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
 			1,
-			2
+			3
 		],
 		"explanation": "Onboarding combines user/role setup, report access, and data security via ACLs; disabling business rules is not a standard onboarding step.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/user-administration.html",
 			"https://www.servicenow.com/docs/r/platform-security/access-control-rules.html"
-		]
+		],
+		"domain": "Database Management and Platform Security"
 	},
 	{
 		"trackCode": "CSA",
 		"order": 55,
 		"prompt": "Payroll analysts must edit the u_salary field on u_employee, but all other staff should not see the value on the form. What control do you implement?",
 		"choices": [
+			"A Discovery credential alias",
 			"A field-level ACL granting read and write only to the payroll role",
 			"A homepage theme that hides the column",
-			"A catalog category restriction",
-			"A Discovery credential alias"
+			"A catalog category restriction"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"explanation": "Field ACLs restrict read and write on individual columns beyond table-level security.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-security/access-control-rules.html"
-		]
+		],
+		"domain": "Database Management and Platform Security"
 	},
 	{
 		"trackCode": "CSA",
@@ -39062,23 +39118,25 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"explanation": "Without a granting table ACL, the platform denies read access and lists appear empty to the user.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-security/access-control-rules.html"
-		]
+		],
+		"domain": "Database Management and Platform Security"
 	},
 	{
 		"trackCode": "CSA",
 		"order": 57,
 		"prompt": "You add the itil role to the Database Operations group. How do members receive the new permissions?",
 		"choices": [
-			"They inherit the role automatically through group membership",
 			"Each member must run a transform map manually",
 			"Roles apply only after the next instance clone",
-			"Group roles require a MID Server restart"
+			"Group roles require a MID Server restart",
+			"They inherit the role automatically through group membership"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Roles assigned to a group flow to all current and future members of that group.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/groups.html"
-		]
+		],
+		"domain": "Database Management and Platform Security"
 	},
 	{
 		"trackCode": "CSA",
@@ -39086,47 +39144,50 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "Finance users report the cost_center field is blank on vendor records while admins see values. What should you verify?",
 		"choices": [
 			"Whether a field ACL denies read access for their roles",
-			"Whether the coalesce field matches employee number",
 			"Whether the catalog item has variables",
-			"Whether Virtual Agent topics are published"
+			"Whether Virtual Agent topics are published",
+			"Whether the coalesce field matches employee number"
 		],
 		"correctIndex": 0,
 		"explanation": "When read is denied at the field level, non-authorized users see empty values even though data exists.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-security/access-control-rules.html"
-		]
+		],
+		"domain": "Database Management and Platform Security"
 	},
 	{
 		"trackCode": "CSA",
 		"order": 59,
 		"prompt": "Compliance requires social security numbers to be masked on every form regardless of role. Which declarative control enforces consistent field protection?",
 		"choices": [
-			"A data policy on the sensitive field",
 			"A Visual Task Board lane color",
-			"A service catalog thumbnail image",
-			"A homepage gauge refresh interval"
+			"A data policy on the sensitive field",
+			"A homepage gauge refresh interval",
+			"A service catalog thumbnail image"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"explanation": "Data policies apply masking and other protections to fields across the platform independent of form layout.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-security/data-policies.html"
-		]
+		],
+		"domain": "Database Management and Platform Security"
 	},
 	{
 		"trackCode": "CSA",
 		"order": 60,
 		"prompt": "Your custom u_vendor table must always capture contract_end before save. Where do you set that requirement at the schema level?",
 		"choices": [
-			"Mark the field Mandatory in the dictionary entry for u_vendor.contract_end",
-			"Add a gauge to the executive homepage",
 			"Disable write ACLs on the table",
-			"Load the field through an import set only"
+			"Load the field through an import set only",
+			"Add a gauge to the executive homepage",
+			"Mark the field Mandatory in the dictionary entry for u_vendor.contract_end"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "The dictionary Mandatory attribute enforces required values at the database layer for the field.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/dictionary.html"
-		]
+		],
+		"domain": "Database Management and Platform Security"
 	},
 	{
 		"trackCode": "CSA",
@@ -39134,31 +39195,33 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "Support tickets show truncated descriptions after agents paste long notes. Which dictionary setting should you increase?",
 		"choices": [
 			"Max length on the description field",
-			"Coalesce priority on the transform map",
+			"MID Server thread count",
 			"Update set state to Complete",
-			"MID Server thread count"
+			"Coalesce priority on the transform map"
 		],
 		"correctIndex": 0,
 		"explanation": "Dictionary max length controls how many characters a string field accepts before truncation.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/dictionary.html"
-		]
+		],
+		"domain": "Database Management and Platform Security"
 	},
 	{
 		"trackCode": "CSA",
 		"order": 62,
 		"prompt": "You need a dropdown of approved priority values on u_project without hard-coding them in a client script. Where are the options maintained?",
 		"choices": [
-			"Choice list entries linked from the dictionary Choice type field",
 			"Attachment encryption keys",
-			"Discovery status probes",
-			"Plugin store checkout receipts"
+			"Plugin store checkout receipts",
+			"Choice list entries linked from the dictionary Choice type field",
+			"Discovery status probes"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Choice fields draw their dropdown values from choice lists configured in the dictionary.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/field-types.html"
-		]
+		],
+		"domain": "Database Management and Platform Security"
 	},
 	{
 		"trackCode": "CSA",
@@ -39166,63 +39229,67 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "A contractor needs to manage ACL records but should not receive full admin rights. Which role is the better fit?",
 		"choices": [
 			"security_admin",
-			"admin with no conditions",
 			"guest",
+			"admin with no conditions",
 			"mid_server"
 		],
 		"correctIndex": 0,
 		"explanation": "security_admin focuses on security configuration such as ACLs without the full breadth of admin privileges.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-security/roles.html"
-		]
+		],
+		"domain": "Database Management and Platform Security"
 	},
 	{
 		"trackCode": "CSA",
 		"order": 64,
 		"prompt": "Idle sessions must log out after fifteen minutes per corporate policy. Which record type holds that timeout value?",
 		"choices": [
-			"A system property such as glide.ui.session_timeout",
 			"A transform map script include",
+			"A catalog fulfillment flow variable",
 			"A CMDB relationship type",
-			"A catalog fulfillment flow variable"
+			"A system property such as glide.ui.session_timeout"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Application properties like glide.ui.session_timeout control platform-wide session behavior.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/system-properties.html"
-		]
+		],
+		"domain": "Instance Configuration"
 	},
 	{
 		"trackCode": "CSA",
 		"order": 65,
 		"prompt": "Auditors require short_description on u_audit_finding to be required for every insert. You prefer schema enforcement over a UI Policy. What do you configure?",
 		"choices": [
-			"Set Mandatory on the dictionary entry for u_audit_finding.short_description",
-			"Hide the field with a client script only",
 			"Grant write ACL to every user",
-			"Load findings exclusively through email inbound actions"
+			"Load findings exclusively through email inbound actions",
+			"Set Mandatory on the dictionary entry for u_audit_finding.short_description",
+			"Hide the field with a client script only"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Dictionary Mandatory enforces required values at the table level regardless of form behavior.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/dictionary.html"
-		]
+		],
+		"domain": "Database Management and Platform Security"
 	},
 	{
 		"trackCode": "CSA",
 		"order": 66,
 		"prompt": "The u_asset_tag field should display but never be edited on the form after creation. Which dictionary attribute helps?",
 		"choices": [
+			"Published on the knowledge article",
 			"Read only on the dictionary entry",
 			"Coalesce on an import map",
-			"Complete on the update set",
-			"Published on the knowledge article"
+			"Complete on the update set"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"explanation": "Dictionary read-only prevents users from changing the field value while still displaying it.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/dictionary.html"
-		]
+		],
+		"domain": "Database Management and Platform Security"
 	},
 	{
 		"trackCode": "CSA",
@@ -39231,51 +39298,54 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "You are hardening data quality on a custom table. Which dictionary attributes directly constrain user input? (Choose two.)",
 		"choices": [
 			"Mandatory",
-			"Max length",
 			"Homepage theme",
+			"Max length",
 			"Catalog picture icon"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			1
+			2
 		],
 		"explanation": "Mandatory and max length are dictionary attributes that enforce required values and string size limits.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/dictionary.html"
-		]
+		],
+		"domain": "Database Management and Platform Security"
 	},
 	{
 		"trackCode": "CSA",
 		"order": 68,
 		"prompt": "u_incident_child extends incident and needs a tighter max length on work_notes than the parent. How do you override the parent dictionary?",
 		"choices": [
-			"Edit the dictionary entry on the child table field",
 			"Delete the parent incident table",
+			"Retire the default update set",
 			"Create a transform map without field maps",
-			"Retire the default update set"
+			"Edit the dictionary entry on the child table field"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Extended tables can override parent dictionary attributes by editing the field entry on the child table.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/table-extension.html"
-		]
+		],
+		"domain": "Database Management and Platform Security"
 	},
 	{
 		"trackCode": "CSA",
 		"order": 69,
 		"prompt": "A manager wants a report listing incidents with the assignee department name. The incident stores assignment_group as a reference. How do you expose the department?",
 		"choices": [
-			"Dot-walk through assignment_group.department in the report builder",
-			"Export the CMDB to CSV and merge manually",
 			"Add a MID Server probe for departments",
-			"Disable ACL debugging permanently"
+			"Disable ACL debugging permanently",
+			"Dot-walk through assignment_group.department in the report builder",
+			"Export the CMDB to CSV and merge manually"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Reference fields support dot-walking to display related fields from referenced tables in reports.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/reference-fields.html"
-		]
+		],
+		"domain": "Database Management and Platform Security"
 	},
 	{
 		"trackCode": "CSA",
@@ -39291,87 +39361,93 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"explanation": "Groups carry roles for access and are referenced as assignment groups on task records.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/groups.html"
-		]
+		],
+		"domain": "Database Management and Platform Security"
 	},
 	{
 		"trackCode": "CSA",
 		"order": 71,
 		"prompt": "While troubleshooting ACL behavior you impersonate the affected user with security debugging enabled. What does the debugger show?",
 		"choices": [
-			"Which ACL rules passed or failed for each attempted operation",
 			"The encrypted password hash in clear text",
 			"Every plugin license expiration date",
-			"All import set attachments on disk"
+			"All import set attachments on disk",
+			"Which ACL rules passed or failed for each attempted operation"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Security debugging during impersonation lists ACL evaluation results for the simulated session.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-security/access-control-rules.html"
-		]
+		],
+		"domain": "Database Management and Platform Security"
 	},
 	{
 		"trackCode": "CSA",
 		"order": 72,
 		"prompt": "A table ACL must allow employees to create incidents but prevent them from deleting any incident record. How do you model that?",
 		"choices": [
-			"Separate ACL rules for create (grant) and delete (no grant or explicit deny)",
-			"One ACL that grants admin to everyone",
+			"A create ACL that grants the employee role, without a delete ACL that grants that role",
 			"Remove the incident table from the dictionary",
-			"Load incidents only through Discovery"
+			"Load incidents only through Discovery",
+			"One ACL that grants admin to everyone"
 		],
 		"correctIndex": 0,
-		"explanation": "Each operation (read, write, create, delete) is evaluated independently through operation-specific ACLs.",
+		"explanation": "ACLs are evaluated per operation. Granting create for the employee role allows inserts; delete remains denied when those users do not pass any delete ACL conditions. There is no separate explicit-deny ACL type for classic table operations.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-security/access-control-rules.html"
-		]
+		],
+		"domain": "Database Management and Platform Security"
 	},
 	{
 		"trackCode": "CSA",
 		"order": 73,
 		"prompt": "Integration credentials are stored in a password field on u_integration_profile. How does the platform protect the value at rest?",
 		"choices": [
-			"Platform encryption for password field types",
 			"Plain text in the activity formatter",
-			"Attachment to every notification email",
-			"Replication to the MID Server log file"
+			"Platform encryption for password field types",
+			"Replication to the MID Server log file",
+			"Attachment to every notification email"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"explanation": "Password fields use platform encryption and masking rather than storing clear-text secrets.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-security/encryption.html"
-		]
+		],
+		"domain": "Database Management and Platform Security"
 	},
 	{
 		"trackCode": "CSA",
 		"order": 74,
 		"prompt": "Security Center flags excessive admin accounts during a quarterly review. What is the recommended remediation?",
 		"choices": [
-			"Reduce admin assignments and apply least-privilege roles",
-			"Disable every ACL on production",
 			"Delete all groups before reimporting users",
+			"Disable every ACL on production",
+			"Reduce admin assignments and apply least-privilege roles",
 			"Commit every in-progress update set immediately"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Security Center guidance promotes least privilege by limiting broad roles such as admin.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-security/security-center.html"
-		]
+		],
+		"domain": "Instance Configuration"
 	},
 	{
 		"trackCode": "CSA",
 		"order": 75,
 		"prompt": "A developer in the HR scoped application cannot edit records owned by the Global scope. What must the administrator process?",
 		"choices": [
-			"Cross-scope access request or move artifacts into the correct scope",
-			"Deletion of every global ACL",
 			"Retrieval of an empty update set",
-			"Installation of a second MID Server cluster"
+			"Installation of a second MID Server cluster",
+			"Deletion of every global ACL",
+			"Cross-scope access request or move artifacts into the correct scope"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Application scopes isolate artifacts; cross-scope privileges require explicit access grants.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/application-scopes.html"
-		]
+		],
+		"domain": "Database Management and Platform Security"
 	},
 	{
 		"trackCode": "CSA",
@@ -39379,31 +39455,33 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "Self-service users need create access on incident but must not edit closed incidents. Which ACL pattern fits?",
 		"choices": [
 			"A create ACL for the role plus a write ACL with a condition that state is not closed",
-			"A single ACL granting admin to all users",
+			"A UI macro that hides the navigator",
 			"A field map that coalesces on number",
-			"A UI macro that hides the navigator"
+			"A single ACL granting admin to all users"
 		],
 		"correctIndex": 0,
 		"explanation": "Conditional write ACLs combine role checks with record conditions such as state values.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-security/access-control-rules.html"
-		]
+		],
+		"domain": "Database Management and Platform Security"
 	},
 	{
 		"trackCode": "CSA",
 		"order": 77,
 		"prompt": "Only the assigned technician should change assigned_to on active incidents. How do you restrict that column?",
 		"choices": [
-			"A field-level write ACL conditioned on the current user matching assignment rules",
 			"A catalog client script on the portal homepage",
-			"A transform map source script",
-			"A discovery status change schedule"
+			"A discovery status change schedule",
+			"A field-level write ACL conditioned on the current user matching assignment rules",
+			"A transform map source script"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Field write ACLs with conditions limit who can modify specific columns on matching records.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-security/access-control-rules.html"
-		]
+		],
+		"domain": "Database Management and Platform Security"
 	},
 	{
 		"trackCode": "CSA",
@@ -39411,47 +39489,50 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "You loaded a CSV into an import set and staging rows appear, but no user records were created. What should you inspect first?",
 		"choices": [
 			"The transform map field mappings and transform errors",
-			"The Virtual Agent topic order",
 			"The service catalog category tree",
+			"The Virtual Agent topic order",
 			"The homepage drag-and-drop layout"
 		],
 		"correctIndex": 0,
 		"explanation": "Staging without target inserts usually indicates missing or incorrect transform map mappings or script errors.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/integrate-applications/transform-maps.html"
-		]
+		],
+		"domain": "Data Migration and Integration"
 	},
 	{
 		"trackCode": "CSA",
 		"order": 79,
 		"prompt": "An import set shows Loaded state with thousands of rows, yet sys_user counts are unchanged. The scheduled data source is healthy. What is the next step?",
 		"choices": [
-			"Run or verify the transform map against the import set",
-			"Mark every update set Complete",
 			"Disable all data policies instance-wide",
-			"Remove coalesce from unrelated tables"
+			"Remove coalesce from unrelated tables",
+			"Mark every update set Complete",
+			"Run or verify the transform map against the import set"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Data remains in staging until a transform map processes import set rows onto the target table.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/integrate-applications/import-sets.html"
-		]
+		],
+		"domain": "Data Migration and Integration"
 	},
 	{
 		"trackCode": "CSA",
 		"order": 80,
 		"prompt": "After transform, every row logs Field map script error and nothing inserts. Where do you read the failure details?",
 		"choices": [
-			"Transform history and import set row error fields",
 			"Knowledge article feedback votes",
-			"Service catalog checkout receipts",
-			"Visual Task Board WIP limits"
+			"Visual Task Board WIP limits",
+			"Transform history and import set row error fields",
+			"Service catalog checkout receipts"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Transform history and row-level error columns document mapping and script failures during import.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/integrate-applications/transform-maps.html"
-		]
+		],
+		"domain": "Data Migration and Integration"
 	},
 	{
 		"trackCode": "CSA",
@@ -39459,63 +39540,67 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "HR provides a spreadsheet with columns employee_id, email, and department_name to load into sys_user. What maps those columns to target fields?",
 		"choices": [
 			"Field maps on a transform map from the import set table to sys_user",
-			"A UI policy on the incident form",
 			"A client script calling g_form on load",
+			"A UI policy on the incident form",
 			"A business rule with after timing only"
 		],
 		"correctIndex": 0,
 		"explanation": "Transform map field maps define how each staging column populates fields on the target table.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/integrate-applications/transform-maps.html"
-		]
+		],
+		"domain": "Data Migration and Integration"
 	},
 	{
 		"trackCode": "CSA",
 		"order": 82,
 		"prompt": "Staging column mail and target field email should link automatically because the names differ slightly. What tool assists the initial mapping?",
 		"choices": [
-			"Manual field maps on the transform map after reviewing staging columns",
 			"Auto Map Matching Fields when names are identical only",
+			"Publishing a Virtual Agent topic",
 			"Deleting the import set table",
-			"Publishing a Virtual Agent topic"
+			"Manual field maps on the transform map after reviewing staging columns"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "When column names differ, administrators create explicit field maps; auto map applies only to identical names.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/integrate-applications/transform-maps.html"
-		]
+		],
+		"domain": "Data Migration and Integration"
 	},
 	{
 		"trackCode": "CSA",
 		"order": 83,
 		"prompt": "Weekly user feeds should update existing accounts matched on employee_number instead of creating duplicates. Which transform setting do you enable?",
 		"choices": [
-			"Coalesce on employee_number in the transform map",
-			"Mandatory on the catalog item picture",
 			"Read only on the homepage gauge",
-			"Complete on the default update set"
+			"Complete on the default update set",
+			"Coalesce on employee_number in the transform map",
+			"Mandatory on the catalog item picture"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Coalesce fields match incoming rows to existing records for update rather than insert.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/integrate-applications/transform-maps.html"
-		]
+		],
+		"domain": "Data Migration and Integration"
 	},
 	{
 		"trackCode": "CSA",
 		"order": 84,
 		"prompt": "You customized a form layout, business rule, and UI policy in dev and need them in test. What container captures those changes?",
 		"choices": [
+			"A knowledge subscription",
 			"An update set marked In Progress while you develop",
 			"A one-time CSV import set load",
-			"A Discovery schedule",
-			"A knowledge subscription"
+			"A Discovery schedule"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"explanation": "Update sets record configuration changes such as forms, business rules, and UI policies for migration.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/update-sets.html"
-		]
+		],
+		"domain": "Data Migration and Integration"
 	},
 	{
 		"trackCode": "CSA",
@@ -39531,23 +39616,25 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"explanation": "Update sets move grouped configuration through complete, export/retrieve, preview, and commit steps across instances.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/update-sets.html"
-		]
+		],
+		"domain": "Data Migration and Integration"
 	},
 	{
 		"trackCode": "CSA",
 		"order": 86,
 		"prompt": "On the incident form, priority must become mandatory when category changes to Software. You add an onChange client script. Which API call enforces mandatory?",
 		"choices": [
-			"g_form.setMandatory('priority', true)",
 			"current.priority.setMandatory(true)",
 			"gs.setMandatory on the server",
-			"GlideRecord.setMandatory in the browser"
+			"GlideRecord.setMandatory in the browser",
+			"g_form.setMandatory('priority', true)"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "The g_form client API controls mandatory, visible, and read-only state on the form in client scripts.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/client-scripts.html"
-		]
+		],
+		"domain": "Configuring Applications for Collaboration"
 	},
 	{
 		"trackCode": "CSA",
@@ -39556,19 +39643,20 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "An update set retrieved on test contains customization artifacts. Which record types are commonly included? (Choose two.)",
 		"choices": [
 			"Business Rules",
-			"UI Policies",
 			"End-user password values",
-			"Every historical incident row"
+			"Every historical incident row",
+			"UI Policies"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			1
+			3
 		],
 		"explanation": "Update sets package configuration such as business rules and UI policies, not passwords or bulk transactional data.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/update-sets.html"
-		]
+		],
+		"domain": "Database Management and Platform Security"
 	},
 	{
 		"trackCode": "CSA",
@@ -39576,37 +39664,39 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"questionType": "multi",
 		"prompt": "You are preparing a data migration weekend. Which preparatory actions should the administrator complete? (Choose three.)",
 		"choices": [
-			"Validate transform maps and coalesce keys on a sub-production instance",
 			"Preview retrieved update sets before production commit",
-			"Verify import set tables and data sources load expected row counts",
-			"Delete all ACLs to speed up transforms"
+			"Validate transform maps and coalesce keys on a sub-production instance",
+			"Delete all ACLs to speed up transforms",
+			"Verify import set tables and data sources load expected row counts"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
 			1,
-			2
+			3
 		],
 		"explanation": "Migration readiness includes testing transforms, previewing update sets, and confirming staging loads; removing ACLs is unsafe.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/integrate-applications/import-sets.html",
 			"https://www.servicenow.com/docs/r/platform-administration/update-sets.html"
-		]
+		],
+		"domain": "Data Migration and Integration"
 	},
 	{
 		"trackCode": "CSA",
 		"order": 89,
 		"prompt": "Before committing a retrieved update set on production, leadership requires validation in a lower environment. What reduces deployment risk?",
 		"choices": [
-			"Preview the update set on sub-production and resolve conflicts first",
-			"Skip preview because production is the source of truth",
 			"Commit during peak hours without communication",
+			"Skip preview because production is the source of truth",
+			"Preview the update set on sub-production and resolve conflicts first",
 			"Disable every business rule globally on production"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Previewing update sets in sub-production surfaces conflicts before changes reach production.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/update-sets.html"
-		]
+		],
+		"domain": "Data Migration and Integration"
 	}
 ] as unknown as DevPracticeQuestionRow[];
