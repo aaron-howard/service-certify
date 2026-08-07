@@ -1,0 +1,209 @@
+[
+	{
+		"trackCode": "CIS-SIR",
+		"order": 2,
+		"prompt": "How does ServiceNow documentation describe Security Incident Response?",
+		"choices": [
+			"A discovery framework that maps application dependencies across the CMDB only",
+			"A service catalog workflow for provisioning laptops to new employees",
+			"A change advisory board process for approving emergency production releases",
+			"An application that manages the security incident life cycle from analysis through containment, eradication, recovery, and post-incident review"
+		],
+		"correctIndex": 3,
+		"explanation": "Documentation positions SIR as managing the security incident life cycle from analysis through containment, eradication, recovery, and into post-incident review, knowledge capture, and closure.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/what-is-sir.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/sir-landing-page.html"
+		],
+		"domain": "SIR Overview and Data Visualization"
+	},
+	{
+		"trackCode": "CIS-SIR",
+		"order": 67,
+		"questionType": "multi",
+		"prompt": "Which three changes cause the platform to recalculate a security incident risk score? (Choose three.)",
+		"choices": [
+			"Business impact on the Security Incident form",
+			"Priority on the Security Incident form",
+			"Employee vacation calendar updates for SOC staffing",
+			"Business impact on the Affected Services related list"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [
+			0,
+			1,
+			3
+		],
+		"explanation": "Risk score recalculation is triggered when Business impact or Priority change on the incident, and when Business impact changes on related lists such as Affected Services. Vacation calendars are unrelated.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/setup-assistant-reference.html"
+		],
+		"domain": "Risk Calculations and Post Incident Response"
+	},
+	{
+		"trackCode": "CIS-SIR",
+		"order": 63,
+		"prompt": "An analyst must escalate a confirmed data breach into Major Security Incident Management. Which action initiates MSIM workflows?",
+		"choices": [
+			"Close the security incident and recreate it as a standard IT incident record",
+			"Delete child tasks and reopen the incident under a new assignment group only",
+			"Convert the record to a change request awaiting emergency CAB approval",
+			"Promote the security incident to a Major Security Incident"
+		],
+		"correctIndex": 3,
+		"explanation": "Promote to Major Security Incident creates the MSI record and starts Major Security Incident Management collaboration and tracking workflows.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/promote-to-major-security-incident.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/promoting-sir-to-msim.html"
+		],
+		"domain": "Security Incident Response Management"
+	},
+	{
+		"trackCode": "CIS-SIR",
+		"order": 0,
+		"prompt": "Which role is required to install the Security Incident Response application on a ServiceNow instance?",
+		"choices": [
+			"admin",
+			"sn_sec_ciso",
+			"sn_si.admin",
+			"itil"
+		],
+		"correctIndex": 0,
+		"explanation": "The admin role has the elevated privileges needed to install Security Incident Response and related Security Operations store applications.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/install-and-configure-sir.html"
+		],
+		"domain": "SIR Overview and Data Visualization"
+	},
+	{
+		"trackCode": "CIS-SIR",
+		"order": 1,
+		"prompt": "After Security Incident Response is activated, which prerequisite most directly enables threat intelligence enrichment on new incidents?",
+		"choices": [
+			"Hardware Asset Management normalization rules for software publisher mapping",
+			"Service Catalog item categories for employee onboarding request routing",
+			"Discovery schedules probing every subnet on a fixed hourly interval",
+			"Threat Intelligence plugin activation with configured feed and lookup sources"
+		],
+		"correctIndex": 3,
+		"explanation": "Threat intelligence enrichment requires the Threat Intelligence application and configured sources that SIR can query during incident creation and triage.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/si-observ-data-enrich.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/show-enrich-data-for-si.html"
+		],
+		"domain": "SIR Overview and Data Visualization"
+	},
+	{
+		"trackCode": "CIS-SIR",
+		"order": 5,
+		"prompt": "A SOC manager wants executives to see open critical incidents and mean time to contain trends. Which SIR feature should be configured first?",
+		"choices": [
+			"Discovery credentials assigned to every Linux server CI class globally",
+			"Service level agreements on catalog items for password reset requests",
+			"HR onboarding workflows that provision badges before start dates",
+			"Security Operations dashboards with role-appropriate widgets and filters"
+		],
+		"correctIndex": 3,
+		"explanation": "Security Operations dashboards surface operational and executive KPIs such as open critical incidents and containment metrics for targeted audiences.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/c_SIROverview.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/view-ciso-reporting-overview-dashboard.html"
+		],
+		"domain": "SIR Overview and Data Visualization"
+	},
+	{
+		"trackCode": "CIS-SIR",
+		"order": 6,
+		"prompt": "Which dashboard widget type best visualizes the count of security incidents grouped by priority over the last thirty days?",
+		"choices": [
+			"Bar or column chart driven by a filtered security incident report",
+			"Calendar heat map of employee vacation balances by department",
+			"Gauge displaying average catalog checkout fulfillment duration",
+			"Single score widget showing total active CMDB configuration items"
+		],
+		"correctIndex": 0,
+		"explanation": "Grouped bar or column charts on filtered incident reports are standard for showing priority distribution trends over time.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/c_SIROverview.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/reports-and-metrics.html"
+		],
+		"domain": "SIR Overview and Data Visualization"
+	},
+	{
+		"trackCode": "CIS-SIR",
+		"order": 7,
+		"questionType": "multi",
+		"prompt": "Which three groups are primary audiences for Security Incident Response reporting dashboards? (Choose three.)",
+		"choices": [
+			"Security Managers who oversee SOC operations and staffing",
+			"Security Analysts who perform day-to-day triage and investigation",
+			"Facilities coordinators who manage building access badge provisioning",
+			"CIOs and CISOs who need executive visibility into security posture"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [
+			0,
+			1,
+			3
+		],
+		"explanation": "SIR reporting targets security practitioners, SOC leadership, and executive security stakeholders rather than unrelated operational teams.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/c_SIROverview.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/view-security-analyst-overview-dashboard.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/view-security-incident-manager-dashboard.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/view-ciso-reporting-overview-dashboard.html"
+		],
+		"domain": "SIR Overview and Data Visualization"
+	},
+	{
+		"trackCode": "CIS-SIR",
+		"order": 10,
+		"prompt": "During active ransomware encryption, the SOC must limit spread before forensic imaging. What containment approach should precede disk capture on affected endpoints?",
+		"choices": [
+			"Immediate full disk wipe on every subnet before any analyst triage begins",
+			"Network isolation of compromised hosts while preserving volatile memory where feasible",
+			"Convert the event to a standard IT incident and defer containment tasks",
+			"Disable all security integrations until quarterly vulnerability scans finish"
+		],
+		"correctIndex": 1,
+		"explanation": "Effective ransomware response isolates affected systems to stop spread while preserving evidence needed for investigation and legal review.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/what-is-sir.html"
+		],
+		"domain": "Incident Response Strategy"
+	},
+	{
+		"trackCode": "CIS-SIR",
+		"order": 16,
+		"prompt": "Suspected lateral movement is detected while forensic collection tools are still deploying. What strategic trade-off should the incident commander prioritize?",
+		"choices": [
+			"Delay all containment until every endpoint has a full disk image completed",
+			"Disable threat intelligence feeds until the investigation reaches closed state",
+			"Close the parent incident and open separate IT incidents for each affected host",
+			"Segment high-risk subnets quickly while continuing targeted evidence collection on key hosts"
+		],
+		"correctIndex": 3,
+		"explanation": "Live intrusions require balancing rapid containment to stop spread with sufficient evidence collection on priority systems for root-cause analysis.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/what-is-sir.html"
+		],
+		"domain": "Incident Response Strategy"
+	},
+	{
+		"trackCode": "CIS-SIR",
+		"order": 18,
+		"prompt": "A parent security incident spans multiple affected hosts requiring separate investigation tracks. What record structure should the lead analyst use?",
+		"choices": [
+			"Problem records only, closing the parent incident before child work begins",
+			"Child security incidents linked to the parent with rolled-up status and context",
+			"Duplicate parent incidents with identical numbers for each host separately",
+			"Change tasks on the change request table with no security incident linkage"
+		],
+		"correctIndex": 1,
+		"explanation": "Parent and child security incidents let teams parallelize host-level investigations while maintaining consolidated oversight.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/c_ParentChildRelationships.html"
+		],
+		"domain": "Incident Response Strategy"
+	}
+]
