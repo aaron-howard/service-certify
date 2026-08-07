@@ -1,0 +1,416 @@
+[
+	{
+		"trackCode": "CPOE",
+		"order": 150,
+		"prompt": "After CI ownership findings, CMDB accuracy blocks service mapping for a digital transformation initiative. Which CSDM foundation approach should the platform owner sponsor first?",
+		"choices": [
+			"Establish business application and service ownership with foundation data classes before expanding discovery scope",
+			"Populate every possible CI class immediately without assigning data stewards",
+			"Defer CMDB work until all legacy applications are fully retired",
+			"Rely on manual spreadsheets outside ServiceNow for authoritative service records"
+		],
+		"correctIndex": 0,
+		"explanation": "CSDM foundation data with clear ownership creates a trustworthy base for service mapping; ungoverned population or external spreadsheets undermine enterprise visibility.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-governance.html"
+		],
+		"domain": "ServiceNow Governance"
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 180,
+		"prompt": "Quarterly access reviews reveal persistent over-provisioned admin roles on regulated ServiceNow data. What should the platform owner prioritize to strengthen regulatory alignment?",
+		"choices": [
+			"Implement least-privilege role design, automated certification workflows, and executive reporting on overdue attestations",
+			"Extend review cycles to annual intervals to reduce stakeholder burden",
+			"Remove certification requirements for roles tied to regulated data to reduce review backlog",
+			"Allow managers to bulk-approve all roles without individual review"
+		],
+		"correctIndex": 0,
+		"explanation": "Sustainable compliance requires least-privilege design, automated certification, and visible attestation metrics—not weakened review cadence or blanket approvals.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-security/platform-security.html"
+		],
+		"domain": "Compliance and Security"
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 194,
+		"prompt": "Enterprise architects are underutilized in platform decisions, and the CIO wants stronger innovation governance. How should the platform owner engage enterprise architecture?",
+		"choices": [
+			"Replace architecture review with developer peer code review for all platform changes",
+			"Defer architecture engagement until every legacy system is decommissioned",
+			"Embed architects in demand intake, design reviews, and capability roadmapping with decision rights on cross-domain patterns",
+			"Limit architect involvement to post-production documentation only"
+		],
+		"correctIndex": 2,
+		"explanation": "Enterprise architecture adds innovation value when engaged early in demand, design, and roadmap decisions—not relegated to after-the-fact documentation.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		],
+		"domain": "Innovation"
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 195,
+		"prompt": "Business units demand faster workflow delivery, and the platform owner must scale citizen development safely. Which approach best balances innovation with governance?",
+		"choices": [
+			"Provide approved templates, scoped roles, guardrail training, and a governed intake path for citizen-built applications",
+			"Grant all business users admin access to eliminate delivery bottlenecks",
+			"Ban citizen development until a multi-year custom development backlog clears",
+			"Allow unscoped global applications without review to maximize speed"
+		],
+		"correctIndex": 0,
+		"explanation": "Citizen development scales through templates, scoped access, training, and governed intake—not unrestricted admin rights or outright prohibition.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/servicenow-platform/servicenow-platform.html"
+		],
+		"domain": "Innovation"
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 203,
+		"questionType": "multi",
+		"prompt": "Innovation champions operate in twelve countries, and the platform owner must standardize their operating model. Which elements should every champion chapter implement? (Choose two.)",
+		"choices": [
+			"A recurring forum cadence that converts business ideas into scored backlog items for the CoEI intake process",
+			"Documented playbooks for reusing approved integrations, flows, and data models across similar use cases",
+			"Permanent delegation of unrestricted admin rights so champions can bypass security review queues",
+			"Exclusive focus on internal hackathons without follow-through into production readiness gates"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "Champion chapters sustain innovation through structured cadence, backlog conversion, and reusable playbooks—not unchecked admin access or disconnected hackathon activity.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/servicenow-platform/servicenow-platform.html"
+		],
+		"domain": "Innovation"
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 210,
+		"prompt": "When business units need speed, HR and Finance both sponsor citizen development cohorts, and the platform owner sees duplicated training and conflicting guardrails. What organizational adjustment best supports enterprise strategy?",
+		"choices": [
+			"Unify cohort curriculum, shared success metrics, and a single CoEI-sponsored certification path across sponsoring functions",
+			"Allow each function to maintain separate untracked builder programs without central coordination",
+			"Disband both cohorts and require all requests through a single IT ticket queue",
+			"Mandate that only HR employees may enroll as citizen developers going forward"
+		],
+		"correctIndex": 0,
+		"explanation": "Citizen development in organizational strategy requires unified curriculum, metrics, and certification across functions—not siloed programs or arbitrary enrollment restrictions.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		],
+		"domain": "Innovation"
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 97,
+		"questionType": "multi",
+		"prompt": "A sponsor wants to accelerate go-live by reducing test scope on a regulated implementation. Which delivery safeguards should the platform owner defend? (Choose two.)",
+		"choices": [
+			"Risk-based regression coverage for critical workflows, integrations, and security controls",
+			"Business acceptance evidence tied to launch criteria and rollback decisions",
+			"Elimination of audit evidence because testing was already performed by developers",
+			"Production deployment before defect triage so teams can learn from live users"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "Implementation leadership protects risk-based testing and acceptance evidence, especially for regulated launches where speed cannot replace launch readiness.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/install-and-upgrade/concept/c_UpgradeBestPractices.html"
+		],
+		"domain": "Implementation and Delivery"
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 117,
+		"questionType": "multi",
+		"prompt": "Before each platform upgrade in a regulated enterprise, which testing activities should the platform owner require? (Choose two.)",
+		"choices": [
+			"Execute ATF suites against customized workflows in a clone environment",
+			"Review vendor release notes for breaking changes affecting governed integrations",
+			"Skip clone testing when the vendor marks the release as low risk",
+			"Deploy to production first and backfill test evidence afterward"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "Upgrade readiness in regulated environments requires clone-based automated testing plus release note review; skipping tests or reverse-order deployment increases compliance risk.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/install-and-upgrade/concept/c_TestingUpgradeReadiness.html"
+		],
+		"domain": "Implementation and Delivery"
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 151,
+		"prompt": "A CIO asks how family release cadence should align with enterprise change governance. What should the platform owner recommend?",
+		"choices": [
+			"Map vendor family releases to a published enterprise calendar with risk-tiered intake and blackout windows",
+			"Apply every vendor release to production on the vendor publish date without impact review",
+			"Freeze the instance on the current family version until all customizations are eliminated",
+			"Let each application team schedule family upgrades independently without coordination"
+		],
+		"correctIndex": 0,
+		"explanation": "Family release cadence must integrate with enterprise change governance through shared calendars, risk tiers, and blackout rules—not ad hoc or vendor-only timing.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/install-and-upgrade/concept/c_UpgradeBestPractices.html"
+		],
+		"domain": "ServiceNow Governance"
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 3,
+		"prompt": "A regional agency documents chronic duplicate workflows across HR, IT, and facilities. What is the first step in creating a ServiceNow platform strategy to address the problem?",
+		"choices": [
+			"Facilitate cross-functional discovery to map shared processes, pain points, and desired outcomes",
+			"Postpone strategy work until every legacy system is fully decommissioned",
+			"Purchase additional product SKUs before validating common workflow patterns",
+			"Mandate a single application team to rebuild all processes without stakeholder input"
+		],
+		"correctIndex": 0,
+		"explanation": "Strategy starts with understanding organizational pain and aligning stakeholders on shared outcomes before committing to platform capabilities or sequencing.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		],
+		"domain": "Strategy"
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 9,
+		"prompt": "A multinational firm must sequence HR, ITSM, and security capabilities with shared identity data. Which implementation sequence best accounts for dependencies and ROI?",
+		"choices": [
+			"Establish foundational data and ITSM core, then layer HR and security workflows that consume trusted records",
+			"Launch all three domains in parallel without shared master data governance",
+			"Implement security tooling last after every business process is fully automated",
+			"Begin with cosmetic portal changes before any integration or data work"
+		],
+		"correctIndex": 0,
+		"explanation": "Sequencing should respect data and process dependencies—core platform and shared records first—so downstream capabilities deliver reliable ROI.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/platform-administration.html"
+		],
+		"domain": "Strategy"
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 15,
+		"prompt": "A healthcare organization cites clinician resistance after a failed portal rollout. Which OCM orchestration should the platform owner lead before the next wave?",
+		"choices": [
+			"Postpone user involvement until development completes all custom modules",
+			"Co-design sessions with affected roles to align workflows, training, and success measures",
+			"Mandate usage through policy enforcement without enablement support",
+			"Re-launch identical workflows with a new logo and color scheme only"
+		],
+		"correctIndex": 1,
+		"explanation": "Recovery from adoption failure requires collaborative redesign and enablement so users see how the platform improves their work.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		],
+		"domain": "Strategy"
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 20,
+		"prompt": "The CIO asks how platform strategy aligns with corporate strategy during an annual planning cycle. What should the platform owner present first?",
+		"choices": [
+			"A mapping of platform initiatives to enterprise strategic pillars and measurable contributions",
+			"A catalog of every plugin installed on the production instance",
+			"A chronological list of past incidents without forward-looking plans",
+			"Technical debt items with no linkage to business priorities"
+		],
+		"correctIndex": 0,
+		"explanation": "Corporate alignment starts by showing how platform investments advance enterprise strategic goals with measurable impact.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		],
+		"domain": "Strategy"
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 24,
+		"prompt": "A global manufacturer documents fragmented service requests across plants. How should the platform owner document the strategy after discovery workshops?",
+		"choices": [
+			"Defer documentation until every plant uses identical catalog items",
+			"List vendor license counts as the sole strategy deliverable",
+			"Publish only technical integration specifications without business context",
+			"Capture pain points, target outcomes, guiding principles, and a phased roadmap with owners"
+		],
+		"correctIndex": 3,
+		"explanation": "Documented strategy ties organizational pain and outcomes to principles, phased delivery, and accountable owners.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		],
+		"domain": "Strategy"
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 53,
+		"prompt": "Finance partners question whether twelve-language localization is affordable in year one. How should the platform owner sequence translation investment?",
+		"choices": [
+			"Prioritize languages for initial revenue regions and phase remaining locales with adoption metrics",
+			"Translate every catalog item before launching any pilot regardless of user demand",
+			"Eliminate translation budget and require all users to work in English only",
+			"Outsource localization without governance and accept inconsistent terminology across domains"
+		],
+		"correctIndex": 0,
+		"explanation": "Translation spend should follow regional rollout priorities and measurable adoption rather than unfunded global scope or absent governance.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-administration/instance-administration/platform-governance.html"
+		],
+		"domain": "Cost/Resource Planning"
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 79,
+		"prompt": "The CEO requests a concise update before a major go-live. How should the platform owner structure C-Suite communication about delivery readiness?",
+		"choices": [
+			"Share only technical test pass rates with no adoption or change readiness context",
+			"Defer executive briefing until every open defect is closed regardless of schedule",
+			"Lead with business outcomes, milestone status, risks, and decisions needed from sponsors",
+			"Present detailed script-level change lists without summarizing business impact"
+		],
+		"correctIndex": 2,
+		"explanation": "Executive delivery updates emphasize outcomes, progress, risks, and sponsor decisions— not low-level technical detail or indefinite delay.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		],
+		"domain": "Implementation and Delivery"
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 80,
+		"prompt": "Six weeks after launch, transaction volume remains 30% below target and help desk tickets cite unfamiliar workflows. What should the platform owner prioritize next?",
+		"choices": [
+			"Disable legacy tools immediately without transition support or training",
+			"Reduce scope reporting to executives until usage metrics improve on their own",
+			"Diagnose adoption barriers, reinforce role-based enablement, and adjust communications with sponsors",
+			"Proceed to the next release wave without addressing user feedback"
+		],
+		"correctIndex": 2,
+		"explanation": "Low adoption recovery requires targeted diagnosis, enablement, and visible sponsor messaging—not forced cutover or hiding metrics from leadership.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		],
+		"domain": "Implementation and Delivery"
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 94,
+		"prompt": "Field managers report they revert to spreadsheets because approval steps feel slower on the new platform. What is the platform owner's best next step?",
+		"choices": [
+			"Facilitate process review with affected managers, measure cycle time, and co-design simplified paths",
+			"Announce mandatory usage penalties without investigating workflow pain points",
+			"Remove approval controls entirely to maximize submission speed",
+			"Wait for annual training refresh before collecting structured feedback"
+		],
+		"correctIndex": 0,
+		"explanation": "Adoption recovery starts with understanding workflow friction and co-designing improvements—not punitive mandates or removing necessary controls.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		],
+		"domain": "Implementation and Delivery"
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 95,
+		"prompt": "The CFO asks for evidence that year-one platform investments delivered promised savings. How should the platform owner report value realization?",
+		"choices": [
+			"Share internal team satisfaction scores as the sole proof of success",
+			"Delay reporting until every product team completes identical maturity assessments",
+			"Compare baseline and current metrics for agreed KPIs with narrative on variance and next actions",
+			"Present license utilization percentages without linking to financial outcomes"
+		],
+		"correctIndex": 2,
+		"explanation": "Value realization reporting contrasts agreed baselines with current KPIs and explains variance— not isolated utilization or delayed disclosure.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		],
+		"domain": "Implementation and Delivery"
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 99,
+		"prompt": "A retail enterprise has separate product teams for stores, supply chain, and corporate HR on one instance. How should the platform owner coordinate value delivery across product teams?",
+		"choices": [
+			"Centralize all development in one team and eliminate product ownership",
+			"Report value only for the domain with the highest license consumption",
+			"Establish shared release governance, outcome scorecards per domain, and joint dependency reviews",
+			"Let each team publish independent roadmaps without enterprise alignment sessions"
+		],
+		"correctIndex": 2,
+		"explanation": "Cross-team value delivery needs shared governance, domain scorecards, and dependency reviews—not siloed roadmaps or license-based favoritism.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		],
+		"domain": "Implementation and Delivery"
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 116,
+		"prompt": "Two weeks after go-live, transaction volumes meet targets but user satisfaction scores remain low. What should the platform owner investigate first?",
+		"choices": [
+			"Increase licensing costs to improve perceived platform value",
+			"Remove satisfaction surveys to avoid negative executive visibility",
+			"Analyze adoption feedback, training gaps, and workflow friction points reported by affected roles",
+			"Declare the rollout successful because volume metrics are on target"
+		],
+		"correctIndex": 2,
+		"explanation": "Volume without satisfaction often signals adoption or enablement gaps; investigating user feedback and workflow friction addresses the root cause.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		],
+		"domain": "Implementation and Delivery"
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 162,
+		"prompt": "The CISO asks how ServiceNow security investments create business value beyond compliance checkboxes. How should the platform owner respond?",
+		"choices": [
+			"Frame security controls as enablers of trusted digital services, faster partner onboarding, and reduced breach-related downtime costs",
+			"Present security solely as a mandatory cost center with no connection to business outcomes",
+			"Recommend minimizing security controls to accelerate feature delivery regardless of risk",
+			"Defer the discussion until after all compliance audits are complete"
+		],
+		"correctIndex": 0,
+		"explanation": "Platform owners articulate security as a business enabler—supporting trust, partner confidence, and operational resilience—not only as regulatory overhead.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-security/platform-security.html"
+		],
+		"domain": "Compliance and Security"
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 183,
+		"prompt": "Business leaders want to onboard a partner integration that exchanges personally identifiable information. Which security option best creates business advantage while meeting compliance expectations?",
+		"choices": [
+			"OAuth-scoped integration users, encrypted transport, contract testing, and documented data classification before production enablement",
+			"Shared integration credentials embedded in partner scripts for faster delivery",
+			"Unauthenticated REST endpoints restricted only by network firewall rules",
+			"Production data replication to the partner environment for debugging convenience"
+		],
+		"correctIndex": 0,
+		"explanation": "Governed integration identity, encryption, and conformance testing enable partner workflows safely—turning security design into a business enabler rather than a late-stage blocker.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/platform-security/platform-security.html"
+		],
+		"domain": "Compliance and Security"
+	},
+	{
+		"trackCode": "CPOE",
+		"order": 198,
+		"prompt": "A platform owner launches an innovation champions network across business units. Which champion role definition best sustains enterprise-wide adoption?",
+		"choices": [
+			"Champions facilitate demand intake, share reusable patterns, coach peers, and escalate governance questions to the CoEI",
+			"Champions receive admin credentials to bypass all review processes for their departments",
+			"Champions focus solely on marketing events without connecting to delivery pipelines",
+			"Champions are volunteers with no connection to platform governance forums"
+		],
+		"correctIndex": 0,
+		"explanation": "Effective champions bridge business demand and platform governance through coaching, pattern reuse, and structured escalation—not unchecked admin access or disconnected advocacy.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/impact/impact.html"
+		],
+		"domain": "Innovation"
+	}
+]
