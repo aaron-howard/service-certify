@@ -43,6 +43,9 @@ export const CIS_DF_ADVANCED_MIN_RATIO = 0.15;
 /** ServiceNow docs URL must use the public docs host. */
 export const CIS_DF_SOURCE_URL_PATTERN = /^https:\/\/www\.servicenow\.com\/docs\/r\//;
 
+/** Reject family mid-path URLs that don't resolve cleanly on docs/r/. */
+export const CIS_DF_BANNED_SOURCE_PATH = /\/(australia|washingtondc|xanadu|zurich|vancouver)\//;
+
 export function isScenarioStylePrompt(prompt: string): boolean {
 	const trimmed = prompt.trim();
 	if (trimmed.length >= 90) return true;
@@ -130,6 +133,10 @@ export function validateCisDfQuestion(q: CisDfQuestionRow): string[] {
 		for (const url of q.sourceUrls) {
 			if (!CIS_DF_SOURCE_URL_PATTERN.test(url)) {
 				issues.push(`order ${q.order}: sourceUrl must use https://www.servicenow.com/docs/r/ (${url})`);
+				break;
+			}
+			if (CIS_DF_BANNED_SOURCE_PATH.test(url)) {
+				issues.push(`order ${q.order}: sourceUrl must not embed family mid-path (${url})`);
 				break;
 			}
 		}

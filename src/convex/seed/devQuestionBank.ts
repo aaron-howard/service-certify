@@ -3134,12 +3134,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 0,
 		"prompt": "A CMDB program needs a governed workspace to extend the Linux Server class with two custom attributes before Discovery goes live. Which capability should the implementer use?",
 		"choices": [
-			"CI Class Manager to extend the parent class and define dictionary attributes",
 			"Service Mapping manual entry to bypass identification rules for new fields",
 			"Update Set capture from production to clone unrelated catalog variables",
-			"Import Set table designer to replace cmdb_ci_linux_server table inheritance"
+			"Import Set table designer to replace cmdb_ci_linux_server table inheritance",
+			"CI Class Manager to extend the parent class and define dictionary attributes"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "CI Class Manager is the governance workspace for extending CI classes, managing attributes, and configuring identification settings per class.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-class-manager.html"
@@ -3154,9 +3154,9 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "The CMDB team introduces cmdb_ci_linux_server and must expose serial number, install status, and manufacturer on forms without redefining those fields on the child table. What modeling approach should the lead recommend?",
 		"choices": [
 			"Extend cmdb_ci_server so the Linux class inherits shared attributes from the parent hierarchy",
-			"Create a standalone table with no parent link and duplicate every shared column manually",
 			"Store inherited values in incident work notes and copy them into CI fields nightly",
-			"Load Linux servers only into alm_asset and skip cmdb_ci subclassing entirely"
+			"Load Linux servers only into alm_asset and skip cmdb_ci subclassing entirely",
+			"Create a standalone table with no parent link and duplicate every shared column manually"
 		],
 		"correctIndex": 0,
 		"explanation": "Extending the correct parent class lets specialized CIs inherit shared dictionary attributes and lifecycle behavior instead of redefining common fields on each child table.",
@@ -3170,12 +3170,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 2,
 		"prompt": "SCCM and ServiceNow Discovery both update the same server CI, but hostname values conflict after each run. Which IRE component should the implementer tune first?",
 		"choices": [
-			"Identification rules to match incoming payloads to the correct CI record",
 			"Reconciliation rules to define which discovery source may update specific attributes",
-			"CMDB Health completeness KPIs to archive stale hostname values automatically",
-			"Service catalog item variables to normalize hostname text before checkout"
+			"Identification rules to match incoming payloads to the correct CI record",
+			"Service catalog item variables to normalize hostname text before checkout",
+			"CMDB Health completeness KPIs to archive stale hostname values automatically"
 		],
-		"correctIndex": 1,
+		"correctIndex": 0,
 		"explanation": "After identification matches a CI, reconciliation rules govern attribute-level write authority so trusted sources win conflicts on fields such as hostname.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-identification-and-reconciliation.html"
@@ -3197,27 +3197,27 @@ export const DEV_PRACTICE_QUESTIONS = [
 			"CMDB 360 multisource data store"
 		],
 		"matchRightItems": [
+			"Audit trail of proposed and accepted attribute values per source",
 			"Governed schema and attributes for a specialized CI type",
 			"Stable keys that match incoming data to one existing CI",
-			"Source precedence that controls which writer updates a field",
-			"Audit trail of proposed and accepted attribute values per source"
+			"Source precedence that controls which writer updates a field"
 		],
 		"correctMatches": [
 			{
 				"left": 0,
-				"right": 0
-			},
-			{
-				"left": 1,
 				"right": 1
 			},
 			{
-				"left": 2,
+				"left": 1,
 				"right": 2
 			},
 			{
-				"left": 3,
+				"left": 2,
 				"right": 3
+			},
+			{
+				"left": 3,
+				"right": 0
 			}
 		],
 		"explanation": "Configuration work spans class modeling, identification keys, reconciliation precedence, and multisource provenance captured in CMDB 360.",
@@ -3258,9 +3258,9 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "Duplicate Linux Server CIs appear after each SCCM import even though serial numbers match. Which configuration should the CMDB engineer review in CI Class Manager?",
 		"choices": [
 			"Identification rule identifier entries for the Linux Server class",
-			"Service Portal widget themes tied to cmdb_ci_linux_server lists",
+			"Event Management correlation rules for Linux process monitoring",
 			"Catalog fulfillment flows that generate alm_asset records only",
-			"Event Management correlation rules for Linux process monitoring"
+			"Service Portal widget themes tied to cmdb_ci_linux_server lists"
 		],
 		"correctIndex": 0,
 		"explanation": "Identification rules and their identifier entries define the attribute combinations IRE uses to match incoming SCCM data to an existing CI instead of inserting duplicates.",
@@ -3275,12 +3275,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 6,
 		"prompt": "Operations wants to compare hostname values proposed by Discovery, SCCM, and a manual spreadsheet import for one Windows Server CI. Which workspace view exposes per-source attribute history?",
 		"choices": [
-			"CMDB 360 view in CMDB Workspace with multisource attribute detail",
 			"Incident Agent Workspace filtered by assignment group only",
-			"Service Catalog editor showing record producer checkout history",
-			"Knowledge Management homepage sorted by article view count"
+			"Knowledge Management homepage sorted by article view count",
+			"CMDB 360 view in CMDB Workspace with multisource attribute detail",
+			"Service Catalog editor showing record producer checkout history"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "CMDB 360 retains proposed and accepted attribute values from each discovery source in cmdb_multisource_data and exposes them in the CMDB 360 workspace view.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/multisource-cmdb.html"
@@ -3294,11 +3294,11 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "The team adds a mandatory compliance_tag attribute to cmdb_ci_computer through CI Class Manager. What happens to existing computer CIs after the attribute is saved?",
 		"choices": [
 			"They are automatically deleted and recreated by the next discovery schedule",
-			"They inherit the new dictionary field and can be populated through governed updates",
 			"They bypass IRE because custom attributes disable identification rules",
+			"They inherit the new dictionary field and can be populated through governed updates",
 			"They move to alm_asset and lose all cmdb_ci relationships permanently"
 		],
-		"correctIndex": 1,
+		"correctIndex": 2,
 		"explanation": "Attributes added through CI Class Manager extend the class dictionary so existing CIs in that hierarchy can store values once data stewards populate them.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-class-manager.html"
@@ -3312,12 +3312,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"domain": "Configuration",
 		"prompt": "Discovery keeps creating duplicate Application Server CIs because load-balancer names vary by feed. The CMDB lead wants to exclude a noisy identifier from matching without disabling identification entirely. Which CI Class Manager control should they configure?",
 		"choices": [
-			"Identification exclusion conditions on the class identification definition",
 			"A UI policy that hides the load balancer field on every incident form",
+			"An event rule that suppresses alerts until duplicate CIs age out naturally",
 			"A transform map coalesce field that writes directly to cmdb_ci without IRE",
-			"An event rule that suppresses alerts until duplicate CIs age out naturally"
+			"Identification exclusion conditions on the class identification definition"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Identification exclusions let teams omit unstable or irrelevant attributes from matching logic while keeping governed identification active for the class.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/multisource-cmdb.html"
@@ -3338,27 +3338,27 @@ export const DEV_PRACTICE_QUESTIONS = [
 			"CMDB 360 dynamic reconciliation rule"
 		],
 		"matchRightItems": [
-			"Determines whether incoming data matches an existing CI or creates a new one",
 			"Controls which source may write a specific attribute after a match",
 			"Links child CIs to a parent CI during hierarchical identification",
-			"Selects attribute values using multisource reported data rather than static priority alone"
+			"Selects attribute values using multisource reported data rather than static priority alone",
+			"Determines whether incoming data matches an existing CI or creates a new one"
 		],
 		"correctMatches": [
 			{
 				"left": 0,
-				"right": 0
+				"right": 3
 			},
 			{
 				"left": 1,
-				"right": 1
+				"right": 0
 			},
 			{
 				"left": 2,
-				"right": 2
+				"right": 1
 			},
 			{
 				"left": 3,
-				"right": 3
+				"right": 2
 			}
 		],
 		"explanation": "IRE separates matching logic, attribute authority, dependent class relationships, and CMDB 360-driven dynamic reconciliation behaviors.",
@@ -3375,11 +3375,11 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "A vendor proposes a custom REST endpoint that inserts rows directly into cmdb_ci and bypasses matching logic. The CMDB architect rejects the design. Why should integrations route through the Identification and Reconciliation Engine instead?",
 		"choices": [
 			"Direct table inserts automatically populate cmdb_rel_ci relationships for every new record",
-			"IRE is required only for alm_asset records and never applies to cmdb_ci classes",
 			"Bypassing IRE disables all ACL checks so integrations run faster without security review",
-			"IRE matches incoming payloads to existing CIs and applies reconciliation so source authority governs attribute updates"
+			"IRE matches incoming payloads to existing CIs and applies reconciliation so source authority governs attribute updates",
+			"IRE is required only for alm_asset records and never applies to cmdb_ci classes"
 		],
-		"correctIndex": 3,
+		"correctIndex": 2,
 		"explanation": "Routing integrations through IRE prevents duplicate CIs and enforces identification and reconciliation rules instead of uncontrolled inserts.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/multisource-cmdb.html"
@@ -3391,12 +3391,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 11,
 		"prompt": "A new cmdb_ci_cloud_database class must inherit common cloud account fields while adding database-specific identifiers. Which modeling approach aligns to CMDB standards?",
 		"choices": [
-			"Extend an appropriate parent cloud or database class rather than creating an unrelated table",
 			"Load all cloud databases into cmdb_ci and avoid subclassing to simplify imports",
-			"Store cloud databases only in alm_asset without any cmdb_ci record",
-			"Duplicate the entire cmdb_ci dictionary for each new cloud vendor manually"
+			"Extend an appropriate parent cloud or database class rather than creating an unrelated table",
+			"Duplicate the entire cmdb_ci dictionary for each new cloud vendor manually",
+			"Store cloud databases only in alm_asset without any cmdb_ci record"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"explanation": "Extending the correct parent class preserves hierarchy inheritance so shared attributes remain consistent while specialized identifiers are added on the child class.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/cmdb-class-hierarchy.html"
@@ -3409,12 +3409,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 12,
 		"prompt": "Before changing identification keys on the Application Server class, the CMDB lead requires peer review and version control. Which tool is purpose-built for that governance workflow?",
 		"choices": [
-			"Flow Designer for HR onboarding case routing",
-			"Performance Analytics data collector job scheduler",
 			"CI Class Manager with sn_cmdb_admin stewardship of class and IRE settings",
+			"Performance Analytics data collector job scheduler",
+			"Flow Designer for HR onboarding case routing",
 			"Catalog Builder for record producer variable design only"
 		],
-		"correctIndex": 2,
+		"correctIndex": 0,
 		"explanation": "CI Class Manager centralizes class schema, attribute, and identification configuration changes under CMDB administrator governance.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-class-manager.html"
@@ -3436,27 +3436,27 @@ export const DEV_PRACTICE_QUESTIONS = [
 			"cmdb_ci_linux_server"
 		],
 		"matchRightItems": [
-			"Base class for all configuration items",
-			"Parent class for physical infrastructure components",
 			"Parent class for server operating system instances",
-			"Specialized class for Linux server CIs"
+			"Specialized class for Linux server CIs",
+			"Base class for all configuration items",
+			"Parent class for physical infrastructure components"
 		],
 		"correctMatches": [
 			{
 				"left": 0,
-				"right": 0
-			},
-			{
-				"left": 1,
-				"right": 1
-			},
-			{
-				"left": 2,
 				"right": 2
 			},
 			{
-				"left": 3,
+				"left": 1,
 				"right": 3
+			},
+			{
+				"left": 2,
+				"right": 0
+			},
+			{
+				"left": 3,
+				"right": 1
 			}
 		],
 		"explanation": "The CMDB hierarchy progresses from the base cmdb_ci class through hardware and server parents to specialized operating system classes.",
@@ -3496,12 +3496,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 15,
 		"prompt": "Infrastructure CIs in the Network Gear class lack a consistent Managed by Group value, and no Technology management offering applies. How can an administrator set the group for all CIs in that class?",
 		"choices": [
-			"Configure Managed by Group on the class in CI Class Manager and save the synchronization",
 			"Disable identification rules so Discovery assigns groups automatically",
-			"Create a catalog item that generates change requests for each network device",
-			"Run a one-time background script that hard-codes sys_id values on every CI"
+			"Run a one-time background script that hard-codes sys_id values on every CI",
+			"Configure Managed by Group on the class in CI Class Manager and save the synchronization",
+			"Create a catalog item that generates change requests for each network device"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "CI Class Manager can synchronize Managed by Group across all CIs in a class when no Technology management offering overrides group assignment.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/servicenow-platform/common-service-data-model-csdm/csdm-data-synchronize-enable.html"
@@ -3515,11 +3515,11 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "Service Mapping shows an application service depending on a database CI, but impact analysis misses the link. Which relationship type should the data engineer create?",
 		"choices": [
 			"Located in::Location of between the database CI and the data center rack only",
-			"Contains::Contained by between the MID Server and the application service",
 			"Depends on::Used by between the application service and the database CI",
+			"Contains::Contained by between the MID Server and the application service",
 			"Owned by::Owns between the database CI and the caller's user record"
 		],
-		"correctIndex": 2,
+		"correctIndex": 1,
 		"explanation": "Depends on::Used by models operational dependencies so impact analysis can traverse from services to supporting infrastructure CIs.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping-relationships.html"
@@ -3533,12 +3533,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"domain": "Ingest",
 		"prompt": "Service Mapping completed a top-down map for a payment application, but the map entry point CI is missing and downstream tiers appear disconnected. What should the mapping engineer verify first?",
 		"choices": [
-			"That the correct entry point CI or connection section is defined and the discovery pattern completed successfully",
 			"That all cmdb_ci records were deleted so the map could rebuild from scratch",
+			"That import set coalesce fields were removed from the transform map",
 			"That reconciliation rules were disabled so Discovery could overwrite every attribute",
-			"That import set coalesce fields were removed from the transform map"
+			"That the correct entry point CI or connection section is defined and the discovery pattern completed successfully"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Service Mapping depends on a valid entry point and successful pattern execution; missing entry points or incomplete patterns leave maps fragmented and unusable for impact analysis.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/concept/c_ServiceMapping.html"
@@ -3584,32 +3584,32 @@ export const DEV_PRACTICE_QUESTIONS = [
 			"Connects to::Connected by"
 		],
 		"matchRightItems": [
-			"Software or process executing on a host CI",
 			"Infrastructure hosting another CI such as a VM on a hypervisor",
 			"Application or service consuming another CI such as a database",
-			"Network connectivity between two infrastructure CIs"
+			"Network connectivity between two infrastructure CIs",
+			"Software or process executing on a host CI"
 		],
 		"correctMatches": [
 			{
 				"left": 0,
-				"right": 0
+				"right": 3
 			},
 			{
 				"left": 1,
-				"right": 1
+				"right": 0
 			},
 			{
 				"left": 2,
-				"right": 2
+				"right": 1
 			},
 			{
 				"left": 3,
-				"right": 3
+				"right": 2
 			}
 		],
 		"explanation": "Typed CMDB relationships express hosting, execution, consumption, and connectivity patterns used in dependency and impact models.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_RelationshipTypes.html"
+			"https://www.servicenow.com/docs/r/configuration-management/cmdb/concept/c_RelationshipTypes.html"
 		],
 		"domain": "Ingest",
 		"contentDifficulty": "Foundation"
@@ -3619,12 +3619,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 20,
 		"prompt": "The Configuration Management team wants to identify which CIs have been created from an asset but have not been discovered. The team creates a report on the target CI Class. How does the team identify these CIs in the report?",
 		"choices": [
-			"All CIs with a Discovery source value of 'SNAssetManagement'",
 			"All CIs with the Updated field older than a month",
 			"All CIs where the Last Discovered field is empty",
-			"All CIs with a Discovery source value of 'ServiceNow'"
+			"All CIs with a Discovery source value of 'ServiceNow'",
+			"All CIs with a Discovery source value of 'SNAssetManagement'"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "CIs automatically created from assets without a technical discovery update typically carry Discovery source SNAssetManagement, indicating asset-origin rather than scan-based population.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/create-ci-manual-cmdb-workspace.html"
@@ -3638,12 +3638,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"domain": "Ingest",
 		"prompt": "During a data center audit, a steward discovers a missing production Linux server and creates it through Create CI in CMDB Workspace. Reporting must distinguish steward-created records from Discovery-fed CIs. Which Discovery source value will the new record carry?",
 		"choices": [
-			"SNAssetManagement",
-			"Manual via IRE",
 			"Import Set",
-			"ServiceNow"
+			"ServiceNow",
+			"SNAssetManagement",
+			"Manual via IRE"
 		],
-		"correctIndex": 1,
+		"correctIndex": 3,
 		"explanation": "Manual CI creation in CMDB Workspace applies IRE rules and sets Discovery source to Manual via IRE so steward-entered records are identifiable in reports and filters.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/create-ci-manual-cmdb-workspace.html"
@@ -3655,12 +3655,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 22,
 		"prompt": "HAM is configured so eligible hardware assets automatically create linked CIs when received. Which system property enables IRE-based CI creation from assets?",
 		"choices": [
+			"glide.sys.domain.partition set to global",
 			"glide.asset.create_ci_with_ire set to true",
 			"glide.identification_engine.multisource_enabled set to false",
-			"glide.ui.update_on_refresh set to true",
-			"glide.sys.domain.partition set to global"
+			"glide.ui.update_on_refresh set to true"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"explanation": "When glide.asset.create_ci_with_ire is true, eligible asset records create CIs through the IRE API with governed identification and reconciliation behavior.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-identification-and-reconciliation.html"
@@ -3706,9 +3706,9 @@ export const DEV_PRACTICE_QUESTIONS = [
 		],
 		"matchRightItems": [
 			"Probe payloads processed as a discovery source through IRE",
-			"Staged rows mapped and submitted as an integration discovery source",
+			"Asset lifecycle event creating a CI with Discovery source SNAssetManagement",
 			"Steward entry evaluated by IRE with Discovery source Manual via IRE",
-			"Asset lifecycle event creating a CI with Discovery source SNAssetManagement"
+			"Staged rows mapped and submitted as an integration discovery source"
 		],
 		"correctMatches": [
 			{
@@ -3717,7 +3717,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 			},
 			{
 				"left": 1,
-				"right": 1
+				"right": 3
 			},
 			{
 				"left": 2,
@@ -3725,7 +3725,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 			},
 			{
 				"left": 3,
-				"right": 3
+				"right": 1
 			}
 		],
 		"explanation": "Discovery, imports, manual creation, and asset-driven CI creation each feed IRE with distinct discovery source values and ingestion mechanics.",
@@ -3741,14 +3741,14 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "A cloud inventory vendor exposes APIs that must feed the CMDB on a recurring schedule. Which integration pattern is designed for governed third-party data ingestion into ServiceNow?",
 		"choices": [
 			"Direct JDBC writes to cmdb_ci that bypass Identification and Reconciliation",
-			"Client-side UI scripts that insert CIs when a form loads",
 			"Manual CSV uploads to sys_user without a staging table",
-			"Service Graph Connect with mapped inbound payloads and scheduled retrieval"
+			"Service Graph Connect with mapped inbound payloads and scheduled retrieval",
+			"Client-side UI scripts that insert CIs when a form loads"
 		],
-		"correctIndex": 3,
+		"correctIndex": 2,
 		"explanation": "Service Graph Connect provides a governed connector framework for recurring third-party ingestion with mapping into CMDB structures.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/integrate-applications/australia/service-graph-connect/concept/c_ServiceGraphConnect.html"
+			"https://www.servicenow.com/docs/r/integrate-applications/service-graph-connect/concept/c_ServiceGraphConnect.html"
 		],
 		"domain": "Ingest",
 		"contentDifficulty": "Intermediate"
@@ -3758,15 +3758,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 26,
 		"prompt": "An operations team loads weekly spreadsheet extracts into staging before promoting rows to CMDB tables. Which artifact orchestrates that bulk load workflow?",
 		"choices": [
-			"Import set with data source, staging table, and transform map",
 			"CMDB Health dashboard KPI without a staging layer",
-			"Event rule that correlates alerts into configuration items",
-			"Service Portal widget that renders spreadsheet previews only"
+			"Import set with data source, staging table, and transform map",
+			"Service Portal widget that renders spreadsheet previews only",
+			"Event rule that correlates alerts into configuration items"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"explanation": "Import sets combine data sources, staging tables, and transform maps to land, validate, and promote bulk data into target tables.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/integrate-applications/australia/system-import-sets/concept/c_ImportDataUsingImportSets.html"
+			"https://www.servicenow.com/docs/r/integrate-applications/system-import-sets/concept/c_ImportDataUsingImportSets.html"
 		],
 		"domain": "Ingest",
 		"contentDifficulty": "Intermediate"
@@ -3776,15 +3776,16 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 27,
 		"prompt": "During transform processing, a row must be rejected when a mandatory serial number is missing without stopping the entire import run. Which transform script technique supports that behavior?",
 		"choices": [
-			"Disable coalesce on every field map to force duplicate inserts",
+			"Set ignore = true in an onBefore script when validation fails",
 			"Throw an unhandled exception that aborts all remaining rows",
-			"Set ignore = true in an onBefore or onAfter script when validation fails",
+			"Disable coalesce on every field map to force duplicate inserts",
 			"Delete the transform map after the first invalid row is encountered"
 		],
-		"correctIndex": 2,
-		"explanation": "Row-level ignore logic lets transforms skip invalid staging rows while continuing to process the rest of the import set run.",
+		"correctIndex": 0,
+		"explanation": "In onBefore scripts, ignore = true skips the current row while the rest of the import set continues. onAfter runs after the row is already transformed and saved, so it is not the correct place to reject a row.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/integrate-applications/australia/system-import-sets/concept/c_TransformEventScripts.html"
+			"https://www.servicenow.com/docs/r/integrate-applications/system-import-sets/r_TransformationScriptVariables.html",
+			"https://www.servicenow.com/docs/r/integrate-applications/system-import-sets/r_MapWithTransformationEventScripts.html"
 		],
 		"domain": "Ingest",
 		"contentDifficulty": "Intermediate"
@@ -3796,19 +3797,19 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"questionType": "multi",
 		"prompt": "Finance marks a laptop asset Retired in HAM and expects the linked configuration item to reflect the same lifecycle change on key status fields. Which two CI fields synchronize from the asset update? (Choose two.)",
 		"choices": [
-			"Operational status",
-			"Install Status",
 			"Hardware Status",
-			"Asset tag"
+			"Asset tag",
+			"Install Status",
+			"Operational status"
 		],
-		"correctIndex": 1,
+		"correctIndex": 0,
 		"correctIndexes": [
-			1,
+			0,
 			2
 		],
 		"explanation": "Asset-to-CI synchronization updates Install Status and Hardware Status on the related configuration item when asset state changes.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-asset-management/australia/asset-management/concept/c_AssetAndCIFieldSynchronization.html"
+			"https://www.servicenow.com/docs/r/it-asset-management/asset-management/concept/c_AssetAndCIFieldSynchronization.html"
 		],
 		"contentDifficulty": "Foundation"
 	},
@@ -3826,33 +3827,33 @@ export const DEV_PRACTICE_QUESTIONS = [
 			"Coalesce fields"
 		],
 		"matchRightItems": [
-			"Defines how inbound files or queries are retrieved and parsed",
 			"Holds raw source rows before target promotion",
-			"Maps staging columns to target tables and optional scripts",
-			"Match existing target records for update instead of insert"
+			"Match existing target records for update instead of insert",
+			"Defines how inbound files or queries are retrieved and parsed",
+			"Maps staging columns to target tables and optional scripts"
 		],
 		"correctMatches": [
 			{
 				"left": 0,
-				"right": 0
-			},
-			{
-				"left": 1,
-				"right": 1
-			},
-			{
-				"left": 2,
 				"right": 2
 			},
 			{
-				"left": 3,
+				"left": 1,
+				"right": 0
+			},
+			{
+				"left": 2,
 				"right": 3
+			},
+			{
+				"left": 3,
+				"right": 1
 			}
 		],
 		"explanation": "Import-set pipelines separate retrieval, staging, transformation, and matching concerns so teams can govern each step independently.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/integrate-applications/australia/system-import-sets/concept/c_ImportDataUsingImportSets.html",
-			"https://www.servicenow.com/docs/r/integrate-applications/australia/system-import-sets/concept/c_CreatingNewTransformMaps.html"
+			"https://www.servicenow.com/docs/r/integrate-applications/system-import-sets/concept/c_ImportDataUsingImportSets.html",
+			"https://www.servicenow.com/docs/r/integrate-applications/system-import-sets/concept/c_CreatingNewTransformMaps.html"
 		],
 		"domain": "Ingest",
 		"contentDifficulty": "Foundation"
@@ -3863,14 +3864,14 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "Discovery populates server CIs while a separate import set loads the same serial numbers from a legacy asset database. Which CMDB process prevents duplicate records when both feeds are active?",
 		"choices": [
 			"Storing Discovery results only in staging tables permanently",
-			"Removing reconciliation rules so the newest feed always wins every attribute",
 			"Identification and Reconciliation matching incoming rows to existing CIs",
+			"Removing reconciliation rules so the newest feed always wins every attribute",
 			"Disabling all transform maps until Discovery completes nightly"
 		],
-		"correctIndex": 2,
+		"correctIndex": 1,
 		"explanation": "Identification finds or creates the CI match while reconciliation governs attribute updates, reducing duplicates from overlapping ingestion sources.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_IdentificationAndReconciliationEngine.html"
+			"https://www.servicenow.com/docs/r/configuration-management/cmdb/concept/c_IdentificationAndReconciliationEngine.html"
 		],
 		"domain": "Ingest",
 		"contentDifficulty": "Advanced"
@@ -3881,16 +3882,16 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"domain": "Ingest",
 		"prompt": "Discovery and SCCM both update the same Windows Server CI, but operators notice the hostname reverts to the Discovery value after each SCCM import even though SCCM is the authoritative source for that field. What should the CMDB engineer review first?",
 		"choices": [
-			"Reconciliation rules that define which discovery source may update the hostname attribute",
 			"The Service Portal theme applied to the CMDB workspace list layout",
+			"The catalog item variable order on hardware request forms",
 			"Whether the MID Server cluster name matches the SCCM site code",
-			"The catalog item variable order on hardware request forms"
+			"Reconciliation rules that define which discovery source may update the hostname attribute"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Reconciliation rules govern attribute-level write authority after identification; when the wrong source wins, precedence for that attribute must be corrected.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_ReconciliationRules.html",
-			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_IdentificationAndReconciliationEngine.html"
+			"https://www.servicenow.com/docs/r/configuration-management/cmdb/concept/c_ReconciliationRules.html",
+			"https://www.servicenow.com/docs/r/configuration-management/cmdb/concept/c_IdentificationAndReconciliationEngine.html"
 		],
 		"contentDifficulty": "Advanced"
 	},
@@ -3900,16 +3901,16 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"domain": "Ingest",
 		"prompt": "An asset spreadsheet import shows thousands of rows in the staging table, but the target cmdb_ci_computer table received no new or updated records after the transform run completed. What should the administrator check next?",
 		"choices": [
-			"Whether the CMDB workspace theme was switched to dark mode during the load",
-			"Whether every incident assigned to the Network group was closed first",
 			"Whether the transform map ran successfully and coalesce fields match existing identification keys on the target class",
-			"Whether the user's browser cache was cleared before opening the import set list"
+			"Whether the user's browser cache was cleared before opening the import set list",
+			"Whether the CMDB workspace theme was switched to dark mode during the load",
+			"Whether every incident assigned to the Network group was closed first"
 		],
-		"correctIndex": 2,
+		"correctIndex": 0,
 		"explanation": "Staging without target updates usually indicates the transform map did not run, failed silently, or coalesce/mapping logic did not match records to the target table.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/washingtondc/integrate-applications/system-import-sets/c_CreatingNewTransformMaps.html",
-			"https://www.servicenow.com/docs/r/integrate-applications/australia/system-import-sets/concept/c_ImportDataUsingImportSets.html"
+			"https://www.servicenow.com/docs/r/integrate-applications/system-import-sets/c_CreatingNewTransformMaps.html",
+			"https://www.servicenow.com/docs/r/integrate-applications/system-import-sets/concept/c_ImportDataUsingImportSets.html"
 		],
 		"contentDifficulty": "Advanced"
 	},
@@ -3919,20 +3920,20 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"questionType": "multi",
 		"prompt": "Which two practices improve asset-to-CI synchronization quality during hardware ingestion? (Choose two.)",
 		"choices": [
-			"Align asset and CI classes so related records share consistent identifiers",
 			"Disable Identification and Reconciliation for all hardware classes",
-			"Load assets and CIs into unrelated tables without reference fields",
-			"Configure field synchronization maps for state attributes that must stay aligned"
+			"Configure field synchronization maps for state attributes that must stay aligned",
+			"Align asset and CI classes so related records share consistent identifiers",
+			"Load assets and CIs into unrelated tables without reference fields"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"correctIndexes": [
-			0,
-			3
+			1,
+			2
 		],
 		"explanation": "Consistent class alignment and configured synchronization maps keep asset lifecycle changes reflected on related CIs without duplicate records.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-asset-management/australia/asset-management/concept/c_AssetAndCIFieldSynchronization.html",
-			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_IdentificationAndReconciliationEngine.html"
+			"https://www.servicenow.com/docs/r/it-asset-management/asset-management/concept/c_AssetAndCIFieldSynchronization.html",
+			"https://www.servicenow.com/docs/r/configuration-management/cmdb/concept/c_IdentificationAndReconciliationEngine.html"
 		],
 		"domain": "Ingest",
 		"contentDifficulty": "Intermediate"
@@ -3951,34 +3952,34 @@ export const DEV_PRACTICE_QUESTIONS = [
 			"Import set transform"
 		],
 		"matchRightItems": [
-			"Probes and sensors that classify infrastructure during scheduled runs",
 			"Third-party API ingestion mapped through the connector framework",
 			"External tool payloads normalized into governed CMDB updates",
-			"Staging rows promoted to target tables with field maps and scripts"
+			"Staging rows promoted to target tables with field maps and scripts",
+			"Probes and sensors that classify infrastructure during scheduled runs"
 		],
 		"correctMatches": [
 			{
 				"left": 0,
-				"right": 0
+				"right": 3
 			},
 			{
 				"left": 1,
-				"right": 1
+				"right": 0
 			},
 			{
 				"left": 2,
-				"right": 2
+				"right": 1
 			},
 			{
 				"left": 3,
-				"right": 3
+				"right": 2
 			}
 		],
 		"explanation": "Discovery patterns, Service Graph Connect, discovery feeds, and import set transforms each address different ingestion paths into the CMDB.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-operations-management/australia/discovery/concept/c_Discovery.html",
-			"https://www.servicenow.com/docs/r/integrate-applications/australia/service-graph-connect/concept/c_ServiceGraphConnect.html",
-			"https://www.servicenow.com/docs/r/it-operations-management/australia/discovery/concept/c_DiscoveryDataSourcesAndFeeds.html"
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/concept/c_Discovery.html",
+			"https://www.servicenow.com/docs/r/integrate-applications/service-graph-connect/concept/c_ServiceGraphConnect.html",
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/concept/c_DiscoveryDataSourcesAndFeeds.html"
 		],
 		"domain": "Ingest",
 		"contentDifficulty": "Foundation"
@@ -3988,16 +3989,16 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 35,
 		"prompt": "A SaaS inventory API delivers daily JSON payloads that must land in cmdb_ci_cloud_resource records. Which ingestion path applies Service Graph mapping before IRE processing?",
 		"choices": [
-			"Service Graph Connect inbound integration with class and attribute maps",
 			"Direct update of cmdb_ci from a UI action without staging or identification",
+			"Creating manual CI records and disabling all reconciliation rules",
 			"Exporting CMDB snapshots to CSV and re-importing through sys_user",
-			"Creating manual CI records and disabling all reconciliation rules"
+			"Service Graph Connect inbound integration with class and attribute maps"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Service Graph Connect inbound integrations map external payloads into CMDB classes so Identification and Reconciliation can govern the resulting updates.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/integrate-applications/australia/service-graph-connect/concept/c_ServiceGraphConnect.html",
-			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_CMDBDataIngestionBestPractices.html"
+			"https://www.servicenow.com/docs/r/integrate-applications/service-graph-connect/concept/c_ServiceGraphConnect.html",
+			"https://www.servicenow.com/docs/r/configuration-management/cmdb/concept/c_CMDBDataIngestionBestPractices.html"
 		],
 		"domain": "Ingest",
 		"contentDifficulty": "Advanced"
@@ -4007,15 +4008,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 36,
 		"prompt": "Leadership wants a scorecard of duplicate CIs, stale relationships, and required fields missing on server classes. Which capability provides those KPIs out of the box?",
 		"choices": [
-			"Import set run history filtered by transform script name only",
-			"CMDB Health dashboard with configurable health metrics and trends",
 			"ECC queue listing MID Server heartbeat messages",
-			"Service Portal theme editor showing widget color compliance"
+			"Service Portal theme editor showing widget color compliance",
+			"Import set run history filtered by transform script name only",
+			"CMDB Health dashboard with configurable health metrics and trends"
 		],
-		"correctIndex": 1,
+		"correctIndex": 3,
 		"explanation": "CMDB Health aggregates KPIs such as duplicate CIs, stale relationships, and attribute completeness to monitor data quality over time.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_CMDBHealthDashboard.html"
+			"https://www.servicenow.com/docs/r/configuration-management/cmdb/concept/c_CMDBHealthDashboard.html"
 		],
 		"domain": "Govern",
 		"contentDifficulty": "Intermediate"
@@ -4025,15 +4026,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 37,
 		"prompt": "An administrator must bulk-retire orphaned middleware CIs identified during a health review. Which workspace supports governed remediation tasks?",
 		"choices": [
+			"Update set preview comparing widget themes across instances",
 			"CMDB Data Manager with views and tasks for orphaned or stale CIs",
 			"Discovery schedule editor used to increase probe thread counts",
-			"Event Management maintenance calendar for alert suppression only",
-			"Update set preview comparing widget themes across instances"
+			"Event Management maintenance calendar for alert suppression only"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"explanation": "CMDB Data Manager provides workspace views and remediation tasks to find and clean up orphaned or stale configuration items.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_CMDBDataManager.html"
+			"https://www.servicenow.com/docs/r/configuration-management/cmdb/concept/c_CMDBDataManager.html"
 		],
 		"domain": "Govern",
 		"contentDifficulty": "Intermediate"
@@ -4056,7 +4057,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		],
 		"explanation": "CMDB administrators configure governance controls while data stewards remediate quality issues within their assigned configuration domains.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_CMDBGovernanceAndHealth.html"
+			"https://www.servicenow.com/docs/r/configuration-management/cmdb/concept/c_CMDBGovernanceAndHealth.html"
 		],
 		"domain": "Govern",
 		"contentDifficulty": "Intermediate"
@@ -4076,9 +4077,9 @@ export const DEV_PRACTICE_QUESTIONS = [
 		],
 		"matchRightItems": [
 			"Surfaces duplicate or incomplete records through scored metrics",
-			"Executes bulk remediation on orphaned or stale CIs",
 			"Matches incoming data to an existing CI or creates a new one",
-			"Controls which source may update a specific attribute after match"
+			"Controls which source may update a specific attribute after match",
+			"Executes bulk remediation on orphaned or stale CIs"
 		],
 		"correctMatches": [
 			{
@@ -4087,21 +4088,21 @@ export const DEV_PRACTICE_QUESTIONS = [
 			},
 			{
 				"left": 1,
-				"right": 1
+				"right": 3
 			},
 			{
 				"left": 2,
-				"right": 2
+				"right": 1
 			},
 			{
 				"left": 3,
-				"right": 3
+				"right": 2
 			}
 		],
 		"explanation": "Health metrics expose issues, Data Manager remediates them, and IRE rules prevent duplicates and unauthorized attribute overwrites during ingestion.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_CMDBHealthDashboard.html",
-			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_IdentificationAndReconciliationEngine.html"
+			"https://www.servicenow.com/docs/r/configuration-management/cmdb/concept/c_CMDBHealthDashboard.html",
+			"https://www.servicenow.com/docs/r/configuration-management/cmdb/concept/c_IdentificationAndReconciliationEngine.html"
 		],
 		"domain": "Govern",
 		"contentDifficulty": "Foundation"
@@ -4111,15 +4112,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 40,
 		"prompt": "Two integration feeds create separate server CIs with the same serial number and class. Which governance control should be tuned first to merge duplicates going forward?",
 		"choices": [
-			"Identification entries and matching criteria for the server CI class",
 			"Discovery cluster failover order on the MID Server configuration",
-			"Service Portal catalog layout for hardware request items",
-			"Event rule correlation fields on monitoring alert payloads"
+			"Identification entries and matching criteria for the server CI class",
+			"Event rule correlation fields on monitoring alert payloads",
+			"Service Portal catalog layout for hardware request items"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"explanation": "Identification rules define how incoming records match existing CIs; weak or missing criteria are the primary cause of duplicate server records.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/task/t_CreateIdentificationRules.html"
+			"https://www.servicenow.com/docs/r/configuration-management/cmdb/task/t_CreateIdentificationRules.html"
 		],
 		"domain": "Govern",
 		"contentDifficulty": "Advanced"
@@ -4129,16 +4130,16 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 41,
 		"prompt": "A CMDB program team needs a unified workspace to review health trends, launch cleanup tasks, and monitor class compliance. Which interface is purpose-built for that workflow?",
 		"choices": [
-			"System properties editor for instance-wide SMTP settings",
-			"Discovery status page listing probe execution timestamps",
 			"Import set loader form used only for spreadsheet uploads",
+			"Discovery status page listing probe execution timestamps",
+			"System properties editor for instance-wide SMTP settings",
 			"CMDB workspace combining health dashboards and Data Manager actions"
 		],
 		"correctIndex": 3,
 		"explanation": "The CMDB workspace integrates health visibility and Data Manager remediation so teams can govern configuration data from one place.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_CMDBWorkspace.html",
-			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_CMDBDataManager.html"
+			"https://www.servicenow.com/docs/r/configuration-management/cmdb/concept/c_CMDBWorkspace.html",
+			"https://www.servicenow.com/docs/r/configuration-management/cmdb/concept/c_CMDBDataManager.html"
 		],
 		"domain": "Govern",
 		"contentDifficulty": "Intermediate"
@@ -4148,15 +4149,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 42,
 		"prompt": "When extending the CMDB class model, why should new CI types extend an appropriate principal class rather than cmdb_ci directly?",
 		"choices": [
-			"Principal classes provide the correct inherited attributes and identification behavior for the CI type",
-			"Extending cmdb_ci directly disables all reconciliation rules globally",
 			"Principal classes prevent relationships from being created on child records",
-			"Only principal classes may appear on incident forms"
+			"Only principal classes may appear on incident forms",
+			"Extending cmdb_ci directly disables all reconciliation rules globally",
+			"Principal classes provide the correct inherited attributes and identification behavior for the CI type"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Extending the right principal class ensures specialized CIs inherit appropriate fields, lifecycle behavior, and identification patterns.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_CIClassModels.html"
+			"https://www.servicenow.com/docs/r/configuration-management/cmdb/concept/c_CIClassModels.html"
 		],
 		"domain": "Govern",
 		"contentDifficulty": "Intermediate"
@@ -4168,18 +4169,18 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "Which two CMDB Health metrics most directly indicate deduplication problems? (Choose two.)",
 		"choices": [
 			"Orphan CIs with no valid upstream or downstream relationships",
-			"SMTP failure counts on scheduled report subscriptions",
+			"Duplicate CI records sharing the same identification keys",
 			"Widget drilldown latency on operational dashboards",
-			"Duplicate CI records sharing the same identification keys"
+			"SMTP failure counts on scheduled report subscriptions"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			3
+			1
 		],
 		"explanation": "Duplicate CI and orphan relationship metrics highlight records that break identification integrity and dependency accuracy.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_CMDBHealthDashboard.html"
+			"https://www.servicenow.com/docs/r/configuration-management/cmdb/concept/c_CMDBHealthDashboard.html"
 		],
 		"domain": "Govern",
 		"contentDifficulty": "Intermediate"
@@ -4199,8 +4200,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		],
 		"matchRightItems": [
 			"Configures health policies, IRE rules, and workspace access",
-			"Remediates quality issues for assigned configuration domains",
 			"Ensures inbound feeds follow mapping and reconciliation standards",
+			"Remediates quality issues for assigned configuration domains",
 			"Validates that service dependencies reflect operational reality"
 		],
 		"correctMatches": [
@@ -4210,11 +4211,11 @@ export const DEV_PRACTICE_QUESTIONS = [
 			},
 			{
 				"left": 1,
-				"right": 1
+				"right": 2
 			},
 			{
 				"left": 2,
-				"right": 2
+				"right": 1
 			},
 			{
 				"left": 3,
@@ -4223,7 +4224,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		],
 		"explanation": "Effective CMDB governance distributes platform configuration, domain remediation, feed quality, and service validation across defined roles.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_CMDBGovernanceAndHealth.html"
+			"https://www.servicenow.com/docs/r/configuration-management/cmdb/concept/c_CMDBGovernanceAndHealth.html"
 		],
 		"domain": "Govern",
 		"contentDifficulty": "Foundation"
@@ -4233,15 +4234,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 45,
 		"prompt": "CMDB Data Manager shows a queue of stale database CIs with no active relationships. What is the recommended remediation approach?",
 		"choices": [
-			"Disable Discovery until every business service has a named owner",
-			"Accept all machine-learning relationship suggestions without steward review",
 			"Review each task, validate ownership, then retire or re-link CIs through governed workflows",
+			"Accept all machine-learning relationship suggestions without steward review",
+			"Disable Discovery until every business service has a named owner",
 			"Delete all cmdb_rel_ci records globally and rebuild maps from scratch overnight"
 		],
-		"correctIndex": 2,
+		"correctIndex": 0,
 		"explanation": "Data Manager tasks should be reviewed and remediated through governed retire or re-link actions rather than uncontrolled bulk deletes.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_CMDBDataManager.html"
+			"https://www.servicenow.com/docs/r/configuration-management/cmdb/concept/c_CMDBDataManager.html"
 		],
 		"domain": "Govern",
 		"contentDifficulty": "Intermediate"
@@ -4251,16 +4252,16 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 46,
 		"prompt": "A health KPI shows required attributes missing on Linux server CIs after a new feed went live. What should the governance team investigate first?",
 		"choices": [
-			"Feed mapping, identification match results, and reconciliation write authority for affected attributes",
-			"Service Portal widget CSS variables tied to the server list layout",
 			"MID Server JVM heap settings on the discovery cluster",
-			"Catalog item fulfillment flows for hardware stockroom requests"
+			"Catalog item fulfillment flows for hardware stockroom requests",
+			"Service Portal widget CSS variables tied to the server list layout",
+			"Feed mapping, identification match results, and reconciliation write authority for affected attributes"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Missing required attributes after a feed launch usually trace to mapping gaps, failed identification, or reconciliation blocking the authoritative source.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_CMDBHealthDashboard.html",
-			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_ReconciliationRules.html"
+			"https://www.servicenow.com/docs/r/configuration-management/cmdb/concept/c_CMDBHealthDashboard.html",
+			"https://www.servicenow.com/docs/r/configuration-management/cmdb/concept/c_ReconciliationRules.html"
 		],
 		"domain": "Govern",
 		"contentDifficulty": "Intermediate"
@@ -4271,15 +4272,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "A custom cmdb_ci_load_balancer class needs unique identification keys before a new discovery feed onboards. Which tool should define the principal class extension and identifiers?",
 		"choices": [
 			"Event Management connector mapping for SNMP trap payloads",
-			"Service Catalog record producer for load balancer requests",
+			"Import set coalesce editor on the sys_user staging table",
 			"CI Class Manager to configure the class hierarchy and identification entries",
-			"Import set coalesce editor on the sys_user staging table"
+			"Service Catalog record producer for load balancer requests"
 		],
 		"correctIndex": 2,
 		"explanation": "CI Class Manager is the supported interface for extending principal classes and aligning identification entries before feed onboarding.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_CIClassModels.html",
-			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/task/t_CreateIdentificationRules.html"
+			"https://www.servicenow.com/docs/r/configuration-management/cmdb/concept/c_CIClassModels.html",
+			"https://www.servicenow.com/docs/r/configuration-management/cmdb/task/t_CreateIdentificationRules.html"
 		],
 		"domain": "Govern",
 		"contentDifficulty": "Intermediate"
@@ -4290,19 +4291,19 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"questionType": "multi",
 		"prompt": "Which two controls reduce duplicate CIs when multiple governed sources update the same class? (Choose two.)",
 		"choices": [
-			"Strong identification entries evaluated in priority order",
 			"Disabling CMDB Health KPIs to avoid false positives",
-			"Loading all sources directly into cmdb_ci without IRE",
-			"Reconciliation rules with datasource precedence on key attributes"
+			"Reconciliation rules with datasource precedence on key attributes",
+			"Strong identification entries evaluated in priority order",
+			"Loading all sources directly into cmdb_ci without IRE"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"correctIndexes": [
-			0,
-			3
+			1,
+			2
 		],
 		"explanation": "Identification prevents duplicate CI creation while reconciliation governs which source updates each attribute after a match is found.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_IdentificationAndReconciliationEngine.html"
+			"https://www.servicenow.com/docs/r/configuration-management/cmdb/concept/c_IdentificationAndReconciliationEngine.html"
 		],
 		"domain": "Govern",
 		"contentDifficulty": "Intermediate"
@@ -4321,33 +4322,33 @@ export const DEV_PRACTICE_QUESTIONS = [
 			"Bulk retire action"
 		],
 		"matchRightItems": [
-			"Tracks KPI movement over time for executive review",
 			"Lists CIs lacking valid dependency context for steward action",
 			"Highlights classes missing required attributes or identifiers",
-			"Removes stale records through a governed lifecycle workflow"
+			"Removes stale records through a governed lifecycle workflow",
+			"Tracks KPI movement over time for executive review"
 		],
 		"correctMatches": [
 			{
 				"left": 0,
-				"right": 0
+				"right": 3
 			},
 			{
 				"left": 1,
-				"right": 1
+				"right": 0
 			},
 			{
 				"left": 2,
-				"right": 2
+				"right": 1
 			},
 			{
 				"left": 3,
-				"right": 3
+				"right": 2
 			}
 		],
 		"explanation": "CMDB workspace and Data Manager features connect health monitoring, orphan remediation, class compliance, and governed retirement workflows.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_CMDBWorkspace.html",
-			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_CMDBDataManager.html"
+			"https://www.servicenow.com/docs/r/configuration-management/cmdb/concept/c_CMDBWorkspace.html",
+			"https://www.servicenow.com/docs/r/configuration-management/cmdb/concept/c_CMDBDataManager.html"
 		],
 		"domain": "Govern",
 		"contentDifficulty": "Foundation"
@@ -4359,15 +4360,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"questionType": "multi",
 		"prompt": "A CMDB program is enabling multisource governance before SCCM and Discovery feeds run in parallel on server classes. Which prerequisites must be in place before CMDB 360 can capture per-source attribute history? (Choose two.)",
 		"choices": [
-			"Set glide.identification_engine.multisource_enabled to true",
-			"Activate the ITOM Discovery License plugin on the instance",
 			"Convert cmdb_ci tables to non-CMDB application tables",
-			"Disable all static reconciliation rules for every CI class"
+			"Disable all static reconciliation rules for every CI class",
+			"Set glide.identification_engine.multisource_enabled to true",
+			"Activate the ITOM Discovery License plugin on the instance"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"correctIndexes": [
-			0,
-			1
+			2,
+			3
 		],
 		"explanation": "CMDB 360 requires the ITOM Discovery License and the multisource_enabled property; disabling reconciliation or converting CMDB tables is not part of enablement.",
 		"sourceUrls": [
@@ -4381,12 +4382,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"domain": "Govern",
 		"prompt": "After a weekly SCCM import, CMDB Health reports a spike in duplicate Linux Server CIs sharing the same serial number. The team already ran one merge last month. What is the best next troubleshooting step?",
 		"choices": [
+			"Convert duplicate CIs into knowledge articles without updating the CMDB",
 			"Review identification rule identifier entries for the class and confirm incoming SCCM rows match before creating new CIs",
 			"Delete every Linux Server CI and reload the entire class from the oldest import set",
-			"Disable CMDB Health duplicate detection so the dashboard stops reporting the issue",
-			"Convert duplicate CIs into knowledge articles without updating the CMDB"
+			"Disable CMDB Health duplicate detection so the dashboard stops reporting the issue"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"explanation": "Recurring duplicates after imports usually mean identification keys or feed mapping do not match existing CIs; tuning identification prevents new duplicates rather than repeatedly merging symptoms.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management/deduplicate-cis.html",
@@ -4419,15 +4420,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"questionType": "multi",
 		"prompt": "Which two CMDB Health dashboard signals most strongly indicate a duplicate CI problem? (Choose two.)",
 		"choices": [
-			"Growing backlog of open de-duplication tasks generated by health jobs",
 			"Declining correctness scores tied to duplicate-related health tests",
 			"Higher count of MID Server clusters provisioned in the datacenter",
-			"Increased number of catalog items published to the service portal"
+			"Increased number of catalog items published to the service portal",
+			"Growing backlog of open de-duplication tasks generated by health jobs"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			1
+			3
 		],
 		"explanation": "Duplicate issues surface through health test failures, declining correctness, and de-duplication tasks—not infrastructure or catalog volume metrics.",
 		"sourceUrls": [
@@ -4451,27 +4452,27 @@ export const DEV_PRACTICE_QUESTIONS = [
 			"Health score"
 		],
 		"matchRightItems": [
-			"Required CI attributes are populated for operational use",
 			"Field values align with authoritative source systems",
-			"CIs meet configured health test and policy rules",
-			"Weighted rollup of class-level quality indicators"
+			"Required CI attributes are populated for operational use",
+			"Weighted rollup of class-level quality indicators",
+			"CIs meet configured health test and policy rules"
 		],
 		"correctMatches": [
 			{
 				"left": 0,
-				"right": 0
-			},
-			{
-				"left": 1,
 				"right": 1
 			},
 			{
+				"left": 1,
+				"right": 0
+			},
+			{
 				"left": 2,
-				"right": 2
+				"right": 3
 			},
 			{
 				"left": 3,
-				"right": 3
+				"right": 2
 			}
 		],
 		"explanation": "CMDB Health separates completeness, correctness, compliance, and an overall health score so teams can target specific quality gaps.",
@@ -4486,12 +4487,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 55,
 		"prompt": "An operator must remediate a small set of duplicate Linux server CIs flagged by a de-duplication task. Which tool is best suited for this scenario?",
 		"choices": [
-			"The Duplicate CI Remediator wizard to select a primary CI and merge attributes",
 			"A transform map that reloads every server row without coalesce keys",
-			"An event rule that suppresses alerts until duplicates age out naturally",
-			"A catalog item that retires assignment groups tied to the servers"
+			"The Duplicate CI Remediator wizard to select a primary CI and merge attributes",
+			"A catalog item that retires assignment groups tied to the servers",
+			"An event rule that suppresses alerts until duplicates age out naturally"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"explanation": "The de-duplication wizard guides operators through selecting a primary CI, merging attributes and relationships, and retiring or deleting duplicates.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management/deduplicate-cis.html"
@@ -4504,9 +4505,9 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 56,
 		"prompt": "Lab hardware is decommissioned but must remain auditable and excluded from active operational reporting. Which lifecycle approach is most appropriate?",
 		"choices": [
-			"Disable CMDB Health jobs so retired CIs no longer appear in lists",
-			"Move the records to the sys_user table for long-term storage",
 			"Hard-delete every related CI and relationship without retention policy",
+			"Move the records to the sys_user table for long-term storage",
+			"Disable CMDB Health jobs so retired CIs no longer appear in lists",
 			"Update install or operational lifecycle status to retired while retaining the CI record"
 		],
 		"correctIndex": 3,
@@ -4522,12 +4523,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 57,
 		"prompt": "A govern team needs consistent attribute values when stewards bulk-update server CIs. Which CMDB Data Manager control supports this?",
 		"choices": [
-			"Data policy rules that validate or standardize field values on targeted CI sets",
 			"Discovery behavior settings that change ICMP timeout intervals per subnet",
 			"Event correlation rules that group monitoring alerts by severity",
-			"Catalog client scripts that hide variables on unrelated request items"
+			"Catalog client scripts that hide variables on unrelated request items",
+			"Data policy rules that validate or standardize field values on targeted CI sets"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "CMDB Data Manager policies enforce validation and standardization during bulk lifecycle and attribute operations.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/configuration-management/configuration-management-database/cmdb-data-manager.html"
@@ -4542,11 +4543,11 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "CMDB Health lists hundreds of duplicate database CIs, but the Duplicate CI Remediator wizard completes without merging any pairs. What should the steward verify first?",
 		"choices": [
 			"That all users cleared browser cookies before opening the health dashboard",
-			"That import set tables were truncated before launching the wizard",
 			"That Discovery schedules were paused globally for thirty days retired when superseded by the next-generation integration pattern.",
-			"That duplicate groups share matching identification keys and the remediator selection criteria include the reported CI class"
+			"That duplicate groups share matching identification keys and the remediator selection criteria include the reported CI class",
+			"That import set tables were truncated before launching the wizard"
 		],
-		"correctIndex": 3,
+		"correctIndex": 2,
 		"explanation": "Remediator merges require eligible duplicate groups with aligned keys and class scope; mismatched identifiers or filters often leave health-detected duplicates untouched.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management/deduplicate-cis.html",
@@ -4569,8 +4570,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		],
 		"matchRightItems": [
 			"A handful of duplicates need guided manual merge review",
-			"Large duplicate volumes require repeatable automated selection logic",
 			"Incoming feeds keep creating new duplicates for the same keys",
+			"Large duplicate volumes require repeatable automated selection logic",
 			"Existing duplicate groups must be surfaced as remediation tasks"
 		],
 		"correctMatches": [
@@ -4580,11 +4581,11 @@ export const DEV_PRACTICE_QUESTIONS = [
 			},
 			{
 				"left": 1,
-				"right": 1
+				"right": 2
 			},
 			{
 				"left": 2,
-				"right": 2
+				"right": 1
 			},
 			{
 				"left": 3,
@@ -4605,12 +4606,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"domain": "Govern",
 		"prompt": "A compliance lead opens Performance Analytics from a CMDB Data Foundations metric tile and needs trending counts of non-compliant CIs over time, but yesterday's widgets were empty. What capability populates those PA widgets with historical non-compliance trends?",
 		"choices": [
-			"The scheduled Data Foundations metric collection job that feeds PA indicators with compliance counts and trends",
-			"Manual weekly CSV exports of cmdb_ci rows uploaded into personal dashboards",
 			"Disabling CMDB Health tests so scores no longer appear on the dashboard",
-			"Running import set transforms that delete every non-compliant CI automatically"
+			"Running import set transforms that delete every non-compliant CI automatically",
+			"Manual weekly CSV exports of cmdb_ci rows uploaded into personal dashboards",
+			"The scheduled Data Foundations metric collection job that feeds PA indicators with compliance counts and trends"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Data Foundations integrates with Performance Analytics through a scheduled metric collection job that aggregates non-compliant CI counts and trending data for dashboard widgets.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/cmdb-data-foundations-dashboard.html"
@@ -4623,9 +4624,9 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "A steward reviewing CMDB Health metric results needs context to start remediation. Which dashboard field provides guided next steps?",
 		"choices": [
 			"The MID Server version installed in each datacenter",
-			"The catalog item short description for hardware requests",
+			"The sys_ui_theme record applied to the CMDB workspace",
 			"Remediation playbook URLs linked from the metric list view",
-			"The sys_ui_theme record applied to the CMDB workspace"
+			"The catalog item short description for hardware requests"
 		],
 		"correctIndex": 2,
 		"explanation": "Health metrics include remediation playbook links to Now Support knowledge articles with issue context and correction guidance.",
@@ -4640,12 +4641,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 62,
 		"prompt": "Before executing a bulk de-duplication template, what govern checkpoint reduces the risk of merging unrelated CIs?",
 		"choices": [
-			"Confirm identification entries and matching keys cover the duplicate CI class",
 			"Assign every duplicate to the System Administrator user permanently",
-			"Remove reconciliation rules so imports overwrite all attributes",
-			"Disable all business rules on cmdb_ci until the template completes"
+			"Disable all business rules on cmdb_ci until the template completes",
+			"Confirm identification entries and matching keys cover the duplicate CI class",
+			"Remove reconciliation rules so imports overwrite all attributes"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Verification of identification rule coverage ensures duplicates share the same authoritative keys before automated merge logic runs.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management/deduplicate-cis.html",
@@ -4661,14 +4662,14 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "Which two CMDB Data Foundations dashboard tabs focus on CSDM alignment and third-party import integrity? (Choose two.)",
 		"choices": [
 			"Best Practices metrics for services, relationships, and intended table usage",
-			"Data Management Practices metrics for properly configured imported data",
 			"ITSM Processes metrics for incident assignment group coverage only",
+			"Data Management Practices metrics for properly configured imported data",
 			"Customizations metrics for excessive UI theme changes on forms"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			1
+			2
 		],
 		"explanation": "Best Practices checks CSDM-related standards while Data Management Practices validates import configuration that preserves CMDB integrity.",
 		"sourceUrls": [
@@ -4691,27 +4692,27 @@ export const DEV_PRACTICE_QUESTIONS = [
 			"ITSM Processes"
 		],
 		"matchRightItems": [
-			"CSDM service and relationship standards in the CMDB",
-			"Controlled and justified CMDB class and attribute extensions",
 			"Integrity of third-party data imported into CMDB tables",
-			"Whether ITSM processes consume CMDB data effectively"
+			"Whether ITSM processes consume CMDB data effectively",
+			"CSDM service and relationship standards in the CMDB",
+			"Controlled and justified CMDB class and attribute extensions"
 		],
 		"correctMatches": [
 			{
 				"left": 0,
-				"right": 0
-			},
-			{
-				"left": 1,
-				"right": 1
-			},
-			{
-				"left": 2,
 				"right": 2
 			},
 			{
-				"left": 3,
+				"left": 1,
 				"right": 3
+			},
+			{
+				"left": 2,
+				"right": 0
+			},
+			{
+				"left": 3,
+				"right": 1
 			}
 		],
 		"explanation": "The four dashboard tabs group metrics for standards adherence, customization discipline, import integrity, and process leverage.",
@@ -4726,12 +4727,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 65,
 		"prompt": "After initial CMDB cleanup, how should a data foundation team operationalize ongoing govern practices?",
 		"choices": [
-			"Delegate all CMDB updates to end users without stewardship standards",
-			"Archive every health test result immediately after each dashboard refresh",
 			"Embed recurring health and KPI review cadences with accountable remediation owners",
-			"Run health scans only during major platform upgrades every few years"
+			"Run health scans only during major platform upgrades every few years",
+			"Delegate all CMDB updates to end users without stewardship standards",
+			"Archive every health test result immediately after each dashboard refresh"
 		],
-		"correctIndex": 2,
+		"correctIndex": 0,
 		"explanation": "Sustained CMDB governance depends on routine reviews of health KPIs, assigned owners, and tracked remediation—not one-time or ad hoc efforts.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-governance.html"
@@ -4744,12 +4745,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 66,
 		"prompt": "CMDB Health compliance for a critical server class stays below target for three reporting cycles. What govern response is most appropriate?",
 		"choices": [
+			"Lower the compliance threshold until scores appear green on dashboards",
 			"Escalate through governance reviews with documented remediation plans and timelines",
 			"Deactivate all health tests for the class to remove visible failures",
-			"Delete non-compliant CIs without notifying application owners",
-			"Lower the compliance threshold until scores appear green on dashboards"
+			"Delete non-compliant CIs without notifying application owners"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"explanation": "Persistent KPI threshold breaches require formal escalation, remediation plans, and leadership visibility—not threshold manipulation or data deletion.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-governance.html",
@@ -4783,16 +4784,16 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"domain": "Govern",
 		"prompt": "A transform map coalesce field uses hostname alone, but imports keep creating duplicate Application Server CIs because hostnames differ by case and domain suffix. What is the most appropriate fix?",
 		"choices": [
-			"Adjust coalesce and identification to use stable keys such as serial number or a normalized identifier entry defined for the class",
 			"Remove coalesce entirely so every staging row inserts a new CI record",
 			"Disable the transform map and edit cmdb_ci records manually each week",
-			"Delete the Application Server class and reload all CIs into cmdb_ci throttled during maintenance windows to protect stability."
+			"Delete the Application Server class and reload all CIs into cmdb_ci throttled during maintenance windows to protect stability.",
+			"Adjust coalesce and identification to use stable keys such as serial number or a normalized identifier entry defined for the class"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Weak coalesce keys cause duplicate inserts; aligning coalesce and identification with authoritative stable identifiers resolves recurring duplicate creation at the source.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/washingtondc/integrate-applications/system-import-sets/c_CreatingNewTransformMaps.html",
-			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_IdentificationAndReconciliationEngine.html"
+			"https://www.servicenow.com/docs/r/integrate-applications/system-import-sets/c_CreatingNewTransformMaps.html",
+			"https://www.servicenow.com/docs/r/configuration-management/cmdb/concept/c_IdentificationAndReconciliationEngine.html"
 		],
 		"contentDifficulty": "Advanced"
 	},
@@ -4810,27 +4811,27 @@ export const DEV_PRACTICE_QUESTIONS = [
 			"managed_by_group"
 		],
 		"matchRightItems": [
-			"Tracks deployment state such as installed, in stock, or retired",
 			"Indicates whether the CI is actively in service",
-			"Supports phased retirement and audit review workflows",
-			"Identifies the accountable support group for the CI"
+			"Tracks deployment state such as installed, in stock, or retired",
+			"Identifies the accountable support group for the CI",
+			"Supports phased retirement and audit review workflows"
 		],
 		"correctMatches": [
 			{
 				"left": 0,
-				"right": 0
-			},
-			{
-				"left": 1,
 				"right": 1
 			},
 			{
+				"left": 1,
+				"right": 0
+			},
+			{
 				"left": 2,
-				"right": 2
+				"right": 3
 			},
 			{
 				"left": 3,
-				"right": 3
+				"right": 2
 			}
 		],
 		"explanation": "Lifecycle attributes communicate deployment, operational, retirement, and ownership context for governed CMDB records.",
@@ -4864,15 +4865,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"questionType": "multi",
 		"prompt": "Which two artifacts connect business critical success factors to measurable CMDB govern outcomes? (Choose two.)",
 		"choices": [
-			"KPI trees linking program goals to health metrics and remediation owners",
 			"Health scorecards with threshold alerts reviewed by data stewards",
 			"One-time spreadsheet exports stored outside the platform without owners",
-			"Disabled CMDB Get Well jobs to reduce visible non-compliance counts"
+			"Disabled CMDB Get Well jobs to reduce visible non-compliance counts",
+			"KPI trees linking program goals to health metrics and remediation owners"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			1
+			3
 		],
 		"explanation": "CSFs become govern outcomes when mapped to KPI trees and steward-reviewed scorecards—not offline exports or suppressed metric jobs.",
 		"sourceUrls": [
@@ -4896,27 +4897,27 @@ export const DEV_PRACTICE_QUESTIONS = [
 			"Duplicate CI Remediator wizard"
 		],
 		"matchRightItems": [
-			"Class-level quality scores and remediation task visibility",
 			"Foundational metric compliance with PA trend widgets",
-			"Policy-driven bulk lifecycle and relationship operations",
-			"Guided merge for individual de-duplication tasks"
+			"Guided merge for individual de-duplication tasks",
+			"Class-level quality scores and remediation task visibility",
+			"Policy-driven bulk lifecycle and relationship operations"
 		],
 		"correctMatches": [
 			{
 				"left": 0,
-				"right": 0
-			},
-			{
-				"left": 1,
-				"right": 1
-			},
-			{
-				"left": 2,
 				"right": 2
 			},
 			{
-				"left": 3,
+				"left": 1,
+				"right": 0
+			},
+			{
+				"left": 2,
 				"right": 3
+			},
+			{
+				"left": 3,
+				"right": 1
 			}
 		],
 		"explanation": "Govern teams use Health for operational quality, Data Foundations for program metrics, Data Manager for bulk policy work, and the wizard for targeted duplicate merges.",
@@ -4935,12 +4936,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"domain": "Insight",
 		"prompt": "Completeness scores are high for server CIs, but a Service Mapping dependency map still shows the database tier as orphaned and change impact misses the datastore. What should the engineer investigate first?",
 		"choices": [
-			"Missing or incorrect Depends on::Used by relationships between the application service and supporting database CIs",
 			"Whether the catalog item base price currency field is populated on related requests",
-			"Whether knowledge article vote totals exceed self-service deflection targets",
-			"Whether Flow Designer onboarding subflows execute before HR cases close"
+			"Missing or incorrect Depends on::Used by relationships between the application service and supporting database CIs",
+			"Whether Flow Designer onboarding subflows execute before HR cases close",
+			"Whether knowledge article vote totals exceed self-service deflection targets"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"explanation": "Service Mapping and impact analysis depend on governed dependency relationships; orphaned tiers usually indicate missing or incorrect relationship types between services and infrastructure CIs.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/concept/c_ServiceMapping.html",
@@ -4953,12 +4954,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 74,
 		"prompt": "From the CMDB Data Foundations dashboard Analytics Hub, how can an analyst list CIs causing a metric failure in near real time?",
 		"choices": [
-			"Disable the CMDB Get Well Metric Collection job until scores reset",
-			"Run a transform map that deletes every CI below the compliance threshold",
 			"Select Real-time, drill into the PA widget, and use Show Records for non-compliant CIs",
+			"Run a transform map that deletes every CI below the compliance threshold",
+			"Disable the CMDB Get Well Metric Collection job until scores reset",
 			"Export the sys_properties table and filter rows manually in a spreadsheet"
 		],
-		"correctIndex": 2,
+		"correctIndex": 0,
 		"explanation": "The Analytics Hub Real-time option with Show Records exposes the current non-compliant CI population behind a failing metric.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/cmdb-data-foundations-dashboard.html"
@@ -4971,16 +4972,16 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 75,
 		"prompt": "During an executive briefing, leadership asks why CMDB investment matters beyond inventory counts. Which business outcome best justifies a governed CMDB program?",
 		"choices": [
-			"Trusted configuration data enables accurate change risk, incident impact, and service continuity decisions",
-			"CMDB completeness guarantees every integration can skip identification and reconciliation rules",
 			"A populated CMDB eliminates the need for service ownership or data stewardship",
-			"Inventory volume alone satisfies audit requirements without relationship or ownership context"
+			"Inventory volume alone satisfies audit requirements without relationship or ownership context",
+			"CMDB completeness guarantees every integration can skip identification and reconciliation rules",
+			"Trusted configuration data enables accurate change risk, incident impact, and service continuity decisions"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "CMDB business value comes from reliable dependency and ownership context that supports operational decisions, not from record counts alone.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/cmdb-data-foundations-dashboard.html",
-			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_CMDBOverview.html"
+			"https://www.servicenow.com/docs/r/configuration-management/cmdb/concept/c_CMDBOverview.html"
 		],
 		"domain": "Insight",
 		"contentDifficulty": "Intermediate"
@@ -4991,9 +4992,9 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "A CMDB program manager opens the CMDB Data Foundations dashboard to prioritize remediation work. Which dashboard element links each metric to structured remediation guidance?",
 		"choices": [
 			"The import set coalesce field list attached to each metric row",
-			"The MID Server status tile on the Discovery home module",
+			"The widget color palette selector on the Analytics Hub page",
 			"The Remediation playbook URL column that opens Now Support knowledge articles for the metric",
-			"The widget color palette selector on the Analytics Hub page"
+			"The MID Server status tile on the Discovery home module"
 		],
 		"correctIndex": 2,
 		"explanation": "Data Foundations metrics include remediation playbook URLs that connect non-compliant indicators to documented analysis and fix guidance.",
@@ -5008,12 +5009,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 77,
 		"prompt": "An analyst wants to build a CMDB query using everyday language instead of manually adding nodes on the canvas. Which capability should they use in CMDB Query Builder?",
 		"choices": [
-			"Intelligent Search for CMDB, which parses natural language into a valid query on the builder canvas",
 			"The transform map onBefore script editor attached to import set tables",
-			"A business rule that converts list filter strings into relationship records",
-			"The scheduled job that rotates cmdb_ci audit fields nightly"
+			"The scheduled job that rotates cmdb_ci audit fields nightly",
+			"Intelligent Search for CMDB, which parses natural language into a valid query on the builder canvas",
+			"A business rule that converts list filter strings into relationship records"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Intelligent Search for CMDB accepts natural language query input, resolves table and relationship references, and constructs the query on the Query Builder canvas.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/querying-cmdb.html"
@@ -5028,11 +5029,11 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "SCCM proposed a hostname change that reconciliation rejected, but auditors still need to review the rejected value alongside the accepted Discovery data. What should the CMDB engineer open in CMDB Workspace?",
 		"choices": [
 			"A catalog item variable history list attached to hardware request records",
-			"The system properties module sorted alphabetically by property name",
 			"The CMDB 360 view for the CI showing multisource attribute proposals and accepted outcomes per source",
+			"The system properties module sorted alphabetically by property name",
 			"The import set staging table filtered by coalesce errors from the last spreadsheet load"
 		],
-		"correctIndex": 2,
+		"correctIndex": 1,
 		"explanation": "CMDB 360 exposes per-source attribute proposals, including rejected updates, so teams can audit reconciliation decisions without querying underlying storage tables directly.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/querying-cmdb.html"
@@ -5053,27 +5054,27 @@ export const DEV_PRACTICE_QUESTIONS = [
 			"Unified Map"
 		],
 		"matchRightItems": [
-			"Monitor foundational health metrics and prioritize remediation by priority score",
-			"Build complex CI and relationship searches without manual canvas assembly",
 			"Reuse governed query definitions across analysts and recurring reviews",
-			"Visualize hierarchical CI dependencies centered on a selected home node"
+			"Visualize hierarchical CI dependencies centered on a selected home node",
+			"Monitor foundational health metrics and prioritize remediation by priority score",
+			"Build complex CI and relationship searches without manual canvas assembly"
 		],
 		"correctMatches": [
 			{
 				"left": 0,
-				"right": 0
-			},
-			{
-				"left": 1,
-				"right": 1
-			},
-			{
-				"left": 2,
 				"right": 2
 			},
 			{
-				"left": 3,
+				"left": 1,
 				"right": 3
+			},
+			{
+				"left": 2,
+				"right": 0
+			},
+			{
+				"left": 3,
+				"right": 1
 			}
 		],
 		"explanation": "Insight tooling spans health dashboards, NLQ-assisted query building, reusable saved queries, and Unified Map visualization for dependency context.",
@@ -5090,12 +5091,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 80,
 		"prompt": "A change manager needs a single graphical view of upstream and downstream CIs for a production server without opening legacy maps separately. Which CMDB Workspace feature should they use?",
 		"choices": [
+			"The import set transform history list filtered by coalesce failures",
 			"Unified Map, which combines dependency and service mapping context around a chosen home node CI",
 			"A catalog item variable that stores related CI sys_ids as free text",
-			"The system properties module sorted alphabetically by name",
-			"The import set transform history list filtered by coalesce failures"
+			"The system properties module sorted alphabetically by name"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"explanation": "Unified Map delivers a cohesive hierarchical map centered on a home node CI, integrating capabilities from Dependency Views and Service Mapping.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/cmdb-workspace-unified-map.html"
@@ -5126,12 +5127,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 82,
 		"prompt": "On the Data Foundations dashboard, a metric shows a low compliance percentage and priority 1 - Critical. What is the recommended next step for the CMDB administrator?",
 		"choices": [
-			"Open the linked remediation playbook article and follow its analysis and fix guidance for that metric",
 			"Delete all non-compliant CIs immediately without stakeholder review",
+			"Convert the metric into a personal dashboard widget with no drill-down access",
 			"Disable the CMDB Get Well Metric Collection scheduled job to hide the score",
-			"Convert the metric into a personal dashboard widget with no drill-down access"
+			"Open the linked remediation playbook article and follow its analysis and fix guidance for that metric"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Critical Data Foundations metrics include playbook links that document problem context, analysis steps, and remediation guidance for the measured issue.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/cmdb-data-foundations-dashboard.html"
@@ -5145,19 +5146,19 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"questionType": "multi",
 		"prompt": "Which two statements accurately describe CMDB business value for service and operations leaders? (Choose two.)",
 		"choices": [
-			"Governed configuration data supports portfolio decisions by connecting services to supporting technology",
-			"Accurate CI relationships improve blast-radius analysis during incidents and planned changes",
 			"Business value requires disabling reconciliation so every source can freely overwrite attributes",
-			"CMDB value depends only on maximizing total CI count regardless of ownership or quality"
+			"CMDB value depends only on maximizing total CI count regardless of ownership or quality",
+			"Governed configuration data supports portfolio decisions by connecting services to supporting technology",
+			"Accurate CI relationships improve blast-radius analysis during incidents and planned changes"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"correctIndexes": [
-			0,
-			1
+			2,
+			3
 		],
 		"explanation": "CMDB business value stems from trustworthy relationships and service linkage that inform impact and portfolio decisions—not unchecked record volume or ungoverned updates.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_CMDBOverview.html",
+			"https://www.servicenow.com/docs/r/configuration-management/cmdb/concept/c_CMDBOverview.html",
 			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/cmdb-data-foundations-dashboard.html"
 		],
 		"domain": "Insight",
@@ -5178,15 +5179,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 			"Fix or Improve"
 		],
 		"matchRightItems": [
-			"Describes the measured health indicator and what it evaluates",
-			"Documents the underlying data or process problem driving non-compliance",
 			"Explains why resolving the metric matters to the business",
+			"Documents the underlying data or process problem driving non-compliance",
+			"Describes the measured health indicator and what it evaluates",
 			"Provides corrective steps to remediate or improve the metric"
 		],
 		"correctMatches": [
 			{
 				"left": 0,
-				"right": 0
+				"right": 2
 			},
 			{
 				"left": 1,
@@ -5194,7 +5195,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 			},
 			{
 				"left": 2,
-				"right": 2
+				"right": 0
 			},
 			{
 				"left": 3,
@@ -5230,12 +5231,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 86,
 		"prompt": "A data governance lead wants analysts across regions to run the same CMDB investigation weekly without rebuilding filters. What should they publish?",
 		"choices": [
-			"A saved CMDB Query Builder query shared with the appropriate roles or groups",
 			"A one-time CSV export stored on a local laptop outside the platform",
 			"A UI action that hard-codes sys_ids for every CI in the enterprise",
-			"An update set containing only dashboard theme CSS changes"
+			"An update set containing only dashboard theme CSS changes",
+			"A saved CMDB Query Builder query shared with the appropriate roles or groups"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Saved CMDB queries capture reusable filter and relationship logic so teams execute consistent investigations on a recurring basis.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/querying-cmdb.html"
@@ -5249,11 +5250,11 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "During a change window review, a change manager opens Unified Map from an application CI and needs upstream and downstream dependency chains without leaving the CMDB workspace. Which map capability supports this investigation?",
 		"choices": [
 			"Import set staging view grouped by transform map coalesce rules only",
-			"Class Manager table inheritance diagram for CMDB metadata classes",
 			"Data Manager policy editor showing identification exclusion tables",
-			"Dependency view with the selected CI as the home node and related CMDB relationships expanded"
+			"Dependency view with the selected CI as the home node and related CMDB relationships expanded",
+			"Class Manager table inheritance diagram for CMDB metadata classes"
 		],
-		"correctIndex": 3,
+		"correctIndex": 2,
 		"explanation": "Unified Map dependency view centers on a home CI and visualizes related upstream and downstream CMDB relationships for impact analysis during change and incident work.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/cmdb-workspace-unified-map.html"
@@ -5267,10 +5268,10 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"questionType": "multi",
 		"prompt": "Which two Unified Map capabilities help incident and change teams during live investigations? (Choose two.)",
 		"choices": [
-			"Contextual side panel modules such as Related items and Changes for the selected CI",
 			"Hierarchical visualization of CI relationships centered on a chosen home node",
-			"Automatic retirement of stale CIs without governance review",
-			"Direct replacement of all identification rules with map layout preferences"
+			"Contextual side panel modules such as Related items and Changes for the selected CI",
+			"Direct replacement of all identification rules with map layout preferences",
+			"Automatic retirement of stale CIs without governance review"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
@@ -5298,27 +5299,27 @@ export const DEV_PRACTICE_QUESTIONS = [
 			"ITSM Processes"
 		],
 		"matchRightItems": [
-			"CSDM-aligned standards such as service population and expected relationships",
-			"Appropriate use and scope of CMDB customizations",
 			"Integrity of third-party data imported into the CMDB",
-			"Whether ITSM processes leverage CMDB data effectively"
+			"Whether ITSM processes leverage CMDB data effectively",
+			"Appropriate use and scope of CMDB customizations",
+			"CSDM-aligned standards such as service population and expected relationships"
 		],
 		"correctMatches": [
 			{
 				"left": 0,
-				"right": 0
+				"right": 3
 			},
 			{
 				"left": 1,
-				"right": 1
-			},
-			{
-				"left": 2,
 				"right": 2
 			},
 			{
+				"left": 2,
+				"right": 0
+			},
+			{
 				"left": 3,
-				"right": 3
+				"right": 1
 			}
 		],
 		"explanation": "Data Foundations groups metrics into Best Practices, Customizations, Data Management Practices, and ITSM Processes tabs with distinct compliance focus areas.",
@@ -5334,15 +5335,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "Before a major data center change window, the change advisory board asks how CMDB insight reduces risk. Which answer best reflects CMDB business value in that scenario?",
 		"choices": [
 			"CMDB record volume alone satisfies change approval without reviewing relationships",
-			"Business value is limited to hardware asset depreciation reporting",
+			"Dependency and service maps expose affected CIs so planners can scope impact before approving the change",
 			"Insight dashboards replace the need to link changes to any configuration items",
-			"Dependency and service maps expose affected CIs so planners can scope impact before approving the change"
+			"Business value is limited to hardware asset depreciation reporting"
 		],
-		"correctIndex": 3,
+		"correctIndex": 1,
 		"explanation": "CMDB insight connects changes to dependent CIs and services so teams assess blast radius using governed configuration data rather than assumptions.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/cmdb-workspace-unified-map.html",
-			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_CMDBOverview.html"
+			"https://www.servicenow.com/docs/r/configuration-management/cmdb/concept/c_CMDBOverview.html"
 		],
 		"domain": "Insight",
 		"contentDifficulty": "Intermediate"
@@ -5353,12 +5354,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"domain": "Insight",
 		"prompt": "An operations team migrated from legacy Dependency Views to Unified Map, but analysts report missing middleware hops that Service Mapping previously exposed on the same application CI. What should they verify first?",
 		"choices": [
-			"That Service Mapping patterns and dependency relationships still exist on the home CI and are included in the Unified Map context",
 			"That import set staging tables were truncated before opening the map mapped to the correct service offering and fulfillment flow.",
-			"That all users switched to the classic UI theme for list personalization",
-			"That update sets were committed in production before reviewing map layout CSS"
+			"That update sets were committed in production before reviewing map layout CSS",
+			"That Service Mapping patterns and dependency relationships still exist on the home CI and are included in the Unified Map context",
+			"That all users switched to the classic UI theme for list personalization"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Unified Map integrates dependency and service mapping context; missing hops often mean Service Mapping relationships were not populated or the home CI lacks the expected mapped dependencies.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/cmdb-workspace-unified-map.html",
@@ -5372,11 +5373,11 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "A CMDB administrator reviewing a failing Best Practices metric wants step-by-step remediation aligned to ServiceNow guidance. Where do Data Foundations dashboards surface that content?",
 		"choices": [
 			"A personal notification preference on the user record",
-			"The MID Server log bundle downloaded from the ECC queue",
 			"Remediation playbook knowledge articles linked from the metric list view",
+			"The MID Server log bundle downloaded from the ECC queue",
 			"The transform map field map coalesce checkbox on import sets"
 		],
-		"correctIndex": 2,
+		"correctIndex": 1,
 		"explanation": "Each Data Foundations metric can link to a remediation playbook article in Now Support with structured analysis and fix guidance.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management-database-cmdb/cmdb-data-foundations-dashboard.html"
@@ -5390,15 +5391,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"questionType": "multi",
 		"prompt": "Which two CMDB insight practices help sustain data foundation improvements after initial remediation? (Choose two.)",
 		"choices": [
-			"Monitor Data Foundations metric trends through PA widgets and prioritize by calculated priority score",
 			"Reuse saved queries and playbooks so teams apply consistent investigation and fix patterns",
+			"Remove ownership fields to simplify certification workflows",
 			"Disable CMDB Get Well collection jobs once scores reach one hundred percent once",
-			"Remove ownership fields to simplify certification workflows"
+			"Monitor Data Foundations metric trends through PA widgets and prioritize by calculated priority score"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			1
+			3
 		],
 		"explanation": "Sustained improvement relies on ongoing metric monitoring plus repeatable queries and playbooks—not turning off collection or stripping ownership accountability.",
 		"sourceUrls": [
@@ -5414,15 +5415,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "At the start of a CSDM program, workshop facilitators need to identify who owns business services, technical services, and foundation data. Which activity should they schedule first?",
 		"choices": [
 			"Immediate customization of all CSDM tables to match a legacy spreadsheet layout",
-			"Disabling reconciliation so each team can populate fields independently",
+			"Bulk import of every cmdb_ci record before defining any service boundaries",
 			"Stakeholder mapping workshops that document accountable owners and decision makers per domain",
-			"Bulk import of every cmdb_ci record before defining any service boundaries"
+			"Disabling reconciliation so each team can populate fields independently"
 		],
 		"correctIndex": 2,
 		"explanation": "CSDM engagements begin with stakeholder mapping so service, application, and foundation data have named owners before model and load activities scale.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/common-service-data-model/australia/csdm/concept/c_GovernanceInCSDM.html",
-			"https://www.servicenow.com/docs/r/common-service-data-model/australia/csdm/concept/csdm-foundation-planning.html"
+			"https://www.servicenow.com/docs/r/common-service-data-model/csdm/concept/c_GovernanceInCSDM.html",
+			"https://www.servicenow.com/docs/r/common-service-data-model/csdm/concept/csdm-foundation-planning.html"
 		],
 		"domain": "CSDM Fundamentals",
 		"contentDifficulty": "Intermediate"
@@ -5433,15 +5434,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"domain": "CSDM Fundamentals",
 		"prompt": "During application onboarding, finance maps cost allocation to generic cmdb_ci records instead of cmdb_ci_business_app entries in the Build domain. Service portfolio reporting now shows missing application ownership. What should the CSDM lead configure first?",
 		"choices": [
-			"Business Application records in the Build domain with accountable owners linked to supporting technical CIs",
 			"Disable identification rules until finance selects a new spreadsheet template",
-			"Convert every server CI class into a custom non-CMDB table",
-			"Delete all cmdb_ci records so cost reports stop referencing infrastructure"
+			"Delete all cmdb_ci records so cost reports stop referencing infrastructure",
+			"Business Application records in the Build domain with accountable owners linked to supporting technical CIs",
+			"Convert every server CI class into a custom non-CMDB table"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "CSDM Build domain Business Application records connect financial and portfolio views to governed technical CIs; generic cmdb_ci rows lack the service ownership model portfolio processes expect.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/common-service-data-model/australia/csdm/concept/c_CSDMOverview.html"
+			"https://www.servicenow.com/docs/r/common-service-data-model/csdm/concept/c_CSDMOverview.html"
 		],
 		"contentDifficulty": "Intermediate"
 	},
@@ -5452,14 +5453,14 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "A P1 incident references a database CI, but the service desk cannot identify the affected business service in CMDB Workspace because no consumer-facing service record exists. Which CSDM modeling step was most likely skipped?",
 		"choices": [
 			"Linking the technical CI to a Business Service or Application Service record with defined ownership in the service hierarchy",
-			"Installing an additional MID Server cluster in the database subnet",
 			"Switching the instance UI theme to classic mode for list views",
+			"Installing an additional MID Server cluster in the database subnet",
 			"Publishing a new catalog item for database password resets paired with complementary controls from the security team."
 		],
 		"correctIndex": 0,
 		"explanation": "CSDM connects technical CIs to business and application services so impact analysis and incident routing can traverse from infrastructure to accountable service owners.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/common-service-data-model/australia/csdm/concept/c_CSDMAndOperationalProcesses.html"
+			"https://www.servicenow.com/docs/r/common-service-data-model/csdm/concept/c_CSDMAndOperationalProcesses.html"
 		],
 		"contentDifficulty": "Intermediate"
 	},
@@ -5469,15 +5470,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"domain": "CSDM Fundamentals",
 		"prompt": "Before loading application services from a discovery feed, the data foundation team must align company and location reference data imported from HR. Which phased CSDM approach best reduces rework?",
 		"choices": [
-			"Establish Foundation domain company and location records with owners first, then onboard Build domain application services",
 			"Load application services immediately and backfill foundation records only after CMDB Health reaches one hundred percent",
+			"Customize every CSDM table before importing any reference data",
 			"Skip foundation data because identification rules can infer company names from hostnames",
-			"Customize every CSDM table before importing any reference data"
+			"Establish Foundation domain company and location records with owners first, then onboard Build domain application services"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "CSDM phased adoption starts with governed foundation reference data so downstream Build and service records inherit consistent organizational context.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/common-service-data-model/australia/csdm/concept/csdm-foundation-planning.html"
+			"https://www.servicenow.com/docs/r/common-service-data-model/csdm/concept/csdm-foundation-planning.html"
 		],
 		"contentDifficulty": "Intermediate"
 	},
@@ -5487,19 +5488,19 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"questionType": "multi",
 		"prompt": "During stakeholder mapping for CSDM, which two roles should be identified before detailed service modeling workshops? (Choose two.)",
 		"choices": [
-			"Technical service or application owners responsible for supporting CIs and relationships",
-			"Business service owners accountable for consumer-facing outcomes",
 			"External auditors who will never interact with service records",
-			"Every instance user with the admin role regardless of domain expertise"
+			"Every instance user with the admin role regardless of domain expertise",
+			"Technical service or application owners responsible for supporting CIs and relationships",
+			"Business service owners accountable for consumer-facing outcomes"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"correctIndexes": [
-			0,
-			1
+			2,
+			3
 		],
 		"explanation": "Effective CSDM stakeholder mapping names business and technical ownership; broad admin access or passive audit contacts do not substitute for service accountability.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/common-service-data-model/australia/csdm/concept/c_GovernanceInCSDM.html"
+			"https://www.servicenow.com/docs/r/common-service-data-model/csdm/concept/c_GovernanceInCSDM.html"
 		],
 		"domain": "CSDM Fundamentals",
 		"contentDifficulty": "Intermediate"
@@ -5518,15 +5519,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 			"Sell"
 		],
 		"matchRightItems": [
-			"Shared organizational entities such as company, location, and group structures",
-			"Strategy, business capabilities, and portfolio planning constructs",
 			"Technical services, application services, and supporting CMDB relationships",
+			"Strategy, business capabilities, and portfolio planning constructs",
+			"Shared organizational entities such as company, location, and group structures",
 			"Market-facing offerings and commercial service definitions"
 		],
 		"correctMatches": [
 			{
 				"left": 0,
-				"right": 0
+				"right": 2
 			},
 			{
 				"left": 1,
@@ -5534,7 +5535,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 			},
 			{
 				"left": 2,
-				"right": 2
+				"right": 0
 			},
 			{
 				"left": 3,
@@ -5543,8 +5544,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		],
 		"explanation": "CSDM domains separate foundation master data, planning artifacts, operational build constructs, and sell-side offering definitions.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/common-service-data-model/australia/csdm/concept/c_CSDMOverview.html",
-			"https://www.servicenow.com/docs/r/common-service-data-model/australia/csdm/concept/c_CSDMServices.html"
+			"https://www.servicenow.com/docs/r/common-service-data-model/csdm/concept/c_CSDMOverview.html",
+			"https://www.servicenow.com/docs/r/common-service-data-model/csdm/concept/c_CSDMServices.html"
 		],
 		"domain": "CSDM Fundamentals",
 		"contentDifficulty": "Foundation"
@@ -5556,14 +5557,14 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "The Class Manager team extended the Application CI class for custom attributes, and a portfolio workshop next week requires Business Application records in Design and Planning. What sequencing aligns with CSDM foundation planning?",
 		"choices": [
 			"Skip stakeholder mapping because class extensions automatically populate service ownership",
-			"Load all custom tables first and defer CSDM foundation workshops until after production go-live",
 			"Deploy Sell domain offerings before any company or location records exist in the instance prioritized using risk scoring and impact assessment criteria.",
-			"Confirm foundation company and location standards, then model Design and Planning business applications before expanding Build technical relationships"
+			"Confirm foundation company and location standards, then model Design and Planning business applications before expanding Build technical relationships",
+			"Load all custom tables first and defer CSDM foundation workshops until after production go-live"
 		],
-		"correctIndex": 3,
+		"correctIndex": 2,
 		"explanation": "CSDM roadmap sequencing governs foundation reference data and Design and Planning constructs before scaling Build technical relationships and portfolio offerings.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/common-service-data-model/australia/csdm/concept/csdm-foundation-planning.html"
+			"https://www.servicenow.com/docs/r/common-service-data-model/csdm/concept/csdm-foundation-planning.html"
 		],
 		"contentDifficulty": "Intermediate"
 	},
@@ -5572,16 +5573,16 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 101,
 		"prompt": "Foundation data workshops reveal conflicting location hierarchies across business units. Which stakeholder mapping outcome resolves the conflict before CMDB loads continue?",
 		"choices": [
-			"Documented data owners and agreed reference standards for location and organization records",
 			"A decision to load every variant without reconciliation or ownership",
-			"Removal of all location fields from CI classes to avoid validation",
-			"Assignment of the admin role to every workshop participant"
+			"Documented data owners and agreed reference standards for location and organization records",
+			"Assignment of the admin role to every workshop participant",
+			"Removal of all location fields from CI classes to avoid validation"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"explanation": "Foundation stakeholder mapping establishes accountable owners and reference standards so shared entities remain consistent across integrations and services.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/common-service-data-model/australia/csdm/concept/c_GovernanceInCSDM.html",
-			"https://www.servicenow.com/docs/r/common-service-data-model/australia/csdm/concept/csdm-foundation-domain.html"
+			"https://www.servicenow.com/docs/r/common-service-data-model/csdm/concept/c_GovernanceInCSDM.html",
+			"https://www.servicenow.com/docs/r/common-service-data-model/csdm/concept/csdm-foundation-domain.html"
 		],
 		"domain": "CSDM Fundamentals",
 		"contentDifficulty": "Intermediate"
@@ -5591,16 +5592,16 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 102,
 		"prompt": "After CSDM alignment, portfolio leaders report faster impact assessments during outages. Which benefit best explains that improvement?",
 		"choices": [
-			"CSDM removes all need for CMDB dependency views and saved queries",
-			"Foundation domains replace incident categorization with catalog variables",
 			"Service modeling automatically disables duplicate CI creation without I&R configuration",
+			"Foundation domains replace incident categorization with catalog variables",
+			"CSDM removes all need for CMDB dependency views and saved queries",
 			"Mapped business-to-technical service relationships clarify which consumer services depend on failed infrastructure"
 		],
 		"correctIndex": 3,
 		"explanation": "CSDM links business services to technical dependencies so impact analysis reflects consumer outcomes—not isolated CI lists.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/common-service-data-model/australia/csdm/concept/c_CSDMServices.html",
-			"https://www.servicenow.com/docs/r/common-service-data-model/australia/csdm/concept/c_CSDMAndOperationalProcesses.html"
+			"https://www.servicenow.com/docs/r/common-service-data-model/csdm/concept/c_CSDMServices.html",
+			"https://www.servicenow.com/docs/r/common-service-data-model/csdm/concept/c_CSDMAndOperationalProcesses.html"
 		],
 		"domain": "CSDM Fundamentals",
 		"contentDifficulty": "Intermediate"
@@ -5611,20 +5612,20 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"questionType": "multi",
 		"prompt": "Which two practices align a CSDM rollout with CMDB data foundation goals? (Choose two.)",
 		"choices": [
-			"Define service boundaries and relate supporting CIs before declaring services production-ready",
-			"Use foundation domain standards for shared entities consumed by multiple applications",
 			"Defer all relationship modeling until custom CMDB classes replace out-of-box tables",
-			"Allow each integration to invent local service definitions without central review"
+			"Allow each integration to invent local service definitions without central review",
+			"Use foundation domain standards for shared entities consumed by multiple applications",
+			"Define service boundaries and relate supporting CIs before declaring services production-ready"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"correctIndexes": [
-			0,
-			1
+			2,
+			3
 		],
 		"explanation": "CSDM and CMDB foundations converge on governed shared entities and explicit service-to-CI relationships rather than unconstrained local definitions.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/common-service-data-model/australia/csdm/concept/c_ServiceModelingGuidelines.html",
-			"https://www.servicenow.com/docs/r/common-service-data-model/australia/csdm/concept/csdm-foundation-domain.html"
+			"https://www.servicenow.com/docs/r/common-service-data-model/csdm/concept/c_ServiceModelingGuidelines.html",
+			"https://www.servicenow.com/docs/r/common-service-data-model/csdm/concept/csdm-foundation-domain.html"
 		],
 		"domain": "CSDM Fundamentals",
 		"contentDifficulty": "Intermediate"
@@ -5643,19 +5644,19 @@ export const DEV_PRACTICE_QUESTIONS = [
 			"Portfolio alignment workshops"
 		],
 		"matchRightItems": [
-			"Named owners and decision rights for each CSDM domain and data set",
 			"Validated organizational and location master data before dependent services go live",
+			"Business capabilities and offerings connected to measurable platform investments",
 			"Traceable links between business services and supporting technical CIs",
-			"Business capabilities and offerings connected to measurable platform investments"
+			"Named owners and decision rights for each CSDM domain and data set"
 		],
 		"correctMatches": [
 			{
 				"left": 0,
-				"right": 0
+				"right": 3
 			},
 			{
 				"left": 1,
-				"right": 1
+				"right": 0
 			},
 			{
 				"left": 2,
@@ -5663,13 +5664,13 @@ export const DEV_PRACTICE_QUESTIONS = [
 			},
 			{
 				"left": 3,
-				"right": 3
+				"right": 1
 			}
 		],
 		"explanation": "CSDM programs sequence stakeholder accountability, foundation certification, service linkage, and portfolio alignment to deliver governed end-to-end service data.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/common-service-data-model/australia/csdm/concept/c_GovernanceInCSDM.html",
-			"https://www.servicenow.com/docs/r/common-service-data-model/australia/csdm/concept/csdm-foundation-planning.html"
+			"https://www.servicenow.com/docs/r/common-service-data-model/csdm/concept/c_GovernanceInCSDM.html",
+			"https://www.servicenow.com/docs/r/common-service-data-model/csdm/concept/csdm-foundation-planning.html"
 		],
 		"domain": "CSDM Fundamentals",
 		"contentDifficulty": "Foundation"
