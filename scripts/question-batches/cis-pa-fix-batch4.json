@@ -1,0 +1,179 @@
+[
+	{
+		"trackCode": "CIS-PA",
+		"order": 19,
+		"prompt": "After collection jobs run, where does Platform Analytics persist indicator and breakdown scores for trending and widgets?",
+		"choices": [
+			"Breakdown source staging tables without historical snapshots",
+			"Widget configuration records on the sp_dashboard table",
+			"sys_audit entries only, with no dedicated PA score tables",
+			"pa_scores_l1 for indicator scores and pa_scores_l2 for second-level breakdown matrix scores"
+		],
+		"correctIndex": 3,
+		"explanation": "The legacy Scores [pa_scores] table was split into Scores Level 1 [pa_scores_l1] for indicator and first-level scores and Scores Level 2 [pa_scores_l2] for second-level breakdown matrix scores. New instances use those tables by default; pa_scores is deprecated.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/pa-scores-migration.html"
+		],
+		"domain": "Configure Indicators and Indicator Sources"
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 40,
+		"prompt": "An automated indicator collects Priority and Assignment Group breakdowns together, but the Priority plus Assignment Group combinations produce redundant scores that slow collection. How should the admin stop collecting those invalid combinations?",
+		"choices": [
+			"Hide the dashboard widget with a homepage filter only",
+			"Configure an import set error handling policy on the source table",
+			"Exclude the Priority and Assignment Group combinations in the Collect breakdown matrix configuration",
+			"Override manual indicator scores for each collection period"
+		],
+		"correctIndex": 2,
+		"explanation": "Breakdown matrix exclusions prevent collection of selected two-breakdown combinations that are not useful. Individual breakdown scores can still collect; excluded combinations are omitted from Analytics Hub, KPI Details, scoresheet, and new widgets. Homepage filters only hide widgets and do not change collection.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/create-breakdown-mapping.html"
+		],
+		"domain": "Configure Breakdowns and Breakdown Sources"
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 47,
+		"prompt": "A scorecard is slowed by low-value second-level breakdown combinations that executives never review. How should the team reduce collection load while keeping the breakdowns available individually?",
+		"choices": [
+			"Exclude the unused breakdown combinations on the indicator Collect breakdown matrix tab",
+			"Delete the breakdown source record from the instance",
+			"Convert the indicator to a manual indicator automatically",
+			"Purge all archived PA scores from prior collection periods"
+		],
+		"correctIndex": 0,
+		"explanation": "Excluding combinations on the Collect breakdown matrix stops new collection for those pairs without deleting breakdown sources. Individual breakdown scores still collect. Deleting the source or converting to manual removes useful segmentation; purging history does not stop future collection of noisy combinations.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/create-breakdown-mapping.html"
+		],
+		"domain": "Configure Breakdowns and Breakdown Sources"
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 49,
+		"questionType": "multi",
+		"prompt": "Which statements about Performance Analytics data collection jobs are correct? (Choose two.)",
+		"choices": [
+			"Scheduled jobs collect ongoing scores on a recurring Run schedule such as Daily",
+			"Historical jobs backfill scores for existing records and should usually run On demand once",
+			"Historical jobs permanently replace all scheduled collection for every indicator",
+			"Collection jobs evaluate ACLs of the Run as user before querying indicator sources"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "Use scheduled jobs for ongoing collection and a historical On demand job to backfill existing data once. Historical jobs do not replace scheduled collection going forward. Collection jobs follow domain settings of Run as but do not apply that user's ACLs or business rules.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/t_CreatASchedDataCollJob.html",
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/t_RunHistoricalDataCollection.html"
+		],
+		"domain": "Data Collection"
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 50,
+		"prompt": "A PA admin activates a content pack and needs past incident KPI scores available immediately. Which job configuration is appropriate for that initial backfill?",
+		"choices": [
+			"Create a historical data collection job, set Run to On demand, and execute it once",
+			"Schedule the historical job Daily so it overwrites scores every night forever",
+			"Disable all indicators until widgets show live list data without collection",
+			"Set Collect to Text index only so score tables remain empty during backfill"
+		],
+		"correctIndex": 0,
+		"explanation": "Historical collection backfills scores and snapshots for existing records. Docs recommend Run = On demand and avoiding repeated historical runs that delete previously collected data for covered periods and indicators. Ongoing scores then come from a separate scheduled job.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/t_RunHistoricalDataCollection.html",
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/t_CreatASchedDataCollJob.html"
+		],
+		"domain": "Data Collection"
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 51,
+		"prompt": "While configuring a six-month historical collection job for open incidents, which job indicator practice keeps segmented scores meaningful?",
+		"choices": [
+			"Force every breakdown including Assignment Group and State to collect for the full history",
+			"Exclude breakdowns whose field values are likely to change over the historical period",
+			"Remove all indicators from the job so only text analytics indexes are rebuilt",
+			"Convert the historical job to Daily Run so it never needs Execute Now"
+		],
+		"correctIndex": 1,
+		"explanation": "For historical jobs, exclude breakdowns based on fields likely to change during the collection period, such as Assignment Group and State, so past scores are not rewritten with today's values. Collecting those dimensions across months produces misleading history.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/t_RunHistoricalDataCollection.html",
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/configure-job-indicator.html"
+		],
+		"domain": "Data Collection"
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 52,
+		"prompt": "A new daily data collection job finishes with no scores. Indicator sources and breakdowns already exist. What must the admin verify on the job first?",
+		"choices": [
+			"That the Indicators related list includes at least one indicator for the job to collect",
+			"That every dashboard widget uses a real-time score visualization",
+			"That the Clean PA collections job is deactivated permanently",
+			"That Run as is set to a user without pa_data_collector so ACLs block the query"
+		],
+		"correctIndex": 0,
+		"explanation": "A data collection job must include at least one indicator; otherwise it cannot return results. Widgets, cleanup schedules, and ACL blocking are not the first configuration requirement for an empty job.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/t_CreatASchedDataCollJob.html"
+		],
+		"domain": "Data Collection"
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 53,
+		"questionType": "multi",
+		"prompt": "Which practices help keep Performance Analytics collection healthy over time? (Choose two.)",
+		"choices": [
+			"Use the Clean PA collections job to remove old scores and snapshots on a schedule",
+			"Avoid running the cleanup job while an active data collection job is still running",
+			"Delete pa_scores_l1 nightly so widgets always query live incident lists",
+			"Disable all scheduled collection after the first historical backfill completes"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "Clean PA collections routinely removes old scores and snapshots for performance. It should not run while a data collection job is running. Nightly truncation of score tables and stopping scheduled collection after one historical run leave dashboards without ongoing scores.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/c_CollectionCleanup.html"
+		],
+		"domain": "Data Collection"
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 54,
+		"prompt": "Most daily indicators should collect the most recently completed day. How should Relative operator fields be set on the recurring job?",
+		"choices": [
+			"Relative start and Relative end both set to one day ago",
+			"Fixed start and Fixed end left blank so the job invents a year-long window",
+			"Relative start of 60 days ago and Relative end of today for every daily run",
+			"Run set to Once with Relative end interval set to years ago"
+		],
+		"correctIndex": 0,
+		"explanation": "Daily scheduled jobs normally collect the most recently completed day, so relative start and relative end are each one day ago. Longer relative windows belong on one-time historical jobs, not nightly daily collection.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/t_CreatASchedDataCollJob.html"
+		],
+		"domain": "Data Collection"
+	},
+	{
+		"trackCode": "CIS-PA",
+		"order": 56,
+		"prompt": "A platform team needs incident KPI scores captured every hour without creating a second data collector job. Which change on the existing job meets the schedule requirement?",
+		"choices": [
+			"Set Run to Periodically and set Repeat Interval to one hour",
+			"Set widget refresh interval to one hour on related dashboards",
+			"Set Run as user to an hourly scheduled integration user",
+			"Set benchmark comparison window to the last hour only"
+		],
+		"correctIndex": 0,
+		"explanation": "The Run field controls the schedule. Periodically with a one-hour Repeat Interval collects hourly without duplicating the job. Widget refresh, Run as identity, and benchmark windows do not define collection cadence.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/t_CreatASchedDataCollJob.html"
+		],
+		"domain": "Data Collection"
+	}
+]

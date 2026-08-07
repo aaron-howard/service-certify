@@ -14296,12 +14296,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 0,
 		"prompt": "Executive sponsors ask how incident, change, and request KPIs will roll up before any technical build starts. Which KPI framework design should the PA lead present?",
 		"choices": [
-			"Dashboard wireframes published before stakeholders agree on any measurable outcomes",
-			"Business goals mapped to measurements through KPI Composer, then indicator sources, indicators, breakdowns, and governed dashboards",
 			"Manual score entry for every KPI until automated collection is proven unnecessary",
-			"Breakdown sources created first so indicator definitions can be inferred later from segment names"
+			"Breakdown sources created first so indicator definitions can be inferred later from segment names",
+			"Business goals mapped to measurements through KPI Composer, then indicator sources, indicators, breakdowns, and governed dashboards",
+			"Dashboard wireframes published before stakeholders agree on any measurable outcomes"
 		],
-		"correctIndex": 1,
+		"correctIndex": 2,
 		"explanation": "PA solution design connects business goals to measurements first, then builds filtered facts, KPIs, dimensions, and dashboards in a governed sequence.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/workflow-automated-indicators.html",
@@ -14315,9 +14315,9 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "A greenfield PA program must prioritize analytics investments before developers create indicator sources. Which KPI strategy step should come first?",
 		"choices": [
 			"Facilitate stakeholder workshops to define goals, critical success factors, and candidate measurements in KPI Composer",
-			"Schedule nightly collection jobs before identifying which tables support the business questions",
+			"Create scripted breakdown sources for all tables before validating any KPI definitions",
 			"Clone every out-of-box dashboard so executives have visuals during the first week",
-			"Create scripted breakdown sources for all tables before validating any KPI definitions"
+			"Schedule nightly collection jobs before identifying which tables support the business questions"
 		],
 		"correctIndex": 0,
 		"explanation": "Analytics strategy begins with agreed business outcomes and measurement design; technical indicator implementation follows once KPIs are validated.",
@@ -14332,12 +14332,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 2,
 		"prompt": "The CIO wants quarterly visibility into service performance trends without ad hoc spreadsheet reports. Which PA use case best addresses this need?",
 		"choices": [
-			"CMDB discovery schedules that populate dashboard filters automatically",
 			"Real-time event rules that replace all historical trend analysis",
-			"One-time report exports run manually by each business analyst",
-			"Scheduled indicator score collection with trend widgets shared on role-based dashboards"
+			"Scheduled indicator score collection with trend widgets shared on role-based dashboards",
+			"CMDB discovery schedules that populate dashboard filters automatically",
+			"One-time report exports run manually by each business analyst"
 		],
-		"correctIndex": 3,
+		"correctIndex": 1,
 		"explanation": "PA delivers recurring score snapshots and trend visualizations on dashboards so executives can monitor performance over time without manual reporting.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/designing-pa-solution.html"
@@ -14349,12 +14349,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 3,
 		"prompt": "A business analyst needs to create automated indicators and associate breakdowns but should not manage data collection jobs. Which role aligns to that persona?",
 		"choices": [
-			"pa_power_user",
-			"pa_data_collector",
 			"pa_target_admin without pa_viewer",
+			"pa_data_collector",
+			"pa_power_user",
 			"admin because indicators always require full system access"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "pa_power_user creates indicators, breakdowns, and PA widgets; pa_data_collector owns indicator sources and data collection jobs.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/r_PARoles.html"
@@ -14368,8 +14368,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "Which artifacts are foundational Performance Analytics solution components an implementer configures before dashboards go live? (Choose three.)",
 		"choices": [
 			"Indicator sources that filter facts table records",
-			"Indicators that define what is measured and how scores aggregate",
 			"Breakdowns that segment scores by dimensions such as assignment group",
+			"Indicators that define what is measured and how scores aggregate",
 			"MID Server clusters dedicated to each indicator frequency",
 			"Update sets that version-control widget CSS themes"
 		],
@@ -14391,9 +14391,9 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "The program team completed KPI Composer workshops mapping business goals to measurements. How does that design phase relate to technical indicator implementation?",
 		"choices": [
 			"KPI Composer drives top-down KPI design while indicator build follows a bottom-up workflow from tables to jobs",
-			"KPI Composer replaces the need to create indicator sources on the instance",
+			"KPI Composer only documents manual indicators and excludes automated KPIs",
 			"Technical implementers must finish all dashboards before KPI Composer artifacts are reviewed",
-			"KPI Composer only documents manual indicators and excludes automated KPIs"
+			"KPI Composer replaces the need to create indicator sources on the instance"
 		],
 		"correctIndex": 0,
 		"explanation": "KPI Composer aligns stakeholders on goals and measurements top-down; implementers then build indicator sources, indicators, and jobs bottom-up from platform tables.",
@@ -14407,12 +14407,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 6,
 		"prompt": "Before creating Incidents.Open and Incidents.Resolved sources, what should the PA team do to avoid redundant configuration?",
 		"choices": [
-			"Copy indicator sources from production without reviewing condition overlap",
 			"Run a full platform upgrade to regenerate indicator libraries",
-			"Delete all OOTB PA content so custom naming conventions apply cleanly",
-			"Search existing indicator sources and indicators for matching filters and KPI definitions"
+			"Search existing indicator sources and indicators for matching filters and KPI definitions",
+			"Copy indicator sources from production without reviewing condition overlap",
+			"Delete all OOTB PA content so custom naming conventions apply cleanly"
 		],
-		"correctIndex": 3,
+		"correctIndex": 1,
 		"explanation": "The standard workflow requires verifying that no suitable indicator source or indicator already exists before creating duplicates.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/workflow-automated-indicators.html"
@@ -14425,8 +14425,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "Executive sponsors approved a PA program but want assurance that technical work maps to agreed outcomes before build starts. Which KPI Composer capability supports that alignment?",
 		"choices": [
 			"Visual KPI trees linking business goals, critical success factors, and required measurements",
-			"Automated MID Server provisioning for each dashboard consumer",
 			"Default incident SLAs that replace indicator target definitions",
+			"Automated MID Server provisioning for each dashboard consumer",
 			"Global system properties that hide unpublished widgets from all roles"
 		],
 		"correctIndex": 0,
@@ -14442,14 +14442,14 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"questionType": "multi",
 		"prompt": "Which tasks complete deployment of a new automated indicator with ongoing collection? (Choose two.)",
 		"choices": [
-			"Activate a scheduled job aligned to indicator frequency for ongoing collection",
 			"Convert the indicator to manual entry after the first successful collection",
+			"Run an unscheduled job to backfill historical scores when source data exists",
 			"Delete all pa_scores_l1 rows before running the first source preview",
-			"Run an unscheduled job to backfill historical scores when source data exists"
+			"Activate a scheduled job aligned to indicator frequency for ongoing collection"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"correctIndexes": [
-			0,
+			1,
 			3
 		],
 		"explanation": "New indicators typically get a one-time historical backfill job plus an active scheduled job for recurring collection at the indicator frequency.",
@@ -14463,12 +14463,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 9,
 		"prompt": "Leadership asks for a KPI showing open incidents reassigned at least once this week. Which PA artifact defines the measurable metric and aggregation on filtered incident records?",
 		"choices": [
-			"An automated indicator on an indicator source that filters open incidents",
-			"A breakdown source that replaces the facts table for the Incident module",
 			"A database view that stores pre-rendered chart images for executives",
-			"A business rule that writes scores directly to the sys_properties table"
+			"A business rule that writes scores directly to the sys_properties table",
+			"An automated indicator on an indicator source that filters open incidents",
+			"A breakdown source that replaces the facts table for the Incident module"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Automated indicators define the KPI measurement and aggregation logic on records returned by a shared indicator source.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/c_IndicatorSources.html"
@@ -14481,9 +14481,9 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "Service desk leadership wants a KPI for first-contact resolution that is specific, measurable, and tied to a business outcome. Which SMART KPI design should the PA team propose?",
 		"choices": [
 			"Percentage of incidents resolved at first contact without reassignment, measured weekly by assignment group with a defined target",
-			"Average handle time only, because any numeric field qualifies as a strategic KPI",
 			"Manual monthly estimates entered by team leads without indicator source validation",
-			"A single open-incident count with no target, breakdown, or documented business owner"
+			"A single open-incident count with no target, breakdown, or documented business owner",
+			"Average handle time only, because any numeric field qualifies as a strategic KPI"
 		],
 		"correctIndex": 0,
 		"explanation": "SMART KPIs define a clear metric, measurement method, ownership context, and target so stakeholders can act on trends credibly.",
@@ -14497,12 +14497,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 11,
 		"prompt": "IT operations must report customer satisfaction, service stability, and process efficiency on one executive view. Which analytics approach should the program use?",
 		"choices": [
-			"A balanced scorecard grouping leading and lagging KPIs across perspectives on a governed dashboard",
 			"One giant list report exported nightly with no targets or dimensional analysis",
-			"Separate spreadsheets maintained by each manager without shared definitions",
-			"A single manual indicator updated quarterly without breakdown segmentation"
+			"A balanced scorecard grouping leading and lagging KPIs across perspectives on a governed dashboard",
+			"A single manual indicator updated quarterly without breakdown segmentation",
+			"Separate spreadsheets maintained by each manager without shared definitions"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"explanation": "Balanced scorecard design organizes complementary KPIs so executives see performance holistically rather than isolated metrics.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/designing-pa-solution.html"
@@ -14514,12 +14514,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 12,
 		"prompt": "A change manager wants early warning of backlog growth before SLA breaches appear. Which indicator mix should the analytics roadmap prioritize?",
 		"choices": [
-			"Leading indicators such as open change volume trends paired with lagging indicators such as successful change rate",
-			"Only lagging indicators measured after incidents are closed, with no proactive workload signals",
 			"Random manual KPIs chosen by each team without linking to process outcomes",
+			"Only lagging indicators measured after incidents are closed, with no proactive workload signals",
+			"Leading indicators such as open change volume trends paired with lagging indicators such as successful change rate",
 			"Breakdown sources without any automated indicators or collection schedule"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Effective analytics roadmaps combine leading indicators that signal emerging issues with lagging indicators that confirm results.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/designing-pa-solution.html"
@@ -14531,12 +14531,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 13,
 		"prompt": "Stakeholders disagree on which incident KPIs matter most for the first release. How should the PA lead facilitate alignment?",
 		"choices": [
-			"Implement every available out-of-box indicator so users can delete unwanted KPIs later",
-			"Run a KPI workshop mapping business goals to candidate measurements and document owners before technical build",
 			"Let developers select KPIs based solely on table field availability",
-			"Defer all KPI decisions until dashboards are published in production"
+			"Defer all KPI decisions until dashboards are published in production",
+			"Run a KPI workshop mapping business goals to candidate measurements and document owners before technical build",
+			"Implement every available out-of-box indicator so users can delete unwanted KPIs later"
 		],
-		"correctIndex": 1,
+		"correctIndex": 2,
 		"explanation": "Stakeholder workshops and KPI Composer artifacts align sponsors on priority measurements, ownership, and release scope before configuration.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/designing-pa-solution.html"
@@ -14550,14 +14550,14 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "Which practices strengthen KPI selection and validation before indicators are automated? (Choose two.)",
 		"choices": [
 			"Confirm each KPI maps to a documented business goal and accountable owner",
-			"Skip target definition so teams can interpret raw numbers subjectively",
 			"Publish dashboards before reviewing indicator source filter accuracy",
-			"Validate that source data can support the measurement at the intended frequency"
+			"Validate that source data can support the measurement at the intended frequency",
+			"Skip target definition so teams can interpret raw numbers subjectively"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			3
+			2
 		],
 		"explanation": "KPI validation ties metrics to business intent, ownership, and feasible source data before collection and visualization go live.",
 		"sourceUrls": [
@@ -14571,12 +14571,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 15,
 		"prompt": "Finance asks which incident KPIs justify PA licensing cost in the first year. Which business case element should the analytics lead document?",
 		"choices": [
-			"Mapped business outcomes, baseline pain points, and measurable KPIs with expected decision impact",
 			"A list of every available widget type without linking metrics to goals",
-			"Developer estimates for scripted breakdown sources only, with no stakeholder sign-off",
-			"Historical spreadsheet attachments with no defined owners or targets"
+			"Mapped business outcomes, baseline pain points, and measurable KPIs with expected decision impact",
+			"Historical spreadsheet attachments with no defined owners or targets",
+			"Developer estimates for scripted breakdown sources only, with no stakeholder sign-off"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"explanation": "Credible PA business cases connect investment to outcomes leaders will track through governed KPIs and dashboards.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/designing-pa-solution.html"
@@ -14588,12 +14588,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 16,
 		"prompt": "After a KPI workshop, several teams claim ownership of the same backlog metric. Which governance practice should the PA program establish?",
 		"choices": [
-			"Assign a single accountable KPI owner and document definition standards in a governed metric catalog",
-			"Allow every dashboard consumer to edit indicator formulas without review",
 			"Delete duplicate KPIs silently without notifying stakeholders",
+			"Allow every dashboard consumer to edit indicator formulas without review",
+			"Assign a single accountable KPI owner and document definition standards in a governed metric catalog",
 			"Disable targets so ownership disputes cannot be tracked"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Metric ownership and definition standards prevent conflicting KPI versions and clarify who interprets trends and drives improvement actions.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/designing-pa-solution.html"
@@ -14605,12 +14605,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 17,
 		"prompt": "Release one must deliver value in six weeks but twenty KPIs were requested. How should the analytics roadmap prioritize delivery?",
 		"choices": [
-			"Build all requested KPIs simultaneously regardless of source readiness or collection load",
-			"Implement the highest-impact KPIs tied to agreed goals first, then phase additional metrics with validated source data",
 			"Publish empty dashboards and add indicators only after user complaints",
-			"Delay every KPI until every breakdown source is scripted"
+			"Delay every KPI until every breakdown source is scripted",
+			"Implement the highest-impact KPIs tied to agreed goals first, then phase additional metrics with validated source data",
+			"Build all requested KPIs simultaneously regardless of source readiness or collection load"
 		],
-		"correctIndex": 1,
+		"correctIndex": 2,
 		"explanation": "Analytics roadmaps sequence KPI delivery by business priority, data readiness, and stakeholder value rather than attempting every metric at once.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/designing-pa-solution.html"
@@ -14623,9 +14623,9 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "Operations and HR both want employee-related KPIs on shared platforms. Which stakeholder alignment approach reduces conflicting definitions?",
 		"choices": [
 			"Facilitate cross-functional KPI review sessions and publish approved definitions before indicator build",
-			"Let each department create identical KPI names with different filters and no review",
+			"Convert every cross-domain request into a manual indicator by default",
 			"Hide KPI definitions from consumers so only developers understand calculations",
-			"Convert every cross-domain request into a manual indicator by default"
+			"Let each department create identical KPI names with different filters and no review"
 		],
 		"correctIndex": 0,
 		"explanation": "Cross-functional KPI alignment ensures shared terminology, approved definitions, and consistent targets before technical implementation begins.",
@@ -14639,15 +14639,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 19,
 		"prompt": "After collection jobs run, where does Platform Analytics persist indicator and breakdown scores for trending and widgets?",
 		"choices": [
-			"Breakdown source staging tables without historical snapshots",
 			"Widget configuration records on the sp_dashboard table",
-			"sys_audit entries only, with no dedicated PA score tables",
-			"pa_scores_l1 for indicator scores and pa_scores_l2 for breakdown scores"
+			"pa_scores_l1 for indicator scores and pa_scores_l2 for second-level breakdown matrix scores",
+			"Breakdown source staging tables without historical snapshots",
+			"sys_audit entries only, with no dedicated PA score tables"
 		],
-		"correctIndex": 3,
-		"explanation": "Current PA score data is stored in pa_scores_l1 for indicator scores and pa_scores_l2 for breakdown scores; pa_scores is the legacy table.",
+		"correctIndex": 1,
+		"explanation": "The legacy Scores [pa_scores] table was split into Scores Level 1 [pa_scores_l1] for indicator and first-level scores and Scores Level 2 [pa_scores_l2] for second-level breakdown matrix scores. New instances use those tables by default; pa_scores is deprecated.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/c_IndicatorSources.html"
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/pa-scores-migration.html"
 		],
 		"domain": "Configure Indicators and Indicator Sources"
 	},
@@ -14656,12 +14656,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 20,
 		"prompt": "A KPI requires logic that cannot be expressed with conditions and standard aggregation alone on Incident records. Which indicator type should the implementer evaluate?",
 		"choices": [
-			"Manual indicator updated by executives each quarter",
 			"Breakdown relation used as a standalone score",
+			"Scripted indicator",
 			"External indicator with no ServiceNow table reference",
-			"Scripted indicator"
+			"Manual indicator updated by executives each quarter"
 		],
-		"correctIndex": 3,
+		"correctIndex": 1,
 		"explanation": "Scripted indicators support custom score logic when table conditions and standard aggregation types are insufficient for the KPI.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/workflow-automated-indicators.html"
@@ -14673,12 +14673,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 21,
 		"prompt": "Satisfaction survey scores arrive from a third-party tool and are not stored in a ServiceNow facts table. How should the KPI be modeled?",
 		"choices": [
-			"Manual indicator with periodic score entry by designated contributors",
-			"Automated indicator on the Incident table with a blank indicator source",
 			"Formula indicator that divides two empty automated indicators",
-			"Data collection job that queries sys_audit every minute"
+			"Data collection job that queries sys_audit every minute",
+			"Manual indicator with periodic score entry by designated contributors",
+			"Automated indicator on the Incident table with a blank indicator source"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Manual indicators capture metrics that cannot be derived from ServiceNow transactional data, with contributors entering scores on a defined cadence.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/workflow-automated-indicators.html"
@@ -14690,12 +14690,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 22,
 		"prompt": "A broad incident source approaches the default row limit during nightly collection. Which indicator source setting overrides the global maximum records collected?",
 		"choices": [
+			"Disable the indicator library for that facts table",
 			"Change the widget visualization to a single-score type",
 			"Assign pa_viewer to all dashboard consumers",
-			"Override record collection with Maximum number of records collected",
-			"Disable the indicator library for that facts table"
+			"Override record collection with Maximum number of records collected"
 		],
-		"correctIndex": 2,
+		"correctIndex": 3,
 		"explanation": "Override record collection on the indicator source sets a source-specific maximum, overriding the com.snc.pa.dc.max_row_count_indicator_source property.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/c_IndicatorSources.html"
@@ -14725,17 +14725,17 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"questionType": "multi",
 		"prompt": "Which Performance Analytics roles match typical deployment responsibilities? (Choose three.)",
 		"choices": [
-			"pa_data_collector manages indicator sources and data collection jobs",
-			"pa_power_user creates indicators, breakdowns, and PA widgets",
 			"pa_admin provides full administrative access including dependency assessment",
+			"pa_spotlight_viewer CRUD all indicator sources and collection scripts",
+			"pa_data_collector manages indicator sources and data collection jobs",
 			"pa_viewer creates indicator sources and schedules collection jobs",
-			"pa_spotlight_viewer CRUD all indicator sources and collection scripts"
+			"pa_power_user creates indicators, breakdowns, and PA widgets"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			1,
-			2
+			2,
+			4
 		],
 		"explanation": "pa_data_collector owns sources and jobs, pa_power_user builds indicators and visualizations, and pa_admin has full PA administration; pa_viewer and pa_spotlight_viewer do not create sources.",
 		"sourceUrls": [
@@ -14749,14 +14749,14 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "An automated indicator must count only incident records that meet specific filter criteria on the source table. Which indicator source element defines that filter?",
 		"choices": [
 			"Conditions on the indicator source",
-			"Target warning and critical states",
 			"Breakdown matrix exclusion rows",
-			"Dashboard widget visualization type"
+			"Dashboard widget visualization type",
+			"Target warning and critical states"
 		],
 		"correctIndex": 0,
 		"explanation": "Indicator source conditions limit which records are included when PA collects scores for an automated indicator.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_IndicatorSources.html"
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/c_IndicatorSources.html"
 		],
 		"domain": "Configure Indicators and Indicator Sources"
 	},
@@ -14765,15 +14765,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 26,
 		"prompt": "A service owner needs an indicator that reports the daily average resolution time rather than a total count. Which indicator setting should be changed?",
 		"choices": [
+			"Import set transform map script",
 			"Aggregate function on the indicator source field",
 			"Breakdown relation drill path",
-			"Spotlight walkthrough assignment",
-			"Import set transform map script"
+			"Spotlight walkthrough assignment"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"explanation": "The aggregate function on the indicator source field controls whether PA stores counts, sums, averages, or other aggregations.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_IndicatorSources.html"
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/c_IndicatorSources.html"
 		],
 		"domain": "Configure Indicators and Indicator Sources"
 	},
@@ -14790,7 +14790,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 0,
 		"explanation": "Date/Time fields such as Resolved at are commonly used in indicator source conditions to filter records by opened, resolved, or closed periods.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_IndicatorSources.html"
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/c_IndicatorSources.html"
 		],
 		"domain": "Configure Indicators and Indicator Sources"
 	},
@@ -14799,15 +14799,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 28,
 		"prompt": "An admin needs an indicator value from a GlideAggregate query that table conditions alone cannot express. What should they configure?",
 		"choices": [
-			"A scripted indicator source",
 			"A manual indicator updated by team leads each quarter",
 			"A breakdown bucket group without an indicator source",
-			"A report chart exported to a flat file weekly"
+			"A report chart exported to a flat file weekly",
+			"A scripted indicator source"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Scripted indicator sources let administrators define custom server-side logic when standard table and condition filters are insufficient.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_IndicatorSources.html"
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/c_IndicatorSources.html"
 		],
 		"domain": "Configure Indicators and Indicator Sources"
 	},
@@ -14818,20 +14818,20 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "Which elements are typically configured when creating an automated indicator backed by platform data? (Choose three.)",
 		"choices": [
 			"Indicator source table and conditions",
-			"SMTP relay server for dashboard email",
 			"Aggregate field and function",
-			"Indicator frequency setting on the collector job"
+			"Indicator frequency setting on the collector job",
+			"SMTP relay server for dashboard email"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			2,
-			3
+			1,
+			2
 		],
 		"explanation": "Automated indicators require a source definition, aggregation settings, and a collection frequency; mail relay is unrelated to indicator configuration.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_Indicators.html",
-			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_IndicatorSources.html"
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/c_Indicators.html",
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/c_IndicatorSources.html"
 		],
 		"domain": "Configure Indicators and Indicator Sources"
 	},
@@ -14840,15 +14840,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 30,
 		"prompt": "A KPI must show the percentage of incidents resolved within SLA. Separate automated indicators already capture the numerator and denominator. How should the KPI be modeled?",
 		"choices": [
-			"A formula indicator that references both source indicators",
-			"A single automated indicator with no formula expression",
 			"A manual indicator entered by executives each month",
+			"A single automated indicator with no formula expression",
+			"A formula indicator that references both source indicators",
 			"A list report widget with no Performance Analytics indicator"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Formula indicators combine values from other indicators using expressions, which suits ratio KPIs built from existing automated metrics.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_FormulaIndicators.html"
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/c_FormulaIndicators.html"
 		],
 		"domain": "Configure Indicators and Indicator Sources"
 	},
@@ -14857,15 +14857,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 31,
 		"prompt": "An indicator source condition uses dot-walking to reference assignment_group.name. What must remain true for collection to succeed?",
 		"choices": [
-			"Every breakdown on the indicator must use scripted mappings",
-			"Referenced fields exist along the dot-walk path and are available to PA collection",
 			"The linked dashboard widget must use a pie chart type",
-			"The indicator must be manual with a monthly frequency"
+			"The indicator must be manual with a monthly frequency",
+			"Referenced fields exist along the dot-walk path and are available to PA collection",
+			"Every breakdown on the indicator must use scripted mappings"
 		],
-		"correctIndex": 1,
+		"correctIndex": 2,
 		"explanation": "Dot-walk conditions are valid only when each referenced table and field in the path exists and is accessible during indicator source evaluation.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_IndicatorSources.html"
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/c_IndicatorSources.html"
 		],
 		"domain": "Configure Indicators and Indicator Sources"
 	},
@@ -14875,14 +14875,14 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "What does a breakdown mapping accomplish in Performance Analytics?",
 		"choices": [
 			"Connects an indicator source field to breakdown source values for segmented scores",
-			"Schedules the daily execution time of all collection jobs",
+			"Assigns PA admin roles to dashboard viewers automatically",
 			"Replaces indicator sources on manual indicators",
-			"Assigns PA admin roles to dashboard viewers automatically"
+			"Schedules the daily execution time of all collection jobs"
 		],
 		"correctIndex": 0,
 		"explanation": "Breakdown mappings define how records from the indicator source relate to dimensional values supplied by a breakdown source.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_BreakdownMappings.html"
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/c_BreakdownMappings.html"
 		],
 		"domain": "Configure Indicators and Indicator Sources"
 	},
@@ -14891,16 +14891,16 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 33,
 		"prompt": "A field-based breakdown source on Assignment Group is linked to an incident indicator, but no segments appear in analysis. What should be verified first?",
 		"choices": [
-			"Target warning thresholds are configured on the indicator",
 			"The dashboard uses a list widget rather than a scorecard",
-			"The indicator frequency is set to Realtime instead of Daily",
-			"The breakdown mapping aligns the indicator source assignment group field with the breakdown source"
+			"The breakdown mapping aligns the indicator source assignment group field with the breakdown source",
+			"Target warning thresholds are configured on the indicator",
+			"The indicator frequency is set to Realtime instead of Daily"
 		],
-		"correctIndex": 3,
+		"correctIndex": 1,
 		"explanation": "Missing segments usually indicate the breakdown mapping does not correctly relate indicator records to breakdown source values.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_BreakdownMappings.html",
-			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/task/t_ConfigureBreakdownSources.html"
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/c_BreakdownMappings.html",
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/t_ConfigureBreakdownSources.html"
 		],
 		"domain": "Configure Indicators and Indicator Sources"
 	},
@@ -14911,19 +14911,19 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "Which Performance Analytics artifacts work together to segment an automated indicator by assignment group? (Choose two.)",
 		"choices": [
 			"Breakdown source listing assignment group values",
-			"Breakdown mapping from the indicator source assignment group field",
 			"Data collection export schedule for external BI",
+			"Breakdown mapping from the indicator source assignment group field",
 			"Spotlight benchmark comparison record"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			1
+			2
 		],
 		"explanation": "Segmentation requires a breakdown source that supplies dimension values and a mapping that ties indicator records to those values.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_Breakdowns.html",
-			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_BreakdownMappings.html"
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/c_Breakdowns.html",
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/c_BreakdownMappings.html"
 		],
 		"domain": "Configure Breakdowns and Breakdown Sources"
 	},
@@ -14932,15 +14932,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 35,
 		"prompt": "When creating a field-based breakdown source, what does the Facts table and field selection define?",
 		"choices": [
-			"The SMTP server used for scheduled dashboard subscriptions",
 			"The arithmetic expression for a formula indicator",
+			"The table and field whose values become available breakdown segments",
 			"The ACL role required to view PA scorecards",
-			"The table and field whose values become available breakdown segments"
+			"The SMTP server used for scheduled dashboard subscriptions"
 		],
-		"correctIndex": 3,
+		"correctIndex": 1,
 		"explanation": "Field-based breakdown sources read dimension values from a specified table and field, such as assignment group or category on incident.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/task/t_ConfigureBreakdownSources.html"
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/t_ConfigureBreakdownSources.html"
 		],
 		"domain": "Configure Breakdowns and Breakdown Sources"
 	},
@@ -14949,15 +14949,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 36,
 		"prompt": "What is the purpose of a breakdown matrix on an indicator?",
 		"choices": [
-			"Control which breakdown source values are collected for that indicator",
-			"Define the aggregate function used by the indicator source",
 			"Schedule historical backfill for manual indicator scores",
-			"Assign domain visibility rules to PA dashboards"
+			"Assign domain visibility rules to PA dashboards",
+			"Control which breakdown source values are collected for that indicator",
+			"Define the aggregate function used by the indicator source"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Breakdown matrices link indicators to breakdown sources and let administrators include or exclude specific dimensional values from collection.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_Breakdowns.html"
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/c_Breakdowns.html"
 		],
 		"domain": "Configure Breakdowns and Breakdown Sources"
 	},
@@ -14967,22 +14967,22 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"questionType": "multi",
 		"prompt": "Which fields are effective breakdown sources? (Choose three.)",
 		"choices": [
-			"State",
-			"Category",
 			"Short Description",
 			"Assignment Group",
-			"Last updated"
+			"State",
+			"Last updated",
+			"Category"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"correctIndexes": [
-			0,
 			1,
-			3
+			2,
+			4
 		],
 		"explanation": "Reference and choice fields such as State, Category, and Assignment Group provide stable dimensional values; free-text and timestamp fields like Short Description and Last updated are poor breakdown sources.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_Breakdowns.html",
-			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/task/t_ConfigureBreakdownSources.html"
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/c_Breakdowns.html",
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/t_ConfigureBreakdownSources.html"
 		],
 		"domain": "Configure Breakdowns and Breakdown Sources"
 	},
@@ -14992,14 +14992,14 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "When field-based breakdown mappings cannot produce the required segments, what feature allows custom mapping logic?",
 		"choices": [
 			"Scripted breakdown mapping",
-			"Manual indicator score entry form",
 			"Remote update set import from another instance",
+			"Manual indicator score entry form",
 			"Business rule on the sys_user table"
 		],
 		"correctIndex": 0,
 		"explanation": "Scripted breakdown mappings use server-side scripts to derive segment values when standard field mappings are insufficient.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/task/t_CreateScriptedBreakdowns.html"
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/t_CreateScriptedBreakdowns.html"
 		],
 		"domain": "Configure Breakdowns and Breakdown Sources"
 	},
@@ -15008,32 +15008,32 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 39,
 		"prompt": "What are bucket groups used for in Performance Analytics breakdowns?",
 		"choices": [
-			"Defining MID Server failover order during data collection",
 			"Replacing indicator sources on automated indicators",
+			"Grouping breakdown values into labeled ranges or bands for analysis",
 			"Storing encrypted credentials for PA data collectors",
-			"Grouping breakdown values into labeled ranges or bands for analysis"
+			"Defining MID Server failover order during data collection"
 		],
-		"correctIndex": 3,
+		"correctIndex": 1,
 		"explanation": "Bucket groups let administrators combine numeric or duration values into meaningful bands, such as age ranges, for clearer segmented reporting.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_Breakdowns.html"
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/c_Breakdowns.html"
 		],
 		"domain": "Configure Breakdowns and Breakdown Sources"
 	},
 	{
 		"trackCode": "CIS-PA",
 		"order": 40,
-		"prompt": "An admin must stop collecting breakdown scores for two assignment groups on one indicator while keeping all other segments. Which configuration should they use?",
+		"prompt": "An automated indicator collects Priority and Assignment Group breakdowns together, but the Priority plus Assignment Group combinations produce redundant scores that slow collection. How should the admin stop collecting those invalid combinations?",
 		"choices": [
-			"Homepage filter hiding the dashboard widget",
-			"Import set error handling policy on the source table",
-			"Breakdown matrix exclusions for those assignment group values",
-			"Manual indicator score overrides each collection period"
+			"Override manual indicator scores for each collection period",
+			"Hide the dashboard widget with a homepage filter only",
+			"Configure an import set error handling policy on the source table",
+			"Exclude the Priority and Assignment Group combinations in the Collect breakdown matrix configuration"
 		],
-		"correctIndex": 2,
-		"explanation": "Breakdown matrix exclusions remove specific dimensional values from collection for a given indicator without deleting the breakdown source.",
+		"correctIndex": 3,
+		"explanation": "Breakdown matrix exclusions prevent collection of selected two-breakdown combinations that are not useful. Individual breakdown scores can still collect; excluded combinations are omitted from Analytics Hub, KPI Details, scoresheet, and new widgets. Homepage filters only hide widgets and do not change collection.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_Breakdowns.html"
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/create-breakdown-mapping.html"
 		],
 		"domain": "Configure Breakdowns and Breakdown Sources"
 	},
@@ -15050,7 +15050,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 0,
 		"explanation": "Breakdown relations define hierarchical or associated paths so users can navigate from one segment dimension to another in PA analytics.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_Breakdowns.html"
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/c_Breakdowns.html"
 		],
 		"domain": "Configure Breakdowns and Breakdown Sources"
 	},
@@ -15059,15 +15059,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 42,
 		"prompt": "A breakdown mapping references incident priority, but segmented counts do not match expected distribution. What should be verified first?",
 		"choices": [
-			"The MID Server version matches the target release",
 			"All users have the admin role on pa_breakdowns",
 			"The mapped field type and stored values align with the breakdown source definition",
-			"The dashboard widget is configured as a list report"
+			"The dashboard widget is configured as a list report",
+			"The MID Server version matches the target release"
 		],
-		"correctIndex": 2,
+		"correctIndex": 1,
 		"explanation": "Incorrect segments often trace to a mismatch between the indicator source field values and the breakdown source value set being mapped.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_BreakdownMappings.html"
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/c_BreakdownMappings.html"
 		],
 		"domain": "Configure Breakdowns and Breakdown Sources"
 	},
@@ -15077,14 +15077,14 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "Why would an administrator apply bucket groups to a duration-based breakdown source?",
 		"choices": [
 			"To present SLA age bands such as 0–4 hours and 4–8 hours in segmented views",
-			"To force realtime collection every minute regardless of load",
 			"To eliminate the need for any breakdown mapping on the indicator",
-			"To disable scripted breakdown mappings for the indicator"
+			"To disable scripted breakdown mappings for the indicator",
+			"To force realtime collection every minute regardless of load"
 		],
 		"correctIndex": 0,
 		"explanation": "Bucket groups convert continuous duration or numeric values into discrete bands that are easier to interpret in scorecards and widgets.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_Breakdowns.html"
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/c_Breakdowns.html"
 		],
 		"domain": "Configure Breakdowns and Breakdown Sources"
 	},
@@ -15094,10 +15094,10 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"questionType": "multi",
 		"prompt": "Which actions help limit breakdown collection to meaningful segments? (Choose two.)",
 		"choices": [
-			"Configure breakdown matrix exclusions for irrelevant values",
 			"Filter breakdown source values to an active or in-scope subset",
-			"Delete all historical indicator scores each week",
-			"Remove all conditions from the indicator source"
+			"Configure breakdown matrix exclusions for irrelevant values",
+			"Remove all conditions from the indicator source",
+			"Delete all historical indicator scores each week"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
@@ -15106,8 +15106,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		],
 		"explanation": "Matrix exclusions and filtered breakdown sources keep collection focused; wiping scores or removing source conditions undermines accurate analytics.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_Breakdowns.html",
-			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/task/t_ConfigureBreakdownSources.html"
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/c_Breakdowns.html",
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/t_ConfigureBreakdownSources.html"
 		],
 		"domain": "Configure Breakdowns and Breakdown Sources"
 	},
@@ -15116,15 +15116,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 45,
 		"prompt": "Segmentation must combine assignment group, VIP flag, and custom business tier not stored on one field. Which breakdown dimension strategy should the PA team choose?",
 		"choices": [
-			"When dimension values must be generated dynamically beyond what table fields alone provide",
-			"When every breakdown mapping must remain a default field mapping",
 			"When the indicator is manual and updated once per quarter",
+			"When every breakdown mapping must remain a default field mapping",
+			"When dimension values must be generated dynamically beyond what table fields alone provide",
 			"When breakdown data should never be collected for the indicator"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Scripted breakdown sources support custom logic to build segment lists when field-based sources cannot supply the needed dimensional values.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/task/t_CreateScriptedBreakdowns.html"
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/t_CreateScriptedBreakdowns.html"
 		],
 		"domain": "Configure Breakdowns and Breakdown Sources"
 	},
@@ -15133,32 +15133,32 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 46,
 		"prompt": "To segment an incident indicator by location, what must the breakdown mapping specify?",
 		"choices": [
-			"The SMTP notification template for score threshold alerts",
-			"The indicator source field containing the location reference matched to the breakdown source",
 			"The forecast algorithm selected on the analytics widget",
-			"The update set applied when cloning PA content between instances"
+			"The update set applied when cloning PA content between instances",
+			"The indicator source field containing the location reference matched to the breakdown source",
+			"The SMTP notification template for score threshold alerts"
 		],
-		"correctIndex": 1,
+		"correctIndex": 2,
 		"explanation": "Breakdown mappings must identify the indicator source field whose values correspond to entries in the location breakdown source.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_BreakdownMappings.html"
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/c_BreakdownMappings.html"
 		],
 		"domain": "Configure Breakdowns and Breakdown Sources"
 	},
 	{
 		"trackCode": "CIS-PA",
 		"order": 47,
-		"prompt": "A scorecard shows noisy segments that executives never review and slows collection. How should the team optimize the breakdown matrix?",
+		"prompt": "A scorecard is slowed by low-value second-level breakdown combinations that executives never review. How should the team reduce collection load while keeping the breakdowns available individually?",
 		"choices": [
-			"Prevents collection of scores for that segment on the indicator",
-			"Deletes the breakdown source record from the instance",
-			"Converts the indicator to a manual indicator automatically",
-			"Purges all archived PA scores from prior collection periods"
+			"Exclude the unused breakdown combinations on the indicator Collect breakdown matrix tab",
+			"Purge all archived PA scores from prior collection periods",
+			"Convert the indicator to a manual indicator automatically",
+			"Delete the breakdown source record from the instance"
 		],
 		"correctIndex": 0,
-		"explanation": "Excluded matrix rows tell PA not to collect breakdown scores for those values on the associated indicator while leaving the source intact.",
+		"explanation": "Excluding combinations on the Collect breakdown matrix stops new collection for those pairs without deleting breakdown sources. Individual breakdown scores still collect. Deleting the source or converting to manual removes useful segmentation; purging history does not stop future collection of noisy combinations.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_Breakdowns.html"
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/create-breakdown-mapping.html"
 		],
 		"domain": "Configure Breakdowns and Breakdown Sources"
 	},
@@ -15167,15 +15167,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 48,
 		"prompt": "Bucket groups on a numeric breakdown source allow an administrator to:",
 		"choices": [
-			"Remove the requirement for any breakdown mapping on the indicator",
 			"Grant pa_admin automatically to all dashboard viewers",
-			"Bypass indicator source conditions during every collection run",
-			"Display grouped bands such as backlog age ranges instead of raw numeric values"
+			"Display grouped bands such as backlog age ranges instead of raw numeric values",
+			"Remove the requirement for any breakdown mapping on the indicator",
+			"Bypass indicator source conditions during every collection run"
 		],
-		"correctIndex": 3,
+		"correctIndex": 1,
 		"explanation": "Bucket groups translate continuous numeric data into named ranges that improve readability in breakdown analysis and widgets.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_Breakdowns.html"
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/c_Breakdowns.html"
 		],
 		"domain": "Configure Breakdowns and Breakdown Sources"
 	},
@@ -15183,74 +15183,75 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"trackCode": "CIS-PA",
 		"order": 49,
 		"questionType": "multi",
-		"prompt": "Which statements about breakdown sources are correct? (Choose two.)",
+		"prompt": "Which statements about Performance Analytics data collection jobs are correct? (Choose two.)",
 		"choices": [
-			"They supply the dimension values used to segment indicator scores",
-			"They may be field-based, scripted, or use bucket groups depending on requirements",
-			"They replace indicator sources for automated score collection",
-			"They store historical indicator score snapshots over time"
+			"Scheduled jobs collect ongoing scores on a recurring Run schedule such as Daily",
+			"Historical jobs permanently replace all scheduled collection for every indicator",
+			"Historical jobs backfill scores for existing records and should usually run On demand once",
+			"Collection jobs evaluate ACLs of the Run as user before querying indicator sources"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			1
+			2
 		],
-		"explanation": "Breakdown sources define dimensional values and support multiple creation methods; indicator sources and score storage remain separate PA artifacts.",
+		"explanation": "Use scheduled jobs for ongoing collection and a historical On demand job to backfill existing data once. Historical jobs do not replace scheduled collection going forward. Collection jobs follow domain settings of Run as but do not apply that user's ACLs or business rules.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_Breakdowns.html",
-			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/task/t_ConfigureBreakdownSources.html"
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/t_CreatASchedDataCollJob.html",
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/t_RunHistoricalDataCollection.html"
 		],
 		"domain": "Data Collection"
 	},
 	{
 		"trackCode": "CIS-PA",
 		"order": 50,
-		"prompt": "A PA admin needs two indicators to share the same dimensional values without duplicating breakdown source records. Which configuration achieves this?",
+		"prompt": "A PA admin activates a content pack and needs past incident KPI scores available immediately. Which job configuration is appropriate for that initial backfill?",
 		"choices": [
-			"Create a breakdown relation that links the indicators to one shared breakdown source",
-			"Clone the breakdown source for each indicator and disable breakdown mappings",
-			"Convert both indicators to manual entry and skip breakdown collection",
-			"Add a scripted indicator source that replaces breakdown sources entirely"
+			"Disable all indicators until widgets show live list data without collection",
+			"Set Collect to Text index only so score tables remain empty during backfill",
+			"Create a historical data collection job, set Run to On demand, and execute it once",
+			"Schedule the historical job Daily so it overwrites scores every night forever"
 		],
-		"correctIndex": 0,
-		"explanation": "Breakdown relations let multiple indicators reuse the same breakdown source so dimensional values stay consistent across related KPIs.",
+		"correctIndex": 2,
+		"explanation": "Historical collection backfills scores and snapshots for existing records. Docs recommend Run = On demand and avoiding repeated historical runs that delete previously collected data for covered periods and indicators. Ongoing scores then come from a separate scheduled job.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_BreakdownRelations.html"
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/t_RunHistoricalDataCollection.html",
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/t_CreatASchedDataCollJob.html"
 		],
 		"domain": "Data Collection"
 	},
 	{
 		"trackCode": "CIS-PA",
 		"order": 51,
-		"prompt": "An incident indicator should segment scores by assignment group, but grouped scores show as Unassigned. What should be verified first?",
+		"prompt": "While configuring a six-month historical collection job for open incidents, which job indicator practice keeps segmented scores meaningful?",
 		"choices": [
-			"That the data collection job runs exclusively on weekends",
-			"That the indicator formula references a manual indicator only",
-			"That the dashboard widget uses a pie chart instead of a column chart",
-			"That the breakdown mapping connects the indicator source assignment field to the breakdown source elements"
+			"Exclude breakdowns whose field values are likely to change over the historical period",
+			"Convert the historical job to Daily Run so it never needs Execute Now",
+			"Force every breakdown including Assignment Group and State to collect for the full history",
+			"Remove all indicators from the job so only text analytics indexes are rebuilt"
 		],
-		"correctIndex": 3,
-		"explanation": "Breakdown mappings define how source field values map to breakdown elements; missing or incorrect mappings produce empty or unassigned segments.",
+		"correctIndex": 0,
+		"explanation": "For historical jobs, exclude breakdowns based on fields likely to change during the collection period, such as Assignment Group and State, so past scores are not rewritten with today's values. Collecting those dimensions across months produces misleading history.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_BreakdownMappings.html"
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/t_RunHistoricalDataCollection.html",
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/configure-job-indicator.html"
 		],
 		"domain": "Data Collection"
 	},
 	{
 		"trackCode": "CIS-PA",
 		"order": 52,
-		"prompt": "A scorecard shows too many low-volume assignment groups. Which breakdown feature narrows the visible segments without changing the underlying breakdown source?",
+		"prompt": "A new daily data collection job finishes with no scores. Indicator sources and breakdowns already exist. What must the admin verify on the job first?",
 		"choices": [
-			"Element filters that limit which breakdown values appear in the analysis",
-			"Deleting unused breakdown elements from the source table permanently",
-			"Switching the indicator from automated to manual collection",
-			"Removing the breakdown relation and rebuilding indicator sources"
+			"That the Indicators related list includes at least one indicator for the job to collect",
+			"That the Clean PA collections job is deactivated permanently",
+			"That every dashboard widget uses a real-time score visualization",
+			"That Run as is set to a user without pa_data_collector so ACLs block the query"
 		],
 		"correctIndex": 0,
-		"explanation": "Element filters restrict displayed breakdown values for a given view while preserving the full breakdown source for other analyses.",
+		"explanation": "A data collection job must include at least one indicator; otherwise it cannot return results. Widgets, cleanup schedules, and ACL blocking are not the first configuration requirement for an empty job.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_Breakdowns.html",
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/dashboards/reference/r_WidgetFilters.html"
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/t_CreatASchedDataCollJob.html"
 		],
 		"domain": "Data Collection"
 	},
@@ -15258,39 +15259,38 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"trackCode": "CIS-PA",
 		"order": 53,
 		"questionType": "multi",
-		"prompt": "When building a scripted breakdown source, which practices help keep segmented scores accurate? (Choose two.)",
+		"prompt": "Which practices help keep Performance Analytics collection healthy over time? (Choose two.)",
 		"choices": [
-			"Validate script output against expected cardinality before promoting to production",
-			"Run the script only when a user opens a dashboard widget on demand",
-			"Disable breakdown mappings so the script replaces all indicator source logic",
-			"Return stable element labels that align with how stakeholders interpret the dimension"
+			"Avoid running the cleanup job while an active data collection job is still running",
+			"Disable all scheduled collection after the first historical backfill completes",
+			"Delete pa_scores_l1 nightly so widgets always query live incident lists",
+			"Use the Clean PA collections job to remove old scores and snapshots on a schedule"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
 			3
 		],
-		"explanation": "Scripted breakdown sources must produce consistent, meaningful element values and be validated for volume and correctness before production use.",
+		"explanation": "Clean PA collections routinely removes old scores and snapshots for performance. It should not run while a data collection job is running. Nightly truncation of score tables and stopping scheduled collection after one historical run leave dashboards without ongoing scores.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/task/t_CreateScriptedBreakdowns.html"
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/c_CollectionCleanup.html"
 		],
 		"domain": "Data Collection"
 	},
 	{
 		"trackCode": "CIS-PA",
 		"order": 54,
-		"prompt": "After breakdowns are configured for an automated indicator, what must run before segmented scores appear in widgets and scorecards?",
+		"prompt": "Most daily indicators should collect the most recently completed day. How should Relative operator fields be set on the recurring job?",
 		"choices": [
-			"A data collection job that evaluates the indicator and stores scores with breakdown values",
-			"A dashboard export that copies breakdown tables to an external BI tool",
-			"A transform map that loads breakdown elements from an import set",
-			"A business rule that copies breakdown mappings into sys_user records"
+			"Relative start of 60 days ago and Relative end of today for every daily run",
+			"Run set to Once with Relative end interval set to years ago",
+			"Relative start and Relative end both set to one day ago",
+			"Fixed start and Fixed end left blank so the job invents a year-long window"
 		],
-		"correctIndex": 0,
-		"explanation": "Breakdown configuration defines how scores will be segmented; data collection jobs populate the score tables that widgets and scorecards read.",
+		"correctIndex": 2,
+		"explanation": "Daily scheduled jobs normally collect the most recently completed day, so relative start and relative end are each one day ago. Longer relative windows belong on one-time historical jobs, not nightly daily collection.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_DataCollectionJobs.html",
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_Breakdowns.html"
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/t_CreatASchedDataCollJob.html"
 		],
 		"domain": "Data Collection"
 	},
@@ -15299,33 +15299,32 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 55,
 		"prompt": "In the Performance Analytics collection process, what happens immediately after a data collector job reads records from an indicator source?",
 		"choices": [
+			"Dashboard widgets are republished to every user homepage automatically",
 			"Breakdown relations are regenerated from sys_dictionary entries",
 			"Indicator scores and breakdown values are calculated and persisted for the collection period",
-			"The indicator source table is truncated so the next run starts with empty data",
-			"Dashboard widgets are republished to every user homepage automatically"
+			"The indicator source table is truncated so the next run starts with empty data"
 		],
-		"correctIndex": 1,
+		"correctIndex": 2,
 		"explanation": "Collection jobs query the configured source, compute indicator and breakdown scores for the period, and store the results for trending and visualization.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_DataCollectionJobs.html"
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/c_DataCollectionJobs.html"
 		],
 		"domain": "Data Collection"
 	},
 	{
 		"trackCode": "CIS-PA",
 		"order": 56,
-		"prompt": "A platform team needs incident KPI scores captured every hour instead of daily without creating a second data collector job. Which change on the existing job meets the schedule requirement?",
+		"prompt": "A platform team needs incident KPI scores captured every hour without creating a second data collector job. Which change on the existing job meets the schedule requirement?",
 		"choices": [
-			"Set Collection frequency to hourly on the job definition",
+			"Set Run to Periodically and set Repeat Interval to one hour",
 			"Set widget refresh interval to one hour on related dashboards",
 			"Set Run as user to an hourly scheduled integration user",
 			"Set benchmark comparison window to the last hour only"
 		],
 		"correctIndex": 0,
-		"explanation": "Collection frequency on the data collector job controls how often recurring scores are gathered; adjusting it changes the schedule without duplicating jobs.",
+		"explanation": "The Run field controls the schedule. Periodically with a one-hour Repeat Interval collects hourly without duplicating the job. Widget refresh, Run as identity, and benchmark windows do not define collection cadence.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/task/t_ScheduleDataCollection.html",
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_DataCollectorJobs.html"
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/t_CreatASchedDataCollJob.html"
 		],
 		"domain": "Data Collection"
 	},
@@ -15334,16 +15333,16 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 57,
 		"prompt": "A data collector job shows repeated failures in the job log while scores remain stale. What is the most appropriate first troubleshooting step?",
 		"choices": [
-			"Delete all historical scores for the indicator and disable breakdowns permanently",
 			"Convert every automated indicator on the job to manual entry",
 			"Remove the job from the schedule and rely on real-time list reports instead",
-			"Review job log errors and validate indicator source conditions and query performance"
+			"Review job log errors and validate indicator source conditions and query performance",
+			"Delete all historical scores for the indicator and disable breakdowns permanently"
 		],
-		"correctIndex": 3,
+		"correctIndex": 2,
 		"explanation": "Job logs surface execution errors; validating source filters, permissions, and query efficiency addresses the most common collection failure causes.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/task/t_MonitorCollectionJobs.html",
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/performance-analytics-performance.html"
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/t_MonitorCollectionJobs.html",
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/performance-analytics-performance.html"
 		],
 		"domain": "Data Collection"
 	},
@@ -15353,15 +15352,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "Historic backfill is requested for several indicators. Which source condition makes a KPI a poor candidate because past intervals cannot be reconstructed reliably?",
 		"choices": [
 			"Open incidents not updated in the last 90 days using rolling sys_updated_on conditions",
-			"Incidents closed last month using a fixed Closed date on the period boundary",
 			"New incidents opened today with Opened on Today for daily collection",
-			"Changes implemented last week filtered by a Completed date in the prior period"
+			"Changes implemented last week filtered by a Completed date in the prior period",
+			"Incidents closed last month using a fixed Closed date on the period boundary"
 		],
 		"correctIndex": 0,
 		"explanation": "Rolling time-window conditions on fields such as sys_updated_on depend on values that change during a record lifecycle, so past intervals cannot be reliably recalculated.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/task/t_RunHistoricalDataCollection.html",
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_DataCollection.html"
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/t_RunHistoricalDataCollection.html",
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/c_DataCollection.html"
 		],
 		"domain": "Data Governance and Quality"
 	},
@@ -15371,10 +15370,10 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"questionType": "multi",
 		"prompt": "Which practices improve data quality before KPI scores are trusted by executives? (Choose two.)",
 		"choices": [
-			"Review Run as user context on collector jobs to ensure ACL visibility matches reporting expectations",
 			"Validate indicator source filters against representative list reports and document expected counts",
-			"Skip source preview because collection jobs always self-correct bad filters",
-			"Disable breakdown mappings whenever scores differ slightly from ad hoc spreadsheets"
+			"Review Run as user context on collector jobs to ensure ACL visibility matches reporting expectations",
+			"Disable breakdown mappings whenever scores differ slightly from ad hoc spreadsheets",
+			"Skip source preview because collection jobs always self-correct bad filters"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
@@ -15383,8 +15382,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		],
 		"explanation": "Source validation and collection security context are foundational data quality checks before scores drive executive decisions.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_IndicatorSources.html",
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_DataCollectorJobs.html"
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/c_IndicatorSources.html",
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/c_DataCollectorJobs.html"
 		],
 		"domain": "Data Governance and Quality"
 	},
@@ -15393,15 +15392,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 60,
 		"prompt": "A new KPI definition must be consistent across development and production instances. Which governance standard should the PA CoE publish?",
 		"choices": [
-			"Allow each developer to invent unique KPI names without a catalog or review",
-			"Documented naming conventions, filter patterns, targets, owners, and promotion checklist for indicators and sources",
 			"Store KPI definitions only in email threads without version control",
-			"Prohibit reuse of indicator sources to avoid any shared configuration"
+			"Prohibit reuse of indicator sources to avoid any shared configuration",
+			"Documented naming conventions, filter patterns, targets, owners, and promotion checklist for indicators and sources",
+			"Allow each developer to invent unique KPI names without a catalog or review"
 		],
-		"correctIndex": 1,
+		"correctIndex": 2,
 		"explanation": "Metric definition standards and promotion controls keep KPI meaning consistent as analytics content moves between environments.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalyticsAdministration.html"
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/c_PerformanceAnalyticsAdministration.html"
 		],
 		"domain": "Data Governance and Quality"
 	},
@@ -15411,15 +15410,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "Sensitive HR KPIs must be visible only to authorized HR analytics roles. Which access control design should the program implement?",
 		"choices": [
 			"Combine PA roles, dashboard audiences, and ACL-aware Run as users on collector jobs for governed visibility",
-			"Grant pa_admin to every dashboard viewer to eliminate permission errors",
+			"Disable ACLs on facts tables so collection always returns complete datasets",
 			"Publish all KPIs on public homepages without role restrictions",
-			"Disable ACLs on facts tables so collection always returns complete datasets"
+			"Grant pa_admin to every dashboard viewer to eliminate permission errors"
 		],
 		"correctIndex": 0,
 		"explanation": "PA security combines role design, dashboard sharing, and collection context so sensitive KPIs remain visible only to authorized consumers.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/r_PARoles.html",
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalyticsAdministration.html"
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/c_PerformanceAnalyticsAdministration.html"
 		],
 		"domain": "Data Governance and Quality"
 	},
@@ -15428,16 +15427,16 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 62,
 		"prompt": "Audit asks how the organization proves PA scores match underlying transactional records. What validation process should be in place?",
 		"choices": [
-			"Disable KPI Details drill-down to prevent record-level inspection",
 			"Delete historical scores whenever auditors request evidence",
-			"Trust scores without review because widgets always query live transactional tables",
-			"Periodic reconciliation of indicator sources against controlled list reports with documented variance thresholds"
+			"Periodic reconciliation of indicator sources against controlled list reports with documented variance thresholds",
+			"Disable KPI Details drill-down to prevent record-level inspection",
+			"Trust scores without review because widgets always query live transactional tables"
 		],
-		"correctIndex": 3,
+		"correctIndex": 1,
 		"explanation": "Governed reconciliation between collected scores and source data supports compliance and stakeholder confidence in KPI accuracy.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_IndicatorSources.html",
-			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_KPIDetails.html"
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/c_IndicatorSources.html",
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/c_KPIDetails.html"
 		],
 		"domain": "Data Governance and Quality"
 	},
@@ -15446,16 +15445,16 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 63,
 		"prompt": "Source data from a legacy integration frequently arrives late, causing KPI drift. Which reliability practice should the analytics team adopt?",
 		"choices": [
-			"Monitor integration freshness, document source SLAs, and adjust collection schedules after data arrival patterns are understood",
-			"Ignore integration delays because PA automatically backfills missing transactional rows",
 			"Convert every affected KPI to manual entry without investigating root cause",
+			"Ignore integration delays because PA automatically backfills missing transactional rows",
+			"Monitor integration freshness, document source SLAs, and adjust collection schedules after data arrival patterns are understood",
 			"Remove all date filters from indicator sources to maximize record counts"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Source reliability governance tracks upstream data timeliness and aligns collection expectations with when facts are trustworthy.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_DataCollectorJobs.html",
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_DataCollection.html"
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/c_DataCollectorJobs.html",
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/c_DataCollection.html"
 		],
 		"domain": "Data Governance and Quality"
 	},
@@ -15465,19 +15464,19 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"questionType": "multi",
 		"prompt": "Which controls support compliant Platform Analytics governance in regulated environments? (Choose two.)",
 		"choices": [
-			"Maintain audit evidence for KPI definition changes and production promotions",
-			"Restrict indicator and source edits to authorized PA roles with change review",
 			"Disable job monitoring so collection failures do not create audit noise",
-			"Allow all consumers to edit indicator aggregation scripts in production"
+			"Allow all consumers to edit indicator aggregation scripts in production",
+			"Restrict indicator and source edits to authorized PA roles with change review",
+			"Maintain audit evidence for KPI definition changes and production promotions"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"correctIndexes": [
-			0,
-			1
+			2,
+			3
 		],
 		"explanation": "Regulated programs require role-based change control and traceable promotion history for analytics definitions that drive decisions.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalyticsAdministration.html"
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/c_PerformanceAnalyticsAdministration.html"
 		],
 		"domain": "Data Governance and Quality"
 	},
@@ -15487,15 +15486,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "A director wants to see whether mean time to resolve is improving over the last six months. Which visualization type is the best fit?",
 		"choices": [
 			"A time series chart showing the indicator trend across collection periods",
-			"A score widget displaying only the latest single value",
+			"A list report of raw incident records without PA scores",
 			"A breakdown pie chart with no date axis configured",
-			"A list report of raw incident records without PA scores"
+			"A score widget displaying only the latest single value"
 		],
 		"correctIndex": 0,
 		"explanation": "Time series charts plot indicator scores across periods, making them the standard choice for evaluating directional change over time.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/now-intelligence/data-visualizations.html",
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_DashboardsAndWidgets.html"
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/c_DashboardsAndWidgets.html"
 		],
 		"domain": "Data Visualization and Dashboards"
 	},
@@ -15504,16 +15503,16 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 66,
 		"prompt": "A team lead should view a certified operations dashboard but must not edit its visualizations. Which access pattern is appropriate?",
 		"choices": [
-			"Remove ACLs on pa_dashboards so all users inherit write access",
 			"Share the dashboard only by exporting screenshots to email each week",
-			"Assign pa_admin so the user can open every library artifact in edit mode",
-			"Grant dashboard read access and a PA role that allows viewing without authoring privileges"
+			"Grant dashboard read access and a PA role that allows viewing without authoring privileges",
+			"Remove ACLs on pa_dashboards so all users inherit write access",
+			"Assign pa_admin so the user can open every library artifact in edit mode"
 		],
-		"correctIndex": 3,
+		"correctIndex": 1,
 		"explanation": "Dashboard sharing combines record-level access with PA roles so consumers can view certified content without configuration rights.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/dashboards/concept/c_Dashboards.html",
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalyticsAdministration.html"
+			"https://www.servicenow.com/docs/r/now-intelligence/dashboards/c_Dashboards.html",
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/c_PerformanceAnalyticsAdministration.html"
 		],
 		"domain": "Data Visualization and Dashboards"
 	},
@@ -15523,15 +15522,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "A Next Experience dashboard loads slowly because it contains many heavy visualizations. Which design change most directly improves performance?",
 		"choices": [
 			"Reduce widget count, limit breakdown cardinality, and align filters to required decision scope",
-			"Increase collection frequency to every five minutes for all indicators on the page",
 			"Convert every widget to a scripted REST query against transactional tables at load time",
+			"Increase collection frequency to every five minutes for all indicators on the page",
 			"Disable Run as on all collector jobs so widgets query as the admin user"
 		],
 		"correctIndex": 0,
 		"explanation": "Dashboard performance improves when visualizations are scoped to necessary widgets, manageable breakdown volume, and purposeful filtering.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/performance-analytics-performance.html",
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/dashboards/concept/c_Dashboards.html"
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/performance-analytics-performance.html",
+			"https://www.servicenow.com/docs/r/now-intelligence/dashboards/c_Dashboards.html"
 		],
 		"domain": "Data Visualization and Dashboards"
 	},
@@ -15540,16 +15539,16 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 68,
 		"prompt": "From a KPI Details view, what can an analyst typically inspect beyond the headline score?",
 		"choices": [
-			"Only the indicator name with no access to underlying scores or breakdowns",
 			"A list of all update sets that modified the dashboard layout",
+			"Trend history, breakdown segments, target status, and contributing score context",
 			"The raw sys_dictionary definition for every field on the source table",
-			"Trend history, breakdown segments, target status, and contributing score context"
+			"Only the indicator name with no access to underlying scores or breakdowns"
 		],
-		"correctIndex": 3,
+		"correctIndex": 1,
 		"explanation": "KPI Details surfaces trend, segmentation, target evaluation, and related score context so users can interpret a KPI without leaving the analytics experience.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/now-intelligence/kpi-details.html",
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_Indicators.html"
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/c_Indicators.html"
 		],
 		"domain": "Data Visualization and Dashboards"
 	},
@@ -15559,20 +15558,20 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"questionType": "multi",
 		"prompt": "When selecting a Platform Analytics visualization for an executive briefing, which criteria should guide the choice? (Choose two.)",
 		"choices": [
-			"The decision question the audience must answer from the metric",
-			"Whether the view needs trend, comparison, or current-state emphasis",
 			"Using a different chart type for every widget regardless of data shape",
-			"Preferring the visualization with the highest number of breakdown elements"
+			"Preferring the visualization with the highest number of breakdown elements",
+			"The decision question the audience must answer from the metric",
+			"Whether the view needs trend, comparison, or current-state emphasis"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"correctIndexes": [
-			0,
-			1
+			2,
+			3
 		],
 		"explanation": "Effective visualization selection matches chart type to the decision and whether stakeholders need trends, comparisons, or a current snapshot.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/now-intelligence/data-visualizations.html",
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_DashboardsAndWidgets.html"
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/c_DashboardsAndWidgets.html"
 		],
 		"domain": "Data Visualization and Dashboards"
 	},
@@ -15590,7 +15589,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"explanation": "Score visualizations emphasize the current value and target status, which supports at-a-glance performance checks.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/now-intelligence/data-visualizations.html",
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_TargetsAndThresholds.html"
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/c_TargetsAndThresholds.html"
 		],
 		"domain": "Data Visualization and Dashboards"
 	},
@@ -15599,16 +15598,16 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 71,
 		"prompt": "A dashboard author adds a unified date filter to a Platform Analytics dashboard. What is the primary benefit for consumers?",
 		"choices": [
-			"Indicator sources are rewritten to match the filter script include",
 			"Breakdown mappings are deleted and rebuilt from the filter definition",
 			"One filter updates the time scope across linked visualizations without reconfiguring each widget",
-			"Collection jobs run automatically every time a user changes the filter value"
+			"Collection jobs run automatically every time a user changes the filter value",
+			"Indicator sources are rewritten to match the filter script include"
 		],
-		"correctIndex": 2,
+		"correctIndex": 1,
 		"explanation": "Unified filters apply shared criteria—such as date range—across dashboard visualizations so consumers analyze a consistent scope.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/now-intelligence/unified-filters.html",
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/dashboards/concept/c_Dashboards.html"
+			"https://www.servicenow.com/docs/r/now-intelligence/dashboards/c_Dashboards.html"
 		],
 		"domain": "Data Visualization and Dashboards"
 	},
@@ -15618,15 +15617,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "Users report timeouts when opening a shared dashboard during business hours. Which investigation aligns with Platform Analytics performance guidance?",
 		"choices": [
 			"Review widget count, breakdown cardinality, filter breadth, and collection job timing relative to peak load",
-			"Remove certified dashboards from the library so only personal copies load",
 			"Convert the dashboard to a Core UI homepage without data visualizations",
-			"Disable all targets so widgets skip threshold evaluation entirely"
+			"Disable all targets so widgets skip threshold evaluation entirely",
+			"Remove certified dashboards from the library so only personal copies load"
 		],
 		"correctIndex": 0,
 		"explanation": "Dashboard timeouts often trace to heavy visualizations, high-cardinality breakdowns, broad filters, or collection load overlapping peak usage.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/performance-analytics-performance.html",
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/performance/concept/performance-best-practices.html"
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/performance-analytics-performance.html",
+			"https://www.servicenow.com/docs/r/platform-administration/performance/performance-best-practices.html"
 		],
 		"domain": "Data Visualization and Dashboards"
 	},
@@ -15636,10 +15635,10 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"questionType": "multi",
 		"prompt": "Which capabilities are available from KPI Details in the Platform Analytics experience? (Choose two.)",
 		"choices": [
-			"Review trend movement and breakdown contributions for the selected KPI",
 			"Evaluate target and threshold status for the displayed score",
-			"Edit indicator source table names without pa_admin access",
-			"Run historic data collection jobs directly from the widget header"
+			"Review trend movement and breakdown contributions for the selected KPI",
+			"Run historic data collection jobs directly from the widget header",
+			"Edit indicator source table names without pa_admin access"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
@@ -15649,7 +15648,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"explanation": "KPI Details focuses on interpreting the KPI through trends, breakdown context, and target status rather than on administrative collection tasks.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/now-intelligence/kpi-details.html",
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_Indicators.html"
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/c_Indicators.html"
 		],
 		"domain": "Data Visualization and Dashboards"
 	},
@@ -15658,12 +15657,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 74,
 		"prompt": "What are the two main sections of the Platform Analytics experience in Next Experience?",
 		"choices": [
-			"Analytics Center and Library",
-			"Reports Designer and Migration Center",
 			"KPI Composer and Data Collector",
+			"Reports Designer and Migration Center",
+			"Analytics Center and Library",
 			"Core UI Dashboards and Service Portal Analytics"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "The Platform Analytics experience is organized into Analytics Center for curated and certified content and Library for browsing and managing analytics artifacts.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/now-intelligence/par-workspace.html",
@@ -15676,16 +15675,16 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 75,
 		"prompt": "A service desk director's dashboard must default to their assignment group while allowing peers to compare other teams. Which dashboard filter design best supports both needs?",
 		"choices": [
-			"Configure a breakdown filter mapped to assignment group with role-aware default values",
 			"Hard-code the director's group into every widget query with no override option",
 			"Remove all filters so every user sees identical global aggregates only",
-			"Create a separate copy of each indicator for every assignment group permanently"
+			"Create a separate copy of each indicator for every assignment group permanently",
+			"Configure a breakdown filter mapped to assignment group with role-aware default values"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Breakdown filters on shared indicators let audiences compare segments while role-aware defaults scope the initial view to each leader's team.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/dashboards/concept/c_Dashboards.html",
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_Breakdowns.html"
+			"https://www.servicenow.com/docs/r/now-intelligence/dashboards/c_Dashboards.html",
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/c_Breakdowns.html"
 		],
 		"domain": "Data Visualization and Dashboards"
 	},
@@ -15695,15 +15694,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "An analyst clicks a KPI score on a dashboard and expects record-level context behind the metric. Which PA capability provides that drill-down experience?",
 		"choices": [
 			"A UI policy that hides score fields until the user refreshes the browser session",
-			"A MID Server probe that rescans the network before each dashboard load",
 			"A transform map that exports indicator tables nightly to an external spreadsheet",
-			"KPI Details linking the widget to underlying records contributing to the indicator score"
+			"KPI Details linking the widget to underlying records contributing to the indicator score",
+			"A MID Server probe that rescans the network before each dashboard load"
 		],
-		"correctIndex": 3,
+		"correctIndex": 2,
 		"explanation": "KPI Details connects dashboard scores to the transactional records that drove the collection, supporting credible root-cause review.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_KPIDetails.html",
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/dashboards/concept/c_Dashboards.html"
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/c_KPIDetails.html",
+			"https://www.servicenow.com/docs/r/now-intelligence/dashboards/c_Dashboards.html"
 		],
 		"domain": "Data Visualization and Dashboards"
 	},
@@ -15712,16 +15711,16 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 77,
 		"prompt": "A PA dashboard with twelve breakdown-heavy widgets loads slowly during morning peak usage. What should the implementer evaluate first?",
 		"choices": [
-			"Converting every widget to a static image updated manually each quarter",
 			"Deleting historical indicator snapshots to shrink database size without reviewing queries",
-			"Disabling ACLs on indicator tables so widgets skip security checks entirely",
-			"Widget breakdown cardinality, query complexity, and whether collection completed before peak access"
+			"Converting every widget to a static image updated manually each quarter",
+			"Widget breakdown cardinality, query complexity, and whether collection completed before peak access",
+			"Disabling ACLs on indicator tables so widgets skip security checks entirely"
 		],
-		"correctIndex": 3,
+		"correctIndex": 2,
 		"explanation": "Dashboard performance usually traces to heavy breakdown dimensions, expensive queries, or stale snapshots when collection has not finished before users arrive.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-servicenow-platform/page/administer/performance/concept/performance-best-practices.html",
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_DataCollectorJobs.html"
+			"https://www.servicenow.com/docs/r/platform-administration/performance/performance-best-practices.html",
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/c_DataCollectorJobs.html"
 		],
 		"domain": "Data Visualization and Dashboards"
 	},
@@ -15730,16 +15729,16 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 78,
 		"prompt": "Leadership wants Platform Analytics dashboards reachable from the Next Experience shell without separate bookmarks. Which approach aligns with unified navigation?",
 		"choices": [
-			"Publish dashboards to audiences accessible through Next Experience navigation and role-based modules",
-			"Require users to paste direct sys_id URLs into browser favorites for each widget",
 			"Disable Next Experience entirely and restrict analytics to classic UI themes only",
+			"Require users to paste direct sys_id URLs into browser favorites for each widget",
+			"Publish dashboards to audiences accessible through Next Experience navigation and role-based modules",
 			"Embed dashboard iframes inside personal knowledge articles without access controls"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Governed dashboard publishing with audience and role access lets executives open PA content from the Next Experience navigation they already use daily.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/dashboards/concept/c_Dashboards.html",
-			"https://www.servicenow.com/docs/bundle/zurich-platform-user-interface/page/administer/navigation/concept/c_NextExperienceUnifiedNavigation.html"
+			"https://www.servicenow.com/docs/r/now-intelligence/dashboards/c_Dashboards.html",
+			"https://www.servicenow.com/docs/r/platform-user-interface/navigation/c_NextExperienceUnifiedNavigation.html"
 		],
 		"domain": "Data Visualization and Dashboards"
 	},
@@ -15749,20 +15748,20 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"questionType": "multi",
 		"prompt": "When rolling out interactive dashboard filters to multiple PA audiences, which practices reduce misinterpretation risk? (Choose two.)",
 		"choices": [
-			"Map each filter to governed breakdown dimensions tied to the same indicator context",
-			"Test filter defaults and visibility with representative user roles before production cutover",
 			"Hide threshold coloring on all widgets so filtered segments always appear green",
-			"Allow every viewer to edit indicator source conditions directly from the filter panel"
+			"Allow every viewer to edit indicator source conditions directly from the filter panel",
+			"Test filter defaults and visibility with representative user roles before production cutover",
+			"Map each filter to governed breakdown dimensions tied to the same indicator context"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"correctIndexes": [
-			0,
-			1
+			2,
+			3
 		],
 		"explanation": "Filter rollouts should validate role-specific behavior and align filters to governed breakdowns so segmented views remain accurate and authorized.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/dashboards/concept/c_Dashboards.html",
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_Breakdowns.html"
+			"https://www.servicenow.com/docs/r/now-intelligence/dashboards/c_Dashboards.html",
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/c_Breakdowns.html"
 		],
 		"domain": "Data Visualization and Dashboards"
 	},
@@ -15771,15 +15770,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 80,
 		"prompt": "Operations leadership wants forward-looking backlog projections on an incident KPI dashboard. Which advanced analytics capability should the PA team enable?",
 		"choices": [
-			"Deletion of historical scores so only the current day displays on charts",
 			"Real-time list reports that replace all stored PA snapshots permanently",
-			"Manual spreadsheet extrapolation attached to each widget as a static image",
-			"Forecasting and trend analysis on time-series indicator scores with documented confidence context"
+			"Forecasting and trend analysis on time-series indicator scores with documented confidence context",
+			"Deletion of historical scores so only the current day displays on charts",
+			"Manual spreadsheet extrapolation attached to each widget as a static image"
 		],
-		"correctIndex": 3,
+		"correctIndex": 1,
 		"explanation": "PA forecasting uses collected score history to project trends so leaders can anticipate workload rather than react only to past periods.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_Indicators.html",
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/c_Indicators.html",
 			"https://www.servicenow.com/docs/r/now-intelligence/data-visualizations.html"
 		],
 		"domain": "Advanced Analytics"
@@ -15790,15 +15789,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "A critical incident KPI suddenly spikes without an obvious operational event. Which analytic approach helps detect abnormal score movement quickly?",
 		"choices": [
 			"Anomaly detection or threshold alerts on indicator trends with investigation via KPI Details",
-			"Ignore the spike until executives request a manual explanation weeks later",
 			"Disable targets so abnormal coloring never appears on widgets",
+			"Ignore the spike until executives request a manual explanation weeks later",
 			"Convert the KPI to manual entry to avoid automated monitoring"
 		],
 		"correctIndex": 0,
 		"explanation": "Anomaly detection and threshold signaling highlight unexpected KPI movement so teams investigate root causes before service impact spreads.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_Indicators.html",
-			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_KPIDetails.html"
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/c_Indicators.html",
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/c_KPIDetails.html"
 		],
 		"domain": "Advanced Analytics"
 	},
@@ -15807,16 +15806,16 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 82,
 		"prompt": "Directors want to compare regional incident performance against enterprise benchmarks in one review. Which comparative analytics design should be used?",
 		"choices": [
-			"Separate dashboards per region with incompatible filters and no shared targets",
 			"Static PDF exports emailed after each collection job completes",
+			"Benchmark-enabled widgets or breakdown comparisons that show segment performance relative to defined targets or peer groups",
 			"Raw record lists without aggregated scores or time context",
-			"Benchmark-enabled widgets or breakdown comparisons that show segment performance relative to defined targets or peer groups"
+			"Separate dashboards per region with incompatible filters and no shared targets"
 		],
-		"correctIndex": 3,
+		"correctIndex": 1,
 		"explanation": "Comparative analytics contextualize KPI results against benchmarks or peer segments so leaders evaluate relative performance credibly.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_Indicators.html",
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/dashboards/concept/c_Dashboards.html"
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/c_Indicators.html",
+			"https://www.servicenow.com/docs/r/now-intelligence/dashboards/c_Dashboards.html"
 		],
 		"domain": "Advanced Analytics"
 	},
@@ -15825,15 +15824,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 83,
 		"prompt": "Problem management wants to identify which assignment groups are likely to miss SLA targets next month. Which predictive analytics pattern applies?",
 		"choices": [
-			"Use trend and forecast signals on leading workload KPIs combined with SLA breach history by segment",
-			"Wait for breaches to occur and only then create retrospective manual indicators",
 			"Remove breakdowns because predictive views require a single global number only",
-			"Disable collection jobs during forecasting pilots to reduce database load permanently"
+			"Disable collection jobs during forecasting pilots to reduce database load permanently",
+			"Use trend and forecast signals on leading workload KPIs combined with SLA breach history by segment",
+			"Wait for breaches to occur and only then create retrospective manual indicators"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Predictive analytics combines historical score trends with segmented context to anticipate outcomes before lagging KPIs confirm failure.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_Indicators.html",
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/c_Indicators.html",
 			"https://www.servicenow.com/docs/r/now-intelligence/data-visualizations.html"
 		],
 		"domain": "Advanced Analytics"
@@ -15844,20 +15843,20 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"questionType": "multi",
 		"prompt": "Which advanced Platform Analytics capabilities help teams move from descriptive reporting to actionable insight? (Choose two.)",
 		"choices": [
+			"KPI Details drill-down from widgets to contributing records for rapid investigation",
 			"Replacing all indicators with ad hoc list reports on every dashboard row",
 			"Removing targets and thresholds so every score appears neutral gray",
-			"AI-assisted analytics experiences that surface relevant KPIs and trends in Next Experience workspaces",
-			"KPI Details drill-down from widgets to contributing records for rapid investigation"
+			"AI-assisted analytics experiences that surface relevant KPIs and trends in Next Experience workspaces"
 		],
-		"correctIndex": 2,
+		"correctIndex": 0,
 		"correctIndexes": [
-			2,
+			0,
 			3
 		],
 		"explanation": "Modern PA programs combine intelligent surfacing of metrics with record-level drill-down so consumers interpret and act on score movement quickly.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/now-intelligence/par-workspace.html",
-			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_KPIDetails.html"
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/c_KPIDetails.html"
 		],
 		"domain": "Advanced Analytics"
 	},
@@ -15874,8 +15873,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 0,
 		"explanation": "Trend visualizations with dimensional filters and drill-down explain score movement using historical PA snapshots and underlying records.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/dashboards/concept/c_Dashboards.html",
-			"https://www.servicenow.com/docs/bundle/zurich-platform-user-interface/page/administer/navigation/concept/c_NextExperienceUnifiedNavigation.html"
+			"https://www.servicenow.com/docs/r/now-intelligence/dashboards/c_Dashboards.html",
+			"https://www.servicenow.com/docs/r/platform-user-interface/navigation/c_NextExperienceUnifiedNavigation.html"
 		],
 		"domain": "Advanced Analytics"
 	},
@@ -15884,16 +15883,16 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 86,
 		"prompt": "A new PA implementation team needs starter indicators, breakdowns, and dashboards aligned to ITSM processes. Which artifact accelerates time to value?",
 		"choices": [
-			"A personal developer instance clone without documentation of dependent indicator relationships",
 			"An update set containing only UI themes with no indicator or dashboard definitions",
 			"A blank instance with every analytics plugin disabled until manual scripting is complete",
-			"A Platform Analytics content pack installed and configured through guided setup before customization"
+			"A Platform Analytics content pack installed and configured through guided setup before customization",
+			"A personal developer instance clone without documentation of dependent indicator relationships"
 		],
-		"correctIndex": 3,
+		"correctIndex": 2,
 		"explanation": "Platform Analytics content packs deliver prebuilt indicators, breakdowns, and dashboards that teams tailor through guided setup instead of building from scratch.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_PAContentPacks.html",
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalyticsAdministration.html"
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/c_PAContentPacks.html",
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/c_PerformanceAnalyticsAdministration.html"
 		],
 		"domain": "Administration and Advanced Implementation Solutions"
 	},
@@ -15902,16 +15901,16 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 87,
 		"prompt": "Historical scores are required for a revamped incident KPI, but collection started only last week. Which advanced collection scenario addresses the gap?",
 		"choices": [
-			"Wait for six months of daily collections before showing any dashboard widgets to users",
-			"Convert the indicator to manual entry and ask agents to recreate past months from memory",
 			"Run a historical backfill data collection job for the indicator across the required prior periods",
-			"Disable snapshots permanently so the KPI always recalculates live from open incidents only"
+			"Disable snapshots permanently so the KPI always recalculates live from open incidents only",
+			"Wait for six months of daily collections before showing any dashboard widgets to users",
+			"Convert the indicator to manual entry and ask agents to recreate past months from memory"
 		],
-		"correctIndex": 2,
+		"correctIndex": 0,
 		"explanation": "Historical backfill collection populates prior-period snapshots so trend widgets reflect performance before the indicator went live.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_DataCollectorJobs.html",
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/optimized-data-collection.html"
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/c_DataCollectorJobs.html",
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/optimized-data-collection.html"
 		],
 		"domain": "Administration and Advanced Implementation Solutions"
 	},
@@ -15920,16 +15919,16 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 88,
 		"prompt": "A CIO wants a quarterly Stakeholder Spotlight highlighting five enterprise KPIs with target context. What should the PA administrator configure first?",
 		"choices": [
+			"Remove target definitions so Spotlight tiles show only raw numbers without status coloring",
 			"Grant Spotlight edit rights to all dashboard viewers so they can swap KPIs during meetings",
 			"Select governed high-impact indicators with defined targets and owners for the Spotlight group layout",
-			"Publish every indicator on the instance to Spotlight without reviewing threshold relevance",
-			"Remove target definitions so Spotlight tiles show only raw numbers without status coloring"
+			"Publish every indicator on the instance to Spotlight without reviewing threshold relevance"
 		],
-		"correctIndex": 1,
+		"correctIndex": 2,
 		"explanation": "Stakeholder Spotlight credibility starts with curated KPIs that have clear ownership, targets, and business relevance before layout and publishing.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_PAStakeholderSpotlight.html",
-			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/task/t_BuildAStakeholderSpotlight.html"
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/c_PAStakeholderSpotlight.html",
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/t_BuildAStakeholderSpotlight.html"
 		],
 		"domain": "Administration and Advanced Implementation Solutions"
 	},
@@ -15951,8 +15950,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		],
 		"explanation": "Production promotion should capture content pack lineage and tune collection schedules for load while keeping indicator governance and ownership intact.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/performance-analytics-and-reporting/australia/performance-analytics/concept/c_PAContentPacks.html",
-			"https://www.servicenow.com/docs/bundle/zurich-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalyticsAdministration.html"
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/c_PAContentPacks.html",
+			"https://www.servicenow.com/docs/r/now-intelligence/performance-analytics/c_PerformanceAnalyticsAdministration.html"
 		],
 		"domain": "Administration and Advanced Implementation Solutions"
 	},
