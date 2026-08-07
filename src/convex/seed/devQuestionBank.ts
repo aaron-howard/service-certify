@@ -26036,9 +26036,10 @@ export const DEV_PRACTICE_QUESTIONS = [
 			0,
 			1
 		],
-		"explanation": "External assessments are parent records on the assessment table; each sent questionnaire creates an instance record linked to the respondent.",
+		"explanation": "External assessments are parent records on sn_vdr_risk_asmt_assessment; each sent questionnaire creates an assessment instance linked to the respondent.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-data-model.html"
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-data-model.html",
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-create-assessment.html"
 		],
 		"domain": "Assessment Configuration"
 	},
@@ -26281,7 +26282,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		],
 		"explanation": "External assessments live on sn_vdr_risk_asmt_assessment while asmt_assessment_instance stores the completed questionnaire responses.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-data-model.html"
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-data-model.html",
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-external-assessment-lifecycle.html"
 		],
 		"domain": "Assessment Configuration"
 	},
@@ -26483,9 +26485,10 @@ export const DEV_PRACTICE_QUESTIONS = [
 			"sn_grc.analyst with full GRC workspace configuration rights"
 		],
 		"correctIndex": 1,
-		"explanation": "Third-party contacts receive vendor_contact for portal access and snc_external to restrict them from the full internal instance.",
+		"explanation": "Third-party contacts are automatically assigned vendor_contact for portal access and snc_external to restrict them from the full internal instance.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-roles.html"
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/vendor-portal.html",
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-tp-contact-config.html"
 		],
 		"domain": "Third-party Portal"
 	},
@@ -26510,7 +26513,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"trackCode": "CIS-TPRM",
 		"order": 66,
 		"questionType": "multi",
-		"prompt": "Which two actions can a third-party contact perform from the third-party portal? (Choose two.)",
+		"prompt": "Which two actions can a primary third-party contact perform from the third-party portal? (Choose two.)",
 		"choices": [
 			"Respond to a Third-party Risk Assessment assigned to their organization",
 			"Manage Third-party Contacts for their company engagement",
@@ -26522,9 +26525,10 @@ export const DEV_PRACTICE_QUESTIONS = [
 			0,
 			1
 		],
-		"explanation": "Portal contacts complete assigned assessments and maintain their contact roster; approval and scoring configuration remain internal functions.",
+		"explanation": "Primary contacts receive and respond to assessments and can manage other contacts for the third party. Approving due diligence and editing scoring rules remain internal TPRM functions.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-reference.html"
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/vendor-portal.html",
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-tp-contact-config.html"
 		],
 		"domain": "Third-party Portal"
 	},
@@ -26857,13 +26861,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "A risk manager wants vendor findings registered in the enterprise risk register for consolidated reporting. How are those risks represented in GRC?",
 		"choices": [
 			"Incident records on incident with priority one for every vendor finding",
-			"Risk Statement records on sn_risk_risk linked from third-party engagements",
+			"Risk records on sn_risk_risk associated with third parties and engagements",
 			"User preference rows on sys_user_preference storing risk scores",
 			"Catalog items on sc_cat_item representing each vendor contract line"
 		],
 		"correctIndex": 1,
-		"explanation": "The TPRM data model relates engagements to Risk records so third-party exposure rolls into enterprise risk management.",
+		"explanation": "When Risk Management and TPRM are both installed, risks (and risk statements) can be associated with third parties and engagements. Engagements relate to Risk [sn_risk_risk] so third-party exposure rolls into enterprise risk management.",
 		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/rm-assessment-integration.html",
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-add-risks-tp.html",
 			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-data-model.html"
 		],
 		"domain": "Other Application Relationships"

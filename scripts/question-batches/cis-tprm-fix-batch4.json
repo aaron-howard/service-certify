@@ -1,0 +1,99 @@
+[
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 66,
+		"questionType": "multi",
+		"prompt": "Which two actions can a primary third-party contact perform from the third-party portal? (Choose two.)",
+		"choices": [
+			"Respond to a Third-party Risk Assessment assigned to their organization",
+			"Manage Third-party Contacts for their company engagement",
+			"Approve internal due diligence requests as TPR manager",
+			"Edit scoring rules on sn_vdr_risk_asmt_vendor_risk_scoring_rule configuration records"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "Primary contacts receive and respond to assessments and can manage other contacts for the third party. Approving due diligence and editing scoring rules remain internal TPRM functions.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/vendor-portal.html",
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-tp-contact-config.html"
+		],
+		"domain": "Third-party Portal"
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 86,
+		"prompt": "A risk manager wants vendor findings registered in the enterprise risk register for consolidated reporting. How are those risks represented in GRC?",
+		"choices": [
+			"Incident records on incident with priority one for every vendor finding",
+			"Risk records on sn_risk_risk associated with third parties and engagements",
+			"User preference rows on sys_user_preference storing risk scores",
+			"Catalog items on sc_cat_item representing each vendor contract line"
+		],
+		"correctIndex": 1,
+		"explanation": "When Risk Management and TPRM are both installed, risks (and risk statements) can be associated with third parties and engagements. Engagements relate to Risk [sn_risk_risk] so third-party exposure rolls into enterprise risk management.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/rm-assessment-integration.html",
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-add-risks-tp.html",
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-data-model.html"
+		],
+		"domain": "Other Application Relationships"
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 64,
+		"prompt": "A new vendor contact must access only the third-party portal without broader instance navigation. Which roles are assigned automatically?",
+		"choices": [
+			"security_admin with unrestricted read on all tables",
+			"vendor_contact with snc_external limiting access to external portal functions",
+			"itil with admin impersonation across all application scopes",
+			"sn_grc.analyst with full GRC workspace configuration rights"
+		],
+		"correctIndex": 1,
+		"explanation": "Third-party contacts are automatically assigned vendor_contact for portal access and snc_external to restrict them from the full internal instance.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/vendor-portal.html",
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-tp-contact-config.html"
+		],
+		"domain": "Third-party Portal"
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 38,
+		"questionType": "multi",
+		"prompt": "Which two tables are involved when a TPRM assessment questionnaire is sent to a third-party contact? (Choose two.)",
+		"choices": [
+			"Third-party risk assessment (sn_vdr_risk_asmt_assessment) as the parent assessment record",
+			"Questionnaire instance (asmt_assessment_instance) representing the sent questionnaire to the respondent",
+			"Software asset (alm_asset) tracking licensed application installations across the enterprise CMDB",
+			"Known error (problem) storing documented workarounds for recurring platform configuration defects"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "External assessments are parent records on sn_vdr_risk_asmt_assessment; each sent questionnaire creates an assessment instance linked to the respondent.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-data-model.html",
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-create-assessment.html"
+		],
+		"domain": "Assessment Configuration"
+	},
+	{
+		"trackCode": "CIS-TPRM",
+		"order": 52,
+		"questionType": "multi",
+		"prompt": "Which two records are core to storing an external third-party assessment and its answered questionnaire instance? (Choose two.)",
+		"choices": [
+			"sn_vdr_risk_asmt_assessment external assessment header record",
+			"alm_hardware asset record used for warranty tracking on procured devices",
+			"sn_publications_publication catalog for knowledge article publishing workflows",
+			"asmt_assessment_instance questionnaire response instance linked to the assessment"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 3],
+		"explanation": "External assessments live on sn_vdr_risk_asmt_assessment while asmt_assessment_instance stores the completed questionnaire responses.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-data-model.html",
+			"https://www.servicenow.com/docs/r/governance-risk-compliance/third-party-risk-management/tprm-external-assessment-lifecycle.html"
+		],
+		"domain": "Assessment Configuration"
+	}
+]
