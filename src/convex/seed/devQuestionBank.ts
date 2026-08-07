@@ -8072,12 +8072,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 1,
 		"prompt": "When a user with the wm_qualifier role moves a work order from Draft to Awaiting Qualification, what happens automatically?",
 		"choices": [
-			"Dynamic Scheduling assigns an agent before the qualifier reviews task details",
 			"All dispatch group memberships are cleared from the parent work order record",
 			"A work order task is created and populated with information from the work order",
-			"The work order is closed as Complete and removed from the dispatch queue immediately"
+			"The work order is closed as Complete and removed from the dispatch queue immediately",
+			"Dynamic Scheduling assigns an agent before the qualifier reviews task details"
 		],
-		"correctIndex": 2,
+		"correctIndex": 1,
 		"explanation": "Moving a work order to Awaiting Qualification automatically creates a work order task populated from the parent work order so qualifiers can define executable field activities.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/work-order-management/c_WorkOrderTasks.html"
@@ -8090,9 +8090,9 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "An initiator submits one work order for HVAC repair at two customer sites requiring different technician skills. How should the qualifier structure execution?",
 		"choices": [
 			"Create separate work order tasks on the parent work order so each activity routes to qualified agents by skill and location",
-			"Convert the request into a catalog order guide without any work order task records",
 			"Close the parent work order and open two unrelated incidents for each customer site visit",
-			"Assign one task to a single agent and disable skill matching for the second location"
+			"Assign one task to a single agent and disable skill matching for the second location",
+			"Convert the request into a catalog order guide without any work order task records"
 		],
 		"correctIndex": 0,
 		"explanation": "A work order organizes the overall field job while work order tasks represent discrete activities that agents execute, assign, and schedule independently.",
@@ -8106,12 +8106,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 3,
 		"prompt": "An initiator submits a draft work order for a multi-skill repair at two locations. Why should a qualifier split the request into multiple work order tasks?",
 		"choices": [
-			"Different activities can be assigned to agents with different skills, locations, and schedules",
 			"Splitting tasks disables qualification and dispatch states on the parent work order record",
-			"Multiple tasks prevent any parts consumption from being tracked on the work order",
-			"Separate tasks force the work order to bypass Dispatcher Workspace assignment controls"
+			"Different activities can be assigned to agents with different skills, locations, and schedules",
+			"Separate tasks force the work order to bypass Dispatcher Workspace assignment controls",
+			"Multiple tasks prevent any parts consumption from being tracked on the work order"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"explanation": "Qualifiers split work into tasks so dispatch can route each activity to qualified agents in the right territory and time window.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/work-order-management/c_WorkOrderTasks.html"
@@ -8140,12 +8140,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 5,
 		"prompt": "An implementation team must standardize inconsistent location names imported from legacy systems before dispatch routing goes live. Which no-code platform feature transforms field values using defined rules?",
 		"choices": [
-			"Scheduled import sets that bypass all table-level business rules during every load",
 			"Workflow editor activities that send approval emails when location values change",
 			"Field normalization rules that cleanse and standardize data during record updates",
-			"Client-side UI scripts that run only when administrators manually edit forms"
+			"Client-side UI scripts that run only when administrators manually edit forms",
+			"Scheduled import sets that bypass all table-level business rules during every load"
 		],
-		"correctIndex": 2,
+		"correctIndex": 1,
 		"explanation": "Field normalization rules provide no-code data cleansing by transforming field values based on conditions and patterns defined by administrators.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/c_FieldNormalization.html"
@@ -8158,9 +8158,9 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "A field service manager opens Field Service > Manager > Manage Skills to assign HVAC certification to technicians. What does Skills Management define for dispatch matching?",
 		"choices": [
 			"Agent competencies and skill levels used to match qualified resources to work requirements",
-			"Catalog item categories used exclusively for employee self-service portal requests",
 			"Territory boundaries that replace geographic assignment logic in Dispatcher Workspace",
-			"Contract entitlement tiers that determine whether customers can open new incidents"
+			"Contract entitlement tiers that determine whether customers can open new incidents",
+			"Catalog item categories used exclusively for employee self-service portal requests"
 		],
 		"correctIndex": 0,
 		"explanation": "Skills Management lets managers create skills and assign them to agents so scheduling and dispatch can match work to qualified technicians.",
@@ -8173,21 +8173,22 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"trackCode": "CIS-FSM",
 		"order": 7,
 		"questionType": "multi",
-		"prompt": "A dispatcher wants agent positions updated on the dispatch map in near real time. Which two items must be enabled to track field agents? (Choose two.)",
+		"prompt": "Operations wants the geolocation map to show field agents' latest positions for customer experience tracking. Which two items must be enabled? (Choose two.)",
 		"choices": [
-			"The Geolocation plugin activated on the instance",
 			"The sn_fsm_customer_ex.work.management.cx.share_agent_details property set to true",
-			"The Field technician feedback survey enabled for every closed work order",
-			"The Location history map report scheduled to run once per week only"
+			"The Geolocation plugin activated on the instance",
+			"The Location history map report scheduled to run once per week only",
+			"The Field technician feedback survey enabled for every closed work order"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
 			1
 		],
-		"explanation": "Agent tracking on dispatch maps requires Geolocation and the share agent details property, which updates the map with the agent's latest location.",
+		"explanation": "Customer Experience tracking updates the geolocation map with each agent's latest location when Geolocation is active and sn_fsm_customer_ex.work.management.cx.share_agent_details is true. Surveys and weekly history reports are not the enablement pair for live agent location sharing.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/field-service-management/customer-experience-components.html"
+			"https://www.servicenow.com/docs/r/field-service-management/customer-experience-components.html",
+			"https://www.servicenow.com/docs/r/field-service-management/field-service-scheduling/dispatch-map-in-dispatcher-workspace.html"
 		],
 		"domain": "Field Service Management Fundamentals"
 	},
@@ -8196,12 +8197,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 8,
 		"prompt": "Dispatchers need a single workspace to view tasks, agents, locations, and schedule changes. Which Field Service Management capability provides this?",
 		"choices": [
-			"Dispatcher Workspace with configurable views, filters, and drag-and-drop assignment",
-			"Hardware Asset Management lifecycle dashboard for warehouse stock transfers only",
 			"Performance Analytics homepage widgets for HR onboarding completion metrics only",
+			"Hardware Asset Management lifecycle dashboard for warehouse stock transfers only",
+			"Dispatcher Workspace with configurable views, filters, and drag-and-drop assignment",
 			"Security Incident Response playbooks for malware containment workflow execution only"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Dispatcher Workspace is the primary scheduling console where dispatchers manage teams, tasks, and assignments with configurable layouts and filters.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/dispatcher-activities.html"
@@ -8213,12 +8214,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 9,
 		"prompt": "After qualification, an organization enables automatic assignment based on agent skills, availability, and travel time. Which capability supports this scheduling model?",
 		"choices": [
-			"Manual spreadsheet import of assignments uploaded nightly by dispatchers only",
-			"Dynamic Scheduling with configurable matching criteria for field agents",
 			"Knowledge Management article versioning for self-service search deflection metrics only",
-			"Change Management standard change templates for emergency CAB approval workflows"
+			"Change Management standard change templates for emergency CAB approval workflows",
+			"Dynamic Scheduling with configurable matching criteria for field agents",
+			"Manual spreadsheet import of assignments uploaded nightly by dispatchers only"
 		],
-		"correctIndex": 1,
+		"correctIndex": 2,
 		"explanation": "Dynamic Scheduling intelligently assigns tasks by evaluating agent skills, availability, travel time, and other matching criteria configured by administrators.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/dynamic-scheduling.html"
@@ -8230,12 +8231,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 10,
 		"prompt": "Leadership requires every new customer repair request to pass qualification before dispatch assigns technicians. Where should an administrator enable that requirement?",
 		"choices": [
-			"Field Service > Administration > Configuration, turning on Qualification is required for new requests",
 			"System Definition > Dictionary, editing the wm_order state choice list without saving configuration",
-			"Service Catalog > Record Producers, adding a catalog variable for qualification review notes only",
-			"MID Server > Configuration, enabling qualification polling on discovery schedules for assets"
+			"Field Service > Administration > Configuration, turning on Qualification is required for new requests",
+			"MID Server > Configuration, enabling qualification polling on discovery schedules for assets",
+			"Service Catalog > Record Producers, adding a catalog variable for qualification review notes only"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"explanation": "Work order qualification is enabled on the Field Service Configuration page by turning on Qualification is required for new requests.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/work-order-management/configure-qualify-fsm.html"
@@ -8247,12 +8248,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 11,
 		"prompt": "A dispatcher cannot see agent assignment groups in Dispatcher Workspace. What must be configured on the dispatcher user record?",
 		"choices": [
-			"Dispatch Groups added on the Groups tab so the dispatcher can manage those user groups",
-			"A personal API key on the Credentials tab for Google Maps geocoding requests exclusively",
 			"The wm_agent role assigned directly without any group membership or dispatch group links",
+			"A personal API key on the Credentials tab for Google Maps geocoding requests exclusively",
+			"Dispatch Groups added on the Groups tab so the dispatcher can manage those user groups",
 			"An elevated security admin role to bypass all field service ACL restrictions globally"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Dispatch groups must be added to a dispatcher's user record so they can see the assignment groups covered by those dispatch groups in Dispatcher Workspace.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/configure-dispatcher-user.html"
@@ -8262,15 +8263,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 	{
 		"trackCode": "CIS-FSM",
 		"order": 12,
-		"prompt": "Dispatchers assign repair tasks to technicians who carry van stock and hold required certifications for covered locations. Which user group type represents those field executors?",
+		"prompt": "Dispatchers assign repair tasks to technicians who carry van stock and hold required certifications for covered locations. Which Field Service group type represents those field executors?",
 		"choices": [
-			"Approving change requests that require Change Advisory Board review before production deployment",
-			"Executing field work at covered locations with required parts and skills for assigned tasks",
-			"Managing software license reclamation for decommissioned hardware assets stored in warehouse",
-			"Creating problem records and root cause analysis tasks for the Problem Management team queue"
+			"Qualifier Groups that only review draft work orders before any agent is assigned",
+			"Problem Management coordinator groups that own root-cause analysis queues",
+			"Work Groups that execute field tasks at covered locations with required skills and parts",
+			"Change Advisory Board groups that approve production change requests"
 		],
-		"correctIndex": 1,
-		"explanation": "Work Groups represent field agents who execute dispatched tasks at covered locations with the parts and skills needed for assigned work.",
+		"correctIndex": 2,
+		"explanation": "Work Groups represent field agents who execute dispatched tasks at covered locations. Qualifier Groups and Dispatch Groups support qualification and scheduling, but Work Groups are the executors who perform the onsite work.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/workforce-optimization-for-field-service/setting-up-field-service-user-groups.html"
 		],
@@ -8282,9 +8283,9 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "A new hire will perform onsite repairs from the Now Agent mobile app but should not access Dispatcher Workspace. Which role and group setup applies?",
 		"choices": [
 			"Assign wm_agent with membership in a Work Group covering the technician's service locations",
-			"Assign wm_dispatcher with Dispatch Group membership for every territory in the instance",
+			"Assign admin role so mobile forms bypass all field service ACL restrictions globally",
 			"Assign wm_qualifier so the technician can edit tasks before self-assigning work",
-			"Assign admin role so mobile forms bypass all field service ACL restrictions globally"
+			"Assign wm_dispatcher with Dispatch Group membership for every territory in the instance"
 		],
 		"correctIndex": 0,
 		"explanation": "The wm_agent role is assigned to field technicians who receive and complete dispatched work order tasks.",
@@ -8298,12 +8299,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 14,
 		"prompt": "A scheduler must drag tasks onto agent calendars and manage Dispatch Groups for three regional crews. Which role and configuration are required?",
 		"choices": [
-			"wm_manager managing skills only without membership in any dispatch group records",
 			"wm_agent executing tasks onsite without dispatch group relationships on the user record",
-			"wm_initiator with permission to create work orders but no Dispatcher Workspace access",
-			"wm_dispatcher with Dispatch Groups on the user record covering the agent assignment groups managed"
+			"wm_dispatcher with Dispatch Groups on the user record covering the agent assignment groups managed",
+			"wm_manager managing skills only without membership in any dispatch group records",
+			"wm_initiator with permission to create work orders but no Dispatcher Workspace access"
 		],
-		"correctIndex": 3,
+		"correctIndex": 1,
 		"explanation": "Dispatchers use the wm_dispatcher role to manage schedules and assign qualified work order tasks to field agents.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/r_UserRoleInstallWFieldSrvMgmnt.html"
@@ -8316,8 +8317,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "A national provider divides dispatch by state and city so technicians are not routed across country borders. Which configuration defines those operational boundaries?",
 		"choices": [
 			"Geographic or logical coverage areas used to route work to appropriate teams and agents",
-			"Financial cost centers used exclusively for annual budget forecasting reports and accruals",
 			"Software license pools used to restrict ServiceNow login counts for contractor user accounts",
+			"Financial cost centers used exclusively for annual budget forecasting reports and accruals",
 			"CMDB discovery scopes used to limit which configuration items appear in nightly import sets"
 		],
 		"correctIndex": 0,
@@ -8332,12 +8333,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 16,
 		"prompt": "Two territories overlap the same customer address. What should administrators configure to avoid ambiguous dispatch assignments?",
 		"choices": [
-			"Remove all location records from work orders so territories are ignored during assignment",
 			"Clear assignment criteria such as skills, availability, and territory priority rules",
+			"A single global territory that includes every location in the instance without any boundaries",
 			"Disable Dynamic Scheduling so dispatchers never evaluate overlapping territory memberships",
-			"A single global territory that includes every location in the instance without any boundaries"
+			"Remove all location records from work orders so territories are ignored during assignment"
 		],
-		"correctIndex": 1,
+		"correctIndex": 0,
 		"explanation": "When territories overlap, explicit assignment criteria and priority rules prevent ambiguous routing and inconsistent dispatch decisions.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/workforce-optimization-for-field-service/c_TerritoryManagement.html"
@@ -8349,12 +8350,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 17,
 		"prompt": "Dispatchers report tasks assigned to agents outside their service area. Which work group configuration limits geographic coverage?",
 		"choices": [
-			"Which geographic areas the group can receive and execute work order tasks within",
-			"Which customer survey templates are emailed after every work order reaches Closed state",
 			"Which procurement vendor catalogs appear on the mobile app home screen for agents only",
-			"Which discovery schedules run against assets linked to the group members each night"
+			"Which discovery schedules run against assets linked to the group members each night",
+			"Which geographic areas the group can receive and execute work order tasks within",
+			"Which customer survey templates are emailed after every work order reaches Closed state"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Locations Covered limits which geographic areas a user group handles so dispatch assigns work only within the group's service coverage.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/workforce-optimization-for-field-service/setting-up-field-service-user-groups.html"
@@ -8366,12 +8367,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 18,
 		"prompt": "From Dispatcher Workspace, a dispatcher opens Assignment assistance on a work order task. Which sort option ranks agents by proximity to the task location?",
 		"choices": [
-			"Skills count without location consideration",
 			"Parts availability count",
-			"Earliest start time",
-			"Distance"
+			"Distance",
+			"Skills count without location consideration",
+			"Earliest start time"
 		],
-		"correctIndex": 3,
+		"correctIndex": 1,
 		"explanation": "Assignment assistance includes a Distance sort option that ranks agents based on how far each agent is from the work order task location.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/field-service-scheduling/assignment-assistance.html"
@@ -8384,8 +8385,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "To auto-calculate estimated travel duration using agent latitude and longitude, which capability must be active alongside geolocation tracking?",
 		"choices": [
 			"Field Service Geolocation with a supported maps integration for travel time estimates",
-			"A weekly scheduled report that compares technician seniority levels across all territories",
 			"Manual entry of travel minutes on every work order task before dispatch assignment occurs",
+			"A weekly scheduled report that compares technician seniority levels across all territories",
 			"Disabling territory membership checks so agents appear on maps by office location only"
 		],
 		"correctIndex": 0,
@@ -8400,12 +8401,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 20,
 		"prompt": "Technicians need job details, navigation, and status updates while onsite at customer locations. Which experience should the program deploy?",
 		"choices": [
-			"The Field Service Management mobile experience through Now Mobile or Agent apps",
-			"Exclusive use of the Service Desk interaction portal for phone-based ticket updates only",
 			"Exporting work orders to email attachments that technicians edit and reply with daily",
-			"Running the Dispatcher Workspace interface on technician laptops without any role changes"
+			"Running the Dispatcher Workspace interface on technician laptops without any role changes",
+			"The Field Service Management mobile experience through Now Mobile or Agent apps",
+			"Exclusive use of the Service Desk interaction portal for phone-based ticket updates only"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "FSM mobile applications provide technicians with contextual job information, navigation, and task updates directly at the customer site.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/mobile-experience-fsm.html"
@@ -8417,12 +8418,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 21,
 		"prompt": "Technicians frequently work in basements and rural areas with intermittent connectivity. Which mobile design best supports continued execution?",
 		"choices": [
+			"Requiring live VPN sessions before any work order field can be viewed or updated on mobile",
 			"Blocking task completion until technicians return to the office and use the desktop form",
 			"Disabling photo and signature capture to reduce payload size during online sessions only",
-			"Offline access to assigned work orders and task steps that sync when connectivity returns",
-			"Requiring live VPN sessions before any work order field can be viewed or updated on mobile"
+			"Offline access to assigned work orders and task steps that sync when connectivity returns"
 		],
-		"correctIndex": 2,
+		"correctIndex": 3,
 		"explanation": "Offline mobile support lets technicians continue working and capture data in low-connectivity areas, syncing updates when the device reconnects.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/mobile-experience-fsm.html"
@@ -8451,12 +8452,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 23,
 		"prompt": "Adoption testing shows technicians abandon long generic mobile forms. What configuration change best improves compliance?",
 		"choices": [
-			"Removing mandatory fields so agents can close tasks without recording parts or time worked",
 			"Disabling push notifications so technicians are not reminded about pending task updates",
 			"Role-based mobile forms with only the fields required for each job type and persona",
-			"Adding every work order and asset field to a single universal form for all technicians"
+			"Adding every work order and asset field to a single universal form for all technicians",
+			"Removing mandatory fields so agents can close tasks without recording parts or time worked"
 		],
-		"correctIndex": 2,
+		"correctIndex": 1,
 		"explanation": "Tailored mobile forms reduce friction by showing only the fields each role and job type requires during field execution.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/work-order-management/configuring-work-configs.html"
@@ -8469,9 +8470,9 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "Which metric best indicates technicians are completing field updates at the point of work rather than end-of-day batch entry?",
 		"choices": [
 			"Percentage of task status and completion updates submitted from mobile at the job site",
-			"Average number of catalog items published per quarter on the employee service portal",
 			"Count of inactive UI policies on the work order table updated more than one year ago",
-			"Total number of email notifications sent to dispatchers when tasks change state each week"
+			"Total number of email notifications sent to dispatchers when tasks change state each week",
+			"Average number of catalog items published per quarter on the employee service portal"
 		],
 		"correctIndex": 0,
 		"explanation": "A high rate of mobile updates at the point of work indicates real adoption and fresher operational visibility for dispatch and managers.",
@@ -8485,12 +8486,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 25,
 		"prompt": "A regional warehouse must replenish technician van stock based on upcoming scheduled jobs. Which parts workflow supports that planning?",
 		"choices": [
-			"Define required parts on tasks and track stockroom-to-agent transfers so inventory reflects van and warehouse levels",
 			"Disable parts requirements so agents source components outside ServiceNow without consumption records",
-			"Convert every parts request into a hardware asset retirement workflow automatically",
-			"Remove stockroom records so all parts appear available on every assignment assistance query"
+			"Define required parts on tasks and track stockroom-to-agent transfers so inventory reflects van and warehouse levels",
+			"Remove stockroom records so all parts appear available on every assignment assistance query",
+			"Convert every parts request into a hardware asset retirement workflow automatically"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"explanation": "Defining required parts on tasks lets dispatch favor stocked agents and supports warehouse replenishment based on planned field work.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/inventory-management-fsm.html"
@@ -8502,12 +8503,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 26,
 		"prompt": "After completing a repair, a technician installs a replacement component from truck stock. What should be recorded on the work order task?",
 		"choices": [
-			"The part consumption transaction so inventory levels and billing reflect usage accurately",
-			"A private chat message to the dispatcher with no update to parts or task related lists",
 			"Deletion of the original asset record without linking the new component in inventory",
+			"A private chat message to the dispatcher with no update to parts or task related lists",
+			"The part consumption transaction so inventory levels and billing reflect usage accurately",
 			"A manual journal entry in an external accounting system with no ServiceNow update"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Recording part consumption on the task keeps stock levels accurate and provides traceability for billing and future service planning.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/inventory-management-fsm.html"
@@ -8519,12 +8520,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 27,
 		"prompt": "Time worked entries on field service tasks support which operational need during implementation?",
 		"choices": [
-			"Replacing all work order states with incident priority calculations automatically",
-			"Labor tracking for costing, SLA reporting, and technician productivity measurement",
 			"Disabling geolocation updates while technicians remain checked in on mobile devices",
-			"Preventing dispatchers from viewing task schedules in the Dispatcher Workspace calendar"
+			"Preventing dispatchers from viewing task schedules in the Dispatcher Workspace calendar",
+			"Labor tracking for costing, SLA reporting, and technician productivity measurement",
+			"Replacing all work order states with incident priority calculations automatically"
 		],
-		"correctIndex": 1,
+		"correctIndex": 2,
 		"explanation": "Time worked captures labor spent on tasks, supporting cost allocation, performance reporting, and SLA compliance analysis.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/work-order-management/c_WorkOrderTasks.html"
@@ -8537,9 +8538,9 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "Incidentals configured on work orders allow field organizations to capture which type of cost?",
 		"choices": [
 			"Non-part expenses such as parking, tolls, or other reimbursable charges tied to the job",
-			"Annual software license true-up fees billed by external vendors at fiscal year end only",
+			"Internal HR compensation adjustments processed during enterprise payroll cycles only",
 			"Capital lease payments for data center hardware unrelated to customer site visits",
-			"Internal HR compensation adjustments processed during enterprise payroll cycles only"
+			"Annual software license true-up fees billed by external vendors at fiscal year end only"
 		],
 		"correctIndex": 0,
 		"explanation": "Incidentals track reimbursable non-part costs associated with field work, such as parking fees or tolls incurred during the appointment.",
@@ -8553,12 +8554,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 29,
 		"prompt": "Assignment assistance can sort agents by parts availability. Why should required parts be defined on tasks before dispatch?",
 		"choices": [
-			"Parts records convert work orders into procurement requisitions that bypass qualification",
 			"Parts definitions automatically close parent incidents when the task reaches Work in Progress",
-			"Required parts remove the need for any skill matching during Dynamic Scheduling runs",
-			"Dispatch can favor agents who already carry parts needed to complete the work order task"
+			"Dispatch can favor agents who already carry parts needed to complete the work order task",
+			"Parts records convert work orders into procurement requisitions that bypass qualification",
+			"Required parts remove the need for any skill matching during Dynamic Scheduling runs"
 		],
-		"correctIndex": 3,
+		"correctIndex": 1,
 		"explanation": "When required parts are defined, assignment assistance and dynamic scheduling can prioritize agents stocked with the components for the job.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/field-service-scheduling/assignment-assistance.html"
@@ -8570,12 +8571,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 30,
 		"prompt": "A global utility will deploy Field Service to 500 technicians across five regions over nine months. Which rollout strategy reduces cutover risk?",
 		"choices": [
-			"Import work history only after disabling qualification and dispatch for the first quarter",
 			"Phase by region with pilot validation, foundation data import, and go-live checkpoints before expanding scope",
+			"Enable every module for all regions on day one without sub-production testing or training",
 			"Defer territory and group configuration until all regions are live in production",
-			"Enable every module for all regions on day one without sub-production testing or training"
+			"Import work history only after disabling qualification and dispatch for the first quarter"
 		],
-		"correctIndex": 1,
+		"correctIndex": 0,
 		"explanation": "Phased regional rollouts with pilot validation and sequenced foundation setup reduce risk compared with big-bang deployments.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/planning-implementation-fsm.html"
@@ -8588,9 +8589,9 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "Steering committee members ask what must be validated before FSM cutover. Which readiness milestone set should the implementation lead present?",
 		"choices": [
 			"Foundation data loaded, groups and territories configured, pilot work orders executed, and training completed for each persona",
-			"Every CMDB CI class reconciled globally before any work order may be created in draft state",
+			"Discovery schedules scanning every subnet before dispatchers may open Dispatcher Workspace",
 			"All custom mobile UI pages published before locations or territories are imported into the instance",
-			"Discovery schedules scanning every subnet before dispatchers may open Dispatcher Workspace"
+			"Every CMDB CI class reconciled globally before any work order may be created in draft state"
 		],
 		"correctIndex": 0,
 		"explanation": "Cutover readiness requires validated foundation data, workforce configuration, successful pilot execution, and trained initiators, qualifiers, dispatchers, and agents.",
@@ -8605,12 +8606,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 32,
 		"prompt": "Legacy spreadsheets contain inconsistent customer, location, and asset identifiers. What migration approach best supports FSM go-live quality?",
 		"choices": [
-			"Load all records into production without test cycles to meet an accelerated launch date",
 			"Skip asset linkage so dispatch assigns tasks without configuration item or install base context",
-			"Let technicians free-text customer addresses on mobile and normalize data after the first production month",
-			"Use Guided Setup and import tools with field normalization rules, then validate geocoding and relationships before dispatch"
+			"Use Guided Setup and import tools with field normalization rules, then validate geocoding and relationships before dispatch",
+			"Load all records into production without test cycles to meet an accelerated launch date",
+			"Let technicians free-text customer addresses on mobile and normalize data after the first production month"
 		],
-		"correctIndex": 3,
+		"correctIndex": 1,
 		"explanation": "Data migration for FSM should standardize locations, customers, and assets with validation before scheduling and dispatch depend on that foundation.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/configuring-fsm-with-guided-setup.html",
@@ -8624,8 +8625,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "Cutover weekend risks include incomplete territory coverage and untested mobile offline sync. Which mitigation plan addresses those risks?",
 		"choices": [
 			"Run pilot tasks in each territory, verify offline caching on representative devices, and maintain rollback scripts for configuration changes",
-			"Disable Dispatcher Workspace until all technicians submit timesheets for two weeks post go-live",
 			"Remove qualification requirements permanently so dispatch can assign any open task immediately",
+			"Disable Dispatcher Workspace until all technicians submit timesheets for two weeks post go-live",
 			"Postpone all training until after production launch to maximize configuration time"
 		],
 		"correctIndex": 0,
@@ -8640,12 +8641,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 34,
 		"prompt": "After go-live, executives want measurable proof that FSM improved field operations. Which KPI set should the program office track first?",
 		"choices": [
-			"Total problem tasks closed without known error articles attached",
 			"First-time fix rate, schedule adherence, mean time to assign, and mobile adoption at point of work",
+			"Count of inactive catalog categories on the employee service portal homepage",
 			"Number of CMDB discovery schedules executing against cloud subnets nightly",
-			"Count of inactive catalog categories on the employee service portal homepage"
+			"Total problem tasks closed without known error articles attached"
 		],
-		"correctIndex": 1,
+		"correctIndex": 0,
 		"explanation": "Post-go-live KPIs for FSM focus on first-time fix, scheduling performance, assignment speed, and technician mobile adoption.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/monitoring-analytics-fsm.html",
@@ -8658,12 +8659,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 35,
 		"prompt": "Technicians resist new mobile workflows and dispatchers continue using spreadsheets. Which organizational change activity best supports adoption?",
 		"choices": [
-			"Role-based training, super-user champions, and phased enforcement of mobile completion requirements with feedback loops",
-			"Mandate desktop-only task closure until all agents pass a written certification exam",
 			"Remove offline support so technicians cannot update tasks without live connectivity",
-			"Disable Dispatcher Workspace features until adoption metrics reach 100 percent globally"
+			"Disable Dispatcher Workspace features until adoption metrics reach 100 percent globally",
+			"Role-based training, super-user champions, and phased enforcement of mobile completion requirements with feedback loops",
+			"Mandate desktop-only task closure until all agents pass a written certification exam"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "FSM adoption requires targeted training, field champions, and iterative feedback—not only technical configuration changes.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/planning-implementation-fsm.html"
@@ -8675,12 +8676,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 36,
 		"prompt": "The program team selects one metro area for a four-week pilot before national rollout. What should the pilot prove before expanding?",
 		"choices": [
+			"Every enterprise integration including ERP, payroll, and CMDB reconciliation for all asset classes",
 			"Complete elimination of manual dispatcher decisions across all scheduling scenarios",
 			"Full contractor onboarding for every third-party vendor in the supplier catalog",
-			"End-to-end work order creation, qualification, dispatch, mobile execution, and closure with representative job types and parts usage",
-			"Every enterprise integration including ERP, payroll, and CMDB reconciliation for all asset classes"
+			"End-to-end work order creation, qualification, dispatch, mobile execution, and closure with representative job types and parts usage"
 		],
-		"correctIndex": 2,
+		"correctIndex": 3,
 		"explanation": "Pilot phases should validate the core FSM lifecycle for representative work types before scaling configuration and training nationally.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/planning-implementation-fsm.html"
@@ -8709,12 +8710,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 38,
 		"prompt": "A greenfield FSM team must import users, locations, territories, and groups in the correct sequence. What should they use?",
 		"choices": [
-			"The HR onboarding case workflow intended for employee lifecycle requests in HRSD only",
 			"Custom discovery patterns for datacenter server classification without user group setup",
 			"Field Service Management Guided Setup to import and configure foundation data in order",
-			"A manual script bundle that bypasses all Field Service tables and ACL validation rules"
+			"A manual script bundle that bypasses all Field Service tables and ACL validation rules",
+			"The HR onboarding case workflow intended for employee lifecycle requests in HRSD only"
 		],
-		"correctIndex": 2,
+		"correctIndex": 1,
 		"explanation": "Field Service Management Guided Setup provides a sequenced task list to import and configure foundation data such as users, locations, and territories.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/configuring-fsm-with-guided-setup.html"
@@ -8727,9 +8728,9 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "During planning workshops, stakeholders map initiators, qualifiers, dispatchers, and agents to locations. Which configuration concept should anchor these discussions?",
 		"choices": [
 			"Field Service user groups with inherited roles and location coverage for each persona",
-			"Problem management root cause categories unrelated to field execution responsibilities",
 			"A single global assignment group with no location or dispatch group relationships defined",
-			"Catalog client scripts that run only when employees order laptops from the service portal"
+			"Catalog client scripts that run only when employees order laptops from the service portal",
+			"Problem management root cause categories unrelated to field execution responsibilities"
 		],
 		"correctIndex": 0,
 		"explanation": "Implementation planning should align personas to user groups with inherited roles and location coverage so qualification and dispatch paths are clear.",
@@ -8743,12 +8744,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 40,
 		"prompt": "An implementation team enables work order qualification for quality checks before dispatch. Where do they turn on Qualification is required for new requests?",
 		"choices": [
-			"Field Service > Administration > Configuration",
-			"Dispatcher Workspace > Assignment assistance sort menu",
 			"Field Service > Manager > Manage Skills form for creating parent skills only",
+			"Dispatcher Workspace > Assignment assistance sort menu",
+			"Field Service > Administration > Configuration",
 			"System Scheduler > Jobs list for the Autoclose Incidents scheduled job definition"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Administrators enable work order qualification on the Field Service Configuration page under Field Service > Administration > Configuration.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/work-order-management/configure-qualify-fsm.html"
@@ -8760,15 +8761,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 41,
 		"prompt": "Planners must document how initiators and qualifiers create work orders from templates during cutover. Which task documentation defines manual work order creation steps?",
 		"choices": [
-			"Configure SAML integration for external identity providers on the instance",
-			"Create work orders guidance under Work Order Management",
 			"Author discovery patterns for cloud middleware classification in datacenter ranges",
-			"Build employee onboarding flows in HR Service Delivery case management only"
+			"Build employee onboarding flows in HR Service Delivery case management only",
+			"Create work orders guidance under Work Order Management",
+			"Configure SAML integration for external identity providers on the instance"
 		],
-		"correctIndex": 1,
-		"explanation": "The create work orders task documentation describes how planners and qualifiers establish work orders that dispatch and agents rely on.",
+		"correctIndex": 2,
+		"explanation": "Work Order Management documentation covers creating work orders manually and from templates so planners can capture cutover procedures for initiators and qualifiers.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/field-service-management/work-order-management/create-work-orders.html"
+			"https://www.servicenow.com/docs/r/field-service-management/work-order-management/t_CreateAWorkOrder.html"
 		],
 		"domain": "Implementing Field Service Processes"
 	},
@@ -8778,9 +8779,9 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "After tasks are qualified, dispatchers assign work from Dispatcher Workspace. Which capability lets them drag unassigned tasks onto agent time slots using proximity and skills?",
 		"choices": [
 			"Drag-and-drop scheduling in Dispatcher Workspace with route and availability visibility",
-			"Manual CSV upload that replaces all assignment groups nightly without validation rules",
+			"Knowledge article publishing workflow used only for self-service search deflection metrics",
 			"Change Management emergency CAB approvals required before every task state change",
-			"Knowledge article publishing workflow used only for self-service search deflection metrics"
+			"Manual CSV upload that replaces all assignment groups nightly without validation rules"
 		],
 		"correctIndex": 0,
 		"explanation": "Dispatcher Workspace supports drag-and-drop assignment so dispatchers can place tasks on agent schedules using proximity, availability, and skill context.",
@@ -8794,12 +8795,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 43,
 		"prompt": "Technicians finish onsite work and must close tasks with completion evidence. Which process documentation covers completing and closing work order tasks?",
 		"choices": [
-			"Work order task completion procedures in Work Order Management task documentation",
 			"Hardware asset lease return procedures in IT asset management financial workflows only",
-			"Identity governance certification campaigns for privileged account review cycles only",
-			"Vulnerability scanning remediation playbooks for infrastructure security operations only"
+			"Work order task completion procedures in Work Order Management task documentation",
+			"Vulnerability scanning remediation playbooks for infrastructure security operations only",
+			"Identity governance certification campaigns for privileged account review cycles only"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"explanation": "Work Order Management task documentation covers completing and closing work order tasks with the required execution and completion details.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/work-order-management/c_WorkOrderTasks.html"
@@ -8811,12 +8812,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 44,
 		"prompt": "Monday morning dispatch must build the week's initial agent schedules from qualified tasks, then adjust routes when urgent jobs arrive same day. Which scheduling capabilities apply to each phase?",
 		"choices": [
-			"Dynamic Scheduling and the automated engine create initial assignments; intra-day optimization reorganizes the current day when disruptions occur",
-			"Manual CSV uploads replace all automated scheduling for both weekly planning and same-day changes",
 			"Appointment booking replaces Dynamic Scheduling for every repair task regardless of priority",
+			"Manual CSV uploads replace all automated scheduling for both weekly planning and same-day changes",
+			"Dynamic Scheduling and the automated engine create initial assignments; intra-day optimization reorganizes the current day when disruptions occur",
 			"Maintenance plans auto-assign agents before qualification creates any work order tasks"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Initial schedule creation uses dynamic scheduling criteria; intra-day optimization handles real-time changes when tasks are canceled, delayed, or added during the day.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/field-service-scheduling/create-dynamic-scheduling-config.html",
@@ -8829,12 +8830,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 45,
 		"prompt": "A cable provider sees last-minute appointment cancellations and new repair tasks after a storm. When should the dispatcher use intra-day optimization?",
 		"choices": [
-			"When annual territory boundaries are being redrawn for the next fiscal year",
-			"When real-time schedule changes require reorganizing assignments for the current day",
 			"When contractor onboarding forms must be approved before first dispatch",
-			"When stockroom min/max levels need recalculation for slow-moving parts"
+			"When stockroom min/max levels need recalculation for slow-moving parts",
+			"When real-time schedule changes require reorganizing assignments for the current day",
+			"When annual territory boundaries are being redrawn for the next fiscal year"
 		],
-		"correctIndex": 1,
+		"correctIndex": 2,
 		"explanation": "Intra-day optimization reorganizes schedules in real time when tasks are canceled, delayed, or new high-priority work arrives during the day.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/schedule-optimization.html"
@@ -8847,11 +8848,11 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "A technician calls out sick mid-shift and several appointments are at risk. How does the dynamic assignment engine respond?",
 		"choices": [
 			"It locks the schedule until the next business day to prevent further changes",
-			"It automatically reassigns affected tasks using ordering rules and un-assignment constraints",
+			"It removes SLA tracking from tasks assigned to the unavailable technician only",
 			"It converts all open work order tasks into catalog requests for manual review",
-			"It removes SLA tracking from tasks assigned to the unavailable technician only"
+			"It automatically reassigns affected tasks using ordering rules and un-assignment constraints"
 		],
-		"correctIndex": 1,
+		"correctIndex": 3,
 		"explanation": "Dynamic scheduling automatically reassigns tasks when agents become unavailable, using ordering rules and constraints to maintain SLA compliance.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/dynamic-scheduling.html"
@@ -8863,12 +8864,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 47,
 		"prompt": "Dynamic Scheduling returns no qualified agents for an urgent same-day gas leak task requiring a rare certification. What should the dispatcher do next?",
 		"choices": [
-			"Convert the task into a catalog request processed by the internal service desk queue",
 			"Remove skill requirements from the task so any agent may be auto-assigned immediately",
-			"Close the work order task and wait for the nightly batch scheduling job to retry matching",
-			"Use Assignment assistance or manual assignment to identify the nearest qualified agent or escalate capacity with a manager"
+			"Use Assignment assistance or manual assignment to identify the nearest qualified agent or escalate capacity with a manager",
+			"Convert the task into a catalog request processed by the internal service desk queue",
+			"Close the work order task and wait for the nightly batch scheduling job to retry matching"
 		],
-		"correctIndex": 3,
+		"correctIndex": 1,
 		"explanation": "When automated matching finds no agents, dispatchers use assignment assistance or manual overrides—and may escalate for capacity or contractor support.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/schedule-optimization.html"
@@ -8881,14 +8882,14 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "Which capabilities does the automated scheduling engine provide in Field Service Management? (Choose two.)",
 		"choices": [
 			"Auto-assign tasks using agent skills, availability, and travel constraints",
-			"Reorganize schedules in real time when tasks are canceled or delayed",
 			"Replace dispatcher workspace functions for all assignment decisions permanently",
+			"Reorganize schedules in real time when tasks are canceled or delayed",
 			"Remove territory membership checks from every scheduling run by default"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			1
+			2
 		],
 		"questionType": "multi",
 		"explanation": "The scheduling engine auto-assigns tasks and supports intra-day reorganization; it augments rather than replaces dispatcher tools and still respects territory constraints.",
@@ -8902,12 +8903,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 49,
 		"prompt": "Dispatchers need agent calendar events visible when making assignment decisions. What does dynamic assignment integrate from Workforce Optimization?",
 		"choices": [
-			"Change management blackout windows for standard catalog item approvals",
 			"Agent schedules and calendar events shown in Dispatcher Workspace",
+			"Enterprise LDAP group mappings for all internal IT service desk agents",
 			"Hardware asset depreciation schedules for stockroom replenishment planning",
-			"Enterprise LDAP group mappings for all internal IT service desk agents"
+			"Change management blackout windows for standard catalog item approvals"
 		],
-		"correctIndex": 1,
+		"correctIndex": 0,
 		"explanation": "Dynamic scheduling integrates with Workforce Optimization to display agent schedules and events on the Dispatcher Workspace calendar for informed assignments.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/dynamic-scheduling.html"
@@ -8919,12 +8920,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 50,
 		"prompt": "A utilities company performs more than 1,000 identical meter-replacement jobs monthly. How should templates standardize that volume?",
 		"choices": [
+			"Require qualifiers to manually recreate tasks and parts lists for every individual meter visit",
 			"Use incident templates instead of work orders so dispatch bypasses Field Service states",
 			"Disable template management and rely on ad hoc task creation for each customer location",
-			"Deploy work order templates with predefined tasks, part requirements, and dependencies for the recurring activity",
-			"Require qualifiers to manually recreate tasks and parts lists for every individual meter visit"
+			"Deploy work order templates with predefined tasks, part requirements, and dependencies for the recurring activity"
 		],
-		"correctIndex": 2,
+		"correctIndex": 3,
 		"explanation": "Work order templates automatically populate work orders with predefined tasks and part requirements for common field activities.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/work-order-management/c_WorkOrderTemplates.html"
@@ -8953,12 +8954,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 52,
 		"prompt": "A downstream repair task must not start until a safety inspection task closes. What should the work order template define?",
 		"choices": [
-			"A global business rule that closes the parent work order at task creation",
 			"An SLA definition that pauses when the work order enters Pending Dispatch",
 			"A catalog variable set mapped to the customer account record only",
-			"A task dependency that blocks subsequent tasks until the prerequisite completes"
+			"A task dependency that blocks subsequent tasks until the prerequisite completes",
+			"A global business rule that closes the parent work order at task creation"
 		],
-		"correctIndex": 3,
+		"correctIndex": 2,
 		"explanation": "Task dependencies in templates prevent downstream tasks from proceeding until prerequisite tasks are completed.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/work-order-management/t_CrtWOTskDpdWOTmplt.html"
@@ -8971,14 +8972,14 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "Template Management for Field Service is activated. Which components can a work order template use? (Choose two.)",
 		"choices": [
 			"Source table mapping to populate work order fields from originating records",
-			"Global LDAP synchronization rules for external contractor user accounts",
 			"Standalone work order task templates linked with filtering conditions",
-			"Automated CMDB reconciliation schedules for every configuration item class"
+			"Automated CMDB reconciliation schedules for every configuration item class",
+			"Global LDAP synchronization rules for external contractor user accounts"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			2
+			1
 		],
 		"questionType": "multi",
 		"explanation": "Template Management adds dynamic source table mapping and standalone task templates with conditions; it does not configure CMDB reconciliation or LDAP sync.",
@@ -8992,12 +8993,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 54,
 		"prompt": "An implementation requires complex prerequisite chains beyond simple sequential ordering. What template feature supports this?",
 		"choices": [
-			"Advanced task dependencies configured within the work order template",
 			"Default incident assignment rules applied to every new work order record",
-			"Catalog client scripts that run before service portal checkout completes",
-			"Hardware model normalization tables for asset discovery imports only"
+			"Advanced task dependencies configured within the work order template",
+			"Hardware model normalization tables for asset discovery imports only",
+			"Catalog client scripts that run before service portal checkout completes"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"explanation": "Work order templates can define advanced task dependencies that go beyond dependencies inherited from the parent work order alone.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/work-order-management/t_CrtWOTskDpdWOTmplt.html"
@@ -9026,12 +9027,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 56,
 		"prompt": "A parts manager needs to track van stock and warehouse inventory separately. What FSM record type should be configured?",
 		"choices": [
-			"A problem task template for recurring network outage investigations",
 			"A service offering record tied to the strategic portfolio planning workspace",
 			"A stockroom representing a physical or virtual space for parts and assets",
-			"A change model used to approve hardware refresh project milestones"
+			"A change model used to approve hardware refresh project milestones",
+			"A problem task template for recurring network outage investigations"
 		],
-		"correctIndex": 2,
+		"correctIndex": 1,
 		"explanation": "Stockrooms organize inventory items such as parts and assets in physical or virtual storage locations used during field operations.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/asset-management-for-field-service/configuring-stockrooms.html"
@@ -9044,9 +9045,9 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "Technicians in a regional crew should search parts only from designated warehouses. What configuration supports this?",
 		"choices": [
 			"Preferred stockrooms assigned to the work group for mobile part lookup",
-			"Discovery schedules that run weekly against all network device classes",
 			"Global incident assignment rules mapped to the default IT support group",
-			"Change advisory board delegates listed on every standard change template"
+			"Change advisory board delegates listed on every standard change template",
+			"Discovery schedules that run weekly against all network device classes"
 		],
 		"correctIndex": 0,
 		"explanation": "Preferred stockrooms for work groups let agents search parts from designated stockrooms using the Now Mobile Agent application.",
@@ -9060,12 +9061,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 58,
 		"prompt": "Technicians frequently return unused serial-tracked parts from jobs to the central warehouse. Which inventory process should be configured?",
 		"choices": [
-			"Return part transactions that restock the warehouse and update quantities consumed versus returned on the task",
 			"Delete the work order task so parts vanish from inventory without an audit trail",
-			"Convert returned parts into consumable catalog items ordered through the service portal",
-			"Disable stockroom records so returns are tracked only in external spreadsheets"
+			"Return part transactions that restock the warehouse and update quantities consumed versus returned on the task",
+			"Disable stockroom records so returns are tracked only in external spreadsheets",
+			"Convert returned parts into consumable catalog items ordered through the service portal"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"explanation": "Return and consumption transactions keep warehouse and van inventory accurate and provide traceability for billing and forecasting.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/Work-order-fsm.html"
@@ -9077,12 +9078,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 59,
 		"prompt": "Before repairing HVAC equipment, a technician needs prior service history for that unit. Where should they find it?",
 		"choices": [
-			"The related asset record and linked work history on the work order",
-			"The default change management risk assessment questionnaire only",
 			"The service catalog execution plan attached to the request item",
+			"The default change management risk assessment questionnaire only",
+			"The related asset record and linked work history on the work order",
 			"The problem management known error database for unrelated incidents"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Work orders store associated configuration items and assets; asset records provide install base context and prior service history.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/Work-order-fsm.html"
@@ -9095,9 +9096,9 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "Regulatory audits require proof that safety steps were completed before closing refrigeration repairs. Which questionnaire type fits?",
 		"choices": [
 			"Smart Assessment questionnaires configured as mandatory before task closure",
-			"Standard incident survey templates sent after password reset requests",
+			"Employee onboarding checklists managed in the HR service delivery workspace",
 			"Change management risk calculators attached to normal change records",
-			"Employee onboarding checklists managed in the HR service delivery workspace"
+			"Standard incident survey templates sent after password reset requests"
 		],
 		"correctIndex": 0,
 		"explanation": "Smart Assessment questionnaires capture structured safety, inspection, and compliance data and can be mandatory before a task closes.",
@@ -9111,15 +9112,16 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 61,
 		"prompt": "An administrator associates a survey question set with a work order task type. When does the agent see the questionnaire?",
 		"choices": [
-			"After every change request linked to the account reaches the Implement state",
 			"Immediately upon login to the service portal before requesting service",
-			"Only after the work order has been closed for at least seven days",
-			"When configured trigger conditions are met on the assigned task form"
+			"When configured trigger conditions are met on the assigned task form",
+			"After every change request linked to the account reaches the Implement state",
+			"Only after the work order has been closed for at least seven days"
 		],
-		"correctIndex": 3,
-		"explanation": "Survey-based questionnaires become available on the task form when the configured trigger conditions for that work order task are satisfied.",
+		"correctIndex": 1,
+		"explanation": "Questionnaires associated with work order task types appear when the configured trigger conditions on the task are met, so agents complete required questions during the work.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/field-service-management/survey-based-questionnaires.html"
+			"https://www.servicenow.com/docs/r/field-service-management/work-order-management/create-questionnaire-for-work-order.html",
+			"https://www.servicenow.com/docs/r/field-service-management/smart-assessment-questionnaire.html"
 		],
 		"domain": "Implementing Field Service Processes"
 	},
@@ -9129,8 +9131,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "A dispatch director wants one place to manage skills, schedules, and routing for all field teams. Which application supports this?",
 		"choices": [
 			"Workforce Optimization for Field Service",
-			"Strategic Portfolio Management for project milestone tracking",
 			"Software Asset Management for license reconciliation reporting",
+			"Strategic Portfolio Management for project milestone tracking",
 			"Security Operations for vulnerability response orchestration"
 		],
 		"correctIndex": 0,
@@ -9145,12 +9147,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 63,
 		"prompt": "Before enabling automated assignment, which baseline records should the implementation team configure?",
 		"choices": [
-			"Catalog categories, record producers, and order guide variable sets",
 			"Users, locations, territories, and related foundational workforce data",
+			"Change models, blackout schedules, and CAB delegate assignment groups",
 			"Discovery credentials, MID Server clusters, and identification rules",
-			"Change models, blackout schedules, and CAB delegate assignment groups"
+			"Catalog categories, record producers, and order guide variable sets"
 		],
-		"correctIndex": 1,
+		"correctIndex": 0,
 		"explanation": "Workforce setup involves configuring users, locations, territories, and other foundational data required for scheduling and dispatch.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/workforce-optimization-for-field-service/setting-up-workforce.html"
@@ -9162,12 +9164,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 64,
 		"prompt": "Technicians in one territory are consistently overbooked while nearby teams have open capacity. Which feature addresses this?",
 		"choices": [
-			"Capacity and Reservations Management with reservation rules by task attributes",
-			"Knowledge subscription notifications for article authors in the region",
 			"Hardware asset lifecycle stages for retired equipment disposal tracking",
-			"Event management alert correlation rules for monitoring tool integrations"
+			"Event management alert correlation rules for monitoring tool integrations",
+			"Capacity and Reservations Management with reservation rules by task attributes",
+			"Knowledge subscription notifications for article authors in the region"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Capacity and Reservations Management assigns work within defined capacity limits using reservation rules for priority, work type, and other task attributes.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/capacity-management.html"
@@ -9179,12 +9181,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 65,
 		"prompt": "A facilities team must run inspections and maintenance on recurring intervals. Which FSM application supports this?",
 		"choices": [
+			"Problem Management for documenting known error database articles only",
 			"Service Portfolio Management for demand and capacity financial planning",
 			"Governance, Risk, and Compliance for policy attestation campaigns",
-			"Planned Work Management for recurring maintenance, inspections, and audits",
-			"Problem Management for documenting known error database articles only"
+			"Planned Work Management for recurring maintenance, inspections, and audits"
 		],
-		"correctIndex": 2,
+		"correctIndex": 3,
 		"explanation": "Planned Work Management creates and manages planned work activities with recurring schedules such as maintenance and inspections.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/planned-work-management.html"
@@ -9213,12 +9215,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 67,
 		"prompt": "Operations wants visibility into parts consumed, transferred, and adjusted across field teams. Which FSM process covers this?",
 		"choices": [
-			"Software reclamation workflows for unused SaaS license harvesting",
 			"Inventory management including transfers, consumption, adjustments, and replenishment",
+			"Incident matching rules that deduplicate alerts from monitoring integrations",
 			"Employee document generation for offer letters in HR service delivery",
-			"Incident matching rules that deduplicate alerts from monitoring integrations"
+			"Software reclamation workflows for unused SaaS license harvesting"
 		],
-		"correctIndex": 1,
+		"correctIndex": 0,
 		"explanation": "FSM inventory management tracks parts and supplies through transfers, consumption, adjustments, and related stockroom operations.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/inventory-management-fsm.html"
@@ -9230,12 +9232,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 68,
 		"prompt": "A dispatcher reserves a replacement motor from a central warehouse for tomorrow's repair task. What is this process called?",
 		"choices": [
-			"Sourcing a part by reserving and obtaining the asset through stockroom transfer",
-			"Normalizing a configuration item class in the CMDB reconciliation workspace",
 			"Publishing a knowledge article version to the self-service portal catalog",
-			"Escalating a problem record to the major incident management bridge"
+			"Escalating a problem record to the major incident management bridge",
+			"Sourcing a part by reserving and obtaining the asset through stockroom transfer",
+			"Normalizing a configuration item class in the CMDB reconciliation workspace"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Sourcing reserves and obtains a part described in a part requirement by transferring it from one stockroom to another or to the agent.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/work-order-management/c_SourceParts.html"
@@ -9247,14 +9249,14 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 69,
 		"prompt": "Which activities are included in Field Service Management inventory operations? (Choose two.)",
 		"choices": [
+			"Transferring parts between company stockrooms using transfer orders",
 			"Running enterprise-wide password expiration notifications for staff",
 			"Publishing change advisory board minutes to external vendor portals",
-			"Recording part consumption when agents complete field repairs",
-			"Transferring parts between company stockrooms using transfer orders"
+			"Recording part consumption when agents complete field repairs"
 		],
-		"correctIndex": 2,
+		"correctIndex": 0,
 		"correctIndexes": [
-			2,
+			0,
 			3
 		],
 		"questionType": "multi",
@@ -9269,12 +9271,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 70,
 		"prompt": "Parts must move from a regional warehouse to a technician's van before a site visit. What record should be created?",
 		"choices": [
-			"An incident task assigned to the network operations center queue",
 			"A problem record linked to a known error for the asset model class",
 			"A transfer order to move parts between stockrooms or to the receiving agent",
-			"A change request to document the hardware refresh approval chain"
+			"A change request to document the hardware refresh approval chain",
+			"An incident task assigned to the network operations center queue"
 		],
-		"correctIndex": 2,
+		"correctIndex": 1,
 		"explanation": "Transfer orders move required parts between company stockrooms or to a location where an agent can receive them.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/work-order-management/c_TransferOrders.html"
@@ -9287,9 +9289,9 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "A task requires a specialized part already stocked on a qualified technician's route. Which workflow should dispatch use?",
 		"choices": [
 			"Source parts and assign the task to an agent who has or will receive the part",
-			"Convert the work order task into a catalog request for warehouse staff",
 			"Close the work order and create a new incident for parts procurement review",
-			"Disable part requirements on the task and proceed with manual assignment"
+			"Disable part requirements on the task and proceed with manual assignment",
+			"Convert the work order task into a catalog request for warehouse staff"
 		],
 		"correctIndex": 0,
 		"explanation": "The source-parts workflow reserves parts and can assign the task to agents who already have required inventory or will receive it.",
@@ -9303,12 +9305,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 72,
 		"prompt": "Dispatch leadership wants technicians to complete more jobs per day with less driving. Which capability should be enabled?",
 		"choices": [
-			"Route optimization that reorders tasks to reduce travel time between stops",
 			"Incident matching that merges duplicate alerts from monitoring tools",
-			"Knowledge harvesting that drafts articles from resolved problem records",
-			"Software normalization that maps publisher titles to product models"
+			"Route optimization that reorders tasks to reduce travel time between stops",
+			"Software normalization that maps publisher titles to product models",
+			"Knowledge harvesting that drafts articles from resolved problem records"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"explanation": "Route optimization strategically reorders assigned tasks to reduce travel time and improve daily completion capacity.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/field-service-scheduling/configuring-route-optimization.html"
@@ -9320,12 +9322,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 73,
 		"prompt": "An agent needs to collect several reserved parts before the first customer appointment. Where do they view pending pickups?",
 		"choices": [
-			"A consolidated pickup list grouped by stockroom showing assets ready to collect",
-			"The change schedule calendar filtered by blackout and maintenance windows",
 			"The service catalog homepage sorted by most requested item categories",
+			"The change schedule calendar filtered by blackout and maintenance windows",
+			"A consolidated pickup list grouped by stockroom showing assets ready to collect",
 			"The CMDB workspace dashboard listing unidentified configuration items"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Agents view a consolidated list grouped by stockroom of assets waiting to be picked up before heading to job sites.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/work-order-management/t_PickUpAnAsset.html"
@@ -9337,12 +9339,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 74,
 		"prompt": "After a job, a technician returns unused parts from a personal van stock to the depot. Which feature supports this?",
 		"choices": [
-			"Discovery status dashboards showing probe success rates by subnet range",
-			"Drop-off lists used to return items from a personal stockroom to a company stockroom",
 			"Vendor risk assessment surveys for third-party software procurement",
-			"Employee relations case templates for workplace investigation intake"
+			"Employee relations case templates for workplace investigation intake",
+			"Drop-off lists used to return items from a personal stockroom to a company stockroom",
+			"Discovery status dashboards showing probe success rates by subnet range"
 		],
-		"correctIndex": 1,
+		"correctIndex": 2,
 		"explanation": "Drop-off lists let agents return items held in a personal stockroom to a designated company stockroom after field work.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/work-order-management/c_UseDropOffLists.html"
@@ -9355,9 +9357,9 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "A dispatcher must rebalance today's schedule and monitor customer commitments in one interface. Which workspace should they use?",
 		"choices": [
 			"Dispatcher Workspace for managing field teams, schedules, and customer experience",
-			"Agent Workspace for IT service management incident triage and resolution",
+			"Security Operations Workspace for vulnerability response case management",
 			"Strategic Portfolio Planning Workspace for demand and capacity forecasting",
-			"Security Operations Workspace for vulnerability response case management"
+			"Agent Workspace for IT service management incident triage and resolution"
 		],
 		"correctIndex": 0,
 		"explanation": "Dispatcher Workspace lets dispatchers manage field teams, scheduling operations, and customer experience outcomes in real time.",
@@ -9371,12 +9373,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 76,
 		"prompt": "Operations leadership wants live visibility into agent locations and open work order statuses. Which tool provides this?",
 		"choices": [
-			"The HR case management dashboard for employee relations intake volume",
 			"The change management schedule console for blackout window enforcement",
-			"The service catalog manager reporting on item popularity by department",
-			"The Dispatcher dashboard showing work orders, schedules, and agent locations"
+			"The Dispatcher dashboard showing work orders, schedules, and agent locations",
+			"The HR case management dashboard for employee relations intake volume",
+			"The service catalog manager reporting on item popularity by department"
 		],
-		"correctIndex": 3,
+		"correctIndex": 1,
 		"explanation": "The Dispatcher dashboard provides real-time visibility into work orders, schedules, agent locations, and task statuses.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/dispatcher-activities.html"
@@ -9389,8 +9391,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "Customers should choose installation windows that align with technician availability. Which FSM feature enables this?",
 		"choices": [
 			"Appointment booking to configure, manage, and create customer service appointments",
-			"Event management alert grouping to reduce duplicate monitoring notifications",
 			"Software reclamation to identify unused licenses across SaaS subscriptions",
+			"Event management alert grouping to reduce duplicate monitoring notifications",
 			"Domain separation policy enforcement for multi-tenant instance isolation"
 		],
 		"correctIndex": 0,
@@ -9405,12 +9407,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 78,
 		"prompt": "Several technicians have gaps in their afternoon schedules. How can dispatch improve utilization without manual reassignment?",
 		"choices": [
-			"Discovery status jobs that refresh configuration item serial numbers nightly",
 			"Intelligent Task Recommendation suggesting tasks agents can self-assign from mobile",
+			"Problem management root cause analysis workshops scheduled each Friday",
 			"Change management standard templates auto-approved for low-risk requests",
-			"Problem management root cause analysis workshops scheduled each Friday"
+			"Discovery status jobs that refresh configuration item serial numbers nightly"
 		],
-		"correctIndex": 1,
+		"correctIndex": 0,
 		"explanation": "Intelligent Task Recommendation suggests tasks to fill schedule gaps; agents can view and self-assign recommended tasks in the Now Agent mobile app.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/fsm-task-recommendation.html"
@@ -9423,9 +9425,9 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "Regional managers need to compare demand against available technician capacity by territory. Which console supports this?",
 		"choices": [
 			"Capacity Console with real-time resource utilization across territories",
-			"Knowledge Management homepage filtered by article owner and category",
+			"Performance Analytics data collector configuration for indicator sources",
 			"Hardware asset lifecycle dashboard for retired equipment disposal",
-			"Performance Analytics data collector configuration for indicator sources"
+			"Knowledge Management homepage filtered by article owner and category"
 		],
 		"correctIndex": 0,
 		"explanation": "The Capacity Console provides real-time insights into resource utilization to optimize capacity usage by territory.",
@@ -9440,14 +9442,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "Major incidents require onsite technician response but ITSM agents create incidents first. How should FSM integrate with Incident Management for escalation?",
 		"choices": [
 			"Generate work orders from qualifying incidents so field tasks inherit context, assets, and customer location data",
-			"Close incidents automatically when any draft work order is saved in Awaiting Qualification state",
 			"Disable work order creation from incidents so dispatch uses only ad hoc spreadsheet uploads",
+			"Close incidents automatically when any draft work order is saved in Awaiting Qualification state",
 			"Convert every incident to a catalog request item without linking field tasks or assets"
 		],
 		"correctIndex": 0,
 		"explanation": "Creating work orders from incidents connects ITSM response to field execution while preserving customer, asset, and location context.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/field-service-management/work-order-management/create-work-orders.html"
+			"https://www.servicenow.com/docs/r/field-service-management/work-order-management/t_CreateAWorkOrder.html",
+			"https://www.servicenow.com/docs/r/field-service-management/Work-order-fsm.html"
 		],
 		"domain": "Implementing Related Processes"
 	},
@@ -9456,12 +9459,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 81,
 		"prompt": "Installed equipment under warranty must trigger preventive maintenance when asset lifecycle stages change. Which integration supports that outcome?",
 		"choices": [
-			"Route lifecycle updates only through hardware procurement catalogs without field tasks",
 			"Link work orders to asset records and maintenance plans driven by asset lifecycle and install base data",
+			"Retire assets automatically whenever a work order task reaches Work in Progress state",
 			"Disable asset fields on work orders so technicians enter serial numbers manually on paper forms",
-			"Retire assets automatically whenever a work order task reaches Work in Progress state"
+			"Route lifecycle updates only through hardware procurement catalogs without field tasks"
 		],
-		"correctIndex": 1,
+		"correctIndex": 0,
 		"explanation": "Asset and equipment records provide install base context; maintenance plans automate recurring field work tied to asset lifecycle.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/planned-work-management.html",
@@ -9474,12 +9477,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 82,
 		"prompt": "Third-party HVAC contractors must perform work only when their safety certifications are current. How should FSM govern contractor access?",
 		"choices": [
-			"Onboard contractor users with required skills, expiration tracking, and work group membership scoped to approved territories",
-			"Grant every contractor the admin role so scheduling bypasses skill and certification checks",
 			"Store contractor certificates in email attachments without linking skills to assignment rules",
-			"Assign contractors to dispatch groups without work groups so they cannot receive tasks"
+			"Assign contractors to dispatch groups without work groups so they cannot receive tasks",
+			"Onboard contractor users with required skills, expiration tracking, and work group membership scoped to approved territories",
+			"Grant every contractor the admin role so scheduling bypasses skill and certification checks"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Contractor onboarding should align user records, skills, certifications, and group membership so dispatch assigns only qualified external resources.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/workforce-optimization-for-field-service/field-service-manager-agent-skills.html",
@@ -9492,12 +9495,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 83,
 		"prompt": "Union rules require honoring technician PTO and shift calendars before auto-assignment runs. Which Workforce Optimization capability feeds scheduling constraints?",
 		"choices": [
+			"Global incident assignment rules that ignore agent calendars during peak demand weeks",
 			"Discovery status jobs refreshing serial numbers on configuration items each night",
 			"Catalog checkout workflows enforcing two-step approval on employee laptop orders",
-			"Agent schedules, calendar events, and availability windows integrated with Dynamic Scheduling",
-			"Global incident assignment rules that ignore agent calendars during peak demand weeks"
+			"Agent schedules, calendar events, and availability windows integrated with Dynamic Scheduling"
 		],
-		"correctIndex": 2,
+		"correctIndex": 3,
 		"explanation": "Dynamic scheduling integrates agent schedules and calendar events so assignments respect availability, PTO, and shift boundaries.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/dynamic-scheduling.html",
@@ -9528,12 +9531,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 85,
 		"prompt": "A facilities team wants HVAC inspections generated automatically every quarter. What should they configure?",
 		"choices": [
-			"A standard change model requiring CAB approval for every inspection visit",
 			"A catalog order guide that replaces work orders with request items only",
 			"A maintenance plan that creates recurring work orders on the defined schedule",
-			"A one-time incident template manually opened by dispatch each quarter"
+			"A one-time incident template manually opened by dispatch each quarter",
+			"A standard change model requiring CAB approval for every inspection visit"
 		],
-		"correctIndex": 2,
+		"correctIndex": 1,
 		"explanation": "Maintenance plans automate periodic field work creation, supporting recurring preventive service on a defined schedule.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/planned-work-management.html"
@@ -9546,9 +9549,9 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "Leadership wants to measure whether technicians resolve issues without a return trip. Which KPI should they track?",
 		"choices": [
 			"First-time fix rate for work orders completed on the initial appointment",
-			"Number of CMDB discovery schedules running against cloud subnets",
 			"Average password reset completion time for the internal service desk",
-			"Count of inactive catalog categories in the employee service portal"
+			"Count of inactive catalog categories in the employee service portal",
+			"Number of CMDB discovery schedules running against cloud subnets"
 		],
 		"correctIndex": 0,
 		"explanation": "First-time fix rate measures whether field issues are resolved during the initial visit without requiring a repeat trip.",
@@ -9562,12 +9565,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 87,
 		"prompt": "After a field visit, the customer should receive updates during the appointment and provide feedback afterward. Which feature supports this?",
 		"choices": [
-			"Customer Experience with automated notifications and a post-completion survey link",
 			"Problem Management with known error articles attached to every work order",
-			"Change Management with blackout schedules blocking all field work updates",
-			"Software Asset Management with reclamation rules for unused application licenses"
+			"Customer Experience with automated notifications and a post-completion survey link",
+			"Software Asset Management with reclamation rules for unused application licenses",
+			"Change Management with blackout schedules blocking all field work updates"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"explanation": "Customer Experience sends automated email or text updates during service and provides a survey link after work completes to gather agent feedback.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/customer-experience.html"
@@ -9579,12 +9582,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 88,
 		"prompt": "Technicians need quick answers about procedures while on site using the Now Agent mobile app. Which capability helps?",
 		"choices": [
-			"Virtual Agent for Field Service providing conversational responses to work queries",
-			"Discovery status jobs refreshing serial numbers on network device records",
 			"Change risk calculators scoring normal changes before CAB review meetings",
+			"Discovery status jobs refreshing serial numbers on network device records",
+			"Virtual Agent for Field Service providing conversational responses to work queries",
 			"Incident matching rules merging duplicate alerts from monitoring integrations"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Virtual Agent for Field Service lets agents get quick answers to work-related queries through the Now Agent mobile application.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/virtual-agent-fsm.html"
@@ -9596,12 +9599,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 89,
 		"prompt": "Technicians work in areas with unreliable connectivity and must update tasks offline. What should administrators configure?",
 		"choices": [
-			"Real-time video streaming requirements for every work order task closure",
-			"Scheduled offline caching to download required records in the background automatically",
 			"Desktop-only work order forms that disable all field data capture on mobile",
-			"Forced VPN reconnect intervals that block mobile sync until authentication completes"
+			"Forced VPN reconnect intervals that block mobile sync until authentication completes",
+			"Scheduled offline caching to download required records in the background automatically",
+			"Real-time video streaming requirements for every work order task closure"
 		],
-		"correctIndex": 1,
+		"correctIndex": 2,
 		"explanation": "Scheduled offline caching configures background download of required data so agents can continue working when connectivity is limited.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/field-service-management/mobile-experience-for-field-service-management-glide-family/configure-scheduled-offline-caching.html"
