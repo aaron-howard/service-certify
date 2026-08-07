@@ -30479,12 +30479,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 0,
 		"prompt": "During executive portfolio planning, the CFO prioritizes measurable ROI within two fiscal quarters while the CIO emphasizes platform consolidation, which approach best aligns both C-Suite needs when selecting an initial ServiceNow capability set?",
 		"choices": [
-			"Defer executive reporting until all integrations are complete regardless of timeline pressure",
 			"Limit the program to technical upgrades without linking deliverables to financial metrics",
-			"Lead with high-visibility outcomes tied to cost avoidance and phased consolidation on a shared data model",
-			"Deploy every licensed product simultaneously to maximize subscription utilization in quarter one"
+			"Deploy every licensed product simultaneously to maximize subscription utilization in quarter one",
+			"Defer executive reporting until all integrations are complete regardless of timeline pressure",
+			"Lead with high-visibility outcomes tied to cost avoidance and phased consolidation on a shared data model"
 		],
-		"correctIndex": 2,
+		"correctIndex": 3,
 		"explanation": "Platform owners balance executive financial expectations with technical consolidation by sequencing capabilities that demonstrate ROI early while building toward a unified platform vision.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
@@ -30497,8 +30497,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "For enterprise analytics strategy, sponsors question whether ServiceNow can support enterprise analytics, how should the platform owner connect the platform strategy to the overall business intelligence strategy?",
 		"choices": [
 			"Position ServiceNow as a system of action that feeds trusted operational data into the enterprise BI layer",
-			"Replace the corporate data warehouse entirely with ServiceNow reporting widgets",
 			"Isolate ServiceNow analytics from BI tools to prevent duplicate dashboards",
+			"Replace the corporate data warehouse entirely with ServiceNow reporting widgets",
 			"Limit metrics to IT-only views without sharing data with finance or operations"
 		],
 		"correctIndex": 0,
@@ -30554,14 +30554,14 @@ export const DEV_PRACTICE_QUESTIONS = [
 	{
 		"trackCode": "CPOE",
 		"order": 3,
-		"prompt": "A regional agency documents chronic duplicate workflows across HR, IT, and facilities. Given this case study, what is the first step in creating a ServiceNow platform strategy to address the problem?",
+		"prompt": "A regional agency documents chronic duplicate workflows across HR, IT, and facilities. What is the first step in creating a ServiceNow platform strategy to address the problem?",
 		"choices": [
-			"Facilitate cross-functional discovery to map shared processes, pain points, and desired outcomes",
-			"Postpone strategy work until every legacy system is fully decommissioned",
 			"Purchase additional product SKUs before validating common workflow patterns",
-			"Mandate a single application team to rebuild all processes without stakeholder input"
+			"Mandate a single application team to rebuild all processes without stakeholder input",
+			"Facilitate cross-functional discovery to map shared processes, pain points, and desired outcomes",
+			"Postpone strategy work until every legacy system is fully decommissioned"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Strategy starts with understanding organizational pain and aligning stakeholders on shared outcomes before committing to platform capabilities or sequencing.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
@@ -30574,15 +30574,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"questionType": "multi",
 		"prompt": "When adoption risk emerges, low adoption threatens a major ServiceNow rollout, which organizational change management orchestrations should the platform owner prioritize? (Choose two.)",
 		"choices": [
-			"Executive sponsorship with visible communication of business value",
 			"Role-based enablement aligned to new ways of working",
-			"Disabling legacy tools without transition plans or training",
-			"Skipping feedback loops to accelerate go-live dates"
+			"Skipping feedback loops to accelerate go-live dates",
+			"Executive sponsorship with visible communication of business value",
+			"Disabling legacy tools without transition plans or training"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			1
+			2
 		],
 		"explanation": "Adoption requires visible sponsorship and targeted enablement; removing legacy access without support or ignoring feedback undermines OCM goals.",
 		"sourceUrls": [
@@ -30596,8 +30596,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "During a platform strategy workshop, leaders debate faster time to market versus deeper process standardization. Which option best meets C-Suite needs when resources are constrained?",
 		"choices": [
 			"Deliver a thin vertical slice that proves value quickly, then expand standardization in later waves",
-			"Delay all releases until every business unit agrees on identical process models",
 			"Fund parallel full-scale builds for every department without shared governance",
+			"Delay all releases until every business unit agrees on identical process models",
 			"Reduce scope to configuration-only changes with no executive-facing outcomes"
 		],
 		"correctIndex": 0,
@@ -30612,12 +30612,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 6,
 		"prompt": "An executive committee asks whether the next platform wave should prioritize HR, ITSM, or Customer Service workflows. Which strategy artifact should the expert platform owner present first?",
 		"choices": [
-			"A list of available plugins sorted alphabetically by product family",
 			"A value-based roadmap comparing business outcomes, dependency readiness, risk reduction, and measurable benefits by wave",
+			"A technical backlog exported without sponsor outcomes or investment assumptions",
 			"A recommendation to launch every product at once so no department feels delayed",
-			"A technical backlog exported without sponsor outcomes or investment assumptions"
+			"A list of available plugins sorted alphabetically by product family"
 		],
-		"correctIndex": 1,
+		"correctIndex": 0,
 		"explanation": "Expert platform strategy frames portfolio sequencing around outcomes, dependencies, risk, and benefit measures rather than product availability or political pressure.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
@@ -30672,12 +30672,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 8,
 		"prompt": "During TCO approval review, iT and business units disagree on platform priorities, what persuasion approach should the platform owner use with the C-Suite?",
 		"choices": [
+			"Frame options using shared enterprise outcomes, trade-offs, and evidence from comparable use cases",
 			"Recommend pausing the program until unanimous agreement is reached",
 			"Defer all decisions to the loudest functional leader in the room",
-			"Present only technical architecture diagrams without business impact context",
-			"Frame options using shared enterprise outcomes, trade-offs, and evidence from comparable use cases"
+			"Present only technical architecture diagrams without business impact context"
 		],
-		"correctIndex": 3,
+		"correctIndex": 0,
 		"explanation": "Executive persuasion relies on outcome-based framing, explicit trade-offs, and credible examples rather than technical detail alone or indefinite delay.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
@@ -30687,7 +30687,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 	{
 		"trackCode": "CPOE",
 		"order": 9,
-		"prompt": "A multinational firm must sequence HR, ITSM, and security capabilities with shared identity data. Given this case study, which implementation sequence best accounts for dependencies and ROI?",
+		"prompt": "A multinational firm must sequence HR, ITSM, and security capabilities with shared identity data. Which implementation sequence best accounts for dependencies and ROI?",
 		"choices": [
 			"Establish foundational data and ITSM core, then layer HR and security workflows that consume trusted records",
 			"Launch all three domains in parallel without shared master data governance",
@@ -30706,12 +30706,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 10,
 		"prompt": "During annual planning, the CEO asks how ServiceNow supports digital transformation. Which message should the platform owner emphasize in the strategy narrative?",
 		"choices": [
-			"The platform unifies workflows, data, and experiences to accelerate innovation at enterprise scale",
-			"The platform replaces all SaaS contracts with a single user interface skin",
 			"Success depends solely on increasing the number of custom applications built per quarter",
+			"The platform replaces all SaaS contracts with a single user interface skin",
+			"The platform unifies workflows, data, and experiences to accelerate innovation at enterprise scale",
 			"Transformation is limited to IT ticket deflection without business process change"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Digital transformation strategy highlights unified workflows and experiences that scale innovation—not superficial UI changes or narrow IT metrics.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
@@ -30724,15 +30724,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"questionType": "multi",
 		"prompt": "When customizations block upgrades, siloed demand intake across departments, which elements belong in a documented ServiceNow platform strategy? (Choose two.)",
 		"choices": [
-			"A fixed list of admin UI themes for each business unit",
-			"Current-state pain points and stakeholder map",
 			"Detailed script includes for every planned customization",
-			"Target outcomes and guiding principles for platform use"
+			"Target outcomes and guiding principles for platform use",
+			"Current-state pain points and stakeholder map",
+			"A fixed list of admin UI themes for each business unit"
 		],
 		"correctIndex": 1,
 		"correctIndexes": [
 			1,
-			3
+			2
 		],
 		"explanation": "Strategy documents capture organizational context, pain, outcomes, and principles; low-level technical artifacts belong in delivery plans, not the strategy itself.",
 		"sourceUrls": [
@@ -30746,9 +30746,9 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "Comparing delivery options with different cost, resource, and timeline profiles, how should the platform owner recommend a path to the C-Suite?",
 		"choices": [
 			"Present scenarios with explicit trade-offs, risks, and expected value tied to strategic priorities",
-			"Recommend the lowest license tier regardless of capability gaps",
+			"Default to the vendor's generic reference architecture without local context",
 			"Select the option requiring the fewest meetings without analyzing outcomes",
-			"Default to the vendor's generic reference architecture without local context"
+			"Recommend the lowest license tier regardless of capability gaps"
 		],
 		"correctIndex": 0,
 		"explanation": "Executive decisions require transparent trade-offs linking cost, resources, timing, and strategic alignment—not shortcuts based on price or convenience alone.",
@@ -30800,8 +30800,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "Business intelligence leaders need ServiceNow operational data for enterprise dashboards. What integration principle should the platform strategy articulate?",
 		"choices": [
 			"Publish trusted, governed datasets through agreed interfaces rather than ad hoc exports",
-			"Block all external BI access to preserve a single ServiceNow dashboard",
 			"Duplicate every transaction into spreadsheets maintained by each team",
+			"Block all external BI access to preserve a single ServiceNow dashboard",
 			"Defer data sharing until all analytics are native to ServiceNow only"
 		],
 		"correctIndex": 0,
@@ -30814,14 +30814,14 @@ export const DEV_PRACTICE_QUESTIONS = [
 	{
 		"trackCode": "CPOE",
 		"order": 15,
-		"prompt": "A healthcare organization cites clinician resistance after a failed portal rollout. Given this case study, which OCM orchestration should the platform owner lead before the next wave?",
+		"prompt": "A healthcare organization cites clinician resistance after a failed portal rollout. Which OCM orchestration should the platform owner lead before the next wave?",
 		"choices": [
-			"Postpone user involvement until development completes all custom modules",
 			"Co-design sessions with affected roles to align workflows, training, and success measures",
+			"Re-launch identical workflows with a new logo and color scheme only",
 			"Mandate usage through policy enforcement without enablement support",
-			"Re-launch identical workflows with a new logo and color scheme only"
+			"Postpone user involvement until development completes all custom modules"
 		],
-		"correctIndex": 1,
+		"correctIndex": 0,
 		"explanation": "Recovery from adoption failure requires collaborative redesign and enablement so users see how the platform improves their work.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
@@ -30833,12 +30833,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 16,
 		"prompt": "The CFO requires proof of value before approving year-two funding. Which sponsorship tactic best demonstrates business value?",
 		"choices": [
-			"Present outcome dashboards tied to baseline metrics agreed with sponsors at program start",
-			"Share internal sprint velocity charts without linking to financial impact",
 			"Highlight the number of stories closed regardless of business adoption",
-			"Wait until all domains are live before reporting any results"
+			"Wait until all domains are live before reporting any results",
+			"Present outcome dashboards tied to baseline metrics agreed with sponsors at program start",
+			"Share internal sprint velocity charts without linking to financial impact"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Sponsors validate continued investment through outcome metrics anchored to agreed baselines—not activity counts or delayed reporting.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
@@ -30895,14 +30895,14 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "A board sponsor challenges the ServiceNow strategy because prior programs delivered features without measurable adoption. Which strategy controls should the platform owner introduce? (Choose two.)",
 		"choices": [
 			"Outcome baselines and target KPIs approved before funding each roadmap increment",
-			"Executive review cadence that compares adoption, value realization, and unresolved risks",
 			"Delivery status reports that count completed stories without linking to business value",
+			"Executive review cadence that compares adoption, value realization, and unresolved risks",
 			"Program closure criteria based only on whether configuration reached production"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			1
+			2
 		],
 		"explanation": "Strategy governance needs agreed baselines, value targets, and recurring executive review so delivery is measured by adoption and outcomes, not only completed scope.",
 		"sourceUrls": [
@@ -30916,15 +30916,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"questionType": "multi",
 		"prompt": "Given a scenario planning a platform vision for a federated enterprise, which outcomes should appear in the strategy document? (Choose two.)",
 		"choices": [
-			"Maximum number of isolated custom applications per department",
 			"Elimination of all governance boards to speed decisions",
+			"Shared data definitions that reduce reconciliation effort",
 			"Consistent employee and customer experiences across business units",
-			"Shared data definitions that reduce reconciliation effort"
+			"Maximum number of isolated custom applications per department"
 		],
-		"correctIndex": 2,
+		"correctIndex": 1,
 		"correctIndexes": [
-			2,
-			3
+			1,
+			2
 		],
 		"explanation": "Federated enterprises benefit from unified experiences and shared data standards; fragmentation and absent governance undermine platform strategy.",
 		"sourceUrls": [
@@ -30935,14 +30935,14 @@ export const DEV_PRACTICE_QUESTIONS = [
 	{
 		"trackCode": "CPOE",
 		"order": 20,
-		"prompt": "The CIO asks how platform strategy aligns with corporate strategy during an annual planning cycle. Given this scenario, what should the platform owner present first?",
+		"prompt": "The CIO asks how platform strategy aligns with corporate strategy during an annual planning cycle. What should the platform owner present first?",
 		"choices": [
+			"Technical debt items with no linkage to business priorities",
 			"A mapping of platform initiatives to enterprise strategic pillars and measurable contributions",
 			"A catalog of every plugin installed on the production instance",
-			"A chronological list of past incidents without forward-looking plans",
-			"Technical debt items with no linkage to business priorities"
+			"A chronological list of past incidents without forward-looking plans"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"explanation": "Corporate alignment starts by showing how platform investments advance enterprise strategic goals with measurable impact.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
@@ -31015,9 +31015,9 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "Operations leaders doubt platform ROI midway through a multi-year program. Which sponsorship step should the platform owner revisit?",
 		"choices": [
 			"Reconfirm baseline metrics and communicate progress against agreed success criteria",
-			"Increase custom development scope without measuring outcomes",
 			"Remove executive sponsors to reduce meeting overhead",
-			"Stop publishing metrics until the program reaches full maturity"
+			"Stop publishing metrics until the program reaches full maturity",
+			"Increase custom development scope without measuring outcomes"
 		],
 		"correctIndex": 0,
 		"explanation": "When ROI is questioned, revisiting agreed baselines and transparent progress reporting rebuilds sponsor confidence.",
@@ -31029,14 +31029,14 @@ export const DEV_PRACTICE_QUESTIONS = [
 	{
 		"trackCode": "CPOE",
 		"order": 24,
-		"prompt": "A global manufacturer documents fragmented service requests across plants. Given this case study, how should the platform owner document the strategy after discovery workshops?",
+		"prompt": "A global manufacturer documents fragmented service requests across plants. How should the platform owner document the strategy after discovery workshops?",
 		"choices": [
-			"Defer documentation until every plant uses identical catalog items",
 			"List vendor license counts as the sole strategy deliverable",
-			"Publish only technical integration specifications without business context",
-			"Capture pain points, target outcomes, guiding principles, and a phased roadmap with owners"
+			"Defer documentation until every plant uses identical catalog items",
+			"Capture pain points, target outcomes, guiding principles, and a phased roadmap with owners",
+			"Publish only technical integration specifications without business context"
 		],
-		"correctIndex": 3,
+		"correctIndex": 2,
 		"explanation": "Documented strategy ties organizational pain and outcomes to principles, phased delivery, and accountable owners.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
@@ -31048,12 +31048,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 25,
 		"prompt": "An executive steering committee questions consolidating departmental ticketing tools onto ServiceNow. Which persuasion approach should the platform owner use with C-Suite sponsors?",
 		"choices": [
-			"Quantify duplicate cost, service gaps, and outcome improvements using peer benchmarks and pilot results",
-			"Present detailed table schemas and field-level mappings without business impact context",
 			"Recommend delaying consolidation until every legacy contract expires regardless of cost",
+			"Present detailed table schemas and field-level mappings without business impact context",
+			"Quantify duplicate cost, service gaps, and outcome improvements using peer benchmarks and pilot results",
 			"Argue that technical elegance alone justifies migration without financial evidence"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Executive persuasion combines quantified pain, expected outcomes, and credible comparisons—not technical detail or indefinite delay.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
@@ -31065,12 +31065,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 26,
 		"prompt": "For global innovation champions, finance and operations each maintain separate KPI definitions, how should the platform owner align ServiceNow data with enterprise BI strategy?",
 		"choices": [
-			"Allow each department to export raw tables on demand without shared definitions",
-			"Establish a governed metric catalog with agreed definitions before publishing datasets to the BI layer",
 			"Postpone metric alignment until every workflow is fully automated across the enterprise",
-			"Restrict all analytics to native ServiceNow dashboards and block external BI tools"
+			"Restrict all analytics to native ServiceNow dashboards and block external BI tools",
+			"Establish a governed metric catalog with agreed definitions before publishing datasets to the BI layer",
+			"Allow each department to export raw tables on demand without shared definitions"
 		],
-		"correctIndex": 1,
+		"correctIndex": 2,
 		"explanation": "BI integration succeeds when platform data uses enterprise-governed definitions so analytics teams trust cross-functional reporting.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
@@ -31083,9 +31083,9 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "Regional managers report uneven adoption after a global ServiceNow rollout. Which OCM orchestration should the platform owner prioritize for the next release wave?",
 		"choices": [
 			"Role-based enablement plans co-designed with regional champions and localized success measures",
-			"Identical training videos distributed globally without regional workflow differences addressed",
+			"Suspension of regional releases until headquarters approves identical process templates",
 			"Mandatory usage policies enforced before any user feedback is collected or analyzed",
-			"Suspension of regional releases until headquarters approves identical process templates"
+			"Identical training videos distributed globally without regional workflow differences addressed"
 		],
 		"correctIndex": 0,
 		"explanation": "Effective OCM adapts enablement to regional roles and champions rather than one-size-fits-all mandates or halted delivery.",
@@ -31144,14 +31144,14 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "When formalizing a multi-year platform strategy after discovery workshops, which elements should appear in the published document? (Choose two.)",
 		"choices": [
 			"Target outcomes linked to enterprise strategic priorities",
-			"Guiding principles that constrain future design decisions",
 			"Complete list of planned script includes for every release train",
+			"Guiding principles that constrain future design decisions",
 			"Individual developer task assignments for the first sprint only"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			1
+			2
 		],
 		"explanation": "Strategy documents articulate outcomes and principles; sprint-level technical tasks belong in delivery backlogs, not executive strategy artifacts.",
 		"sourceUrls": [
@@ -31164,12 +31164,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 30,
 		"prompt": "When automation funding is challenged, year-one funding covers only foundational ITSM and identity capabilities, how should the platform owner sequence ROI for a three-year roadmap?",
 		"choices": [
-			"Deliver measurable service improvements in year one, then fund dependent domains at value gates",
-			"Defer all user-facing capabilities until year three regardless of early wins available",
 			"Purchase every product SKU upfront to maximize license utilization before delivery",
-			"Sequence solely by alphabetical product name without dependency or value analysis"
+			"Sequence solely by alphabetical product name without dependency or value analysis",
+			"Deliver measurable service improvements in year one, then fund dependent domains at value gates",
+			"Defer all user-facing capabilities until year three regardless of early wins available"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "ROI sequencing invests in foundational capabilities first, demonstrates value early, and funds downstream domains at agreed gates.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
@@ -31181,12 +31181,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 31,
 		"prompt": "A global enterprise wants one ServiceNow strategy while preserving regional operating differences. Which strategic design should the platform owner recommend?",
 		"choices": [
+			"Allow every region to create independent standards without cross-region executive review",
 			"Force identical workflows globally without assessing legal, language, or operating constraints",
 			"Move regional differences into untracked customizations so the strategy document remains simple",
-			"Define global platform principles with regional variation criteria, decision rights, and value measures for approved exceptions",
-			"Allow every region to create independent standards without cross-region executive review"
+			"Define global platform principles with regional variation criteria, decision rights, and value measures for approved exceptions"
 		],
-		"correctIndex": 2,
+		"correctIndex": 3,
 		"explanation": "Expert strategy balances global consistency with governed regional variation through principles, decision rights, and measurable exception criteria.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
@@ -31199,8 +31199,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "The CHRO sponsors a digital employee experience initiative on ServiceNow. Which vision statement best connects the roadmap to C-Suite expectations?",
 		"choices": [
 			"Unified, intuitive employee journeys that reduce friction and improve retention across the lifecycle",
-			"A portal reskin project that changes colors without altering underlying service processes",
 			"Maximum custom widgets per page regardless of measurable employee satisfaction gains",
+			"A portal reskin project that changes colors without altering underlying service processes",
 			"Replacement of every HR system in a single release without phased adoption planning"
 		],
 		"correctIndex": 0,
@@ -31216,15 +31216,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"questionType": "multi",
 		"prompt": "When presenting platform investment options to the C-Suite, which persuasion elements strengthen the recommendation? (Choose two.)",
 		"choices": [
-			"A single option presented without alternatives to reduce meeting duration",
 			"Technical jargon without translation to business outcomes or financial impact",
+			"Documented risks with mitigation plans tied to executive decision criteria",
 			"Explicit trade-offs among cost, speed, and capability depth for each scenario",
-			"Documented risks with mitigation plans tied to executive decision criteria"
+			"A single option presented without alternatives to reduce meeting duration"
 		],
-		"correctIndex": 2,
+		"correctIndex": 1,
 		"correctIndexes": [
-			2,
-			3
+			1,
+			2
 		],
 		"explanation": "Executive persuasion requires transparent scenarios with trade-offs and honest risk discussion—not single options or untranslated technical detail.",
 		"sourceUrls": [
@@ -31280,12 +31280,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 35,
 		"prompt": "When HR and Finance duplicate cohorts, a merger, two legacy organizations maintain conflicting service catalogs. How should the platform owner document the unified strategy?",
 		"choices": [
+			"Document license entitlements alone as the complete post-merger strategy",
 			"Capture harmonization principles, phased catalog convergence, and accountable owners per business unit",
 			"Publish only technical import scripts without business rationale or transition plan",
-			"Defer all documentation until both catalogs are manually identical in every field",
-			"Document license entitlements alone as the complete post-merger strategy"
+			"Defer all documentation until both catalogs are manually identical in every field"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"explanation": "Post-merger strategy documents principles, phased convergence, and ownership—not technical scripts alone or indefinite delay.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
@@ -31359,15 +31359,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "Before launching a major ServiceNow capability wave, which OCM readiness factors should the platform owner validate? (Choose three.)",
 		"choices": [
 			"Executive messaging aligned to the outcomes users should expect",
-			"Complete retirement of every legacy system before any pilot begins",
 			"Training and support paths tailored to affected roles and regions",
-			"Feedback channels to capture adoption issues during early rollout"
+			"Feedback channels to capture adoption issues during early rollout",
+			"Complete retirement of every legacy system before any pilot begins"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			2,
-			3
+			1,
+			2
 		],
 		"explanation": "OCM readiness includes sponsor messaging, role-based enablement, and feedback loops—not mandatory full legacy retirement before pilots.",
 		"sourceUrls": [
@@ -31380,12 +31380,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 39,
 		"prompt": "A shared services organization must sequence HR, procurement, and IT workflows on one instance. Which ROI sequencing approach best satisfies C-Suite expectations?",
 		"choices": [
-			"Establish shared data and request fulfillment core, then expand domain workflows with value checkpoints",
 			"Implement all three domains simultaneously without shared master data standards",
-			"Deliver procurement last because it generates the least executive visibility",
-			"Begin with cosmetic branding changes before any process or integration work"
+			"Establish shared data and request fulfillment core, then expand domain workflows with value checkpoints",
+			"Begin with cosmetic branding changes before any process or integration work",
+			"Deliver procurement last because it generates the least executive visibility"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"explanation": "Shared services ROI depends on common data and fulfillment foundations before domain expansion, with checkpoints at each stage.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/platform-administration.html"
@@ -31397,12 +31397,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 40,
 		"prompt": "Board members request assurance that platform investments will not duplicate existing SaaS spend. Which C-Suite narrative should the platform owner prepare?",
 		"choices": [
-			"A list of every ServiceNow plugin installed without linkage to spend reduction goals",
-			"A rationalization map showing retired tools, avoided costs, and consolidated capabilities on ServiceNow",
 			"A promise to maintain all legacy tools indefinitely alongside the new platform",
-			"An argument that duplicate subscriptions are acceptable to preserve team autonomy"
+			"An argument that duplicate subscriptions are acceptable to preserve team autonomy",
+			"A rationalization map showing retired tools, avoided costs, and consolidated capabilities on ServiceNow",
+			"A list of every ServiceNow plugin installed without linkage to spend reduction goals"
 		],
-		"correctIndex": 1,
+		"correctIndex": 2,
 		"explanation": "Board-level assurance requires explicit rationalization linking platform investment to retired spend and consolidated capabilities.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
@@ -31415,9 +31415,9 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "When champion forums stall, eSG reporting requires auditable workflow data, how should the platform owner extend the strategy vision?",
 		"choices": [
 			"Include governed data capture, retention policies, and traceability aligned to ESG disclosure requirements",
-			"Treat ESG as a future phase with no changes to current workflow or data design",
+			"Limit ESG scope to marketing content unrelated to operational workflow records",
 			"Rely on manual attestations outside ServiceNow without platform audit evidence",
-			"Limit ESG scope to marketing content unrelated to operational workflow records"
+			"Treat ESG as a future phase with no changes to current workflow or data design"
 		],
 		"correctIndex": 0,
 		"explanation": "ESG-aligned vision embeds auditable workflow data and retention in platform strategy—not deferred manual workarounds.",
@@ -31432,14 +31432,14 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"questionType": "multi",
 		"prompt": "When updating the platform strategy document for an annual review, which sections should the platform owner refresh? (Choose two.)",
 		"choices": [
-			"Individual performance ratings for every contractor on the program",
 			"Daily stand-up notes from the development team for the prior week",
-			"Capability roadmap adjustments reflecting new enterprise priorities",
-			"Progress against success measures and revised outcome targets"
+			"Progress against success measures and revised outcome targets",
+			"Individual performance ratings for every contractor on the program",
+			"Capability roadmap adjustments reflecting new enterprise priorities"
 		],
-		"correctIndex": 2,
+		"correctIndex": 1,
 		"correctIndexes": [
-			2,
+			1,
 			3
 		],
 		"explanation": "Annual strategy updates reflect measured progress and reprioritized roadmaps—not operational meeting notes or HR records.",
@@ -31496,12 +31496,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 44,
 		"prompt": "The primary executive sponsor announces retirement mid-program. Which action should the platform owner take to preserve sponsorship momentum?",
 		"choices": [
-			"Reduce scope silently to avoid briefing incoming leadership on program status",
-			"Identify a successor sponsor, transfer context, and reconfirm committed outcomes and funding",
 			"Continue without sponsor engagement assuming funding will renew automatically",
-			"Pause all delivery until the organization completes a full reorganization"
+			"Pause all delivery until the organization completes a full reorganization",
+			"Identify a successor sponsor, transfer context, and reconfirm committed outcomes and funding",
+			"Reduce scope silently to avoid briefing incoming leadership on program status"
 		],
-		"correctIndex": 1,
+		"correctIndex": 2,
 		"explanation": "Sponsor transitions require deliberate succession, context transfer, and reaffirmed outcomes—not silent scope cuts or unmanaged drift.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
@@ -31514,9 +31514,9 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "During priority conflict resolution, the final strategy review before cost planning, which deliverable best closes the Strategy domain for executive sign-off?",
 		"choices": [
 			"A consolidated strategy pack with outcomes, roadmap, investment themes, and success measures",
-			"A technical runbook listing every integration endpoint without strategic context",
+			"An unsigned draft memo with no accountable owners or funding assumptions",
 			"A spreadsheet of open defects from the development environment only",
-			"An unsigned draft memo with no accountable owners or funding assumptions"
+			"A technical runbook listing every integration endpoint without strategic context"
 		],
 		"correctIndex": 0,
 		"explanation": "Strategy sign-off requires an integrated pack linking outcomes, roadmap, investments, and measures—not technical or operational artifacts alone.",
@@ -31575,14 +31575,14 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "The CFO asks how licensing choices affect implementation cost before approving the next fiscal budget. Which factors should the platform owner include in the analysis? (Choose two.)",
 		"choices": [
 			"Product entitlements mapped to planned capabilities and required user populations",
-			"Professional services and internal labor estimates tied to each delivery wave",
 			"Historical color preferences for portal themes across business units",
+			"Professional services and internal labor estimates tied to each delivery wave",
 			"Informal chat opinions about vendor popularity without cost data"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			1
+			2
 		],
 		"explanation": "Licensing cost analysis connects entitlements and populations to capability plans plus implementation labor—not cosmetic or anecdotal factors.",
 		"sourceUrls": [
@@ -31595,10 +31595,10 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 48,
 		"prompt": "Agile release trains for HR and ITSM share architects and testers. Which workstream alignment practice best supports accurate resource forecasting?",
 		"choices": [
-			"Fixed headcount assumptions that ignore leave, support load, and shared skill constraints",
 			"Forecasting based solely on story points from a single train without enterprise view",
+			"Independent backlogs maintained without cross-train visibility or dependency tracking",
 			"Capacity planning sessions that map team availability to prioritized epics across shared trains",
-			"Independent backlogs maintained without cross-train visibility or dependency tracking"
+			"Fixed headcount assumptions that ignore leave, support load, and shared skill constraints"
 		],
 		"correctIndex": 2,
 		"explanation": "Cross-train resource forecasting requires visible capacity, shared priorities, and realistic constraints—not isolated or oversimplified estimates.",
@@ -31653,7 +31653,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 	{
 		"trackCode": "CPOE",
 		"order": 50,
-		"prompt": "The CFO asks whether subscription licensing will reduce total cost of ownership compared with the current annual enterprise agreement. Given this scenario, how should the platform owner frame the licensing recommendation?",
+		"prompt": "The CFO asks whether subscription licensing will reduce total cost of ownership compared with the current annual enterprise agreement. How should the platform owner frame the licensing recommendation?",
 		"choices": [
 			"Model user growth, product entitlements, and consumption trends against a multi-year TCO with renewal scenarios",
 			"Recommend the smallest SKU bundle available to minimize first-year invoice regardless of capability gaps",
@@ -31672,12 +31672,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 51,
 		"prompt": "A global retailer compares partner-led implementation against an internal delivery model. Which approach best supports an executive cost decision?",
 		"choices": [
-			"Assume internal teams have unlimited capacity and exclude opportunity cost from the analysis",
 			"Approve the fastest calendar regardless of change management or knowledge transfer investment",
 			"Present side-by-side estimates for labor, timeline, risk, and ongoing run costs tied to business outcomes",
-			"Select the partner proposal with the lowest hourly rate without validating scope assumptions"
+			"Select the partner proposal with the lowest hourly rate without validating scope assumptions",
+			"Assume internal teams have unlimited capacity and exclude opportunity cost from the analysis"
 		],
-		"correctIndex": 2,
+		"correctIndex": 1,
 		"explanation": "Implementation cost comparisons must expose labor, timeline, risk, and sustainment trade-offs so executives can fund the model that meets outcomes.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
@@ -31730,14 +31730,14 @@ export const DEV_PRACTICE_QUESTIONS = [
 	{
 		"trackCode": "CPOE",
 		"order": 53,
-		"prompt": "Finance partners question whether twelve-language localization is affordable in year one. Given this case study, how should the platform owner sequence translation investment?",
+		"prompt": "Finance partners question whether twelve-language localization is affordable in year one. How should the platform owner sequence translation investment?",
 		"choices": [
-			"Prioritize languages for initial revenue regions and phase remaining locales with adoption metrics",
 			"Translate every catalog item before launching any pilot regardless of user demand",
-			"Eliminate translation budget and require all users to work in English only",
-			"Outsource localization without governance and accept inconsistent terminology across domains"
+			"Prioritize languages for initial revenue regions and phase remaining locales with adoption metrics",
+			"Outsource localization without governance and accept inconsistent terminology across domains",
+			"Eliminate translation budget and require all users to work in English only"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"explanation": "Translation spend should follow regional rollout priorities and measurable adoption rather than unfunded global scope or absent governance.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/instance-administration/platform-governance.html"
@@ -31750,15 +31750,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"questionType": "multi",
 		"prompt": "A case study outlines five third-party systems requiring bidirectional integration with ServiceNow. Which cost factors should the platform owner include in the executive integration estimate? (Choose two.)",
 		"choices": [
-			"Middleware licensing, API gateway operations, and MID Server hosting",
-			"Partner build effort for mapping, error handling, and security review cycles",
 			"Eliminating all data validation to shorten the statement of work",
+			"Partner build effort for mapping, error handling, and security review cycles",
+			"Middleware licensing, API gateway operations, and MID Server hosting",
 			"Assuming zero ongoing maintenance after initial connection testing"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"correctIndexes": [
-			0,
-			1
+			1,
+			2
 		],
 		"explanation": "Integration TCO includes infrastructure, partner labor, and sustainment; skipping validation or maintenance underestimates long-term cost and risk.",
 		"sourceUrls": [
@@ -31771,12 +31771,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 55,
 		"prompt": "During annual planning, program leads propose parallel Agile workstreams across Technology, Customer, Employee, and Creator solution areas. How should the platform owner align funding?",
 		"choices": [
-			"Fund every workstream at full velocity without reconciling shared platform services",
-			"Map each workstream to shared platform outcomes, dependencies, and capacity limits before approving spend",
 			"Consolidate all work into a single undifferentiated backlog with no solution-area ownership",
-			"Pause Customer and Employee streams until Technology completes all custom applications"
+			"Pause Customer and Employee streams until Technology completes all custom applications",
+			"Map each workstream to shared platform outcomes, dependencies, and capacity limits before approving spend",
+			"Fund every workstream at full velocity without reconciling shared platform services"
 		],
-		"correctIndex": 1,
+		"correctIndex": 2,
 		"explanation": "Agile workstream funding must reflect cross-solution dependencies and shared platform capacity so executives see aligned investment across domains.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
@@ -31789,9 +31789,9 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "The CIO requests a eighteen-month resource forecast for platform delivery. Which method best satisfies executive expectations?",
 		"choices": [
 			"Combine bottom-up effort estimates from workstreams with top-down capacity ceilings from HR and partners",
-			"Extrapolate last quarter's burn rate without adjusting for new scope or release waves",
 			"Publish a single FTE number without role mix, skill gaps, or contractor assumptions",
-			"Defer forecasting until every user story is fully refined across all domains"
+			"Defer forecasting until every user story is fully refined across all domains",
+			"Extrapolate last quarter's burn rate without adjusting for new scope or release waves"
 		],
 		"correctIndex": 0,
 		"explanation": "Credible resource forecasts blend granular workstream estimates with enterprise capacity limits so leaders can fund realistic delivery.",
@@ -31806,10 +31806,10 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"questionType": "multi",
 		"prompt": "For siloed demand intake, license true-up charges exceeded forecast, which inputs should the platform owner revisit with finance? (Choose two.)",
 		"choices": [
-			"Historical incident ticket volume unrelated to subscription metrics",
 			"Number of UI themes configured per business unit",
-			"Product SKU coverage for capabilities actually in production use",
-			"User role mix and fulfillment-type growth against contracted entitlements"
+			"Historical incident ticket volume unrelated to subscription metrics",
+			"User role mix and fulfillment-type growth against contracted entitlements",
+			"Product SKU coverage for capabilities actually in production use"
 		],
 		"correctIndex": 2,
 		"correctIndexes": [
@@ -31827,12 +31827,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 58,
 		"prompt": "Executive sponsors debate whether the implementation budget is complete. Which hidden cost category should the platform owner surface?",
 		"choices": [
-			"Environment refresh, regression testing, and organizational change management across release waves",
-			"Desktop wallpaper updates for every department using the portal",
 			"Annual awards ceremony for the project team regardless of adoption results",
+			"Desktop wallpaper updates for every department using the portal",
+			"Environment refresh, regression testing, and organizational change management across release waves",
 			"Printing physical process manuals that duplicate in-platform knowledge articles"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Implementation TCO must include test environments, regression cycles, and OCM sustainment—costs often omitted from initial SOW estimates.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
@@ -31887,12 +31887,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 60,
 		"prompt": "A multinational enterprise faces renewal in nine months with uneven product adoption across regions. How should the platform owner right-size the license proposal?",
 		"choices": [
-			"Shift all spend to professional services and eliminate platform subscriptions",
 			"Delay renewal analysis until after the next major release without usage baselines",
-			"Reconcile active entitlements with production usage by region and retire unused product bundles",
-			"Renew every historical SKU at prior quantities to avoid procurement rework"
+			"Renew every historical SKU at prior quantities to avoid procurement rework",
+			"Shift all spend to professional services and eliminate platform subscriptions",
+			"Reconcile active entitlements with production usage by region and retire unused product bundles"
 		],
-		"correctIndex": 2,
+		"correctIndex": 3,
 		"explanation": "Renewal planning compares contracted entitlements to actual regional usage so executives fund products delivering value and avoid shelfware.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/instance-administration/platform-governance.html"
@@ -31905,8 +31905,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "When KPI ownership diverges, eMEA leaders require localized employee workflows, how should the platform owner budget translation work?",
 		"choices": [
 			"Estimate string volume, review cycles, and in-country validation tied to each release wave",
-			"Apply a flat percentage of license cost without scoping affected applications",
 			"Rely on machine translation alone and skip glossary governance",
+			"Apply a flat percentage of license cost without scoping affected applications",
 			"Postpone all localization until every North American process is globally standardized"
 		],
 		"correctIndex": 0,
@@ -31965,15 +31965,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"questionType": "multi",
 		"prompt": "Finance requests a breakdown of implementation spend before approving phase two. Which categories belong in the platform owner's cost model? (Choose two.)",
 		"choices": [
-			"Discovery and design workshops with business and technical stakeholders",
-			"Configuration, testing, data migration, and hypercare support labor",
 			"Executive parking reimbursements unrelated to delivery activities",
-			"Legacy desktop software licenses that will not integrate with ServiceNow"
+			"Legacy desktop software licenses that will not integrate with ServiceNow",
+			"Discovery and design workshops with business and technical stakeholders",
+			"Configuration, testing, data migration, and hypercare support labor"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"correctIndexes": [
-			0,
-			1
+			2,
+			3
 		],
 		"explanation": "Implementation cost models capture discovery, build, test, migration, and hypercare—the labor categories executives expect in phased funding requests.",
 		"sourceUrls": [
@@ -31986,12 +31986,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 64,
 		"prompt": "When comparing third-party integration proposals, the platform owner must explain ongoing run costs to the CFO. Which element is most critical?",
 		"choices": [
+			"One-time logo placement on the corporate intranet announcing the integration",
 			"Color palette alignment between external portals and ServiceNow themes",
 			"Annual team-building events for integration developers",
-			"Recurring middleware operations, certificate management, and incident response staffing for interface failures",
-			"One-time logo placement on the corporate intranet announcing the integration"
+			"Recurring middleware operations, certificate management, and incident response staffing for interface failures"
 		],
-		"correctIndex": 2,
+		"correctIndex": 3,
 		"explanation": "Integration run costs include sustained middleware operations, security upkeep, and support staffing—not cosmetic or social expenses.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/instance-administration/platform-governance.html"
@@ -32020,12 +32020,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 66,
 		"prompt": "Procurement asks whether current SKUs overserve departments with light portal usage. What licensing optimization should the platform owner recommend?",
 		"choices": [
-			"Convert every requester to a full developer license for configuration flexibility",
 			"Ignore usage analytics and maintain peak-user counts from the initial rollout",
 			"Segment fulfillment types by actual workflow need and align product bundles to those segments",
-			"Remove all Employee workflows to shrink the user population on paper"
+			"Remove all Employee workflows to shrink the user population on paper",
+			"Convert every requester to a full developer license for configuration flexibility"
 		],
-		"correctIndex": 2,
+		"correctIndex": 1,
 		"explanation": "License optimization maps fulfillment types and product entitlements to real usage patterns rather than artificial user reduction or over-licensing.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/instance-administration/platform-governance.html"
@@ -32039,14 +32039,14 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "During year-one funding review, resource forecasts missed two consecutive quarters, which inputs should the platform owner recalibrate? (Choose two.)",
 		"choices": [
 			"Velocity trends and unplanned production support demand on platform teams",
-			"Count of scheduled town halls regardless of delivery output",
 			"Partner contract utilization versus committed hours by workstream",
-			"Number of knowledge articles published without measuring author effort"
+			"Number of knowledge articles published without measuring author effort",
+			"Count of scheduled town halls regardless of delivery output"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			2
+			1
 		],
 		"explanation": "Forecast accuracy improves when teams incorporate velocity shifts, unplanned support load, and partner utilization—not activity metrics unrelated to capacity.",
 		"sourceUrls": [
@@ -32120,9 +32120,9 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "The board reviews a five-year platform business case. How should the platform owner present total cost of ownership?",
 		"choices": [
 			"Combine license, implementation, integration, translation, and run costs with scenario-based ROI milestones",
-			"Show subscription fees only and treat all services as one-time sunk cost",
 			"Exclude OCM and hypercare because they are difficult to quantify",
-			"Present vendor list price without regional tax, true-up, or growth adjustments"
+			"Present vendor list price without regional tax, true-up, or growth adjustments",
+			"Show subscription fees only and treat all services as one-time sunk cost"
 		],
 		"correctIndex": 0,
 		"explanation": "Executive TCO views span licensing, delivery, integration, localization, and sustainment with ROI milestones—not narrow or incomplete cost slices.",
@@ -32136,12 +32136,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 71,
 		"prompt": "Creator and Employee workstreams both require translated self-service content before a shared go-live. How should the platform owner govern localization spend?",
 		"choices": [
-			"Eliminate translation QA to meet the launch date without executive disclosure",
 			"Translate only administrator-facing labels and defer employee-facing content indefinitely",
-			"Assign each workstream independent translation vendors with no terminology coordination",
-			"Establish a shared glossary, prioritize high-traffic flows, and fund review cycles once per release train"
+			"Eliminate translation QA to meet the launch date without executive disclosure",
+			"Establish a shared glossary, prioritize high-traffic flows, and fund review cycles once per release train",
+			"Assign each workstream independent translation vendors with no terminology coordination"
 		],
-		"correctIndex": 3,
+		"correctIndex": 2,
 		"explanation": "Shared localization governance reduces rework and controls spend through coordinated glossaries, prioritized content, and release-train review cycles.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/instance-administration/platform-governance.html"
@@ -32197,15 +32197,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"questionType": "multi",
 		"prompt": "Before closing the Cost/Resource Planning phase, which artifacts should the platform owner confirm are executive-ready? (Choose two.)",
 		"choices": [
-			"Complete list of UI macros without linkage to funding decisions",
-			"Multi-year license and true-up forecast tied to adoption milestones",
 			"Detailed script library for every planned client-side extension",
-			"Resource capacity plan with partner and internal FTE assumptions by wave"
+			"Resource capacity plan with partner and internal FTE assumptions by wave",
+			"Multi-year license and true-up forecast tied to adoption milestones",
+			"Complete list of UI macros without linkage to funding decisions"
 		],
 		"correctIndex": 1,
 		"correctIndexes": [
 			1,
-			3
+			2
 		],
 		"explanation": "Cost phase exit requires executive-ready licensing forecasts and capacity plans; low-level technical inventories do not satisfy funding governance.",
 		"sourceUrls": [
@@ -32219,9 +32219,9 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "Executive sponsors approve the cost plan and ask how resource capacity will transition into implementation delivery. What should the platform owner present next?",
 		"choices": [
 			"A wave-based staffing model linking approved budget to Agile release trains and dependency milestones",
-			"A request to restart discovery because cost planning invalidated all prior requirements",
+			"A directive to freeze all hiring and contractor extensions regardless of approved scope",
 			"An unfunded list of desired features without capacity or timeline alignment",
-			"A directive to freeze all hiring and contractor extensions regardless of approved scope"
+			"A request to restart discovery because cost planning invalidated all prior requirements"
 		],
 		"correctIndex": 0,
 		"explanation": "The final cost-planning step bridges approved funding to implementation by mapping capacity to release trains and dependencies—setting up the delivery phase.",
@@ -32235,12 +32235,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 75,
 		"prompt": "After a merger discovery, finance requests a three-year total cost of ownership view before approving platform expansion, which cost planning artifact should the platform owner present first?",
 		"choices": [
-			"A historical incident count chart with no forward-looking resource assumptions",
 			"A catalog of open defects sorted by severity without financial linkage",
-			"A spreadsheet listing only current subscription line items without labor estimates",
-			"A TCO model covering licenses, implementation, operations, and change capacity by horizon"
+			"A TCO model covering licenses, implementation, operations, and change capacity by horizon",
+			"A historical incident count chart with no forward-looking resource assumptions",
+			"A spreadsheet listing only current subscription line items without labor estimates"
 		],
-		"correctIndex": 3,
+		"correctIndex": 1,
 		"explanation": "Executive cost planning requires a horizon-based TCO view that includes licenses, delivery, and ongoing operations—not isolated license rows or unrelated operational metrics.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/platform-administration.html"
@@ -32250,11 +32250,11 @@ export const DEV_PRACTICE_QUESTIONS = [
 	{
 		"trackCode": "CPOE",
 		"order": 76,
-		"prompt": "A global enterprise forecasts 40% growth in platform demand over two years. Given this scenario, how should the platform owner align capacity planning with delivery commitments?",
+		"prompt": "A global enterprise forecasts 40% growth in platform demand over two years. How should the platform owner align capacity planning with delivery commitments?",
 		"choices": [
 			"Model instance sizing, admin capacity, and release throughput against projected workload and SLAs",
-			"Defer all capacity analysis until performance incidents occur in production",
 			"Add headcount only after each product team submits identical staffing templates",
+			"Defer all capacity analysis until performance incidents occur in production",
 			"Rely on vendor default sizing without validating peak transaction patterns"
 		],
 		"correctIndex": 0,
@@ -32270,15 +32270,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"questionType": "multi",
 		"prompt": "For ESG workflow reporting, three product lines compete for the same implementation budget, which resource allocation principles should the platform owner apply? (Choose two.)",
 		"choices": [
-			"Reserve all capacity for cosmetic portal changes until backlog is cleared",
 			"Prioritize work that unlocks shared platform capabilities used by multiple teams",
+			"Fund initiatives with documented ROI and dependency alignment to the roadmap",
 			"Allocate budget proportionally by loudest stakeholder without scoring criteria",
-			"Fund initiatives with documented ROI and dependency alignment to the roadmap"
+			"Reserve all capacity for cosmetic portal changes until backlog is cleared"
 		],
-		"correctIndex": 1,
+		"correctIndex": 0,
 		"correctIndexes": [
-			1,
-			3
+			0,
+			1
 		],
 		"explanation": "Shared-capability investments and scored ROI alignment maximize enterprise value; political allocation and cosmetic-only funding undermine portfolio discipline.",
 		"sourceUrls": [
@@ -32332,14 +32332,14 @@ export const DEV_PRACTICE_QUESTIONS = [
 	{
 		"trackCode": "CPOE",
 		"order": 79,
-		"prompt": "The CEO requests a concise update before a major go-live. Given this case study, how should the platform owner structure C-Suite communication about delivery readiness?",
+		"prompt": "The CEO requests a concise update before a major go-live. How should the platform owner structure C-Suite communication about delivery readiness?",
 		"choices": [
+			"Present detailed script-level change lists without summarizing business impact",
 			"Share only technical test pass rates with no adoption or change readiness context",
 			"Defer executive briefing until every open defect is closed regardless of schedule",
-			"Lead with business outcomes, milestone status, risks, and decisions needed from sponsors",
-			"Present detailed script-level change lists without summarizing business impact"
+			"Lead with business outcomes, milestone status, risks, and decisions needed from sponsors"
 		],
-		"correctIndex": 2,
+		"correctIndex": 3,
 		"explanation": "Executive delivery updates emphasize outcomes, progress, risks, and sponsor decisions— not low-level technical detail or indefinite delay.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
@@ -32349,14 +32349,14 @@ export const DEV_PRACTICE_QUESTIONS = [
 	{
 		"trackCode": "CPOE",
 		"order": 80,
-		"prompt": "Six weeks after launch, transaction volume remains 30% below target and help desk tickets cite unfamiliar workflows. Given this case study, what should the platform owner prioritize next?",
+		"prompt": "Six weeks after launch, transaction volume remains 30% below target and help desk tickets cite unfamiliar workflows. What should the platform owner prioritize next?",
 		"choices": [
-			"Disable legacy tools immediately without transition support or training",
 			"Reduce scope reporting to executives until usage metrics improve on their own",
 			"Diagnose adoption barriers, reinforce role-based enablement, and adjust communications with sponsors",
-			"Proceed to the next release wave without addressing user feedback"
+			"Proceed to the next release wave without addressing user feedback",
+			"Disable legacy tools immediately without transition support or training"
 		],
-		"correctIndex": 2,
+		"correctIndex": 1,
 		"explanation": "Low adoption recovery requires targeted diagnosis, enablement, and visible sponsor messaging—not forced cutover or hiding metrics from leadership.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
@@ -32368,12 +32368,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 81,
 		"prompt": "A regulated utility prepares for a major platform release affecting integrations and peak-hour workflows. Which specialized testing approach should the platform owner require before production promotion?",
 		"choices": [
-			"End-to-end regression plus performance and integration validation in a production-like environment",
-			"User acceptance testing deferred until after production deployment",
 			"Developer unit tests only on isolated developer instances",
-			"Manual spot checks of the login page without scenario coverage"
+			"Manual spot checks of the login page without scenario coverage",
+			"End-to-end regression plus performance and integration validation in a production-like environment",
+			"User acceptance testing deferred until after production deployment"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Enterprise releases need regression, performance, and integration testing in representative environments—not isolated unit checks or post-production UAT.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/platform-administration.html"
@@ -32386,15 +32386,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"questionType": "multi",
 		"prompt": "During final strategy review, iT, HR, and finance each maintain separate delivery teams on one instance, which focus areas should the platform owner coordinate across teams? (Choose two.)",
 		"choices": [
+			"Separate upgrade schedules per team without enterprise regression planning",
 			"Shared data standards and integration patterns that prevent duplicate master records",
 			"Release calendar alignment so changes do not conflict during the same maintenance window",
-			"Independent custom scopes with no cross-team design reviews or standards",
-			"Separate upgrade schedules per team without enterprise regression planning"
+			"Independent custom scopes with no cross-team design reviews or standards"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"correctIndexes": [
-			0,
-			1
+			1,
+			2
 		],
 		"explanation": "Multi-team platform ownership requires coordinated data standards and release timing; isolated scopes and uncoordinated upgrades increase risk and rework.",
 		"sourceUrls": [
@@ -32450,12 +32450,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 84,
 		"prompt": "A multi-wave ServiceNow implementation is slipping because data migration, OCM, and integration workstreams use separate critical paths. Which implementation control should the platform owner establish?",
 		"choices": [
-			"Independent workstream plans that converge only during the production cutover meeting",
 			"Integrated release plan with dependency gates, readiness owners, and escalation thresholds across all workstreams",
 			"Separate go-live criteria for each team with no enterprise readiness view",
-			"A decision to defer OCM until after technical go-live so project status stays green"
+			"A decision to defer OCM until after technical go-live so project status stays green",
+			"Independent workstream plans that converge only during the production cutover meeting"
 		],
-		"correctIndex": 1,
+		"correctIndex": 0,
 		"explanation": "Expert delivery governance integrates workstream dependencies and readiness gates so slippage in data, change, or integrations is visible before cutover.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/platform-administration.html"
@@ -32465,12 +32465,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 	{
 		"trackCode": "CPOE",
 		"order": 85,
-		"prompt": "A multinational firm plans three delivery waves across regions with shared integrations. Given this scenario, which wave-planning approach best balances speed and stability?",
+		"prompt": "A multinational firm plans three delivery waves across regions with shared integrations. Which wave-planning approach best balances speed and stability?",
 		"choices": [
 			"Pilot in a representative region, capture lessons, then scale with standardized playbooks and gates",
-			"Launch all regions simultaneously to avoid perceived favoritism",
 			"Delay every region until identical customizations exist in each business unit",
-			"Sequence waves alphabetically by country name without dependency analysis"
+			"Sequence waves alphabetically by country name without dependency analysis",
+			"Launch all regions simultaneously to avoid perceived favoritism"
 		],
 		"correctIndex": 0,
 		"explanation": "Wave planning uses pilot learning and repeatable gates to scale safely; big-bang or arbitrary sequencing ignores dependencies and operational readiness.",
@@ -32484,12 +32484,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 86,
 		"prompt": "After license true-up variance, a critical catalog release moves to production Friday evening, what post-deployment activity should the platform owner mandate during hypercare?",
 		"choices": [
-			"Monitor key transactions, validate integrations, and staff escalation paths for the first business days",
 			"Close the change record immediately and disband the support bridge",
-			"Disable alerting to reduce noise until users report problems manually",
-			"Begin the next major release before confirming production stability"
+			"Monitor key transactions, validate integrations, and staff escalation paths for the first business days",
+			"Begin the next major release before confirming production stability",
+			"Disable alerting to reduce noise until users report problems manually"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"explanation": "Hypercare focuses on monitored validation and staffed escalation immediately after release—not premature closure or starting the next deployment.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/platform-administration.html"
@@ -32502,15 +32502,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"questionType": "multi",
 		"prompt": "Given a scenario preparing for a cross-domain ServiceNow release, which implementation readiness factors should the platform owner validate? (Choose two.)",
 		"choices": [
-			"Business sign-off on acceptance criteria for in-scope workflows",
-			"Rollback and communication plans aligned to the release calendar",
 			"Approval to skip regression testing when the change set is small",
+			"Rollback and communication plans aligned to the release calendar",
+			"Business sign-off on acceptance criteria for in-scope workflows",
 			"Deferral of training until six months after go-live"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"correctIndexes": [
-			0,
-			1
+			1,
+			2
 		],
 		"explanation": "Release readiness requires accepted scope and rehearsed rollback and communications; skipping tests or delaying training undermines delivery quality.",
 		"sourceUrls": [
@@ -32567,9 +32567,9 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "During implementation, a dependency slip threatens the quarterly value milestone. How should the platform owner communicate this risk to the C-Suite?",
 		"choices": [
 			"Present impact on outcomes, mitigation options, trade-offs, and a recommended decision path",
-			"Withhold the delay until the slip becomes a production outage",
+			"Reset all executive expectations without explaining root cause or options",
 			"Blame a single vendor without proposing recovery alternatives",
-			"Reset all executive expectations without explaining root cause or options"
+			"Withhold the delay until the slip becomes a production outage"
 		],
 		"correctIndex": 0,
 		"explanation": "Executive risk communication includes outcome impact, mitigation choices, and a clear recommendation—not concealment or blame without options.",
@@ -32584,8 +32584,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "For EMEA localization planning, incident volume spikes during the first week after a major HR rollout, what stabilization step should the platform owner lead?",
 		"choices": [
 			"Triage defects by user impact, assign owners, and report daily recovery metrics to sponsors",
-			"Pause all defect fixes until the next scheduled release train",
 			"Direct users to email individual developers instead of the service desk",
+			"Pause all defect fixes until the next scheduled release train",
 			"Remove executive dashboards to avoid highlighting negative trends"
 		],
 		"correctIndex": 0,
@@ -32598,14 +32598,14 @@ export const DEV_PRACTICE_QUESTIONS = [
 	{
 		"trackCode": "CPOE",
 		"order": 91,
-		"prompt": "Finance and ITSM teams share identity data but maintain separate backlogs. Given this scenario, how should the platform owner manage cross-team delivery dependencies?",
+		"prompt": "Finance and ITSM teams share identity data but maintain separate backlogs. How should the platform owner manage cross-team delivery dependencies?",
 		"choices": [
-			"Defer integration work until both teams complete unrelated enhancements first",
 			"Maintain a shared dependency map with agreed integration milestones and joint release checkpoints",
+			"Allow each team to deploy independently without coordinating data contract changes",
 			"Merge all backlogs into one team without clarifying ownership boundaries",
-			"Allow each team to deploy independently without coordinating data contract changes"
+			"Defer integration work until both teams complete unrelated enhancements first"
 		],
-		"correctIndex": 1,
+		"correctIndex": 0,
 		"explanation": "Cross-team delivery requires visible dependencies and joint checkpoints; uncoordinated releases or unclear ownership create integration failures.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/platform-administration.html"
@@ -32618,15 +32618,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"questionType": "multi",
 		"prompt": "When forecasts miss repeatedly, a platform upgrade and custom application release occur in the same window, which testing scope items should the platform owner require? (Choose two.)",
 		"choices": [
-			"Automated regression of critical business flows across affected domains",
-			"Smoke validation of integrations and scheduled jobs after deployment",
 			"Elimination of UAT to meet the maintenance window deadline",
-			"Testing limited to the developer who authored the largest change set"
+			"Testing limited to the developer who authored the largest change set",
+			"Automated regression of critical business flows across affected domains",
+			"Smoke validation of integrations and scheduled jobs after deployment"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"correctIndexes": [
-			0,
-			1
+			2,
+			3
 		],
 		"explanation": "Combined releases need broad regression and post-deploy integration checks; skipping UAT or solo testing leaves enterprise risk unvalidated.",
 		"sourceUrls": [
@@ -32680,11 +32680,11 @@ export const DEV_PRACTICE_QUESTIONS = [
 	{
 		"trackCode": "CPOE",
 		"order": 94,
-		"prompt": "Field managers report they revert to spreadsheets because approval steps feel slower on the new platform. Given this case study, what is the platform owner's best next step?",
+		"prompt": "Field managers report they revert to spreadsheets because approval steps feel slower on the new platform. What is the platform owner's best next step?",
 		"choices": [
 			"Facilitate process review with affected managers, measure cycle time, and co-design simplified paths",
-			"Announce mandatory usage penalties without investigating workflow pain points",
 			"Remove approval controls entirely to maximize submission speed",
+			"Announce mandatory usage penalties without investigating workflow pain points",
 			"Wait for annual training refresh before collecting structured feedback"
 		],
 		"correctIndex": 0,
@@ -32697,12 +32697,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 	{
 		"trackCode": "CPOE",
 		"order": 95,
-		"prompt": "The CFO asks for evidence that year-one platform investments delivered promised savings. Given this case study, how should the platform owner report value realization?",
+		"prompt": "The CFO asks for evidence that year-one platform investments delivered promised savings. How should the platform owner report value realization?",
 		"choices": [
-			"Share internal team satisfaction scores as the sole proof of success",
 			"Delay reporting until every product team completes identical maturity assessments",
+			"Present license utilization percentages without linking to financial outcomes",
 			"Compare baseline and current metrics for agreed KPIs with narrative on variance and next actions",
-			"Present license utilization percentages without linking to financial outcomes"
+			"Share internal team satisfaction scores as the sole proof of success"
 		],
 		"correctIndex": 2,
 		"explanation": "Value realization reporting contrasts agreed baselines with current KPIs and explains variance— not isolated utilization or delayed disclosure.",
@@ -32716,12 +32716,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 96,
 		"prompt": "When product lines compete, sponsors debate pilot scope versus enterprise rollout for a new employee service, which delivery approach should the platform owner recommend?",
 		"choices": [
-			"Pilot with a representative population, validate outcomes, then scale using a repeatable playbook",
-			"Postpone all delivery until every legacy system contract expires",
 			"Deploy enterprise-wide on day one to maximize subscription consumption immediately",
-			"Limit the pilot to IT staff only and skip business stakeholder validation"
+			"Limit the pilot to IT staff only and skip business stakeholder validation",
+			"Pilot with a representative population, validate outcomes, then scale using a repeatable playbook",
+			"Postpone all delivery until every legacy system contract expires"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Pilot-then-scale validates outcomes with real users before enterprise rollout; big-bang or IT-only pilots fail to de-risk business adoption.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/platform-administration.html"
@@ -32734,19 +32734,19 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"questionType": "multi",
 		"prompt": "A sponsor wants to accelerate go-live by reducing test scope on a regulated implementation. Which delivery safeguards should the platform owner defend? (Choose two.)",
 		"choices": [
+			"Production deployment before defect triage so teams can learn from live users",
 			"Risk-based regression coverage for critical workflows, integrations, and security controls",
 			"Business acceptance evidence tied to launch criteria and rollback decisions",
-			"Elimination of audit evidence because testing was already performed by developers",
-			"Production deployment before defect triage so teams can learn from live users"
+			"Elimination of audit evidence because testing was already performed by developers"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"correctIndexes": [
-			0,
-			1
+			1,
+			2
 		],
 		"explanation": "Implementation leadership protects risk-based testing and acceptance evidence, especially for regulated launches where speed cannot replace launch readiness.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-administration/australia/install-and-upgrade/concept/c_UpgradeBestPractices.html"
+			"https://www.servicenow.com/docs/r/platform-administration/install-and-upgrade/concept/c_UpgradeBestPractices.html"
 		],
 		"domain": "Implementation and Delivery"
 	},
@@ -32796,14 +32796,14 @@ export const DEV_PRACTICE_QUESTIONS = [
 	{
 		"trackCode": "CPOE",
 		"order": 99,
-		"prompt": "A retail enterprise has separate product teams for stores, supply chain, and corporate HR on one instance. Given this case study, how should the platform owner coordinate value delivery across product teams?",
+		"prompt": "A retail enterprise has separate product teams for stores, supply chain, and corporate HR on one instance. How should the platform owner coordinate value delivery across product teams?",
 		"choices": [
-			"Centralize all development in one team and eliminate product ownership",
 			"Report value only for the domain with the highest license consumption",
 			"Establish shared release governance, outcome scorecards per domain, and joint dependency reviews",
-			"Let each team publish independent roadmaps without enterprise alignment sessions"
+			"Let each team publish independent roadmaps without enterprise alignment sessions",
+			"Centralize all development in one team and eliminate product ownership"
 		],
-		"correctIndex": 2,
+		"correctIndex": 1,
 		"explanation": "Cross-team value delivery needs shared governance, domain scorecards, and dependency reviews—not siloed roadmaps or license-based favoritism.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
@@ -32832,12 +32832,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 101,
 		"prompt": "A program director asks how testing should be structured before a multi-wave HR and ITSM deployment. Which approach best balances risk and delivery speed?",
 		"choices": [
-			"Defer all user testing until every wave is deployed to production",
 			"Limit validation to visual review of portal themes without workflow verification",
 			"Layer unit, integration, and business acceptance testing with automated regression on critical paths before each wave",
-			"Rely exclusively on developer self-testing without formal acceptance cycles"
+			"Rely exclusively on developer self-testing without formal acceptance cycles",
+			"Defer all user testing until every wave is deployed to production"
 		],
-		"correctIndex": 2,
+		"correctIndex": 1,
 		"explanation": "Enterprise rollouts need layered testing—automated regression plus structured acceptance—so each wave ships with validated critical workflows.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/application-development/automated-test-framework/atf-best-practices.html"
@@ -32851,14 +32851,14 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "Before promoting a major platform release to production, which validation activities should the platform owner require? (Choose two.)",
 		"choices": [
 			"Automated test suite execution covering changed workflows and integrations",
-			"Deploying directly to production without a rollback plan",
 			"Business sign-off from process owners on acceptance criteria for affected domains",
-			"Skipping regression testing to meet an arbitrary launch date"
+			"Skipping regression testing to meet an arbitrary launch date",
+			"Deploying directly to production without a rollback plan"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			2
+			1
 		],
 		"explanation": "Release readiness depends on automated regression plus business acceptance; skipping tests or omitting rollback plans increases production risk.",
 		"sourceUrls": [
@@ -32931,12 +32931,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 105,
 		"prompt": "During a troubled rollout, the CEO requests a concise status update before the board meeting. What should the platform owner include in executive communications?",
 		"choices": [
-			"Technical stack traces and database query plans without translation to business impact",
 			"Assurances that all issues will resolve without sharing evidence or recovery milestones",
 			"Current impact, root-cause hypothesis, mitigation actions, revised timeline, and decisions needed from leadership",
-			"A detailed list of every open defect without prioritization or business context"
+			"A detailed list of every open defect without prioritization or business context",
+			"Technical stack traces and database query plans without translation to business impact"
 		],
-		"correctIndex": 2,
+		"correctIndex": 1,
 		"explanation": "Executive communications during rollout issues must translate technical status into business impact, actions, timelines, and explicit leadership decisions.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
@@ -32949,9 +32949,9 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "After a Friday production release, inbound integration jobs fail silently after a ServiceNow release, what troubleshooting step should the platform owner champion first?",
 		"choices": [
 			"Review integration logs, compare pre- and post-release configurations, and validate credential and endpoint health",
-			"Assign resolution only to the external source system team without platform coordination",
 			"Rollback the entire instance to the prior major version without impact analysis",
-			"Disable all inbound integrations until the next maintenance window"
+			"Disable all inbound integrations until the next maintenance window",
+			"Assign resolution only to the external source system team without platform coordination"
 		],
 		"correctIndex": 0,
 		"explanation": "Silent integration failures after release typically require coordinated log analysis and configuration comparison—not blind rollbacks or siloed troubleshooting.",
@@ -32966,10 +32966,10 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"questionType": "multi",
 		"prompt": "A federated enterprise launches ServiceNow across IT, HR, and procurement with separate delivery teams. Which coordination mechanisms should the platform owner establish? (Choose two.)",
 		"choices": [
-			"A shared release calendar with dependency tracking across workstreams",
 			"Regular cross-team governance forums with defined decision rights",
-			"Independent production deployments without change coordination",
-			"Separate data models per team to avoid collaboration overhead"
+			"A shared release calendar with dependency tracking across workstreams",
+			"Separate data models per team to avoid collaboration overhead",
+			"Independent production deployments without change coordination"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
@@ -33030,12 +33030,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 109,
 		"prompt": "An implementation partner reports green status, but adoption champions say business teams are not ready for process changes. What should the platform owner do before go-live?",
 		"choices": [
-			"Proceed because partner status overrides business readiness concerns",
-			"Reassess launch readiness using adoption, training, support, and business sign-off criteria alongside technical milestones",
 			"Convert all readiness concerns into post-launch enhancement stories synchronized with discovery credentials and schedule windows.",
-			"Remove champions from the readiness process to avoid subjective feedback"
+			"Remove champions from the readiness process to avoid subjective feedback",
+			"Reassess launch readiness using adoption, training, support, and business sign-off criteria alongside technical milestones",
+			"Proceed because partner status overrides business readiness concerns"
 		],
-		"correctIndex": 1,
+		"correctIndex": 2,
 		"explanation": "Expert delivery readiness combines technical, business, adoption, and support evidence before go-live rather than relying on partner status alone.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
@@ -33047,12 +33047,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 110,
 		"prompt": "A ServiceNow implementation partners with a systems integrator and three internal product teams. Which coordination model best prevents duplicate configuration and conflicting releases?",
 		"choices": [
-			"Mandate that only the integrator may access sub-production environments",
 			"Outsource all decisions to the integrator without internal product accountability",
-			"Allow each team to configure production independently with no shared change calendar",
-			"Define a federated delivery model with shared standards, a central release board, and named integration owners per domain"
+			"Define a federated delivery model with shared standards, a central release board, and named integration owners per domain",
+			"Mandate that only the integrator may access sub-production environments",
+			"Allow each team to configure production independently with no shared change calendar"
 		],
-		"correctIndex": 3,
+		"correctIndex": 1,
 		"explanation": "Multi-vendor delivery succeeds with shared standards, centralized release coordination, and clear domain ownership—not ungoverned parallel changes.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/platform-administration.html"
@@ -33065,8 +33065,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "The platform team plans biweekly production releases across multiple scoped applications. Which testing strategy should the platform owner mandate?",
 		"choices": [
 			"Maintain automated regression suites executed in CI pipelines with risk-based manual testing for high-impact changes",
-			"Test only in production and rely on user reports to identify defects",
 			"Run full manual test scripts for every change regardless of scope or risk",
+			"Test only in production and rely on user reports to identify defects",
 			"Skip sub-production testing when release volume exceeds two per month"
 		],
 		"correctIndex": 0,
@@ -33082,15 +33082,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"questionType": "multi",
 		"prompt": "A major rollout experiences widespread login failures on day one. Which executive communication actions should the platform owner take immediately? (Choose two.)",
 		"choices": [
-			"Blame the identity provider publicly without internal verification",
 			"Notify sponsors with confirmed user impact scope and estimated recovery timeline",
+			"Activate a coordinated incident response with clear internal and external messaging owners",
 			"Wait until root cause is fully confirmed before informing any stakeholders",
-			"Activate a coordinated incident response with clear internal and external messaging owners"
+			"Blame the identity provider publicly without internal verification"
 		],
-		"correctIndex": 1,
+		"correctIndex": 0,
 		"correctIndexes": [
-			1,
-			3
+			0,
+			1
 		],
 		"explanation": "Critical rollout failures demand prompt sponsor notification and coordinated messaging; silence or premature blame undermines trust and recovery.",
 		"sourceUrls": [
@@ -33146,12 +33146,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 114,
 		"prompt": "During rollout stabilization, a retailer must deploy ServiceNow to 40 stores over six months, which phased rollout approach best manages risk?",
 		"choices": [
+			"Deploy to all stores simultaneously on a single weekend",
 			"Roll out alphabetically by store name without regard to operational similarity",
 			"Delay store deployment until headquarters processes reach full maturity",
-			"Pilot in a representative region, refine based on feedback, then scale in waves with shared lessons learned",
-			"Deploy to all stores simultaneously on a single weekend"
+			"Pilot in a representative region, refine based on feedback, then scale in waves with shared lessons learned"
 		],
-		"correctIndex": 2,
+		"correctIndex": 3,
 		"explanation": "Large-scale rollouts benefit from representative pilots, feedback-driven refinement, and sequenced waves—not big-bang or arbitrary ordering.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
@@ -33178,12 +33178,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 	{
 		"trackCode": "CPOE",
 		"order": 116,
-		"prompt": "Two weeks after go-live, transaction volumes meet targets but user satisfaction scores remain low. Given this scenario, what should the platform owner investigate first?",
+		"prompt": "Two weeks after go-live, transaction volumes meet targets but user satisfaction scores remain low. What should the platform owner investigate first?",
 		"choices": [
-			"Increase licensing costs to improve perceived platform value",
 			"Remove satisfaction surveys to avoid negative executive visibility",
+			"Declare the rollout successful because volume metrics are on target",
 			"Analyze adoption feedback, training gaps, and workflow friction points reported by affected roles",
-			"Declare the rollout successful because volume metrics are on target"
+			"Increase licensing costs to improve perceived platform value"
 		],
 		"correctIndex": 2,
 		"explanation": "Volume without satisfaction often signals adoption or enablement gaps; investigating user feedback and workflow friction addresses the root cause.",
@@ -33198,19 +33198,19 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"questionType": "multi",
 		"prompt": "Before each platform upgrade in a regulated enterprise, which testing activities should the platform owner require? (Choose two.)",
 		"choices": [
-			"Execute ATF suites against customized workflows in a clone environment",
-			"Review vendor release notes for breaking changes affecting governed integrations",
 			"Skip clone testing when the vendor marks the release as low risk",
-			"Deploy to production first and backfill test evidence afterward"
+			"Deploy to production first and backfill test evidence afterward",
+			"Execute ATF suites against customized workflows in a clone environment",
+			"Review vendor release notes for breaking changes affecting governed integrations"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"correctIndexes": [
-			0,
-			1
+			2,
+			3
 		],
 		"explanation": "Upgrade readiness in regulated environments requires clone-based automated testing plus release note review; skipping tests or reverse-order deployment increases compliance risk.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-administration/australia/install-and-upgrade/concept/c_TestingUpgradeReadiness.html"
+			"https://www.servicenow.com/docs/r/platform-administration/install-and-upgrade/concept/c_TestingUpgradeReadiness.html"
 		],
 		"domain": "Implementation and Delivery"
 	},
@@ -33280,9 +33280,9 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "When upgrade and release collide, a ServiceNow program nears completion, which handoff deliverable best prepares operations teams for steady-state support?",
 		"choices": [
 			"Documented runbooks, support tier definitions, known-issue register, and training materials aligned to live workflows",
-			"An archive of sprint retrospectives with no mapping to production support processes",
 			"A slide deck summarizing project budget without operational procedures",
-			"Access credentials shared informally without role-based support documentation"
+			"Access credentials shared informally without role-based support documentation",
+			"An archive of sprint retrospectives with no mapping to production support processes"
 		],
 		"correctIndex": 0,
 		"explanation": "Operations handoff requires actionable runbooks, support models, and training tied to live workflows—not budget summaries or informal credential sharing.",
@@ -33340,12 +33340,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 122,
 		"prompt": "The enterprise platform board lacks a charter and product teams escalate every design dispute to executives. Which governance action should the expert platform owner take first?",
 		"choices": [
-			"Create a governance charter defining board scope, decision rights, escalation paths, and delegated authority by decision type",
-			"Let each product team decide standards locally until executives object",
 			"Move all design decisions to the CFO because funding authority covers every platform choice",
+			"Let each product team decide standards locally until executives object",
+			"Create a governance charter defining board scope, decision rights, escalation paths, and delegated authority by decision type",
 			"Cancel governance forums until the backlog volume decreases"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "ServiceNow governance requires a chartered operating model with explicit decision rights and escalation paths so decisions occur at the right level.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/instance-administration/platform-governance.html"
@@ -33358,15 +33358,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"questionType": "multi",
 		"prompt": "Technical debt is accumulating across custom applications and CMDB data quality is declining. Which governance actions should the platform owner prioritize? (Choose two.)",
 		"choices": [
-			"Establish CMDB data ownership with health KPIs reviewed by a governance board",
-			"Create a visible technical debt register with remediation priorities tied to business risk",
 			"Grant all developers admin access to accelerate ungoverned fixes",
-			"Ignore debt until a major upgrade forces emergency remediation"
+			"Ignore debt until a major upgrade forces emergency remediation",
+			"Create a visible technical debt register with remediation priorities tied to business risk",
+			"Establish CMDB data ownership with health KPIs reviewed by a governance board"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"correctIndexes": [
-			0,
-			1
+			2,
+			3
 		],
 		"explanation": "Sustainable governance tracks technical debt transparently and assigns CMDB ownership with measurable health reviews—not reactive crisis management or ungoverned access.",
 		"sourceUrls": [
@@ -33422,12 +33422,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 125,
 		"prompt": "For pilot scope decisions, a global enterprise runs monthly major releases, weekly patches, and emergency hotfixes through one shared maintenance window, which release cadence governance model should the platform owner establish?",
 		"choices": [
-			"Delegate scheduling entirely to individual scrum teams without a published enterprise calendar",
 			"Suspend all patch activity until each major release completes its full regression cycle",
-			"Schedule every change type into the same weekly slot without distinguishing severity or rollback requirements",
-			"Tier releases by risk and impact with separate intake paths, blackout rules, and board-approved exception criteria for hotfixes"
+			"Tier releases by risk and impact with separate intake paths, blackout rules, and board-approved exception criteria for hotfixes",
+			"Delegate scheduling entirely to individual scrum teams without a published enterprise calendar",
+			"Schedule every change type into the same weekly slot without distinguishing severity or rollback requirements"
 		],
-		"correctIndex": 3,
+		"correctIndex": 1,
 		"explanation": "Complex release cadence governance separates risk tiers, defines intake and blackout rules, and governs hotfix exceptions so stability and business urgency coexist.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/instance-administration/platform-governance.html"
@@ -33440,8 +33440,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "A release train collides with a regulatory audit freeze and three product teams still demand production slots. How should the platform owner adjudicate the conflict?",
 		"choices": [
 			"Present impact analysis to the governance board with deferral options, compensating controls, and reprioritized train sequencing",
-			"Approve all requested dates to avoid stakeholder friction regardless of audit constraints",
 			"Cancel the release train permanently and move all work to the next fiscal year",
+			"Approve all requested dates to avoid stakeholder friction regardless of audit constraints",
 			"Allow teams to self-deploy during the freeze using personal admin accounts"
 		],
 		"correctIndex": 0,
@@ -33457,15 +33457,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"questionType": "multi",
 		"prompt": "Executive sponsors ask how release cadence governance will scale as the platform portfolio grows. Which artifacts should the platform owner institutionalize? (Choose two.)",
 		"choices": [
-			"A policy allowing production pushes whenever developers finish coding",
 			"A published release calendar with intake deadlines tied to dependency and test readiness gates",
+			"Risk-tiered change categories with defined approval paths and rollback expectations",
 			"Verbal stand-up agreements that replace documented release criteria",
-			"Risk-tiered change categories with defined approval paths and rollback expectations"
+			"A policy allowing production pushes whenever developers finish coding"
 		],
-		"correctIndex": 1,
+		"correctIndex": 0,
 		"correctIndexes": [
-			1,
-			3
+			0,
+			1
 		],
 		"explanation": "Scalable release governance relies on a shared calendar with readiness gates and risk-tiered approval paths—not informal agreements or ungoverned deployments.",
 		"sourceUrls": [
@@ -33480,14 +33480,14 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "An enterprise runs separate ITSM, CSM, and HRSD roadmaps that compete for shared platform capacity. Which ServiceNow governance practices should the platform owner institutionalize? (Choose two.)",
 		"choices": [
 			"Portfolio governance that scores demand across product families using enterprise value and capacity constraints",
-			"Architecture governance that enforces shared data, integration, and experience standards across domains",
+			"First-come production scheduling for any team with a funded business sponsor",
 			"Independent product roadmaps that consume shared capacity without cross-domain prioritization",
-			"First-come production scheduling for any team with a funded business sponsor"
+			"Architecture governance that enforces shared data, integration, and experience standards across domains"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			1
+			3
 		],
 		"explanation": "Cross-product ServiceNow governance coordinates portfolio demand and architecture standards across ITSM, CSM, HRSD, and other platform domains.",
 		"sourceUrls": [
@@ -33544,12 +33544,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 130,
 		"prompt": "When inbound integrations fail, undocumented customizations block upgrade readiness, how should the platform owner initiate technical debt lifecycle governance?",
 		"choices": [
-			"Grant blanket developer admin rights so teams can fix debt independently overnight",
 			"Stand up a debt register with business owners, severity scoring, remediation targets, and quarterly board review cadence",
+			"Wait until the next major upgrade fails before cataloging customization issues",
 			"Delete all custom records without impact analysis to accelerate the upgrade window",
-			"Wait until the next major upgrade fails before cataloging customization issues"
+			"Grant blanket developer admin rights so teams can fix debt independently overnight"
 		],
-		"correctIndex": 1,
+		"correctIndex": 0,
 		"explanation": "Technical debt lifecycle governance starts with a visible register, accountable owners, scored priorities, and recurring board review—not reactive crisis cleanup or ungoverned access.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/instance-administration/platform-governance.html"
@@ -33561,12 +33561,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 131,
 		"prompt": "The CFO asks why debt remediation should consume capacity during a feature-heavy quarter. How should the platform owner justify lifecycle investment?",
 		"choices": [
-			"Link debt reduction to reduced incident cost, faster releases, and lower upgrade risk with quantified carry-forward impact if deferred",
-			"Argue that debt is purely technical and unrelated to financial outcomes",
 			"Promise to eliminate all debt in one sprint without capacity planning",
-			"Recommend pausing governance until feature backlog reaches zero distributed through approved software entitlement channels only."
+			"Recommend pausing governance until feature backlog reaches zero distributed through approved software entitlement channels only.",
+			"Link debt reduction to reduced incident cost, faster releases, and lower upgrade risk with quantified carry-forward impact if deferred",
+			"Argue that debt is purely technical and unrelated to financial outcomes"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Executive justification connects debt remediation to incident reduction, delivery speed, and upgrade risk—with explicit cost of deferral.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/cloud-governance-suite/cloud-governance-suite.html"
@@ -33579,14 +33579,14 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"questionType": "multi",
 		"prompt": "Technical debt spans obsolete integrations, duplicate workflows, and unsupported scripting patterns. Which lifecycle governance practices should the platform owner enforce? (Choose two.)",
 		"choices": [
+			"Track debt age, owner, and target resolution date in a board-visible register",
 			"Accept unbounded debt accumulation when feature demand exceeds capacity",
 			"Hide debt items from executives to avoid slowing approval cycles",
-			"Require new work to retire or refactor related debt items before net-new scope expands",
-			"Track debt age, owner, and target resolution date in a board-visible register"
+			"Require new work to retire or refactor related debt items before net-new scope expands"
 		],
-		"correctIndex": 2,
+		"correctIndex": 0,
 		"correctIndexes": [
-			2,
+			0,
 			3
 		],
 		"explanation": "Debt lifecycle governance couples intake controls with transparent tracking—new scope should address related debt, and registers must remain visible to leadership.",
@@ -33661,9 +33661,9 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "For phased retail deployment, executives define reliability and auditability as core organizational values, how should the platform owner align CMDB governance?",
 		"choices": [
 			"Define CI classes, ownership, and quality thresholds that map directly to those values with executive-approved KPIs",
-			"Postpone CMDB standards until every legacy system is fully retired",
 			"Populate the CMDB opportunistically during incidents without ownership or quality targets",
-			"Limit CMDB scope to hardware inventory while ignoring applications and services"
+			"Limit CMDB scope to hardware inventory while ignoring applications and services",
+			"Postpone CMDB standards until every legacy system is fully retired"
 		],
 		"correctIndex": 0,
 		"explanation": "CMDB governance aligned to organizational values translates executive priorities into CI scope, ownership, quality thresholds, and measurable KPIs.",
@@ -33677,12 +33677,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 136,
 		"prompt": "A governance review finds that CMDB ownership, CSDM alignment, and service mapping decisions are made by different teams with no common standard. What should the platform owner mandate?",
 		"choices": [
-			"A data and service governance model with accountable stewards, CSDM standards, reconciliation policy, and board-reviewed quality KPIs",
 			"Separate local standards for each team because CMDB data quality is primarily an operations issue",
-			"Annual manual cleanup without service owners or reconciliation rules",
-			"Removal of service relationships to reduce disagreement over ownership"
+			"A data and service governance model with accountable stewards, CSDM standards, reconciliation policy, and board-reviewed quality KPIs",
+			"Removal of service relationships to reduce disagreement over ownership",
+			"Annual manual cleanup without service owners or reconciliation rules"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"explanation": "Governance over CMDB and CSDM requires accountable stewardship, standards, policy, and measurable quality reviewed through the operating model.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management/configuration-management.html",
@@ -33696,15 +33696,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"questionType": "multi",
 		"prompt": "The enterprise values customer-obsessed service delivery and cost transparency. Which CMDB governance actions should the platform owner prioritize? (Choose two.)",
 		"choices": [
-			"Link business services to supporting CIs so impact analysis reflects customer-facing outcomes",
-			"Publish data quality scorecards with remediation owners reviewed at governance cadences",
 			"Exclude financial attributes from CI records to simplify data entry",
+			"Publish data quality scorecards with remediation owners reviewed at governance cadences",
+			"Link business services to supporting CIs so impact analysis reflects customer-facing outcomes",
 			"Defer all discovery integration until CMDB completeness reaches one hundred percent"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"correctIndexes": [
-			0,
-			1
+			1,
+			2
 		],
 		"explanation": "Value-aligned CMDB governance connects services to supporting CIs for impact visibility and uses scorecards with accountable remediation—not incomplete or perfection-gated models.",
 		"sourceUrls": [
@@ -33717,12 +33717,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 138,
 		"prompt": "Before operations handoff, audit findings cite incomplete CI ownership, how should the platform owner respond to the executive platform board?",
 		"choices": [
-			"Commit to full CMDB accuracy within one week without resource or process changes",
-			"Present an ownership model, phased remediation plan, quality KPIs, and funding tied to risk reduction milestones",
 			"Shift ownership accountability entirely to external discovery vendors",
-			"Recommend disabling CMDB access for auditors to limit exposure"
+			"Recommend disabling CMDB access for auditors to limit exposure",
+			"Present an ownership model, phased remediation plan, quality KPIs, and funding tied to risk reduction milestones",
+			"Commit to full CMDB accuracy within one week without resource or process changes"
 		],
-		"correctIndex": 1,
+		"correctIndex": 2,
 		"explanation": "Executive response to CMDB audit gaps requires an ownership model, phased plan, KPIs, and resourced milestones—not unrealistic timelines or accountability shifts.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/cloud-governance-suite/cloud-governance-suite.html"
@@ -33778,8 +33778,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "For complex release cadence, the executive platform board questions rising demand intake, how should the platform owner frame the interaction?",
 		"choices": [
 			"Present portfolio health metrics, capacity constraints, strategic alignment criteria, and recommended investment trade-offs",
-			"Accept every request to maintain goodwill without discussing capacity limits",
 			"Decline to attend board sessions until demand volume decreases",
+			"Accept every request to maintain goodwill without discussing capacity limits",
 			"Redirect all executive questions to individual scrum teams without consolidated analysis"
 		],
 		"correctIndex": 0,
@@ -33794,12 +33794,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 141,
 		"prompt": "A demand governance board must rank competing ServiceNow initiatives with limited funding. What should the platform owner supply to enable effective prioritization?",
 		"choices": [
-			"An open-ended backlog with no scoring model or capacity baseline",
 			"Value hypotheses, dependency maps, resource estimates, and risk profiles for each demand item",
+			"A list of requested features sorted only by loudest stakeholder advocacy",
 			"Technical design documents without business outcome or cost context",
-			"A list of requested features sorted only by loudest stakeholder advocacy"
+			"An open-ended backlog with no scoring model or capacity baseline"
 		],
-		"correctIndex": 1,
+		"correctIndex": 0,
 		"explanation": "Demand board decisions require value, dependencies, estimates, and risk—not advocacy volume or technical detail without business context.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/instance-administration/demand-governance.html"
@@ -33855,12 +33855,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 143,
 		"prompt": "When urgent fixes compete, teams propose CMDB changes without mapping to business services or technical assets, how should the platform owner apply the CSDM framework?",
 		"choices": [
-			"Defer CSDM alignment until all applications migrate off legacy tools",
 			"Limit governance to the CMDB table list without domain context sequenced after foundational platform services are stable.",
-			"Treat CSDM as optional documentation that teams can adopt after go-live",
-			"Require proposals to identify affected CSDM domains—foundation, ideation, build, or service delivery—and align data to those layers"
+			"Require proposals to identify affected CSDM domains—foundation, ideation, build, or service delivery—and align data to those layers",
+			"Defer CSDM alignment until all applications migrate off legacy tools",
+			"Treat CSDM as optional documentation that teams can adopt after go-live"
 		],
-		"correctIndex": 3,
+		"correctIndex": 1,
 		"explanation": "CSDM framework application maps work to foundation, ideation, build, and service delivery domains so data and services stay coherent across the platform.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management/configuration-management.html"
@@ -33915,12 +33915,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 145,
 		"prompt": "A legacy ITSM tool reaches end-of-life in six months while dependent workflows remain active. How should the platform owner govern deprecation data management?",
 		"choices": [
-			"Delete all historical records immediately without legal or operational retention review",
 			"Define a data migration and archival plan with retention rules, CI lifecycle updates, and verified cutover criteria",
+			"Export a flat file on decommission day without validating record completeness or relationships",
 			"Leave orphaned CI and ticket references in ServiceNow indefinitely to avoid migration effort",
-			"Export a flat file on decommission day without validating record completeness or relationships"
+			"Delete all historical records immediately without legal or operational retention review"
 		],
-		"correctIndex": 1,
+		"correctIndex": 0,
 		"explanation": "Legacy deprecation data management requires migration, archival, retention governance, CI lifecycle updates, and verified cutover—not ad hoc exports or orphaned records.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/servicenow-platform/configuration-management/configuration-management.html"
@@ -33932,12 +33932,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 146,
 		"prompt": "Executive sponsors ask how the platform will avoid service mapping gaps when retiring a mainframe billing system. What should the platform owner recommend?",
 		"choices": [
-			"Run a deprecation workshop mapping business services, dependent CIs, integrations, and replacement timelines with named owners",
-			"Remove the system from monitoring on retirement day and update documentation later",
 			"Keep the retired system visible as active in the CMDB to preserve historical reports",
-			"Transfer ownership to a vendor without internal data stewardship or validation"
+			"Transfer ownership to a vendor without internal data stewardship or validation",
+			"Run a deprecation workshop mapping business services, dependent CIs, integrations, and replacement timelines with named owners",
+			"Remove the system from monitoring on retirement day and update documentation later"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Deprecation workshops map services, CIs, integrations, and timelines with accountable owners so retirement does not create invisible gaps.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/instance-administration/platform-governance.html"
@@ -33950,14 +33950,14 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"questionType": "multi",
 		"prompt": "A legacy ERP module will be decommissioned while dependent workflows remain in ServiceNow. Which deprecation governance actions should the platform owner enforce? (Choose two.)",
 		"choices": [
+			"Establish retention and purge policies for archived records per compliance requirements",
 			"Ignore integration endpoints until users report broken transactions",
 			"Skip change records because the legacy system is already marked obsolete",
-			"Update CI lifecycle states and retire relationships after validated data migration",
-			"Establish retention and purge policies for archived records per compliance requirements"
+			"Update CI lifecycle states and retire relationships after validated data migration"
 		],
-		"correctIndex": 2,
+		"correctIndex": 0,
 		"correctIndexes": [
-			2,
+			0,
 			3
 		],
 		"explanation": "Deprecation governance updates CI lifecycle and relationships after validated migration and applies compliant retention policies—not reactive fixes or skipped change control.",
@@ -34030,14 +34030,14 @@ export const DEV_PRACTICE_QUESTIONS = [
 	{
 		"trackCode": "CPOE",
 		"order": 150,
-		"prompt": "After CI ownership findings, cMDB accuracy blocks service mapping for a digital transformation initiative, which CSDM foundation approach should the platform owner sponsor first?",
+		"prompt": "After CI ownership findings, CMDB accuracy blocks service mapping for a digital transformation initiative. Which CSDM foundation approach should the platform owner sponsor first?",
 		"choices": [
-			"Establish business application and service ownership with foundation data classes before expanding discovery scope",
 			"Populate every possible CI class immediately without assigning data stewards",
-			"Defer CMDB work until all legacy applications are fully retired",
-			"Rely on manual spreadsheets outside ServiceNow for authoritative service records"
+			"Establish business application and service ownership with foundation data classes before expanding discovery scope",
+			"Rely on manual spreadsheets outside ServiceNow for authoritative service records",
+			"Defer CMDB work until all legacy applications are fully retired"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"explanation": "CSDM foundation data with clear ownership creates a trustworthy base for service mapping; ungoverned population or external spreadsheets undermine enterprise visibility.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/cmdb-governance.html"
@@ -34049,15 +34049,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 151,
 		"prompt": "A CIO asks how family release cadence should align with enterprise change governance. What should the platform owner recommend?",
 		"choices": [
-			"Map vendor family releases to a published enterprise calendar with risk-tiered intake and blackout windows",
-			"Apply every vendor release to production on the vendor publish date without impact review",
 			"Freeze the instance on the current family version until all customizations are eliminated",
+			"Apply every vendor release to production on the vendor publish date without impact review",
+			"Map vendor family releases to a published enterprise calendar with risk-tiered intake and blackout windows",
 			"Let each application team schedule family upgrades independently without coordination"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Family release cadence must integrate with enterprise change governance through shared calendars, risk tiers, and blackout rules—not ad hoc or vendor-only timing.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/platform-administration/australia/install-and-upgrade/concept/c_UpgradeBestPractices.html"
+			"https://www.servicenow.com/docs/r/platform-administration/install-and-upgrade/concept/c_UpgradeBestPractices.html"
 		],
 		"domain": "ServiceNow Governance"
 	},
@@ -34066,12 +34066,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 152,
 		"prompt": "When demand volume rises, serviceNow announces deprecation of legacy client scripts across critical workflows, how should the platform owner lead remediation?",
 		"choices": [
-			"Request a permanent vendor exemption without documenting business impact",
-			"Inventory affected assets, assign owners, sequence migration to supported patterns, and track progress on a governance dashboard",
 			"Rewrite only the highest-visibility forms and leave background integrations unchanged",
-			"Disable deprecation notices so teams are not alerted to required changes"
+			"Disable deprecation notices so teams are not alerted to required changes",
+			"Inventory affected assets, assign owners, sequence migration to supported patterns, and track progress on a governance dashboard",
+			"Request a permanent vendor exemption without documenting business impact"
 		],
-		"correctIndex": 1,
+		"correctIndex": 2,
 		"explanation": "Legacy deprecation requires governed inventory, ownership, sequenced migration, and visible tracking—not exemptions, ignored notices, or partial remediation.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/instance-administration/platform-governance.html"
@@ -34085,14 +34085,14 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "The platform owner is asked to prove that governance boards are not slowing delivery unnecessarily. Which measures best demonstrate governance effectiveness? (Choose two.)",
 		"choices": [
 			"Demand cycle time segmented by risk tier with board decisions and rework rates",
-			"Release adherence, exception volume, and defect escape trends after governance decisions",
+			"Count of slide decks created for executives without outcome measures",
 			"Total number of governance meetings held regardless of decision quality",
-			"Count of slide decks created for executives without outcome measures"
+			"Release adherence, exception volume, and defect escape trends after governance decisions"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			1
+			3
 		],
 		"explanation": "Governance effectiveness is measured through throughput, decision quality, release adherence, exceptions, and escaped defects—not meeting volume.",
 		"sourceUrls": [
@@ -34146,14 +34146,14 @@ export const DEV_PRACTICE_QUESTIONS = [
 	{
 		"trackCode": "CPOE",
 		"order": 155,
-		"prompt": "The CFO withholds funding for technical debt until business value is demonstrated. Given this scenario, how should the platform owner frame the investment case?",
+		"prompt": "The CFO withholds funding for technical debt until business value is demonstrated. How should the platform owner frame the investment case?",
 		"choices": [
-			"Quantify risk reduction, upgrade readiness, and operational cost of incidents linked to unresolved debt",
-			"Argue that all customizations must be removed before any financial analysis is possible",
 			"Request unlimited budget without tying debt items to measurable outcomes",
+			"Argue that all customizations must be removed before any financial analysis is possible",
+			"Quantify risk reduction, upgrade readiness, and operational cost of incidents linked to unresolved debt",
 			"Defer all debt discussion until the next major outage occurs"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Debt funding cases connect remediation to measurable risk, upgrade readiness, and incident cost—not vague requests or crisis-only timing.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/cloud-governance-suite/cloud-governance-suite.html"
@@ -34209,9 +34209,9 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "CMDB reconciliation reports show persistent duplicate CIs after discovery expansion. Which governance action should the platform owner enforce?",
 		"choices": [
 			"Assign reconciliation rules, CI ownership, and health KPIs reviewed by the CMDB governance council",
-			"Disable identification rules so duplicates are no longer flagged",
+			"Archive all CIs monthly and rebuild the CMDB from scratch",
 			"Allow each discovery source to create records without merge standards",
-			"Archive all CIs monthly and rebuild the CMDB from scratch"
+			"Disable identification rules so duplicates are no longer flagged"
 		],
 		"correctIndex": 0,
 		"explanation": "Reconciliation governance combines rules, ownership, and measurable health reviews; disabling rules or uncontrolled creation worsens data quality.",
@@ -34225,12 +34225,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 158,
 		"prompt": "Citizen development is expanding faster than the central platform team can review every app. Which governance model should the expert platform owner implement?",
 		"choices": [
-			"Permanent suspension of citizen development until central IT doubles headcount",
 			"Central review of every field label change by the executive platform board sequenced after master service agreement amendments are executed.",
-			"Unlimited maker access with no review because low-code work is always low risk",
-			"Risk-tiered guardrails with approved templates, builder certification, delegated reviews, and escalation paths for high-risk apps"
+			"Risk-tiered guardrails with approved templates, builder certification, delegated reviews, and escalation paths for high-risk apps",
+			"Permanent suspension of citizen development until central IT doubles headcount",
+			"Unlimited maker access with no review because low-code work is always low risk"
 		],
-		"correctIndex": 3,
+		"correctIndex": 1,
 		"explanation": "Scalable ServiceNow governance supports low-code growth through risk-tiered guardrails, enablement, delegated review, and escalation for higher-risk work.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/servicenow-platform/servicenow-platform.html",
@@ -34245,14 +34245,14 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "When CMDB proposals lack mapping, cSDM-aligned service mapping, which governance investments should the platform owner secure? (Choose two.)",
 		"choices": [
 			"Named data stewards for foundation classes with escalation paths for quality defects",
-			"Service mapping workshops that tie technical CIs to business services and owners",
 			"Immediate retirement of every discovery connector before ownership is assigned",
+			"Service mapping workshops that tie technical CIs to business services and owners",
 			"Exemption from executive reporting until CMDB completeness reaches one hundred percent"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			1
+			2
 		],
 		"explanation": "CSDM success requires stewards, escalation, and business-aligned mapping—not premature connector removal or absent executive visibility.",
 		"sourceUrls": [
@@ -34265,12 +34265,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 160,
 		"prompt": "The executive platform board asks which metric most directly shows whether governance is reducing delivery risk over time. Which measure should the platform owner highlight?",
 		"choices": [
-			"Technical debt burn-down tied to business risk, release exceptions, and defect escape trends",
-			"Total count of governance meetings held regardless of decisions or outcomes",
 			"Number of dashboard widgets created for executives during the quarter",
-			"Volume of developer commits without connection to release quality or risk"
+			"Volume of developer commits without connection to release quality or risk",
+			"Technical debt burn-down tied to business risk, release exceptions, and defect escape trends",
+			"Total count of governance meetings held regardless of decisions or outcomes"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Governance metrics should show whether risk is actually declining through debt reduction, fewer exceptions, and better release quality—not meeting or artifact volume.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/instance-administration/platform-governance.html"
@@ -34282,12 +34282,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 161,
 		"prompt": "A SOX audit flags weak evidence linking ServiceNow production changes to approval and testing. Which compliance response should the expert platform owner lead?",
 		"choices": [
+			"Ask teams to verbally confirm that changes were approved during sprint reviews",
 			"Remove low-risk changes from audit scope without control owner approval",
 			"Grant auditors admin access so they can reconstruct evidence themselves",
-			"Map change controls to SOX objectives, retain approval and test evidence, and report remediation status to the risk committee",
-			"Ask teams to verbally confirm that changes were approved during sprint reviews"
+			"Map change controls to SOX objectives, retain approval and test evidence, and report remediation status to the risk committee"
 		],
-		"correctIndex": 2,
+		"correctIndex": 3,
 		"explanation": "SOX-aligned platform ownership requires control mapping, retained evidence, and accountable remediation reporting for production change governance.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-security/platform-security.html"
@@ -34297,7 +34297,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 	{
 		"trackCode": "CPOE",
 		"order": 162,
-		"prompt": "The CISO asks how ServiceNow security investments create business value beyond compliance checkboxes. Given this scenario, how should the platform owner respond?",
+		"prompt": "The CISO asks how ServiceNow security investments create business value beyond compliance checkboxes. How should the platform owner respond?",
 		"choices": [
 			"Frame security controls as enablers of trusted digital services, faster partner onboarding, and reduced breach-related downtime costs",
 			"Present security solely as a mandatory cost center with no connection to business outcomes",
@@ -34316,12 +34316,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 163,
 		"prompt": "Internal audit requests evidence that integration activity on the production instance is traceable. What should the platform owner provide?",
 		"choices": [
-			"Screenshots of IntegrationHub designer views only",
 			"An inventory of catalog items unrelated to interface traffic",
 			"System audit records, transaction logs, and access reviews tied to integration service accounts",
-			"A narrative memo stating integrations are secure without log extracts"
+			"A narrative memo stating integrations are secure without log extracts",
+			"Screenshots of IntegrationHub designer views only"
 		],
-		"correctIndex": 2,
+		"correctIndex": 1,
 		"explanation": "Audit evidence for integrations combines system audit trails, transaction logs, and access reviews—not unsupported narratives or unrelated artifacts.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-security/platform-security.html"
@@ -34376,12 +34376,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 165,
 		"prompt": "A multinational firm must demonstrate GDPR-aligned processing for employee records in ServiceNow. Which regulatory alignment step should the platform owner lead?",
 		"choices": [
-			"Document lawful basis, data minimization, retention schedules, and subject-access procedures in the governance register",
 			"Collect all available HR attributes by default because storage is inexpensive",
-			"Rely on end-user training slides as the sole privacy control",
-			"Export production data to local spreadsheets for easier analytics"
+			"Document lawful basis, data minimization, retention schedules, and subject-access procedures in the governance register",
+			"Export production data to local spreadsheets for easier analytics",
+			"Rely on end-user training slides as the sole privacy control"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"explanation": "GDPR alignment requires documented lawful basis, minimization, retention, and access procedures—not excessive collection or informal controls.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-security/platform-security.html"
@@ -34416,15 +34416,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"questionType": "multi",
 		"prompt": "Given a scenario hardening a production instance before a security assessment, which security options should the platform owner implement? (Choose two.)",
 		"choices": [
-			"Disable all ACLs temporarily so assessors can browse every table",
 			"Share a single break-glass admin password across the operations team",
 			"Enforce multi-factor authentication for interactive privileged users",
-			"Restrict inbound integration traffic to approved endpoints and credential aliases"
+			"Restrict inbound integration traffic to approved endpoints and credential aliases",
+			"Disable all ACLs temporarily so assessors can browse every table"
 		],
-		"correctIndex": 2,
+		"correctIndex": 1,
 		"correctIndexes": [
-			2,
-			3
+			1,
+			2
 		],
 		"explanation": "Pre-assessment hardening strengthens MFA and integration boundaries—not ACL removal or shared break-glass credentials.",
 		"sourceUrls": [
@@ -34435,12 +34435,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 	{
 		"trackCode": "CPOE",
 		"order": 168,
-		"prompt": "Sales leadership asks whether ServiceNow security certifications accelerate enterprise deals. Given this scenario, how should the platform owner connect security to business advantage?",
+		"prompt": "Sales leadership asks whether ServiceNow security certifications accelerate enterprise deals. How should the platform owner connect security to business advantage?",
 		"choices": [
 			"Demonstrate how documented controls, audit readiness, and incident response maturity reduce customer due-diligence friction and contract delays",
-			"Defer security posture discussions until after contracts are signed retired from automation rules when the trigger condition changes.",
 			"Argue that security certifications are marketing artifacts with no deal impact",
-			"Recommend removing security documentation from RFP responses to shorten proposals"
+			"Recommend removing security documentation from RFP responses to shorten proposals",
+			"Defer security posture discussions until after contracts are signed retired from automation rules when the trigger condition changes."
 		],
 		"correctIndex": 0,
 		"explanation": "Security maturity shortens enterprise sales cycles by satisfying due diligence efficiently; treating certifications as irrelevant or hiding posture undermines competitive positioning.",
@@ -34497,12 +34497,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 170,
 		"prompt": "The CISO mandates encryption at rest for regulated data stored in ServiceNow. Which platform owner response best satisfies the control?",
 		"choices": [
-			"Assume transport encryption alone covers data persisted in the database",
-			"Enable supported encryption options, validate key management responsibilities, and document scope in the security architecture",
 			"Defer encryption until after the next external audit cycle concludes routed through the service catalog request workflow.",
-			"Move regulated fields to clear-text custom tables for easier integrations"
+			"Move regulated fields to clear-text custom tables for easier integrations",
+			"Enable supported encryption options, validate key management responsibilities, and document scope in the security architecture",
+			"Assume transport encryption alone covers data persisted in the database"
 		],
-		"correctIndex": 1,
+		"correctIndex": 2,
 		"explanation": "Encryption at rest requires enabled platform options, validated key management, and documented scope—not TLS alone or deferred implementation.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-security/platform-security.html"
@@ -34557,12 +34557,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 172,
 		"prompt": "For deprecation audit evidence, dormant admin accounts are discovered before a regulatory examination, what remediation should the platform owner sponsor?",
 		"choices": [
-			"Document the finding without removing access until after the examination",
 			"Convert dormant accounts to shared team logins for continuity",
-			"Reset passwords but leave all roles unchanged to avoid project delays",
-			"Launch an access certification campaign, revoke unjustified privileges, and institute recurring review cadence"
+			"Launch an access certification campaign, revoke unjustified privileges, and institute recurring review cadence",
+			"Document the finding without removing access until after the examination",
+			"Reset passwords but leave all roles unchanged to avoid project delays"
 		],
-		"correctIndex": 3,
+		"correctIndex": 1,
 		"explanation": "Dormant privileged accounts require certification, revocation, and recurring review—not password-only resets or shared credentials.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-security/platform-security.html"
@@ -34575,8 +34575,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "A third-party SaaS connector will read employee records from ServiceNow. Which compliance decision should the platform owner require before activation?",
 		"choices": [
 			"Complete vendor risk assessment, least-privilege integration scope, and contractual data-processing terms",
-			"Approve the connector when the vendor provides a logo slide in the sales deck",
 			"Grant the vendor admin role to reduce implementation time",
+			"Approve the connector when the vendor provides a logo slide in the sales deck",
 			"Skip contractual review because the connector uses HTTPS transport"
 		],
 		"correctIndex": 0,
@@ -34592,15 +34592,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"questionType": "multi",
 		"prompt": "The risk committee asks how ongoing compliance will be monitored after go-live. Which activities should the platform owner commit to? (Choose two.)",
 		"choices": [
-			"Exclusive reliance on user self-attestation without system evidence",
 			"Quarterly control effectiveness reviews with metrics for access, changes, and data protection",
+			"Automated alerting on policy violations such as unauthorized exports or failed login spikes",
 			"Annual deletion of audit tables to control database growth",
-			"Automated alerting on policy violations such as unauthorized exports or failed login spikes"
+			"Exclusive reliance on user self-attestation without system evidence"
 		],
-		"correctIndex": 1,
+		"correctIndex": 0,
 		"correctIndexes": [
-			1,
-			3
+			0,
+			1
 		],
 		"explanation": "Ongoing compliance monitoring combines periodic control reviews and automated violation alerting—not audit destruction or self-attestation alone.",
 		"sourceUrls": [
@@ -34613,12 +34613,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 175,
 		"prompt": "When CMDB accuracy blocks mapping, a healthcare enterprise must demonstrate HIPAA-aligned controls on the Now Platform before go-live, how should the platform owner align regulatory requirements with platform capabilities?",
 		"choices": [
-			"Map required safeguards to native security features, documented roles, audit evidence, and governed data flows with legal and risk partners",
-			"Rely on vendor marketing materials without mapping controls to organizational policies",
 			"Defer all compliance mapping until after production launch to preserve schedule instrumented with transaction logs for forensic analysis.",
-			"Assign compliance solely to the audit team without platform governance involvement"
+			"Assign compliance solely to the audit team without platform governance involvement",
+			"Map required safeguards to native security features, documented roles, audit evidence, and governed data flows with legal and risk partners",
+			"Rely on vendor marketing materials without mapping controls to organizational policies"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Regulatory alignment requires translating policy obligations into concrete platform controls, roles, and evidence—not post-launch handoffs or vendor claims alone.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-security/platform-security.html"
@@ -34630,12 +34630,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 176,
 		"prompt": "The privacy office requires proof that employee data in ServiceNow follows GDPR retention and minimization commitments. What should the platform owner coordinate?",
 		"choices": [
+			"Broad collection of optional fields so future analytics teams have more data",
 			"Export of employee records to spreadsheets for easier manual review",
 			"Deletion of audit history whenever a user requests a profile update",
-			"Data inventory, lawful-basis documentation, retention schedules, deletion workflow evidence, and privacy officer sign-off",
-			"Broad collection of optional fields so future analytics teams have more data"
+			"Data inventory, lawful-basis documentation, retention schedules, deletion workflow evidence, and privacy officer sign-off"
 		],
-		"correctIndex": 2,
+		"correctIndex": 3,
 		"explanation": "GDPR-aligned ownership coordinates data inventory, lawful basis, minimization, retention, deletion evidence, and privacy approval.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-security/platform-security.html"
@@ -34667,14 +34667,14 @@ export const DEV_PRACTICE_QUESTIONS = [
 	{
 		"trackCode": "CPOE",
 		"order": 178,
-		"prompt": "A multinational firm must keep EU employee data within approved regions while sharing ITSM processes globally. Given this scenario, which platform approach best satisfies regulatory alignment?",
+		"prompt": "A multinational firm must keep EU employee data within approved regions while sharing ITSM processes globally. Which platform approach best satisfies regulatory alignment?",
 		"choices": [
-			"Rely on end-user discretion to avoid entering restricted data in shared forms",
 			"Design domain separation, data residency, and integration patterns validated with legal and privacy officers before rollout",
+			"Store all records in a single global domain to simplify reporting regardless of residency rules",
 			"Replicate production data to every subsidiary instance without classification review",
-			"Store all records in a single global domain to simplify reporting regardless of residency rules"
+			"Rely on end-user discretion to avoid entering restricted data in shared forms"
 		],
-		"correctIndex": 1,
+		"correctIndex": 0,
 		"explanation": "Cross-border compliance requires deliberate domain, residency, and integration design validated with privacy stakeholders—not undifferentiated global data pools.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-security/c_DomainSeparation.html"
@@ -34727,11 +34727,11 @@ export const DEV_PRACTICE_QUESTIONS = [
 	{
 		"trackCode": "CPOE",
 		"order": 180,
-		"prompt": "When ServiceNow deprecates patterns, quarterly access reviews reveal persistent over-provisioned admin roles, what should the platform owner prioritize to strengthen regulatory alignment?",
+		"prompt": "Quarterly access reviews reveal persistent over-provisioned admin roles on regulated ServiceNow data. What should the platform owner prioritize to strengthen regulatory alignment?",
 		"choices": [
 			"Implement least-privilege role design, automated certification workflows, and executive reporting on overdue attestations",
 			"Extend review cycles to annual intervals to reduce stakeholder burden",
-			"Remove certification requirements for roles tied to regulated data challenged when KPIs show no measurable improvement post-change.",
+			"Remove certification requirements for roles tied to regulated data to reduce review backlog",
 			"Allow managers to bulk-approve all roles without individual review"
 		],
 		"correctIndex": 0,
@@ -34746,12 +34746,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 181,
 		"prompt": "A production incident required emergency admin access during a regulatory blackout window. Which compliance control should the platform owner verify afterward?",
 		"choices": [
-			"Removal of the incident from audit reporting because it was urgent",
 			"Password sharing among responders to simplify future emergency access",
 			"Time-bound break-glass approval, activity logging, post-incident review, and revocation evidence",
-			"Permanent elevation for the responders because they may need access again"
+			"Permanent elevation for the responders because they may need access again",
+			"Removal of the incident from audit reporting because it was urgent"
 		],
-		"correctIndex": 2,
+		"correctIndex": 1,
 		"explanation": "Emergency access can be compliant when it is approved, time-bound, logged, reviewed, and revoked with evidence retained for auditors.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-security/platform-security.html"
@@ -34765,14 +34765,14 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "An external auditor evaluates platform logging and monitoring for a regulated workload. Which practices should the platform owner highlight as audit contributions? (Choose two.)",
 		"choices": [
 			"Immutable audit trails for privileged actions with retention aligned to policy",
-			"Purging audit records after thirty days regardless of regulatory retention requirements",
 			"Security event monitoring integrated with enterprise SIEM correlation rules",
-			"Disabling login failure logging to reduce noise in support queues"
+			"Disabling login failure logging to reduce noise in support queues",
+			"Purging audit records after thirty days regardless of regulatory retention requirements"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			2
+			1
 		],
 		"explanation": "Auditors expect durable privileged-action logs and integrated security monitoring—not truncated retention or suppressed failure evidence.",
 		"sourceUrls": [
@@ -34783,14 +34783,14 @@ export const DEV_PRACTICE_QUESTIONS = [
 	{
 		"trackCode": "CPOE",
 		"order": 183,
-		"prompt": "Business leaders want to onboard a partner integration that exchanges personally identifiable information. Given this case study, which security option best creates business advantage while meeting compliance expectations?",
+		"prompt": "Business leaders want to onboard a partner integration that exchanges personally identifiable information. Which security option best creates business advantage while meeting compliance expectations?",
 		"choices": [
-			"OAuth-scoped integration users, encrypted transport, contract testing, and documented data classification before production enablement",
 			"Shared integration credentials embedded in partner scripts for faster delivery",
-			"Unauthenticated REST endpoints restricted only by network firewall rules constrained by export control classifications on shared data sets.",
-			"Production data replication to the partner environment for debugging convenience"
+			"OAuth-scoped integration users, encrypted transport, contract testing, and documented data classification before production enablement",
+			"Production data replication to the partner environment for debugging convenience",
+			"Unauthenticated REST endpoints restricted only by network firewall rules"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"explanation": "Governed integration identity, encryption, and conformance testing enable partner workflows safely—turning security design into a business enabler rather than a late-stage blocker.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-security/platform-security.html"
@@ -34843,14 +34843,14 @@ export const DEV_PRACTICE_QUESTIONS = [
 	{
 		"trackCode": "CPOE",
 		"order": 185,
-		"prompt": "During a major incident, responders request elevated platform access to restore service. Given this scenario, which approach best balances compliance obligations with operational urgency?",
+		"prompt": "During a major incident, responders request elevated platform access to restore service. Which approach best balances compliance obligations with operational urgency?",
 		"choices": [
-			"Issue permanent admin roles to all responders before incidents occur",
-			"Grant just-in-time privileged access with automatic expiry, full audit capture, and post-incident access review",
 			"Share break-glass credentials in team chat channels for immediate availability",
-			"Disable audit logging during incidents to accelerate troubleshooting"
+			"Disable audit logging during incidents to accelerate troubleshooting",
+			"Grant just-in-time privileged access with automatic expiry, full audit capture, and post-incident access review",
+			"Issue permanent admin roles to all responders before incidents occur"
 		],
-		"correctIndex": 1,
+		"correctIndex": 2,
 		"explanation": "Time-bound elevated access with complete audit trails satisfies emergency response needs while preserving evidence for compliance review afterward.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-security/platform-security.html"
@@ -34864,14 +34864,14 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "Legal approves a cross-border ServiceNow rollout only if data residency and integration controls are demonstrable. Which controls should the platform owner include? (Choose two.)",
 		"choices": [
 			"Data classification mapped to residency rules, domain boundaries, and approved replication paths",
-			"Integration patterns with encryption, least-privilege credentials, logging, and contractual processing terms",
+			"Unlogged exports to regional spreadsheets for local teams during hypercare",
 			"One global unrestricted data pool so reporting is easier for executives",
-			"Unlogged exports to regional spreadsheets for local teams during hypercare"
+			"Integration patterns with encryption, least-privilege credentials, logging, and contractual processing terms"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			1
+			3
 		],
 		"explanation": "Cross-border compliance combines classification, residency design, domain controls, governed integrations, and processing terms.",
 		"sourceUrls": [
@@ -34886,14 +34886,14 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"questionType": "multi",
 		"prompt": "A regulated enterprise prepares for an annual compliance assessment of the Now Platform. Which platform owner actions most strengthen audit readiness? (Choose two.)",
 		"choices": [
-			"Restrict auditor access until all findings from prior years are fully remediated",
 			"Disable security plugins temporarily to improve instance performance during the audit window",
-			"Run pre-audit dry runs that validate log retention, role certifications, and exception remediation status",
-			"Maintain a current control matrix mapping policies to platform configurations and evidence owners"
+			"Maintain a current control matrix mapping policies to platform configurations and evidence owners",
+			"Restrict auditor access until all findings from prior years are fully remediated",
+			"Run pre-audit dry runs that validate log retention, role certifications, and exception remediation status"
 		],
-		"correctIndex": 2,
+		"correctIndex": 1,
 		"correctIndexes": [
-			2,
+			1,
 			3
 		],
 		"explanation": "Audit readiness depends on maintained control mappings and proactive dry runs—not performance shortcuts or withholding auditor engagement.",
@@ -34908,8 +34908,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "For CSDM service mapping, subsidiaries operate on a shared instance with different regulatory obligations, how should the platform owner achieve regulatory alignment?",
 		"choices": [
 			"Implement domain separation with scoped data policies, validated access models, and legal sign-off on cross-domain flows",
-			"Use a single undifferentiated domain and rely on user training to prevent data leakage",
 			"Grant all subsidiaries admin access so each can self-configure isolation",
+			"Use a single undifferentiated domain and rely on user training to prevent data leakage",
 			"Postpone domain design until after all business units share identical compliance requirements"
 		],
 		"correctIndex": 0,
@@ -34967,12 +34967,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 190,
 		"prompt": "An audit committee asks whether repeated access exceptions represent accepted risk or governance failure. Which response should the platform owner provide?",
 		"choices": [
+			"Assurance that exceptions are normal and do not require executive review",
 			"Deletion of expired exception records once access is removed",
 			"Permanent admin access for compliance staff so they can monitor exceptions manually",
-			"Exception register showing control owner approval, compensating controls, expiration dates, and remediation progress by risk level",
-			"Assurance that exceptions are normal and do not require executive review"
+			"Exception register showing control owner approval, compensating controls, expiration dates, and remediation progress by risk level"
 		],
-		"correctIndex": 2,
+		"correctIndex": 3,
 		"explanation": "Compliance exception governance distinguishes accepted residual risk from failure through approvals, compensating controls, expiration, and remediation tracking.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-security/platform-security.html"
@@ -34985,8 +34985,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "Legal counsel requires proof that sensitive employee health records on the platform meet encryption and access standards. How should the platform owner contribute to regulatory alignment?",
 		"choices": [
 			"Map data classifications to field-level protection, role restrictions, and audit evidence validated with privacy officers",
-			"Apply a single global encryption setting without field-level classification review",
 			"Rely on transport encryption alone while storing sensitive fields in clear text at rest",
+			"Apply a single global encryption setting without field-level classification review",
 			"Defer encryption design until after the first privacy incident occurs"
 		],
 		"correctIndex": 0,
@@ -35002,15 +35002,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"questionType": "multi",
 		"prompt": "The enterprise compliance program asks the platform owner to demonstrate ongoing governance value. Which contributions best satisfy that request? (Choose two.)",
 		"choices": [
-			"Granting compliance analysts permanent admin access for convenience",
 			"Quarterly control health dashboards tied to remediation SLAs and executive risk reporting",
+			"Participation in enterprise risk committees with platform-specific control test results",
 			"Eliminating change records for low-risk updates to reduce audit volume",
-			"Participation in enterprise risk committees with platform-specific control test results"
+			"Granting compliance analysts permanent admin access for convenience"
 		],
-		"correctIndex": 1,
+		"correctIndex": 0,
 		"correctIndexes": [
-			1,
-			3
+			0,
+			1
 		],
 		"explanation": "Platform owners add compliance value through visible control health metrics and active risk committee engagement—not audit avoidance or excessive privileged access.",
 		"sourceUrls": [
@@ -35064,14 +35064,14 @@ export const DEV_PRACTICE_QUESTIONS = [
 	{
 		"trackCode": "CPOE",
 		"order": 194,
-		"prompt": "For HIPAA-aligned go-live, enterprise architects are underutilized in platform decisions, the CIO wants stronger innovation governance. How should the platform owner engage enterprise architecture?",
+		"prompt": "Enterprise architects are underutilized in platform decisions, and the CIO wants stronger innovation governance. How should the platform owner engage enterprise architecture?",
 		"choices": [
+			"Limit architect involvement to post-production documentation only",
 			"Replace architecture review with developer peer code review for all platform changes",
 			"Defer architecture engagement until every legacy system is decommissioned",
-			"Embed architects in demand intake, design reviews, and capability roadmapping with decision rights on cross-domain patterns",
-			"Limit architect involvement to post-production documentation only"
+			"Embed architects in demand intake, design reviews, and capability roadmapping with decision rights on cross-domain patterns"
 		],
-		"correctIndex": 2,
+		"correctIndex": 3,
 		"explanation": "Enterprise architecture adds innovation value when engaged early in demand, design, and roadmap decisions—not relegated to after-the-fact documentation.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
@@ -35081,7 +35081,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 	{
 		"trackCode": "CPOE",
 		"order": 195,
-		"prompt": "When access reviews fail, business units demand faster workflow delivery, the platform owner must scale citizen development safely. Which approach best balances innovation with governance?",
+		"prompt": "Business units demand faster workflow delivery, and the platform owner must scale citizen development safely. Which approach best balances innovation with governance?",
 		"choices": [
 			"Provide approved templates, scoped roles, guardrail training, and a governed intake path for citizen-built applications",
 			"Grant all business users admin access to eliminate delivery bottlenecks",
@@ -35100,12 +35100,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 196,
 		"prompt": "The Center of Excellence for Innovation (CoEI) must expand from a single team to multiple regions. What should the platform owner prioritize to scale the CoEI model?",
 		"choices": [
-			"Eliminate guardrails in regional teams to accelerate local experiments",
 			"Replace the CoEI with ad hoc vendor projects in each region routed through the service catalog request workflow. measured against SLA targets and operational dashboards.",
 			"Standardize playbooks, federated delivery teams, shared guardrails, and regional champions with central quality oversight",
-			"Centralize all innovation work in headquarters without local empowerment"
+			"Centralize all innovation work in headquarters without local empowerment",
+			"Eliminate guardrails in regional teams to accelerate local experiments"
 		],
-		"correctIndex": 2,
+		"correctIndex": 1,
 		"explanation": "CoEI scaling requires consistent playbooks and guardrails with federated execution and regional champions—not centralized bottlenecks or ungoverned local experiments.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
@@ -35119,14 +35119,14 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "Executive sponsors want measurable innovation outcomes across the platform program. Which practices should the platform owner institutionalize? (Choose two.)",
 		"choices": [
 			"Instance and process benchmarks compared against peer cohorts to identify improvement opportunities",
-			"Tracking only the number of new applications without adoption or outcome metrics",
 			"Automation of repeatable platform operations with guardrails for sensitive actions",
-			"Eliminating pilot programs to deploy all ideas directly to production"
+			"Eliminating pilot programs to deploy all ideas directly to production",
+			"Tracking only the number of new applications without adoption or outcome metrics"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			2
+			1
 		],
 		"explanation": "Innovation maturity combines objective benchmarking and governed automation—not unmeasured app counts or skipping validation through pilots.",
 		"sourceUrls": [
@@ -35137,14 +35137,14 @@ export const DEV_PRACTICE_QUESTIONS = [
 	{
 		"trackCode": "CPOE",
 		"order": 198,
-		"prompt": "A platform owner launches an innovation champions network across business units. Given this scenario, which champion role definition best sustains enterprise-wide adoption?",
+		"prompt": "A platform owner launches an innovation champions network across business units. Which champion role definition best sustains enterprise-wide adoption?",
 		"choices": [
-			"Champions facilitate demand intake, share reusable patterns, coach peers, and escalate governance questions to the CoEI",
 			"Champions receive admin credentials to bypass all review processes for their departments",
-			"Champions focus solely on marketing events without connecting to delivery pipelines",
-			"Champions are volunteers with no connection to platform governance forums"
+			"Champions facilitate demand intake, share reusable patterns, coach peers, and escalate governance questions to the CoEI",
+			"Champions are volunteers with no connection to platform governance forums",
+			"Champions focus solely on marketing events without connecting to delivery pipelines"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"explanation": "Effective champions bridge business demand and platform governance through coaching, pattern reuse, and structured escalation—not unchecked admin access or disconnected advocacy.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
@@ -35199,12 +35199,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 200,
 		"prompt": "A global insurer is consolidating workflows onto one Now Platform instance. Enterprise architects report they learn about major design decisions too late. How should the platform owner engage architecture in the innovation pipeline?",
 		"choices": [
-			"Reserve architect time only for infrastructure sizing without application design input",
 			"Defer architecture participation until post-go-live optimization phases begin scoped to the vendor contract renewal evaluation window.",
 			"Establish a joint steering rhythm where architects co-own capability maps, review epics before funding, and gate cross-domain integrations",
-			"Route all architecture feedback through vendor project managers after sprints complete"
+			"Route all architecture feedback through vendor project managers after sprints complete",
+			"Reserve architect time only for infrastructure sizing without application design input"
 		],
-		"correctIndex": 2,
+		"correctIndex": 1,
 		"explanation": "Enterprise architecture adds innovation value when embedded early in capability mapping, epic review, and cross-domain gating—not relegated to post-delivery or infrastructure-only roles.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
@@ -35217,9 +35217,9 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "When subsidiary regulations differ, the CIO mandates citizen development as a pillar of digital strategy, regional leaders fear uncontrolled sprawl. Which organizational approach best embeds citizen development responsibly?",
 		"choices": [
 			"Define tiered citizen roles, a center-led enablement program, and business-unit sponsorship tied to audited use-case catalogs",
-			"Outsource citizen enablement entirely to a staffing vendor without internal governance forums",
 			"Publish an open invitation for any employee to build production applications without enrollment criteria",
-			"Restrict all app creation to centralized IT and eliminate the citizen development mandate"
+			"Restrict all app creation to centralized IT and eliminate the citizen development mandate",
+			"Outsource citizen enablement entirely to a staffing vendor without internal governance forums"
 		],
 		"correctIndex": 0,
 		"explanation": "Citizen development belongs in organizational strategy through tiered roles, center-led enablement, and audited catalogs—not open production access or outsourcing without governance.",
@@ -35233,12 +35233,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 202,
 		"prompt": "The platform owner's Center of Excellence for Innovation piloted successfully in one division. Executive leadership wants enterprise expansion within two fiscal quarters. What scaling model should the platform owner adopt?",
 		"choices": [
+			"Shift CoEI responsibilities to individual app owners without central coordination or shared playbooks",
 			"Deploy trained regional CoEI cells that follow shared intake templates, reuse central assets, and report unified innovation metrics",
 			"Clone the original team verbatim in every region without adapting guardrails to local compliance needs",
-			"Pause expansion until every legacy process is manually documented in a wiki",
-			"Shift CoEI responsibilities to individual app owners without central coordination or shared playbooks"
+			"Pause expansion until every legacy process is manually documented in a wiki"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"explanation": "CoEI scaling requires federated regional cells with shared templates, assets, and metrics—not unadapted clones, documentation delays, or uncoordinated app-owner silos.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
@@ -35249,7 +35249,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"trackCode": "CPOE",
 		"order": 203,
 		"questionType": "multi",
-		"prompt": "After privileged access findings, innovation champions operate in twelve countries, the platform owner must standardize their operating model. Which elements should every champion chapter implement? (Choose two.)",
+		"prompt": "Innovation champions operate in twelve countries, and the platform owner must standardize their operating model. Which elements should every champion chapter implement? (Choose two.)",
 		"choices": [
 			"A recurring forum cadence that converts business ideas into scored backlog items for the CoEI intake process",
 			"Documented playbooks for reusing approved integrations, flows, and data models across similar use cases",
@@ -35316,9 +35316,9 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "A manufacturing enterprise relies on innovation champions embedded in plants worldwide. What role scope best positions champions as durable agents of platform adoption?",
 		"choices": [
 			"Act as local translators who validate use cases, mentor citizen builders, and surface compliance risks to the CoEI",
-			"Operate as one-time event facilitators with no accountability for post-pilot production handoffs",
 			"Serve as part-time marketers who distribute newsletters without participating in delivery governance",
-			"Function as shadow developers with silent admin credentials for expediting unreviewed changes"
+			"Function as shadow developers with silent admin credentials for expediting unreviewed changes",
+			"Operate as one-time event facilitators with no accountability for post-pilot production handoffs"
 		],
 		"correctIndex": 0,
 		"explanation": "Champions sustain adoption by validating demand, mentoring builders, and escalating compliance risks—not through marketing-only roles or unchecked admin access.",
@@ -35332,12 +35332,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 206,
 		"prompt": "When architects are underused, the platform owner must justify automation investment to the CFO, benchmarking data from peer instances is available. How should benchmarking inform the implementation strategy?",
 		"choices": [
-			"Compare key health and process metrics against similar industries, rank gaps by ROI potential, and tie funding requests to quantified improvement targets",
 			"Publish benchmark charts in a quarterly newsletter without linking findings to funded work items",
-			"Ignore external benchmarks because every organization is uniquely incomparable",
-			"Use benchmarks solely to penalize teams whose metrics fall below median without offering remediation paths"
+			"Compare key health and process metrics against similar industries, rank gaps by ROI potential, and tie funding requests to quantified improvement targets",
+			"Use benchmarks solely to penalize teams whose metrics fall below median without offering remediation paths",
+			"Ignore external benchmarks because every organization is uniquely incomparable"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"explanation": "Benchmarking drives implementation strategy when gaps are ranked by ROI and linked to funded targets—not when used for reporting alone or punitive comparisons.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
@@ -35349,12 +35349,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 207,
 		"prompt": "The platform program identified dozens of manual fulfillment steps suitable for automation. Delivery capacity is limited. Which prioritization approach aligns with innovation implementation strategy?",
 		"choices": [
-			"Score candidates by volume, error rate, regulatory sensitivity, and reuse potential before sequencing automation waves",
-			"Automate alphabetically by process name to avoid debates among stakeholders",
 			"Delay all automation until every custom application is rebuilt on the latest store release",
+			"Automate alphabetically by process name to avoid debates among stakeholders",
+			"Score candidates by volume, error rate, regulatory sensitivity, and reuse potential before sequencing automation waves",
 			"Automate only the processes requested by the loudest business sponsor regardless of enterprise impact"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Automation scaling requires scored prioritization by volume, quality, compliance, and reuse—not arbitrary ordering, release delays, or sponsor noise alone.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/servicenow-platform/servicenow-platform.html"
@@ -35367,15 +35367,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"questionType": "multi",
 		"prompt": "Executive leadership asks the platform owner to align citizen development with enterprise architecture standards. Which practices should be institutionalized? (Choose two.)",
 		"choices": [
-			"A curated library of approved connectors, data models, and workflow templates for citizen builders to reuse",
-			"Mandatory architecture pattern reviews for citizen apps that integrate with shared data domains or external systems",
 			"Prohibiting citizen developers from accessing any shared integration endpoints",
-			"Waiving design standards for citizen apps to maximize the count of new applications launched each quarter"
+			"Waiving design standards for citizen apps to maximize the count of new applications launched each quarter",
+			"Mandatory architecture pattern reviews for citizen apps that integrate with shared data domains or external systems",
+			"A curated library of approved connectors, data models, and workflow templates for citizen builders to reuse"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"correctIndexes": [
-			0,
-			1
+			2,
+			3
 		],
 		"explanation": "Citizen development aligns with enterprise architecture through pattern reviews and reusable approved assets—not through waived standards or blocked integrations.",
 		"sourceUrls": [
@@ -35429,11 +35429,11 @@ export const DEV_PRACTICE_QUESTIONS = [
 	{
 		"trackCode": "CPOE",
 		"order": 210,
-		"prompt": "When business units need speed, hR and Finance both sponsor citizen development cohorts, the platform owner sees duplicated training and conflicting guardrails. What organizational adjustment best supports enterprise strategy?",
+		"prompt": "When business units need speed, HR and Finance both sponsor citizen development cohorts, and the platform owner sees duplicated training and conflicting guardrails. What organizational adjustment best supports enterprise strategy?",
 		"choices": [
 			"Unify cohort curriculum, shared success metrics, and a single CoEI-sponsored certification path across sponsoring functions",
-			"Allow each function to maintain separate untracked builder programs without central coordination",
 			"Disband both cohorts and require all requests through a single IT ticket queue",
+			"Allow each function to maintain separate untracked builder programs without central coordination",
 			"Mandate that only HR employees may enroll as citizen developers going forward"
 		],
 		"correctIndex": 0,
@@ -35448,12 +35448,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 211,
 		"prompt": "After acquiring a subsidiary, the platform owner must integrate the subsidiary's builders into the corporate CoEI model. Which approach preserves innovation momentum while aligning governance?",
 		"choices": [
-			"Outsource subsidiary innovation entirely and exclude it from enterprise platform metrics",
 			"Run a federated onboarding with mapped guardrails, shared asset repositories, and joint intake into the parent CoEI funding cycle",
+			"Immediate decommission of all subsidiary applications without migration assessment",
 			"Permanent isolation of subsidiary builders from parent CoEI standards to avoid change fatigue",
-			"Immediate decommission of all subsidiary applications without migration assessment"
+			"Outsource subsidiary innovation entirely and exclude it from enterprise platform metrics"
 		],
-		"correctIndex": 1,
+		"correctIndex": 0,
 		"explanation": "CoEI integration after acquisition succeeds through federated onboarding with shared assets and joint intake—not forced decommission, permanent isolation, or outsourced exclusion.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/servicenow-platform/servicenow-platform.html"
@@ -35465,12 +35465,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 212,
 		"prompt": "A retail conglomerate plans a major Now Platform expansion into customer service and supply chain. The platform owner wants enterprise architects to accelerate innovation without becoming a bottleneck. How should architects be engaged?",
 		"choices": [
-			"Assign architects as advisors on intake triage with time-boxed design clinics and pre-approved pattern libraries for common integrations",
-			"Require full architecture documents for every configuration change regardless of scope or risk",
 			"Remove architects from innovation forums to shorten meeting schedules",
-			"Limit architects to reviewing vendor invoices rather than solution designs"
+			"Limit architects to reviewing vendor invoices rather than solution designs",
+			"Assign architects as advisors on intake triage with time-boxed design clinics and pre-approved pattern libraries for common integrations",
+			"Require full architecture documents for every configuration change regardless of scope or risk"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Enterprise architects accelerate innovation through triage advisory, time-boxed clinics, and pattern libraries—not blanket documentation mandates or exclusion from design decisions.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
@@ -35483,14 +35483,14 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"questionType": "multi",
 		"prompt": "The implementation leadership team wants innovation metrics that justify continued platform investment. Which measurement practices should the platform owner adopt? (Choose two.)",
 		"choices": [
+			"Benchmark instance health scores and adoption indexes against anonymized peer cohorts each quarter",
 			"Report only the total number of developer licenses purchased without utilization analysis",
 			"Measure success exclusively by counting CoEI slide decks delivered to executives",
-			"Track cycle-time and error-rate improvements on automated processes against pre-automation baselines",
-			"Benchmark instance health scores and adoption indexes against anonymized peer cohorts each quarter"
+			"Track cycle-time and error-rate improvements on automated processes against pre-automation baselines"
 		],
-		"correctIndex": 2,
+		"correctIndex": 0,
 		"correctIndexes": [
-			2,
+			0,
 			3
 		],
 		"explanation": "Innovation investment is justified through automation outcome tracking and peer benchmarking—not license counts alone or presentation volume without delivery evidence.",
@@ -35547,12 +35547,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 215,
 		"prompt": "When citizen development scales, champion forums have become irregular and backlog conversion is stalling, the platform owner must reset cadence discipline. Which operating rhythm best restores input-to-delivery flow?",
 		"choices": [
-			"Quarterly surveys replacing live forums while eliminating backlog transparency",
 			"Monthly champion councils with pre-submitted use cases, same-day scoring, and published SLA for CoEI handoff",
+			"Annual champion gatherings without structured intake or documented follow-up actions",
 			"Ad hoc champion chats in messaging apps with no connection to funded delivery pipelines",
-			"Annual champion gatherings without structured intake or documented follow-up actions"
+			"Quarterly surveys replacing live forums while eliminating backlog transparency"
 		],
-		"correctIndex": 1,
+		"correctIndex": 0,
 		"explanation": "Champion cadence restores delivery flow through regular councils, pre-submitted intake, scoring, and defined CoEI handoff SLAs—not irregular or disconnected forums.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/servicenow-platform/servicenow-platform.html"
@@ -35564,12 +35564,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 216,
 		"prompt": "A platform owner receives Industry Benchmarks showing lower-than-peer fulfillment automation rates. How should this data shape the next implementation wave?",
 		"choices": [
-			"Prioritize high-volume manual fulfillment candidates with documented ROI models tied to benchmark gaps",
-			"Shelve benchmark insights because internal politics outweigh external comparisons",
 			"Reallocate all budget to training without addressing automation backlog items",
-			"Replace benchmark review with anecdotal feedback from a single business unit"
+			"Replace benchmark review with anecdotal feedback from a single business unit",
+			"Prioritize high-volume manual fulfillment candidates with documented ROI models tied to benchmark gaps",
+			"Shelve benchmark insights because internal politics outweigh external comparisons"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Benchmark data should drive implementation by prioritizing high-impact manual processes with ROI models tied to identified gaps—not be ignored or replaced by anecdote.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
@@ -35581,12 +35581,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 217,
 		"prompt": "The CoEI published a successful innovation playbook after a pilot region exceeded adoption targets. Other regions request localized copies. What should the platform owner do?",
 		"choices": [
+			"Allow each region to rewrite fundamentals independently without central visibility",
 			"Retire the playbook after the pilot to encourage unstructured experimentation",
 			"Restrict playbook access to headquarters staff only",
-			"Maintain a master playbook with mandatory core guardrails and optional regional appendices reviewed by the central CoEI",
-			"Allow each region to rewrite fundamentals independently without central visibility"
+			"Maintain a master playbook with mandatory core guardrails and optional regional appendices reviewed by the central CoEI"
 		],
-		"correctIndex": 2,
+		"correctIndex": 3,
 		"explanation": "CoEI playbook scaling preserves core guardrails centrally while allowing reviewed regional appendices—not uncontrolled rewrites or headquarters-only access.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/servicenow-platform/servicenow-platform.html"
@@ -35663,12 +35663,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 220,
 		"prompt": "A multinational logistics firm is preparing its three-year platform innovation roadmap. The CEO expects measurable returns from citizen development, CoEI expansion, and automation. Which integrated strategy best positions the platform owner to deliver?",
 		"choices": [
-			"Combine benchmark-driven automation waves, federated CoEI cells with shared guardrails, and citizen programs linked to architecture-approved pattern libraries",
 			"Pursue citizen development without guardrails while deferring automation until all regions adopt identical processes",
-			"Centralize every innovation decision at headquarters and eliminate regional champion forums",
-			"Invest exclusively in vendor-led custom development and sunset all internal builder enablement programs"
+			"Combine benchmark-driven automation waves, federated CoEI cells with shared guardrails, and citizen programs linked to architecture-approved pattern libraries",
+			"Invest exclusively in vendor-led custom development and sunset all internal builder enablement programs",
+			"Centralize every innovation decision at headquarters and eliminate regional champion forums"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"explanation": "A mature innovation roadmap integrates benchmarked automation, federated CoEI scaling, and governed citizen development—not ungoverned builders, centralized bottlenecks, or vendor-only delivery.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/impact/impact.html"
