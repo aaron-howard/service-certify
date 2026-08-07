@@ -19160,7 +19160,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 0,
 		"explanation": "The admin role has the elevated privileges needed to install Security Incident Response and related Security Operations store applications.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/security-management/security-incident-response/install-security-incident-response.html"
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/install-and-configure-sir.html"
 		],
 		"domain": "SIR Overview and Data Visualization"
 	},
@@ -19177,24 +19177,26 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 3,
 		"explanation": "Threat intelligence enrichment requires the Threat Intelligence application and configured sources that SIR can query during incident creation and triage.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/security-management/security-incident-response/security-incident-response.html"
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/si-observ-data-enrich.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/show-enrich-data-for-si.html"
 		],
 		"domain": "SIR Overview and Data Visualization"
 	},
 	{
 		"trackCode": "CIS-SIR",
 		"order": 2,
-		"prompt": "How is Security Incident Response defined in ServiceNow documentation?",
+		"prompt": "How does ServiceNow documentation describe Security Incident Response?",
 		"choices": [
 			"A discovery framework that maps application dependencies across the CMDB only",
 			"A service catalog workflow for provisioning laptops to new employees",
 			"A change advisory board process for approving emergency production releases",
-			"An action plan to mitigate security incidents and any imminent threats to the organization"
+			"An application that manages the security incident life cycle from analysis through containment, eradication, recovery, and post-incident review"
 		],
 		"correctIndex": 3,
-		"explanation": "Documentation defines SIR as an action plan that helps organizations mitigate active security incidents and imminent threats through structured response.",
+		"explanation": "Documentation positions SIR as managing the security incident life cycle from analysis through containment, eradication, recovery, and into post-incident review, knowledge capture, and closure.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/security-management/security-incident-response/security-incident-response.html"
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/what-is-sir.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/sir-landing-page.html"
 		],
 		"domain": "SIR Overview and Data Visualization"
 	},
@@ -19250,7 +19252,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 3,
 		"explanation": "Security Operations dashboards surface operational and executive KPIs such as open critical incidents and containment metrics for targeted audiences.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/security-management/security-incident-response/security-incident-response-reporting.html"
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/c_SIROverview.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/view-ciso-reporting-overview-dashboard.html"
 		],
 		"domain": "SIR Overview and Data Visualization"
 	},
@@ -19267,7 +19270,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 0,
 		"explanation": "Grouped bar or column charts on filtered incident reports are standard for showing priority distribution trends over time.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/security-management/security-incident-response/security-incident-response-reporting.html"
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/c_SIROverview.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/reports-and-metrics.html"
 		],
 		"domain": "SIR Overview and Data Visualization"
 	},
@@ -19290,7 +19294,10 @@ export const DEV_PRACTICE_QUESTIONS = [
 		],
 		"explanation": "SIR reporting targets security practitioners, SOC leadership, and executive security stakeholders rather than unrelated operational teams.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/security-management/security-incident-response/security-incident-response-reporting.html"
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/c_SIROverview.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/view-security-analyst-overview-dashboard.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/view-security-incident-manager-dashboard.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/view-ciso-reporting-overview-dashboard.html"
 		],
 		"domain": "SIR Overview and Data Visualization"
 	},
@@ -19341,8 +19348,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 1,
 		"explanation": "Effective ransomware response isolates affected systems to stop spread while preserving evidence needed for investigation and legal review.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/security-management/security-incident-response/respond-to-a-security-incident.html",
-			"https://www.servicenow.com/docs/r/security-management/security-incident-response/manage-major-security-incidents.html"
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/what-is-sir.html"
 		],
 		"domain": "Incident Response Strategy"
 	},
@@ -19448,8 +19454,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 3,
 		"explanation": "Live intrusions require balancing rapid containment to stop spread with sufficient evidence collection on priority systems for root-cause analysis.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/security-management/security-incident-response/respond-to-a-security-incident.html",
-			"https://www.servicenow.com/docs/r/security-management/security-incident-response/manage-major-security-incidents.html"
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/what-is-sir.html"
 		],
 		"domain": "Incident Response Strategy"
 	},
@@ -19484,7 +19489,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 1,
 		"explanation": "Parent and child security incidents let teams parallelize host-level investigations while maintaining consolidated oversight.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/security-management/security-incident-response/manage-major-security-incidents.html"
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/c_ParentChildRelationships.html"
 		],
 		"domain": "Incident Response Strategy"
 	},
@@ -20265,17 +20270,18 @@ export const DEV_PRACTICE_QUESTIONS = [
 	{
 		"trackCode": "CIS-SIR",
 		"order": 63,
-		"prompt": "An analyst must manually escalate a confirmed data breach to major incident status. Which action initiates MSIM workflows?",
+		"prompt": "An analyst must escalate a confirmed data breach into Major Security Incident Management. Which action initiates MSIM workflows?",
 		"choices": [
 			"Close the security incident and recreate it as a standard IT incident record",
 			"Delete child tasks and reopen the incident under a new assignment group only",
 			"Convert the record to a change request awaiting emergency CAB approval",
-			"Promote the security incident to major status and launch major incident procedures"
+			"Promote the security incident to a Major Security Incident"
 		],
 		"correctIndex": 3,
-		"explanation": "Promoting an incident to major status triggers Major Security Incident Management procedures and associated collaboration workflows.",
+		"explanation": "Promote to Major Security Incident creates the MSI record and starts Major Security Incident Management collaboration and tracking workflows.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/security-management/security-incident-response/manage-major-security-incidents.html"
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/promote-to-major-security-incident.html",
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/promoting-sir-to-msim.html"
 		],
 		"domain": "Security Incident Response Management"
 	},
@@ -20337,12 +20343,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"trackCode": "CIS-SIR",
 		"order": 67,
 		"questionType": "multi",
-		"prompt": "Who are key reporting audiences for Security Incident Response dashboards and metrics? (Choose three.)",
+		"prompt": "Which three changes cause the platform to recalculate a security incident risk score? (Choose three.)",
 		"choices": [
-			"Security Managers tracking team performance and SLA adherence",
-			"CIOs and CISOs reviewing executive risk and trend summaries",
-			"Facilities and HR staff approving office supply requisitions",
-			"Security Analysts reviewing operational triage and task backlogs"
+			"Business impact on the Security Incident form",
+			"Priority on the Security Incident form",
+			"Employee vacation calendar updates for SOC staffing",
+			"Business impact on the Affected Services related list"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
@@ -20350,11 +20356,9 @@ export const DEV_PRACTICE_QUESTIONS = [
 			1,
 			3
 		],
-		"explanation": "Analyst, manager, and executive dashboards serve operational, supervisory, and leadership audiences; facilities and HR requisitions are unrelated to SIR reporting.",
+		"explanation": "Risk score recalculation is triggered when Business impact or Priority change on the incident, and when Business impact changes on related lists such as Affected Services. Vacation calendars are unrelated.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/security-management/security-incident-response/view-security-analyst-overview-dashboard.html",
-			"https://www.servicenow.com/docs/r/security-management/security-incident-response/view-security-incident-manager-dashboard.html",
-			"https://www.servicenow.com/docs/r/security-management/security-incident-response/view-ciso-dashboard-overview.html"
+			"https://www.servicenow.com/docs/r/security-management/security-incident-response/setup-assistant-reference.html"
 		],
 		"domain": "Risk Calculations and Post Incident Response"
 	},
