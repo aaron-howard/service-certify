@@ -21,9 +21,15 @@ const orderFilter = ordersArg
 
 function readBank() {
 	const raw = fs.readFileSync(bankPath, 'utf8');
-	const match = raw.match(/DEV_PRACTICE_QUESTIONS[^=]*=\s*(\[[\s\S]*\]);/);
-	if (!match) throw new Error('Could not parse devQuestionBank.ts');
-	return JSON.parse(match[1]);
+	const marker = 'export const DEV_PRACTICE_QUESTIONS';
+	const markerAt = raw.indexOf(marker);
+	if (markerAt < 0) throw new Error('Could not find DEV_PRACTICE_QUESTIONS');
+	const start = raw.indexOf('[', markerAt);
+	const castEnd = raw.lastIndexOf('] as unknown as DevPracticeQuestionRow[]');
+	const plainEnd = raw.lastIndexOf('];');
+	const end = castEnd >= 0 ? castEnd : plainEnd;
+	if (start < 0 || end < 0) throw new Error('Could not parse devQuestionBank.ts');
+	return JSON.parse(raw.slice(start, end + 1));
 }
 
 const { validateCisSpTrack } = await import(pathToFileURL(realismPath).href);
