@@ -1,0 +1,98 @@
+[
+	{
+		"trackCode": "CIS-HR",
+		"order": 10,
+		"prompt": "Which scoped application typically hosts Employee Center portal configuration and branding?",
+		"choices": [
+			"Human Resources: Service Portal (Employee Center portal configuration and branding)",
+			"The scoped application for payroll tax engines",
+			"The scoped application for IT incident response",
+			"The scoped application for hardware asset tracking"
+		],
+		"correctIndex": 0,
+		"explanation": "Employee Center portal artifacts, themes, and widgets are maintained in the Human Resources: Service Portal scoped application alongside Employee Center configuration.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/employee-service-management/employee-experience-foundation/employee-center-landing-page.html",
+			"https://www.servicenow.com/docs/r/employee-service-management/employee-experience-foundation/configuring-employee-center-pro.html"
+		],
+		"domain": "HR System Architecture"
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 40,
+		"questionType": "multi",
+		"prompt": "Which options allow an HR Administrator to configure a personal copy of the HR Case Dashboard? (Choose two.)",
+		"choices": [
+			"Add Content",
+			"Change Layout",
+			"Delete Content",
+			"Modify Kernel"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "HR Dashboards & Reports document Add content and Change Layout for customizing accessible dashboards; Delete Content and kernel options are not standard personalization controls.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/employee-service-management/hr-service-delivery/c_HRDashboardsReports.html",
+			"https://www.servicenow.com/docs/r/employee-service-management/hr-service-delivery/c_HRCaseDashboard.html"
+		],
+		"domain": "Core HR Applications and Employee Center"
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 68,
+		"questionType": "multi",
+		"prompt": "Before enrolling employees in a new hire journey, which components must be configured? (Choose two.)",
+		"choices": [
+			"Trigger conditions",
+			"Activity sets",
+			"CMDB identification rules",
+			"MID Server clusters"
+		],
+		"correctIndex": 0,
+		"correctIndexes": [0, 1],
+		"explanation": "Lifecycle event activity sets define journey phases and each activity set requires a trigger condition (for example immediate or after another set). CMDB identification and MID Server clusters are unrelated.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/employee-service-management/lifecycle-events/using-lifecycle-events.html",
+			"https://www.servicenow.com/docs/r/employee-service-management/lifecycle-events/configure-hr-lifecycle-event-activity-set.html",
+			"https://www.servicenow.com/docs/r/employee-service-management/lifecycle-events/hr-lifecycle-event-configuration.html"
+		],
+		"domain": "HR Journeys"
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 0,
+		"prompt": "A global HRSD program must isolate case management customizations from integration and lifecycle work. How should scoped applications be structured?",
+		"choices": [
+			"Separate Human Resources: Core, Integrations, Lifecycle Events, and Service Portal scopes by functional area",
+			"Consolidate all HR tables and scripts in Global scope for faster editing",
+			"Disable scoped applications and run HR only from the ITSM incident scope",
+			"Merge Journey Designer artifacts into the Hardware Asset Management scope"
+		],
+		"correctIndex": 0,
+		"explanation": "HR Case Management ships in Human Resources: Core while integrations, lifecycle, and portal components stay in dedicated scopes for upgrade-safe governance.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/employee-service-management/hr-service-delivery/activate-case-and-knowledge-management-scoped.html",
+			"https://www.servicenow.com/docs/r/employee-service-management/hr-service-delivery/hr-piwb-implementation-guidance.html",
+			"https://www.servicenow.com/docs/r/employee-service-management/hr-service-delivery/hr-service-delivery-overview.html"
+		],
+		"domain": "HR System Architecture"
+	},
+	{
+		"trackCode": "CIS-HR",
+		"order": 9,
+		"prompt": "How are Centers of Excellence (COEs) represented in the HR architecture?",
+		"choices": [
+			"As organizational segments that group HR cases and services by functional area",
+			"As MID Server clusters for HR integrations",
+			"As CMDB relationship types for employee assets",
+			"As discovery probes for HR applications"
+		],
+		"correctIndex": 0,
+		"explanation": "Each HR Center of Excellence extends the HR case table and organizes services by functional discipline such as payroll or employee relations.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/employee-service-management/hr-service-delivery/hr-centers-of-excellence-coes.html",
+			"https://www.servicenow.com/docs/r/employee-service-management/hr-service-delivery/configure-hr-center-of-excellence-coe.html"
+		],
+		"domain": "HR System Architecture"
+	}
+]

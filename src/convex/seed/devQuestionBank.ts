@@ -11215,16 +11215,17 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 0,
 		"prompt": "A global HRSD program must isolate case management customizations from integration and lifecycle work. How should scoped applications be structured?",
 		"choices": [
-			"Separate Human Resources: Core, Integrations, Lifecycle Events, and Service Portal scopes by functional area",
-			"Consolidate all HR tables and scripts in Global scope for faster editing",
 			"Disable scoped applications and run HR only from the ITSM incident scope",
-			"Merge Journey Designer artifacts into the Hardware Asset Management scope"
+			"Merge Journey Designer artifacts into the Hardware Asset Management scope",
+			"Separate Human Resources: Core, Integrations, Lifecycle Events, and Service Portal scopes by functional area",
+			"Consolidate all HR tables and scripts in Global scope for faster editing"
 		],
-		"correctIndex": 0,
-		"explanation": "HR Case Management ships in Human Resources: Core while integrations and lifecycle components stay in dedicated scopes for upgrade-safe governance.",
+		"correctIndex": 2,
+		"explanation": "HR Case Management ships in Human Resources: Core while integrations, lifecycle, and portal components stay in dedicated scopes for upgrade-safe governance.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-case-management.html",
-			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hrsd-implementation-governance.html"
+			"https://www.servicenow.com/docs/r/employee-service-management/hr-service-delivery/activate-case-and-knowledge-management-scoped.html",
+			"https://www.servicenow.com/docs/r/employee-service-management/hr-service-delivery/hr-piwb-implementation-guidance.html",
+			"https://www.servicenow.com/docs/r/employee-service-management/hr-service-delivery/hr-service-delivery-overview.html"
 		],
 		"domain": "HR System Architecture"
 	},
@@ -11233,15 +11234,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 1,
 		"prompt": "An integration team must design inbound employee updates from Workday without exposing case workflows to connector changes. Which scoped application should host connector artifacts?",
 		"choices": [
+			"Global scope so integration scripts bypass update set capture",
 			"Human Resources: Integrations for connectors and HR data exchange flows",
 			"Human Resources: Core for all MID Server and SNMP configuration",
-			"Security Operations scope for threat intelligence feeds only",
-			"Global scope so integration scripts bypass update set capture"
+			"Security Operations scope for threat intelligence feeds only"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"explanation": "The Human Resources: Integrations scope isolates integration artifacts so HR data exchange can be maintained separately from core case logic.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hrsd-implementation-governance.html"
+			"https://www.servicenow.com/docs/r/employee-service-management/hr-service-delivery/hr-piwb-implementation-guidance.html"
 		],
 		"domain": "HR System Architecture"
 	},
@@ -11258,7 +11259,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 0,
 		"explanation": "Lifecycle Events and Journey Designer components reside in the Human Resources: Lifecycle Events scoped application.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/lifecycle-events-overview.html"
+			"https://www.servicenow.com/docs/r/employee-service-management/lifecycle-events/using-lifecycle-events.html"
 		],
 		"domain": "HR System Architecture"
 	},
@@ -11267,15 +11268,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 3,
 		"prompt": "Benefits and Employee Relations teams need separate queues, SLAs, and fulfillment tasks for employee requests. Which record design should HR agents use?",
 		"choices": [
-			"HR cases on the hr_case table with COE routing and linked HR tasks",
 			"ITSM incident records with generic assignment groups only",
 			"Change requests with standard production change models",
-			"Catalog requested items without case linkage or task breakdown"
+			"Catalog requested items without case linkage or task breakdown",
+			"HR cases on the hr_case table with COE routing and linked HR tasks"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "HR cases capture employee HR service interactions, assignments, and fulfillment separate from ITSM incident records.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-case-management.html"
+			"https://www.servicenow.com/docs/r/employee-service-management/agent-workspace-for-hr-case-management/agent-ws-hr-case-mgmt-exploring.html"
 		],
 		"domain": "HR System Architecture"
 	},
@@ -11285,14 +11286,14 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "Eligibility rules must evaluate department, location, and employment type before employees open sensitive HR services. Which data model extension should store those attributes?",
 		"choices": [
 			"HR profiles linked to user records with employee-specific HR attributes",
-			"CMDB configuration item relationships for laptop assets",
 			"MID Server connection credentials for integration jobs",
-			"Software license entitlements from the SAM workspace"
+			"Software license entitlements from the SAM workspace",
+			"CMDB configuration item relationships for laptop assets"
 		],
 		"correctIndex": 0,
 		"explanation": "HR profiles extend personnel data used for eligibility, routing, and lifecycle processing beyond the base sys_user record.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-profile-management.html"
+			"https://www.servicenow.com/docs/r/employee-service-management/hr-service-delivery/c_HRProfileSecurity.html"
 		],
 		"domain": "HR System Architecture"
 	},
@@ -11301,15 +11302,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 5,
 		"prompt": "Custom HR case workflows must inherit assignment, state, and work notes behavior from platform task standards. Which table hierarchy should architects preserve?",
 		"choices": [
-			"hr_case extending the task table for standard task fields and workflow behavior",
 			"hr_case extending cmdb_ci for configuration item lifecycle only",
-			"hr_case extending sc_request for catalog-only fulfillment without tasks",
-			"hr_case as a standalone table with no parent inheritance"
+			"hr_case extending the task table for standard task fields and workflow behavior",
+			"hr_case as a standalone table with no parent inheritance",
+			"hr_case extending sc_request for catalog-only fulfillment without tasks"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"explanation": "HR cases inherit task fields such as assignment, state, and work notes from the task table hierarchy.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-case-management.html"
+			"https://www.servicenow.com/docs/r/employee-service-management/agent-workspace-for-hr-case-management/agent-ws-hr-case-mgmt-exploring.html"
 		],
 		"domain": "HR System Architecture"
 	},
@@ -11318,15 +11319,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 6,
 		"prompt": "Why does HR Service Delivery use multiple scoped applications instead of one global scope?",
 		"choices": [
-			"To isolate customizations by functional area and preserve upgradability",
-			"To disable update set capture entirely across every scoped HR application",
 			"To prevent role-based access controls from applying on all HR tables",
+			"To disable update set capture entirely across every scoped HR application",
+			"To isolate customizations by functional area and preserve upgradability",
 			"To require all HR scripts run client-side only without server-side logic"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Scoped applications segment HR Core, Integrations, Lifecycle Events, and portal experiences so teams can upgrade and govern changes independently.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hrsd-implementation-governance.html"
+			"https://www.servicenow.com/docs/r/employee-service-management/hr-service-delivery/hr-piwb-implementation-guidance.html"
 		],
 		"domain": "HR System Architecture"
 	},
@@ -11335,15 +11336,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 7,
 		"prompt": "Which plugin family must be active to deliver HR Case Management and Employee Center experiences?",
 		"choices": [
-			"Human Resources Service Delivery (HRSD)",
-			"Hardware Asset Management plugin for device lifecycle tracking",
 			"Security Incident Response plugin for cyber case management",
-			"Governance Risk Compliance plugin for policy attestations"
+			"Governance Risk Compliance plugin for policy attestations",
+			"Hardware Asset Management plugin for device lifecycle tracking",
+			"Human Resources Service Delivery (HRSD)"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "HRSD plugins install core HR tables, roles, Employee Center, and lifecycle capabilities required for the HR suite.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hrsd-implementation-governance.html"
+			"https://www.servicenow.com/docs/r/employee-service-management/hr-service-delivery/hr-piwb-implementation-guidance.html"
 		],
 		"domain": "HR System Architecture"
 	},
@@ -11353,14 +11354,14 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "Employee Center must expose paid leave, payroll inquiry, and relocation offerings with consistent routing. How should those offerings be modeled in Core HR?",
 		"choices": [
 			"As HR services representing catalog-style offerings that drive case creation and fulfillment",
-			"As network discovery schedules tied to employee subnets",
 			"As payroll calculation rule sets stored on CMDB classes",
-			"As CMDB identification rules for hardware asset reconciliation"
+			"As CMDB identification rules for hardware asset reconciliation",
+			"As network discovery schedules tied to employee subnets"
 		],
 		"correctIndex": 0,
 		"explanation": "HR services represent catalog-style offerings that drive case creation, routing, and fulfillment configuration.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-services-overview.html"
+			"https://www.servicenow.com/docs/r/employee-service-management/hr-service-delivery/hr-service-delivery-overview.html"
 		],
 		"domain": "HR System Architecture"
 	},
@@ -11369,15 +11370,16 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 9,
 		"prompt": "How are Centers of Excellence (COEs) represented in the HR architecture?",
 		"choices": [
-			"As organizational segments that group HR cases and services by functional area",
 			"As MID Server clusters for HR integrations",
-			"As CMDB relationship types for employee assets",
-			"As discovery probes for HR applications"
+			"As organizational segments that group HR cases and services by functional area",
+			"As discovery probes for HR applications",
+			"As CMDB relationship types for employee assets"
 		],
-		"correctIndex": 0,
-		"explanation": "COEs such as Benefits or Employee Relations partition HR work for routing, reporting, and operational ownership.",
+		"correctIndex": 1,
+		"explanation": "Each HR Center of Excellence extends the HR case table and organizes services by functional discipline such as payroll or employee relations.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-centers-of-excellence.html"
+			"https://www.servicenow.com/docs/r/employee-service-management/hr-service-delivery/hr-centers-of-excellence-coes.html",
+			"https://www.servicenow.com/docs/r/employee-service-management/hr-service-delivery/configure-hr-center-of-excellence-coe.html"
 		],
 		"domain": "HR System Architecture"
 	},
@@ -11386,15 +11388,16 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 10,
 		"prompt": "Which scoped application typically hosts Employee Center portal configuration and branding?",
 		"choices": [
-			"The scoped application for Employee Center portal configuration",
-			"The scoped application for payroll tax engines",
 			"The scoped application for IT incident response",
-			"The scoped application for hardware asset tracking"
+			"The scoped application for hardware asset tracking",
+			"The scoped application for payroll tax engines",
+			"Human Resources: Service Portal (Employee Center portal configuration and branding)"
 		],
-		"correctIndex": 0,
-		"explanation": "Employee Center portal artifacts, themes, and widgets are maintained in the HR Service Portal scoped application.",
+		"correctIndex": 3,
+		"explanation": "Employee Center portal artifacts, themes, and widgets are maintained in the Human Resources: Service Portal scoped application alongside Employee Center configuration.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/employee-center/employee-center-overview.html"
+			"https://www.servicenow.com/docs/r/employee-service-management/employee-experience-foundation/employee-center-landing-page.html",
+			"https://www.servicenow.com/docs/r/employee-service-management/employee-experience-foundation/configuring-employee-center-pro.html"
 		],
 		"domain": "HR System Architecture"
 	},
@@ -11404,14 +11407,14 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "A complex parental leave case requires document review, payroll coordination, and manager approval tasks. How should fulfillment work be structured?",
 		"choices": [
 			"HR tasks as child fulfillment work items linked to the parent HR case",
-			"Separate incident records that replace the HR case after submission",
+			"CMDB CI records storing only employee asset identifiers",
 			"Import set staging rows without assignees or case linkage",
-			"CMDB CI records storing only employee asset identifiers"
+			"Separate incident records that replace the HR case after submission"
 		],
 		"correctIndex": 0,
 		"explanation": "Fulfillment and lifecycle work break down into HR task records associated with the originating HR case.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-case-management.html"
+			"https://www.servicenow.com/docs/r/employee-service-management/agent-workspace-for-hr-case-management/agent-ws-hr-case-mgmt-exploring.html"
 		],
 		"domain": "HR System Architecture"
 	},
@@ -11420,15 +11423,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 12,
 		"prompt": "When implementing HRSD, why should teams avoid customizing in the Global scope?",
 		"choices": [
-			"Global changes are harder to track, merge, and upgrade alongside vendor HR scopes",
 			"Global scope disables all HR tables",
-			"Global scope prevents Employee Center login",
-			"Global scope removes COE assignment"
+			"Global scope removes COE assignment",
+			"Global changes are harder to track, merge, and upgrade alongside vendor HR scopes",
+			"Global scope prevents Employee Center login"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Scoped application development keeps HR customizations isolated, exportable in update sets, and aligned with ServiceNow upgrade paths.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hrsd-implementation-governance.html"
+			"https://www.servicenow.com/docs/r/employee-service-management/hr-service-delivery/hr-piwb-implementation-guidance.html"
 		],
 		"domain": "HR System Architecture"
 	},
@@ -11438,14 +11441,14 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "Which integration capability is associated with the Human Resources: Integrations scope?",
 		"choices": [
 			"Connecting ServiceNow HR data with external HCM and payroll systems",
-			"Running Discovery on employee laptops",
 			"Normalizing software installation records",
+			"Running Discovery on employee laptops",
 			"Scheduling security scan jobs"
 		],
 		"correctIndex": 0,
 		"explanation": "HR Integrations scope artifacts support authoritative employee and organizational data exchange with external HR systems.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hrsd-implementation-governance.html"
+			"https://www.servicenow.com/docs/r/employee-service-management/hr-service-delivery/hr-piwb-implementation-guidance.html"
 		],
 		"domain": "HR System Architecture"
 	},
@@ -11454,15 +11457,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 14,
 		"prompt": "Journey Designer must version onboarding and offboarding definitions separately from case templates. Where should lifecycle event records be maintained?",
 		"choices": [
-			"Lifecycle event records in the Lifecycle Events scope such as sn_hr_le_lifecycle_event",
-			"sys_email_account records in the global email administration module",
 			"sc_cat_item records in the service catalog without HR linkage",
-			"sysapproval_approver records detached from HR workflows"
+			"sysapproval_approver records detached from HR workflows",
+			"sys_email_account records in the global email administration module",
+			"Lifecycle event records in the Lifecycle Events scope such as sn_hr_le_lifecycle_event"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Lifecycle event records define milestone transitions such as onboarding and offboarding orchestrated through Journey Designer.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/lifecycle-events-overview.html"
+			"https://www.servicenow.com/docs/r/employee-service-management/lifecycle-events/using-lifecycle-events.html"
 		],
 		"domain": "HR System Architecture"
 	},
@@ -11472,14 +11475,14 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "How does HR Service Delivery sit on the Now Platform architecture?",
 		"choices": [
 			"As scoped applications using platform tables, workflows, security, and portals",
-			"As a MID Server extension without tables",
+			"As a standalone database outside the instance",
 			"As a client-only Java applet",
-			"As a standalone database outside the instance"
+			"As a MID Server extension without tables"
 		],
 		"correctIndex": 0,
 		"explanation": "HRSD leverages core platform services—tasks, ACLs, catalog, flows—within dedicated HR scoped applications.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hrsd-implementation-governance.html"
+			"https://www.servicenow.com/docs/r/employee-service-management/hr-service-delivery/hr-piwb-implementation-guidance.html"
 		],
 		"domain": "HR System Architecture"
 	},
@@ -11488,15 +11491,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 16,
 		"prompt": "Which artifact defines reusable HR letter and form generation tied to case data?",
 		"choices": [
-			"Identification Rule",
 			"Document Template",
-			"Discovery Schedule",
-			"Transform Map"
+			"Transform Map",
+			"Identification Rule",
+			"Discovery Schedule"
 		],
-		"correctIndex": 1,
+		"correctIndex": 0,
 		"explanation": "Document templates merge HR case and profile fields to produce standardized employee communications.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/document-management-for-hr.html"
+			"https://www.servicenow.com/docs/r/employee-service-management/hr-service-delivery/document-templates-overview.html"
 		],
 		"domain": "HR System Architecture"
 	},
@@ -11506,14 +11509,14 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "Where are employee personnel documents stored with controlled access in HRSD?",
 		"choices": [
 			"Employee Document Management",
-			"CMDB baseline tables",
 			"Import Set staging tables",
+			"CMDB baseline tables",
 			"Event Management alerts"
 		],
 		"correctIndex": 0,
 		"explanation": "Employee Document Management centralizes HR files while enforcing confidentiality through HR security controls.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/employee-document-management.html"
+			"https://www.servicenow.com/docs/r/employee-service-management/employee-document-management/exploring-employee-document-management.html"
 		],
 		"domain": "HR System Architecture"
 	},
@@ -11522,15 +11525,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 18,
 		"prompt": "Which role is commonly assigned to HR agents who work HR cases daily?",
 		"choices": [
-			"sn_incident_write",
 			"sn_hr_core.basic",
+			"itil_admin",
 			"asset",
-			"itil_admin"
+			"sn_incident_write"
 		],
-		"correctIndex": 1,
+		"correctIndex": 0,
 		"explanation": "HR core roles such as sn_hr_core.basic grant access to HR case workspaces and related HR tables per the HR security model.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-case-security.html"
+			"https://www.servicenow.com/docs/r/employee-service-management/hr-service-delivery/hr-security.html"
 		],
 		"domain": "HR System Architecture"
 	},
@@ -11539,15 +11542,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 19,
 		"prompt": "Benefits agents handle hundreds of similar leave extension requests each month. How should HR standardize intake and handling for those recurring cases?",
 		"choices": [
-			"Map import set columns to target fields",
-			"Track software license keys",
 			"Predefine recurring case fields and handling patterns for consistent fulfillment",
-			"Store encrypted payroll bank details"
+			"Store encrypted payroll bank details",
+			"Map import set columns to target fields",
+			"Track software license keys"
 		],
-		"correctIndex": 2,
+		"correctIndex": 0,
 		"explanation": "Case templates standardize intake and processing for common HR scenarios, reducing variability across COEs.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-case-templates.html"
+			"https://www.servicenow.com/docs/r/employee-service-management/hr-service-delivery/configure-hr-case-template.html"
 		],
 		"domain": "HR System Architecture"
 	},
@@ -11564,7 +11567,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 0,
 		"explanation": "HR services reference catalog items or record producers so Employee Center submissions create the correct HR case or request.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-services-overview.html"
+			"https://www.servicenow.com/docs/r/employee-service-management/hr-service-delivery/hr-service-delivery-overview.html"
 		],
 		"domain": "HR System Architecture"
 	},
@@ -11573,15 +11576,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 21,
 		"prompt": "How do HR topic categories help structure the HR service catalog?",
 		"choices": [
-			"They group related services for browsing, routing, and reporting",
 			"They replace all ACL evaluation on hr_case",
 			"They disable lifecycle event triggers",
-			"They convert cases to incidents automatically"
+			"They convert cases to incidents automatically",
+			"They group related services for browsing, routing, and reporting"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Topic categories organize HR services so employees find the right offering and operations can analyze demand by subject area.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-services-overview.html"
+			"https://www.servicenow.com/docs/r/employee-service-management/hr-service-delivery/hr-service-delivery-overview.html"
 		],
 		"domain": "HR System Architecture"
 	},
@@ -11591,14 +11594,14 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "Which table would you inspect to review HR service-to-COE associations?",
 		"choices": [
 			"hr_service and related COE reference fields",
-			"cmdb_rel_ci",
 			"sys_email",
-			"alm_asset"
+			"alm_asset",
+			"cmdb_rel_ci"
 		],
 		"correctIndex": 0,
 		"explanation": "HR service records reference a COE so cases route to the correct functional team and appear in COE dashboards.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-centers-of-excellence.html"
+			"https://www.servicenow.com/docs/r/employee-service-management/hr-service-delivery/hr-centers-of-excellence-coes.html"
 		],
 		"domain": "Core HR Applications and Employee Center"
 	},
@@ -11607,15 +11610,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 23,
 		"prompt": "What does activating HR integrations enable in the architecture?",
 		"choices": [
-			"Synchronization of employee and org data with external HR systems of record",
 			"Automatic closure of all open HR cases",
-			"Removal of Employee Center authentication",
-			"Deletion of lifecycle event templates"
+			"Synchronization of employee and org data with external HR systems of record",
+			"Deletion of lifecycle event templates",
+			"Removal of Employee Center authentication"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"explanation": "HR integrations keep profiles, positions, and org structures aligned with authoritative HCM sources.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hrsd-implementation-governance.html"
+			"https://www.servicenow.com/docs/r/employee-service-management/hr-service-delivery/hr-piwb-implementation-guidance.html"
 		],
 		"domain": "Core HR Applications and Employee Center"
 	},
@@ -11624,15 +11627,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 24,
 		"prompt": "Which design principle supports scalable HR implementations across multiple COEs?",
 		"choices": [
-			"Standardize shared data model and scoped configuration before COE-specific extensions",
-			"Customize exclusively in Global scope for speed",
 			"Disable HR criteria on all services",
+			"Customize exclusively in Global scope for speed",
+			"Standardize shared data model and scoped configuration before COE-specific extensions",
 			"Store all HR work notes in public comments"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "A consistent core model with scoped extensions allows COEs to specialize while preserving upgradeability and reporting consistency.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hrsd-implementation-governance.html"
+			"https://www.servicenow.com/docs/r/employee-service-management/hr-service-delivery/hr-piwb-implementation-guidance.html"
 		],
 		"domain": "Core HR Applications and Employee Center"
 	},
@@ -11641,15 +11644,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 25,
 		"prompt": "Which reporting area helps HR leaders monitor case volume and aging by COE?",
 		"choices": [
-			"HR dashboards and analytics",
-			"Discovery status dashboard",
 			"Software reclamation dashboard",
-			"Firewall rule analytics"
+			"Firewall rule analytics",
+			"Discovery status dashboard",
+			"HR dashboards and analytics"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "HR reporting and dashboards visualize throughput, backlog, and service performance segmented by COE and service.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hrsd-reporting-and-analytics.html"
+			"https://www.servicenow.com/docs/r/employee-service-management/hr-service-delivery/c_HRDashboardsReports.html"
 		],
 		"domain": "Core HR Applications and Employee Center"
 	},
@@ -11659,14 +11662,14 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "What is the benefit of keeping Journey Designer artifacts in the Lifecycle Events scope?",
 		"choices": [
 			"Lifecycle customizations stay isolated from core case tables and integration code",
-			"Journey flows cannot use HR tasks",
 			"Lifecycle events bypass all security controls",
-			"Employees cannot trigger onboarding from Employee Center"
+			"Employees cannot trigger onboarding from Employee Center",
+			"Journey flows cannot use HR tasks"
 		],
 		"correctIndex": 0,
 		"explanation": "Separating lifecycle configuration protects core HR case operations while allowing journey teams to iterate safely.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/lifecycle-events-overview.html"
+			"https://www.servicenow.com/docs/r/employee-service-management/lifecycle-events/using-lifecycle-events.html"
 		],
 		"domain": "Core HR Applications and Employee Center"
 	},
@@ -11675,15 +11678,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 27,
 		"prompt": "How many COEs may be associated with an HR Service?",
 		"choices": [
-			"1",
 			"5",
-			"10",
-			"Unlimited"
+			"1",
+			"Unlimited",
+			"10"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"explanation": "Each HR service links to exactly one Center of Excellence for routing, ownership, and operational reporting.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-centers-of-excellence.html"
+			"https://www.servicenow.com/docs/r/employee-service-management/hr-service-delivery/hr-centers-of-excellence-coes.html"
 		],
 		"domain": "Core HR Applications and Employee Center"
 	},
@@ -11692,15 +11695,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 28,
 		"prompt": "Which configuration object determines which employees can see or request a specific HR service?",
 		"choices": [
-			"HR criteria",
-			"CMDB dependency rules",
 			"Firewall policy definitions",
+			"CMDB dependency rules",
+			"HR criteria",
 			"Payroll GL mapping tables"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "HR criteria evaluates employee attributes to control eligibility and visibility for HR services on Employee Center.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-criteria.html"
+			"https://www.servicenow.com/docs/r/employee-service-management/hr-service-delivery/hr-criteria.html"
 		],
 		"domain": "Core HR Applications and Employee Center"
 	},
@@ -11709,15 +11712,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 29,
 		"prompt": "How do assignment rules support HR case routing?",
 		"choices": [
-			"They assign cases to groups or users based on conditions such as COE, topic, or skills",
-			"They encrypt HR case attachments at rest",
 			"They convert HR cases to incidents",
-			"They delete draft lifecycle events"
+			"They delete draft lifecycle events",
+			"They encrypt HR case attachments at rest",
+			"They assign cases to groups or users based on conditions such as COE, topic, or skills"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Assignment rules automate dispatch to the correct HR team using case and employee attributes.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-case-routing.html"
+			"https://www.servicenow.com/docs/r/employee-service-management/hr-service-delivery/hr-case-assignment.html"
 		],
 		"domain": "Core HR Applications and Employee Center"
 	},
@@ -11726,15 +11729,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 30,
 		"prompt": "Which Employee Center feature lets HR teams apply corporate colors, logos, and themes?",
 		"choices": [
-			"Employee Center branding and theme configuration",
 			"CMDB class manager styling",
-			"Discovery probe branding",
-			"Import set coalesce branding"
+			"Import set coalesce branding",
+			"Employee Center branding and theme configuration",
+			"Discovery probe branding"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Branding settings customize the Employee Center look and feel to match organizational identity guidelines.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/employee-center/employee-center-overview.html"
+			"https://www.servicenow.com/docs/r/employee-service-management/employee-experience-foundation/employee-center-landing-page.html"
 		],
 		"domain": "Core HR Applications and Employee Center"
 	},
@@ -11744,14 +11747,14 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "What determines if an employee can view a Knowledge article on Employee Center?",
 		"choices": [
 			"Can / Cannot Read User Criteria",
-			"Can / Cannot Contribute User Criteria",
 			"Can / Cannot Read HR Criteria",
+			"Can / Cannot Contribute User Criteria",
 			"Can / Cannot Read ACL Criteria"
 		],
 		"correctIndex": 0,
 		"explanation": "Knowledge visibility on Employee Center is controlled by Can Read and Cannot Read user criteria attached to the article.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-knowledge-management.html"
+			"https://www.servicenow.com/docs/r/employee-service-management/hr-service-delivery/hr-knowledge-management.html"
 		],
 		"domain": "Core HR Applications and Employee Center"
 	},
@@ -11760,15 +11763,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 32,
 		"prompt": "How does a record producer differ from a standard HR catalog item?",
 		"choices": [
-			"A record producer creates a target table record directly instead of a requested item",
 			"A record producer only creates CMDB CIs",
+			"A record producer runs only on the MID Server",
 			"A record producer disables HR criteria evaluation",
-			"A record producer runs only on the MID Server"
+			"A record producer creates a target table record directly instead of a requested item"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Record producers present catalog-style forms that insert records such as hr_case directly on submission.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-services-overview.html"
+			"https://www.servicenow.com/docs/r/employee-service-management/hr-service-delivery/hr-service-delivery-overview.html"
 		],
 		"domain": "Core HR Applications and Employee Center"
 	},
@@ -11777,15 +11780,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 33,
 		"prompt": "Which skills configuration can improve HR case assignment to qualified agents?",
 		"choices": [
-			"Agent skills matched by assignment rules or routing logic",
-			"SNMP community strings on hr_case",
 			"Software normalization rules",
-			"Firewall port definitions"
+			"Firewall port definitions",
+			"Agent skills matched by assignment rules or routing logic",
+			"SNMP community strings on hr_case"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Skills on users and groups allow routing engines to match HR cases with agents who have the required expertise.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-case-routing.html"
+			"https://www.servicenow.com/docs/r/employee-service-management/hr-service-delivery/hr-case-assignment.html"
 		],
 		"domain": "Core HR Applications and Employee Center"
 	},
@@ -11794,15 +11797,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 34,
 		"prompt": "Which HR role bundle is used to administer HR services, criteria, and COE configuration?",
 		"choices": [
+			"sn_change_write",
 			"sn_hr_core.admin",
 			"itil",
-			"catalog_admin",
-			"sn_change_write"
+			"catalog_admin"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"explanation": "HR administrator roles provide access to configure services, criteria, templates, and operational HR settings.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-case-security.html"
+			"https://www.servicenow.com/docs/r/employee-service-management/hr-service-delivery/hr-security.html"
 		],
 		"domain": "Core HR Applications and Employee Center"
 	},
@@ -11819,7 +11822,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 0,
 		"explanation": "HR catalog checkout creates or updates HR case work tracked through configured fulfillment flows and tasks.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-services-overview.html"
+			"https://www.servicenow.com/docs/r/employee-service-management/hr-service-delivery/hr-service-delivery-overview.html"
 		],
 		"domain": "Core HR Applications and Employee Center"
 	},
@@ -11828,15 +11831,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 36,
 		"prompt": "Which Employee Center module helps employees find HR services by topic or search?",
 		"choices": [
-			"HR service catalog browse and search experiences",
 			"CMDB workspace class editor",
 			"MID Server connection monitor",
-			"Event management timeline"
+			"Event management timeline",
+			"HR service catalog browse and search experiences"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Employee Center exposes categorized HR services and search so employees can self-initiate supported requests.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/employee-center/employee-center-overview.html"
+			"https://www.servicenow.com/docs/r/employee-service-management/employee-experience-foundation/employee-center-landing-page.html"
 		],
 		"domain": "Core HR Applications and Employee Center"
 	},
@@ -11846,14 +11849,14 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "How are HR groups used in Core HR configuration?",
 		"choices": [
 			"As assignment targets for HR cases and lifecycle tasks",
-			"As CMDB discovery schedules",
 			"As software license pools",
-			"As payroll tax jurisdictions"
+			"As payroll tax jurisdictions",
+			"As CMDB discovery schedules"
 		],
 		"correctIndex": 0,
 		"explanation": "HR groups represent teams within COEs that receive assigned cases, tasks, and approvals.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-case-routing.html"
+			"https://www.servicenow.com/docs/r/employee-service-management/hr-service-delivery/hr-case-assignment.html"
 		],
 		"domain": "Core HR Applications and Employee Center"
 	},
@@ -11862,15 +11865,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 38,
 		"prompt": "Which configuration ties an HR service to variables collected during employee intake?",
 		"choices": [
+			"Event correlation definitions",
 			"HR catalog item or record producer variables",
 			"CMDB relationship rules",
-			"Identification and reconciliation rules",
-			"Event correlation definitions"
+			"Identification and reconciliation rules"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"explanation": "Catalog variables on HR items capture structured answers that map to case fields and fulfillment logic.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-services-overview.html"
+			"https://www.servicenow.com/docs/r/employee-service-management/hr-service-delivery/hr-service-delivery-overview.html"
 		],
 		"domain": "Core HR Applications and Employee Center"
 	},
@@ -11887,29 +11890,30 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 0,
 		"explanation": "The HR manager dashboard gives managers visibility into team HR requests and related operational indicators.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hrsd-reporting-and-analytics.html"
+			"https://www.servicenow.com/docs/r/employee-service-management/hr-service-delivery/c_HRDashboardsReports.html"
 		],
 		"domain": "Core HR Applications and Employee Center"
 	},
 	{
 		"trackCode": "CIS-HR",
 		"order": 40,
+		"questionType": "multi",
 		"prompt": "Which options allow an HR Administrator to configure a personal copy of the HR Case Dashboard? (Choose two.)",
 		"choices": [
 			"Add Content",
-			"Change Layout",
 			"Delete Content",
-			"Modify Kernel"
+			"Modify Kernel",
+			"Change Layout"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			1
+			3
 		],
-		"questionType": "multi",
-		"explanation": "Personal dashboard copies support Add Content and Change Layout actions; Delete Content and kernel options are not standard dashboard personalization controls.",
+		"explanation": "HR Dashboards & Reports document Add content and Change Layout for customizing accessible dashboards; Delete Content and kernel options are not standard personalization controls.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hrsd-reporting-and-analytics.html"
+			"https://www.servicenow.com/docs/r/employee-service-management/hr-service-delivery/c_HRDashboardsReports.html",
+			"https://www.servicenow.com/docs/r/employee-service-management/hr-service-delivery/c_HRCaseDashboard.html"
 		],
 		"domain": "Core HR Applications and Employee Center"
 	},
@@ -11918,15 +11922,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 41,
 		"prompt": "How does Employee Center differ from the legacy HR Service Portal for employees?",
 		"choices": [
-			"Employee Center is the modern unified employee experience for HR and cross-domain services",
 			"Employee Center replaces all HR tables with incidents",
-			"Employee Center removes knowledge management",
-			"Employee Center disables HR criteria"
+			"Employee Center is the modern unified employee experience for HR and cross-domain services",
+			"Employee Center disables HR criteria",
+			"Employee Center removes knowledge management"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"explanation": "Employee Center delivers a consolidated self-service experience including HR services, knowledge, and journeys.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/employee-center/employee-center-overview.html"
+			"https://www.servicenow.com/docs/r/employee-service-management/employee-experience-foundation/employee-center-landing-page.html"
 		],
 		"domain": "Core HR Applications and Employee Center"
 	},
@@ -11935,15 +11939,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 42,
 		"prompt": "Which approval configuration can gate sensitive HR actions before fulfillment proceeds?",
 		"choices": [
-			"HR approval definitions tied to workflows or flows",
-			"CMDB sync approval schedules",
 			"Discovery credential approvals",
+			"CMDB sync approval schedules",
+			"HR approval definitions tied to workflows or flows",
 			"Firewall change approvals"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "HR approvals add authorized checkpoints for policy-sensitive case and service actions.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-approvals.html"
+			"https://www.servicenow.com/docs/r/employee-service-management/hr-service-delivery/t_ApproveAnHRCase.html"
 		],
 		"domain": "Core HR Applications and Employee Center"
 	},
@@ -11952,15 +11956,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 43,
 		"prompt": "When configuring HR catalog items, where do you map collected variables to hr_case fields?",
 		"choices": [
-			"Variable-to-field mapping on the catalog item or producer",
-			"Scheduled job recurrence settings",
 			"Firewall zone definitions",
-			"CMDB relationship editor"
+			"CMDB relationship editor",
+			"Scheduled job recurrence settings",
+			"Variable-to-field mapping on the catalog item or producer"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Catalog variable mapping transfers employee answers onto HR case columns during submission.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-services-overview.html"
+			"https://www.servicenow.com/docs/r/employee-service-management/hr-service-delivery/hr-service-delivery-overview.html"
 		],
 		"domain": "Core HR Applications and Employee Center"
 	},
@@ -11970,14 +11974,14 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "Which user record fields are commonly referenced by HR criteria rules?",
 		"choices": [
 			"Department, location, employment type, and other hr_profile attributes",
-			"SNMP community and probe status",
+			"Firewall zone and VLAN",
 			"Software install key and suite",
-			"Firewall zone and VLAN"
+			"SNMP community and probe status"
 		],
 		"correctIndex": 0,
 		"explanation": "HR criteria evaluates employee and profile attributes to determine service visibility and eligibility.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-criteria.html"
+			"https://www.servicenow.com/docs/r/employee-service-management/hr-service-delivery/hr-criteria.html"
 		],
 		"domain": "Core HR Applications and Employee Center"
 	},
@@ -11986,15 +11990,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 45,
 		"prompt": "How can HR knowledge articles reduce operational case volume?",
 		"choices": [
-			"Employees resolve common questions via self-service before opening cases",
 			"Knowledge articles auto-close all HR cases nightly",
-			"Knowledge articles remove HR criteria checks",
-			"Knowledge articles disable Employee Center login"
+			"Knowledge articles disable Employee Center login",
+			"Employees resolve common questions via self-service before opening cases",
+			"Knowledge articles remove HR criteria checks"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Published HR knowledge deflects repetitive inquiries by answering policy and how-to questions upfront.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-knowledge-management.html"
+			"https://www.servicenow.com/docs/r/employee-service-management/hr-service-delivery/hr-knowledge-management.html"
 		],
 		"domain": "Core HR Applications and Employee Center"
 	},
@@ -12004,14 +12008,14 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "Which configuration ensures only eligible new hires see an onboarding HR service tile?",
 		"choices": [
 			"HR criteria on the HR service limiting visibility by employee attributes",
-			"Global table ACL delete rule",
 			"Discovery status filter",
+			"Global table ACL delete rule",
 			"Software normalization map"
 		],
 		"correctIndex": 0,
 		"explanation": "Service-level HR criteria restricts catalog visibility to employees who meet defined conditions such as hire status.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-criteria.html"
+			"https://www.servicenow.com/docs/r/employee-service-management/hr-service-delivery/hr-criteria.html"
 		],
 		"domain": "Core HR Applications and Employee Center"
 	},
@@ -12020,15 +12024,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 47,
 		"prompt": "What happens when an employee without matching HR criteria attempts to open a restricted HR service?",
 		"choices": [
-			"The service is hidden or blocked based on Can/Cannot Read HR criteria evaluation",
 			"The case is converted to an incident automatically",
+			"All HR cases are reassigned globally",
 			"The employee receives the admin role",
-			"All HR cases are reassigned globally"
+			"The service is hidden or blocked based on Can/Cannot Read HR criteria evaluation"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "HR criteria and related read rules prevent unauthorized employees from viewing or requesting restricted services.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-criteria.html"
+			"https://www.servicenow.com/docs/r/employee-service-management/hr-service-delivery/hr-criteria.html"
 		],
 		"domain": "Core HR Applications and Employee Center"
 	},
@@ -12037,15 +12041,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 48,
 		"prompt": "Which Employee Center personalization uses user criteria distinct from HR criteria?",
 		"choices": [
-			"Can Read / Cannot Read user criteria on content such as knowledge",
-			"CMDB identification user criteria",
 			"Discovery credential user criteria",
-			"Firewall policy user criteria"
+			"Firewall policy user criteria",
+			"Can Read / Cannot Read user criteria on content such as knowledge",
+			"CMDB identification user criteria"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "User criteria controls general content visibility while HR criteria targets HR-specific service eligibility.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-knowledge-management.html"
+			"https://www.servicenow.com/docs/r/employee-service-management/hr-service-delivery/hr-knowledge-management.html"
 		],
 		"domain": "Core HR Applications and Employee Center"
 	},
@@ -12054,15 +12058,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 49,
 		"prompt": "How should HR catalog fulfillment flows notify stakeholders?",
 		"choices": [
+			"Discovery emails to all users",
 			"Configured notifications on case state changes, tasks, and approvals",
 			"Only manual phone calls outside the platform",
-			"SNMP traps to hr_case",
-			"Discovery emails to all users"
+			"SNMP traps to hr_case"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"explanation": "HR fulfillment flows trigger notifications so employees and agents receive updates as work progresses.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-case-management.html"
+			"https://www.servicenow.com/docs/r/employee-service-management/agent-workspace-for-hr-case-management/agent-ws-hr-case-mgmt-exploring.html"
 		],
 		"domain": "Core HR Applications and Employee Center"
 	},
@@ -12071,15 +12075,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 50,
 		"prompt": "An employee relations investigation must track both the requester and the subject employee on the same case. Which case design preserves that relationship?",
 		"choices": [
-			"hr_case with opened_for and subject person references",
 			"cmdb_ci_computer only",
 			"sysapproval_group only",
-			"alm_license only"
+			"alm_license only",
+			"hr_case with opened_for and subject person references"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "HR cases reference the employee and subject person fields to identify who requested and who is impacted.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-case-management.html"
+			"https://www.servicenow.com/docs/r/employee-service-management/agent-workspace-for-hr-case-management/agent-ws-hr-case-mgmt-exploring.html"
 		],
 		"domain": "Core HR Applications and Employee Center"
 	},
@@ -12088,15 +12092,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 51,
 		"prompt": "When building HR services, why map each service to a single COE?",
 		"choices": [
-			"To ensure unambiguous routing, ownership, and reporting accountability",
-			"To allow unlimited COEs per service for flexibility",
 			"To disable assignment rules entirely",
-			"To bypass HR security on cases"
+			"To bypass HR security on cases",
+			"To ensure unambiguous routing, ownership, and reporting accountability",
+			"To allow unlimited COEs per service for flexibility"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "One COE per service prevents conflicting ownership and simplifies operational metrics by functional area.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-centers-of-excellence.html"
+			"https://www.servicenow.com/docs/r/employee-service-management/hr-service-delivery/hr-centers-of-excellence-coes.html"
 		],
 		"domain": "Core HR Applications and Employee Center"
 	},
@@ -12105,15 +12109,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 52,
 		"prompt": "Which Core HR artifact standardizes agent responses for recurring case types?",
 		"choices": [
+			"Event correlation templates",
 			"HR case templates with predefined fields and guidance",
 			"CMDB sync templates",
-			"Discovery patterns",
-			"Event correlation templates"
+			"Discovery patterns"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"explanation": "Templates prepopulate case data and instructions so agents handle similar requests consistently.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-case-templates.html"
+			"https://www.servicenow.com/docs/r/employee-service-management/hr-service-delivery/configure-hr-case-template.html"
 		],
 		"domain": "Core HR Applications and Employee Center"
 	},
@@ -12130,7 +12134,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 0,
 		"explanation": "Branded Employee Center experiences reinforce familiarity and encourage employees to use official HR channels.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/employee-center/employee-center-overview.html"
+			"https://www.servicenow.com/docs/r/employee-service-management/employee-experience-foundation/employee-center-landing-page.html"
 		],
 		"domain": "Core HR Applications and Employee Center"
 	},
@@ -12139,15 +12143,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 54,
 		"prompt": "A hiring surge requires milestone-driven onboarding with sequenced IT, facilities, and orientation tasks. What should HR implement?",
 		"choices": [
-			"A defined employee milestone such as onboarding with orchestrated activities",
 			"A CMDB reconciliation job",
 			"A payroll GL posting batch",
-			"A network discovery schedule"
+			"A network discovery schedule",
+			"A defined employee milestone such as onboarding with orchestrated activities"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Lifecycle events coordinate cross-functional activities when employees join, change roles, or leave the organization.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/lifecycle-events-overview.html"
+			"https://www.servicenow.com/docs/r/employee-service-management/lifecycle-events/using-lifecycle-events.html"
 		],
 		"domain": "HR Journeys"
 	},
@@ -12157,14 +12161,14 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "Onboarding must group equipment provisioning, account creation, and orientation into phased milestones. How should Journey Designer organize those steps?",
 		"choices": [
 			"Activity sets grouping related activities executed as logical journey phases",
-			"CMDB relationship bundles linking laptop CIs only",
 			"Software license bundles for publisher part numbers",
-			"Firewall rule collections for network access requests"
+			"Firewall rule collections for network access requests",
+			"CMDB relationship bundles linking laptop CIs only"
 		],
 		"correctIndex": 0,
 		"explanation": "Activity sets organize journey steps—such as equipment provisioning tasks—into logical phases.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/lifecycle-events-overview.html"
+			"https://www.servicenow.com/docs/r/employee-service-management/lifecycle-events/using-lifecycle-events.html"
 		],
 		"domain": "HR Journeys"
 	},
@@ -12173,15 +12177,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 56,
 		"prompt": "HR wants new hires enrolled automatically when employment status changes to Active. Which Journey Designer element should launch the onboarding journey?",
 		"choices": [
-			"Trigger conditions based on employee or HR profile changes",
 			"CMDB identification schedules for infrastructure classes",
-			"Import set coalesce keys for spreadsheet loads only",
-			"SNMP community definitions for network monitoring probes"
+			"Trigger conditions based on employee or HR profile changes",
+			"SNMP community definitions for network monitoring probes",
+			"Import set coalesce keys for spreadsheet loads only"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"explanation": "Trigger conditions evaluate HR profile or employment changes to launch the appropriate lifecycle event.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/lifecycle-events-overview.html"
+			"https://www.servicenow.com/docs/r/employee-service-management/lifecycle-events/using-lifecycle-events.html"
 		],
 		"domain": "HR Journeys"
 	},
@@ -12190,15 +12194,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 57,
 		"prompt": "A promotion journey must create manager approval, compensation review, and notification steps. What should each executable step be modeled as?",
 		"choices": [
-			"An activity representing a task, approval, or notification in the lifecycle flow",
-			"A CMDB CI class definition for hardware assets",
 			"A payroll deduction code stored outside HR tables",
+			"A CMDB CI class definition for hardware assets",
+			"An activity representing a task, approval, or notification in the lifecycle flow",
 			"An SNMP trap definition for infrastructure alerts"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Activities are executable steps assigned to people or systems to complete lifecycle milestones.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/lifecycle-events-overview.html"
+			"https://www.servicenow.com/docs/r/employee-service-management/lifecycle-events/using-lifecycle-events.html"
 		],
 		"domain": "HR Journeys"
 	},
@@ -12207,15 +12211,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 58,
 		"prompt": "How is audience configured for lifecycle activities?",
 		"choices": [
-			"By defining who receives or completes each activity using roles, groups, or criteria",
-			"By granting all employees the admin role",
 			"By disabling HR case assignment",
-			"By removing activity field mappings"
+			"By removing activity field mappings",
+			"By granting all employees the admin role",
+			"By defining who receives or completes each activity using roles, groups, or criteria"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Audience settings route each activity to the correct stakeholders such as hiring managers or IT fulfillers.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/lifecycle-events-overview.html"
+			"https://www.servicenow.com/docs/r/employee-service-management/lifecycle-events/using-lifecycle-events.html"
 		],
 		"domain": "HR Journeys"
 	},
@@ -12225,14 +12229,14 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "Fulfillers need hire date, location, and manager on every onboarding task without re-keying data. How should Journey Designer pass context into activities?",
 		"choices": [
 			"Activity field mappings that populate activity and task fields from lifecycle context",
-			"CMDB relationship maps between server and application CIs",
+			"Software reclamation rules tied to unused installations",
 			"SNMP community strings shared across monitoring probes",
-			"Software reclamation rules tied to unused installations"
+			"CMDB relationship maps between server and application CIs"
 		],
 		"correctIndex": 0,
 		"explanation": "Field mappings populate activity and task fields from lifecycle context so fulfillers have required information.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/lifecycle-events-overview.html"
+			"https://www.servicenow.com/docs/r/employee-service-management/lifecycle-events/using-lifecycle-events.html"
 		],
 		"domain": "HR Journeys"
 	},
@@ -12242,14 +12246,14 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "Which tool is used to design and maintain HR lifecycle journeys visually?",
 		"choices": [
 			"Journey Designer",
-			"Dependency Views",
 			"Identification Engine",
+			"Dependency Views",
 			"Firewall Manager"
 		],
 		"correctIndex": 0,
 		"explanation": "Journey Designer provides a design surface for lifecycle events, activity sets, and orchestration logic.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/lifecycle-events-overview.html"
+			"https://www.servicenow.com/docs/r/employee-service-management/lifecycle-events/using-lifecycle-events.html"
 		],
 		"domain": "HR Journeys"
 	},
@@ -12258,15 +12262,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 61,
 		"prompt": "When onboarding a new hire, which lifecycle pattern is commonly implemented?",
 		"choices": [
-			"An onboarding lifecycle event with sequenced provisioning and orientation activities",
 			"A CMDB full sync lifecycle prioritized using risk scoring and impact assessment criteria.",
+			"A vulnerability scan lifecycle",
 			"A payroll year-end close lifecycle",
-			"A vulnerability scan lifecycle"
+			"An onboarding lifecycle event with sequenced provisioning and orientation activities"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Onboarding lifecycle events coordinate HR, IT, and facilities tasks from offer acceptance through day one readiness.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/lifecycle-events-overview.html"
+			"https://www.servicenow.com/docs/r/employee-service-management/lifecycle-events/using-lifecycle-events.html"
 		],
 		"domain": "HR Journeys"
 	},
@@ -12275,15 +12279,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 62,
 		"prompt": "How can activity dependencies control journey execution order?",
 		"choices": [
-			"Later activities wait until prerequisite activities complete or meet conditions",
-			"All activities run simultaneously without rules",
 			"Dependencies disable HR security",
-			"Dependencies convert cases to incidents"
+			"Dependencies convert cases to incidents",
+			"Later activities wait until prerequisite activities complete or meet conditions",
+			"All activities run simultaneously without rules"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Dependencies ensure activities such as account creation finish before equipment shipping tasks begin.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/lifecycle-events-overview.html"
+			"https://www.servicenow.com/docs/r/employee-service-management/lifecycle-events/using-lifecycle-events.html"
 		],
 		"domain": "HR Journeys"
 	},
@@ -12292,15 +12296,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 63,
 		"prompt": "Which records are typically generated when lifecycle activities execute?",
 		"choices": [
-			"HR tasks and related fulfillment records assigned to responsible parties",
 			"CMDB-only records without assignees",
-			"Payroll journal batches",
-			"Firewall change tickets only"
+			"Firewall change tickets only",
+			"HR tasks and related fulfillment records assigned to responsible parties",
+			"Payroll journal batches"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Activities create trackable HR task work items so teams can complete and audit lifecycle steps.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/lifecycle-events-overview.html"
+			"https://www.servicenow.com/docs/r/employee-service-management/lifecycle-events/using-lifecycle-events.html"
 		],
 		"domain": "HR Journeys"
 	},
@@ -12310,14 +12314,14 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "How can conditional logic be applied within a lifecycle journey?",
 		"choices": [
 			"Activities or sets run only when trigger or branch conditions evaluate true",
-			"Conditions remove all HR roles globally",
 			"Conditions disable Employee Center permanently",
+			"Conditions remove all HR roles globally",
 			"Conditions bypass activity field mappings"
 		],
 		"correctIndex": 0,
 		"explanation": "Conditional branches tailor journeys—for example, skipping relocation tasks when the hire is remote.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/lifecycle-events-overview.html"
+			"https://www.servicenow.com/docs/r/employee-service-management/lifecycle-events/using-lifecycle-events.html"
 		],
 		"domain": "HR Journeys"
 	},
@@ -12326,15 +12330,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 65,
 		"prompt": "A multinational program needs consistent onboarding across regions with local variations. How should lifecycle event templates accelerate that design?",
 		"choices": [
-			"Reusable activity sets, triggers, and mappings cloned from templates for standard employee transitions",
 			"Encrypted employee SSN values stored directly in journey activities",
+			"Software installation media attached to lifecycle notifications",
 			"CMDB discovery credentials embedded in each activity set",
-			"Software installation media attached to lifecycle notifications"
+			"Reusable activity sets, triggers, and mappings cloned from templates for standard employee transitions"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Templates accelerate journey implementation by providing starting configurations for standard lifecycle scenarios.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/lifecycle-events-overview.html"
+			"https://www.servicenow.com/docs/r/employee-service-management/lifecycle-events/using-lifecycle-events.html"
 		],
 		"domain": "HR Journeys"
 	},
@@ -12343,15 +12347,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 66,
 		"prompt": "Which employee transition commonly uses an offboarding lifecycle event?",
 		"choices": [
-			"Termination or resignation with access removal and asset recovery tasks",
-			"Quarterly CMDB audit",
 			"Annual firewall review",
-			"Software model normalization"
+			"Software model normalization",
+			"Termination or resignation with access removal and asset recovery tasks",
+			"Quarterly CMDB audit"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Offboarding journeys coordinate HR, IT, and security steps when employment ends.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/lifecycle-events-overview.html"
+			"https://www.servicenow.com/docs/r/employee-service-management/lifecycle-events/using-lifecycle-events.html"
 		],
 		"domain": "HR Journeys"
 	},
@@ -12360,21 +12364,22 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 67,
 		"prompt": "Promotion activities must notify payroll and update case records automatically. How should Journey Designer integrate with Workflow Studio?",
 		"choices": [
+			"Journey Designer only edits CMDB classes without HR context",
 			"Journey activities invoke or integrate with flows for automated HR processing and notifications",
 			"Journey Designer replaces all platform security controls globally",
-			"Workflow Studio cannot interact with HR tables or profiles",
-			"Journey Designer only edits CMDB classes without HR context"
+			"Workflow Studio cannot interact with HR tables or profiles"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"explanation": "Lifecycle orchestration can call automated flows for notifications, approvals, and system updates within journeys.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/lifecycle-events-overview.html"
+			"https://www.servicenow.com/docs/r/employee-service-management/lifecycle-events/using-lifecycle-events.html"
 		],
 		"domain": "HR Journeys"
 	},
 	{
 		"trackCode": "CIS-HR",
 		"order": 68,
+		"questionType": "multi",
 		"prompt": "Before enrolling employees in a new hire journey, which components must be configured? (Choose two.)",
 		"choices": [
 			"Trigger conditions",
@@ -12387,10 +12392,11 @@ export const DEV_PRACTICE_QUESTIONS = [
 			0,
 			1
 		],
-		"questionType": "multi",
-		"explanation": "Lifecycle events require trigger conditions to start and activity sets defining the work; CMDB identification and MID Server clusters are unrelated.",
+		"explanation": "Lifecycle event activity sets define journey phases and each activity set requires a trigger condition (for example immediate or after another set). CMDB identification and MID Server clusters are unrelated.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/lifecycle-events-overview.html"
+			"https://www.servicenow.com/docs/r/employee-service-management/lifecycle-events/using-lifecycle-events.html",
+			"https://www.servicenow.com/docs/r/employee-service-management/lifecycle-events/configure-hr-lifecycle-event-activity-set.html",
+			"https://www.servicenow.com/docs/r/employee-service-management/lifecycle-events/hr-lifecycle-event-configuration.html"
 		],
 		"domain": "HR Journeys"
 	},
@@ -12399,15 +12405,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 69,
 		"prompt": "Why map HR profile fields into lifecycle activity records?",
 		"choices": [
-			"So fulfillers receive accurate employee context without re-entering data",
 			"To expose all HR data publicly",
 			"To disable HR criteria on services",
-			"To remove COE assignment"
+			"To remove COE assignment",
+			"So fulfillers receive accurate employee context without re-entering data"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Field mappings propagate hire date, location, and role details into tasks agents and partners must complete.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/lifecycle-events-overview.html"
+			"https://www.servicenow.com/docs/r/employee-service-management/lifecycle-events/using-lifecycle-events.html"
 		],
 		"domain": "HR Journeys"
 	},
@@ -12416,15 +12422,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 70,
 		"prompt": "HR operations must report onboarding completion rates and stalled activities for each hiring cohort. Which capability supports that journey measurement?",
 		"choices": [
-			"Lifecycle dashboards and HR task lists showing activity completion status",
 			"CMDB dependency views only",
-			"Discovery error logs only",
-			"Software reclamation reports only"
+			"Lifecycle dashboards and HR task lists showing activity completion status",
+			"Software reclamation reports only",
+			"Discovery error logs only"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"explanation": "Operational views track open lifecycle tasks and highlight stalled activities across onboarding cohorts.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hrsd-reporting-and-analytics.html"
+			"https://www.servicenow.com/docs/r/employee-service-management/hr-service-delivery/c_HRDashboardsReports.html"
 		],
 		"domain": "HR Journeys"
 	},
@@ -12433,15 +12439,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 71,
 		"prompt": "Which practice keeps lifecycle journeys maintainable after go-live?",
 		"choices": [
-			"Version and test journey changes in sub-production before promoting scoped update sets",
-			"Edit production journeys directly without testing",
 			"Store all activities in Global scope",
+			"Edit production journeys directly without testing",
+			"Version and test journey changes in sub-production before promoting scoped update sets",
 			"Remove activity dependencies to simplify"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Governed promotion of scoped lifecycle changes reduces regression risk for employee-critical processes.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hrsd-implementation-governance.html"
+			"https://www.servicenow.com/docs/r/employee-service-management/hr-service-delivery/hr-piwb-implementation-guidance.html"
 		],
 		"domain": "HR Journeys"
 	},
@@ -12450,15 +12456,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 72,
 		"prompt": "Which security layer restricts read and write operations on hr_case records?",
 		"choices": [
-			"Platform ACLs combined with HR roles",
-			"SNMP community strings",
 			"Discovery schedules",
-			"Import set coalesce rules"
+			"Import set coalesce rules",
+			"SNMP community strings",
+			"Platform ACLs combined with HR roles"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Table and field ACLs enforce record access in conjunction with HR-specific roles assigned to users and groups.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-case-security.html"
+			"https://www.servicenow.com/docs/r/employee-service-management/hr-service-delivery/hr-security.html"
 		],
 		"domain": "Platform, Role, and Contextual Security"
 	},
@@ -12468,14 +12474,14 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "Managers should view cases for direct reports but not unrelated employee investigations. Which security model enforces that contextual access?",
 		"choices": [
 			"HR criteria and case access rules based on employee relationship to the record",
-			"Global admin access to all cases",
+			"CMDB-based case encryption",
 			"Unrestricted public case comments",
-			"CMDB-based case encryption"
+			"Global admin access to all cases"
 		],
 		"correctIndex": 0,
 		"explanation": "Contextual security limits case visibility using HR criteria such as opened_for, subject person, and COE membership.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-case-security.html"
+			"https://www.servicenow.com/docs/r/employee-service-management/hr-service-delivery/hr-security.html"
 		],
 		"domain": "Platform, Role, and Contextual Security"
 	},
@@ -12484,15 +12490,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 74,
 		"prompt": "How do HR roles differ from platform ACLs?",
 		"choices": [
-			"Roles bundle permissions while ACLs enforce record and field operations at runtime",
 			"Roles replace all ACL evaluation",
-			"ACLs assign user passwords calibrated using operational metrics from the prior quarter.",
-			"Roles only apply to CMDB tables"
+			"Roles only apply to CMDB tables",
+			"Roles bundle permissions while ACLs enforce record and field operations at runtime",
+			"ACLs assign user passwords calibrated using operational metrics from the prior quarter."
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Users receive HR roles for authorized capabilities; ACLs evaluate each database operation against those roles and conditions.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-case-security.html"
+			"https://www.servicenow.com/docs/r/employee-service-management/hr-service-delivery/hr-security.html"
 		],
 		"domain": "Platform, Role, and Contextual Security"
 	},
@@ -12501,15 +12507,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 75,
 		"prompt": "A partner firm needs to customize HR case forms without full admin access. Which scoped role pattern should governance allow?",
 		"choices": [
-			"Disabling all HR ACL checks",
-			"Granting unrestricted Global scope development",
 			"Allowing controlled customization within an HR scope without full admin rights",
+			"Granting unrestricted Global scope development",
+			"Disabling all HR ACL checks",
 			"Running Discovery on HR laptops"
 		],
-		"correctIndex": 2,
+		"correctIndex": 0,
 		"explanation": "Delegated developers can build within assigned scoped applications while governance limits cross-scope or platform-wide changes.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hrsd-implementation-governance.html"
+			"https://www.servicenow.com/docs/r/employee-service-management/hr-service-delivery/hr-piwb-implementation-guidance.html"
 		],
 		"domain": "Platform, Role, and Contextual Security"
 	},
@@ -12518,15 +12524,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 76,
 		"prompt": "Which field type on HR cases often requires stricter field-level ACLs?",
 		"choices": [
-			"Discovery status codes",
-			"CMDB serial numbers on unrelated tables",
 			"Sensitive personal or compensation-related fields",
-			"Public marketing descriptions"
+			"Public marketing descriptions",
+			"CMDB serial numbers on unrelated tables",
+			"Discovery status codes"
 		],
-		"correctIndex": 2,
+		"correctIndex": 0,
 		"explanation": "PII and confidential HR data use field ACLs so only authorized roles can read or update sensitive columns.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-case-security.html"
+			"https://www.servicenow.com/docs/r/employee-service-management/hr-service-delivery/hr-security.html"
 		],
 		"domain": "Platform, Role, and Contextual Security"
 	},
@@ -12536,14 +12542,14 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "Payroll must receive new hire and termination events from ServiceNow within four hours. Which integration design supports reliable payroll synchronization?",
 		"choices": [
 			"Scheduled or event-driven integrations in the HR Integrations scope with secured credentials and error handling",
-			"CMDB identification rules that create payroll journal entries automatically",
+			"Manual CSV exports emailed weekly without import set reconciliation",
 			"Discovery probes that scan employee laptops for payroll deductions",
-			"Manual CSV exports emailed weekly without import set reconciliation"
+			"CMDB identification rules that create payroll journal entries automatically"
 		],
 		"correctIndex": 0,
 		"explanation": "Payroll integrations use governed connectors and jobs in the Integrations scope with monitoring for failed employee updates.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hrsd-implementation-governance.html"
+			"https://www.servicenow.com/docs/r/employee-service-management/hr-service-delivery/hr-piwb-implementation-guidance.html"
 		],
 		"domain": "Integration Strategy"
 	},
@@ -12552,15 +12558,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 78,
 		"prompt": "A benefits vendor requires enrollment status updates when employees change eligibility. How should HRSD exchange data with the external benefits system?",
 		"choices": [
-			"Retiring all HR profiles after each open enrollment period",
 			"Integration flows mapping HR profile and case outcomes to benefits enrollment records with reconciliation checks",
-			"Disabling HR criteria so every employee sees every benefits service",
-			"Public case comments posted to the vendor portal without authentication"
+			"Public case comments posted to the vendor portal without authentication",
+			"Retiring all HR profiles after each open enrollment period",
+			"Disabling HR criteria so every employee sees every benefits service"
 		],
-		"correctIndex": 1,
+		"correctIndex": 0,
 		"explanation": "Benefits integrations translate HR profile and fulfillment outcomes into authoritative enrollment updates with validation.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hrsd-implementation-governance.html"
+			"https://www.servicenow.com/docs/r/employee-service-management/hr-service-delivery/hr-piwb-implementation-guidance.html"
 		],
 		"domain": "Integration Strategy"
 	},
@@ -12570,14 +12576,14 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "A legacy HRIS remains the system of record for employee demographics during phase one. What synchronization strategy should the implementation team use?",
 		"choices": [
 			"Define authoritative source per attribute, reconcile conflicts, and phase bidirectional sync after data quality validation",
-			"Import production HR cases with full PII into every sub-production instance daily",
 			"Allow employees to edit any HR profile field without approval or audit",
+			"Import production HR cases with full PII into every sub-production instance daily",
 			"Disable all ACLs during integration testing to speed troubleshooting"
 		],
 		"correctIndex": 0,
 		"explanation": "HRIS synchronization plans identify source-of-truth fields, reconciliation rules, and staged cutover milestones before go-live.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hrsd-implementation-governance.html"
+			"https://www.servicenow.com/docs/r/employee-service-management/hr-service-delivery/hr-piwb-implementation-guidance.html"
 		],
 		"domain": "Integration Strategy"
 	},
@@ -12586,15 +12592,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 80,
 		"prompt": "Nightly employee imports show duplicate profiles and missing managers. Which practice improves HR integration data quality?",
 		"choices": [
-			"Coalesce keys, transform maps, and reconciliation reports before enabling downstream HR criteria",
-			"Delete all hr_profile records after each failed import row",
 			"Disable Journey Designer triggers until every employee completes training",
-			"Grant all users hr_admin to manually fix records in production"
+			"Grant all users hr_admin to manually fix records in production",
+			"Coalesce keys, transform maps, and reconciliation reports before enabling downstream HR criteria",
+			"Delete all hr_profile records after each failed import row"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Import reconciliation validates employee keys and reference fields so eligibility and routing use trustworthy profile data.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hrsd-implementation-governance.html"
+			"https://www.servicenow.com/docs/r/employee-service-management/hr-service-delivery/hr-piwb-implementation-guidance.html"
 		],
 		"domain": "Integration Strategy"
 	},
@@ -12603,15 +12609,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 81,
 		"prompt": "How does HR criteria complement ACLs when protecting HR services?",
 		"choices": [
+			"HR criteria encrypts attachments automatically",
 			"HR criteria controls service visibility while ACLs secure underlying records and fields",
 			"HR criteria replaces all ACL requirements",
-			"ACLs only apply outside HR scopes",
-			"HR criteria encrypts attachments automatically"
+			"ACLs only apply outside HR scopes"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"explanation": "Eligibility rules gate catalog exposure; ACLs and contextual case security enforce data access after submission.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-criteria.html"
+			"https://www.servicenow.com/docs/r/employee-service-management/hr-service-delivery/hr-criteria.html"
 		],
 		"domain": "Integration Strategy"
 	},
@@ -12628,7 +12634,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 0,
 		"explanation": "Integration error handling preserves data integrity by isolating failed records and preventing downstream lifecycle errors.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hrsd-implementation-governance.html"
+			"https://www.servicenow.com/docs/r/employee-service-management/hr-service-delivery/hr-piwb-implementation-guidance.html"
 		],
 		"domain": "Integration Strategy"
 	},
@@ -12637,16 +12643,16 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 83,
 		"prompt": "A global enterprise operates in twelve countries with different payroll providers. Which HRSD design supports multi-country employee servicing?",
 		"choices": [
-			"Company and country-aware HR profiles, criteria, and COE routing aligned to local policy and integrations",
 			"A single global HR profile with all payroll fields editable by every employee",
 			"One COE handling every country without localized services or integrations",
-			"Employee Center guest access so contractors bypass HR criteria entirely"
+			"Employee Center guest access so contractors bypass HR criteria entirely",
+			"Company and country-aware HR profiles, criteria, and COE routing aligned to local policy and integrations"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Multi-country HR programs combine localized profiles, eligibility, and integration endpoints while sharing common platform governance.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-profile-management.html",
-			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hrsd-implementation-governance.html"
+			"https://www.servicenow.com/docs/r/employee-service-management/hr-service-delivery/c_HRProfileSecurity.html",
+			"https://www.servicenow.com/docs/r/employee-service-management/hr-service-delivery/hr-piwb-implementation-guidance.html"
 		],
 		"domain": "Integration Strategy"
 	},
@@ -12656,15 +12662,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "Open enrollment requires verifying dependents and coverage tier before employees submit benefits changes. How should eligibility be enforced?",
 		"choices": [
 			"HR criteria on benefits services combined with profile attributes and guided intake variables",
-			"Global read access to every employee benefits case for all managers",
 			"Removal of HR tasks so enrollment happens only by email",
-			"Automatic approval of every benefits request without documentation"
+			"Automatic approval of every benefits request without documentation",
+			"Global read access to every employee benefits case for all managers"
 		],
 		"correctIndex": 0,
 		"explanation": "Benefits enrollment uses HR criteria and structured intake to ensure only eligible employees access the correct services and fields.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-criteria.html",
-			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-services-overview.html"
+			"https://www.servicenow.com/docs/r/employee-service-management/hr-service-delivery/hr-criteria.html",
+			"https://www.servicenow.com/docs/r/employee-service-management/hr-service-delivery/hr-service-delivery-overview.html"
 		],
 		"domain": "Integration Strategy"
 	},
@@ -12673,16 +12679,16 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 85,
 		"prompt": "Talent leaders want succession cases linked to employee profiles and restricted to HR partners. Which advanced HR pattern supports that use case?",
 		"choices": [
-			"Sensitive HR cases with contextual security, COE routing, and profile-linked subject persons",
 			"Public dashboards listing succession candidates for all employees",
-			"CMDB dependency maps showing manager reporting chains only",
-			"Discovery schedules that scan executive laptops nightly"
+			"Sensitive HR cases with contextual security, COE routing, and profile-linked subject persons",
+			"Discovery schedules that scan executive laptops nightly",
+			"CMDB dependency maps showing manager reporting chains only"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"explanation": "Talent and succession workflows use governed HR cases and contextual security to protect confidential workforce planning data.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-case-management.html",
-			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-case-security.html"
+			"https://www.servicenow.com/docs/r/employee-service-management/agent-workspace-for-hr-case-management/agent-ws-hr-case-mgmt-exploring.html",
+			"https://www.servicenow.com/docs/r/employee-service-management/hr-service-delivery/hr-security.html"
 		],
 		"domain": "Integration Strategy"
 	},
@@ -12691,15 +12697,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 86,
 		"prompt": "HR leadership must roll out Employee Center and case management across five regions over nine months. Which phasing approach reduces risk?",
 		"choices": [
-			"Pilot one region, validate journeys and integrations, then expand by COE and geography with defined cutover milestones",
-			"Enable every HR service globally on day one without user acceptance testing",
 			"Deploy only in production while disabling sub-production environments",
+			"Enable every HR service globally on day one without user acceptance testing",
+			"Pilot one region, validate journeys and integrations, then expand by COE and geography with defined cutover milestones",
 			"Skip COE design because routing can be added after go-live"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Phased HRSD rollouts validate services, journeys, and integrations in pilots before scaling to additional regions and COEs.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hrsd-implementation-governance.html"
+			"https://www.servicenow.com/docs/r/employee-service-management/hr-service-delivery/hr-piwb-implementation-guidance.html"
 		],
 		"domain": "Implementation and Change Management"
 	},
@@ -12708,15 +12714,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 87,
 		"prompt": "Executive sponsors ask what milestones prove HRSD is ready for production cutover. Which readiness evidence should the program provide?",
 		"choices": [
-			"Validated integrations, UAT sign-off on critical services and journeys, security review, and training completion by role",
 			"Count of open defects only with no integration or security validation",
 			"Number of custom Global scripts regardless of scope policy",
-			"Discovery coverage percentages for employee subnets distributed using content delivery rules for geo proximity."
+			"Discovery coverage percentages for employee subnets distributed using content delivery rules for geo proximity.",
+			"Validated integrations, UAT sign-off on critical services and journeys, security review, and training completion by role"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Go-live readiness combines data quality, tested journeys, secured access, and role-based training for employees and HR agents.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hrsd-implementation-governance.html"
+			"https://www.servicenow.com/docs/r/employee-service-management/hr-service-delivery/hr-piwb-implementation-guidance.html"
 		],
 		"domain": "Implementation and Change Management"
 	},
@@ -12726,15 +12732,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "A COE model must clarify who owns Benefits versus Employee Relations services and escalations. How should governance be established?",
 		"choices": [
 			"Define COE ownership, service catalogs, assignment groups, and escalation paths with accountable process owners",
-			"Assign every case to the same generic group permanently",
 			"Remove COE fields so agents manually search for handlers",
-			"Allow employees to reassign cases to any COE without approval"
+			"Allow employees to reassign cases to any COE without approval",
+			"Assign every case to the same generic group permanently"
 		],
 		"correctIndex": 0,
 		"explanation": "COE governance documents service ownership, routing, and accountability so HR operations scale consistently after go-live.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hr-centers-of-excellence.html",
-			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hrsd-implementation-governance.html"
+			"https://www.servicenow.com/docs/r/employee-service-management/hr-service-delivery/hr-centers-of-excellence-coes.html",
+			"https://www.servicenow.com/docs/r/employee-service-management/hr-service-delivery/hr-piwb-implementation-guidance.html"
 		],
 		"domain": "Implementation and Change Management"
 	},
@@ -12743,15 +12749,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 89,
 		"prompt": "Legacy HRIS case history must migrate before decommissioning the old portal. Which change management and data approach should the team take?",
 		"choices": [
-			"Migrate authoritative employee and open case data with cleansing, communicate cutover timelines, and train employees and agents by persona",
 			"Ask employees to re-enter five years of closed cases manually in Employee Center",
-			"Disable Employee Center until all employees pass a certification exam",
-			"Copy unmasked production PII to developer laptops for convenience cataloged with accurate category, model, and support tier metadata."
+			"Migrate authoritative employee and open case data with cleansing, communicate cutover timelines, and train employees and agents by persona",
+			"Copy unmasked production PII to developer laptops for convenience cataloged with accurate category, model, and support tier metadata.",
+			"Disable Employee Center until all employees pass a certification exam"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"explanation": "Successful HRSD transitions combine governed data migration, stakeholder communications, and role-based training for adoption.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/human-resources/hr-service-delivery/hrsd-implementation-governance.html"
+			"https://www.servicenow.com/docs/r/employee-service-management/hr-service-delivery/hr-piwb-implementation-guidance.html"
 		],
 		"domain": "Implementation and Change Management"
 	},
