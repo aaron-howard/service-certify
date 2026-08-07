@@ -6998,12 +6998,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 1,
 		"prompt": "A customer runs three monitoring tools with different severity scales and wants one operational view in ServiceNow. Which Event Management design best consolidates those sources?",
 		"choices": [
-			"Ingest events through connectors, normalize severity and fields, then correlate into alerts on CIs and services",
 			"Store each tool's raw logs in separate tables without mapping, rules, or alert correlation",
 			"Replace CMDB discovery with spreadsheet imports so alerts skip CI binding entirely",
-			"Convert every warning event into a hardware asset transfer order for audit tracking"
+			"Convert every warning event into a hardware asset transfer order for audit tracking",
+			"Ingest events through connectors, normalize severity and fields, then correlate into alerts on CIs and services"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Event Management ingests monitoring signals from multiple sources, applies normalization and rules, and produces actionable alerts tied to the environment being monitored.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/event-management/exploring-event-management.html"
@@ -7016,11 +7016,11 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "After events enter the Event Management pipeline and are normalized, what is the typical next outcome?",
 		"choices": [
 			"They are purged unless an open incident already references the source node",
-			"They skip correlation and remain in raw format without severity mapping applied",
 			"They are archived exclusively when no active connector instance is configured",
-			"They are evaluated by rules and may create or update alerts on related CIs"
+			"They are evaluated by rules and may create or update alerts on related CIs",
+			"They skip correlation and remain in raw format without severity mapping applied"
 		],
-		"correctIndex": 3,
+		"correctIndex": 2,
 		"explanation": "Normalized events flow through rule evaluation and correlation, which can materialize or update alert records for operators to act on.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/event-management/exploring-event-management.html"
@@ -7032,12 +7032,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 3,
 		"prompt": "Compared with passive monitoring log storage, what operational advantage does Event Management provide?",
 		"choices": [
-			"Spreadsheet-only trending without CMDB relationship mapping or alert lifecycle",
 			"Hardware procurement cost allocation for data center racks without event ingestion",
-			"Correlated alerting and response workflows tied to configuration and service context",
-			"Software entitlement optimization reports unrelated to monitoring signal processing"
+			"Spreadsheet-only trending without CMDB relationship mapping or alert lifecycle",
+			"Software entitlement optimization reports unrelated to monitoring signal processing",
+			"Correlated alerting and response workflows tied to configuration and service context"
 		],
-		"correctIndex": 2,
+		"correctIndex": 3,
 		"explanation": "Event Management adds correlation, alerting, and response workflows grounded in CI and service context rather than passive log retention alone.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/event-management/exploring-event-management.html"
@@ -7049,16 +7049,16 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 4,
 		"prompt": "During architecture planning, why do Event Management teams prioritize accurate CMDB data?",
 		"choices": [
-			"Connectors uninstall discovery credentials when CI classes are incomplete in the CMDB",
-			"Listeners reject all TLS connections unless hardware models are fully normalized first",
 			"Alert assignment groups are deleted automatically when CI counts fall below thresholds",
+			"Listeners reject all TLS connections unless hardware models are fully normalized first",
+			"Connectors uninstall discovery credentials when CI classes are incomplete in the CMDB",
 			"CI binding links events and alerts to ownership, impact, and service context"
 		],
 		"correctIndex": 3,
 		"explanation": "Accurate CI records enable event and alert binding so teams can assess impact, route work, and understand ownership during operational response.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-operations-management/event-management/exploring-event-management.html",
-			"https://www.servicenow.com/docs/r/it-operations-management/event-management/connectors-and-listeners.html"
+			"https://www.servicenow.com/docs/r/it-operations-management/event-management/ci-binding-alert.html",
+			"https://www.servicenow.com/docs/r/it-operations-management/event-management/ci-binding-process-flow.html"
 		],
 		"domain": "Architecture and Discovery"
 	},
@@ -7068,15 +7068,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"questionType": "multi",
 		"prompt": "On which operating system platforms can a MID Server run to support Event Management integrations? (Choose two.)",
 		"choices": [
-			"Microsoft Windows Server",
-			"Linux System",
 			"Apple iOS mobile devices",
-			"Android consumer tablets"
+			"Android consumer tablets",
+			"Linux System",
+			"Microsoft Windows Server"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"correctIndexes": [
-			0,
-			1
+			2,
+			3
 		],
 		"explanation": "MID Servers support Microsoft Windows Server and Linux System platforms for secure communication between external networks and the ServiceNow instance.",
 		"sourceUrls": [
@@ -7090,9 +7090,9 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "A monitoring platform sits on a private network and cannot reach the ServiceNow instance directly. Which MID Server role supports Event Management connector and listener flows?",
 		"choices": [
 			"Provides a secure bridge between external networks and the ServiceNow instance for ingestion traffic",
-			"Stores retired hardware asset disposal certificates for audit compliance reporting",
+			"Schedules service catalog fulfillment tasks for consumable inventory replenishment",
 			"Replaces event rules with manual spreadsheet imports managed by the NOC team",
-			"Schedules service catalog fulfillment tasks for consumable inventory replenishment"
+			"Stores retired hardware asset disposal certificates for audit compliance reporting"
 		],
 		"correctIndex": 0,
 		"explanation": "The MID Server enables secure, controlled communication for integrations that cannot connect directly to the instance from external monitoring environments.",
@@ -7106,15 +7106,16 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 7,
 		"prompt": "How does Discovery data quality affect Event Management outcomes in most implementations?",
 		"choices": [
-			"Discovery status has no relationship to alert assignment routing or CI binding rules",
 			"Poor CI data only affects software license reclamation jobs scheduled overnight",
-			"Accurate CI records improve event-to-CI binding and service impact analysis",
-			"Discovery eliminates the need for event field mapping configurations on connectors"
+			"Discovery eliminates the need for event field mapping configurations on connectors",
+			"Discovery status has no relationship to alert assignment routing or CI binding rules",
+			"Accurate CI records improve event-to-CI binding and service impact analysis"
 		],
-		"correctIndex": 2,
+		"correctIndex": 3,
 		"explanation": "Reliable CMDB data from Discovery and other sources improves binding accuracy, which supports better triage, routing, and business impact assessment.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-operations-management/event-management/exploring-event-management.html"
+			"https://www.servicenow.com/docs/r/it-operations-management/event-management/ci-binding-alert.html",
+			"https://www.servicenow.com/docs/r/it-operations-management/event-management/ci-binding-process-flow.html"
 		],
 		"domain": "Architecture and Discovery"
 	},
@@ -7124,14 +7125,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "During a major outage, events flood in from SNMP traps, a pull connector, and email notifications. Which processing path should operators expect Event Management to follow?",
 		"choices": [
 			"Ingestion, normalization, rule evaluation, correlation, and alert generation on affected CIs",
-			"Immediate incident creation, change approval, and closure for every inbound event without filtering",
 			"Hardware stockroom receiving, transfer orders, and serialized asset retirement for each signal",
+			"Immediate incident creation, change approval, and closure for every inbound event without filtering",
 			"Publisher true-up imports followed by entitlement optimization dashboard refresh only"
 		],
 		"correctIndex": 0,
 		"explanation": "The event pipeline standardizes incoming data, applies rules and correlation, and can generate alerts when conditions warrant operational action.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-operations-management/event-management/exploring-event-management.html"
+			"https://www.servicenow.com/docs/r/it-operations-management/event-management/event-rules.html",
+			"https://www.servicenow.com/docs/r/it-operations-management/event-management/connectors-and-listeners.html"
 		],
 		"domain": "Architecture and Discovery"
 	},
@@ -7140,12 +7142,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 9,
 		"prompt": "A global NOC requires resilient event ingestion during peak outage windows. Which architectural design is most appropriate?",
 		"choices": [
-			"Disabling TLS on every listener endpoint to reduce processing overhead during spikes",
 			"Redundant listener paths with capacity monitoring and health checks aligned to load",
+			"Single non-production MID Server shared across all geographic regions without failover",
 			"Routing all monitoring sources through one connector with no health monitoring configured",
-			"Single non-production MID Server shared across all geographic regions without failover"
+			"Disabling TLS on every listener endpoint to reduce processing overhead during spikes"
 		],
-		"correctIndex": 1,
+		"correctIndex": 0,
 		"explanation": "Redundant ingestion paths and proactive health monitoring reduce the risk of event loss or delayed alerting during high-volume outage periods.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/event-management/connectors-and-listeners.html"
@@ -7157,12 +7159,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 10,
 		"prompt": "An implementer must onboard Datadog, SolarWinds, and a custom SNMP source that each label severity differently. Which connector design normalizes those feeds into one Event Management pipeline?",
 		"choices": [
-			"Configure source-specific connectors with field mapping and severity translation event rules before correlation",
 			"Send all events to critical severity so the NOC sees every signal at the highest level",
-			"Disable event rules until every source uses identical JSON field names and values",
-			"Route each tool to a separate instance without CMDB binding or shared alert grouping"
+			"Configure source-specific connectors with field mapping and severity translation event rules before correlation",
+			"Route each tool to a separate instance without CMDB binding or shared alert grouping",
+			"Disable event rules until every source uses identical JSON field names and values"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"explanation": "Connectors provide source-specific ingestion and mapping; event rules normalize severity and attributes so heterogeneous monitoring tools feed a unified pipeline.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/event-management/connectors-and-listeners.html",
@@ -7175,12 +7177,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 11,
 		"prompt": "During a traffic spike, the primary MID Server handling SNMP listeners stops responding but a secondary MID in the cluster remains healthy. Which architecture capability preserves event ingestion?",
 		"choices": [
-			"MID Server clustering with redundant listener paths and health monitoring aligned to load",
-			"Disabling TLS on listener endpoints so traps bypass MID Server validation checks",
 			"Routing all sources through one connector with no failover or capacity monitoring configured",
+			"Disabling TLS on listener endpoints so traps bypass MID Server validation checks",
+			"MID Server clustering with redundant listener paths and health monitoring aligned to load",
 			"Converting pull connectors to manual spreadsheet uploads until the spike subsides"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Redundant MID Server paths and proactive health monitoring reduce the risk of event loss or delayed alerting when a node fails during high-volume periods.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/event-management/connectors-and-listeners.html"
@@ -7192,12 +7194,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 12,
 		"prompt": "A NOC receives 50,000 SNMP traps per hour during peak windows. Which architectural tuning reduces listener backlog without losing actionable alerts?",
 		"choices": [
-			"Disable correlation entirely so every trap creates a separate critical alert for visibility",
-			"Archive all traps without normalization until off-peak hours when operators are available",
 			"Increase connector polling below the 120-second minimum to drain the listener queue faster",
-			"Distribute listeners across MID Server clusters, tune parser throughput, and filter noise with event rules before alert creation"
+			"Distribute listeners across MID Server clusters, tune parser throughput, and filter noise with event rules before alert creation",
+			"Archive all traps without normalization until off-peak hours when operators are available",
+			"Disable correlation entirely so every trap creates a separate critical alert for visibility"
 		],
-		"correctIndex": 3,
+		"correctIndex": 1,
 		"explanation": "High-volume ingestion requires distributed listener capacity, efficient parsing, and upstream filtering so the pipeline stays responsive during spikes.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/event-management/connectors-and-listeners.html",
@@ -7208,16 +7210,17 @@ export const DEV_PRACTICE_QUESTIONS = [
 	{
 		"trackCode": "CIS-EM",
 		"order": 13,
-		"prompt": "When multiple event rules match the same incoming event, how does Event Management apply them?",
+		"prompt": "When multiple event rules could match the same incoming event, what does selecting Apply additional matching rules enable?",
 		"choices": [
-			"Only the rule with the highest order of execution runs and others are skipped",
-			"Only the first rule encountered in alphabetical name order executes once",
-			"The platform randomly selects one rule and ignores the remaining matches",
-			"All matching rules run sequentially from lowest to highest order of execution"
+			"Only the rule with the highest Order value runs and all other matches are discarded",
+			"The platform randomly selects one matching rule and ignores the remaining matches",
+			"Rules execute once each in alphabetical name order regardless of the Order field",
+			"Matching rules run sequentially in ascending Order so each can apply its processing logic"
 		],
 		"correctIndex": 3,
-		"explanation": "When several rules match, Event Management executes all of them in ascending order of execution so each rule can apply its configured processing logic.",
+		"explanation": "Apply additional matching rules runs multiple matching event rules in ascending Order. Without that option, Event Management does not process every matching rule as a sequential chain by default.",
 		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-operations-management/event-management/create-event-rule.html",
 			"https://www.servicenow.com/docs/r/it-operations-management/event-management/event-rules.html"
 		],
 		"domain": "Event Configuration and Use"
@@ -7227,12 +7230,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 14,
 		"prompt": "Which connector onboarding approach aligns with Event Management implementation best practices?",
 		"choices": [
-			"Pilot in a scoped environment, validate mapping, then expand source coverage iteratively",
 			"Enable every event type on day one without lower-environment validation or tuning",
-			"Skip CI binding tests to accelerate production connector activation timelines",
-			"Use one shared credential across all connectors without documented ownership controls"
+			"Pilot in a scoped environment, validate mapping, then expand source coverage iteratively",
+			"Use one shared credential across all connectors without documented ownership controls",
+			"Skip CI binding tests to accelerate production connector activation timelines"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"explanation": "Phased onboarding with validated mapping and correlation reduces noise and misconfiguration risk before broad production rollout.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/event-management/connectors-and-listeners.html"
@@ -7244,12 +7247,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 15,
 		"prompt": "An administrator sets Event collection schedule (seconds) to 45 on a pull connector to improve freshness. The value reverts on save. What explains that behavior?",
 		"choices": [
-			"The schedule cannot be lower than the minimum schedule property, which defaults to 120 seconds",
-			"The schedule must equal the 11-second alert management rule evaluation interval exactly",
 			"The platform requires manual connector refresh before any sub-120-second value can be saved",
+			"The schedule must equal the 11-second alert management rule evaluation interval exactly",
+			"The schedule cannot be lower than the minimum schedule property, which defaults to 120 seconds",
 			"The instance blocks schedule edits until Metric Intelligence baseline learning completes"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Many connectors use a default polling interval of every 120 seconds, and Event collection schedule cannot fall below the minimum schedule property.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/event-management/connectors-and-listeners.html"
@@ -7261,12 +7264,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 16,
 		"prompt": "After go-live, an operations team notices events arriving but connector status shows failures intermittently. What should they check first?",
 		"choices": [
-			"Whether stockroom transfer orders are stuck in Awaiting Delivery state on fulfillment",
-			"Connector health, credentials, endpoint reachability, and polling schedule settings",
 			"If hardware model categories require consumable flag changes in the product catalog",
-			"Whether incident auto-close intervals block listener endpoint registration entirely"
+			"Whether incident auto-close intervals block listener endpoint registration entirely",
+			"Connector health, credentials, endpoint reachability, and polling schedule settings",
+			"Whether stockroom transfer orders are stuck in Awaiting Delivery state on fulfillment"
 		],
-		"correctIndex": 1,
+		"correctIndex": 2,
 		"explanation": "Intermittent connector failures are commonly caused by credential, endpoint, or schedule issues that prevent reliable event retrieval or delivery.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/event-management/connectors-and-listeners.html"
@@ -7279,9 +7282,9 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "Which listener configuration issue most commonly prevents events from entering the processing pipeline?",
 		"choices": [
 			"Missing software entitlement import job scheduled for the vendor publisher account",
-			"Discovery classification probes disabled on Linux MID Server hosts in one region",
+			"Alert grouping rules referencing retired hardware depreciation schedule templates",
 			"Inactive endpoint, wrong protocol, or payload format mismatch with parser settings",
-			"Alert grouping rules referencing retired hardware depreciation schedule templates"
+			"Discovery classification probes disabled on Linux MID Server hosts in one region"
 		],
 		"correctIndex": 2,
 		"explanation": "If a listener is inactive, uses the wrong protocol, or cannot parse the expected payload format, events may never reach rule evaluation.",
@@ -7295,12 +7298,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 18,
 		"prompt": "Why should connector configuration changes follow formal change management in production?",
 		"choices": [
-			"Connectors automatically delete CMDB classes when credentials rotate on a weekly cadence",
 			"Listener records bypass the platform audit trail during standard business hours only",
-			"Event rules become read-only after any connector update without CAB approval attached",
-			"Mapping or credential errors can break ingestion and delay alert creation for operators"
+			"Mapping or credential errors can break ingestion and delay alert creation for operators",
+			"Connectors automatically delete CMDB classes when credentials rotate on a weekly cadence",
+			"Event rules become read-only after any connector update without CAB approval attached"
 		],
-		"correctIndex": 3,
+		"correctIndex": 1,
 		"explanation": "Connector changes affect ingestion quality and alert reliability, so controlled testing and approval reduce outage and compliance risk.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/event-management/connectors-and-listeners.html"
@@ -7313,8 +7316,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "A monitoring source emits heartbeat events that should not generate alerts. How should this be handled in the pipeline?",
 		"choices": [
 			"Create an event rule to filter or de-prioritize heartbeat traffic before alert creation",
-			"Shut down the listener entirely during routine maintenance heartbeat transmissions",
 			"Assign every heartbeat to the critical severity level for maximum NOC visibility",
+			"Shut down the listener entirely during routine maintenance heartbeat transmissions",
 			"Convert heartbeat payloads into discovery schedules for subnet scans across regions"
 		],
 		"correctIndex": 0,
@@ -7329,12 +7332,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 20,
 		"prompt": "An operator opens a new alert but cannot see which database server is affected because CI binding failed. What does successful CI binding provide in this situation?",
 		"choices": [
-			"Links the alert to affected configuration items for impact and ownership context",
-			"Replaces connector credentials with manual spreadsheet uploads from the NOC team",
 			"Disables correlation logic for all warning-level monitoring signals by default",
-			"Bypasses normalization so raw JSON payloads display on the alert without parsing"
+			"Bypasses normalization so raw JSON payloads display on the alert without parsing",
+			"Links the alert to affected configuration items for impact and ownership context",
+			"Replaces connector credentials with manual spreadsheet uploads from the NOC team"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "CI binding associates events and alerts with configuration items so responders can assess service impact and route work to the correct owners.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/event-management/create-event-rule.html"
@@ -7346,12 +7349,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 21,
 		"prompt": "An implementation team needs to extract a host name from a nested JSON attribute in connector payloads. Which event rule feature supports this?",
 		"choices": [
+			"Incident state model transitions from Resolved to Closed after auto-close intervals",
 			"Stockroom audit scan methods configured for multi-serial asset intake workflows",
 			"Regular expression or JavaScript processing in field mapping or rule scripts",
-			"Hardware model normalization rules tied to procurement vendor catalog records",
-			"Incident state model transitions from Resolved to Closed after auto-close intervals"
+			"Hardware model normalization rules tied to procurement vendor catalog records"
 		],
-		"correctIndex": 1,
+		"correctIndex": 2,
 		"explanation": "Event rules and field mapping support regular expressions and JavaScript to transform source payload values into normalized event attributes.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/event-management/create-event-rule.html",
@@ -7381,12 +7384,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 23,
 		"prompt": "Why should event rules be validated with representative production-like payloads before go-live?",
 		"choices": [
-			"Because rule simulation is unavailable in subproduction instances entirely without plugins",
 			"To ensure stockroom receiving workflows auto-approve every transfer order line item",
 			"Because event rules affect dashboard portlet themes but not alert generation logic",
-			"To confirm filtering preserves actionable signals while reducing operational noise"
+			"To confirm filtering preserves actionable signals while reducing operational noise",
+			"Because rule simulation is unavailable in subproduction instances entirely without plugins"
 		],
-		"correctIndex": 3,
+		"correctIndex": 2,
 		"explanation": "Testing with realistic payloads verifies that suppression and classification logic keeps critical signals visible while reducing alert noise.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/event-management/event-rules.html"
@@ -7399,9 +7402,9 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "Which governance practice keeps event rule sets effective as monitoring sources evolve?",
 		"choices": [
 			"Documented ownership, change control, and periodic effectiveness reviews",
-			"Allow any operator to edit production rules without test evidence or rollback plans",
 			"Disable version history on event rule records to speed up ad hoc tuning sessions",
-			"Store all rule logic only in external email threads without CMDB references"
+			"Store all rule logic only in external email threads without CMDB references",
+			"Allow any operator to edit production rules without test evidence or rollback plans"
 		],
 		"correctIndex": 0,
 		"explanation": "Sustainable rule governance requires clear ownership, controlled changes, and periodic review against operational KPIs as sources change.",
@@ -7415,12 +7418,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 25,
 		"prompt": "Heartbeat events from a monitoring platform should not create operational alerts during normal polling. Where should an implementer configure that suppression logic?",
 		"choices": [
-			"Event rules that filter or de-prioritize heartbeat traffic before alert creation",
 			"Alert Management Rules that assign every heartbeat to the database admin group",
-			"Discovery schedules that scan the source subnet whenever heartbeats arrive",
-			"Hardware asset workflows that convert heartbeats into transfer order lines"
+			"Event rules that filter or de-prioritize heartbeat traffic before alert creation",
+			"Hardware asset workflows that convert heartbeats into transfer order lines",
+			"Discovery schedules that scan the source subnet whenever heartbeats arrive"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"explanation": "Event rules define how incoming events are filtered, transformed, and classified before they drive alert creation or updates.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/event-management/event-rules.html"
@@ -7450,12 +7453,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 27,
 		"prompt": "A change team schedules weekly maintenance on database CIs and wants alerts suppressed from impact calculation during the window. How should this be configured?",
 		"choices": [
-			"Delete all event rules globally until maintenance completes and operators re-enable them manually",
 			"Disable all pull connectors for the entire estate during every approved change record",
 			"Set every maintenance alert to Critical severity so responders prioritize them on the dashboard",
-			"Mark affected CIs In Maintenance so alerts on those CIs are excluded from impact calculation while the window is active"
+			"Mark affected CIs In Maintenance so alerts on those CIs are excluded from impact calculation while the window is active",
+			"Delete all event rules globally until maintenance completes and operators re-enable them manually"
 		],
-		"correctIndex": 3,
+		"correctIndex": 2,
 		"explanation": "Alerts on CIs in maintenance are excluded from impact calculation, and corresponding alerts may be hidden from operational views during the window.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/event-management/c_EMImpactCalculation.html",
@@ -7469,9 +7472,9 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "Repeated SNMP link-down traps from the same interface flood the event table but represent one underlying condition. Which event processing feature reduces that duplication?",
 		"choices": [
 			"Message key configuration that identifies and deduplicates related events from the same source condition",
-			"Alert Management Rules that create a new incident for every duplicate trap received",
 			"Connector polling intervals below 120 seconds to flush traps before deduplication runs",
-			"Discovery schedules that retire the interface CI after the first trap arrives"
+			"Discovery schedules that retire the interface CI after the first trap arrives",
+			"Alert Management Rules that create a new incident for every duplicate trap received"
 		],
 		"correctIndex": 0,
 		"explanation": "The message key helps the platform recognize related events so deduplication and correlation can reduce redundant alerts for the same underlying condition.",
@@ -7485,12 +7488,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 29,
 		"prompt": "Which KPI best indicates improving alert management maturity in a NOC implementation?",
 		"choices": [
-			"Lower mean time to acknowledge and close actionable alerts",
 			"Higher count of unassigned alerts waiting in the operational queue",
-			"Longer average age for alerts remaining in Open state without ownership",
-			"Greater percentage of alerts with no CI binding context on the record"
+			"Lower mean time to acknowledge and close actionable alerts",
+			"Greater percentage of alerts with no CI binding context on the record",
+			"Longer average age for alerts remaining in Open state without ownership"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"explanation": "Reduced acknowledgment and closure times for valid alerts demonstrate stronger triage discipline and operational readiness.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/event-management/alert-management-rule.html"
@@ -7502,12 +7505,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 30,
 		"prompt": "An operations team wants remediation work tracked automatically when critical alerts open. Which Event Management module supports that outcome?",
 		"choices": [
-			"Discovery Schedules, which replace event connectors during maintenance windows",
-			"Change Approval Policies, which enforce standard change templates globally",
 			"Hardware Model Normalization, which maps procurement records to CI classes",
-			"Alert Management Rules, which can generate and link tasks to matching alerts"
+			"Alert Management Rules, which can generate and link tasks to matching alerts",
+			"Change Approval Policies, which enforce standard change templates globally",
+			"Discovery Schedules, which replace event connectors during maintenance windows"
 		],
-		"correctIndex": 3,
+		"correctIndex": 1,
 		"explanation": "Alert Management Rules automate alert responses, including generating and linking incidents, tasks, or knowledge articles when filter conditions match.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/event-management/create-alert-management-rule.html",
@@ -7521,9 +7524,9 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "When configuring an alert management rule to open tasks, which execution option runs the linked subflow without operator intervention?",
 		"choices": [
 			"Automatic execution when the rule filter matches the alert",
-			"Manual execution only after the alert is closed by an operator",
+			"Disabled execution until Discovery completes a full subnet scan",
 			"Deferred execution until all secondary alerts are deleted from CMDB",
-			"Disabled execution until Discovery completes a full subnet scan"
+			"Manual execution only after the alert is closed by an operator"
 		],
 		"correctIndex": 0,
 		"explanation": "Subflow execution can be set to Automatic so remediation or task-creation subflows run when the alert management rule matches.",
@@ -7537,12 +7540,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 32,
 		"prompt": "Automated alert grouping is creating false parent alerts that bundle unrelated network incidents. Which tuning step reduces incorrect parent grouping?",
 		"choices": [
-			"Review correlation and grouping criteria, time windows, and CI binding so only related signals share a parent alert",
 			"Disable evt_mgmt.avoid_int_enabled so every secondary alert triggers its own incident immediately",
-			"Set all grouping rules to match on source name only regardless of affected CI or service",
-			"Delete parent alerts manually each hour without adjusting correlation configuration"
+			"Delete parent alerts manually each hour without adjusting correlation configuration",
+			"Review correlation and grouping criteria, time windows, and CI binding so only related signals share a parent alert",
+			"Set all grouping rules to match on source name only regardless of affected CI or service"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Alert groups combine related alerts so responders can manage correlated issues as a single operational context; mis-tuned criteria create false parent relationships.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/event-management/exploring-event-management.html",
@@ -7556,8 +7559,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "Which factors contribute to the alert priority score used to rank open alerts? (Choose three.)",
 		"choices": [
 			"Number of impacted business services",
-			"Alert severity level",
 			"CI type weight mapping",
+			"Alert severity level",
 			"Catalog item recurring price"
 		],
 		"correctIndex": 0,
@@ -7578,12 +7581,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 34,
 		"prompt": "To prevent duplicate incidents on secondary alerts after automated grouping, which property coordinates alert management with the grouping job?",
 		"choices": [
-			"evt_mgmt.avoid_int_enabled so alert management runs after grouping completes",
 			"glide.sc.checkout.twostep to enforce two-step catalog checkout globally",
+			"csdm.lifecycle.migration.activated to synchronize asset lifecycle stages",
 			"sn_hamp.disable_stock_rules to stop stockroom replenishment automation",
-			"csdm.lifecycle.migration.activated to synchronize asset lifecycle stages"
+			"evt_mgmt.avoid_int_enabled so alert management runs after grouping completes"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Enabling evt_mgmt.avoid_int_enabled synchronizes alert response with automated alert grouping so actions such as incident creation avoid secondary alerts.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/event-management/coordinating-alert-response-with-automated-alert-grouping.html"
@@ -7595,12 +7598,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 35,
 		"prompt": "A database CI failure should degrade its parent payment application service on the impact tree, but the service status stays green. What should be reviewed first?",
 		"choices": [
-			"Impact rules in em_impact_rule that define how child CI severity propagates to parent services",
-			"Catalog variable mappings for procurement purchase order line items",
 			"MID Server certificate expiration schedules on listener endpoints",
-			"Hardware asset retirement workflows tied to stockroom disposal approvals"
+			"Hardware asset retirement workflows tied to stockroom disposal approvals",
+			"Impact rules in em_impact_rule that define how child CI severity propagates to parent services",
+			"Catalog variable mappings for procurement purchase order line items"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Impact rules estimate outage magnitude and define how child CI severity influences parent application service status on impact trees and service maps.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/event-management/c_EMImpactCalculation.html"
@@ -7612,12 +7615,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 36,
 		"prompt": "During an approved change window, alerts on CIs marked In Maintenance should be handled how for impact calculation?",
 		"choices": [
+			"Reassigned to the hardware asset disposal workflow queue",
 			"Excluded from impact calculation while maintenance status is active",
 			"Promoted to Critical severity on every related business service",
-			"Converted automatically into standard change requests for closure",
-			"Reassigned to the hardware asset disposal workflow queue"
+			"Converted automatically into standard change requests for closure"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"explanation": "Alerts on CIs in maintenance are excluded from impact calculation, and corresponding alerts may be hidden from operational views during the window.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/event-management/c_EMImpactCalculation.html"
@@ -7646,16 +7649,16 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 38,
 		"prompt": "Which inputs does Probable Root Cause Analysis evaluate when ranking likely causes? (Choose three.)",
 		"choices": [
-			"Active alerts and alert groups on affected CIs",
 			"CI topology relationships from CMDB data",
+			"Transfer order shipment status between stockrooms",
 			"Change requests linked to topology or application services",
-			"Transfer order shipment status between stockrooms"
+			"Active alerts and alert groups on affected CIs"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			1,
-			2
+			2,
+			3
 		],
 		"questionType": "multi",
 		"explanation": "Probable RCA analyzes alerts, CMDB CI relationships, and relevant change requests to calculate root cause scores for troubleshooting.",
@@ -7669,12 +7672,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 39,
 		"prompt": "Which alert management rule filter condition helps exclude grouped secondary alerts from automatic incident creation?",
 		"choices": [
-			"Role in Group is not Secondary",
-			"Priority equals the computed alert priority score value",
 			"Impacted Services contains the affected business service name",
-			"Tags includes the maintenance window identifier string"
+			"Tags includes the maintenance window identifier string",
+			"Role in Group is not Secondary",
+			"Priority equals the computed alert priority score value"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Filtering out alerts whose Role in Group is Secondary prevents automated responses from firing on correlated child alerts after grouping.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/event-management/coordinating-alert-response-with-automated-alert-grouping.html",
@@ -7705,12 +7708,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 41,
 		"prompt": "When an alert severity changes from Warning to Major, what happens to the alert priority score?",
 		"choices": [
-			"The score resets to zero until the next hourly batch job completes",
 			"The score copies from the parent change request risk assessment field",
 			"The score is frozen until all secondary alerts are manually ungrouped",
-			"The severity portion recalculates immediately and updates Priority Breakdown"
+			"The severity portion recalculates immediately and updates Priority Breakdown",
+			"The score resets to zero until the next hourly batch job completes"
 		],
-		"correctIndex": 3,
+		"correctIndex": 2,
 		"explanation": "Unlike most priority triggers that queue for batch calculation, a severity change triggers an immediate update of the severity component in the alert priority score.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/event-management/alert-priority.html"
@@ -7723,9 +7726,9 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "Application Cluster Member impact rules define influence percentages primarily to control what?",
 		"choices": [
 			"How many cluster member failures are required before parent severity escalates",
-			"How many catalog items can be ordered from a single service request",
 			"How many discovery credentials rotate during horizontal subnet scans",
-			"How many stockroom bins receive automatic replenishment triggers"
+			"How many stockroom bins receive automatic replenishment triggers",
+			"How many catalog items can be ordered from a single service request"
 		],
 		"correctIndex": 0,
 		"explanation": "Cluster member impact rules set influence thresholds so parent cluster severity reflects the configured number or percentage of failing members.",
@@ -7739,12 +7742,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 43,
 		"prompt": "Alert management rules are evaluated on a schedule. How frequently does the default scoped alert rules management job check rules?",
 		"choices": [
-			"Every 11 seconds by the Evaluate Scoped Alert Rules Management scheduled job",
 			"Every 120 seconds to align with default connector polling intervals",
-			"Every 24 hours during the nightly table rotation maintenance window",
-			"Only when an operator manually runs the alert correlation wizard"
+			"Every 11 seconds by the Evaluate Scoped Alert Rules Management scheduled job",
+			"Only when an operator manually runs the alert correlation wizard",
+			"Every 24 hours during the nightly table rotation maintenance window"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"explanation": "The Event Management - Evaluate Scoped Alert Rules Management scheduled job checks alert management rules every 11 seconds and executes matching actions.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/event-management/alert-management-rule.html"
@@ -7756,12 +7759,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 44,
 		"prompt": "A monitoring platform can POST JSON alerts to ServiceNow but cannot be polled on a schedule. Which integration style fits that source?",
 		"choices": [
-			"A push connector or listener that receives inbound events through an instance or MID endpoint",
-			"A pull connector that schedules MID Server API collection every 120 seconds",
 			"A discovery pattern that classifies SNMP devices during horizontal scans",
+			"A pull connector that schedules MID Server API collection every 120 seconds",
+			"A push connector or listener that receives inbound events through an instance or MID endpoint",
 			"A hardware normalization job that maps manufacturer names to model categories"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Push integrations receive events sent by external tools through listeners or push connectors, while pull connectors actively retrieve events on a schedule.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/event-management/connectors-and-listeners.html"
@@ -7773,12 +7776,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 45,
 		"prompt": "An administrator sets Event collection schedule (seconds) to 60 on a pull connector instance. What constraint blocks that value?",
 		"choices": [
-			"The schedule must equal the 11-second alert management rule evaluation interval",
-			"The schedule resets to 86400 seconds after metrics collection is enabled",
 			"The schedule is locked at 300 seconds whenever SNMP trap listeners are active",
-			"The schedule cannot be lower than the minimum schedule property defaulting to 120 seconds"
+			"The schedule cannot be lower than the minimum schedule property defaulting to 120 seconds",
+			"The schedule resets to 86400 seconds after metrics collection is enabled",
+			"The schedule must equal the 11-second alert management rule evaluation interval"
 		],
-		"correctIndex": 3,
+		"correctIndex": 1,
 		"explanation": "Event collection schedule cannot fall below the minimum schedule property, which defaults to 120 seconds for pull connector polling.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/event-management/t_EMConfigureConnectorInstance.html"
@@ -7791,9 +7794,9 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "Before activating a new pull connector instance in production, which validation step confirms MID Server connectivity to the source?",
 		"choices": [
 			"Run Test connector and review last error message if the connection fails",
-			"Delete all existing event rules so only the new connector ingests data",
+			"Bind every incoming event to a single fallback CI regardless of payload",
 			"Disable TLS on the listener endpoint to simplify initial troubleshooting",
-			"Bind every incoming event to a single fallback CI regardless of payload"
+			"Delete all existing event rules so only the new connector ingests data"
 		],
 		"correctIndex": 0,
 		"explanation": "Test connector verifies MID Server communication, host reachability, credentials, and connector instance values before the Active checkbox is enabled.",
@@ -7807,15 +7810,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 47,
 		"prompt": "Which characteristics describe pull event connectors? (Choose two.)",
 		"choices": [
-			"ServiceNow schedules MID Server retrieval from the external monitoring API",
 			"The external tool initiates delivery through a generic inbound_event REST endpoint",
-			"Event collection schedule in seconds controls polling frequency from the source",
-			"SNMP trap listeners on the instance replace all pull connector definitions"
+			"SNMP trap listeners on the instance replace all pull connector definitions",
+			"ServiceNow schedules MID Server retrieval from the external monitoring API",
+			"Event collection schedule in seconds controls polling frequency from the source"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"correctIndexes": [
-			0,
-			2
+			2,
+			3
 		],
 		"questionType": "multi",
 		"explanation": "Pull connectors use scheduled MID Server collection with a configurable Event collection schedule; push sources send events inbound instead of being polled.",
@@ -7831,8 +7834,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "A SaaS monitoring tool can POST JSON alerts to ServiceNow but cannot be polled on a schedule. Which integration architecture should the implementer choose?",
 		"choices": [
 			"A push connector or listener posting to the inbound_event API with an event rule that maps the payload",
-			"A pull connector scheduling MID Server API collection every 120 seconds from the vendor",
 			"A discovery pattern that classifies SNMP devices during horizontal subnet scans",
+			"A pull connector scheduling MID Server API collection every 120 seconds from the vendor",
 			"An event rule that converts JSON payloads directly into hardware asset transfer orders"
 		],
 		"correctIndex": 0,
@@ -7847,12 +7850,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 49,
 		"prompt": "After cloning a connector template for a new monitoring tool, which settings most directly control alert noise from that source?",
 		"choices": [
-			"Event filtering, severity mapping, and deduplication configuration on the instance",
 			"Dashboard color themes on the Event Management homepage only",
+			"Change risk assessment defaults on the standard change model record",
 			"Stockroom minimum quantity thresholds for consumable replenishment",
-			"Change risk assessment defaults on the standard change model record"
+			"Event filtering, severity mapping, and deduplication configuration on the instance"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Source-specific filtering, severity mapping, and deduplication must be validated after template reuse to maintain signal quality and reduce noisy alerts.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/event-management/connectors-and-listeners.html",
@@ -7865,12 +7868,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 50,
 		"prompt": "SNMP traps arrive at a MID Server listener instead of being retrieved by API polling. Which statement describes that ingestion path?",
 		"choices": [
+			"Catalog inbound actions parse trap payloads into service request line items",
 			"The MID Server acts as a collection endpoint and forwards traps to the instance for event processing",
 			"The instance pulls traps directly from the monitoring tool every 120 seconds by default",
-			"Discovery credentials on the MID Server convert traps into hardware asset records",
-			"Catalog inbound actions parse trap payloads into service request line items"
+			"Discovery credentials on the MID Server convert traps into hardware asset records"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"explanation": "SNMP listeners run on the MID Server as inbound collection endpoints and send received traps to the instance for Event Management processing.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/event-management/connectors-and-listeners.html"
@@ -7883,8 +7886,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "A legacy monitoring team sends failure notifications only by email with no API access. How should Event Management ingest those messages into the event pipeline?",
 		"choices": [
 			"Configure inbound email actions that parse message content and create normalized event records",
-			"Convert each email into a hardware asset transfer order for manual NOC review",
 			"Route messages to Performance Analytics indicators without creating events or alerts",
+			"Convert each email into a hardware asset transfer order for manual NOC review",
 			"Open normal change requests automatically from email subjects without parsing rules"
 		],
 		"correctIndex": 0,
@@ -7899,12 +7902,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 52,
 		"prompt": "A team deploys Agent Client Collector agents to gather endpoint telemetry for ITOM monitoring. Before connector instances can collect Metric Intelligence data, what prerequisite applies?",
 		"choices": [
-			"The Metric Intelligence plugin must be activated on the instance",
 			"Every CI must be converted to a consumable model category first",
+			"Discovery schedules must scan every subnet before metrics arrive",
 			"All event rules must be deactivated during the initial pilot week",
-			"Discovery schedules must scan every subnet before metrics arrive"
+			"The Metric Intelligence plugin must be activated on the instance"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Metric Intelligence connectors and metrics collection on connector instances require the Metric Intelligence plugin (com.snc.sa.metric) to be activated.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/event-management/t_EMConfigureConnectorInstance.html"
@@ -7916,12 +7919,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 53,
 		"prompt": "Security policy requires monitoring events from a DMZ network to reach ServiceNow through a MID Server rather than direct instance access. Which connector pattern applies?",
 		"choices": [
-			"A push connector or listener that routes inbound event traffic through MID Server endpoints in the DMZ",
-			"A pull connector that schedules MID Server collection below the 120-second minimum interval",
 			"A discovery schedule that classifies DMZ hosts before any events may be ingested",
-			"A hardware asset workflow that converts trap payloads into procurement orders"
+			"A hardware asset workflow that converts trap payloads into procurement orders",
+			"A push connector or listener that routes inbound event traffic through MID Server endpoints in the DMZ",
+			"A pull connector that schedules MID Server collection below the 120-second minimum interval"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Generic push connectors are provided for event collection through either the MID Server or directly through the instance, depending on integration architecture.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/event-management/connectors-and-listeners.html"
@@ -7933,12 +7936,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 54,
 		"prompt": "A team enables Metrics collection on a connector that already ingests events for 500 database CIs. What operational capability does Metric Intelligence add on that feed?",
 		"choices": [
+			"Conversion of every normalized event into a standard change request record",
 			"Trend analysis, threshold detection, and anomaly scoring on collected metric time series bound to CIs",
 			"Automatic retirement of CIs that exceed warranty expiration dates discovered during polling",
-			"Replacement of all alert correlation rules with manual queue triage by operators",
-			"Conversion of every normalized event into a standard change request record"
+			"Replacement of all alert correlation rules with manual queue triage by operators"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"explanation": "Metric Intelligence analyzes collected metric data for trends, thresholds, and anomalies after raw data is mapped to CIs through the event pipeline.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/event-management/t_EMConfigureConnectorInstance.html"
@@ -7967,12 +7970,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 56,
 		"prompt": "After two weeks of baseline learning, CPU metrics on a critical database CI suddenly exceed learned control bounds. How does Metric Intelligence treat those points?",
 		"choices": [
-			"As statistical outliers that increase anomaly scores on the 0–10 scale for review",
 			"As mandatory signals to retire the associated CI from the CMDB immediately",
 			"As triggers to disable all pull connectors until the next business day",
-			"As requests to auto-approve every open change on the affected service"
+			"As requests to auto-approve every open change on the affected service",
+			"As statistical outliers that increase anomaly scores on the 0–10 scale for review"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Outliers outside control bounds feed anomaly score calculation; higher scores indicate metrics that appear increasingly unlikely relative to historical behavior.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/event-management/t_EMConfigureConnectorInstance.html"
@@ -7985,9 +7988,9 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "An operations engineer needs static upper and lower limits instead of model-learned bounds for a critical metric series. Which approach applies?",
 		"choices": [
 			"Configure custom static bounds through metric class bound settings for that series",
-			"Delete all historical metric data so the model cannot compute projections",
 			"Disable Metric Intelligence and rely solely on email inbound actions",
-			"Set the connector Event collection schedule below 120 seconds globally"
+			"Set the connector Event collection schedule below 120 seconds globally",
+			"Delete all historical metric data so the model cannot compute projections"
 		],
 		"correctIndex": 0,
 		"explanation": "Metric classes can override learned bounds and widths with administrator-defined static thresholds when operational requirements demand fixed limits.",
@@ -8001,16 +8004,16 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 58,
 		"prompt": "Which stages describe the Metric Intelligence processing pipeline? (Choose three.)",
 		"choices": [
-			"Collect raw metric data from supported monitoring connectors",
 			"Map metrics to CIs using event rules and CMDB identification",
-			"Analyze series to detect anomalies against projected bounds",
-			"Retire hardware assets when stockroom quantity falls below minimum"
+			"Collect raw metric data from supported monitoring connectors",
+			"Retire hardware assets when stockroom quantity falls below minimum",
+			"Analyze series to detect anomalies against projected bounds"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
 			1,
-			2
+			3
 		],
 		"questionType": "multi",
 		"explanation": "Metric Intelligence captures connector data, binds metrics to CIs through the identification engine, then analyzes time series for threshold and anomaly outcomes.",
@@ -8025,12 +8028,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 59,
 		"prompt": "When an anomaly score exceeds the configured threshold, how are resulting anomaly alerts handled compared with standard Event Management alerts?",
 		"choices": [
-			"Anomaly alerts are reported separately from regular IT operations alerts",
-			"Anomaly alerts automatically close every related incident within five minutes",
 			"Anomaly alerts bypass all impact rules and hide the service map entirely",
+			"Anomaly alerts automatically close every related incident within five minutes",
+			"Anomaly alerts are reported separately from regular IT operations alerts",
 			"Anomaly alerts convert CIs to consumable assets in the hardware catalog"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Anomaly alerts generated from Metric Intelligence scoring are tracked separately so operators can review statistical outliers distinct from standard event-driven alerts.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/event-management/t_EMConfigureConnectorInstance.html"
