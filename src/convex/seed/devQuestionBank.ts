@@ -17579,9 +17579,10 @@ export const DEV_PRACTICE_QUESTIONS = [
 			"sam_developer"
 		],
 		"correctIndex": 3,
-		"explanation": "The sam_developer role extends SAM access with script writing capabilities on the platform for custom automation and rule development.",
+		"explanation": "sam_developer writes scripts on the platform with privileges comparable to a system administrator and contains the sam_admin role. Users with this role must be trained ServiceNow administrators.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/sam-roles.html"
+			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/sam-installed-components.html",
+			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/add-custom-license-metric.html"
 		],
 		"domain": "SAM Overview and Fundamentals"
 	},
@@ -17598,7 +17599,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 0,
 		"explanation": "SAM focuses on reconciling license rights against installed and consumed software so organizations can defend audit positions and optimize spend.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/software-asset-management-overview.html"
+			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/c_SAMOverview.html"
 		],
 		"domain": "SAM Overview and Fundamentals"
 	},
@@ -17615,24 +17616,25 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 1,
 		"explanation": "SAM process architecture flows from discovery evidence through normalization into software models, then reconciliation evaluates entitlement position.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/sam-process-overview.html"
+			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/c_SAMOverview.html"
 		],
 		"domain": "SAM Overview and Fundamentals"
 	},
 	{
 		"trackCode": "CIS-SAM",
 		"order": 3,
-		"prompt": "During a bulk entitlement import, an administrator reviews Entitlement Import Error records. Which message is NOT a valid import error reason?",
+		"prompt": "An entitlement import fails because the publisher part number does not exist in the Software Library. Which action resolves the error so the entitlement can be created?",
 		"choices": [
-			"Purchased rights should be less than 20",
-			"Purchased rights should be greater than 0",
-			"Publisher part number not found",
-			"Software model not found"
+			"Delete all discovery models for that publisher before re-running reconciliation",
+			"Convert the import row into a hardware asset so software models are not required",
+			"Change the license metric to Per Device to bypass publisher part number validation",
+			"Create a custom publisher part number (Create PPN) and reprocess the import error"
 		],
-		"correctIndex": 0,
-		"explanation": "Valid entitlement import errors include zero purchased rights, missing publisher part numbers, and missing software models. A minimum threshold of 20 is not a documented import validation rule.",
+		"correctIndex": 3,
+		"explanation": "When a part number is missing from the Software Library, administrators create a custom publisher part number (Create PPN) and reprocess the entitlement import error so the entitlement can be created.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/entitlement-import-error-fields.html"
+			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/sam-add-custom-part-number.html",
+			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/import-software-rights-form.html"
 		],
 		"domain": "SAM Overview and Fundamentals"
 	},
@@ -17649,7 +17651,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 3,
 		"explanation": "The sam role is the base Software Asset Management application role used by analysts performing routine entitlement and compliance work.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/sam-roles.html"
+			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/sam-installed-components.html"
 		],
 		"domain": "SAM Overview and Fundamentals"
 	},
@@ -17683,24 +17685,25 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 1,
 		"explanation": "The sam_admin role provides full administrative access to SAM configuration, entitlements, and operational controls beyond standard analyst tasks.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/sam-roles.html"
+			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/sam-installed-components.html"
 		],
 		"domain": "SAM Overview and Fundamentals"
 	},
 	{
 		"trackCode": "CIS-SAM",
 		"order": 7,
-		"prompt": "A finance stakeholder needs read-only access to SAM compliance dashboards without editing entitlements or running reconciliation. Which role fits this requirement?",
+		"prompt": "A finance stakeholder needs SAM compliance visibility but must not import entitlements or run reconciliation. Which role fits this requirement?",
 		"choices": [
-			"The sam_user role providing read-only access to SAM dashboards without edit privileges",
-			"The sam_admin role providing full configuration control over reconciliation and entitlement tables",
-			"The sam role providing standard analyst access including entitlement creation and reconciliation",
-			"The sam_developer role providing script development access for custom SAM automation logic"
+			"sam_user, which provides access to SAM features except administrative functions such as importing entitlements and running reconciliation",
+			"sam_admin, which is required to import entitlements, manage reclamation rules, and run reconciliation",
+			"sam_developer, which grants platform script-writing privileges comparable to a system administrator",
+			"sam_spend_import, which is limited to importing financial transaction data for Software Spend Detection"
 		],
 		"correctIndex": 0,
-		"explanation": "The sam_user role provides read-only access to SAM views and reports for stakeholders who need visibility without configuration or data modification rights.",
+		"explanation": "sam_user has access to all Software Asset Management features except administrative ones. Importing entitlements and running reconciliation require sam_admin.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/sam-roles.html"
+			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/sam-installed-components.html",
+			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/c_SAMReconciliation.html"
 		],
 		"domain": "SAM Overview and Fundamentals"
 	},
@@ -17734,7 +17737,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 2,
 		"explanation": "SAM optimization recommendations begin with identifying reclaimable software so existing entitlements can be reused before additional license purchases.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/software-reclamation.html"
+			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/reclaiming-software-sam.html"
 		],
 		"domain": "SAM Overview and Fundamentals"
 	},
@@ -17751,7 +17754,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 0,
 		"explanation": "SAM strategy roadmaps sequence foundational data work, compliance operations, and optimization so investments align to measurable business outcomes.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/software-asset-management-overview.html"
+			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/c_SAMOverview.html"
 		],
 		"domain": "SAM Strategy and Optimization"
 	},
@@ -17768,8 +17771,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 0,
 		"explanation": "Optimization prioritizes measurable savings from reclamation and right-sizing using reconciled position data rather than reactive purchasing.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/software-reclamation.html",
-			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/license-workbench.html"
+			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/reclaiming-software-sam.html",
+			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/sam-license-workbench.html"
 		],
 		"domain": "SAM Strategy and Optimization"
 	},
@@ -17786,7 +17789,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 2,
 		"explanation": "Vendor negotiations rely on defensible license position built from reconciled entitlements, allocations, and normalized installs.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/entitlement-audit-preparation.html"
+			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/software-reconciliation-results.html"
 		],
 		"domain": "SAM Strategy and Optimization"
 	},
@@ -17803,8 +17806,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 3,
 		"explanation": "SAM KPIs connect operational maturity to reduced audit exposure and measurable cost recovery from optimization.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/license-workbench.html",
-			"https://www.servicenow.com/docs/r/software-asset-management/software-model-management/software-model-data-quality-kpis.html"
+			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/sam-license-workbench.html",
+			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/sam-normalization-dash.html"
 		],
 		"domain": "SAM Strategy and Optimization"
 	},
@@ -17826,8 +17829,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		],
 		"explanation": "Optimization roadmaps prioritize measurable reclamation and data-driven renewal strategies before broad technical changes.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/software-reclamation.html",
-			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/license-workbench.html"
+			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/reclaiming-software-sam.html",
+			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/sam-license-workbench.html"
 		],
 		"domain": "SAM Strategy and Optimization"
 	},
@@ -17844,7 +17847,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 0,
 		"explanation": "Audit response strategies use pre-built entitlement evidence and governed remediation to defend license position under time pressure.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/entitlement-audit-preparation.html"
+			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/software-reconciliation-results.html"
 		],
 		"domain": "SAM Strategy and Optimization"
 	},
@@ -17861,7 +17864,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 2,
 		"explanation": "Centralized vendor management ensures one source of purchased rights and consistent negotiation data across the enterprise.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/manage-software-entitlements.html"
+			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/track-software-rights.html"
 		],
 		"domain": "SAM Strategy and Optimization"
 	},
@@ -17878,8 +17881,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 3,
 		"explanation": "Persistent true-up exposure after reclamation often indicates data integrity or metric misalignment rather than insufficient optimization effort.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/license-workbench.html",
-			"https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/configure-license-metrics.html"
+			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/sam-license-workbench.html",
+			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/c_SAMLicenseMetrics.html"
 		],
 		"domain": "SAM Strategy and Optimization"
 	},
@@ -17896,7 +17899,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 0,
 		"explanation": "Spend reduction strategies combine reclamation, renewal right-sizing, and governed exception management to protect compliance posture.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/software-reclamation.html"
+			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/reclaiming-software-sam.html"
 		],
 		"domain": "SAM Strategy and Optimization"
 	},
@@ -17918,7 +17921,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		],
 		"explanation": "Renewal negotiations use reconciled position and over-licensed analysis to right-size commitments while maintaining audit defensibility.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/reconcile-software-entitlements.html"
+			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/c_SAMReconciliation.html"
 		],
 		"domain": "SAM Strategy and Optimization"
 	},
@@ -17935,7 +17938,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 1,
 		"explanation": "Strategic SAM governance uses time-bound exceptions and revalidation so optimization efforts do not erode long-term audit readiness.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/software-entitlement-best-practices.html"
+			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/software-entitlement-fields.html"
 		],
 		"domain": "SAM Strategy and Optimization"
 	},
@@ -17952,7 +17955,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 2,
 		"explanation": "Phased SAM rollouts prove data and process integrity in a pilot before scaling entitlement and fulfillment integration enterprise-wide.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/software-asset-management-overview.html"
+			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/c_SAMOverview.html"
 		],
 		"domain": "Implementation Planning"
 	},
@@ -17969,7 +17972,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 2,
 		"explanation": "Entitlement migration requires mapped fields, validated samples, and governed error handling so imported rights remain audit-ready.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/import-software-entitlements.html"
+			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/import-entitlements-workspace.html"
 		],
 		"domain": "Implementation Planning"
 	},
@@ -17986,7 +17989,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 0,
 		"explanation": "Discovery planning aligns infrastructure scope and credentials so install evidence is reliable before reconciliation and reporting depend on it.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/software-asset-management/software-model-management/map-discovered-software.html"
+			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/manual-normalize-swmodel-workspace.html"
 		],
 		"domain": "Implementation Planning"
 	},
@@ -18003,7 +18006,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 1,
 		"explanation": "SAM change management prepares owners for new reclamation workflows and reduces resistance that undermines optimization outcomes.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/software-reclamation.html"
+			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/reclaiming-software-sam.html"
 		],
 		"domain": "Implementation Planning"
 	},
@@ -18020,7 +18023,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 0,
 		"explanation": "Implementation success depends on clear ownership for entitlement stewardship across procurement, IT, and SAM functions.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/manage-software-entitlements.html"
+			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/track-software-rights.html"
 		],
 		"domain": "Implementation Planning"
 	},
@@ -18037,7 +18040,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 0,
 		"explanation": "Readiness assessments exercise the full SAM pipeline with representative data before enterprise scheduling and reporting go live.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/reconcile-software-entitlements.html"
+			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/c_SAMReconciliation.html"
 		],
 		"domain": "Implementation Planning"
 	},
@@ -18054,7 +18057,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 0,
 		"explanation": "Implementation roadmaps sequence trustworthy install and entitlement data before provisioning integrations that depend on accurate license position.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/software-asset-management-overview.html"
+			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/c_SAMOverview.html"
 		],
 		"domain": "Implementation Planning"
 	},
@@ -18071,7 +18074,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 1,
 		"explanation": "Publisher onboarding plans tie model setup, entitlement loading, and reconciliation validation together to avoid partial compliance coverage.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/software-asset-management/software-model-management/create-a-software-model.html"
+			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/software-models-and-entitlements.html"
 		],
 		"domain": "Implementation Planning"
 	},
@@ -18088,7 +18091,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 0,
 		"explanation": "Early implementation metrics focus on trustworthy compliance data for priority publishers before broad optimization campaigns.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/software-asset-management/software-model-management/software-model-data-quality-kpis.html"
+			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/sam-normalization-dash.html"
 		],
 		"domain": "Implementation Planning"
 	},
@@ -18105,7 +18108,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 2,
 		"explanation": "When licensing rights differ by edition or version, separate software models are required for accurate reconciliation and publisher reporting.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/software-asset-management/software-model-management/create-a-software-model.html"
+			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/software-models-and-entitlements.html"
 		],
 		"domain": "Data Integrity Attributes and Sources"
 	},
@@ -18122,7 +18125,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 3,
 		"explanation": "Unmatched discoveries should be normalized by mapping to the correct software model so usage and compliance rollups remain accurate.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/software-asset-management/software-model-management/map-discovered-software.html"
+			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/manual-normalize-swmodel-workspace.html"
 		],
 		"domain": "Data Integrity Attributes and Sources"
 	},
@@ -18139,7 +18142,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 0,
 		"explanation": "Model governance ensures data quality and prevents duplicate mappings that distort compliance and optimization insights.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/software-asset-management/software-model-management/software-model-normalization-governance.html"
+			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/sam-normalization.html"
 		],
 		"domain": "Data Integrity Attributes and Sources"
 	},
@@ -18156,7 +18159,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 1,
 		"explanation": "Compliance depends on comparing installed software against licensed rights, and software models are the shared link across those records.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/reconcile-software-entitlements.html"
+			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/c_SAMReconciliation.html"
 		],
 		"domain": "Data Integrity Attributes and Sources"
 	},
@@ -18173,7 +18176,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 0,
 		"explanation": "Attaching entitlement evidence supports defensible license positions and reduces response time during publisher audits and true-ups.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/entitlement-audit-preparation.html"
+			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/software-reconciliation-results.html"
 		],
 		"domain": "Data Integrity Attributes and Sources"
 	},
@@ -18190,7 +18193,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 1,
 		"explanation": "Model governance prevents duplicate mappings that fragment install counts and produce unreliable reconciliation outcomes.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/software-asset-management/software-model-management/software-model-normalization-governance.html"
+			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/sam-normalization.html"
 		],
 		"domain": "Data Integrity Attributes and Sources"
 	},
@@ -18207,7 +18210,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 2,
 		"explanation": "Entitlements represent use rights and form the licensed side of the comparison performed during reconciliation against installed software.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/software-entitlements-overview.html"
+			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/software-models-and-entitlements.html"
 		],
 		"domain": "Data Integrity Attributes and Sources"
 	},
@@ -18246,7 +18249,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 0,
 		"explanation": "Reconciliation evaluates license position by comparing entitlement rights to normalized install and allocation data for each software model.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/reconcile-software-entitlements.html"
+			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/c_SAMReconciliation.html"
 		],
 		"domain": "Data Integrity Attributes and Sources"
 	},
@@ -18263,7 +18266,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 1,
 		"explanation": "When active installations or allocations exceed purchased rights, the license position is under-licensed and requires remediation before audit defense.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/software-compliance-overview.html"
+			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/c_SAMReconciliation.html"
 		],
 		"domain": "Data Integrity Attributes and Sources"
 	},
@@ -18280,7 +18283,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 2,
 		"explanation": "When an import error is resolved, the platform creates the entitlement and marks the error Fixed; related errors using the same publisher part number may also auto-resolve.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/import-software-entitlements.html"
+			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/import-entitlements-workspace.html"
 		],
 		"domain": "Data Integrity Attributes and Sources"
 	},
@@ -18314,7 +18317,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 1,
 		"explanation": "Metric mismatch between contract rights and SAM configuration produces inaccurate compliance results and increases audit dispute risk.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/configure-license-metrics.html"
+			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/c_SAMLicenseMetrics.html"
 		],
 		"domain": "Data Integrity Attributes and Sources"
 	},
@@ -18331,7 +18334,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 0,
 		"explanation": "Different licensing terms and metrics require separate entitlement records to preserve accurate compliance logic and audit traceability.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/software-entitlement-best-practices.html"
+			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/software-entitlement-fields.html"
 		],
 		"domain": "Data Integrity Attributes and Sources"
 	},
@@ -18348,7 +18351,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 0,
 		"explanation": "Entitlements represent use rights and form the licensed side of the comparison performed during reconciliation against installed software.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/software-entitlements-overview.html"
+			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/software-models-and-entitlements.html"
 		],
 		"domain": "Data Integrity Attributes and Sources"
 	},
@@ -18365,7 +18368,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 2,
 		"explanation": "Testing metric configuration against representative data confirms reconciliation produces expected compliance outcomes under real licensing scenarios.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/validate-reconciliation-results.html"
+			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/software-reconciliation-results.html"
 		],
 		"domain": "Data Integrity Attributes and Sources"
 	},
@@ -18389,17 +18392,18 @@ export const DEV_PRACTICE_QUESTIONS = [
 	{
 		"trackCode": "CIS-SAM",
 		"order": 47,
-		"prompt": "A normalization review finds discovery models marked with a status that is not supported in SAM. Which status value should the analyst flag as invalid during data cleanup?",
+		"prompt": "A discovery model matches publisher, product, and version fields from the Software Library. Which normalization status is assigned?",
 		"choices": [
-			"Matched",
-			"Partially normalized",
-			"Fully normalized",
-			"Publisher normalized"
+			"Match Not Found",
+			"Partially Normalized",
+			"Publisher Normalized",
+			"Normalized"
 		],
-		"correctIndex": 2,
-		"explanation": "Fully normalized is not a valid SAM normalization status; supported statuses include matched, partially normalized, and publisher normalized.",
+		"correctIndex": 3,
+		"explanation": "Normalized means the discovery model is fully normalized on publisher, product, and version. Partially Normalized covers publisher and product only; Publisher Normalized covers publisher only; Match Not Found means no key fields matched.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/software-asset-management/software-model-management/software-normalization-rules.html"
+			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/normalization-status.html",
+			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/sam-normalization.html"
 		],
 		"domain": "Data Integrity Attributes and Sources"
 	},
@@ -18423,7 +18427,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"questionType": "multi",
 		"explanation": "The License Workbench publisher calculations include Total Spend, True-up Cost, Potential Savings, and Over-licensed amount for financial compliance analysis.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/license-workbench.html"
+			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/sam-license-workbench.html"
 		],
 		"domain": "Practical Management of Software Compliance"
 	},
@@ -18440,7 +18444,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 0,
 		"explanation": "Effective License Position depends on reconciling contract-backed entitlements to normalized consumption using the correct metric.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/reconcile-software-entitlements.html"
+			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/c_SAMReconciliation.html"
 		],
 		"domain": "Practical Management of Software Compliance"
 	},
@@ -18457,7 +18461,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 2,
 		"explanation": "Named-user metrics require user-level allocations so consumption can be measured against purchased rights during reconciliation.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/manage-software-entitlements.html"
+			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/track-software-rights.html"
 		],
 		"domain": "Practical Management of Software Compliance"
 	},
@@ -18474,7 +18478,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 2,
 		"explanation": "An over-licensed position indicates surplus rights that can be reclaimed or reallocated to reduce spend and true-up exposure.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/validate-reconciliation-results.html"
+			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/software-reconciliation-results.html"
 		],
 		"domain": "Practical Management of Software Compliance"
 	},
@@ -18498,7 +18502,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"questionType": "multi",
 		"explanation": "SAM reconciliation remediation supports creating or removing allocations, purchasing additional rights, and removing unlicensed installations.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/reconcile-software-entitlements.html"
+			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/c_SAMReconciliation.html"
 		],
 		"domain": "Practical Management of Software Compliance"
 	},
@@ -18515,7 +18519,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 1,
 		"explanation": "Under-licensed positions are remediated by acquiring additional rights or removing unauthorized installs through governed workflows.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/reconcile-software-entitlements.html"
+			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/c_SAMReconciliation.html"
 		],
 		"domain": "Practical Management of Software Compliance"
 	},
@@ -18532,7 +18536,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 2,
 		"explanation": "Unauthorized installs should be removed or covered by legitimate entitlements and allocations to restore compliance.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/reconcile-software-entitlements.html"
+			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/c_SAMReconciliation.html"
 		],
 		"domain": "Practical Management of Software Compliance"
 	},
@@ -18549,7 +18553,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 2,
 		"explanation": "True-up costs should be validated against reconciled position and optimization options such as reclaim before purchasing additional rights.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/license-workbench.html"
+			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/sam-license-workbench.html"
 		],
 		"domain": "Practical Management of Software Compliance"
 	},
@@ -18566,7 +18570,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 0,
 		"explanation": "Entitlement data quality is foundational; import errors must be corrected so reconciliation reflects accurate purchased rights.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/manage-software-entitlements.html"
+			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/track-software-rights.html"
 		],
 		"domain": "Practical Management of Software Compliance"
 	},
@@ -18607,7 +18611,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"questionType": "multi",
 		"explanation": "Reconciliation compares entitlements, allocations, and normalized installs using metric rules derived from contractual terms.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/reconcile-software-entitlements.html"
+			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/c_SAMReconciliation.html"
 		],
 		"domain": "Practical Management of Software Compliance"
 	},
@@ -18624,7 +18628,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 0,
 		"explanation": "Contract changes must be reflected in entitlement records with traceable effective dates so reconciliation stays aligned with current rights.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/software-entitlement-best-practices.html"
+			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/software-entitlement-fields.html"
 		],
 		"domain": "Practical Management of Software Compliance"
 	},
@@ -18641,7 +18645,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 2,
 		"explanation": "Catalog fulfillment should validate entitlement availability so provisioning does not create unlicensed deployments.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/reconcile-software-entitlements.html"
+			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/c_SAMReconciliation.html"
 		],
 		"domain": "Practical Management of Software Compliance"
 	},
@@ -18658,7 +18662,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 0,
 		"explanation": "Procurement integration creates traceable entitlement records so purchased rights are available for allocation and reconciliation.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/manage-software-entitlements.html"
+			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/track-software-rights.html"
 		],
 		"domain": "Practical Management of Software Compliance"
 	},
@@ -18675,7 +18679,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 2,
 		"explanation": "Duplicate installs may or may not violate license terms depending on metric and contract; validation against rules precedes remediation.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/software-asset-management/software-model-management/validate-software-model-mappings.html"
+			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/validate-software-model-mappings.html"
 		],
 		"domain": "Practical Management of Software Compliance"
 	},
@@ -18692,7 +18696,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 0,
 		"explanation": "Scheduled reconciliation and reporting maintain current compliance posture and reduce surprise exposure at renewal or audit time.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/validate-reconciliation-results.html"
+			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/software-reconciliation-results.html"
 		],
 		"domain": "Practical Management of Software Compliance"
 	},
@@ -18709,7 +18713,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 2,
 		"explanation": "Publisher-segmented spend and compliance views connect financial exposure to license position for informed budget decisions.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/license-workbench.html"
+			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/sam-license-workbench.html"
 		],
 		"domain": "Practical Management of Software Compliance"
 	},
@@ -18726,7 +18730,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 0,
 		"explanation": "SAM rule changes can shift compliance results; change-controlled testing preserves trust in license position calculations.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/software-asset-management/software-model-management/software-normalization-rules.html"
+			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/normalization-status.html"
 		],
 		"domain": "Practical Management of Software Compliance"
 	},
@@ -18743,7 +18747,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 2,
 		"explanation": "Fulfillment should create allocations so consumption is tracked against purchased rights during reconciliation.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/manage-software-entitlements.html"
+			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/track-software-rights.html"
 		],
 		"domain": "Practical Management of Software Compliance"
 	},
@@ -18767,7 +18771,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"questionType": "multi",
 		"explanation": "SAM operations integrate catalog provisioning, procurement entitlements, governed configuration changes, and discovery-driven install data.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/reconcile-software-entitlements.html"
+			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/c_SAMReconciliation.html"
 		],
 		"domain": "Practical Management of Software Compliance"
 	},
@@ -18784,7 +18788,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 0,
 		"explanation": "Renewal preparation requires current compliance position and optimization insights so procurement can negotiate from verified data.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/entitlement-audit-preparation.html"
+			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/software-reconciliation-results.html"
 		],
 		"domain": "Practical Management of Software Compliance"
 	},
@@ -18801,7 +18805,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 0,
 		"explanation": "Governance reporting needs summarized trends, exposure, and remediation status rather than operational raw data.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/validate-reconciliation-results.html"
+			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/software-reconciliation-results.html"
 		],
 		"domain": "Practical Management of Software Compliance"
 	},
@@ -18818,7 +18822,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 0,
 		"explanation": "Publisher pack updates can alter compliance calculations and require governed testing before production promotion.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/software-asset-management/software-model-management/software-model-normalization-governance.html"
+			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/sam-normalization.html"
 		],
 		"domain": "Operational Integration of Software Processes"
 	},
@@ -18835,7 +18839,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 3,
 		"explanation": "Integrated procurement-to-SAM flows should deduplicate entitlement creation and preserve a single source of purchased rights.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/manage-software-entitlements.html"
+			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/track-software-rights.html"
 		],
 		"domain": "Operational Integration of Software Processes"
 	},
@@ -18852,7 +18856,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 0,
 		"explanation": "Scheduled off-peak reconciliation maintains current compliance data while reducing impact on interactive SAM operations.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/reconcile-software-entitlements.html"
+			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/c_SAMReconciliation.html"
 		],
 		"domain": "Operational Integration of Software Processes"
 	},
@@ -18886,7 +18890,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 0,
 		"explanation": "Segmented remediation reporting with ownership and aging helps governance boards prioritize high-impact compliance actions.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/validate-reconciliation-results.html"
+			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/software-reconciliation-results.html"
 		],
 		"domain": "Operational Integration of Software Processes"
 	},
@@ -18903,7 +18907,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 3,
 		"explanation": "Renewal leverage comes from a trusted license position built on reconciled entitlements, allocations, and normalized installs.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/entitlement-audit-preparation.html"
+			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/software-reconciliation-results.html"
 		],
 		"domain": "Operational Integration of Software Processes"
 	},
@@ -18920,7 +18924,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 0,
 		"explanation": "Duplicate models and inconsistent mappings fragment install counts and produce unreliable reconciliation outcomes.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/software-asset-management/software-model-management/software-model-data-quality-kpis.html"
+			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/sam-normalization-dash.html"
 		],
 		"domain": "Operational Integration of Software Processes"
 	},
@@ -18937,7 +18941,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 0,
 		"explanation": "Publisher pack changes can shift normalization and compliance results and should be validated before governed promotion.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/software-asset-management/software-model-management/software-model-normalization-governance.html"
+			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/sam-normalization.html"
 		],
 		"domain": "Operational Integration of Software Processes"
 	},
@@ -18954,7 +18958,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 2,
 		"explanation": "Sustainable reclamation uses defined thresholds, approvals, and exception governance to recover costs without disrupting critical work.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/subscription-entitlements.html"
+			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/sam-subscription.html"
 		],
 		"domain": "Operational Integration of Software Processes"
 	},
@@ -18971,7 +18975,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 3,
 		"explanation": "Program value is shown through improved risk posture, financial outcomes, and disciplined exception management over time.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/license-workbench.html"
+			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/sam-license-workbench.html"
 		],
 		"domain": "Operational Integration of Software Processes"
 	},
@@ -18988,7 +18992,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 1,
 		"explanation": "Request-to-entitlement integration prevents over-deployment by checking rights at intake before software is provisioned.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/manage-software-entitlements.html"
+			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/track-software-rights.html"
 		],
 		"domain": "Operational Integration of Software Processes"
 	},
@@ -19005,7 +19009,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 0,
 		"explanation": "Audit defensibility requires traceable entitlement provenance and documented reconciliation logic for compliance positions.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/entitlement-audit-preparation.html"
+			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/software-reconciliation-results.html"
 		],
 		"domain": "Operational Integration of Software Processes"
 	},
@@ -19022,7 +19026,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 1,
 		"explanation": "Unreclaimed inactive allocations reduce license reuse and drive unnecessary purchases despite available rights.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/license-workbench.html"
+			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/sam-license-workbench.html"
 		],
 		"domain": "Operational Integration of Software Processes"
 	},
@@ -19039,7 +19043,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 2,
 		"explanation": "Cloud subscription management requires term-based entitlement records and usage-aware reconciliation rather than traditional install-only counting.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/subscription-entitlements.html"
+			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/sam-subscription.html"
 		],
 		"domain": "Cloud and SaaS Management"
 	},
@@ -19056,7 +19060,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 2,
 		"explanation": "SaaS optimization uses usage data to reclaim or right-size subscriptions while preserving governed access for active consumers.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/subscription-entitlements.html"
+			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/sam-subscription.html"
 		],
 		"domain": "Cloud and SaaS Management"
 	},
@@ -19073,7 +19077,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 0,
 		"explanation": "Hybrid cloud SAM requires consistent discovery, normalization, and entitlement tracking for software running in cloud infrastructure.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/software-asset-management-overview.html"
+			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/c_SAMOverview.html"
 		],
 		"domain": "Cloud and SaaS Management"
 	},
@@ -19090,8 +19094,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 1,
 		"explanation": "Usage-based cloud services require entitlement and consumption models that mirror vendor billing units for defensible compliance.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/subscription-entitlements.html",
-			"https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/configure-license-metrics.html"
+			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/sam-subscription.html",
+			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/c_SAMLicenseMetrics.html"
 		],
 		"domain": "Cloud and SaaS Management"
 	},
@@ -19108,7 +19112,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 0,
 		"explanation": "Cloud migration requires updating entitlement structures from perpetual to term-based records so reconciliation reflects current subscription rights.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/subscription-entitlements.html"
+			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/sam-subscription.html"
 		],
 		"domain": "Cloud and SaaS Management"
 	},
@@ -19125,7 +19129,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 2,
 		"explanation": "Usage-driven SaaS optimization with governed workflows recovers spend while preserving necessary service access and audit evidence.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/subscription-entitlements.html"
+			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/sam-subscription.html"
 		],
 		"domain": "Cloud and SaaS Management"
 	},
@@ -19135,15 +19139,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "Leadership asks whether cloud and on-premises software can share one compliance dashboard. Which SAM design supports that goal?",
 		"choices": [
 			"Unified reconciliation and reporting across subscription and perpetual entitlements with consistent publisher segmentation",
-			"Disable cloud subscription imports to simplify dashboard totals",
+			"Disable cloud subscription imports to simplify dashboard totals prefaced with legal review for terms affecting external parties.",
 			"Report only on-premises installs until every SaaS vendor completes audit",
 			"Separate manual spreadsheets for cloud because SAM cannot model subscriptions"
 		],
 		"correctIndex": 0,
 		"explanation": "Mature SAM programs reconcile cloud and on-premises rights in a unified view so governance sees total publisher exposure and optimization opportunities.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/software-asset-management/software-asset-management/license-workbench.html",
-			"https://www.servicenow.com/docs/r/software-asset-management/software-entitlement-management/subscription-entitlements.html"
+			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/sam-license-workbench.html",
+			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/sam-subscription.html"
 		],
 		"domain": "Cloud and SaaS Management"
 	},

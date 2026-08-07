@@ -1,0 +1,74 @@
+[
+	{
+		"trackCode": "CIS-SAM",
+		"order": 3,
+		"prompt": "An entitlement import fails because the publisher part number does not exist in the Software Library. Which action resolves the error so the entitlement can be created?",
+		"choices": [
+			"Delete all discovery models for that publisher before re-running reconciliation",
+			"Convert the import row into a hardware asset so software models are not required",
+			"Change the license metric to Per Device to bypass publisher part number validation",
+			"Create a custom publisher part number (Create PPN) and reprocess the import error"
+		],
+		"correctIndex": 3,
+		"explanation": "When a part number is missing from the Software Library, administrators create a custom publisher part number (Create PPN) and reprocess the entitlement import error so the entitlement can be created.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/sam-add-custom-part-number.html",
+			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/import-software-rights-form.html"
+		],
+		"domain": "SAM Overview and Fundamentals"
+	},
+	{
+		"trackCode": "CIS-SAM",
+		"order": 7,
+		"prompt": "A finance stakeholder needs SAM compliance visibility but must not import entitlements or run reconciliation. Which role fits this requirement?",
+		"choices": [
+			"sam_user, which provides access to SAM features except administrative functions such as importing entitlements and running reconciliation",
+			"sam_admin, which is required to import entitlements, manage reclamation rules, and run reconciliation",
+			"sam_developer, which grants platform script-writing privileges comparable to a system administrator",
+			"sam_spend_import, which is limited to importing financial transaction data for Software Spend Detection"
+		],
+		"correctIndex": 0,
+		"explanation": "sam_user has access to all Software Asset Management features except administrative ones. Importing entitlements and running reconciliation require sam_admin.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/sam-installed-components.html",
+			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/c_SAMReconciliation.html"
+		],
+		"domain": "SAM Overview and Fundamentals"
+	},
+	{
+		"trackCode": "CIS-SAM",
+		"order": 47,
+		"prompt": "A discovery model matches publisher, product, and version fields from the Software Library. Which normalization status is assigned?",
+		"choices": [
+			"Match Not Found",
+			"Partially Normalized",
+			"Publisher Normalized",
+			"Normalized"
+		],
+		"correctIndex": 3,
+		"explanation": "Normalized means the discovery model is fully normalized on publisher, product, and version. Partially Normalized covers publisher and product only; Publisher Normalized covers publisher only; Match Not Found means no key fields matched.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/normalization-status.html",
+			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/sam-normalization.html"
+		],
+		"domain": "Data Integrity Attributes and Sources"
+	},
+	{
+		"trackCode": "CIS-SAM",
+		"order": 0,
+		"prompt": "A SAM implementation team must customize business rules and write platform scripts for entitlement automation. Which role grants script writing capabilities?",
+		"choices": [
+			"sam_user",
+			"sam_admin",
+			"sam",
+			"sam_developer"
+		],
+		"correctIndex": 3,
+		"explanation": "sam_developer writes scripts on the platform with privileges comparable to a system administrator and contains the sam_admin role. Users with this role must be trained ServiceNow administrators.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/sam-installed-components.html",
+			"https://www.servicenow.com/docs/r/it-asset-management/software-asset-management/add-custom-license-metric.html"
+		],
+		"domain": "SAM Overview and Fundamentals"
+	}
+]
