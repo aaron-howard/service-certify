@@ -20779,9 +20779,9 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "An enterprise architect designs a three-tier payment application for Service Mapping. What service topology approach should define web, application, and database layers?",
 		"choices": [
 			"Model each tier as linked application services with explicit entry points and dependency direction",
-			"Map only the web tier and ignore middleware and database dependencies until phase two",
 			"Create one business service record with no application services or entry points configured",
-			"Represent every process on every host as a separate business service without relationships"
+			"Represent every process on every host as a separate business service without relationships",
+			"Map only the web tier and ignore middleware and database dependencies until phase two"
 		],
 		"correctIndex": 0,
 		"explanation": "Multi-tier designs should express each layer as application services with clear entry points so dependency tracing follows the architecture.",
@@ -20796,12 +20796,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 1,
 		"prompt": "A municipal agency must map citizen-facing portals that share a common API gateway. What dependency mapping strategy should the implementer use?",
 		"choices": [
-			"Map the shared gateway once and relate each consumer application service to the shared dependency",
 			"Duplicate the gateway CI for every portal so each map appears isolated in CMDB",
-			"Exclude shared infrastructure because Service Mapping cannot represent common components",
-			"Disable reconciliation on gateway CIs so each scan creates a new record"
+			"Map the shared gateway once and relate each consumer application service to the shared dependency",
+			"Disable reconciliation on gateway CIs so each scan creates a new record",
+			"Exclude shared infrastructure because Service Mapping cannot represent common components"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"explanation": "Shared components should be modeled once with accurate relationships so multiple application maps reference the same dependency topology.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/business-services-and-application-services.html",
@@ -20814,12 +20814,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 2,
 		"prompt": "After the first mapping wave, service owners report outdated maps whenever deployments change. What governance model should keep topology current?",
 		"choices": [
-			"Scheduled map refresh, owner review cycles, and change-controlled updates to entry points and patterns",
-			"Freeze all maps after go-live and prohibit any discovery or schedule changes",
 			"Delete service maps after each release and rebuild them manually in spreadsheets",
+			"Freeze all maps after go-live and prohibit any discovery or schedule changes",
+			"Scheduled map refresh, owner review cycles, and change-controlled updates to entry points and patterns",
 			"Accept every ML candidate automatically without owner validation to maximize coverage"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Service map governance combines refresh schedules, ownership accountability, and controlled changes so topology stays aligned with production.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/manage-service-maps.html",
@@ -20832,12 +20832,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 3,
 		"prompt": "During an architecture workshop, teams debate where to start tracing a complex ERP landscape. What design decision should drive entry point selection?",
 		"choices": [
-			"Known user-facing or integration entry CIs with validated credentials and documented ownership",
-			"Every printer CI discovered on office subnets regardless of application relevance",
 			"Random hosts selected from the largest discovery schedule without architectural input",
-			"Only retired CIs so mapping avoids touching production systems"
+			"Only retired CIs so mapping avoids touching production systems",
+			"Every printer CI discovered on office subnets regardless of application relevance",
+			"Known user-facing or integration entry CIs with validated credentials and documented ownership"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Entry point selection should follow architecture and ownership input, starting from validated CIs that represent real service boundaries.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/create-a-service-map.html",
@@ -20851,9 +20851,9 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "A program manager scopes phase one of Service Mapping for a hybrid cloud estate. How should application boundaries be defined?",
 		"choices": [
 			"Prioritize in-scope business services with owners, supported credentials, and agreed dependency depth",
-			"Include every subnet discovered globally before validating a single service map",
+			"Defer all boundary decisions until every ML candidate is accepted automatically",
 			"Exclude cloud resources because maps only support on-premise cmdb_ci_computer records",
-			"Defer all boundary decisions until every ML candidate is accepted automatically"
+			"Include every subnet discovered globally before validating a single service map"
 		],
 		"correctIndex": 0,
 		"explanation": "Phased boundary definition focuses on services with ownership and access readiness rather than attempting enterprise-wide coverage immediately.",
@@ -20868,12 +20868,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 5,
 		"prompt": "Operations leadership asks how Service Mapping differs from a raw CMDB export for incident impact analysis. What design distinction should the architect explain?",
 		"choices": [
-			"Service maps show runtime dependency paths between application components, not inventory lists alone",
 			"CMDB exports always include live traffic flows while maps store static hostname tables only",
-			"Service maps replace CMDB identification rules and eliminate the need for Discovery entirely",
-			"Inventory reports and service maps are identical because both list CIs alphabetically"
+			"Inventory reports and service maps are identical because both list CIs alphabetically",
+			"Service maps show runtime dependency paths between application components, not inventory lists alone",
+			"Service maps replace CMDB identification rules and eliminate the need for Discovery entirely"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Service topology design emphasizes dependency relationships and entry-driven tracing rather than flat configuration inventory.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/service-mapping-get-started.html",
@@ -20887,8 +20887,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "Before promoting maps to production, application owners require evidence that cross-tier dependencies are accurate. What validation approach should the team use?",
 		"choices": [
 			"Walkthroughs comparing map paths to architecture diagrams with owner sign-off on critical dependencies",
-			"Automatic acceptance of every suggested CI without reviewing connection direction or depth",
 			"Deletion of all generic application CIs so maps appear complete by hiding gaps",
+			"Automatic acceptance of every suggested CI without reviewing connection direction or depth",
 			"Disabling map refresh schedules permanently after the first successful run"
 		],
 		"correctIndex": 0,
@@ -20904,12 +20904,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 7,
 		"prompt": "A service map for a claims system must show impact across web, API, and database tiers during outages. What design artifact supports that analysis?",
 		"choices": [
-			"A layered application service map with upstream and downstream CI relationships from the entry point",
 			"A flat hardware asset report sorted by serial number without application context",
+			"A catalog item list for employee laptop requests grouped by fulfillment group",
 			"An event management connector dashboard showing raw alert volume only",
-			"A catalog item list for employee laptop requests grouped by fulfillment group"
+			"A layered application service map with upstream and downstream CI relationships from the entry point"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Layered service maps expose cross-tier dependencies so teams can assess blast radius during incidents and planned changes.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/create-a-service-map.html",
@@ -20922,12 +20922,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 8,
 		"prompt": "Executives want simplified topology views while engineers need detailed CI paths. How should the mapping program address both audiences?",
 		"choices": [
-			"Define business and application service layers with drill-down maps for operational detail",
-			"Hide all middleware CIs from every view so executives and engineers see identical flat lists",
 			"Maintain separate unlinked spreadsheets for leadership because maps cannot support multiple views",
-			"Remove application services and map only cmdb_ci_computer records for all stakeholders"
+			"Remove application services and map only cmdb_ci_computer records for all stakeholders",
+			"Define business and application service layers with drill-down maps for operational detail",
+			"Hide all middleware CIs from every view so executives and engineers see identical flat lists"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Service design should align business-facing summaries with detailed application maps that engineers use for troubleshooting and change analysis.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/business-services-and-application-services.html",
@@ -20940,12 +20940,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 9,
 		"prompt": "Two application teams disagree about ownership of a shared message broker appearing on both service maps. What design governance step should resolve the conflict?",
 		"choices": [
-			"Assign authoritative service ownership and represent the broker once with relationships to both consumers",
 			"Create duplicate broker CIs with different names so each team owns an isolated copy",
-			"Remove the broker from both maps and accept incomplete dependency tracing",
-			"Disable identification rules globally so duplicate records cannot be reconciled"
+			"Disable identification rules globally so duplicate records cannot be reconciled",
+			"Assign authoritative service ownership and represent the broker once with relationships to both consumers",
+			"Remove the broker from both maps and accept incomplete dependency tracing"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Shared dependency governance assigns ownership and models components once so multiple services reference accurate common topology.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/prepare-for-service-mapping.html",
@@ -20958,12 +20958,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 10,
 		"prompt": "A CIO asks how mapping waves should be sequenced across fifty business services. What rollout design principle should guide wave planning?",
 		"choices": [
-			"Group services by business criticality, dependency readiness, and owner availability for validation",
 			"Map alphabetically by service name without considering credentials or architectural documentation",
+			"Defer all waves until machine learning accepts every candidate without human review",
 			"Complete every subnet globally before onboarding any application service to production maps",
-			"Defer all waves until machine learning accepts every candidate without human review"
+			"Group services by business criticality, dependency readiness, and owner availability for validation"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Wave planning prioritizes critical services with prepared entry points, access, and stakeholder engagement rather than arbitrary ordering.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/prepare-for-service-mapping.html",
@@ -20976,12 +20976,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 11,
 		"prompt": "During top-down Service Mapping, no Pattern Identification Section matches the discovered process on a host. What application CI type is created for that component?",
 		"choices": [
-			"A generic application CI representing the unmatched process until a pattern is assigned",
-			"A business service record linked directly to the cmdb_ci_computer record with full dependency rollup",
 			"A discovery error log entry that blocks all further mapping on the subnet and disables MID Server probes",
-			"A manual relationship stub with no CI created in the CMDB"
+			"A manual relationship stub with no CI created in the CMDB",
+			"A generic application CI representing the unmatched process until a pattern is assigned",
+			"A business service record linked directly to the cmdb_ci_computer record with full dependency rollup"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "When identification sections do not match, Service Mapping creates a generic application so the topology can continue while the pattern gap is resolved.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/pattern-based-discovery.html"
@@ -20991,34 +20991,35 @@ export const DEV_PRACTICE_QUESTIONS = [
 	{
 		"trackCode": "CIS-SM",
 		"order": 12,
-		"prompt": "On a service map, a CI node displays a yellow triangle warning icon. What does this indicator most commonly represent?",
+		"prompt": "On a service map, a CI node displays a warning icon. What does ServiceNow documentation say this typically indicates?",
 		"choices": [
-			"The CI was retired from the CMDB and should be removed from the map manually by the service owner",
-			"A credential or authentication failure prevented Service Mapping from accessing the host",
-			"The application service reached end-of-life and mapping was permanently disabled",
-			"A pending change request blocked all discovery probes until approval completes"
+			"A pending change request blocked all discovery probes until approval completes",
+			"The CI was retired from the CMDB and must be removed manually by the service owner",
+			"Service Mapping failed to connect to the CI or failed to recognize it due to an inaccurate pattern",
+			"The application service reached end-of-life and mapping was permanently disabled"
 		],
-		"correctIndex": 1,
-		"explanation": "The yellow triangle on a mapped CI typically signals a credential error or access failure encountered while collecting dependency data.",
+		"correctIndex": 2,
+		"explanation": "Service Mapping docs state that warning icons mark CIs that could not be mapped correctly, typically because Service Mapping failed to connect to the CI or failed to recognize it due to an inaccurate pattern.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/create-a-service-map.html"
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/t_TBSMapProcess.html",
+			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/fix-errors-by-discovery-messages.html"
 		],
 		"domain": "Service Mapping Pattern Design"
 	},
 	{
 		"trackCode": "CIS-SM",
 		"order": 13,
-		"prompt": "A mapped host shows repeated credential failures during the latest service map run. What is the first corrective action?",
+		"prompt": "An implementer must collect additional attributes without editing a pattern identification section. Which Pattern Designer approach should they use?",
 		"choices": [
-			"Delete the service map and recreate it without any entry points configured",
-			"Disable all identification rules globally so mapping skips authentication entirely on every MID Server",
-			"Verify the Discovery credential assigned to the CI class is valid and permitted on the target host",
-			"Convert the entry point CI class to cmdb_ci_business_app to bypass credential checks"
+			"Delete the out-of-box identification section and recreate discovery steps from a blank pattern",
+			"Disable all shared libraries so only connection sections run during mapping",
+			"Add an extension section that applies a shared library after successful identification",
+			"Convert the application pattern into an infrastructure pattern to skip identification"
 		],
 		"correctIndex": 2,
-		"explanation": "Credential errors are resolved by confirming the correct Discovery credential is assigned, active, and authorized on the target system.",
+		"explanation": "Extension sections enhance patterns without changing identification sections. The MID Server runs extension sections after identification and only if at least one identification section completes successfully.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/create-a-service-map.html"
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery-and-service-mapping-patterns/modify-pattern-using-extensions.html"
 		],
 		"domain": "Service Mapping Pattern Design"
 	},
@@ -21027,12 +21028,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 14,
 		"prompt": "In Pattern Designer, why would an implementer enable debug mode while building a new Service Mapping pattern?",
 		"choices": [
-			"To permanently disable pattern versioning so production and sandbox stay synchronized",
 			"To bypass MID Server execution and run all steps only on the instance server",
 			"To inspect step-by-step execution output and variable values during pattern testing",
-			"To auto-publish the pattern to all MID Servers without a manual content update"
+			"To auto-publish the pattern to all MID Servers without a manual content update",
+			"To permanently disable pattern versioning so production and sandbox stay synchronized"
 		],
-		"correctIndex": 2,
+		"correctIndex": 1,
 		"explanation": "Debug mode exposes detailed execution traces so implementers can validate step logic, variable assignments, and parsing results before promotion.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/discovery/create-a-discovery-pattern.html"
@@ -21045,9 +21046,9 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "During pattern execution, what does a Pattern Identification Section evaluate before connection logic runs?",
 		"choices": [
 			"Collected process and configuration data to determine whether the pattern applies to the CI",
-			"Whether the MID Server cluster has available ECC queue capacity for the subnet",
 			"Catalog approval workflows for employee onboarding hardware requests",
-			"Event rule severity thresholds configured in Event Management connectors"
+			"Event rule severity thresholds configured in Event Management connectors",
+			"Whether the MID Server cluster has available ECC queue capacity for the subnet"
 		],
 		"correctIndex": 0,
 		"explanation": "Identification sections contain conditional logic that decides if a discovered component matches the pattern before connection steps execute.",
@@ -21061,12 +21062,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 16,
 		"prompt": "Connection sections in a Service Mapping pattern define what behavior?",
 		"choices": [
-			"How the pattern traces dependencies from the identified CI to related components",
 			"How discovery schedules assign IP ranges to MID Server clusters by region",
-			"How catalog variables validate mobile phone formats on self-service items",
-			"How HR cases route employee relocation requests to fulfillment groups"
+			"How the pattern traces dependencies from the identified CI to related components",
+			"How HR cases route employee relocation requests to fulfillment groups",
+			"How catalog variables validate mobile phone formats on self-service items"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"explanation": "Connection sections specify probes and logic that extend the map from an identified application CI to downstream dependencies.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/discovery/discovery-patterns-overview.html"
@@ -21078,12 +21079,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 17,
 		"prompt": "A pattern matches identification criteria but produces no downstream CIs on the service map. What should be reviewed first?",
 		"choices": [
-			"Connection section steps, variables, and credentials used to reach related components",
-			"Service catalog item prices for unrelated hardware procurement requests",
 			"Event Management connector dashboards showing inbound alert volume only",
+			"Service catalog item prices for unrelated hardware procurement requests",
+			"Connection section steps, variables, and credentials used to reach related components",
 			"Project portfolio demand scoring thresholds for strategic investment themes"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "When identification succeeds but no dependencies appear, connection logic, populated variables, and access paths are the first troubleshooting focus.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/discovery/create-a-discovery-pattern.html"
@@ -21095,12 +21096,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 18,
 		"prompt": "How does Service Mapping associate a running process on a host with an application CI in the CMDB?",
 		"choices": [
-			"Pattern identification logic matches process attributes and creates or links the application CI",
-			"Discovery schedules automatically convert every process into a business service record",
 			"Catalog record producers map running executables to employee onboarding requests",
-			"Event rules create alerts that permanently replace application CIs on the map"
+			"Event rules create alerts that permanently replace application CIs on the map",
+			"Discovery schedules automatically convert every process into a business service record",
+			"Pattern identification logic matches process attributes and creates or links the application CI"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Identification sections evaluate process data and bind matching components to the appropriate application CI types in CMDB.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/pattern-based-discovery.html"
@@ -21113,9 +21114,9 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "When extending an out-of-box Service Mapping pattern, which practice best preserves upgrade compatibility?",
 		"choices": [
 			"Copy and extend the pattern rather than editing the base pattern directly in production",
-			"Delete vendor identification sections so custom logic replaces all default matching",
+			"Merge custom steps into the base pattern on the production instance without versioning",
 			"Disable pattern library updates globally to prevent overwrites of local edits",
-			"Merge custom steps into the base pattern on the production instance without versioning"
+			"Delete vendor identification sections so custom logic replaces all default matching"
 		],
 		"correctIndex": 0,
 		"explanation": "Extending copied patterns protects customizations from being overwritten when ServiceNow publishes updated library content.",
@@ -21130,8 +21131,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "During Service Mapping pattern troubleshooting, MID Server logs are most useful for diagnosing which issue class?",
 		"choices": [
 			"Probe execution failures, authentication errors, and step-level pattern exceptions",
-			"Catalog checkout fulfillment delays for employee laptop imaging requests",
 			"HR case assignment rules for employee relocation approval chains",
+			"Catalog checkout fulfillment delays for employee laptop imaging requests",
 			"Project financial plan baselines compared to portfolio investment actuals"
 		],
 		"correctIndex": 0,
@@ -21146,12 +21147,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 21,
 		"prompt": "Before broad deployment, why should a custom Service Mapping pattern be tested against a single known host?",
 		"choices": [
-			"To validate identification, connection, and variable logic on a controlled target before scale rollout",
 			"To bypass CMDB identification rules so every test creates duplicate CI records",
+			"To ensure the pattern never creates generic application CIs during testing",
 			"To disable debug output until the pattern runs against the entire enterprise subnet",
-			"To ensure the pattern never creates generic application CIs during testing"
+			"To validate identification, connection, and variable logic on a controlled target before scale rollout"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Single-host testing confirms pattern behavior and credentials on a known system before risking inaccurate maps at scale.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/discovery/create-a-discovery-pattern.html"
@@ -21164,9 +21165,9 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "After ServiceNow publishes updated pattern library content, what action may be required in a customer instance?",
 		"choices": [
 			"Review and apply pattern updates, then retest extended custom patterns for compatibility",
-			"Delete all custom patterns automatically because library updates remove local copies",
+			"Remove discovery schedules permanently because patterns no longer require probes",
 			"Disable all MID Servers until every service map is rebuilt from scratch manually",
-			"Remove discovery schedules permanently because patterns no longer require probes"
+			"Delete all custom patterns automatically because library updates remove local copies"
 		],
 		"correctIndex": 0,
 		"explanation": "Pattern library updates may require administrators to merge or retest custom extensions so mapping behavior stays correct after upgrades.",
@@ -21181,15 +21182,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"questionType": "multi",
 		"prompt": "Which two validations are recommended before promoting a custom Service Mapping pattern to production? (Choose two.)",
 		"choices": [
-			"Successful test runs on representative hosts with expected CI and relationship output",
 			"Documented rollback plan and version control for the extended pattern",
-			"Immediate deletion of all generic application CIs across the CMDB",
-			"Disabling reconciliation rules so duplicate records simplify troubleshooting"
+			"Disabling reconciliation rules so duplicate records simplify troubleshooting",
+			"Successful test runs on representative hosts with expected CI and relationship output",
+			"Immediate deletion of all generic application CIs across the CMDB"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			1
+			2
 		],
 		"explanation": "Production promotion requires validated test results plus controlled versioning so custom pattern changes can be managed safely.",
 		"sourceUrls": [
@@ -21203,8 +21204,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "A Connection Section references a temporary variable that was never populated by an earlier step. What symptom appears during mapping?",
 		"choices": [
 			"Downstream connection steps fail or skip because required parsed values are empty",
-			"Discovery schedules stop running until the variable is added to the CMDB schema",
 			"Event Management suppresses all alerts for the affected CI class permanently",
+			"Discovery schedules stop running until the variable is added to the CMDB schema",
 			"Service catalog checkout assigns laptops to analysts investigating the pattern"
 		],
 		"correctIndex": 0,
@@ -21219,12 +21220,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 25,
 		"prompt": "An Identification Section uses an overly broad regular expression. What mapping problem can result?",
 		"choices": [
-			"False-positive matches that attach unrelated processes to the wrong application pattern",
 			"Automatic retirement of every cmdb_ci_computer record in the scoped subnet",
+			"Conversion of every matched process into a business service without dependencies",
 			"Permanent disablement of all discovery schedules tied to the MID Server cluster",
-			"Conversion of every matched process into a business service without dependencies"
+			"False-positive matches that attach unrelated processes to the wrong application pattern"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Overly broad identification criteria can misclassify processes and produce inaccurate dependency paths on the service map.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/discovery/create-a-discovery-pattern.html"
@@ -21236,12 +21237,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 26,
 		"prompt": "SSH-based pattern steps require which prerequisite before they can execute successfully on a Linux host?",
 		"choices": [
-			"Valid Discovery credentials with SSH access assigned to the target CI class",
-			"Catalog approval workflows for employee mobile device enrollment requests",
 			"Event rule filters that suppress all warning alerts on the subnet",
-			"Manual creation of business service records for every discovered port"
+			"Manual creation of business service records for every discovered port",
+			"Valid Discovery credentials with SSH access assigned to the target CI class",
+			"Catalog approval workflows for employee mobile device enrollment requests"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "SSH pattern steps depend on Discovery credentials authorized for the host so probes can collect process and configuration data.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/discovery/create-a-discovery-pattern.html"
@@ -21253,12 +21254,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 27,
 		"prompt": "A pattern step uses a Match operation. What does this operation accomplish?",
 		"choices": [
+			"Replaces entry point records by auto-generating URLs from DNS zone transfers",
 			"Evaluates collected text or variables against criteria to decide subsequent step execution",
 			"Schedules recurring horizontal discovery runs against every subnet in the IP range",
-			"Creates catalog fulfillment tasks for employee laptop shipping and imaging",
-			"Replaces entry point records by auto-generating URLs from DNS zone transfers"
+			"Creates catalog fulfillment tasks for employee laptop shipping and imaging"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"explanation": "Match operations compare probe output or variables against defined criteria to control conditional pattern flow.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/discovery/create-a-discovery-pattern.html"
@@ -21287,12 +21288,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 29,
 		"prompt": "In Service Mapping configuration, an entry point defines what starting condition?",
 		"choices": [
-			"The CI from which top-down dependency tracing begins for an application service map",
 			"The catalog item employees use to request replacement laptops during outages",
 			"The event rule that suppresses monitoring alerts for mapped CIs permanently",
-			"The HR case template for employee relocation approval workflows"
+			"The HR case template for employee relocation approval workflows",
+			"The CI from which top-down dependency tracing begins for an application service map"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Entry points specify the starting CI that Service Mapping uses to initiate pattern-based dependency discovery for a service.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/create-a-service-map.html"
@@ -21304,12 +21305,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 30,
 		"prompt": "Which CI types are commonly configured as Service Mapping entry points?",
 		"choices": [
-			"Web servers, load balancers, application servers, and other CIs that front a service topology",
 			"Retired hardware assets and disposed consumable records in the asset management module",
-			"Knowledge article records and catalog item variables in the self-service portal",
-			"Change task templates and standard change models in the change application"
+			"Web servers, load balancers, application servers, and other CIs that front a service topology",
+			"Change task templates and standard change models in the change application",
+			"Knowledge article records and catalog item variables in the self-service portal"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"explanation": "Entry points are typically infrastructure or application CIs that represent accessible starting nodes for dependency discovery.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/entry-points-and-service-maps.html"
@@ -21321,12 +21322,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 31,
 		"prompt": "Where must Discovery credentials be assigned so Service Mapping can authenticate during a map run?",
 		"choices": [
-			"To the appropriate CI classes or credential aliases referenced by mapping and pattern probes",
-			"Only to the admin user record that last modified the service map schedule",
 			"Exclusively on the instance server with no MID Server credential store involvement",
+			"Only to the admin user record that last modified the service map schedule",
+			"To the appropriate CI classes or credential aliases referenced by mapping and pattern probes",
 			"On business service records as encrypted fields visible to all itil users"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Service Mapping uses Discovery credentials configured for CI classes or aliases so MID Server probes can authenticate to mapped hosts.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/create-a-service-map.html"
@@ -21338,12 +21339,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 32,
 		"prompt": "A service map record in Service Mapping ties together which components?",
 		"choices": [
-			"An application service, its entry points, mapped CIs, and the discovery schedule that refreshes topology",
-			"A business service financial plan, procurement contract, and vendor performance scorecard",
 			"An incident template, on-call roster, and event management connector subscription",
-			"A change model, CAB agenda, and release train milestone calendar"
+			"A change model, CAB agenda, and release train milestone calendar",
+			"A business service financial plan, procurement contract, and vendor performance scorecard",
+			"An application service, its entry points, mapped CIs, and the discovery schedule that refreshes topology"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Service map records associate application services with entry points, discovered dependencies, and the schedule governing map updates.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/manage-service-maps.html"
@@ -21356,9 +21357,9 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "Service map schedules control what behavior during ongoing operations?",
 		"choices": [
 			"When Service Mapping re-executes discovery to refresh CI relationships and dependency topology",
-			"When incident records auto-resolve after the caller confirms service restoration",
+			"When event rules suppress alerts during approved maintenance windows",
 			"When hardware assets transition from In Stock to In Use without a transfer order",
-			"When event rules suppress alerts during approved maintenance windows"
+			"When incident records auto-resolve after the caller confirms service restoration"
 		],
 		"correctIndex": 0,
 		"explanation": "Schedules define the cadence at which service maps rerun mapping logic to keep dependency views current as infrastructure changes.",
@@ -21373,10 +21374,10 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"questionType": "multi",
 		"prompt": "Which two elements are typically associated when defining a service group in Service Mapping? (Choose two.)",
 		"choices": [
-			"Related application services or technical services grouped for operational visibility",
 			"Shared mapping schedules or policies applied to the grouped services across all mapped entry points",
-			"Software publisher part numbers used during entitlement reconciliation",
-			"Incident problem task templates assigned to the service desk tier-one queue"
+			"Related application services or technical services grouped for operational visibility",
+			"Incident problem task templates assigned to the service desk tier-one queue",
+			"Software publisher part numbers used during entitlement reconciliation"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
@@ -21394,12 +21395,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 35,
 		"prompt": "In Service Mapping, a technical service record represents what concept?",
 		"choices": [
-			"A logical service layer—such as a database tier or messaging endpoint—supporting an application service map",
-			"A procurement contract line item tied to a software publisher renewal cycle",
 			"A service desk queue used exclusively for password reset requests",
+			"A procurement contract line item tied to a software publisher renewal cycle",
+			"A logical service layer—such as a database tier or messaging endpoint—supporting an application service map",
 			"A discovery error record created when horizontal classification fails"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Technical services model infrastructure or middleware layers that application services depend on within the mapped topology.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/application-services.html"
@@ -21411,12 +21412,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 36,
 		"prompt": "The Service Mapping implementation process flow typically begins with which activity?",
 		"choices": [
-			"Planning scope, validating CMDB readiness, and identifying candidate application services with owners",
-			"Disabling all horizontal discovery schedules until every map reaches one hundred percent completeness across the estate",
 			"Importing event management connector templates before any entry points are defined",
-			"Retiring all generic application CIs to force pattern reassignment globally"
+			"Retiring all generic application CIs to force pattern reassignment globally",
+			"Disabling all horizontal discovery schedules until every map reaches one hundred percent completeness across the estate",
+			"Planning scope, validating CMDB readiness, and identifying candidate application services with owners"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Successful Service Mapping engagements start with readiness assessment, scoped application service selection, and stakeholder alignment before configuration.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/prepare-for-service-mapping.html"
@@ -21430,14 +21431,14 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "Which two configuration steps should be completed before running a full service map against production entry points? (Choose two.)",
 		"choices": [
 			"Assign valid Discovery credentials to the CI classes probed during mapping",
-			"Define and validate entry points with application owners for the target service",
+			"Convert all mapped CIs to manual records with no discovery updates permitted",
 			"Disable CMDB identification and reconciliation rules across all CI classes",
-			"Convert all mapped CIs to manual records with no discovery updates permitted"
+			"Define and validate entry points with application owners for the target service"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			1
+			3
 		],
 		"explanation": "Production mapping requires working credentials and validated entry points so discovery can authenticate and start from accurate topology anchors.",
 		"sourceUrls": [
@@ -21450,12 +21451,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 38,
 		"prompt": "Tag-based service mapping associates application services with infrastructure using what mechanism?",
 		"choices": [
-			"Cloud or CMDB tags that match defined rules linking tagged resources to application service records",
 			"SNMP trap OIDs configured on network devices to raise Event Management alerts",
-			"Manual CSV imports of CI relationships uploaded through the service catalog",
-			"Change task approvals that auto-create business services from CAB decisions"
+			"Change task approvals that auto-create business services from CAB decisions",
+			"Cloud or CMDB tags that match defined rules linking tagged resources to application service records",
+			"Manual CSV imports of CI relationships uploaded through the service catalog"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Tag-based mapping uses standardized tag keys and values on cloud or CMDB CIs to associate resources with application services automatically.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/tag-based-service-mapping.html"
@@ -21468,8 +21469,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "Cloud tag governance for Service Mapping ensures what outcome?",
 		"choices": [
 			"Consistent tag naming and ownership so tag-based mapping rules resolve to the correct application services",
-			"Automatic retirement of every untagged cloud resource without owner review",
 			"Elimination of MID Server probes for all hybrid cloud workloads",
+			"Automatic retirement of every untagged cloud resource without owner review",
 			"Conversion of business services into hardware asset records for financial tracking"
 		],
 		"correctIndex": 0,
@@ -21484,12 +21485,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 40,
 		"prompt": "After a service map run completes, what validation step best confirms dependency accuracy?",
 		"choices": [
-			"Review the map topology with application owners and compare it to known architecture diagrams",
-			"Delete all CIs not seen in the latest run to force rediscovery on the next schedule",
 			"Disable the service map schedule permanently once any CI appears on the map",
-			"Convert every mapped CI to a business service record regardless of function"
+			"Convert every mapped CI to a business service record regardless of function",
+			"Review the map topology with application owners and compare it to known architecture diagrams",
+			"Delete all CIs not seen in the latest run to force rediscovery on the next schedule"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Owner review against known architecture validates that discovered dependencies reflect real operational connections rather than transient noise.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/validate-service-map-results.html"
@@ -21502,15 +21503,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"questionType": "multi",
 		"prompt": "Which two indicators suggest a service map requires credential review? (Choose two.)",
 		"choices": [
+			"The service map schedule completed faster than the previous run with no topology changes",
 			"Multiple CIs display yellow triangle warning icons after the latest map run",
 			"Discovery logs show authentication failures for hosts referenced by entry points",
-			"Every CI on the map shows identical software model normalization labels",
-			"The service map schedule completed faster than the previous run with no topology changes"
+			"Every CI on the map shows identical software model normalization labels"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"correctIndexes": [
-			0,
-			1
+			1,
+			2
 		],
 		"explanation": "Warning icons on mapped CIs and authentication errors in discovery logs are primary signals that credentials need correction.",
 		"sourceUrls": [
@@ -21531,7 +21532,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 0,
 		"explanation": "Discovery schedules bind what to scan, where targets reside, and when execution should occur for repeatable CMDB updates.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/concept/discovery-schedules.html"
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/concept/discovery-schedules.html"
 		],
 		"domain": "Discovery Configuration"
 	},
@@ -21540,16 +21541,16 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 43,
 		"prompt": "Why do enterprise Service Mapping designs typically deploy multiple MID Servers rather than relying on a single node?",
 		"choices": [
-			"MID Servers are licensed per CI class and cannot share discovery workloads",
 			"Multiple nodes support network locality, scale, and failover across segmented datacenters",
 			"Discovery schedules cannot run unless every subnet has its own dedicated cluster",
-			"A single MID Server blocks all horizontal discovery pattern execution permanently"
+			"A single MID Server blocks all horizontal discovery pattern execution permanently",
+			"MID Servers are licensed per CI class and cannot share discovery workloads"
 		],
-		"correctIndex": 1,
+		"correctIndex": 0,
 		"explanation": "Distributed MID Server placement improves reachability to target subnets and provides resilience when individual nodes are unavailable.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/mid-server/mid-server-clusters.html",
-			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/concept/mid-server-for-discovery.html"
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/concept/mid-server-for-discovery.html"
 		],
 		"domain": "Discovery Configuration"
 	},
@@ -21559,15 +21560,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "During a Discovery run, authentication failures appear in status logs while devices are being classified. In which Discovery phase do credential authentication errors most commonly surface?",
 		"choices": [
 			"Probe phase while ports are being scanned without login attempts",
-			"Classification phase when credentials are used to determine device type",
 			"Exploration phase after CI records are already fully reconciled",
-			"Schedule creation phase before any MID Server picks up work"
+			"Schedule creation phase before any MID Server picks up work",
+			"Classification phase when credentials are used to determine device type"
 		],
-		"correctIndex": 1,
+		"correctIndex": 3,
 		"explanation": "Authentication is exercised during Classification when Discovery uses credentials to identify operating system and application details.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/discovery/probes-and-sensors.html",
-			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/task/t_ConfigureDiscoveryCredentials.html"
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/task/t_ConfigureDiscoveryCredentials.html"
 		],
 		"domain": "Discovery Configuration"
 	},
@@ -21576,16 +21577,16 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 45,
 		"prompt": "A subnet stays in Scanning status but no probe results appear in Discovery Status. Which communication channel should be reviewed first?",
 		"choices": [
-			"CMDB Health dashboard compliance score for the affected CI class",
 			"Service Mapping Workspace candidate queue for unreviewed suggestions",
-			"ECC Queue records carrying probe requests and MID Server responses",
-			"Identification rule order for the cmdb_ci_computer table"
+			"CMDB Health dashboard compliance score for the affected CI class",
+			"Identification rule order for the cmdb_ci_computer table",
+			"ECC Queue records carrying probe requests and MID Server responses"
 		],
-		"correctIndex": 2,
+		"correctIndex": 3,
 		"explanation": "Probe and sensor activity flows through the ECC Queue between the instance and MID Servers, making it the first place to diagnose stalled runs.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/mid-server/ecc-queue.html",
-			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/task/troubleshoot-discovery-status.html"
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/task/troubleshoot-discovery-status.html"
 		],
 		"domain": "Discovery Configuration"
 	},
@@ -21612,15 +21613,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 47,
 		"prompt": "Discovery must reach Windows servers in an isolated VLAN for Service Mapping onboarding. Which MID Server design decision has the greatest impact on success?",
 		"choices": [
-			"Assign the schedule to run only from the instance application node",
 			"Place a validated MID Server inside the VLAN with routing to target subnets",
 			"Disable MID capabilities so all probes execute from the ECC input topic",
-			"Use one global MID Server regardless of firewall boundaries between zones"
+			"Use one global MID Server regardless of firewall boundaries between zones",
+			"Assign the schedule to run only from the instance application node"
 		],
-		"correctIndex": 1,
+		"correctIndex": 0,
 		"explanation": "Discovery requires network reachability from a MID Server to target IP ranges, so zone-aligned placement is essential for classification.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/concept/mid-server-for-discovery.html",
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/concept/mid-server-for-discovery.html",
 			"https://www.servicenow.com/docs/r/platform-administration/mid-server/mid-server.html"
 		],
 		"domain": "Discovery Configuration"
@@ -21631,11 +21632,11 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "In the Discovery PCIE model, what is the main outcome of the Probe phase?",
 		"choices": [
 			"Detailed application dependency maps are published to Service Mapping",
-			"Devices are matched to existing CIs using identification rule criteria",
 			"Network targets are scanned to detect responsive hosts and open ports",
-			"Duplicate CI records are merged through reconciliation precedence logic"
+			"Duplicate CI records are merged through reconciliation precedence logic",
+			"Devices are matched to existing CIs using identification rule criteria"
 		],
-		"correctIndex": 2,
+		"correctIndex": 1,
 		"explanation": "The Probe phase discovers reachable IP addresses and open ports before subsequent classification and identification steps execute.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/discovery/probes-and-sensors.html",
@@ -21649,10 +21650,10 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"questionType": "multi",
 		"prompt": "Which two Discovery phases directly follow successful probing in the PCIE sequence? (Choose two.)",
 		"choices": [
-			"Classification",
 			"Identification",
-			"Schedule definition",
-			"Alert correlation"
+			"Classification",
+			"Alert correlation",
+			"Schedule definition"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
@@ -21671,16 +21672,16 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 50,
 		"prompt": "Multiple Discovery schedules populate the same hostname with overlapping CI records. What CMDB control most directly reduces duplicate creation?",
 		"choices": [
-			"Identification and reconciliation rules that match incoming payloads to existing CIs",
-			"Disabling the Exploration phase so fewer attributes are collected per device",
 			"Assigning every schedule to a separate MID Server cluster by default",
-			"Removing IP service records before each scheduled scan executes"
+			"Removing IP service records before each scheduled scan executes",
+			"Disabling the Exploration phase so fewer attributes are collected per device",
+			"Identification and reconciliation rules that match incoming payloads to existing CIs"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "IRE identification rules determine whether Discovery updates an existing CI or creates a new one, preventing duplicate records from overlapping sources.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/configuration-management/configuration-management-database/identification-and-reconciliation.html",
-			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/concept/c_Discovery.html"
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/concept/c_Discovery.html"
 		],
 		"domain": "Discovery Configuration"
 	},
@@ -21690,14 +21691,14 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "Several application teams request Discovery schedule changes that expand IP scope weekly. Which governance practice best protects Service Mapping data quality?",
 		"choices": [
 			"Approve scope increases only after CMDB ownership review and controlled test runs",
-			"Allow any schedule editor to add global /8 ranges without validation gates",
+			"Run all expanded schedules in production first and reconcile issues afterward",
 			"Disable schedule change history so administrators cannot audit prior scope",
-			"Run all expanded schedules in production first and reconcile issues afterward"
+			"Allow any schedule editor to add global /8 ranges without validation gates"
 		],
 		"correctIndex": 0,
 		"explanation": "Controlled scope changes with ownership review prevent noisy or unauthorized discovery from degrading CMDB quality used by service maps.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/concept/discovery-schedules.html",
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/concept/discovery-schedules.html",
 			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/prepare-for-service-mapping.html"
 		],
 		"domain": "Discovery Configuration"
@@ -21707,34 +21708,34 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 52,
 		"prompt": "Discovery runs are delayed even though schedules show Active status. ECC Queue shows a growing backlog on the discovery topic. What should be verified first?",
 		"choices": [
-			"Whether assigned MID Servers are Up, validated, and processing queued probe work",
 			"Whether all identification rules were deleted from the cmdb_ci_server class",
-			"Whether service candidates were rejected in the Service Mapping Workspace",
-			"Whether CMDB Health tasks were closed without remediation evidence"
+			"Whether CMDB Health tasks were closed without remediation evidence",
+			"Whether assigned MID Servers are Up, validated, and processing queued probe work",
+			"Whether service candidates were rejected in the Service Mapping Workspace"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "ECC backlog on discovery topics usually indicates MID Server availability or processing issues that must be resolved before schedules complete.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/mid-server/ecc-queue.html",
-			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/task/troubleshoot-discovery-with-ecc-queue.html"
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/task/troubleshoot-discovery-with-ecc-queue.html"
 		],
 		"domain": "Discovery Configuration"
 	},
 	{
 		"trackCode": "CIS-SM",
 		"order": 53,
-		"prompt": "An operations team configures Event Management to reduce noise before operators act. When an event rule matches defined conditions, what record type does it create?",
+		"prompt": "Discovery Status shows failed Windows probe results, and administrators need the raw MID Server payloads. Which queue stores those Discovery messages?",
 		"choices": [
-			"Alert record that operators review and correlate in Event Management",
-			"Discovery schedule that rescans the affected subnet on the next interval",
-			"Identification entry that merges duplicate cmdb_ci_computer records",
-			"Service map entry point that launches top-down dependency tracing"
+			"ECC Queue records carrying input and output probe or sensor messages for Discovery",
+			"Service Mapping candidate review queue for machine-learning suggestions",
+			"Event Management alert console filtered by CI class and severity only",
+			"CMDB Health task list limited to completeness remediation work"
 		],
 		"correctIndex": 0,
-		"explanation": "Event rules evaluate incoming events and create alerts when configured conditions are met, enabling governed alert handling downstream.",
+		"explanation": "The ECC Queue is the connection point between the instance and MID Servers. It stores input and output Discovery messages with probe/sensor activity and XML payloads used for troubleshooting.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/it-operations-management/event-management/exploring-event-management.html",
-			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/event-management/task/configure-event-rules.html"
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/r_DiscoveryStatusECCQueue.html",
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/c_DiscoveryTroubleshooting.html"
 		],
 		"domain": "Discovery Configuration"
 	},
@@ -21743,12 +21744,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 54,
 		"prompt": "Service Mapping administrators need to confirm which TCP ports a database host exposes for entry point design. Which Discovery result type provides that detail?",
 		"choices": [
-			"IP service records listing open ports and detected services on the host",
 			"Reconciliation rule entries defining attribute precedence by datasource",
+			"Machine learning confidence scores on pending service candidates",
 			"CMDB Health KPI widgets showing duplicate CI counts by class",
-			"Machine learning confidence scores on pending service candidates"
+			"IP service records listing open ports and detected services on the host"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "IP service discovery captures port and service information that teams use to validate entry points and dependency paths during mapping.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/discovery/probes-and-sensors.html",
@@ -21761,15 +21762,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 55,
 		"prompt": "Before enabling credential-based Discovery for a new datacenter, which credential practice best supports both security and mapping accuracy?",
 		"choices": [
-			"Share one domain administrator account across every schedule and environment",
-			"Store privileged passwords in schedule descriptions for faster troubleshooting",
 			"Use least-privilege credential aliases tested against representative targets first",
-			"Disable credential validation to shorten MID Server onboarding time"
+			"Disable credential validation to shorten MID Server onboarding time",
+			"Share one domain administrator account across every schedule and environment",
+			"Store privileged passwords in schedule descriptions for faster troubleshooting"
 		],
-		"correctIndex": 2,
+		"correctIndex": 0,
 		"explanation": "Least-privilege credentials validated on sample targets reduce security exposure while confirming access needed for classification and exploration.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/task/t_ConfigureDiscoveryCredentials.html",
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/task/t_ConfigureDiscoveryCredentials.html",
 			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/prepare-for-service-mapping.html"
 		],
 		"domain": "Discovery Configuration"
@@ -21779,12 +21780,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 56,
 		"prompt": "A customer wants to accelerate service map creation using observed traffic patterns. Which Service Mapping capability proposes likely application services for review?",
 		"choices": [
+			"Discovery cluster failover setting on the MID Server record",
 			"Machine learning service candidates surfaced for mapper validation",
 			"CMDB class manager hierarchy editor for cmdb_ci_appl extensions",
-			"Event binding rule that attaches alerts to cmdb_ci_service records",
-			"Discovery cluster failover setting on the MID Server record"
+			"Event binding rule that attaches alerts to cmdb_ci_service records"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"explanation": "ML-powered mapping analyzes discovery and traffic signals to propose service candidates that teams accept or reject before publishing maps.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/service-mapping-get-started.html",
@@ -21815,12 +21816,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 58,
 		"prompt": "A mapper sees a high-confidence service candidate that conflicts with the documented architecture diagram. What is the recommended next step?",
 		"choices": [
-			"Accept every candidate automatically to maximize map coverage quickly",
 			"Validate the candidate with the service owner before accepting or rejecting it",
+			"Disable machine learning mapping globally until the next major release",
 			"Delete the underlying CI records so the candidate cannot reappear",
-			"Disable machine learning mapping globally until the next major release"
+			"Accept every candidate automatically to maximize map coverage quickly"
 		],
-		"correctIndex": 1,
+		"correctIndex": 0,
 		"explanation": "ML candidates accelerate onboarding but require architectural and ownership validation before they influence production service maps.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/manage-service-maps.html",
@@ -21833,12 +21834,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 59,
 		"prompt": "When should a team choose ML-powered mapping over manual top-down entry point design for a new application?",
 		"choices": [
-			"When no discovery data exists and all CIs are created manually each week",
-			"When traffic and discovery signals exist but documented entry points are incomplete",
 			"When the goal is to disable CMDB identification rules for faster imports",
-			"When every dependency must be drawn without any automated suggestions"
+			"When every dependency must be drawn without any automated suggestions",
+			"When no discovery data exists and all CIs are created manually each week",
+			"When traffic and discovery signals exist but documented entry points are incomplete"
 		],
-		"correctIndex": 1,
+		"correctIndex": 3,
 		"explanation": "ML mapping is most valuable when technical signals are available but formal entry points or architecture documentation are incomplete.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/getting-started-service-mapping.html",
@@ -21874,12 +21875,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 61,
 		"prompt": "Which governance metric best tracks whether ML service candidate review is improving map quality?",
 		"choices": [
-			"Total ECC queue entries processed per hour regardless of outcomes",
 			"Ratio of accepted candidates that remain accurate after owner validation cycles",
 			"Count of custom CI classes created without class manager approval",
-			"Number of discovery schedules running concurrently across all MID Servers"
+			"Number of discovery schedules running concurrently across all MID Servers",
+			"Total ECC queue entries processed per hour regardless of outcomes"
 		],
-		"correctIndex": 1,
+		"correctIndex": 0,
 		"explanation": "Tracking accepted candidates that stay accurate after validation shows ML suggestions are contributing durable topology rather than noise.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/service-mapping-kpis.html",
@@ -21893,9 +21894,9 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "After mappers reject several ML suggestions for the same application tier, what adjustment most directly improves future candidate quality?",
 		"choices": [
 			"Feed accepted versus rejected outcomes back into review standards and discovery scope tuning",
-			"Remove all identification rules so every CI import creates a new record",
 			"Disable Service Mapping Workspace access for application owners",
-			"Increase discovery schedule frequency without reviewing credential coverage"
+			"Increase discovery schedule frequency without reviewing credential coverage",
+			"Remove all identification rules so every CI import creates a new record"
 		],
 		"correctIndex": 0,
 		"explanation": "Iterative feedback on accepted and rejected candidates helps teams refine discovery inputs and governance so ML proposals align with architecture.",
@@ -21910,12 +21911,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 63,
 		"prompt": "Machine learning analysis surfaces recurring traffic between a load balancer tier and three application clusters. What topology recommendation should the mapper evaluate?",
 		"choices": [
-			"Proposed application services grouping the clustered dependencies with shared entry points for validation",
 			"Immediate deletion of all generic application CIs without owner review",
-			"Disabling discovery schedules globally until ML confidence reaches one hundred percent",
-			"Conversion of every traffic flow into a separate business service without relationships"
+			"Proposed application services grouping the clustered dependencies with shared entry points for validation",
+			"Conversion of every traffic flow into a separate business service without relationships",
+			"Disabling discovery schedules globally until ML confidence reaches one hundred percent"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"explanation": "ML topology recommendations propose candidate service groupings from traffic patterns that mappers validate against known architecture before acceptance.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/manage-service-maps.html",
@@ -21928,12 +21929,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 64,
 		"prompt": "Several maps show repeated generic application CIs for the same middleware process. How can ML-assisted pattern suggestions help?",
 		"choices": [
-			"Recommend identification refinements or pattern assignments to replace generic placeholders",
-			"Automatically retire every cmdb_ci_computer record on affected subnets",
 			"Disable reconciliation rules so duplicate CIs simplify future scans",
+			"Automatically retire every cmdb_ci_computer record on affected subnets",
+			"Recommend identification refinements or pattern assignments to replace generic placeholders",
 			"Remove all entry points until generic CIs disappear from CMDB Health reports"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "ML can highlight recurring generic applications and suggest pattern improvements so dependency tracing uses accurate CI classification.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/pattern-based-discovery.html",
@@ -21946,12 +21947,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 65,
 		"prompt": "An onboarding queue shows multiple service candidates clustering around the same database listeners. What analysis step should precede acceptance?",
 		"choices": [
-			"Review candidate relationships with service owners to confirm shared versus distinct application boundaries",
-			"Accept the entire cluster automatically to minimize manual review effort",
 			"Delete underlying database CIs so candidates cannot reference shared infrastructure",
-			"Disable machine learning mapping until every schedule covers the full enterprise subnet"
+			"Disable machine learning mapping until every schedule covers the full enterprise subnet",
+			"Accept the entire cluster automatically to minimize manual review effort",
+			"Review candidate relationships with service owners to confirm shared versus distinct application boundaries"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Service candidate cluster analysis validates whether ML-proposed groupings match real application boundaries before maps are published.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/manage-service-maps.html",
@@ -21965,9 +21966,9 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "Where should a Service Mapping lead review pending ML candidates, assigned onboarding tasks, and map validation status together?",
 		"choices": [
 			"Service Mapping Workspace dashboards and candidate queues",
-			"ECC Queue related lists on the MID Server record form",
+			"Discovery pattern designer debug console for horizontal probes",
 			"CI Class Manager tree for cmdb_ci_appl attribute extensions",
-			"Discovery pattern designer debug console for horizontal probes"
+			"ECC Queue related lists on the MID Server record form"
 		],
 		"correctIndex": 0,
 		"explanation": "Service Mapping Workspace consolidates candidate review and onboarding workflow tasks for ML-assisted mapping programs.",
@@ -21982,12 +21983,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 67,
 		"prompt": "A regulated application has well-maintained custom patterns and validated entry points. Which mapping approach is usually preferred over ML candidates?",
 		"choices": [
-			"Pattern-based top-down mapping with governed entry points and credentials",
 			"Blind acceptance of every ML suggestion to minimize manual review effort",
-			"Disabling discovery entirely and maintaining maps only in spreadsheets",
-			"Creating duplicate application services for each discovered port record"
+			"Creating duplicate application services for each discovered port record",
+			"Pattern-based top-down mapping with governed entry points and credentials",
+			"Disabling discovery entirely and maintaining maps only in spreadsheets"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "When patterns and entry points are mature, pattern-based mapping provides deterministic tracing that complements rather than replaces ML for that service.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/create-a-service-map.html",
@@ -22001,8 +22002,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "ML analysis suggests a new pattern variant for a frequently discovered Java process not covered by library content. What should the pattern team do?",
 		"choices": [
 			"Evaluate the suggestion, prototype an extended pattern, and test on representative hosts before promotion",
-			"Accept the candidate without testing because ML suggestions replace pattern designer work",
 			"Delete all Java process records from CMDB to force rediscovery on the next schedule",
+			"Accept the candidate without testing because ML suggestions replace pattern designer work",
 			"Disable identification sections globally so only generic applications appear on maps"
 		],
 		"correctIndex": 0,
@@ -22018,12 +22019,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 69,
 		"prompt": "Before expanding Service Mapping to additional business services, which CMDB tool summarizes completeness, correctness, and compliance gaps?",
 		"choices": [
-			"CMDB Health dashboard with KPI scores and remediation tasks",
 			"Discovery schedule editor showing next run timestamps only",
+			"Service Portal catalog builder for request item categories",
 			"Event Management connector dashboard for inbound event volume",
-			"Service Portal catalog builder for request item categories"
+			"CMDB Health dashboard with KPI scores and remediation tasks"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "CMDB Health exposes data quality metrics and actionable tasks that indicate whether the CMDB can support dependable service maps.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/configuration-management/configuration-management-database/cmdb-health-dashboard.html",
@@ -22036,15 +22037,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 70,
 		"prompt": "Incoming Discovery payloads for Linux servers sometimes create duplicate records. Which IRE artifact should be tuned first?",
 		"choices": [
+			"MID Server cluster failover order for the affected datacenter",
 			"Identification rule entries that match serial number, name, and IP attributes",
 			"Event rule conditions that filter non-critical monitoring signals",
-			"Service Mapping entry point URLs used for top-down tracing",
-			"MID Server cluster failover order for the affected datacenter"
+			"Service Mapping entry point URLs used for top-down tracing"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"explanation": "Identification rules define how incoming data matches existing CIs, which is the first control for preventing duplicate server records.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/task/t_CreateIdentificationRules.html",
+			"https://www.servicenow.com/docs/r/configuration-management/cmdb/task/t_CreateIdentificationRules.html",
 			"https://www.servicenow.com/docs/r/configuration-management/configuration-management-database/identification-and-reconciliation.html"
 		],
 		"domain": "Configuration Management Database"
@@ -22055,15 +22056,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "Discovery and an import set both update the operating system field on the same CI. Which IRE mechanism decides which value is kept?",
 		"choices": [
 			"Reconciliation rule precedence that ranks datasource authority per attribute",
-			"Probe phase timeout settings on the horizontal discovery schedule",
 			"Service candidate confidence threshold in the mapping workspace",
+			"Probe phase timeout settings on the horizontal discovery schedule",
 			"Alert binding policy that links events to cmdb_ci_computer records"
 		],
 		"correctIndex": 0,
 		"explanation": "Reconciliation rules apply datasource precedence after identification so authoritative sources win attribute conflicts.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_ReconciliationRules.html",
-			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/task/t_CreateReconciliationRules.html"
+			"https://www.servicenow.com/docs/r/configuration-management/cmdb/concept/c_ReconciliationRules.html",
+			"https://www.servicenow.com/docs/r/configuration-management/cmdb/task/t_CreateReconciliationRules.html"
 		],
 		"domain": "Configuration Management Database"
 	},
@@ -22072,16 +22073,16 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 72,
 		"prompt": "An operator reclassifies a CI from cmdb_ci_server to cmdb_ci_win_server after Discovery confirms the OS. What type of CMDB change is this?",
 		"choices": [
-			"Class Upgrade moving the CI to a more specific subclass",
 			"Identification failure that forces creation of a duplicate record",
+			"Service map deletion that removes all dependency relationships",
 			"Reconciliation rollback that restores the previous datasource values",
-			"Service map deletion that removes all dependency relationships"
+			"Class Upgrade moving the CI to a more specific subclass"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Reclassifying a server CI to a Windows-specific subclass is a Class Upgrade that preserves identity while applying specialized attributes.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/configuration-management/configuration-management-database/identification-and-reconciliation.html",
-			"https://www.servicenow.com/docs/r/configuration-management/vancouver/cmdb/concept/cmdb-class-hierarchy.html"
+			"https://www.servicenow.com/docs/r/configuration-management/cmdb/concept/cmdb-class-hierarchy.html"
 		],
 		"domain": "Configuration Management Database"
 	},
@@ -22090,16 +22091,16 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 73,
 		"prompt": "CMDB analysts find multiple cmdb_ci_app_server records representing the same middleware instance. What remediation approach aligns with IRE best practice?",
 		"choices": [
-			"Merge duplicates after verifying identification keys and retire redundant records",
-			"Delete reconciliation rules so the newest import always wins every attribute",
 			"Disable Discovery schedules until all application owners submit spreadsheets",
-			"Convert every duplicate into a business service without dependency review"
+			"Convert every duplicate into a business service without dependency review",
+			"Merge duplicates after verifying identification keys and retire redundant records",
+			"Delete reconciliation rules so the newest import always wins every attribute"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Duplicate remediation should confirm identification matches, merge authoritative data, and retire redundant CIs to restore map integrity.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/configuration-management/configuration-management-database/cmdb-data-manager.html",
-			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_IdentificationAndReconciliationEngine.html"
+			"https://www.servicenow.com/docs/r/configuration-management/cmdb/concept/c_IdentificationAndReconciliationEngine.html"
 		],
 		"domain": "Configuration Management Database"
 	},
@@ -22108,12 +22109,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 74,
 		"prompt": "Which CMDB Health indicator best signals readiness for the next Service Mapping wave?",
 		"choices": [
+			"Shorter ECC queue depth on unrelated integration topics",
 			"Improving completeness and correctness scores with fewer open remediation tasks",
 			"Higher raw count of cmdb_ci_computer records regardless of duplicate status",
-			"Increased number of custom event rules firing on unrelated CIs",
-			"Shorter ECC queue depth on unrelated integration topics"
+			"Increased number of custom event rules firing on unrelated CIs"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"explanation": "Rising health scores and fewer remediation tasks show CMDB data is stable enough to support accurate dependency mapping.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/configuration-management/configuration-management-database/cmdb-health-dashboard.html",
@@ -22134,7 +22135,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 0,
 		"explanation": "Reconciliation datasource precedence determines which source may update specific attributes after identification matches a CI.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_ReconciliationRules.html",
+			"https://www.servicenow.com/docs/r/configuration-management/cmdb/concept/c_ReconciliationRules.html",
 			"https://www.servicenow.com/docs/r/configuration-management/configuration-management-database/identification-and-reconciliation.html"
 		],
 		"domain": "Configuration Management Database"
@@ -22145,19 +22146,19 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"questionType": "multi",
 		"prompt": "Which two IRE components work together to prevent duplicate CIs from multiple feeds? (Choose two.)",
 		"choices": [
-			"Identification rules that match incoming records to existing CIs",
 			"Reconciliation rules that apply datasource precedence after a match",
 			"Event rules that create alerts from monitoring tool payloads",
-			"Discovery clusters that assign MID Server failover groups"
+			"Discovery clusters that assign MID Server failover groups",
+			"Identification rules that match incoming records to existing CIs"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			1
+			3
 		],
 		"explanation": "Identification finds or creates the CI match while reconciliation governs attribute updates, together reducing duplicate and conflicting records.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/configuration-management/australia/cmdb/concept/c_IdentificationAndReconciliationEngine.html",
+			"https://www.servicenow.com/docs/r/configuration-management/cmdb/concept/c_IdentificationAndReconciliationEngine.html",
 			"https://www.servicenow.com/docs/r/configuration-management/configuration-management-database/identification-and-reconciliation.html"
 		],
 		"domain": "Configuration Management Database"
@@ -22168,9 +22169,9 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "Mapped services still show orphan middleware CIs with no upstream application dependency. Which CMDB tool helps locate and remediate those orphans?",
 		"choices": [
 			"CMDB Data Manager views and tasks focused on orphaned or stale CIs",
-			"ECC Queue filter showing probe input backlog by MID Server",
 			"Event Management maintenance window calendar for alert suppression",
-			"Discovery pattern version history for horizontal classification steps"
+			"Discovery pattern version history for horizontal classification steps",
+			"ECC Queue filter showing probe input backlog by MID Server"
 		],
 		"correctIndex": 0,
 		"explanation": "CMDB Data Manager helps teams find orphaned CIs and execute cleanup so service maps reflect accurate dependency paths.",
@@ -22185,16 +22186,16 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 78,
 		"prompt": "An administrator must extend the CMDB schema with a new CI class for a custom middleware tier used in maps. Which tool should they use?",
 		"choices": [
-			"CI Class Manager to define classes, attributes, and identification behavior",
 			"Event rule designer to correlate monitoring alerts by severity",
-			"Discovery schedule wizard to assign MID Server clusters by region",
-			"Service candidate queue to accept ML proposals automatically"
+			"CI Class Manager to define classes, attributes, and identification behavior",
+			"Service candidate queue to accept ML proposals automatically",
+			"Discovery schedule wizard to assign MID Server clusters by region"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"explanation": "CI Class Manager governs CMDB class hierarchy and attributes so identification and mapping logic can target the correct CI types.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/configuration-management/configuration-management-database/cmdb-data-manager.html",
-			"https://www.servicenow.com/docs/r/configuration-management/vancouver/cmdb/concept/cmdb-class-hierarchy.html"
+			"https://www.servicenow.com/docs/r/configuration-management/cmdb/concept/cmdb-class-hierarchy.html"
 		],
 		"domain": "Configuration Management Database"
 	},
@@ -22203,12 +22204,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 79,
 		"prompt": "During engagement planning, stakeholders debate which applications belong in phase one. Which scoping principle best limits early risk?",
 		"choices": [
-			"Start with high-value services that have owners, credentials, and validated entry points",
-			"Map every subnet in the enterprise before validating a single service map",
 			"Exclude CMDB readiness checks so mapping can begin immediately",
+			"Map every subnet in the enterprise before validating a single service map",
+			"Start with high-value services that have owners, credentials, and validated entry points",
 			"Defer all discovery until every ML candidate is accepted automatically"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Phased scoping around critical services with known ownership and access reduces onboarding risk and builds trust in map accuracy.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/prepare-for-service-mapping.html",
@@ -22222,9 +22223,9 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "A shared database supports three application services in scope for Service Mapping. How should licensing and scope be handled?",
 		"choices": [
 			"Model the shared component once and map dependent services to the shared CI relationships",
-			"License a separate Service Mapping subscription for each consumer application team",
+			"Create duplicate database CIs so each service owns an isolated copy in CMDB",
 			"Exclude shared infrastructure entirely because maps cannot represent common tiers",
-			"Create duplicate database CIs so each service owns an isolated copy in CMDB"
+			"License a separate Service Mapping subscription for each consumer application team"
 		],
 		"correctIndex": 0,
 		"explanation": "Shared services should be represented once in CMDB with accurate relationships so multiple application maps reference the same dependency.",
@@ -22239,16 +22240,16 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 81,
 		"prompt": "Which MID Server requirement is essential before a multi-datacenter Service Mapping engagement goes live?",
 		"choices": [
-			"Validated MID Servers in each required zone with Discovery and mapping capabilities enabled",
 			"A single MID Server installed on the ServiceNow instance application server",
-			"MID Servers assigned only to the Service Desk group for approval routing",
-			"MID Server clusters disabled so schedules run directly from the instance node"
+			"MID Server clusters disabled so schedules run directly from the instance node",
+			"Validated MID Servers in each required zone with Discovery and mapping capabilities enabled",
+			"MID Servers assigned only to the Service Desk group for approval routing"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Engagement readiness requires reachable, validated MID Servers with appropriate capabilities in every network zone that will be mapped.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/platform-administration/mid-server/mid-server.html",
-			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/concept/mid-server-for-discovery.html"
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/concept/mid-server-for-discovery.html"
 		],
 		"domain": "Service Mapping Engagement Readiness"
 	},
@@ -22258,15 +22259,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "Security reviewers ask how Service Mapping credentials will be governed during the project. Which answer best aligns with engagement readiness guidance?",
 		"choices": [
 			"Use least-privilege credential aliases, store secrets securely, and test access before production mapping",
-			"Share one privileged domain account across all environments to simplify troubleshooting",
 			"Embed passwords in schedule descriptions so operators can rotate them quickly",
+			"Share one privileged domain account across all environments to simplify troubleshooting",
 			"Disable credential rotation until all service maps reach one hundred percent coverage"
 		],
 		"correctIndex": 0,
 		"explanation": "Secure credential governance with least privilege and validated access paths is a core readiness requirement for Service Mapping engagements.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/prepare-for-service-mapping.html",
-			"https://www.servicenow.com/docs/bundle/zurich-it-operations-management/page/product/discovery/task/t_ConfigureDiscoveryCredentials.html"
+			"https://www.servicenow.com/docs/r/it-operations-management/discovery/task/t_ConfigureDiscoveryCredentials.html"
 		],
 		"domain": "Service Mapping Engagement Readiness"
 	},
@@ -22275,12 +22276,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 83,
 		"prompt": "Procurement asks which ServiceNow licenses are required before expanding ML-powered Service Mapping to a new business unit. What should the engagement lead verify?",
 		"choices": [
-			"Appropriate ITOM Service Mapping entitlements and subscribed capacity for scoped CIs and services",
-			"Only ITSM incident licenses because maps are stored entirely outside CMDB",
 			"Hardware Asset Management licenses for every server CI regardless of mapping scope",
-			"Event Management licenses exclusively, with no Service Mapping subscription"
+			"Event Management licenses exclusively, with no Service Mapping subscription",
+			"Only ITSM incident licenses because maps are stored entirely outside CMDB",
+			"Appropriate ITOM Service Mapping entitlements and subscribed capacity for scoped CIs and services"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Service Mapping engagements require valid ITOM Service Mapping licensing aligned to the CIs and services included in project scope.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/prepare-for-service-mapping.html",
@@ -22294,9 +22295,9 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "Executives want proof that Service Mapping investment improves operations. Which use case most directly connects maps to incident outcomes?",
 		"choices": [
 			"Service map visibility on incidents helps analysts understand blast radius and reduce Mean Time to Resolve",
-			"Maps automatically close all P1 incidents without analyst involvement",
+			"Event rules suppress every warning so dashboards show zero open alerts",
 			"Discovery schedules run hourly solely to increase CMDB record counts",
-			"Event rules suppress every warning so dashboards show zero open alerts"
+			"Maps automatically close all P1 incidents without analyst involvement"
 		],
 		"correctIndex": 0,
 		"explanation": "Integrating service maps with Incident Management gives responders dependency context that speeds diagnosis and lowers MTTR.",
@@ -22311,12 +22312,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 85,
 		"prompt": "Which KPI pair best demonstrates Service Mapping engagement success for incident operations?",
 		"choices": [
-			"Reduced Mean Time to Resolve on mapped services and fewer repeat dependency-related incidents",
 			"Total number of ECC queue records processed per day across all MID Servers",
-			"Count of custom CI classes created without class manager review",
-			"Volume of rejected ML candidates without any owner feedback captured"
+			"Volume of rejected ML candidates without any owner feedback captured",
+			"Reduced Mean Time to Resolve on mapped services and fewer repeat dependency-related incidents",
+			"Count of custom CI classes created without class manager review"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Operational value appears when mapped services show faster resolution and fewer recurring incidents caused by unknown dependencies.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/service-mapping-kpis.html",
@@ -22330,8 +22331,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "A service desk manager asks how Service Mapping changes daily triage. Which operational use case is the strongest example?",
 		"choices": [
 			"Analysts open the service map from an incident to see upstream and downstream CIs affected by an outage",
-			"Agents manually rebuild CMDB relationships on every ticket before assignment",
 			"Discovery disables all identification rules whenever a P1 incident is opened",
+			"Agents manually rebuild CMDB relationships on every ticket before assignment",
 			"Event Management deletes alerts automatically when a map exists for the CI"
 		],
 		"correctIndex": 0,
@@ -22347,12 +22348,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 87,
 		"prompt": "Before declaring a Service Mapping engagement ready for production cutover, which checklist item is most critical?",
 		"choices": [
-			"Validated maps for in-scope services with owner sign-off, CMDB health acceptance, and operational workflow integration",
 			"Every CI in the CMDB mapped regardless of business priority or ownership",
+			"Discovery schedules removed so maps never refresh after go-live",
 			"All ML candidates accepted without architectural review to maximize coverage",
-			"Discovery schedules removed so maps never refresh after go-live"
+			"Validated maps for in-scope services with owner sign-off, CMDB health acceptance, and operational workflow integration"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Engagement readiness requires validated in-scope maps, stakeholder approval, healthy CMDB data, and integration into operational processes.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/prepare-for-service-mapping.html",
@@ -22365,12 +22366,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 88,
 		"prompt": "Application owners must formally accept maps before the operations team relies on them during incidents. What engagement activity should capture that acceptance?",
 		"choices": [
-			"Structured map validation workshops with documented sign-off on critical dependencies and gaps",
-			"Automatic promotion of every ML candidate without owner attendance",
 			"Deletion of unvalidated CIs from CMDB to force map completeness metrics upward",
-			"Disabling service map schedules until all enterprise subnets are discovered"
+			"Disabling service map schedules until all enterprise subnets are discovered",
+			"Structured map validation workshops with documented sign-off on critical dependencies and gaps",
+			"Automatic promotion of every ML candidate without owner attendance"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Stakeholder validation workshops document owner acceptance of map accuracy and remediation plans for identified gaps before operational cutover.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/validate-service-map-results.html",
@@ -22383,12 +22384,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 89,
 		"prompt": "An engagement lead prepares operational readiness for go-live. What communication and handoff step should occur before production mapping cutover?",
 		"choices": [
+			"Defer training until every application in the enterprise has a validated service map",
 			"Brief service desk and operations teams on map access, escalation paths, and refresh expectations for in-scope services",
 			"Restrict map visibility to administrators only so responders cannot view dependencies during incidents",
-			"Remove all discovery schedules permanently after the first successful map run",
-			"Defer training until every application in the enterprise has a validated service map"
+			"Remove all discovery schedules permanently after the first successful map run"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"explanation": "Operational readiness includes training responders and support teams on how to use maps, report gaps, and understand ongoing refresh governance.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/it-operations-management/service-mapping/prepare-for-service-mapping.html",
