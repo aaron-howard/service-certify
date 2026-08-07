@@ -1,0 +1,92 @@
+[
+	{
+		"trackCode": "CIS-CSM",
+		"order": 5,
+		"prompt": "Before agents log install base items for customer sites, what must exist in the product catalog?",
+		"choices": [
+			"A product model that defines the product the install base item references",
+			"A completed case playbook run for every serial number in the warehouse",
+			"An active entitlement contract signed before any catalog item is created",
+			"A consumer household record linked to each manufacturing plant location"
+		],
+		"correctIndex": 0,
+		"explanation": "Product models define catalog products; install base items represent deployed instances of those products at customer locations and reference the product model. Configure product data before setting up the install base.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/customer-service-management/configure-install-base.html",
+			"https://www.servicenow.com/docs/r/customer-service-management/configure-csm-products.html"
+		],
+		"domain": "CSM Foundational Data Model"
+	},
+	{
+		"trackCode": "CIS-CSM",
+		"order": 13,
+		"prompt": "A support manager must decide whether to associate a returned laptop with the customer's deployed fleet versus a one-time online purchase record. Which guidance distinguishes the correct product instance record?",
+		"choices": [
+			"Use an install base item when tracking a deployed asset at a customer location and a sold product when referencing a purchased instance from a transaction",
+			"Use a product model for both scenarios because catalog definitions replace instance tracking entirely",
+			"Use a case type configuration record whenever serial numbers appear on inbound email cases",
+			"Use an assignment rule record to store warranty dates instead of any product instance table"
+		],
+		"correctIndex": 0,
+		"explanation": "Install base items track deployed assets at customer sites; sold products track purchased instances—choosing the correct record keeps entitlement and case context accurate.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/customer-service-management/install-base-item.html",
+			"https://www.servicenow.com/docs/r/customer-service-management/sold-product.html"
+		],
+		"domain": "CSM Foundational Data Model"
+	},
+	{
+		"trackCode": "CIS-CSM",
+		"order": 17,
+		"prompt": "Two customer accounts have a reseller relationship rather than a parent-child hierarchy. Which table defines this type of association?",
+		"choices": [
+			"Request parent mapping entry for ITSM integration on cases",
+			"Account relationship with a configured relationship type",
+			"Household member relationship used only in B2C deployments",
+			"Contact relationship that converts both accounts into one consumer"
+		],
+		"correctIndex": 1,
+		"explanation": "Account relationships and account relationship types model non-hierarchical links between accounts such as reseller, partner, or other defined business relationships.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/customer-service-management/t_CreateAcctRelationshipRecord.html",
+			"https://www.servicenow.com/docs/r/customer-service-management/user-management.html"
+		],
+		"domain": "CSM Foundational Data Model"
+	},
+	{
+		"trackCode": "CIS-CSM",
+		"order": 19,
+		"prompt": "In a B2C deployment, related consumers share a household subscription plan. Which relationship type groups those consumers?",
+		"choices": [
+			"Household member relationship linking consumers in the same household",
+			"Account relationship that treats each consumer as a child account",
+			"Contact relationship between two business account employee records",
+			"Sold product record that replaces the need for consumer identity"
+		],
+		"correctIndex": 0,
+		"explanation": "Household member relationships group individual consumers in B2C scenarios so shared services and cases can reflect the household context.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/customer-service-management/configure-households.html",
+			"https://www.servicenow.com/docs/r/customer-service-management/add-consumer-to-household.html"
+		],
+		"domain": "CSM Foundational Data Model"
+	},
+	{
+		"trackCode": "CIS-CSM",
+		"order": 23,
+		"prompt": "Agents must see a warning when opening cases for a VIP account with non-standard handling instructions. Which application surfaces notes from related account records on the case?",
+		"choices": [
+			"Special handling notes configured to display from related account records",
+			"Request parent mapping that synchronizes SC requests to case work notes",
+			"On-screen alerts on the account entity displayed whenever any case is opened",
+			"VIP account priority on the assignment rule without special handling note conditions"
+		],
+		"correctIndex": 0,
+		"explanation": "Special handling notes can be configured on entity tables and set to display alerts from related records such as the account or product associated with a case.",
+		"sourceUrls": [
+			"https://www.servicenow.com/docs/r/customer-service-management/configure-special-handling-notes.html",
+			"https://www.servicenow.com/docs/r/customer-service-management/manage-special-handling-notes.html"
+		],
+		"domain": "CSM Foundational Data Model"
+	}
+]

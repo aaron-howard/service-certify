@@ -1578,12 +1578,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 0,
 		"prompt": "A manufacturer sells through business customers and also supports end users who buy directly online. Which CSM business model pairing best matches these two audiences?",
 		"choices": [
-			"B2B for account-based relationships and B2C for individual consumers",
-			"B2C for account-based relationships and B2B for individual consumers",
 			"B2B for internal employees only and B2C for vendor partners exclusively",
-			"B2C for partner resellers only and B2B for anonymous portal visitors"
+			"B2C for partner resellers only and B2B for anonymous portal visitors",
+			"B2C for account-based relationships and B2B for individual consumers",
+			"B2B for account-based relationships and B2C for individual consumers"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "CSM supports B2B with accounts and contacts for business customers, and B2C with consumers for individuals purchasing products or services directly.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/customer-service-management/r_RolesInstalledWithCustomerService.html"
@@ -1596,9 +1596,9 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "A contact employed by Account A must open and update cases for Account B from the customer portal. Which CSM feature enables this cross-account access?",
 		"choices": [
 			"Contact relationship linking the contact to the additional account",
-			"Account hierarchy that merges both accounts into one parent record",
+			"Consumer household membership that replaces the contact record",
 			"Install base item shared between both accounts on the same asset tag",
-			"Consumer household membership that replaces the contact record"
+			"Account hierarchy that merges both accounts into one parent record"
 		],
 		"correctIndex": 0,
 		"explanation": "Contact relationships associate a contact from one account with another account so authorized contacts can view data and perform actions such as creating or updating cases on behalf of that account.",
@@ -1613,12 +1613,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"domain": "CSM Foundational Data Model",
 		"prompt": "A retailer enables self-service for corporate buyers and direct-to-consumer shoppers. Business buyers sign in as contacts tied to their employer account, while online shoppers sign in as individuals. Which portal and access pairing should the implementer configure?",
 		"choices": [
-			"Customer Service Portal with customer role for B2B contacts and Consumer Service Portal with consumer role for B2C shoppers",
 			"Consumer Service Portal for both audiences using the agent role for every external login",
-			"Internal agent workspace for contacts and the admin interface for consumers purchasing online",
-			"Customer Service Portal for consumers only while contacts are blocked from any self-service access"
+			"Customer Service Portal for consumers only while contacts are blocked from any self-service access",
+			"Customer Service Portal with customer role for B2B contacts and Consumer Service Portal with consumer role for B2C shoppers",
+			"Internal agent workspace for contacts and the admin interface for consumers purchasing online"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "B2B contacts authenticate to the Customer Service Portal with the customer role and see account-scoped data; B2C shoppers use the Consumer Service Portal with the consumer role for individual purchases.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/customer-service-management/r_RolesInstalledWithCustomerService.html"
@@ -1630,8 +1630,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "In a B2B CSM deployment, what does an account record represent in the customer data model?",
 		"choices": [
 			"A customer organization that contacts belong to and cases can be tied to",
-			"An individual end user who purchased a single retail product online",
 			"A fulfillment group that receives auto-assigned case tasks from AWA",
+			"An individual end user who purchased a single retail product online",
 			"A catalog category used to classify knowledge articles for agents"
 		],
 		"correctIndex": 0,
@@ -1646,12 +1646,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 4,
 		"prompt": "How does a consumer differ from a B2B contact in the CSM data model?",
 		"choices": [
-			"A consumer is created only from inbound email, while a contact is created only from chat",
 			"A consumer is an individual end customer, while a contact is an employee of a business account",
+			"A consumer always has the agent role, while a contact always has the admin role",
 			"A consumer record stores contract entitlements, while a contact stores install base serial numbers",
-			"A consumer always has the agent role, while a contact always has the admin role"
+			"A consumer is created only from inbound email, while a contact is created only from chat"
 		],
-		"correctIndex": 1,
+		"correctIndex": 0,
 		"explanation": "B2C deployments use consumers as individual customers who manage cases for products they purchased, whereas B2B contacts represent people employed by customer accounts.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/customer-service-management/r_RolesInstalledWithCustomerService.html"
@@ -1663,15 +1663,16 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 5,
 		"prompt": "Before agents log install base items for customer sites, what must exist in the product catalog?",
 		"choices": [
-			"A product model that defines the product the install base item references",
-			"A completed case playbook run for every serial number in the warehouse",
 			"An active entitlement contract signed before any catalog item is created",
-			"A consumer household record linked to each manufacturing plant location"
+			"A consumer household record linked to each manufacturing plant location",
+			"A product model that defines the product the install base item references",
+			"A completed case playbook run for every serial number in the warehouse"
 		],
-		"correctIndex": 0,
-		"explanation": "Product models define catalog products; install base items represent deployed instances of those products at customer locations and reference the product model.",
+		"correctIndex": 2,
+		"explanation": "Product models define catalog products; install base items represent deployed instances of those products at customer locations and reference the product model. Configure product data before setting up the install base.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/customer-service-management/c_OnScreenAlerts.html"
+			"https://www.servicenow.com/docs/r/customer-service-management/configure-install-base.html",
+			"https://www.servicenow.com/docs/r/customer-service-management/configure-csm-products.html"
 		],
 		"domain": "CSM Foundational Data Model"
 	},
@@ -1681,12 +1682,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"domain": "CSM Foundational Data Model",
 		"prompt": "A field team tracks routers deployed at customer datacenters with serial numbers and site locations, while the e-commerce team tracks units purchased through the web store. Which record type should each team use?",
 		"choices": [
+			"Case type configuration fields that store serial numbers instead of product instance records",
 			"Install base items for deployed datacenter assets and sold products for online purchase instances",
 			"Product models alone because catalog definitions capture serial numbers for every deployment",
-			"alm_asset records without linking deployed instances to cases or entitlements",
-			"Case type configuration fields that store serial numbers instead of product instance records"
+			"alm_asset records without linking deployed instances to cases or entitlements"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"explanation": "Install base items represent deployed product instances at customer locations; sold products represent customer-owned instances from purchases, often in B2C or transactional scenarios.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/customer-service-management/install-base-item.html"
@@ -1720,12 +1721,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 8,
 		"prompt": "An agent needs warranty context when troubleshooting a failed device at a customer site. Which related record on the case provides the deployed product definition?",
 		"choices": [
-			"The install base item linked to the case",
 			"The inbound email flow that created the case from the support alias",
 			"The matching rule used by the assignment workbench for recommendations",
-			"The MFA property that governs portal login for external users"
+			"The MFA property that governs portal login for external users",
+			"The install base item linked to the case"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Linking an install base item to a case gives agents visibility into the specific deployed product instance, its location, and related entitlement coverage.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/customer-service-management/create-install-base-item.html"
@@ -1738,9 +1739,9 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "A sold product record is created after a customer completes an online purchase. How does it relate to the product model?",
 		"choices": [
 			"The sold product is a customer-specific instance that references the product model definition",
-			"The sold product is identical to a product model and uses the same table without extension",
 			"The sold product replaces the product model and deletes the catalog entry permanently",
-			"The sold product stores only contract PDF attachments with no catalog relationship"
+			"The sold product stores only contract PDF attachments with no catalog relationship",
+			"The sold product is identical to a product model and uses the same table without extension"
 		],
 		"correctIndex": 0,
 		"explanation": "Sold products represent items purchased by a customer and reference the underlying product model that defines the product in the CSM catalog structure.",
@@ -1755,9 +1756,9 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "Support leadership wants contracted response times enforced when agents work cases. Which record type stores the customer's agreed service coverage?",
 		"choices": [
 			"Contract linked to the account with defined support terms",
-			"Matching rule that ranks agents by availability in the workbench",
+			"Page template for centered chat interactions in the workspace",
 			"Form action that exposes a UI action on the case record page",
-			"Page template for centered chat interactions in the workspace"
+			"Matching rule that ranks agents by availability in the workbench"
 		],
 		"correctIndex": 0,
 		"explanation": "Contracts capture commercial support agreements for accounts; entitlements derived from contracts define eligibility and service levels applied during case handling.",
@@ -1772,12 +1773,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"domain": "CSM Foundational Data Model",
 		"prompt": "A global customer invoices support usage across three regional subsidiaries that roll up to one parent organization. Which CSM structure lets agents view cases and assets across the corporate family?",
 		"choices": [
-			"Parent and child accounts linked in an account hierarchy",
 			"Contact relationships that merge all subsidiaries into one shared contact record",
-			"Sold products that automatically inherit the parent assignment group on every case",
-			"Account relationships with a reseller type linking subsidiaries without consolidated hierarchy visibility"
+			"Parent and child accounts linked in an account hierarchy",
+			"Account relationships with a reseller type linking subsidiaries without consolidated hierarchy visibility",
+			"Sold products that automatically inherit the parent assignment group on every case"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"explanation": "Account hierarchies model parent and child customer organizations so consolidated visibility and support context span related business entities.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/customer-service-management/configure-csm-entitlements.html"
@@ -1788,12 +1789,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 12,
 		"prompt": "A case is opened for a product that is no longer covered under the customer's active agreement. Which CSM capability helps agents verify support eligibility before committing to SLAs?",
 		"choices": [
-			"Entitlement associated with the account, product, or install base on the case",
-			"Special handling note configured only on the agent's personal dashboard",
 			"Consumer-to-consumer relationship between two unrelated household members",
+			"Special handling note configured only on the agent's personal dashboard",
+			"Entitlement associated with the account, product, or install base on the case",
 			"Inbound email flow that bypasses entitlement checks for all reply messages"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Entitlements tied to customer agreements and product coverage allow agents to confirm whether the reported issue qualifies for contracted support.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/customer-service-management/configure-csm-entitlements.html"
@@ -1803,19 +1804,20 @@ export const DEV_PRACTICE_QUESTIONS = [
 	{
 		"trackCode": "CIS-CSM",
 		"order": 13,
-		"domain": "CSM Foundational Data Model",
 		"prompt": "A support manager must decide whether to associate a returned laptop with the customer's deployed fleet versus a one-time online purchase record. Which guidance distinguishes the correct product instance record?",
 		"choices": [
-			"Use an install base item when tracking a deployed asset at a customer location and a sold product when referencing a purchased instance from a transaction",
-			"Use a product model for both scenarios because catalog definitions replace instance tracking entirely",
 			"Use a case type configuration record whenever serial numbers appear on inbound email cases",
-			"Use an assignment rule record to store warranty dates instead of any product instance table"
+			"Use an assignment rule record to store warranty dates instead of any product instance table",
+			"Use a product model for both scenarios because catalog definitions replace instance tracking entirely",
+			"Use an install base item when tracking a deployed asset at a customer location and a sold product when referencing a purchased instance from a transaction"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Install base items track deployed assets at customer sites; sold products track purchased instances—choosing the correct record keeps entitlement and case context accurate.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/customer-service-management/cce-modify-entitlement.html"
-		]
+			"https://www.servicenow.com/docs/r/customer-service-management/install-base-item.html",
+			"https://www.servicenow.com/docs/r/customer-service-management/sold-product.html"
+		],
+		"domain": "CSM Foundational Data Model"
 	},
 	{
 		"trackCode": "CIS-CSM",
@@ -1823,9 +1825,9 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "During case creation, an agent selects an account with multiple active entitlements for the same product line. What should determine which entitlement applies?",
 		"choices": [
 			"The entitlement rules and coverage linked to the case product, install base, or contract context",
-			"The alphabetical sort order of entitlement numbers in the related list view",
+			"The default MFA bypass count configured for portal authentication",
 			"The agent's personal skill profile configured in Advanced Work Assignment",
-			"The default MFA bypass count configured for portal authentication"
+			"The alphabetical sort order of entitlement numbers in the related list view"
 		],
 		"correctIndex": 0,
 		"explanation": "Entitlement applicability depends on configured coverage relationships to accounts, contracts, and product instances rather than arbitrary list ordering or agent preferences.",
@@ -1839,12 +1841,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 15,
 		"prompt": "A retailer wants to support both corporate clients with dedicated account teams and individual shoppers who buy online. Which CSM configuration approach aligns with this strategy?",
 		"choices": [
-			"Enable B2B for accounts and contacts alongside B2C for consumers",
 			"Restrict the instance to B2C only and disable all account records",
-			"Use B2B exclusively and treat every shopper as an internal agent",
-			"Deploy B2C only and map corporate clients to assignment group records"
+			"Deploy B2C only and map corporate clients to assignment group records",
+			"Enable B2B for accounts and contacts alongside B2C for consumers",
+			"Use B2B exclusively and treat every shopper as an internal agent"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "CSM supports simultaneous B2B and B2C business models, using accounts and contacts for business customers and consumers for individual end customers.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/customer-service-management/r_RolesInstalledWithCustomerService.html"
@@ -1858,8 +1860,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "Legal counsel must receive case notifications for a regulated account without becoming account team members or assignees. Which configuration adds these stakeholders?",
 		"choices": [
 			"Related party configuration for designated stakeholder roles on cases",
-			"Inbound email flow that forwards every case update to all instance users",
 			"Entitlement modification that adds counsel as entitlement administrators",
+			"Inbound email flow that forwards every case update to all instance users",
 			"Household member relationship linking counsel to the consumer portal login"
 		],
 		"correctIndex": 0,
@@ -1873,15 +1875,16 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 17,
 		"prompt": "Two customer accounts have a reseller relationship rather than a parent-child hierarchy. Which table defines this type of association?",
 		"choices": [
-			"Request parent mapping entry for ITSM integration on cases",
 			"Account relationship with a configured relationship type",
+			"Contact relationship that converts both accounts into one consumer",
 			"Household member relationship used only in B2C deployments",
-			"Contact relationship that converts both accounts into one consumer"
+			"Request parent mapping entry for ITSM integration on cases"
 		],
-		"correctIndex": 1,
+		"correctIndex": 0,
 		"explanation": "Account relationships and account relationship types model non-hierarchical links between accounts such as reseller, partner, or other defined business relationships.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/customer-service-management/r_RolesInstalledWithCustomerService.html"
+			"https://www.servicenow.com/docs/r/customer-service-management/t_CreateAcctRelationshipRecord.html",
+			"https://www.servicenow.com/docs/r/customer-service-management/user-management.html"
 		],
 		"domain": "CSM Foundational Data Model"
 	},
@@ -1890,12 +1893,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 18,
 		"prompt": "A strategic account needs a dedicated service manager and technical advisor visible on every case. Which CSM feature assigns these internal stakeholders to the customer?",
 		"choices": [
-			"Account team members associated with the account record",
-			"Inbound email flow conditions that CC the stakeholders on every reply",
 			"Mandatory skills on the matching rule used by the assignment workbench",
-			"Multi-factor authentication roles assigned to external portal users"
+			"Multi-factor authentication roles assigned to external portal users",
+			"Account team members associated with the account record",
+			"Inbound email flow conditions that CC the stakeholders on every reply"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Account teams associate internal or partner users with an account so agents and customers have defined stakeholders for support and escalation.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/customer-service-management/r_RolesInstalledWithCustomerService.html"
@@ -1907,15 +1910,16 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 19,
 		"prompt": "In a B2C deployment, related consumers share a household subscription plan. Which relationship type groups those consumers?",
 		"choices": [
+			"Sold product record that replaces the need for consumer identity",
 			"Household member relationship linking consumers in the same household",
 			"Account relationship that treats each consumer as a child account",
-			"Contact relationship between two business account employee records",
-			"Sold product record that replaces the need for consumer identity"
+			"Contact relationship between two business account employee records"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"explanation": "Household member relationships group individual consumers in B2C scenarios so shared services and cases can reflect the household context.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/customer-service-management/r_RolesInstalledWithCustomerService.html"
+			"https://www.servicenow.com/docs/r/customer-service-management/configure-households.html",
+			"https://www.servicenow.com/docs/r/customer-service-management/add-consumer-to-household.html"
 		],
 		"domain": "CSM Foundational Data Model"
 	},
@@ -1924,12 +1928,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 20,
 		"prompt": "A read-only analyst must view customer contracts and install base data without editing cases. Which role provides that access?",
 		"choices": [
-			"Customer data viewer role with read-only access to customer entities",
 			"Consumer role for individual end customers who purchased retail products",
 			"Document template admin role that manages PDF templates for case types",
-			"Agent workspace user role that accepts messaging channel conversations"
+			"Agent workspace user role that accepts messaging channel conversations",
+			"Customer data viewer role with read-only access to customer entities"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "The customer data viewer role grants read-only access to customer data entities including accounts, contacts, install base items, contracts, entitlements, and sold products.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/customer-service-management/r_RolesInstalledWithCustomerService.html"
@@ -1942,9 +1946,9 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "A B2B account also sells to individual end users who need portal access under that account. Which record links a consumer to the business account?",
 		"choices": [
 			"Account consumer association on the account consumer table",
-			"Product model extension that stores consumer login credentials",
 			"Contact relationship that converts the consumer into a contact employee",
-			"Matching rule that routes the consumer's cases to the account manager"
+			"Matching rule that routes the consumer's cases to the account manager",
+			"Product model extension that stores consumer login credentials"
 		],
 		"correctIndex": 0,
 		"explanation": "Account consumer records associate individual consumers with a business account so they can access account-scoped data such as install base and sold product information.",
@@ -1959,12 +1963,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"domain": "CSM Foundational Data Model",
 		"prompt": "An account renews premium support with a four-hour response commitment for database products only. Which configuration defines that selective SLA coverage for agents during case handling?",
 		"choices": [
-			"An entitlement linked to the contract specifying covered product lines and response commitments",
 			"A matching rule that ranks agents alphabetically regardless of product expertise",
-			"A portal theme that changes banner colors when database cases are opened",
-			"A household relationship that merges every contact into one consumer record"
+			"An entitlement linked to the contract specifying covered product lines and response commitments",
+			"A household relationship that merges every contact into one consumer record",
+			"A portal theme that changes banner colors when database cases are opened"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"explanation": "Entitlements derived from contracts define support levels, eligible products, and response commitments that agents rely on when working cases.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/customer-service-management/r_RolesInstalledWithCustomerService.html"
@@ -1973,7 +1977,6 @@ export const DEV_PRACTICE_QUESTIONS = [
 	{
 		"trackCode": "CIS-CSM",
 		"order": 23,
-		"domain": "CSM Foundational Data Model",
 		"prompt": "Agents must see a warning when opening cases for a VIP account with non-standard handling instructions. Which application surfaces notes from related account records on the case?",
 		"choices": [
 			"Special handling notes configured to display from related account records",
@@ -1984,20 +1987,22 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 0,
 		"explanation": "Special handling notes can be configured on entity tables and set to display alerts from related records such as the account or product associated with a case.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/customer-service-management/c_OnScreenAlerts.html"
-		]
+			"https://www.servicenow.com/docs/r/customer-service-management/configure-special-handling-notes.html",
+			"https://www.servicenow.com/docs/r/customer-service-management/manage-special-handling-notes.html"
+		],
+		"domain": "CSM Foundational Data Model"
 	},
 	{
 		"trackCode": "CIS-CSM",
 		"order": 24,
 		"prompt": "A new CSM implementation team is preparing the instance before agents handle live cases. What should they configure first to establish core customer data?",
 		"choices": [
-			"Accounts, contacts or consumers, and product catalog structures including product models",
 			"Advanced Work Assignment queues before any customer or product records exist",
 			"Incident integration roles before defining case types or customer entities",
-			"Playbook process pages before loading accounts or entitlements into the instance"
+			"Playbook process pages before loading accounts or entitlements into the instance",
+			"Accounts, contacts or consumers, and product catalog structures including product models"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Foundational CSM setup begins with customer entities and product catalog data so cases, entitlements, and channels can reference accounts, contacts or consumers, and products.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/customer-service-management/set-up-post-sales-support.html"
@@ -2010,9 +2015,9 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "Operations wants separate workflows for product support, billing disputes, and new customer onboarding. Which CSM artifact defines each distinct workflow?",
 		"choices": [
 			"A case type with its own table extending the base Case table",
-			"A sold product record that stores the workflow diagram as an attachment",
 			"A product model variant that replaces the case state field entirely",
-			"An account relationship type that auto-closes cases after seven days"
+			"An account relationship type that auto-closes cases after seven days",
+			"A sold product record that stores the workflow diagram as an attachment"
 		],
 		"correctIndex": 0,
 		"explanation": "Case types extend the Case table to provide specialized fields, states, and experiences such as product support, onboarding, or billing workflows.",
@@ -2026,12 +2031,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 26,
 		"prompt": "An administrator creates a custom onboarding workflow with unique fields and states. Which requirement must the new case type table meet?",
 		"choices": [
-			"It must extend the Case [sn_customerservice_case] table",
 			"It must extend the Incident [incident] table instead of the case table",
-			"It must replace the sn_customerservice_case table and delete base cases",
-			"It must be stored only in a scoped app with no table extension allowed"
+			"It must extend the Case [sn_customerservice_case] table",
+			"It must be stored only in a scoped app with no table extension allowed",
+			"It must replace the sn_customerservice_case table and delete base cases"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"explanation": "CSM case types are implemented as tables that extend sn_customerservice_case so they inherit core case behavior while adding type-specific configuration.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/customer-service-management/configure-csm-case-types.html"
@@ -2043,12 +2048,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 27,
 		"prompt": "Agents must generate standardized PDF letters from certain case types. Which role can create and maintain the document templates used by those case types?",
 		"choices": [
-			"Document template admin role for CSM document template tables",
-			"Case type configuration viewer role with read-only access to case schemas",
 			"Major issue manager role for coordinating enterprise outage communications",
+			"Case type configuration viewer role with read-only access to case schemas",
+			"Document template admin role for CSM document template tables",
 			"Incident read role for viewing ITSM records linked from customer cases"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "The document template admin role allows creating, updating, and deleting records in document template tables used by CSM case type configurations.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/customer-service-management/r_RolesInstalledWithCustomerService.html"
@@ -2060,12 +2065,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 28,
 		"prompt": "When an agent creates an onboarding case in CSM Configurable Workspace, where does the onboarding playbook appear?",
 		"choices": [
-			"On the Playbook tab of the case record in the workspace",
-			"Only in the Customer Service Portal after the consumer submits a form",
 			"In the inbound email flow log before the case number is generated",
-			"On the entitlement form as a related list of approval activities"
+			"On the entitlement form as a related list of approval activities",
+			"Only in the Customer Service Portal after the consumer submits a form",
+			"On the Playbook tab of the case record in the workspace"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "The Case Playbook for Onboarding appears on the Playbook tab when agents work onboarding cases in CSM Configurable Workspace or CSM Agent Workspace.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/customer-service-management/csm-case-type-onboarding.html"
@@ -2078,9 +2083,9 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "During the initiate stage of the onboarding playbook, what information does the first activity collect from the agent?",
 		"choices": [
 			"Channel, account, contact or consumer, product, and service details",
-			"Incident priority, impact, and urgency for ITSM escalation only",
+			"MFA bypass count and one-time code validity for portal users",
 			"Assignment group queue capacity and AWA agent availability scores",
-			"MFA bypass count and one-time code validity for portal users"
+			"Incident priority, impact, and urgency for ITSM escalation only"
 		],
 		"correctIndex": 0,
 		"explanation": "The onboarding playbook's first activity gathers customer context including channel, account, contact or consumer, product, and service to start the onboarding process.",
@@ -2095,8 +2100,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "Support emails arrive at a dedicated mailbox and should create or update cases without custom inbound scripts. Which CSM capability handles this?",
 		"choices": [
 			"Inbound email flows such as Create Case from Email and Update Case via Reply",
-			"Account relationship rules that convert each email into a consumer record",
 			"Special handling notes that parse MIME attachments into case tasks",
+			"Account relationship rules that convert each email into a consumer record",
 			"Matching rules that assign the sender's email domain to a product model"
 		],
 		"correctIndex": 0,
@@ -2111,12 +2116,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 31,
 		"prompt": "Security requires portal users to verify identity with a second factor after password login. Which external roles should be added to multi-factor authentication criteria?",
 		"choices": [
-			"sn_incident_read and sn_incident_write",
 			"sn_customerservice.customer and sn_customerservice.consumer",
+			"sn_customerservice.agent and sn_customerservice.manager",
 			"sn_csm_doctemplate.admin and workspace_admin",
-			"sn_customerservice.agent and sn_customerservice.manager"
+			"sn_incident_read and sn_incident_write"
 		],
-		"correctIndex": 1,
+		"correctIndex": 0,
 		"explanation": "MFA for Customer and Consumer Service Portals applies to external customer and consumer roles configured in multi-factor authentication role criteria.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/customer-service-management/customer-self-service-and-omnichannel-engagement/configure-csm-multifactor-auth.html"
@@ -2128,12 +2133,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 32,
 		"prompt": "Consumers want to start a messaging conversation that agents accept from the Agent Workspace Inbox. Which integration enables WhatsApp chat in CSM?",
 		"choices": [
-			"Conversational Integration with WhatsApp powered by Twilio",
-			"Inbound email flow named Update Case via Reply for MIME attachments",
 			"Request parent mapping entry on the sn_customerservice_case table",
-			"Customer data viewer role assigned to every WhatsApp phone number"
+			"Customer data viewer role assigned to every WhatsApp phone number",
+			"Conversational Integration with WhatsApp powered by Twilio",
+			"Inbound email flow named Update Case via Reply for MIME attachments"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "The Conversational Integration with WhatsApp application lets contacts and consumers chat with virtual or live agents and allows agents to accept conversations through the WhatsApp service channel.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/customer-service-management/messg-integrate-whatsapp-csm.html"
@@ -2145,12 +2150,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 33,
 		"prompt": "Agents handle outbound and inbound phone calls and need customer history visible during the call. Which workspace template supports this experience?",
 		"choices": [
+			"Document template admin form for generating call transcripts as PDF files",
 			"CSM voice interaction record page template for phone interaction management",
 			"CSM centered chat interaction template used exclusively for email cases",
-			"Onboarding playbook process page variant for entitlement renewals only",
-			"Document template admin form for generating call transcripts as PDF files"
+			"Onboarding playbook process page variant for entitlement renewals only"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"explanation": "CSM interaction page templates include a voice interaction record template that helps agents manage phone calls and view contextual customer information during the interaction.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/customer-service-management/csm-config-workspace-page-templates.html"
@@ -2179,12 +2184,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 35,
 		"prompt": "Supervisors want recommended agents displayed before manually assigning complex cases. Which configuration powers the assignment workbench recommendations?",
 		"choices": [
-			"A household relationship that maps consumers to assignment groups",
 			"A matching rule based on the Selection criteria matching type",
+			"A product model attribute that ranks agents by catalog category ownership",
 			"An entitlement field that auto-assigns cases to the contract author",
-			"A product model attribute that ranks agents by catalog category ownership"
+			"A household relationship that maps consumers to assignment groups"
 		],
-		"correctIndex": 1,
+		"correctIndex": 0,
 		"explanation": "Assignment workbench configurations are stored in matching rules using the Selection criteria type, such as the default Recommendation for Case Assignment rule.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/customer-service-management/case-assignment-matching-rules.html"
@@ -2196,12 +2201,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 36,
 		"prompt": "Cases that meet specific product and priority conditions should auto-assign when still unassigned. Which record performs that automatic assignment?",
 		"choices": [
-			"Assignment rule linked to a matching rule for the case conditions",
-			"Sold product record that stores the assignee on the product model form",
 			"Contact relationship that copies the contact's manager to every new case",
-			"Inbound email flow action that sets the assigned_to field on incidents only"
+			"Inbound email flow action that sets the assigned_to field on incidents only",
+			"Assignment rule linked to a matching rule for the case conditions",
+			"Sold product record that stores the assignee on the product model form"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Assignment rules route tasks to users or groups when matching rule conditions are met, but only if the case is not already assigned.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/customer-service-management/c_CaseRouting.html"
@@ -2214,12 +2219,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"domain": "CSM Configuration",
 		"prompt": "The assignment workbench keeps recommending the same two agents even though others are available and under their channel capacity limits. Which matching criterion should the administrator increase to spread work more evenly?",
 		"choices": [
+			"Portal login count for external contacts submitting cases after business hours",
 			"Assigned Cases so agents with fewer open assignments score higher in recommendations",
 			"Case Priority Score because it replaces availability and skill checks entirely",
-			"Contract renewal date matched against agent calendar entries for every case",
-			"Portal login count for external contacts submitting cases after business hours"
+			"Contract renewal date matched against agent calendar entries for every case"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"explanation": "The Assigned Cases criterion influences recommendations based on current workload; tuning it helps prevent the same agents from being selected when others have capacity.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/customer-service-management/case-assignment-matching-rules.html"
@@ -2248,12 +2253,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"domain": "CSM Configuration",
 		"prompt": "An agent is eligible for chat, phone, and case channels but should not exceed concurrent work limits on any channel. Which Advanced Work Assignment control governs acceptance across these omnichannel sources?",
 		"choices": [
-			"Per-channel agent capacity limits on the configured service channels",
 			"A single global case number sequence that pauses assignment during peak hours",
 			"Portal widget visibility settings that hide chat from external consumers only",
-			"Knowledge article ownership groups that restrict who can publish FAQ content"
+			"Knowledge article ownership groups that restrict who can publish FAQ content",
+			"Per-channel agent capacity limits on the configured service channels"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Service channel capacity limits define how many concurrent interactions an agent can handle per channel, balancing omnichannel workload without overloading individual agents.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/customer-service-management/c_CaseRouting.html"
@@ -2264,12 +2269,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 40,
 		"prompt": "Agents working product support cases need guided activities for triage, research, and resolution. Where do they access the product support playbook?",
 		"choices": [
-			"On the Playbook tab of the case record in CSM workspace",
 			"Guided decisions on the workspace case form for context-aware recommendations",
-			"Case tasks on the related list configured as manual triage steps for product support",
-			"A Flow Designer subflow launched from a UI action without the playbook experience"
+			"On the Playbook tab of the case record in CSM workspace",
+			"A Flow Designer subflow launched from a UI action without the playbook experience",
+			"Case tasks on the related list configured as manual triage steps for product support"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"explanation": "Case playbooks such as product support appear on the Playbook tab in CSM workspaces, guiding agents through structured activities on the case record.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/customer-service-management/csm-playbook-product-support.html"
@@ -2281,12 +2286,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 41,
 		"prompt": "Partner administrators cannot assign the customer case manager role to contacts in the portal. Which property must be updated to expose that role?",
 		"choices": [
-			"sn_customerservice.contact_role_assignment on Customer Service > Administration > Properties",
-			"glide.authenticate.multifactor on Multi-factor Authentication > Properties",
 			"request_parent_mapping on the Request Management configuration module",
+			"glide.authenticate.multifactor on Multi-factor Authentication > Properties",
+			"sn_customerservice.contact_role_assignment on Customer Service > Administration > Properties",
 			"sn_shn.admin on the Special Handling Notes application menu"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "The customer case manager role is not included by default in sn_customerservice.contact_role_assignment; administrators add it under Customer Service > Administration > Properties.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/customer-service-management/r_RolesInstalledWithCustomerService.html"
@@ -2298,12 +2303,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 42,
 		"prompt": "A UI action must appear as a button on case records in CSM Configurable Workspace. What must exist for each UI action?",
 		"choices": [
-			"A corresponding form action linked to the UI action",
-			"A UI policy that exposes the button on classic case forms without workspace integration",
 			"A workspace declarative action defined without the required linked form action",
-			"A display business rule that runs client logic without a workspace form action mapping"
+			"A display business rule that runs client logic without a workspace form action mapping",
+			"A UI policy that exposes the button on classic case forms without workspace integration",
+			"A corresponding form action linked to the UI action"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "CSM Configurable Workspace requires a form action for each UI action so the action can render and execute in the UI Builder-based workspace experience.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/customer-service-management/config-csm-config-ws-form-action.html"
@@ -2317,14 +2322,14 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "When CSM is integrated with Incident Management, which two events synchronize information to the case work notes? (Choose two.)",
 		"choices": [
 			"Incident state changes",
-			"Resolution notes when the incident is resolved or closed",
+			"Deletion of the related account record from the CMDB",
 			"Creation of a new product model from the incident form",
-			"Deletion of the related account record from the CMDB"
+			"Resolution notes when the incident is resolved or closed"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			1
+			3
 		],
 		"explanation": "Work notes sync from the incident to the case when incident state changes and when the incident is resolved or closed with resolution notes; additional comments also sync but product models and account deletion are unrelated.",
 		"sourceUrls": [
@@ -2337,12 +2342,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 44,
 		"prompt": "Agents must create a service catalog request from a case and keep the requester informed through case work notes. Which plugin enables this CSM-ITSM bridge?",
 		"choices": [
-			"Customer Service with Request Management (com.sn_cs_sm_request)",
 			"Customer Service with Service Management (com.sn_cs_sm) for incidents only",
-			"Special Handling Notes application with no Request Management dependency",
-			"Customer Service Base Entities plugin without service catalog integration"
+			"Customer Service Base Entities plugin without service catalog integration",
+			"Customer Service with Request Management (com.sn_cs_sm_request)",
+			"Special Handling Notes application with no Request Management dependency"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "CSM integration with Request Management requires the com.sn_cs_sm_request plugin so agents can create or associate requests from cases and synchronize fulfiller comments to case work notes.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/customer-service-management/csm-integration-sm-request.html"
@@ -2355,14 +2360,14 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "A CSM team wants cases automatically routed to the correct agent group based on the case product and priority without manual triage. Which configuration should the implementer use?",
 		"choices": [
 			"Advanced work assignment with service channels and assignment eligibility conditions",
-			"A default assignment group on the case type without AWA matching or capacity rules",
 			"Assignment rules that route by product category without service channels or agent capacity limits",
+			"A default assignment group on the case type without AWA matching or capacity rules",
 			"Matching rules on the workbench only, with supervisors manually assigning every case afterward"
 		],
 		"correctIndex": 0,
 		"explanation": "Advanced Work Assignment (AWA) uses service channels, assignment rules, and eligibility conditions to push work to agents automatically based on capacity, skills, and matching conditions such as product and priority.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/customer-service-management/advanced-work-assignment-for-csm.html"
+			"https://www.servicenow.com/docs/r/customer-service-management/configure-advanced-work-assignment-route-email-interactions.html"
 		],
 		"domain": "CSM Configuration"
 	},
@@ -2371,15 +2376,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 46,
 		"prompt": "How does Advanced Work Assignment prevent an agent from being overloaded when distributing customer cases?",
 		"choices": [
-			"It uses matching rules without per-channel capacity, balancing only by open case count",
 			"It respects the agent capacity limits defined for each configured service channel",
+			"It raises channel capacity limits so every item assigns immediately regardless of agent load",
 			"It routes all inbound sources to one static group bypassing eligibility and capacity checks",
-			"It raises channel capacity limits so every item assigns immediately regardless of agent load"
+			"It uses matching rules without per-channel capacity, balancing only by open case count"
 		],
-		"correctIndex": 1,
+		"correctIndex": 0,
 		"explanation": "AWA balances load by honoring per-channel capacity limits so agents are not assigned more concurrent work than their configured capacity allows.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/customer-service-management/advanced-work-assignment-for-csm.html"
+			"https://www.servicenow.com/docs/r/customer-service-management/configure-advanced-work-assignment-route-email-interactions.html"
 		],
 		"domain": "CSM Configuration"
 	},
@@ -2389,14 +2394,14 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "A customer service manager needs cases created from inbound email, phone, chat, and the portal to all funnel into one prioritized queue. Which construct groups these inbound sources for assignment?",
 		"choices": [
 			"Service channels that categorize each source of incoming customer work for routing",
-			"Notification email templates that only format outbound acknowledgement messages to customers",
+			"UI policies that hide or show related lists on the case form based on state",
 			"Data policies that make individual case form fields mandatory during record insertion",
-			"UI policies that hide or show related lists on the case form based on state"
+			"Notification email templates that only format outbound acknowledgement messages to customers"
 		],
 		"correctIndex": 0,
 		"explanation": "Service channels represent the different sources of work (chat, email, phone, case, messaging) and let Advanced Work Assignment route each source into queues consistently.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/customer-service-management/service-channels-for-csm.html"
+			"https://www.servicenow.com/docs/r/customer-service-management/view-service-channel-configured-email-interaction.html"
 		],
 		"domain": "CSM Configuration"
 	},
@@ -2405,15 +2410,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 48,
 		"prompt": "During implementation the team must decide how work is pulled or pushed to agents in a queue. What does an assignment method on a queue control in Advanced Work Assignment?",
 		"choices": [
-			"Whether items are automatically pushed to agents or agents pull the next available item",
 			"The maximum queue depth before new work items wait in the channel backlog",
-			"Which agent skill profiles are evaluated when eligibility conditions run on the queue",
-			"The overflow routing order when no eligible agent is available in the primary queue"
+			"The overflow routing order when no eligible agent is available in the primary queue",
+			"Whether items are automatically pushed to agents or agents pull the next available item",
+			"Which agent skill profiles are evaluated when eligibility conditions run on the queue"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "A queue's assignment method determines whether AWA pushes items directly to eligible agents or lets agents pull the next item, shaping how work reaches the team.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/customer-service-management/awa-queues-for-csm.html"
+			"https://www.servicenow.com/docs/r/customer-service-management/config-awa-queue-for-proxy-contact.html"
 		],
 		"domain": "CSM Configuration"
 	},
@@ -2423,14 +2428,14 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "An implementer wants agents to only receive chat and case work they are qualified to handle. Which mechanism links required competencies to the agent for eligibility matching?",
 		"choices": [
 			"Skills and skill determination rules evaluated against the work item during assignment",
-			"A static welcome message displayed once when the agent first signs into the workspace",
 			"The account hierarchy relationship maintained between parent and child customer accounts",
+			"A static welcome message displayed once when the agent first signs into the workspace",
 			"The knowledge base ownership group assigned to published customer-facing articles only"
 		],
 		"correctIndex": 0,
 		"explanation": "Skill-based routing uses skills and skill determination rules so AWA assigns items only to agents who hold the competencies the work requires.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/customer-service-management/skill-based-routing-for-csm.html"
+			"https://www.servicenow.com/docs/r/customer-service-management/configure-mandatory-skills-feature.html"
 		],
 		"domain": "CSM Configuration"
 	},
@@ -2439,15 +2444,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 50,
 		"prompt": "A B2B organization supports businesses, while a B2C organization supports individuals. Which CSM case type distinction should the implementer configure to reflect these engagement models?",
 		"choices": [
-			"Business-to-business cases tied to accounts and business-to-consumer cases tied to consumers",
-			"A single generic case type that ignores whether the customer is a company or an individual",
 			"Change request records reused directly as the only customer-facing case type in the portal",
-			"Problem tasks repurposed to represent every customer interaction across all support channels"
+			"Problem tasks repurposed to represent every customer interaction across all support channels",
+			"Business-to-business cases tied to accounts and business-to-consumer cases tied to consumers",
+			"A single generic case type that ignores whether the customer is a company or an individual"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "CSM supports B2B models where cases relate to accounts and contacts, and B2C models where cases relate to consumers, so case type configuration must reflect the supported engagement model.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/customer-service-management/customer-service-management-data-model.html"
+			"https://www.servicenow.com/docs/r/customer-service-management/activate-customer-data-models-b2b2c.html"
 		],
 		"domain": "CSM Configuration"
 	},
@@ -2456,15 +2461,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 51,
 		"prompt": "An implementer needs the phone channel to create cases and capture caller context automatically when an agent answers. Which CSM capability supports this telephony intake?",
 		"choices": [
+			"A data lookup rule that sets priority solely from the case short description keywords",
 			"Customer Service Management integration with a computer telephony integration for the phone channel",
 			"A scheduled import set that only loads historical call detail records once every night",
-			"A catalog client script that validates variable input on unrelated hardware request items",
-			"A data lookup rule that sets priority solely from the case short description keywords"
+			"A catalog client script that validates variable input on unrelated hardware request items"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"explanation": "CTI/OpenFrame integrations connect the phone channel to CSM so inbound calls surface caller identity and can generate or link cases with context during the interaction.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/customer-service-management/openframe-for-csm.html"
+			"https://www.servicenow.com/docs/r/customer-service-management/c_OpenFrameOverview.html"
 		],
 		"domain": "CSM Configuration"
 	},
@@ -2481,7 +2486,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 0,
 		"explanation": "Targeted communications let CSM teams define recipient audiences and send proactive, campaign-style outbound messages such as maintenance or outage notices to affected customers.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/customer-service-management/targeted-communications-for-csm.html"
+			"https://www.servicenow.com/docs/r/customer-service-management/c_TargetedCommunications.html"
 		],
 		"domain": "CSM Configuration"
 	},
@@ -2491,19 +2496,19 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"questionType": "multi",
 		"prompt": "Which two elements does a targeted communication in CSM require the implementer to define before it can be sent? (Choose two.)",
 		"choices": [
-			"The audience or recipient list that determines who receives the communication",
 			"The message content or template delivered to the selected recipients",
 			"A mandatory change advisory board approval recorded on every outbound customer message",
-			"A discovery schedule that scans customer devices before any communication is released"
+			"A discovery schedule that scans customer devices before any communication is released",
+			"The audience or recipient list that determines who receives the communication"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			1
+			3
 		],
 		"explanation": "Targeted communications need a defined audience (recipients) and message content or template; they do not require CAB approval or discovery schedules.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/customer-service-management/targeted-communications-for-csm.html"
+			"https://www.servicenow.com/docs/r/customer-service-management/c_TargetedCommunications.html"
 		],
 		"domain": "CSM Configuration"
 	},
@@ -2513,14 +2518,14 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "A support contract promises resolution of high-priority cases within four business hours. Which CSM configuration tracks and enforces that commitment on each qualifying case?",
 		"choices": [
 			"Service level agreements with definitions and schedules attached to qualifying cases",
-			"A survey trigger that sends a satisfaction questionnaire after the case is resolved",
 			"A read-only annotation field that agents optionally fill in with a target date manually",
-			"The account contact directory listing every individual who can open a customer case"
+			"The account contact directory listing every individual who can open a customer case",
+			"A survey trigger that sends a satisfaction questionnaire after the case is resolved"
 		],
 		"correctIndex": 0,
 		"explanation": "SLA definitions with conditions and schedules measure elapsed time against commitments, driving timers, breaches, and escalations for qualifying customer cases.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/customer-service-management/service-level-agreements-for-csm.html"
+			"https://www.servicenow.com/docs/r/customer-service-management/t_DefineSLAForCustServiceCase.html"
 		],
 		"domain": "CSM Configuration"
 	},
@@ -2529,15 +2534,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 55,
 		"prompt": "Some enterprise customers require agents to follow account-specific handling rules, such as never contacting the customer by phone after hours. Which CSM feature surfaces these instructions to agents on the case?",
 		"choices": [
-			"Special handling notes that display account or contact-specific guidance to agents",
 			"On-screen alerts on the account record displayed whenever any case is opened",
-			"Account team member descriptions stored in the account profile without conditional display rules",
-			"UI policy banner on the case form when priority equals critical for every account"
+			"Special handling notes that display account or contact-specific guidance to agents",
+			"UI policy banner on the case form when priority equals critical for every account",
+			"Account team member descriptions stored in the account profile without conditional display rules"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"explanation": "Special handling notes present account-, contact-, product-, or asset-specific instructions to agents at the right moment so they follow required customer handling rules.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/customer-service-management/special-handling-notes-for-csm.html"
+			"https://www.servicenow.com/docs/r/customer-service-management/configure-special-handling-notes.html"
 		],
 		"domain": "CSM Configuration"
 	},
@@ -2547,15 +2552,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"domain": "CSM Configuration",
 		"prompt": "Compliance requires a special handling note with contractual penalty language to be visible only to senior agents on the regulated account team, not every fulfiller. What should the administrator configure?",
 		"choices": [
-			"Note visibility and access restrictions so only authorized roles or groups can read the note",
-			"Default note visibility left open so every fulfiller role can read the guidance without restriction",
 			"Penalty terms stored in case work notes that any agent can edit during case handling",
+			"Default note visibility left open so every fulfiller role can read the guidance without restriction",
+			"Note visibility and access restrictions so only authorized roles or groups can read the note",
 			"Customer-facing knowledge article publishing the guidance without role-based access controls"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Special handling notes support visibility and access controls so sensitive account guidance is restricted to authorized agents rather than all fulfillers.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/customer-service-management/special-handling-notes-for-csm.html"
+			"https://www.servicenow.com/docs/r/customer-service-management/configure-special-handling-notes.html"
 		]
 	},
 	{
@@ -2563,15 +2568,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 57,
 		"prompt": "An implementer must ensure only certain agents can view sensitive special handling notes for a regulated account. What should govern this visibility?",
 		"choices": [
-			"Access controls and note visibility settings that restrict which users can read the note",
-			"Default visibility that exposes the note to all fulfiller roles without role restrictions",
 			"Encrypting the note body while still displaying it to every agent in the workspace",
-			"Adding the note text to targeted communications sent to all account contacts"
+			"Adding the note text to targeted communications sent to all account contacts",
+			"Default visibility that exposes the note to all fulfiller roles without role restrictions",
+			"Access controls and note visibility settings that restrict which users can read the note"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Visibility of special handling notes is controlled through access settings so only authorized agents see sensitive account guidance, keeping regulated information restricted.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/customer-service-management/special-handling-notes-for-csm.html"
+			"https://www.servicenow.com/docs/r/customer-service-management/configure-special-handling-notes.html"
 		],
 		"domain": "CSM Configuration"
 	},
@@ -2581,14 +2586,14 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "An agent opens a newly created customer case that has not yet been picked up. Which case state typically represents this starting point in the CSM case lifecycle?",
 		"choices": [
 			"New, indicating the case has been logged but work has not yet begun",
-			"Closed, indicating resolution was confirmed and the case is fully archived",
+			"Resolved, indicating a fix was applied and awaiting customer confirmation only",
 			"Cancelled, indicating the customer withdrew the request before any triage occurred",
-			"Resolved, indicating a fix was applied and awaiting customer confirmation only"
+			"Closed, indicating resolution was confirmed and the case is fully archived"
 		],
 		"correctIndex": 0,
 		"explanation": "The CSM case lifecycle generally begins in the New state when a case is logged, then progresses through open, in-progress, resolved, and closed states as work advances.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/customer-service-management/case-management-process.html"
+			"https://www.servicenow.com/docs/r/customer-service-management/configure-csm-case-management.html"
 		],
 		"domain": "Case Management"
 	},
@@ -2597,15 +2602,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 59,
 		"prompt": "A customer replies with the requested information after an agent moved a case to Awaiting Info. What is the appropriate lifecycle transition for the agent to make?",
 		"choices": [
-			"Return the case to an active in-progress state so work resumes on the response",
 			"Move the case directly to Resolved without reviewing the customer's submitted information",
-			"Leave the case in Awaiting Info and open a new case record for the customer reply",
-			"Escalate the case to management instead of returning it to active in-progress work"
+			"Return the case to an active in-progress state so work resumes on the response",
+			"Escalate the case to management instead of returning it to active in-progress work",
+			"Leave the case in Awaiting Info and open a new case record for the customer reply"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"explanation": "When a customer supplies the needed information, the agent moves the case out of the awaiting-info hold back into an active working state to continue resolution.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/customer-service-management/case-management-process.html"
+			"https://www.servicenow.com/docs/r/customer-service-management/configure-csm-case-management.html"
 		],
 		"domain": "Case Management"
 	},
@@ -2614,15 +2619,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 60,
 		"prompt": "Multiple customers report the same outage and each has opened a separate case. Which CSM capability lets an agent link these related cases to a single coordinated record for tracking?",
 		"choices": [
-			"Major issue management, which associates child cases to a major case for the incident",
-			"A parent change request created in the change management application for internal review",
 			"A knowledge base category that groups unrelated articles by product documentation area",
-			"A survey campaign that individually emails each affected customer a separate questionnaire"
+			"A survey campaign that individually emails each affected customer a separate questionnaire",
+			"A parent change request created in the change management application for internal review",
+			"Major issue management, which associates child cases to a major case for the incident"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Major issue management (MIM) lets agents create a major case and associate the affected customer cases as children, coordinating communication and resolution across all of them.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/customer-service-management/major-issue-management-for-csm.html"
+			"https://www.servicenow.com/docs/r/customer-service-management/major-issue-management-application.html"
 		],
 		"domain": "Case Management"
 	},
@@ -2632,14 +2637,14 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "After a major case is resolved in major issue management, what happens to the associated child cases as part of the coordinated workflow?",
 		"choices": [
 			"Resolution can be propagated to the child cases so affected customers are updated together",
-			"The child cases are permanently deleted from the instance without any customer notification",
+			"The child cases convert into change requests routed to the change advisory board for review",
 			"Each child case must be reopened manually and reassigned to an unrelated support queue",
-			"The child cases convert into change requests routed to the change advisory board for review"
+			"The child cases are permanently deleted from the instance without any customer notification"
 		],
 		"correctIndex": 0,
 		"explanation": "Major issue management propagates the major case resolution to its associated child cases, letting agents update all affected customers consistently once the underlying issue is fixed.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/customer-service-management/major-issue-management-for-csm.html"
+			"https://www.servicenow.com/docs/r/customer-service-management/major-issue-management-application.html"
 		],
 		"domain": "Case Management"
 	},
@@ -2648,15 +2653,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 62,
 		"prompt": "A high-value customer's case has stalled and exceeded the response commitment. Which CSM feature lets the customer or agent formally raise the case's urgency for management attention?",
 		"choices": [
-			"Case escalation, which records an escalation request and raises visibility for the case",
 			"Increasing the case priority field without recording a formal escalation request",
-			"Creating a major issue parent case for a single-customer response delay",
-			"Reassigning the case through AWA matching rules without an escalation workflow"
+			"Reassigning the case through AWA matching rules without an escalation workflow",
+			"Case escalation, which records an escalation request and raises visibility for the case",
+			"Creating a major issue parent case for a single-customer response delay"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Case escalations let customers or agents formally flag a case for heightened attention, capturing the reason and surfacing it to management for faster action.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/customer-service-management/case-escalation-for-csm.html"
+			"https://www.servicenow.com/docs/r/customer-service-management/case-escalation-components.html"
 		],
 		"domain": "Case Management"
 	},
@@ -2666,14 +2671,14 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "An agent needs to delegate part of a complex case to a fulfillment team without changing case ownership. Which CSM construct supports assigning discrete units of work off the case?",
 		"choices": [
 			"Case tasks that break the work into assignable items linked to the parent case",
-			"Reassigning full case ownership to the fulfillment group without retaining the case owner",
 			"Adding a work note requesting help without creating a structured case task record",
+			"Reassigning full case ownership to the fulfillment group without retaining the case owner",
 			"Creating a child case owned by the fulfillment team while the parent remains unassigned"
 		],
 		"correctIndex": 0,
 		"explanation": "Case tasks let an agent split work into discrete, assignable items connected to the parent case so other teams contribute while the case owner retains overall ownership.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/customer-service-management/case-tasks-for-csm.html"
+			"https://www.servicenow.com/docs/r/customer-service-management/csm-case-task-form.html"
 		],
 		"domain": "Case Management"
 	},
@@ -2682,15 +2687,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 64,
 		"prompt": "An agent needs to move a stalled case forward using a standard case action rather than an administrative operation. Which option is a valid case action?",
 		"choices": [
-			"Update case state to In Progress without assigning a supporting case task",
 			"Create a case task and assign it to a supporting fulfillment group for the work",
+			"Escalate the case through formal case escalation for management visibility",
 			"Reassign the case owner to a senior agent in the same queue without delegating work",
-			"Escalate the case through formal case escalation for management visibility"
+			"Update case state to In Progress without assigning a supporting case task"
 		],
-		"correctIndex": 1,
+		"correctIndex": 0,
 		"explanation": "Creating and assigning a case task is a standard case action that moves work forward, whereas reindexing, changing global language, or purging audits are administrative operations.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/customer-service-management/case-management-process.html"
+			"https://www.servicenow.com/docs/r/customer-service-management/configure-csm-case-management.html"
 		],
 		"domain": "Case Management"
 	},
@@ -2699,15 +2704,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 65,
 		"prompt": "A service manager wants a consolidated periodic summary of case activity, such as new, resolved, and aging cases, delivered to account stakeholders. Which CSM feature produces this rollup?",
 		"choices": [
-			"Case digests that summarize case activity for stakeholders on a scheduled basis",
-			"A single case form section that only shows the currently open case's short description",
 			"The OpenFrame telephony toolbar that displays live inbound call queue statistics",
-			"A UI action button that manually closes one selected case at a time from a list"
+			"A UI action button that manually closes one selected case at a time from a list",
+			"Case digests that summarize case activity for stakeholders on a scheduled basis",
+			"A single case form section that only shows the currently open case's short description"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Case digests generate periodic summaries of case activity so stakeholders receive a consolidated view of volumes, status, and trends without opening individual cases.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/customer-service-management/case-digest-for-csm.html"
+			"https://www.servicenow.com/docs/r/customer-service-management/activate-case-digests.html"
 		],
 		"domain": "Case Management"
 	},
@@ -2716,15 +2721,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 66,
 		"prompt": "A CSM implementation ties cases to the specific offering a customer is entitled to, such as a support tier tied to a product line. Which construct defines that supported offering?",
 		"choices": [
+			"An email notification layout template applied to outbound case acknowledgement messages",
 			"Service definitions and entitlements that specify which services a customer can receive",
 			"A generic catalog item variable set reused only for internal hardware procurement requests",
-			"A discovery pattern that maps only network topology for infrastructure configuration items",
-			"An email notification layout template applied to outbound case acknowledgement messages"
+			"A discovery pattern that maps only network topology for infrastructure configuration items"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"explanation": "Service definitions and entitlements describe the services and support levels a customer is eligible for, driving what cases and offerings apply to that account or contract.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/customer-service-management/entitlements-for-csm.html"
+			"https://www.servicenow.com/docs/r/customer-service-management/configure-csm-entitlements.html"
 		],
 		"domain": "Case Management"
 	},
@@ -2741,7 +2746,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 0,
 		"explanation": "Entitlements define the level and type of support a customer is eligible for, which drives applicable SLAs and validates that the case falls within the customer's coverage.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/customer-service-management/entitlements-for-csm.html"
+			"https://www.servicenow.com/docs/r/customer-service-management/configure-csm-entitlements.html"
 		],
 		"domain": "Case Management"
 	},
@@ -2750,15 +2755,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 68,
 		"prompt": "During case resolution an agent references a known fix documented in the knowledge base and attaches it to the case. What benefit does this attach-knowledge action provide?",
 		"choices": [
-			"It links the article to the case and lets the agent share a proven solution with the customer",
 			"It permanently unpublishes the referenced article so no other agent can reuse it",
 			"It reassigns case ownership to the knowledge base owner instead of the current agent",
-			"It converts the customer contact record into an internal fulfiller user automatically"
+			"It converts the customer contact record into an internal fulfiller user automatically",
+			"It links the article to the case and lets the agent share a proven solution with the customer"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Attaching a knowledge article to a case links the proven solution to the case and enables the agent to share it with the customer, promoting consistent, faster resolution.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/customer-service-management/knowledge-management-for-csm.html"
+			"https://www.servicenow.com/docs/r/servicenow-platform/knowledge-management/knowledge-article-quality-index.html"
 		],
 		"domain": "Case Management"
 	},
@@ -2768,14 +2773,14 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "A team wants agents to work cases, tasks, and interactions from a single modern interface with contextual side panels and guided actions. Which environment should the implementer deploy?",
 		"choices": [
 			"The Customer Service Management Configurable Workspace built for agent productivity",
-			"The system definition table editor used solely by administrators to alter data schemas",
 			"The classic core UI list module with no contextual side panels or guided actions",
-			"A read-only reporting portal that only displays historical performance analytics scores"
+			"A read-only reporting portal that only displays historical performance analytics scores",
+			"The system definition table editor used solely by administrators to alter data schemas"
 		],
 		"correctIndex": 0,
 		"explanation": "The CSM Configurable Workspace gives agents a unified, modern interface with contextual panels, guided actions, and tools to work cases and interactions efficiently.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/customer-service-management/csm-configurable-workspace.html"
+			"https://www.servicenow.com/docs/r/customer-service-management/exploring-configurable-workspace.html"
 		],
 		"domain": "Case Management"
 	},
@@ -2784,15 +2789,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 70,
 		"prompt": "An agent working in the CSM Configurable Workspace needs recommended next steps that adapt to the current case context. Which workspace capability presents these context-aware recommendations?",
 		"choices": [
-			"Guided decisions or agent assist that surface recommended actions based on case context",
-			"Case playbooks opened manually from a static document library outside the workspace",
 			"Special handling notes emailed nightly instead of surfacing contextually during case work",
+			"Case playbooks opened manually from a static document library outside the workspace",
+			"Guided decisions or agent assist that surface recommended actions based on case context",
 			"On-screen alerts configured globally without evaluating the current case context"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Guided decisions and agent assistance tools in the workspace surface context-aware recommended actions, helping agents follow consistent, efficient resolution paths.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/customer-service-management/guided-decisions-for-csm.html"
+			"https://www.servicenow.com/docs/r/customer-service-management/use-guided-decisions.html"
 		],
 		"domain": "Case Management"
 	},
@@ -2801,15 +2806,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 71,
 		"prompt": "A supervisor needs real-time visibility into agent workload, queue backlogs, and case volumes across the team. Which workspace feature best provides this operational view?",
 		"choices": [
-			"Workspace dashboards and lists that display live case, queue, and agent metrics",
-			"Performance Analytics dashboard showing historical backlog trends updated on a schedule",
 			"AWA supervisor view of queue depth and agent capacity by service channel",
-			"Shared interactive filter list of open cases refreshed on demand without dashboard widgets"
+			"Shared interactive filter list of open cases refreshed on demand without dashboard widgets",
+			"Performance Analytics dashboard showing historical backlog trends updated on a schedule",
+			"Workspace dashboards and lists that display live case, queue, and agent metrics"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Configurable workspace dashboards and lists give supervisors real-time operational visibility into queues, workloads, and case metrics for proactive management.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/customer-service-management/csm-configurable-workspace.html"
+			"https://www.servicenow.com/docs/r/customer-service-management/exploring-configurable-workspace.html"
 		],
 		"domain": "Case Management"
 	},
@@ -2820,18 +2825,18 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "Which two components make the CSM Configurable Workspace adaptable to an organization's process without heavy custom code? (Choose two.)",
 		"choices": [
 			"Configurable list and form layouts tailored to agent roles and case types",
-			"Separate scoped applications per agent role duplicating the same workspace configuration",
 			"Contextual side panels and declarative actions defined for the workspace experience",
-			"Hard-coded client scripts on classic case forms instead of workspace declarative actions"
+			"Hard-coded client scripts on classic case forms instead of workspace declarative actions",
+			"Separate scoped applications per agent role duplicating the same workspace configuration"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			2
+			1
 		],
 		"explanation": "The workspace is adapted through configurable layouts, contextual panels, and declarative actions rather than schema rewrites or per-agent servers, keeping customization low-code.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/customer-service-management/csm-configurable-workspace.html"
+			"https://www.servicenow.com/docs/r/customer-service-management/exploring-configurable-workspace.html"
 		],
 		"domain": "Case Management"
 	},
@@ -2840,15 +2845,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 73,
 		"prompt": "An organization wants customers to open cases, track status, and search knowledge from a branded self-service site. Which CSM front-end should the implementer configure?",
 		"choices": [
-			"The Customer Service Portal that provides self-service case and knowledge access",
 			"The CSM Configurable Workspace inbox used by fulfillers rather than external customers",
-			"The Employee Service Center portal intended for internal HR employee requests",
-			"The Now Support mobile admin console for managing field technician work orders"
+			"The Customer Service Portal that provides self-service case and knowledge access",
+			"The Now Support mobile admin console for managing field technician work orders",
+			"The Employee Service Center portal intended for internal HR employee requests"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"explanation": "The Customer Service Portal is the branded self-service experience where customers submit and track cases, browse the catalog, and search knowledge.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/customer-service-management/customer-service-portal.html"
+			"https://www.servicenow.com/docs/r/customer-service-management/use-the-customer-portal.html"
 		],
 		"domain": "CSM Workspace Portals Analytics and Reporting"
 	},
@@ -2857,15 +2862,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 74,
 		"prompt": "A customer wants to request a standardized service, such as a return or an upgrade, directly from the Customer Service Portal. Which construct presents these requestable offerings?",
 		"choices": [
-			"A service catalog for CSM that publishes customer-requestable items on the portal",
-			"A read-only knowledge category that only displays reference documentation articles",
 			"An internal change request form available exclusively to the change management team",
+			"A read-only knowledge category that only displays reference documentation articles",
+			"A service catalog for CSM that publishes customer-requestable items on the portal",
 			"A targeted communication audience list used solely for outbound campaign messaging"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "A service catalog surfaced on the Customer Service Portal lets customers request standardized offerings, generating the appropriate case or request records for fulfillment.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/customer-service-management/service-catalog-for-csm.html"
+			"https://www.servicenow.com/docs/r/customer-service-management/service-catalog-request-integration.html"
 		],
 		"domain": "CSM Workspace Portals Analytics and Reporting"
 	},
@@ -2875,15 +2880,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"domain": "CSM Workspace Portals Analytics and Reporting",
 		"prompt": "Marketing wants the Customer Service Portal home page to show open cases, knowledge search, and a service catalog tile for logged-in contacts without custom application code. Which configuration surface supports this layout?",
 		"choices": [
-			"Service Portal page and widget configuration for the Customer Service Portal experience",
-			"CSM Configurable Workspace page layouts designed for agent case handling",
 			"Consumer Service Portal widgets without contact-scoped page configuration",
-			"Classic UI form sections exported to the portal without Service Portal builder tools"
+			"Classic UI form sections exported to the portal without Service Portal builder tools",
+			"CSM Configurable Workspace page layouts designed for agent case handling",
+			"Service Portal page and widget configuration for the Customer Service Portal experience"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Customer Service Portal pages and widgets are configured declaratively to compose self-service layouts with cases, knowledge, catalog, and other customer-facing components.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/customer-service-management/customer-service-portal.html"
+			"https://www.servicenow.com/docs/r/customer-service-management/use-the-customer-portal.html"
 		]
 	},
 	{
@@ -2892,14 +2897,14 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "A CSM leader wants trended, historical insight into metrics like average resolution time and case backlog over months, not just current values. Which capability should be enabled?",
 		"choices": [
 			"Performance Analytics with indicators and scheduled data collection for trend scoring",
-			"Scheduled standard reports on case backlog emailed weekly to leadership",
+			"Workspace list metrics filtered by service channel without scheduled trend scoring",
 			"Dashboard combining live reports without Performance Analytics indicator history",
-			"Workspace list metrics filtered by service channel without scheduled trend scoring"
+			"Scheduled standard reports on case backlog emailed weekly to leadership"
 		],
 		"correctIndex": 0,
 		"explanation": "Performance Analytics collects indicator scores on a schedule to reveal trends and historical patterns over time, unlike real-time reports that show only the current state.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/customer-service-management/performance-analytics-for-csm.html"
+			"https://www.servicenow.com/docs/r/customer-service-management/analytics-and-reporting-solutions-for-customer-service/analytics-reporting-csm.html"
 		],
 		"domain": "CSM Workspace Portals Analytics and Reporting"
 	},
@@ -2909,15 +2914,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"domain": "CSM Workspace Portals Analytics and Reporting",
 		"prompt": "Marketing requires the Customer Service Portal header, color scheme, and login experience to reflect corporate branding without cloning the entire instance. Which approach should the implementer use?",
 		"choices": [
-			"Service Portal theme and branding configuration for the customer-facing portal experience",
 			"Case type client scripts that inject HTML headers into every agent workspace view",
-			"Targeted communication templates that restyle outbound email messages to contacts",
-			"UI policies on the case form that change field labels to match corporate terminology"
+			"UI policies on the case form that change field labels to match corporate terminology",
+			"Service Portal theme and branding configuration for the customer-facing portal experience",
+			"Targeted communication templates that restyle outbound email messages to contacts"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Service Portal themes and branding settings customize the look and feel of Customer and Consumer Service Portals without requiring a separate instance clone.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/customer-service-management/customer-service-portal.html"
+			"https://www.servicenow.com/docs/r/customer-service-management/use-the-customer-portal.html"
 		]
 	},
 	{
@@ -2927,14 +2932,14 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "A manager wants a single screen combining several reports, indicators, and lists for daily monitoring of the customer service operation. Which artifact should the implementer build?",
 		"choices": [
 			"A dashboard that aggregates multiple reports, indicators, and lists onto one screen",
-			"Performance Analytics widget embedded on the workspace homepage without other views",
 			"Multiple standard reports bookmarked separately without a combined dashboard layout",
+			"Performance Analytics widget embedded on the workspace homepage without other views",
 			"AWA queue view filtered to one team without aggregated reporting widgets"
 		],
 		"correctIndex": 0,
 		"explanation": "Dashboards combine multiple reports, Performance Analytics widgets, and lists into a single monitoring view tailored to a role such as a customer service manager.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/customer-service-management/reporting-for-csm.html"
+			"https://www.servicenow.com/docs/r/customer-service-management/analytics-and-reporting-solutions-for-customer-service/analytics-reporting-csm.html"
 		]
 	},
 	{
@@ -2943,15 +2948,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"domain": "CSM Workspace Portals Analytics and Reporting",
 		"prompt": "A CSM director wants a Performance Analytics indicator that tracks cases breaching entitlement response targets each week for leadership review. What must be configured first?",
 		"choices": [
-			"Business rule that closes cases when timers expire without Performance Analytics scoring",
 			"An indicator with appropriate source conditions and scheduled data collection for the case SLA metric",
+			"Standard report on breached SLAs run manually each week without trend scoring",
 			"Dashboard with a live case list only and no scheduled indicator collection",
-			"Standard report on breached SLAs run manually each week without trend scoring"
+			"Business rule that closes cases when timers expire without Performance Analytics scoring"
 		],
-		"correctIndex": 1,
+		"correctIndex": 0,
 		"explanation": "Performance Analytics indicators with scheduled collection turn case and entitlement SLA data into trended scores leadership can monitor on dashboards over time.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/customer-service-management/performance-analytics-for-csm.html"
+			"https://www.servicenow.com/docs/r/customer-service-management/analytics-and-reporting-solutions-for-customer-service/analytics-reporting-csm.html"
 		]
 	},
 	{
@@ -2959,15 +2964,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 80,
 		"prompt": "Before configuration begins, the implementation team must define which processes, integrations, and customer models are included in the CSM deployment. Which activity establishes these boundaries?",
 		"choices": [
+			"Cloning production data into every sub-production instance without stakeholder input",
 			"Defining project scope so included capabilities and out-of-scope items are agreed upfront",
 			"Immediately building every possible workspace form before requirements are gathered",
-			"Publishing all draft knowledge articles to customers before any review takes place",
-			"Cloning production data into every sub-production instance without stakeholder input"
+			"Publishing all draft knowledge articles to customers before any review takes place"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"explanation": "Defining project scope during planning aligns stakeholders on included processes, integrations, and models, preventing scope creep and guiding the implementation.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/customer-service-management/customer-service-management-implementation.html"
+			"https://www.servicenow.com/docs/r/customer-service-management/exploring-csm.html"
 		],
 		"domain": "CSM Best Practices and Knowledge Management"
 	},
@@ -2984,7 +2989,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 0,
 		"explanation": "ServiceNow's engagement methodology (Now Create) provides a structured, phased delivery approach spanning planning, configuration, testing, and deployment for consistent implementations.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/customer-service-management/customer-service-management-implementation.html"
+			"https://www.servicenow.com/docs/r/customer-service-management/exploring-csm.html"
 		],
 		"domain": "CSM Best Practices and Knowledge Management"
 	},
@@ -2993,15 +2998,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 82,
 		"prompt": "A CSM knowledge strategy must serve both internal agents and external customers with appropriate content. Which knowledge management practice supports this dual audience?",
 		"choices": [
-			"Separate knowledge bases with access controls for internal-only and customer-facing articles",
 			"A single unrestricted knowledge base that exposes every internal note to all customers",
 			"Storing all articles as attachments on individual cases with no searchable structure",
-			"Publishing draft articles directly to customers without any review or approval workflow"
+			"Publishing draft articles directly to customers without any review or approval workflow",
+			"Separate knowledge bases with access controls for internal-only and customer-facing articles"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "A sound knowledge strategy uses distinct knowledge bases and access controls so internal-only guidance stays private while curated articles are shared with customers.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/customer-service-management/knowledge-management-for-csm.html"
+			"https://www.servicenow.com/docs/r/servicenow-platform/knowledge-management/knowledge-article-quality-index.html"
 		],
 		"domain": "CSM Best Practices and Knowledge Management"
 	},
@@ -3011,14 +3016,14 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "A knowledge manager wants an objective measure of article health based on factors like feedback, age, and usage to prioritize maintenance. Which capability provides this score?",
 		"choices": [
 			"The Article Quality Index that scores knowledge articles to guide improvement efforts",
-			"Case deflection percentage from surveys without article-level health scoring",
 			"Knowledge feedback ratings counted without a composite quality score",
-			"Article view totals without weighting freshness or usefulness dimensions"
+			"Article view totals without weighting freshness or usefulness dimensions",
+			"Case deflection percentage from surveys without article-level health scoring"
 		],
 		"correctIndex": 0,
 		"explanation": "The Article Quality Index (AQI) scores articles on quality dimensions such as feedback, freshness, and usage so knowledge managers can target articles needing improvement.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/knowledge-management/article-quality-index.html"
+			"https://www.servicenow.com/docs/r/servicenow-platform/knowledge-management/knowledge-article-quality-index.html"
 		],
 		"domain": "CSM Best Practices and Knowledge Management"
 	},
@@ -3028,19 +3033,19 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"questionType": "multi",
 		"prompt": "Which two practices strengthen a self-service strategy that deflects cases while keeping customers satisfied? (Choose two.)",
 		"choices": [
+			"Disabling case creation on the portal so customers cannot log issues themselves",
 			"Publishing high-quality, findable knowledge articles for common customer questions",
 			"Offering guided self-service catalog items so customers resolve routine requests independently",
-			"Hiding all knowledge from the portal so customers must always call a live agent",
-			"Disabling case creation on the portal so customers cannot log issues themselves"
+			"Hiding all knowledge from the portal so customers must always call a live agent"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"correctIndexes": [
-			0,
-			1
+			1,
+			2
 		],
 		"explanation": "Effective self-service deflection relies on findable, high-quality knowledge and guided catalog offerings; hiding knowledge or blocking case creation undermines the strategy.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/customer-service-management/self-service-for-csm.html"
+			"https://www.servicenow.com/docs/r/customer-service-management/self-service-options-csm-customers.html"
 		],
 		"domain": "CSM Best Practices and Knowledge Management"
 	},
@@ -3057,7 +3062,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 0,
 		"explanation": "Knowledge-Centered Service encourages creating articles in the flow of work so proven solutions are captured from cases and reused, reducing repeat investigation.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/knowledge-management/knowledge-centered-service.html"
+			"https://www.servicenow.com/docs/r/servicenow-platform/knowledge-management/activate-kcs-capabilties-plugin.html"
 		],
 		"domain": "CSM Best Practices and Knowledge Management"
 	},
@@ -3066,15 +3071,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 86,
 		"prompt": "A knowledge governance process requires new customer-facing articles to be reviewed before customers can see them. Which knowledge management workflow enforces this control?",
 		"choices": [
-			"A knowledge approval and publish workflow that gates articles before customer visibility",
 			"An automatic publish of every draft the instant an agent clicks save on the article",
 			"A rule that deletes all articles older than thirty days regardless of ongoing usage",
-			"A setting that exposes internal working drafts to customers before any review occurs"
+			"A setting that exposes internal working drafts to customers before any review occurs",
+			"A knowledge approval and publish workflow that gates articles before customer visibility"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Knowledge workflows route articles through review and approval before publishing, ensuring customer-facing content meets quality and governance standards.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/knowledge-management/knowledge-management-workflows.html"
+			"https://www.servicenow.com/docs/r/servicenow-platform/knowledge-management/r_KnowledgeWorkflows.html"
 		],
 		"domain": "CSM Best Practices and Knowledge Management"
 	},
@@ -3084,14 +3089,14 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "A CSM team wants generative AI to help agents summarize long case activity and draft customer replies within the workspace. Which ServiceNow capability delivers this?",
 		"choices": [
 			"Now Assist for Customer Service Management, which provides generative AI agent assistance",
-			"Playbook script activities that insert canned text without AI-assisted drafting",
 			"Classic email templates with fixed merge fields for every customer reply",
-			"Virtual Agent topic intents that route cases without generative summarization"
+			"Virtual Agent topic intents that route cases without generative summarization",
+			"Playbook script activities that insert canned text without AI-assisted drafting"
 		],
 		"correctIndex": 0,
 		"explanation": "Now Assist for CSM brings generative AI into the workspace to summarize cases, draft replies, and accelerate resolution while keeping the agent in control.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/customer-service-management/now-assist-for-csm.html"
+			"https://www.servicenow.com/docs/r/customer-service-management/now-assist-for-csm/activate-now-assist-for-customer-service-management-csm.html"
 		],
 		"domain": "CSM Best Practices and Knowledge Management"
 	},
@@ -3100,15 +3105,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 88,
 		"prompt": "Which best practice helps ensure a CSM implementation remains maintainable and upgrade-friendly over time?",
 		"choices": [
-			"Favoring configuration and low-code options over unnecessary custom scripting where possible",
 			"Rewriting core platform tables directly to force every requirement into a single form",
-			"Skipping all testing phases to accelerate the move of changes into the production instance",
-			"Publishing every internal draft article to customers to maximize total portal content volume"
+			"Favoring configuration and low-code options over unnecessary custom scripting where possible",
+			"Publishing every internal draft article to customers to maximize total portal content volume",
+			"Skipping all testing phases to accelerate the move of changes into the production instance"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"explanation": "Prioritizing configuration and low-code capabilities over heavy customization keeps CSM implementations maintainable, testable, and easier to upgrade.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/customer-service-management/customer-service-management-implementation.html"
+			"https://www.servicenow.com/docs/r/customer-service-management/exploring-csm.html"
 		],
 		"domain": "CSM Best Practices and Knowledge Management"
 	},
@@ -3117,15 +3122,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 89,
 		"prompt": "After go-live, a customer service leader wants continual improvement driven by measured outcomes and customer feedback. Which practice best supports ongoing optimization?",
 		"choices": [
-			"Reviewing analytics, surveys, and knowledge quality to prioritize iterative improvements",
-			"Freezing the configuration permanently so no changes are ever considered after go-live",
 			"Removing all reporting so leaders are not distracted by operational performance data",
+			"Freezing the configuration permanently so no changes are ever considered after go-live",
+			"Reviewing analytics, surveys, and knowledge quality to prioritize iterative improvements",
 			"Disabling customer surveys so negative feedback never reaches the service organization"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Continual improvement uses analytics, customer surveys, and article quality signals to identify and prioritize iterative enhancements after go-live.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/customer-service-management/performance-analytics-for-csm.html"
+			"https://www.servicenow.com/docs/r/customer-service-management/analytics-and-reporting-solutions-for-customer-service/analytics-reporting-csm.html"
 		],
 		"domain": "CSM Best Practices and Knowledge Management"
 	},
