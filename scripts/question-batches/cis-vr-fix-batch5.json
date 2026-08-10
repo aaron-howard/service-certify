@@ -1,0 +1,213 @@
+[
+  {
+    "trackCode": "CIS-VR",
+    "order": 5,
+    "prompt": "Which workspace does the vulnerability analyst persona primarily use to monitor findings and initiate remediation workflows?",
+    "choices": [
+      "IT Remediation Workspace for completing assigned remediation tasks on owned configuration items",
+      "Vulnerability Manager Workspace for monitoring vulnerabilities and creating remediation tasks",
+      "Dispatcher Workspace for scheduling field service agents to repair physical hardware assets",
+      "Agent Workspace for handling live chat conversations from external customer portal users"
+    ],
+    "correctIndex": 1,
+    "explanation": "The vulnerability analyst persona monitors vulnerability exposure and initiates remediation from the Vulnerability Manager Workspace rather than executing remediation tasks directly.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/security-management/vulnerability-manager-workspace/vulnerability-manager-workspace-landing-page.html"
+    ],
+    "domain": "VR Applications and Modules"
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 6,
+    "prompt": "A remediation owner in IT Operations must work assigned fix tasks for vulnerable configuration items. Which workspace should they use?",
+    "choices": [
+      "IT Remediation Workspace to view and complete remediation tasks assigned to their team",
+      "Vulnerability Manager Workspace to configure NVD integrations and scanner import schedules",
+      "Security Incident Response Workspace to manage major security incident war room operations",
+      "Performance Analytics Workspace to design KPI indicator sources for HR onboarding metrics"
+    ],
+    "correctIndex": 0,
+    "explanation": "Remediation owners execute fix work from the IT Remediation Workspace, while vulnerability analysts monitor and initiate work from the Vulnerability Manager Workspace.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/security-management/it-remediation-workspace/vr-ws-remed-task.html"
+    ],
+    "domain": "VR Applications and Modules"
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 15,
+    "prompt": "Imported scanner findings must be reconciled with authoritative assets before remediation assignment succeeds. Which Vulnerability Response capability performs that reconciliation?",
+    "choices": [
+      "CMDB correlation that matches scanner asset attributes to configuration items during intake",
+      "Manual CSV export of detections that operators email to patch teams outside the platform",
+      "Automatic retirement of every configuration item whenever a new detection is imported",
+      "Conversion of vulnerable items into hardware asset lease records for procurement tracking"
+    ],
+    "correctIndex": 0,
+    "explanation": "Vulnerability Response reconciles imported detections with CMDB configuration items so findings attach to authoritative assets before triage and assignment.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/security-management/vulnerability-response/mstvm-integration.html"
+    ],
+    "domain": "VR Applications and Modules"
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 16,
+    "prompt": "An analyst receives thousands of duplicate scanner observations for the same flaw across many assets. Which Vulnerability Response application behavior addresses that volume problem?",
+    "choices": [
+      "Knowledge article publishing that archives scanner output without creating VR table records",
+      "Service catalog record producers that open laptop refresh requests for each reported finding",
+      "Grouping and correlation rules that aggregate related vulnerable items for coordinated remediation",
+      "Incident Management parent-child linking that converts every detection into a priority-one ticket"
+    ],
+    "correctIndex": 2,
+    "explanation": "Vulnerability Response applies grouping rules to consolidate related vulnerable items and reduce redundant remediation effort across the estate.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/security-management/sem-grouping-multiple-findings-remediation-tasks-processing.html"
+    ],
+    "domain": "VR Applications and Modules"
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 28,
+    "prompt": "Solution Management for Vulnerability Response is installed and the team must configure vendor fix content from Red Hat and Microsoft MSRC. Where is this configured in Setup Assistant?",
+    "choices": [
+      "Solution Integrations section below Scanner Integrations for supported vulnerability solution providers",
+      "Agent Workspace chat queue routing for external customer messaging channel escalations",
+      "Discovery classification criteria for identifying non-computer CI types such as racks",
+      "Employee Center onboarding checklist templates for new hire equipment provisioning tasks"
+    ],
+    "correctIndex": 0,
+    "explanation": "When Solution Management is installed, Setup Assistant exposes Solution Integrations to configure providers such as Red Hat and Microsoft Security Response Center.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/security-management/vulnerability-response/rapid-7-solution-management.html"
+    ],
+    "domain": "Getting Data into Vulnerability Response"
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 40,
+    "prompt": "A remediation owner must schedule infrastructure patching through the standard change process. Which IT Remediation Workspace action supports that workflow?",
+    "choices": [
+      "Create a change request linked to the remediation task for CAB-approved maintenance execution",
+      "Author new NVD feed synchronization schedules and MID Server credential rotation tasks",
+      "Disable all assignment rules globally until the next full scanner import cycle completes",
+      "Convert the vulnerable item into an employee HR case for internal payroll benefit review"
+    ],
+    "correctIndex": 0,
+    "explanation": "The IT Remediation Workspace lets remediation owners create change requests linked to remediation tasks for governed patch deployment.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/security-management/it-remediation-workspace/vr-ws-remed-task.html"
+    ],
+    "domain": "Tools to Manage Vulnerability Response"
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 41,
+    "prompt": "A coordinator needs to review vendor-reported software vulnerabilities and escalate matched asset findings for remediation. Which Vulnerability Response library workflow should they use?",
+    "choices": [
+      "Open Third Party library entries, inspect related vulnerable items, and escalate matched findings for remediation",
+      "Rebuild Discovery schedules that scan only vendor office Wi-Fi networks from a MID Server",
+      "Publish a catalog item for employee laptop refresh requests through Employee Center",
+      "Author Virtual Agent topics that reset passwords without referencing vulnerability records"
+    ],
+    "correctIndex": 0,
+    "explanation": "Vulnerability Response documents identifying and escalating security issues in third-party software by reviewing Third Party library entries, related vulnerability entries, and linked vulnerable items before remediation. Discovery schedules, catalog laptop requests, and password Virtual Agent topics are unrelated to vendor defect escalation in VR.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/security-management/vulnerability-response/escalate-sec-issue-3rdparty.html"
+    ],
+    "domain": "Tools to Manage Vulnerability Response"
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 42,
+    "prompt": "A VR program must route Linux server findings to the infrastructure team based on classification values. Which rule type should drive that routing?",
+    "choices": [
+      "Vulnerability assignment rules with conditions on Classification and Classification type fields set earlier by classification rules",
+      "Catalog client scripts that execute when end users submit standard service catalog requests",
+      "Discovery classification probes configured for SNMP-enabled network printer subnets",
+      "Facilities space management floor plans for office seating assignment tracking"
+    ],
+    "correctIndex": 0,
+    "explanation": "Classification rules populate Classification and Classification type on records; assignment rules then route findings using filter conditions on vulnerable item attributes, including those classification fields. Catalog client scripts, Discovery printer probes, and facilities floor plans do not assign VR remediation ownership.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/security-management/sem-configure-assignment-rules.html",
+      "https://www.servicenow.com/docs/r/security-management/vulnerability-response/delete-vulnerability-classification-rule.html"
+    ],
+    "domain": "Tools to Manage Vulnerability Response"
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 47,
+    "prompt": "An IT engineer must view and update remediation tasks assigned to their group in the IT Remediation Workspace. Which role should be assigned?",
+    "choices": [
+      "sn_customerservice.consumer",
+      "sn_change.change_manager",
+      "sn_vul.remediation_owner",
+      "sn_vul.vulnerability_admin"
+    ],
+    "correctIndex": 2,
+    "explanation": "The sn_vul.remediation_owner persona role grants users access to remediation tasks and vulnerable items assigned to them or their groups in the IT Remediation Workspace.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/security-management/vulnerability-response/vr-persona-overview.html"
+    ],
+    "domain": "Tools to Manage Vulnerability Response"
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 52,
+    "prompt": "Remediation task rules support Match All and Match First execution modes. When should Match First be selected?",
+    "choices": [
+      "When every matching rule must create separate remediation tasks for the same vulnerable item",
+      "When rules are ordered by priority and only the first matching rule should create or update a task",
+      "When vulnerabilities are already marked false positive before grouping logic runs",
+      "When no assignment rule has ever executed on newly imported scanner findings"
+    ],
+    "correctIndex": 1,
+    "explanation": "Match First prevents lower-priority rules from overriding a higher-priority grouping decision on the same record.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/security-management/sem-grouping-multiple-findings-remediation-tasks-processing.html"
+    ],
+    "domain": "Tools to Manage Vulnerability Response"
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 53,
+    "prompt": "Which three actions can remediation owners perform from the IT Remediation Workspace on assigned work? (Choose three.)",
+    "choices": [
+      "Request a vulnerability exception with approver sign-off and expiration tracking",
+      "Create a change request linked to the remediation task for governed patch deployment",
+      "Request a false positive with a documented reason on the vulnerable item or remediation task",
+      "Configure NVD feed synchronization schedules and MID Server credential stores"
+    ],
+    "correctIndex": 0,
+    "explanation": "Remediation owners request exceptions, create linked change requests, and request false positives from the IT Remediation Workspace; NVD configuration remains an admin function.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/security-management/it-remediation-workspace/vr-ws-mark-fp.html"
+    ],
+    "domain": "Tools to Manage Vulnerability Response",
+    "questionType": "multi",
+    "correctIndexes": [
+      0,
+      1,
+      2
+    ]
+  },
+  {
+    "trackCode": "CIS-VR",
+    "order": 62,
+    "prompt": "Why must close reasons be preserved when marking vulnerabilities as false positives in VR?",
+    "choices": [
+      "They support audit review, trend analysis, and analyst accountability for disposition decisions",
+      "They trigger automatic deletion of scanner integration credentials from the instance vault",
+      "They replace the need for any future vulnerability rescans on affected configuration items",
+      "They convert all related items into change requests without additional approval steps"
+    ],
+    "correctIndex": 0,
+    "explanation": "Documented close reasons explain why findings were dismissed and support later reassessment if conditions change.",
+    "sourceUrls": [
+      "https://www.servicenow.com/docs/r/security-management/it-remediation-workspace/vr-ws-mark-fp.html"
+    ],
+    "domain": "Automating Vulnerability Response"
+  }
+]

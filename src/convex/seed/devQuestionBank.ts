@@ -26961,15 +26961,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 1,
 		"prompt": "Which two optional Vulnerability Response modules extend the base product for application-layer and container image findings? (Choose two.)",
 		"choices": [
-			"Security Incident Response war room workflows for phishing email triage and major incidents",
 			"Discovery classification probes for SNMP-enabled network printer hardware identification",
 			"Application Vulnerability Response for application vulnerable items from tools such as Veracode DAST",
-			"Container Vulnerability Response for container vulnerable items from runtime security integrations"
+			"Container Vulnerability Response for container vulnerable items from runtime security integrations",
+			"Security Incident Response war room workflows for phishing email triage and major incidents"
 		],
-		"correctIndex": 2,
+		"correctIndex": 1,
 		"correctIndexes": [
-			2,
-			3
+			1,
+			2
 		],
 		"questionType": "multi",
 		"explanation": "Application Vulnerability Response manages AVITs for application findings and Container Vulnerability Response manages CVITs for container image and runtime detections.",
@@ -26985,9 +26985,9 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "During initial deployment, a VR administrator uses Setup Assistant to configure integrations, personas, and foundational settings. Which step establishes who can access VR workspaces?",
 		"choices": [
 			"Persona and granular role assignment for vulnerability analyst and remediation owner users",
-			"Catalog item variable design for employee laptop refresh requests in the service catalog",
 			"Discovery schedule creation for scanning non-production printer subnets only",
-			"Update Set preview before committing unrelated platform UI theme customizations"
+			"Update Set preview before committing unrelated platform UI theme customizations",
+			"Catalog item variable design for employee laptop refresh requests in the service catalog"
 		],
 		"correctIndex": 0,
 		"explanation": "Setup Assistant persona assignment defines which users receive vulnerability analyst, remediation owner, and related VR roles for workspace access.",
@@ -27001,12 +27001,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 3,
 		"prompt": "In Application Vulnerability Response, which persona monitors application security posture and coordinates remediation with development teams from the Security Champion Overview dashboard?",
 		"choices": [
-			"Security Champion persona aligned with application owners and development stakeholders",
 			"Vulnerability Admin persona responsible for installing store integrations on the instance",
-			"Change Manager persona who approves standard change models for infrastructure patching",
-			"Catalog Manager persona who publishes service catalog items for employee onboarding requests"
+			"Security Champion persona aligned with application owners and development stakeholders",
+			"Catalog Manager persona who publishes service catalog items for employee onboarding requests",
+			"Change Manager persona who approves standard change models for infrastructure patching"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"explanation": "The Security Champion persona in Application Vulnerability Response uses the Security Champion Overview dashboard to track scanned applications and drive remediation with development teams.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/security-management/application-vulnerability-response/avr-landing.html"
@@ -27018,12 +27018,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 4,
 		"prompt": "Which statement distinguishes Application Vulnerability Response from Container Vulnerability Response?",
 		"choices": [
-			"AVR imports application vulnerable items (AVITs) for software application findings, while CVR imports container vulnerable items (CVITs) for container image findings",
-			"AVR requires Kubernetes discovery for all imports, while CVR only supports mainframe vulnerability scanning integrations",
 			"AVR automatically deletes CMDB CIs when findings arrive, while CVR creates incident records for every CVIT record",
+			"AVR requires Kubernetes discovery for all imports, while CVR only supports mainframe vulnerability scanning integrations",
+			"AVR imports application vulnerable items (AVITs) for software application findings, while CVR imports container vulnerable items (CVITs) for container image findings",
 			"AVR is included in the base ITSM subscription, while CVR cannot integrate with third-party container security products"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Application Vulnerability Response manages AVITs for application-layer findings, whereas Container Vulnerability Response manages CVITs for vulnerabilities detected in container images and runtime deployments.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/security-management/application-vulnerability-response/avr-landing.html",
@@ -27036,15 +27036,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 5,
 		"prompt": "Which workspace does the vulnerability analyst persona primarily use to monitor findings and initiate remediation workflows?",
 		"choices": [
-			"IT Remediation Workspace for completing assigned remediation tasks on owned configuration items",
-			"Vulnerability Manager Workspace for monitoring vulnerabilities and creating remediation tasks",
 			"Dispatcher Workspace for scheduling field service agents to repair physical hardware assets",
-			"Agent Workspace for handling live chat conversations from external customer portal users"
+			"Agent Workspace for handling live chat conversations from external customer portal users",
+			"Vulnerability Manager Workspace for monitoring vulnerabilities and creating remediation tasks",
+			"IT Remediation Workspace for completing assigned remediation tasks on owned configuration items"
 		],
-		"correctIndex": 1,
+		"correctIndex": 2,
 		"explanation": "The vulnerability analyst persona monitors vulnerability exposure and initiates remediation from the Vulnerability Manager Workspace rather than executing remediation tasks directly.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/c_VulnerabilityResponse.html"
+			"https://www.servicenow.com/docs/r/security-management/vulnerability-manager-workspace/vulnerability-manager-workspace-landing-page.html"
 		],
 		"domain": "VR Applications and Modules"
 	},
@@ -27054,14 +27054,14 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "A remediation owner in IT Operations must work assigned fix tasks for vulnerable configuration items. Which workspace should they use?",
 		"choices": [
 			"IT Remediation Workspace to view and complete remediation tasks assigned to their team",
-			"Vulnerability Manager Workspace to configure NVD integrations and scanner import schedules",
 			"Security Incident Response Workspace to manage major security incident war room operations",
-			"Performance Analytics Workspace to design KPI indicator sources for HR onboarding metrics"
+			"Performance Analytics Workspace to design KPI indicator sources for HR onboarding metrics",
+			"Vulnerability Manager Workspace to configure NVD integrations and scanner import schedules"
 		],
 		"correctIndex": 0,
 		"explanation": "Remediation owners execute fix work from the IT Remediation Workspace, while vulnerability analysts monitor and initiate work from the Vulnerability Manager Workspace.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/c_VulnerabilityResponse.html"
+			"https://www.servicenow.com/docs/r/security-management/it-remediation-workspace/vr-ws-remed-task.html"
 		],
 		"domain": "VR Applications and Modules"
 	},
@@ -27070,12 +27070,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 7,
 		"prompt": "During initial Vulnerability Response setup, where should administrators assign persona roles so users can access the correct VR workspaces and integrations?",
 		"choices": [
-			"Setup Assistant persona assignment step for Vulnerability Response roles and granular permissions",
 			"Update Set preview pane before committing unrelated platform UI theme customizations",
-			"Catalog item record producer variables for employee laptop request fulfillment workflows",
-			"Discovery schedule configuration for scanning non-production network subnets only"
+			"Setup Assistant persona assignment step for Vulnerability Response roles and granular permissions",
+			"Discovery schedule configuration for scanning non-production network subnets only",
+			"Catalog item record producer variables for employee laptop request fulfillment workflows"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"explanation": "Persona and granular role assignment is a first configuration step in Vulnerability Response Setup Assistant and defines what users can see and do across VR and its integrations.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/vr-persona-overview.html"
@@ -27087,12 +27087,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 8,
 		"prompt": "Compared with the remediation owner persona, which granular roles typically expand a vulnerability analyst's access to all vulnerable item and remediation task records?",
 		"choices": [
-			"sn_vul.read_all and sn_vul.write_all granular roles on the vulnerability analyst persona",
-			"sn_vul.read_assigned and sn_vul.write_assigned granular roles inherited by every user",
 			"itil_admin and security_admin roles that replace all Vulnerability Response persona assignments",
+			"sn_vul.read_assigned and sn_vul.write_assigned granular roles inherited by every user",
+			"sn_vul.read_all and sn_vul.write_all granular roles on the vulnerability analyst persona",
 			"catalog_admin and workflow_admin roles that govern service catalog item publishing only"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Remediation owners typically have read_assigned and write_assigned access, while vulnerability analysts add read_all and write_all to view and edit all VR task records.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/vr-persona-overview.html"
@@ -27104,12 +27104,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 9,
 		"prompt": "An implementer must explain how Vulnerability Response stores a flaw definition versus a detection on a specific asset. Which data model relationship is accurate?",
 		"choices": [
-			"Vulnerable items store global CVE metadata while library entries store only hostname strings",
-			"NVD or third-party library entries define the vulnerability; vulnerable items link that flaw to a configuration item",
 			"Remediation tasks define CVE content while vulnerable items store only scanner session timestamps",
-			"Third-party vulnerability entries replace NVD records and cannot reference CVE identifiers"
+			"Third-party vulnerability entries replace NVD records and cannot reference CVE identifiers",
+			"NVD or third-party library entries define the vulnerability; vulnerable items link that flaw to a configuration item",
+			"Vulnerable items store global CVE metadata while library entries store only hostname strings"
 		],
-		"correctIndex": 1,
+		"correctIndex": 2,
 		"explanation": "Library entries describe the vulnerability itself; vulnerable items represent a specific detection of that flaw on a configuration item in the environment.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/nvd-vuln-integration.html"
@@ -27121,12 +27121,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 10,
 		"prompt": "A vulnerability manager wants proactive alerts when critical exposure appears on watched configuration items or business services. Which Vulnerability Manager Workspace feature supports that?",
 		"choices": [
-			"Project portfolio cost plans that forecast capital expenditure for internal initiatives",
 			"Discovery patterns that classify SNMP printers without creating vulnerable item records",
-			"Catalog record producers that open laptop refresh requests for each reported detection",
-			"Watch topics that notify managers when monitored entities meet defined vulnerability conditions"
+			"Watch topics that notify managers when monitored entities meet defined vulnerability conditions",
+			"Project portfolio cost plans that forecast capital expenditure for internal initiatives",
+			"Catalog record producers that open laptop refresh requests for each reported detection"
 		],
-		"correctIndex": 3,
+		"correctIndex": 1,
 		"explanation": "Watch topics in the Vulnerability Manager Workspace alert managers when monitored CIs or services meet configured vulnerability exposure criteria.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/security-management/vulnerability-manager-workspace/vulnerability-manager-workspace-landing-page.html",
@@ -27140,8 +27140,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "How do vulnerability calculators help the Vulnerability Response application prioritize work at scale?",
 		"choices": [
 			"They combine severity, exploitability, and asset context into scores on each vulnerable item",
-			"They replace all assignment rules so every finding routes to the system administrator user",
 			"They import scanner credentials and MID Server routing tables during every integration run",
+			"They replace all assignment rules so every finding routes to the system administrator user",
 			"They convert every vulnerable item into a priority-one incident without remediation task grouping"
 		],
 		"correctIndex": 0,
@@ -27156,12 +27156,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 12,
 		"prompt": "Why do Vulnerability Response, Application Vulnerability Response, and third-party integrations reference CSDM tables in the ServiceNow platform?",
 		"choices": [
-			"VR applications consume and contribute configuration and service data that aligns assets with vulnerability findings",
 			"CSDM tables replace all third-party scanner libraries so external CVE identifiers are no longer stored",
+			"CSDM tables store only HR employee records and are unrelated to security operations workflows",
 			"CSDM tables are read-only lookup tables that VR applications cannot write vulnerability records into",
-			"CSDM tables store only HR employee records and are unrelated to security operations workflows"
+			"VR applications consume and contribute configuration and service data that aligns assets with vulnerability findings"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Vulnerability Response applications manage and use CSDM-aligned CMDB data so scanner findings can be tied to authoritative configuration items and service context.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/c_VulnerabilityResponse.html"
@@ -27173,12 +27173,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 13,
 		"prompt": "Leadership already uses Security Incident Response for breach investigations. How should Vulnerability Response complement that investment?",
 		"choices": [
-			"VR manages proactive vulnerability exposure and remediation while SIR handles active security incidents",
-			"VR replaces SIR entirely by converting every incident into a vulnerable item automatically",
 			"VR stores only HR employee records and does not integrate with configuration management data",
-			"VR disables all scanner integrations whenever SIR major incident workflows are activated"
+			"VR disables all scanner integrations whenever SIR major incident workflows are activated",
+			"VR manages proactive vulnerability exposure and remediation while SIR handles active security incidents",
+			"VR replaces SIR entirely by converting every incident into a vulnerable item automatically"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Vulnerability Response focuses on vulnerability exposure management and remediation, complementing Security Incident Response for active incident handling.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/c_VulnerabilityResponse.html"
@@ -27190,12 +27190,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 14,
 		"prompt": "A platform team running Kubernetes workloads needs runtime context such as cluster, namespace, and service enrichment on container image findings. Which module should they deploy?",
 		"choices": [
+			"Application Vulnerability Response with Veracode DAST integration for web application code scanning only",
 			"Security Incident Response with major incident war room workflows for phishing email triage",
 			"Discovery with SNMP-based classification for legacy network printer hardware identification",
-			"Container Vulnerability Response with integrations such as Prisma Cloud Compute for runtime metadata",
-			"Application Vulnerability Response with Veracode DAST integration for web application code scanning only"
+			"Container Vulnerability Response with integrations such as Prisma Cloud Compute for runtime metadata"
 		],
-		"correctIndex": 2,
+		"correctIndex": 3,
 		"explanation": "Container Vulnerability Response imports CVITs and enriches findings with Kubernetes runtime context through container security product integrations.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/security-management/container-vulnerability-response/cvr-landing.html"
@@ -27215,7 +27215,7 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"correctIndex": 0,
 		"explanation": "Vulnerability Response reconciles imported detections with CMDB configuration items so findings attach to authoritative assets before triage and assignment.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/c_VulnerabilityResponse.html"
+			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/mstvm-integration.html"
 		],
 		"domain": "VR Applications and Modules"
 	},
@@ -27224,15 +27224,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 16,
 		"prompt": "An analyst receives thousands of duplicate scanner observations for the same flaw across many assets. Which Vulnerability Response application behavior addresses that volume problem?",
 		"choices": [
-			"Knowledge article publishing that archives scanner output without creating VR table records",
 			"Service catalog record producers that open laptop refresh requests for each reported finding",
 			"Grouping and correlation rules that aggregate related vulnerable items for coordinated remediation",
-			"Incident Management parent-child linking that converts every detection into a priority-one ticket"
+			"Incident Management parent-child linking that converts every detection into a priority-one ticket",
+			"Knowledge article publishing that archives scanner output without creating VR table records"
 		],
-		"correctIndex": 2,
+		"correctIndex": 1,
 		"explanation": "Vulnerability Response applies grouping rules to consolidate related vulnerable items and reduce redundant remediation effort across the estate.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/c_VulnerabilityResponse.html"
+			"https://www.servicenow.com/docs/r/security-management/sem-grouping-multiple-findings-remediation-tasks-processing.html"
 		],
 		"domain": "VR Applications and Modules"
 	},
@@ -27242,9 +27242,9 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "Threat intelligence feeds enrich NVD data with exploit and adversary context. Where does that enrichment surface in the Vulnerability Response application?",
 		"choices": [
 			"On vulnerability and vulnerable item records to improve prioritization during triage and remediation planning",
-			"Exclusively on HR employee profiles used for internal payroll and benefits case routing",
 			"Only on change request records awaiting CAB approval for infrastructure deployment tasks",
-			"On discovery schedule rows that control MID Server selection per scanned IP subnet"
+			"On discovery schedule rows that control MID Server selection per scanned IP subnet",
+			"Exclusively on HR employee profiles used for internal payroll and benefits case routing"
 		],
 		"correctIndex": 0,
 		"explanation": "Vulnerability Response enriches library and item records with threat intelligence so analysts prioritize findings with active exploit context.",
@@ -27258,12 +27258,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 18,
 		"prompt": "After remediation completes, how does the Vulnerability Response application confirm that a previously open finding is resolved?",
 		"choices": [
+			"Vulnerable items remain open indefinitely until an analyst manually closes them without rescan evidence",
 			"All related configuration items retire from the CMDB regardless of whether the flaw persists",
 			"Remediation tasks auto-close only when the parent incident record reaches the Resolved state",
-			"Updated scanner detections reconcile to vulnerable items and transition state when the flaw is no longer reported",
-			"Vulnerable items remain open indefinitely until an analyst manually closes them without rescan evidence"
+			"Updated scanner detections reconcile to vulnerable items and transition state when the flaw is no longer reported"
 		],
-		"correctIndex": 2,
+		"correctIndex": 3,
 		"explanation": "VR verifies remediation by processing updated detections from integrated scanners and reflecting fixed findings on vulnerable item records.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/c_VulnerabilityResponse.html"
@@ -27294,14 +27294,14 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "Which two external data sources does Vulnerability Response integrate with to populate vulnerability knowledge and environmental detections? (Choose two.)",
 		"choices": [
 			"National Vulnerability Database feeds importing authoritative CVE and CPE metadata",
-			"Third-party vulnerability scanners importing detection findings about in-scope assets",
 			"Employee payroll systems importing salary bands for remediation owner assignment routing",
-			"Facilities management systems importing office seating plans for CMDB dependency mapping"
+			"Facilities management systems importing office seating plans for CMDB dependency mapping",
+			"Third-party vulnerability scanners importing detection findings about in-scope assets"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			1
+			3
 		],
 		"explanation": "Vulnerability Response pulls CVE knowledge from the NVD and detection data from third-party scanner integrations, then reconciles findings with CMDB assets.",
 		"sourceUrls": [
@@ -27315,10 +27315,10 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"questionType": "multi",
 		"prompt": "Which two statements accurately describe NIST NVD integrations available in Vulnerability Response? (Choose two.)",
 		"choices": [
-			"The NIST NVD Integration - API (CVE only) is active by default and runs daily",
 			"The NIST NVD Integration - API (CPE only) is inactive by default until an administrator activates it",
-			"Each NVD integration feed is limited to vulnerabilities that share one CVSS base score",
-			"NVD integrations exclude CPE data and cannot enrich third-party vulnerability library entries"
+			"The NIST NVD Integration - API (CVE only) is active by default and runs daily",
+			"NVD integrations exclude CPE data and cannot enrich third-party vulnerability library entries",
+			"Each NVD integration feed is limited to vulnerabilities that share one CVSS base score"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
@@ -27336,12 +27336,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 22,
 		"prompt": "An analyst opens a Qualys-sourced vulnerable item and drills into the related third-party library entry. What relationship should they expect to find when NVD integration has run successfully?",
 		"choices": [
-			"The third-party entry references a CVE in the NVD library that enriches the vulnerable item context",
-			"The third-party entry stores only a hostname string with no link to any vulnerability library tables",
 			"The third-party entry replaces the configuration item and removes all CMDB relationships permanently",
+			"The third-party entry stores only a hostname string with no link to any vulnerability library tables",
+			"The third-party entry references a CVE in the NVD library that enriches the vulnerable item context",
 			"The third-party entry is identical to the NVD entry and cannot coexist in the same instance"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Third-party identifiers such as Qualys QIDs reference vendor library entries that in turn map to NVD CVE records when NVD integration data is present.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/nvd-vuln-integration.html"
@@ -27353,12 +27353,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 23,
 		"prompt": "During initial VR setup, an administrator schedules CWE data import alongside NVD jobs. Why is CWE enrichment valuable before scanner detections arrive?",
 		"choices": [
-			"CWE imports replace all third-party scanner integrations so Qualys and Tenable connectors are disabled",
-			"CWE records describe weakness categories that enrich prioritization and reference context for imported findings",
 			"CWE scheduling must run after every scanner import or vulnerable items cannot be created",
-			"CWE data is stored only in HR profiles and is unrelated to vulnerability remediation workflows"
+			"CWE data is stored only in HR profiles and is unrelated to vulnerability remediation workflows",
+			"CWE records describe weakness categories that enrich prioritization and reference context for imported findings",
+			"CWE imports replace all third-party scanner integrations so Qualys and Tenable connectors are disabled"
 		],
-		"correctIndex": 1,
+		"correctIndex": 2,
 		"explanation": "CWE integration imports weakness enumeration data that enriches vulnerability context, especially for Application Vulnerability Response and third-party library cross-references.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/nvd-vuln-integration.html"
@@ -27371,9 +27371,9 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "Microsoft TVM machine data is imported and must be tied to existing servers in the CMDB. Which configuration determines how asset identifiers map to configuration items?",
 		"choices": [
 			"CI lookup rules that define how third-party asset attributes match configuration items during import",
-			"Business rules on the incident table that auto-assign TVM findings to the service desk queue",
+			"Discovery patterns for SNMP printers that translate TVM hostnames into procurement asset tags",
 			"UI policies on the change form that hide the configuration item field from remediation owners",
-			"Discovery patterns for SNMP printers that translate TVM hostnames into procurement asset tags"
+			"Business rules on the incident table that auto-assign TVM findings to the service desk queue"
 		],
 		"correctIndex": 0,
 		"explanation": "Vulnerability Response uses CI lookup rules to match scanner-reported asset data with CMDB configuration items when vulnerable items are created.",
@@ -27387,12 +27387,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 25,
 		"prompt": "Qualys imports a detection for an IP address with no matching configuration item in the CMDB. What happens to the vulnerable item record?",
 		"choices": [
-			"The Qualys QID is rejected because third-party entries require a pre-existing authorized CI match",
 			"The detection is stored only as an email attachment and never inserted into VR tables",
-			"No vulnerable item is created until an agent manually creates a hardware asset in procurement",
-			"A vulnerable item is created with an unmatched CI placeholder until lookup rules or CMDB updates reconcile it"
+			"A vulnerable item is created with an unmatched CI placeholder until lookup rules or CMDB updates reconcile it",
+			"The Qualys QID is rejected because third-party entries require a pre-existing authorized CI match",
+			"No vulnerable item is created until an agent manually creates a hardware asset in procurement"
 		],
-		"correctIndex": 3,
+		"correctIndex": 1,
 		"explanation": "VR creates vulnerable items even when CI lookup fails, associating them with unmatched CIs until reconciliation or CMDB updates provide a definitive asset link.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/reapply-reconcile-unmatched-discovered-items.html"
@@ -27405,8 +27405,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "An engineer compares an NVD vulnerability library entry with a Qualys-sourced vulnerable item on the same server. How should they interpret the two records?",
 		"choices": [
 			"The NVD entry defines the CVE in the authoritative library; the vulnerable item is the flaw detected on that CI",
-			"The NVD entry and vulnerable item are duplicate records that must never coexist for one CVE on one host",
 			"The vulnerable item defines global CVE metadata while the NVD entry stores only the server hostname",
+			"The NVD entry and vulnerable item are duplicate records that must never coexist for one CVE on one host",
 			"The NVD entry replaces the vulnerable item once Qualys imports complete and deletes all VI history"
 		],
 		"correctIndex": 0,
@@ -27421,12 +27421,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 27,
 		"prompt": "Remediation owners complain that scanner imports omit vendor fix guidance on vulnerable item forms. Which system property enables parsing solution text from third-party integrations?",
 		"choices": [
-			"sn_vul.populate_scanner_solutions to parse remediation solution content from scanner integrations",
 			"glide.ui.autoclose.time to automatically close resolved incidents after the configured interval",
+			"sn_hr_core.batch_size to limit employee onboarding case creation during VR import windows",
 			"com.snc.sandbox.enable to route all VR imports through an isolated mid-server sandbox only",
-			"sn_hr_core.batch_size to limit employee onboarding case creation during VR import windows"
+			"sn_vul.populate_scanner_solutions to parse remediation solution content from scanner integrations"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "The sn_vul.populate_scanner_solutions property controls parsing of solution guidance supplied by supported third-party scanner integrations into VR records.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/c_VulnerabilityResponse.html"
@@ -27438,15 +27438,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 28,
 		"prompt": "Solution Management for Vulnerability Response is installed and the team must configure vendor fix content from Red Hat and Microsoft MSRC. Where is this configured in Setup Assistant?",
 		"choices": [
-			"Solution Integrations section below Scanner Integrations for supported vulnerability solution providers",
-			"Agent Workspace chat queue routing for external customer messaging channel escalations",
 			"Discovery classification criteria for identifying non-computer CI types such as racks",
-			"Employee Center onboarding checklist templates for new hire equipment provisioning tasks"
+			"Employee Center onboarding checklist templates for new hire equipment provisioning tasks",
+			"Solution Integrations section below Scanner Integrations for supported vulnerability solution providers",
+			"Agent Workspace chat queue routing for external customer messaging channel escalations"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "When Solution Management is installed, Setup Assistant exposes Solution Integrations to configure providers such as Red Hat and Microsoft Security Response Center.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/c_VulnerabilityResponse.html"
+			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/rapid-7-solution-management.html"
 		],
 		"domain": "Getting Data into Vulnerability Response"
 	},
@@ -27455,12 +27455,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 29,
 		"prompt": "An administrator reviews NVD integration records and notices a default run-as user on each scheduled job. Which value should remain unchanged per product guidance?",
 		"choices": [
+			"admin as a mandatory override on every integration so imports bypass all ACL restrictions",
 			"guest as the run-as user so unauthenticated scanner payloads can insert vulnerable items",
 			"itil as the run-as user because NVD jobs create standard ITIL incident records exclusively",
-			"VR.System as the configured run-as user for NVD and related vulnerability integration jobs",
-			"admin as a mandatory override on every integration so imports bypass all ACL restrictions"
+			"VR.System as the configured run-as user for NVD and related vulnerability integration jobs"
 		],
-		"correctIndex": 2,
+		"correctIndex": 3,
 		"explanation": "NVD integration documentation specifies VR.System as the default run-as user for integration records and advises administrators not to change that value.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/nvd-vuln-integration.html"
@@ -27472,12 +27472,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 30,
 		"prompt": "During a Tenable import, asset observations arrive before vulnerable items are created for matched configuration items. Which record type represents the pre-VI asset match state?",
 		"choices": [
-			"Change tasks that automatically implement patches before analysts review third-party entries",
 			"Catalog tasks that fulfill hardware refresh requests triggered by every open detection",
 			"Discovered items that store ingested asset observations matched or unmatched to CMDB CIs",
-			"Problem records that replace all vulnerable items when multiple scanners report the same CVE"
+			"Problem records that replace all vulnerable items when multiple scanners report the same CVE",
+			"Change tasks that automatically implement patches before analysts review third-party entries"
 		],
-		"correctIndex": 2,
+		"correctIndex": 1,
 		"explanation": "Discovered items represent scanner-ingested asset observations that are matched to CIs through lookup rules before or alongside vulnerable item creation.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/tenableIntegration.html"
@@ -27489,12 +27489,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 31,
 		"prompt": "CMDB updates add authoritative server records that should replace stale unmatched CIs on existing discovered items. Which action reapplies matching without waiting for a retired scheduled job?",
 		"choices": [
-			"Reapply Lookup Rules on filtered discovered items to reconcile unmatched CIs with updated CMDB data",
-			"Delete all third-party vulnerability entries so the next scanner cycle rebuilds the CMDB from scratch",
 			"Convert discovered items into knowledge articles and disable all CI lookup rules permanently",
-			"Run a full Qualys scan before any CMDB reconciliation because lookup rules cannot be re-run"
+			"Run a full Qualys scan before any CMDB reconciliation because lookup rules cannot be re-run",
+			"Reapply Lookup Rules on filtered discovered items to reconcile unmatched CIs with updated CMDB data",
+			"Delete all third-party vulnerability entries so the next scanner cycle rebuilds the CMDB from scratch"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Starting in recent VR releases, administrators can reapply CI lookup rules on selected discovered items to reconcile unmatched CIs when CMDB data changes.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/reapply-reconcile-unmatched-discovered-items.html"
@@ -27506,12 +27506,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 32,
 		"prompt": "Multiple scanner sources report the same CVE on overlapping assets with inconsistent field mappings. Which Security Operations integration practice reduces duplicate remediation effort?",
 		"choices": [
+			"Disable all ACLs on vulnerable item tables so every integration user can delete peer records",
 			"Store raw scanner XML only in attachments and avoid creating vulnerable item records entirely",
 			"Route every detection to Incident Management and skip Vulnerability Response normalization",
-			"Use vulnerability data frameworks with import sets and transforms rather than custom one-off scripts",
-			"Disable all ACLs on vulnerable item tables so every integration user can delete peer records"
+			"Use vulnerability data frameworks with import sets and transforms rather than custom one-off scripts"
 		],
-		"correctIndex": 2,
+		"correctIndex": 3,
 		"explanation": "Security Operations integration guidance recommends vulnerability data frameworks, import sets, and transforms to normalize and correlate multi-source scan data consistently.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/security-management/c_BestPractisesIntegrations.html"
@@ -27541,12 +27541,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 34,
 		"prompt": "An analyst traces a Qualys QID from a vulnerable item to the third-party library and then to NVD. What does this drill-down demonstrate about VR data enrichment?",
 		"choices": [
-			"NVD entries are deleted automatically whenever a third-party scanner import completes successfully",
 			"Third-party entries store CMDB serial numbers instead of vulnerability identifiers from any library",
 			"Vendor-specific identifiers chain to authoritative CVE metadata when NVD integration data is present",
-			"Qualys library entries cannot reference NVD CVE records under any supported integration scenario"
+			"Qualys library entries cannot reference NVD CVE records under any supported integration scenario",
+			"NVD entries are deleted automatically whenever a third-party scanner import completes successfully"
 		],
-		"correctIndex": 2,
+		"correctIndex": 1,
 		"explanation": "Third-party library entries such as Qualys QIDs reference CVE records in the NVD library, providing enriched context on vulnerable items after NVD import.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/nvd-vuln-integration.html"
@@ -27559,9 +27559,9 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "Microsoft TVM is configured with both full and delta machine vulnerability imports. What is the intended purpose of the delta import schedule?",
 		"choices": [
 			"Retrieve new, fixed, and updated vulnerability detections since the last full organization import",
-			"Replace the CMDB with a static export of TVM machine records that disables CI lookup rules",
 			"Import only CPE strings while excluding all CVE identifiers from the TVM recommendation API",
-			"Create change requests for every TVM machine record regardless of open vulnerability status"
+			"Create change requests for every TVM machine record regardless of open vulnerability status",
+			"Replace the CMDB with a static export of TVM machine records that disables CI lookup rules"
 		],
 		"correctIndex": 0,
 		"explanation": "The MS TVM delta machines vulnerabilities integration retrieves changes since the full import, including new, remediated, and updated detections across the estate.",
@@ -27575,12 +27575,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 36,
 		"prompt": "A Tenable.io administrator validates that plugin CPE data populates after imports complete. Where does Vulnerability Response store CPE associations for Tenable third-party entries?",
 		"choices": [
-			"CPE values populate related Common Platform Enumeration data on third-party vulnerability entries",
 			"CPE strings are stored only on HR employee profiles and cannot appear on vulnerability records",
-			"CPE imports bypass the Third-Party Vulnerability Entries table and write directly to incidents",
-			"CPE data replaces configuration item names in the CMDB during every Tenable integration run"
+			"CPE values populate related Common Platform Enumeration data on third-party vulnerability entries",
+			"CPE data replaces configuration item names in the CMDB during every Tenable integration run",
+			"CPE imports bypass the Third-Party Vulnerability Entries table and write directly to incidents"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"explanation": "Tenable integrations populate CPE associations on third-party vulnerability entries, supporting software identification and enrichment for prioritization.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/tenableIntegration.html"
@@ -27592,12 +27592,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 37,
 		"prompt": "After activating the NIST NVD CVE integration, an administrator needs to confirm the initial library load succeeded before enabling Qualys. Which task should they perform first?",
 		"choices": [
-			"Review NVD integration import run status to verify the scheduled CVE job completed successfully",
-			"Delete all CMDB server CIs so Qualys can recreate authoritative asset records from scan data",
 			"Disable VR.System on integration records to allow guest users to monitor import log attachments",
+			"Delete all CMDB server CIs so Qualys can recreate authoritative asset records from scan data",
+			"Review NVD integration import run status to verify the scheduled CVE job completed successfully",
 			"Convert every NVD entry into a change request before third-party scanner connectors are activated"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Administrators verify successful NVD data import by reviewing integration run status before importing third-party scanner detections that reference NVD libraries.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/nvd-vuln-integration.html"
@@ -27609,12 +27609,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 38,
 		"prompt": "When vulnerable item detections are auto-closed as Stale, how does state roll up from vulnerable items to the parent remediation task?",
 		"choices": [
-			"Any single Stale detection immediately deletes the remediation task and all related audit history",
-			"Open vulnerable items keep the remediation task open; all Stale VIs can close the task as Closed - Canceled",
 			"Remediation task state ignores vulnerable item changes until every scanner integration is disabled",
-			"Stale detections convert remediation tasks into change requests without additional approval steps"
+			"Stale detections convert remediation tasks into change requests without additional approval steps",
+			"Open vulnerable items keep the remediation task open; all Stale VIs can close the task as Closed - Canceled",
+			"Any single Stale detection immediately deletes the remediation task and all related audit history"
 		],
-		"correctIndex": 1,
+		"correctIndex": 2,
 		"explanation": "Roll-up precedence keeps remediation tasks open while any VI is Open; when all VIs are Closed - Stale the task can transition to Closed - Canceled.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/vr-setup-autoclose-detections.html"
@@ -27627,9 +27627,9 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "A remediation owner closes a remediation task after verifying patches across grouped vulnerable items. How does state roll down to associated vulnerable items?",
 		"choices": [
 			"Remediation task state changes can cascade to linked vulnerable items using configured roll-down logic",
-			"Vulnerable items remain in Open state permanently regardless of parent remediation task closure",
+			"Roll-down converts every vulnerable item into a hardware asset record in the procurement module",
 			"Roll-down deletes all third-party vulnerability library entries referenced by the grouped findings",
-			"Roll-down converts every vulnerable item into a hardware asset record in the procurement module"
+			"Vulnerable items remain in Open state permanently regardless of parent remediation task closure"
 		],
 		"correctIndex": 0,
 		"explanation": "Vulnerability Response synchronizes remediation task and vulnerable item states through roll-up and roll-down logic across the remediation lifecycle.",
@@ -27644,31 +27644,31 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "A remediation owner must schedule infrastructure patching through the standard change process. Which IT Remediation Workspace action supports that workflow?",
 		"choices": [
 			"Create a change request linked to the remediation task for CAB-approved maintenance execution",
-			"Author new NVD feed synchronization schedules and MID Server credential rotation tasks",
 			"Disable all assignment rules globally until the next full scanner import cycle completes",
+			"Author new NVD feed synchronization schedules and MID Server credential rotation tasks",
 			"Convert the vulnerable item into an employee HR case for internal payroll benefit review"
 		],
 		"correctIndex": 0,
 		"explanation": "The IT Remediation Workspace lets remediation owners create change requests linked to remediation tasks for governed patch deployment.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/security-management/it-remediation-workspace/it-remediation-workspace-landing-page.html"
+			"https://www.servicenow.com/docs/r/security-management/it-remediation-workspace/vr-ws-remed-task.html"
 		],
 		"domain": "Tools to Manage Vulnerability Response"
 	},
 	{
 		"trackCode": "CIS-VR",
 		"order": 41,
-		"prompt": "A coordinator must open a formal workflow to engage an external software vendor about a reported security defect. Which Vulnerability Response process applies?",
+		"prompt": "A coordinator needs to review vendor-reported software vulnerabilities and escalate matched asset findings for remediation. Which Vulnerability Response library workflow should they use?",
 		"choices": [
-			"Third-party security defect workflow to coordinate vendor communication and tracked remediation",
-			"Discovery schedule reconfiguration to scan vendor network segments from the MID Server",
-			"Catalog item publishing for employee laptop refresh requests submitted through Employee Center",
-			"Virtual Agent topics that reset employee passwords without vulnerability context"
+			"Rebuild Discovery schedules that scan only vendor office Wi-Fi networks from a MID Server",
+			"Author Virtual Agent topics that reset passwords without referencing vulnerability records",
+			"Publish a catalog item for employee laptop refresh requests through Employee Center",
+			"Open Third Party library entries, inspect related vulnerable items, and escalate matched findings for remediation"
 		],
-		"correctIndex": 0,
-		"explanation": "Vulnerability Response supports third-party security defect workflows so teams coordinate vendor remediation with tracked ownership and status.",
+		"correctIndex": 3,
+		"explanation": "Vulnerability Response documents identifying and escalating security issues in third-party software by reviewing Third Party library entries, related vulnerability entries, and linked vulnerable items before remediation. Discovery schedules, catalog laptop requests, and password Virtual Agent topics are unrelated to vendor defect escalation in VR.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/vulnerabillity-states.html"
+			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/escalate-sec-issue-3rdparty.html"
 		],
 		"domain": "Tools to Manage Vulnerability Response"
 	},
@@ -27677,15 +27677,16 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 42,
 		"prompt": "A VR program must route Linux server findings to the infrastructure team based on classification values. Which rule type should drive that routing?",
 		"choices": [
-			"Vulnerability assignment rules using classification and classification type fields on vulnerable items",
-			"Catalog client scripts that execute when end users submit standard service catalog requests",
 			"Discovery classification probes configured for SNMP-enabled network printer subnets",
-			"Facilities space management floor plans for office seating assignment tracking"
+			"Facilities space management floor plans for office seating assignment tracking",
+			"Vulnerability assignment rules with conditions on Classification and Classification type fields set earlier by classification rules",
+			"Catalog client scripts that execute when end users submit standard service catalog requests"
 		],
-		"correctIndex": 0,
-		"explanation": "Assignment rules evaluate vulnerable item attributes—including classification values set earlier—to route work to the correct remediation group.",
+		"correctIndex": 2,
+		"explanation": "Classification rules populate Classification and Classification type on records; assignment rules then route findings using filter conditions on vulnerable item attributes, including those classification fields. Catalog client scripts, Discovery printer probes, and facilities floor plans do not assign VR remediation ownership.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/security-management/sem-configure-assignment-rules.html"
+			"https://www.servicenow.com/docs/r/security-management/sem-configure-assignment-rules.html",
+			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/delete-vulnerability-classification-rule.html"
 		],
 		"domain": "Tools to Manage Vulnerability Response"
 	},
@@ -27694,12 +27695,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 43,
 		"prompt": "What do remediation task rules accomplish in Vulnerability Response?",
 		"choices": [
-			"Generate Performance Analytics indicators for CISO dashboard tiles without rule configuration",
 			"Replace assignment rules so every finding routes exclusively to the vulnerability admin persona",
-			"Import CVE metadata directly from the NVD feed without requiring MID Server connectivity",
-			"Automatically group vulnerable items into remediation tasks based on shared remediation context and group-by keys"
+			"Automatically group vulnerable items into remediation tasks based on shared remediation context and group-by keys",
+			"Generate Performance Analytics indicators for CISO dashboard tiles without rule configuration",
+			"Import CVE metadata directly from the NVD feed without requiring MID Server connectivity"
 		],
-		"correctIndex": 3,
+		"correctIndex": 1,
 		"explanation": "Remediation task rules create actionable task groupings so teams remediate related findings together using consistent ownership and fix patterns.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/security-management/sem-configure-remediation-task-rules.html"
@@ -27712,8 +27713,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "Remediation target rules calculate planned remediation deadlines from a selected date field on vulnerable items. Which date source is commonly configured?",
 		"choices": [
 			"First detected, last detected, or published date depending on organizational SLA policy",
-			"Scanner UI session login timestamp from the integration service account used for imports",
 			"Last password change date stored on the affected configuration item record in the CMDB",
+			"Scanner UI session login timestamp from the integration service account used for imports",
 			"Change request close code entered by the CAB approver group during post-implementation review"
 		],
 		"correctIndex": 0,
@@ -27728,12 +27729,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 45,
 		"prompt": "When multiple remediation target rules could match a vulnerable item, how does Vulnerability Response determine which rule applies?",
 		"choices": [
-			"Match First evaluates rules in sequence and applies the first matching rule by priority order",
 			"Random selection among all active rules assigns deadlines with equal probability weighting",
+			"Only rules authored by users holding sn_vul.vulnerability_admin execute on existing records",
 			"Every matching rule applies simultaneously and overwrites prior results regardless of sequence",
-			"Only rules authored by users holding sn_vul.vulnerability_admin execute on existing records"
+			"Match First evaluates rules in sequence and applies the first matching rule by priority order"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Match First execution stops at the first satisfied rule, giving administrators explicit control over which target date logic wins.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/security-management/sem-configure-remediation-target-rules.html"
@@ -27745,12 +27746,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 46,
 		"prompt": "Which workspace is designed for vulnerability managers to monitor exposure, prioritize work, and drive remediation efforts?",
 		"choices": [
-			"Vulnerability Manager Workspace with watch topics and remediation effort views",
-			"IT Remediation Workspace presenting prioritized remediation tasks to assigned owners",
 			"Employee Center portal where end users browse catalog items and submit requests",
-			"Change Management CAB workbench used to review and authorize scheduled changes"
+			"Change Management CAB workbench used to review and authorize scheduled changes",
+			"Vulnerability Manager Workspace with watch topics and remediation effort views",
+			"IT Remediation Workspace presenting prioritized remediation tasks to assigned owners"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "The Vulnerability Manager Workspace targets vulnerability program owners with strategic monitoring and prioritization capabilities.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/security-management/vulnerability-manager-workspace/vulnerability-manager-workspace-landing-page.html"
@@ -27762,12 +27763,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 47,
 		"prompt": "An IT engineer must view and update remediation tasks assigned to their group in the IT Remediation Workspace. Which role should be assigned?",
 		"choices": [
+			"sn_vul.vulnerability_admin",
 			"sn_customerservice.consumer",
 			"sn_change.change_manager",
-			"sn_vul.remediation_owner",
-			"sn_vul.vulnerability_admin"
+			"sn_vul.remediation_owner"
 		],
-		"correctIndex": 2,
+		"correctIndex": 3,
 		"explanation": "The sn_vul.remediation_owner persona role grants users access to remediation tasks and vulnerable items assigned to them or their groups in the IT Remediation Workspace.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/vr-persona-overview.html"
@@ -27796,15 +27797,15 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 49,
 		"prompt": "Which VR configuration types drive automated triage and routing on vulnerable items? (Choose two.)",
 		"choices": [
-			"Password expiration business rules",
 			"LDAP synchronization scheduled jobs",
 			"Classification rules applied during vulnerability entry ingestion",
-			"Assignment rules that route vulnerable items to remediation groups"
+			"Assignment rules that route vulnerable items to remediation groups",
+			"Password expiration business rules"
 		],
-		"correctIndex": 2,
+		"correctIndex": 1,
 		"correctIndexes": [
-			2,
-			3
+			1,
+			2
 		],
 		"questionType": "multi",
 		"explanation": "Classification rules categorize intake data and assignment rules route vulnerable items to remediation groups; password and LDAP jobs are unrelated platform functions.",
@@ -27819,12 +27820,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 50,
 		"prompt": "After bulk classification rule changes, why might VR administrators reapply assignment rules on existing vulnerable items?",
 		"choices": [
-			"Updated classification values require rerouting items to the correct remediation owner groups",
 			"Assignment rules cannot execute until every scanner integration has been permanently disabled",
-			"Reapply clears all closed vulnerability records from historical audit and reporting tables",
-			"Reapply removes CMDB relationships so configuration items can be rediscovered from scratch"
+			"Updated classification values require rerouting items to the correct remediation owner groups",
+			"Reapply removes CMDB relationships so configuration items can be rediscovered from scratch",
+			"Reapply clears all closed vulnerability records from historical audit and reporting tables"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"explanation": "When classification data changes, reapply assignment rules realigns ownership on open items without waiting for new scanner imports.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/security-management/sem-configure-assignment-rules.html"
@@ -27836,12 +27837,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 51,
 		"prompt": "When designing remediation task rules, which grouping principle keeps tasks actionable for remediation teams?",
 		"choices": [
-			"Group items sharing the same remediation action, owner group, and fix approach together",
-			"Create a separate remediation task for every individual finding regardless of similarity",
 			"Group exclusively by scanner import batch identifier taken from the source file name",
+			"Create a separate remediation task for every individual finding regardless of similarity",
+			"Group items sharing the same remediation action, owner group, and fix approach together",
 			"Group by alphabetical order of vulnerability short description text on each record"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Cohesive task groups let one team execute a single remediation pattern across many related vulnerable items.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/security-management/sem-configure-remediation-task-rules.html"
@@ -27853,54 +27854,52 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 52,
 		"prompt": "Remediation task rules support Match All and Match First execution modes. When should Match First be selected?",
 		"choices": [
-			"When every matching rule must create separate remediation tasks for the same vulnerable item",
-			"When rules are ordered by priority and only the first matching rule should create or update a task",
 			"When vulnerabilities are already marked false positive before grouping logic runs",
-			"When no assignment rule has ever executed on newly imported scanner findings"
+			"When no assignment rule has ever executed on newly imported scanner findings",
+			"When rules are ordered by priority and only the first matching rule should create or update a task",
+			"When every matching rule must create separate remediation tasks for the same vulnerable item"
 		],
-		"correctIndex": 1,
+		"correctIndex": 2,
 		"explanation": "Match First prevents lower-priority rules from overriding a higher-priority grouping decision on the same record.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/security-management/sem-configure-remediation-task-rules.html"
+			"https://www.servicenow.com/docs/r/security-management/sem-grouping-multiple-findings-remediation-tasks-processing.html"
 		],
 		"domain": "Tools to Manage Vulnerability Response"
 	},
 	{
 		"trackCode": "CIS-VR",
 		"order": 53,
-		"questionType": "multi",
 		"prompt": "Which three actions can remediation owners perform from the IT Remediation Workspace on assigned work? (Choose three.)",
 		"choices": [
 			"Request a vulnerability exception with approver sign-off and expiration tracking",
-			"Create a change request linked to the remediation task for governed patch deployment",
+			"Configure NVD feed synchronization schedules and MID Server credential stores",
 			"Request a false positive with a documented reason on the vulnerable item or remediation task",
-			"Configure NVD feed synchronization schedules and MID Server credential stores"
+			"Create a change request linked to the remediation task for governed patch deployment"
 		],
 		"correctIndex": 0,
-		"correctIndexes": [
-			0,
-			1,
-			2
-		],
 		"explanation": "Remediation owners request exceptions, create linked change requests, and request false positives from the IT Remediation Workspace; NVD configuration remains an admin function.",
 		"sourceUrls": [
-			"https://www.servicenow.com/docs/r/security-management/it-remediation-workspace/it-remediation-workspace-landing-page.html",
-			"https://www.servicenow.com/docs/r/security-management/it-remediation-workspace/vr-ws-request-exception.html",
 			"https://www.servicenow.com/docs/r/security-management/it-remediation-workspace/vr-ws-mark-fp.html"
 		],
-		"domain": "Tools to Manage Vulnerability Response"
+		"domain": "Tools to Manage Vulnerability Response",
+		"questionType": "multi",
+		"correctIndexes": [
+			0,
+			2,
+			3
+		]
 	},
 	{
 		"trackCode": "CIS-VR",
 		"order": 54,
 		"prompt": "An administrator changed a remediation task rule and needs existing Open remediation tasks rebuilt to match. Which documented action applies the change?",
 		"choices": [
-			"Enable sn_sec_rem.rerun_task_rules before any rule can evaluate new scanner findings",
 			"Disable all assignment rules so remediation tasks regenerate without grouping filters",
-			"Clear the CMDB class cache so vulnerable items lose their configuration item references",
-			"Use the Reapply action on the remediation task rule to delete and recreate Open tasks for that rule"
+			"Use the Reapply action on the remediation task rule to delete and recreate Open tasks for that rule",
+			"Enable sn_sec_rem.rerun_task_rules before any rule can evaluate new scanner findings",
+			"Clear the CMDB class cache so vulnerable items lose their configuration item references"
 		],
-		"correctIndex": 3,
+		"correctIndex": 1,
 		"explanation": "Docs describe Reapply on the remediation task rule page: it deletes and recreates Open remediation tasks created by that rule. There is no documented sn_sec_rem.rerun_task_rules property for this behavior.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/vulnerability-groups.html",
@@ -27913,12 +27912,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 55,
 		"prompt": "Scanner integrations stop reporting a detection but the vulnerable item remains open in VR. Which automation module closes aged detections that are no longer found?",
 		"choices": [
-			"Auto-Close Stale Detections based on configured age and search criteria for inactive findings",
-			"Manual CSV export to spreadsheet as the only supported stale detection cleanup method",
 			"Immediate deletion of all third-party vulnerability library entries from the instance",
+			"Manual CSV export to spreadsheet as the only supported stale detection cleanup method",
+			"Auto-Close Stale Detections based on configured age and search criteria for inactive findings",
 			"Automatic conversion of every open item into a priority-one incident without review"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Auto-Close Stale Detections automatically closes detections not recently found by scanner integrations, reducing active backlog on stale exposure.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/vr-setup-autoclose-detections.html"
@@ -27930,12 +27929,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 56,
 		"prompt": "A VR administrator wants classification values applied automatically when new third-party vulnerability entries are inserted. Which platform mechanism executes that logic at intake?",
 		"choices": [
-			"UI policies that hide the short description field on unrelated incident request forms",
-			"Classification rules evaluated during vulnerability entry ingestion before assignment routing",
 			"Discovery patterns classifying SNMP printers without creating vulnerable item records",
-			"Catalog client scripts validating employee-facing service catalog item variable inputs"
+			"Catalog client scripts validating employee-facing service catalog item variable inputs",
+			"Classification rules evaluated during vulnerability entry ingestion before assignment routing",
+			"UI policies that hide the short description field on unrelated incident request forms"
 		],
-		"correctIndex": 1,
+		"correctIndex": 2,
 		"explanation": "Classification rules run at ingestion to categorize findings so downstream assignment and remediation configurations use stable field values.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/security-management/sem-configure-classification-rules.html"
@@ -27948,9 +27947,9 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "After patch orchestration completes, verification status must update vulnerable items without manual analyst entry. Which automation pattern closes the remediation loop?",
 		"choices": [
 			"Bidirectional status updates from patch tools that confirm verification on vulnerable items",
-			"One-way export of vulnerability lists with no return status from execution tools",
+			"Disabling all change management integration plugins on production instances permanently",
 			"Weekly manual spreadsheet reconciliation as the only feedback channel for closure",
-			"Disabling all change management integration plugins on production instances permanently"
+			"One-way export of vulnerability lists with no return status from execution tools"
 		],
 		"correctIndex": 0,
 		"explanation": "Return status from patch orchestration tools keeps vulnerability records accurate and supports automated close-out after verified remediation.",
@@ -27964,12 +27963,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 58,
 		"prompt": "What happens when an approved vulnerability exception request reaches its expiration date in VR?",
 		"choices": [
-			"All remediation tasks close as false positives regardless of actual exposure status",
 			"The exception converts to a permanent approved state without further governance review",
-			"The system permanently deletes all related vulnerable items from the production database",
-			"Impacted vulnerable items or remediation tasks revert to the Open state for renewed remediation"
+			"Impacted vulnerable items or remediation tasks revert to the Open state for renewed remediation",
+			"All remediation tasks close as false positives regardless of actual exposure status",
+			"The system permanently deletes all related vulnerable items from the production database"
 		],
-		"correctIndex": 3,
+		"correctIndex": 1,
 		"explanation": "When an exception expires, the impacted VI or remediation task reverts to Open so accepted risk cannot continue without renewed remediation or a new exception.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/vr-exception-management.html"
@@ -27982,8 +27981,8 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "Known accepted-risk scenarios should defer manual exception submissions for matching findings. Which VR rule type automates that deferral?",
 		"choices": [
 			"Exception rules that defer or accept risk for matching items during scheduled evaluation",
-			"Discovery schedules that scan vendor subnets and populate CMDB configuration items",
 			"Password reset workflows that rotate integration service account credentials nightly",
+			"Discovery schedules that scan vendor subnets and populate CMDB configuration items",
 			"Catalog fulfillment flows that process employee hardware requests from the portal"
 		],
 		"correctIndex": 0,
@@ -27998,12 +27997,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 60,
 		"prompt": "When remediation verification confirms a patch succeeded, which close-out state reflects resolved exposure?",
 		"choices": [
-			"Move vulnerable items to a closed resolved state with verification evidence captured on the record",
-			"Reopen all related remediation tasks to New regardless of confirmed patch implementation outcome",
 			"Mark items false positive without validating scanner rescan or verification results",
-			"Delete remediation task records entirely to prevent future audit trail review by leadership"
+			"Delete remediation task records entirely to prevent future audit trail review by leadership",
+			"Move vulnerable items to a closed resolved state with verification evidence captured on the record",
+			"Reopen all related remediation tasks to New regardless of confirmed patch implementation outcome"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Verified remediation should close vulnerable items in a resolved state that documents how exposure was eliminated.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/vulnerabillity-states.html"
@@ -28015,12 +28014,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 61,
 		"prompt": "Vulnerable items deferred through an approved exception should remain in which state until expiration or remediation?",
 		"choices": [
+			"Closed false positive with no reference to the exception approval chain or approver",
 			"Cancelled with all CI relationships removed from the CMDB permanently",
 			"New with assignment cleared and SLA timers permanently disabled on the item",
-			"Deferred with links to the active exception record and tracked expiration date",
-			"Closed false positive with no reference to the exception approval chain or approver"
+			"Deferred with links to the active exception record and tracked expiration date"
 		],
-		"correctIndex": 2,
+		"correctIndex": 3,
 		"explanation": "Deferred state preserves visibility of accepted risk while maintaining traceability to the governing exception record.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/vr-exception-management.html"
@@ -28049,14 +28048,14 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 63,
 		"prompt": "Which VR automation features reduce manual triage on incoming findings? (Choose three.)",
 		"choices": [
-			"Remediation task rules that group items into shared tasks",
 			"Manual CSV export to spreadsheet for offline review",
 			"Classification rules that categorize scanner intake records",
-			"Assignment rules that set remediation owner groups on items"
+			"Assignment rules that set remediation owner groups on items",
+			"Remediation task rules that group items into shared tasks"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"correctIndexes": [
-			0,
+			1,
 			2,
 			3
 		],
@@ -28074,9 +28073,9 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "When a remediation task moves to Closed / False Positive, what should happen to in-flight false positive approval records?",
 		"choices": [
 			"Related state change approval records in Draft or In Review should be cancelled",
-			"Approval records auto-advance to Approved without analyst or approver intervention",
 			"Approval records convert to change requests linked to the CAB schedule board",
-			"Approval records duplicate onto every unrelated open vulnerable item in the queue"
+			"Approval records duplicate onto every unrelated open vulnerable item in the queue",
+			"Approval records auto-advance to Approved without analyst or approver intervention"
 		],
 		"correctIndex": 0,
 		"explanation": "Cancelling stale approvals keeps vulnerable item state aligned with the remediation task disposition and prevents orphaned review work.",
@@ -28090,12 +28089,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 65,
 		"prompt": "A VR architect wants patch orchestration tools to push verification results back into vulnerable item records automatically. Which integration approach should they implement?",
 		"choices": [
-			"Bidirectional integration using Integration Hub spokes or REST APIs that update item state after patch verification",
 			"One-way CSV export of open findings with no return channel from execution tools",
-			"Manual analyst closure of every item without scanner or orchestration confirmation",
-			"Disabling change management plugins so patch tools cannot reference remediation tasks"
+			"Bidirectional integration using Integration Hub spokes or REST APIs that update item state after patch verification",
+			"Disabling change management plugins so patch tools cannot reference remediation tasks",
+			"Manual analyst closure of every item without scanner or orchestration confirmation"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"explanation": "Bidirectional integrations return patch and verification status from orchestration tools so VR records reflect actual remediation outcomes.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/security-management/c_BestPractisesIntegrations.html"
@@ -28107,12 +28106,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 66,
 		"prompt": "Which control prevents vulnerability exceptions from becoming unmanaged accepted risk over time?",
 		"choices": [
-			"Mandatory expiration dates with scheduled review and reapproval workflows",
-			"Unlimited auto-renewal of any approved exception without documented justification",
 			"Removal of approver roles so requesters can self-approve critical findings",
+			"Unlimited auto-renewal of any approved exception without documented justification",
+			"Mandatory expiration dates with scheduled review and reapproval workflows",
 			"Archiving exception records immediately after initial submission before any review"
 		],
-		"correctIndex": 0,
+		"correctIndex": 2,
 		"explanation": "Time-bounded exceptions with review cadence ensure leadership reassesses risk instead of silently extending exposure.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/vr-exception-management.html"
@@ -28124,12 +28123,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 67,
 		"prompt": "An Exposure Assessment background job was launched with incorrect parameters and is running too long. Which action can a Vulnerability Admin take?",
 		"choices": [
-			"Disable every active assignment rule globally until the next scheduled scanner import finishes",
 			"Convert all open vulnerable items to false positives without documented close reasons",
 			"Manually cancel the Exposure Assessment background job to terminate the run and update substate",
-			"Delete all CMDB configuration items referenced by the assessment to force immediate completion"
+			"Delete all CMDB configuration items referenced by the assessment to force immediate completion",
+			"Disable every active assignment rule globally until the next scheduled scanner import finishes"
 		],
-		"correctIndex": 2,
+		"correctIndex": 1,
 		"explanation": "Vulnerability Admins and Event Managers can cancel Exposure Assessment background jobs triggered with incorrect parameters or excessive runtime.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/c_VulnerabilityResponse.html"
@@ -28142,9 +28141,9 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "What is the role of state change approval records in VR exception and false positive workflows?",
 		"choices": [
 			"They capture approver decisions before vulnerable items change to deferred or closed states",
-			"They replace vulnerability calculators when scoring critical internet-facing asset findings",
 			"They import NVD CVE feeds when the primary integration fails during ingestion cycles",
-			"They map scanner credentials to MID Server capability definitions during discovery runs"
+			"They map scanner credentials to MID Server capability definitions during discovery runs",
+			"They replace vulnerability calculators when scoring critical internet-facing asset findings"
 		],
 		"correctIndex": 0,
 		"explanation": "State change approvals enforce governance checkpoints before disposition changes take effect on vulnerable items.",
@@ -28158,12 +28157,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 69,
 		"prompt": "Which indicator suggests VR automation is configured effectively across the remediation lifecycle?",
 		"choices": [
-			"Findings flow from intake through rules to assigned remediation tasks with minimal manual rework",
 			"Every finding requires manual reassignment regardless of classification or ownership data",
-			"Exception backlogs grow without review while critical items remain deferred indefinitely",
-			"Scanner imports succeed but no assignment or grouping rules execute on new records"
+			"Findings flow from intake through rules to assigned remediation tasks with minimal manual rework",
+			"Scanner imports succeed but no assignment or grouping rules execute on new records",
+			"Exception backlogs grow without review while critical items remain deferred indefinitely"
 		],
-		"correctIndex": 0,
+		"correctIndex": 1,
 		"explanation": "Effective automation reduces handoffs and keeps newly imported findings progressing through governed workflows.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/vulnerabillity-states.html"
@@ -28175,12 +28174,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 70,
 		"prompt": "Which dashboard view helps vulnerability managers track open risk by severity and aging?",
 		"choices": [
-			"Hardware asset lifecycle dashboards for procurement renewal forecasting by cost center",
-			"Vulnerability Response overview dashboards with severity breakdowns and age metrics",
 			"Change collision detection reports for normal change scheduling across maintenance windows",
-			"Employee onboarding journey analytics for HR case completion rates by department"
+			"Employee onboarding journey analytics for HR case completion rates by department",
+			"Vulnerability Response overview dashboards with severity breakdowns and age metrics",
+			"Hardware asset lifecycle dashboards for procurement renewal forecasting by cost center"
 		],
-		"correctIndex": 1,
+		"correctIndex": 2,
 		"explanation": "VR overview dashboards surface severity distribution and aging so managers can spot backlog concentration and SLA risk.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/security-management/vulnerability-manager-workspace/vr-ws-dashboards.html"
@@ -28193,9 +28192,9 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "How does Performance Analytics support continuous improvement in a Vulnerability Response program?",
 		"choices": [
 			"It trends KPIs such as mean time to remediate, SLA attainment, and backlog reduction over time",
-			"It replaces all vulnerability assignment rules with manual analyst triage queues permanently",
+			"It eliminates the need for exception management when indicator scores fall below threshold",
 			"It imports scanner findings directly without requiring integration credentials or field mapping",
-			"It eliminates the need for exception management when indicator scores fall below threshold"
+			"It replaces all vulnerability assignment rules with manual analyst triage queues permanently"
 		],
 		"correctIndex": 0,
 		"explanation": "Performance Analytics provides time-series visibility into remediation velocity and policy adherence for program tuning.",
@@ -28209,12 +28208,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 72,
 		"prompt": "Which report best helps security leadership compare remediation progress across business services?",
 		"choices": [
-			"List of unassigned hardware asset tags exported without any vulnerability context included",
 			"Total number of MID Server JVM heap allocations per discovery schedule on each subnet",
-			"Count of active UI themes configured on the instance segmented by department code",
-			"Vulnerability status by business service with SLA breach and aging metrics by owner group"
+			"Vulnerability status by business service with SLA breach and aging metrics by owner group",
+			"List of unassigned hardware asset tags exported without any vulnerability context included",
+			"Count of active UI themes configured on the instance segmented by department code"
 		],
-		"correctIndex": 3,
+		"correctIndex": 1,
 		"explanation": "Service-level vulnerability reporting shows where risk concentrates and which owner groups need escalation support.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/security-management/vulnerability-response/vulnerability-mgmnt-pa-dashboard.html"
@@ -28227,14 +28226,14 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"prompt": "The CISO wants executive visibility into VR program health without operational detail overload. Which dashboard design choices meet that need? (Choose two.)",
 		"choices": [
 			"High-level overview tiles summarizing critical exposure and remediation trend direction",
-			"Single clear health indicators such as overdue critical backlog or SLA attainment rate",
 			"Full editable remediation task lists with every technical field exposed on one screen",
+			"Single clear health indicators such as overdue critical backlog or SLA attainment rate",
 			"Raw scanner export files attached as the primary visualization on the landing page"
 		],
 		"correctIndex": 0,
 		"correctIndexes": [
 			0,
-			1
+			2
 		],
 		"questionType": "multi",
 		"explanation": "Executive consumers need concise overview tiles and a small set of decisive health indicators rather than operational record-level detail.",
@@ -28248,12 +28247,12 @@ export const DEV_PRACTICE_QUESTIONS = [
 		"order": 74,
 		"prompt": "Which visualization best communicates whether the organization is reducing critical vulnerability exposure over time?",
 		"choices": [
-			"Trend lines showing open critical and high findings with closure velocity overlays",
 			"Pie chart of scanner vendor names without severity or age context on the dashboard",
+			"Single static count of total CMDB configuration items regardless of vulnerability state",
 			"Table of inactive user accounts who have never logged into the VR application module",
-			"Single static count of total CMDB configuration items regardless of vulnerability state"
+			"Trend lines showing open critical and high findings with closure velocity overlays"
 		],
-		"correctIndex": 0,
+		"correctIndex": 3,
 		"explanation": "Time-based severity trends combined with closure velocity show whether remediation capacity is outpacing newly discovered critical risk.",
 		"sourceUrls": [
 			"https://www.servicenow.com/docs/r/security-management/vulnerability-manager-workspace/vr-ws-dashboards.html"
