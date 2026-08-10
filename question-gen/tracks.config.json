@@ -1,0 +1,347 @@
+{
+  "docsFamily": "australia",
+  "buffer": 30,
+  "tracks": [
+    {
+      "examSlug": "csa",
+      "trackCode": "CSA",
+      "officialName": "Certified System Administrator",
+      "docsFamily": "australia",
+      "officialCount": 60,
+      "targetCount": 90,
+      "publications": [
+        "platform-administration",
+        "now-platform",
+        "platform-user-interface",
+        "platform-security",
+        "integrate-applications",
+        "it-service-management",
+        "knowledge-management"
+      ],
+      "domains": [],
+      "keywords": []
+    },
+    {
+      "examSlug": "cad",
+      "trackCode": "CAD",
+      "officialName": "Certified Application Developer",
+      "docsFamily": "australia",
+      "officialCount": 60,
+      "targetCount": 90,
+      "publications": [
+        "application-development",
+        "hyperautomation-low-code",
+        "build-workflows",
+        "integrate-applications",
+        "api-reference"
+      ],
+      "domains": [],
+      "keywords": []
+    },
+    {
+      "examSlug": "cis-itsm",
+      "trackCode": "CIS-ITSM",
+      "officialName": "Certified Implementation Specialist - IT Service Management",
+      "docsFamily": "australia",
+      "officialCount": 60,
+      "targetCount": 90,
+      "publications": [
+        "it-service-management",
+        "it-operations-management"
+      ],
+      "domains": [],
+      "keywords": []
+    },
+    {
+      "examSlug": "cis-df",
+      "trackCode": "CIS-DF",
+      "officialName": "Certified Implementation Specialist - Data Foundations (CMDB and CSDM)",
+      "docsFamily": "australia",
+      "officialCount": 75,
+      "targetCount": 105,
+      "publications": [
+        "it-operations-management",
+        "configuration-management-database",
+        "common-service-data-model",
+        "integrate-applications",
+        "discovery"
+      ],
+      "domains": [],
+      "keywords": []
+    },
+    {
+      "examSlug": "cis-pa",
+      "trackCode": "CIS-PA",
+      "officialName": "Certified Implementation Specialist - Platform Analytics",
+      "docsFamily": "australia",
+      "officialCount": 60,
+      "targetCount": 90,
+      "publications": [
+        "now-intelligence",
+        "platform-administration"
+      ],
+      "domains": [],
+      "keywords": []
+    },
+    {
+      "examSlug": "cis-sp",
+      "trackCode": "CIS-SP",
+      "officialName": "Certified Implementation Specialist - Service Provider",
+      "docsFamily": "australia",
+      "officialCount": 45,
+      "targetCount": 75,
+      "publications": [
+        "platform-administration",
+        "integrate-applications",
+        "it-service-management",
+        "knowledge-management",
+        "service-portal"
+      ],
+      "domains": [],
+      "keywords": []
+    },
+    {
+      "examSlug": "cpoa",
+      "trackCode": "CPOA",
+      "officialName": "Certified Platform Owner Associate",
+      "docsFamily": "australia",
+      "officialCount": 70,
+      "targetCount": 100,
+      "publications": [
+        "platform-administration",
+        "now-platform",
+        "impact",
+        "application-development",
+        "platform-security",
+        "integrate-applications",
+        "cloud-governance-suite",
+        "servicenow-platform",
+        "it-operations-management"
+      ],
+      "domains": [],
+      "keywords": []
+    },
+    {
+      "examSlug": "cpop",
+      "trackCode": "CPOP",
+      "officialName": "Certified Platform Owner Professional",
+      "docsFamily": "australia",
+      "officialCount": 70,
+      "targetCount": 100,
+      "publications": [
+        "platform-administration",
+        "platform-security",
+        "application-development",
+        "cloud-governance-suite",
+        "impact",
+        "servicenow-platform"
+      ],
+      "domains": [],
+      "keywords": []
+    },
+    {
+      "examSlug": "cpoe",
+      "trackCode": "CPOE",
+      "officialName": "Certified Platform Owner Expert",
+      "docsFamily": "australia",
+      "officialCount": 192,
+      "targetCount": 222,
+      "publications": [
+        "platform-administration",
+        "platform-security",
+        "servicenow-platform",
+        "impact",
+        "cloud-governance-suite"
+      ],
+      "domains": [],
+      "keywords": []
+    },
+    {
+      "examSlug": "cis-disco",
+      "trackCode": "CIS-DISCO",
+      "officialName": "Certified Implementation Specialist - Discovery",
+      "docsFamily": "australia",
+      "officialCount": 45,
+      "targetCount": 75,
+      "publications": [
+        "it-operations-management",
+        "discovery"
+      ],
+      "domains": [],
+      "keywords": []
+    },
+    {
+      "examSlug": "cis-em",
+      "trackCode": "CIS-EM",
+      "officialName": "Certified Implementation Specialist - Event Management",
+      "docsFamily": "australia",
+      "officialCount": 30,
+      "targetCount": 60,
+      "publications": [
+        "it-operations-management",
+        "event-management"
+      ],
+      "domains": [],
+      "keywords": []
+    },
+    {
+      "examSlug": "cis-ham",
+      "trackCode": "CIS-HAM",
+      "officialName": "Certified Implementation Specialist - Hardware Asset Management",
+      "docsFamily": "australia",
+      "officialCount": 60,
+      "targetCount": 90,
+      "publications": [
+        "it-asset-management",
+        "hardware-asset-management"
+      ],
+      "domains": [],
+      "keywords": []
+    },
+    {
+      "examSlug": "cis-rc",
+      "trackCode": "CIS-RC",
+      "officialName": "Certified Implementation Specialist - Risk and Compliance",
+      "docsFamily": "australia",
+      "officialCount": 60,
+      "targetCount": 90,
+      "publications": [
+        "governance-risk-compliance"
+      ],
+      "domains": [],
+      "keywords": []
+    },
+    {
+      "examSlug": "cis-sir",
+      "trackCode": "CIS-SIR",
+      "officialName": "Certified Implementation Specialist - Security Incident Response",
+      "docsFamily": "australia",
+      "officialCount": 60,
+      "targetCount": 90,
+      "publications": [
+        "security-management",
+        "security-incident-response"
+      ],
+      "domains": [],
+      "keywords": []
+    },
+    {
+      "examSlug": "cis-sm",
+      "trackCode": "CIS-SM",
+      "officialName": "Certified Implementation Specialist - Service Mapping",
+      "docsFamily": "australia",
+      "officialCount": 60,
+      "targetCount": 90,
+      "publications": [
+        "it-operations-management",
+        "service-mapping",
+        "discovery"
+      ],
+      "domains": [],
+      "keywords": []
+    },
+    {
+      "examSlug": "cis-sam",
+      "trackCode": "CIS-SAM",
+      "officialName": "Certified Implementation Specialist - Software Asset Management",
+      "docsFamily": "australia",
+      "officialCount": 60,
+      "targetCount": 90,
+      "publications": [
+        "it-asset-management",
+        "software-asset-management"
+      ],
+      "domains": [],
+      "keywords": []
+    },
+    {
+      "examSlug": "cis-spm",
+      "trackCode": "CIS-SPM",
+      "officialName": "Certified Implementation Specialist - Strategic Portfolio Management",
+      "docsFamily": "australia",
+      "officialCount": 60,
+      "targetCount": 90,
+      "publications": [
+        "it-business-management",
+        "strategic-portfolio-management"
+      ],
+      "domains": [],
+      "keywords": []
+    },
+    {
+      "examSlug": "cis-tprm",
+      "trackCode": "CIS-TPRM",
+      "officialName": "Certified Implementation Specialist - Third-Party Risk Management",
+      "docsFamily": "australia",
+      "officialCount": 60,
+      "targetCount": 90,
+      "publications": [
+        "governance-risk-compliance",
+        "third-party-risk-management"
+      ],
+      "domains": [],
+      "keywords": []
+    },
+    {
+      "examSlug": "cis-vr",
+      "trackCode": "CIS-VR",
+      "officialName": "Certified Implementation Specialist - Vulnerability Response",
+      "docsFamily": "australia",
+      "officialCount": 45,
+      "targetCount": 75,
+      "publications": [
+        "security-management",
+        "now-intelligence"
+      ],
+      "domains": [],
+      "keywords": [],
+      "docsNote": "VR product docs are nested under markdown/security-management/ (vulnerability-response, application-vulnerability-response, container-vulnerability-response, vulnerability-manager-workspace, it-remediation-workspace)."
+    },
+    {
+      "examSlug": "cis-csm",
+      "trackCode": "CIS-CSM",
+      "officialName": "Certified Implementation Specialist - Customer Service Management",
+      "docsFamily": "australia",
+      "officialCount": 60,
+      "targetCount": 90,
+      "publications": [
+        "customer-service-management",
+        "knowledge-management",
+        "now-intelligence"
+      ],
+      "domains": [],
+      "keywords": []
+    },
+    {
+      "examSlug": "cis-fsm",
+      "trackCode": "CIS-FSM",
+      "officialName": "Certified Implementation Specialist - Field Service Management",
+      "docsFamily": "australia",
+      "officialCount": 60,
+      "targetCount": 90,
+      "publications": [
+        "field-service-management",
+        "now-platform",
+        "mobile-platform"
+      ],
+      "domains": [],
+      "keywords": []
+    },
+    {
+      "examSlug": "cis-hr",
+      "trackCode": "CIS-HR",
+      "officialName": "Certified Implementation Specialist - Human Resources",
+      "docsFamily": "australia",
+      "officialCount": 60,
+      "targetCount": 90,
+      "publications": [
+        "employee-service-management",
+        "human-resources",
+        "employee-center",
+        "platform-security"
+      ],
+      "domains": [],
+      "keywords": []
+    }
+  ]
+}
