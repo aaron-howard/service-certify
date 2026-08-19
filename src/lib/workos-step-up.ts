@@ -1,3 +1,5 @@
+import { safeInternalRedirect } from '$lib/safeRedirect';
+
 /** WorkOS step-up intents supported by `/auth/step-up`. */
 export const STEP_UP_INTENTS = ['delete-account'] as const;
 
@@ -19,8 +21,9 @@ export function stepUpRedirectPath(intent: StepUpIntent): string {
 
 export function stepUpStartPath(intent: StepUpIntent, redirectPath?: string): string {
 	const params = new URLSearchParams({ intent });
-	if (redirectPath?.startsWith('/')) {
-		params.set('redirect', redirectPath);
+	const safeRedirect = safeInternalRedirect(redirectPath);
+	if (safeRedirect) {
+		params.set('redirect', safeRedirect);
 	}
 	return `/auth/step-up?${params.toString()}`;
 }
