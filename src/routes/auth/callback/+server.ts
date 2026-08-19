@@ -7,6 +7,7 @@ import {
 	toOAuthProviderSlug
 } from '$lib/workos.server';
 import { buildConvexUserSyncPayload } from '$lib/auth.server';
+import { safeInternalRedirect } from '$lib/safeRedirect';
 import { setWorkOsAuthCookies } from '$lib/workos-session';
 
 export const GET: RequestHandler = async ({ url, cookies }) => {
@@ -98,8 +99,8 @@ export const GET: RequestHandler = async ({ url, cookies }) => {
 		throw redirect(302, '/auth/signin?error=authentication_failed');
 	}
 
-	const postAuthRedirect = cookies.get('auth_redirect');
-	if (postAuthRedirect?.startsWith('/')) {
+	const postAuthRedirect = safeInternalRedirect(cookies.get('auth_redirect'));
+	if (postAuthRedirect) {
 		cookies.delete('auth_redirect', { path: '/' });
 		throw redirect(302, postAuthRedirect);
 	}
