@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Fixed
+- Moderate SvelteKit Accept-header ReDoS (GHSA-29g2-3rmr-qm68) by bumping `@sveltejs/kit` to 2.70.3
+- High nanoid infinite-loop advisory (GHSA-2v37-7h3g-55p8) by pinning `nanoid` to 3.3.18 (transitive via Vite → PostCSS)
+
 ## [0.1.0] - 2026-08-03
 
 First soft-launch MVP release. Production continues to deploy from `main` on Vercel;
