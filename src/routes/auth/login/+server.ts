@@ -1,5 +1,6 @@
 import { redirect } from '@sveltejs/kit';
 import type { RequestHandler } from '@sveltejs/kit';
+import { safeInternalRedirect } from '$lib/safeRedirect';
 import {
 	getOAuthAuthorizationUrl,
 	isWorkOSConfigured,
@@ -17,8 +18,8 @@ export const GET: RequestHandler = async ({ url, cookies }) => {
 		throw redirect(302, '/auth/signin?error=invalid_provider');
 	}
 
-	const postAuthRedirect = url.searchParams.get('redirect');
-	if (postAuthRedirect?.startsWith('/')) {
+	const postAuthRedirect = safeInternalRedirect(url.searchParams.get('redirect'));
+	if (postAuthRedirect) {
 		cookies.set('auth_redirect', postAuthRedirect, {
 			httpOnly: true,
 			secure: url.protocol === 'https:',
