@@ -55,7 +55,7 @@
 		"@testing-library/user-event": "^14.6.1",
 		"@types/node": "^26.1.1",
 		"happy-dom": "^20.10.6",
-		"jsdom": "^29.1.1",
+		"jsdom": "^30.0.1",
 		"patch-package": "^8.0.1",
 		"sentry": "^0.40.0",
 		"svelte": "^5.56.4",
