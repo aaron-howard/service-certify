@@ -10,6 +10,7 @@ import {
 	stepUpRedirectPath,
 	type StepUpIntent
 } from '$lib/workos-step-up';
+import { safeInternalRedirect } from '$lib/safeRedirect';
 import { isAccessTokenExpired } from '$lib/workos-session';
 
 const STEP_UP_COOKIE = 'auth_step_up_intent';
@@ -32,12 +33,8 @@ export const GET: RequestHandler = async ({ url, cookies }) => {
 	}
 	const intent: StepUpIntent = intentParam;
 
-	const postAuthRedirect = url.searchParams.get('redirect');
 	const defaultRedirect = stepUpRedirectPath(intent);
-	const redirectPath =
-		postAuthRedirect?.startsWith('/') && !postAuthRedirect.startsWith('//')
-			? postAuthRedirect
-			: defaultRedirect;
+	const redirectPath = safeInternalRedirect(url.searchParams.get('redirect')) ?? defaultRedirect;
 
 	cookies.set('auth_redirect', redirectPath, {
 		httpOnly: true,
