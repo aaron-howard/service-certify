@@ -84,14 +84,19 @@ function examDomainsFromBlueprint(trackCode: string, bankSize: number): ExamDoma
 	const weights = source.domains.map((d) => Number.parseFloat(d.weight));
 	const highlightIndex = weights.indexOf(Math.max(...weights));
 
-	return source.domains.map((domain, index) => ({
-		name: domain.name,
-		weight: domain.weight,
-		questionCount: domainQuestionLabel(domain.weight, bankSize),
-		description: `Practice items covering ${domain.name} objectives from the official ${trackCode} exam blueprint.`,
-		icon: DOMAIN_ICONS[index % DOMAIN_ICONS.length]!,
-		...(index === highlightIndex ? { highlight: true as const } : {})
-	}));
+	return source.domains.map((domain, index) => {
+		const row: ExamDomain = {
+			name: domain.name,
+			weight: domain.weight,
+			questionCount: domainQuestionLabel(domain.weight, bankSize),
+			description: `Practice items covering ${domain.name} objectives from the official ${trackCode} exam blueprint.`,
+			icon: DOMAIN_ICONS[index % DOMAIN_ICONS.length]!
+		};
+		if (index === highlightIndex) {
+			return { ...row, highlight: true as const };
+		}
+		return row;
+	});
 }
 
 export { certificationTracks };
@@ -162,7 +167,10 @@ function baseExamFromTrack(
 	};
 }
 
-const examDetailOverrides: Partial<Record<string, Partial<Exam>>> = {
+type ExamDetailOverrideKey = 'cis-itsm' | 'cad' | 'cis-spm' | 'csa' | 'cis-hr';
+type ExamDetailOverrides = Partial<Record<ExamDetailOverrideKey, Partial<Exam>>>;
+
+const examDetailOverrides = {
 	'cis-itsm': {
 		title: 'CIS-ITSM Implementation Exam Simulator',
 		shortTitle: 'Certified Implementation Specialist - IT Service Management',
@@ -262,12 +270,16 @@ const examDetailOverrides: Partial<Record<string, Partial<Exam>>> = {
 		studentsPrepared: 412,
 		level: 'Professional'
 	}
-};
+} satisfies ExamDetailOverrides;
 
 export const exams: Exam[] = certificationTracks.map((t, i) => {
 	const slug = slugFromCode(t.code);
 	const base = baseExamFromTrack(t, i);
-	const override = examDetailOverrides[slug];
+	const override =
+		slug in examDetailOverrides
+			? // SAFETY: `in` check confirms slug is an ExamDetailOverrideKey.
+				examDetailOverrides[slug as ExamDetailOverrideKey]
+			: undefined;
 	return override ? { ...base, ...override } : base;
 });
 

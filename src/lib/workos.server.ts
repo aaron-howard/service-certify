@@ -21,9 +21,9 @@ export type OAuthProviderSlug = keyof typeof OAUTH_PROVIDERS;
 export function toOAuthProviderSlug(
 	value: string | undefined | null
 ): OAuthProviderSlug | undefined {
-	return value && Object.hasOwn(OAUTH_PROVIDERS, value)
-		? (value as OAuthProviderSlug)
-		: undefined;
+	if (!value || !Object.hasOwn(OAUTH_PROVIDERS, value)) return undefined;
+	// SAFETY: Object.hasOwn confirms value is a key of OAUTH_PROVIDERS.
+	return value as OAuthProviderSlug;
 }
 
 export function isWorkOSConfigured(): boolean {

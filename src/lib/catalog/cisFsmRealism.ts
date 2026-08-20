@@ -1,6 +1,6 @@
 /** CIS-FSM (Certified Implementation Specialist - Field Service Management) exam-realism rules. */
 
-import type { QuestionType } from './questionTypes';
+import type { RealismQuestionRow } from './realismQuestionRow';
 
 /** Bank distribution for 90 questions scaled 1.5x from the 60-question official exam. */
 
@@ -81,17 +81,7 @@ export const BANNED_STEM_PATTERNS = [
 
 export const STEM_OPENER_CAP = 4;
 
-export type CisFsmQuestionRow = {
-	trackCode: string;
-	order: number;
-	prompt: string;
-	choices: string[];
-	sourceUrls: string[];
-	domain?: string;
-	questionType?: QuestionType;
-	correctIndexes?: number[];
-	correctIndex?: number;
-};
+export type CisFsmQuestionRow = RealismQuestionRow;
 
 export function fourWordOpener(text: string): string {
 	return text.trim().split(/\s+/).slice(0, 4).join(' ').toLowerCase();

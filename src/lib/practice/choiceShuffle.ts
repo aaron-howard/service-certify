@@ -42,11 +42,23 @@ export function originalIndexToDisplay(
 	return permutation.indexOf(originalIndex);
 }
 
+export type ShuffledChoices = {
+	choices: string[];
+	permutation: number[];
+};
+
+export type ShuffledMatch = {
+	matchLeftItems: string[];
+	matchRightItems: string[];
+	matchLeftPermutation: number[];
+	matchRightPermutation: number[];
+};
+
 export function shuffleChoicesForDisplay(
 	choices: string[],
 	sessionSeed: string,
 	questionOrder: number
-): { choices: string[]; permutation: number[] } {
+): ShuffledChoices {
 	const permutation = choicePermutationForSeed(choices.length, `${sessionSeed}:${questionOrder}`);
 	return {
 		choices: applyChoicePermutation(choices, permutation),
@@ -60,12 +72,7 @@ export function shuffleMatchForDisplay(
 	rightItems: string[],
 	sessionSeed: string,
 	questionOrder: number
-): {
-	matchLeftItems: string[];
-	matchRightItems: string[];
-	matchLeftPermutation: number[];
-	matchRightPermutation: number[];
-} {
+): ShuffledMatch {
 	const matchLeftPermutation = choicePermutationForSeed(
 		leftItems.length,
 		`${sessionSeed}:matchL:${questionOrder}`

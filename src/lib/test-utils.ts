@@ -2,51 +2,10 @@
  * Common test utilities and helpers for Service Certify tests.
  */
 
-/** Mock Convex context for testing mutations/queries */
-export interface MockConvexContext {
-	db: {
-		query: (table: string) => MockQuery;
-		get: (table: string, id: string) => Promise<unknown>;
-	};
-	auth: {
-		getUserIdentity: () => Promise<{ subject: string } | null>;
-	};
-}
-
-interface MockQuery {
-	withIndex: (index: string, fn: (q: any) => any) => MockQuery;
-	collect: () => Promise<any[]>;
-	unique: () => Promise<any>;
-	eq: (field: string, value: unknown) => MockQuery;
-}
-
-/**
- * Create a mock Convex context for testing.
- * Override methods as needed for your tests.
- */
-export function createMockConvexContext(): MockConvexContext {
-	const mockQuery: MockQuery = {
-		withIndex: () => mockQuery,
-		collect: async () => [],
-		unique: async () => undefined,
-		eq: () => mockQuery
-	};
-
-	return {
-		db: {
-			query: () => mockQuery,
-			get: async () => undefined
-		},
-		auth: {
-			getUserIdentity: async () => null
-		}
-	};
-}
-
 /**
  * Create mock practice questions for testing.
  */
-export function createMockQuestion(overrides = {}) {
+export function createMockQuestion(overrides: Record<string, string | number | string[]> = {}) {
 	return {
 		_id: 'q1',
 		_creationTime: Date.now(),
@@ -64,7 +23,7 @@ export function createMockQuestion(overrides = {}) {
 /**
  * Create mock certification track for testing.
  */
-export function createMockTrack(overrides = {}) {
+export function createMockTrack(overrides: Record<string, string | number> = {}) {
 	return {
 		_id: 'track-1',
 		_creationTime: Date.now(),

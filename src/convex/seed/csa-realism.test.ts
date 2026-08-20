@@ -1,3 +1,4 @@
+import { bumpDomainCount, zeroDomainCounts } from '$lib/catalog/domainCounts';
 import { describe, expect, it } from 'vitest';
 import { DEV_PRACTICE_QUESTIONS } from '../../convex/seed/devQuestionBank';
 import {
@@ -72,18 +73,16 @@ describe('CSA v2 realism (full track)', () => {
 	});
 
 	it('tags each question with a blueprint domain and hits bank quotas', () => {
-		const domainCounts = Object.fromEntries(
-			Object.keys(CSA_DOMAIN_TARGETS).map((d) => [d, 0])
-		) as Record<string, number>;
+		const domainCounts = zeroDomainCounts(CSA_DOMAIN_TARGETS);
 
 		for (const q of proofBatch) {
 			expect(q.domain).toBeTruthy();
 			expect(q.domain! in CSA_DOMAIN_TARGETS).toBe(true);
-			domainCounts[q.domain!] = (domainCounts[q.domain!] ?? 0) + 1;
+			bumpDomainCount(domainCounts, q.domain);
 		}
 
 		for (const [domain, target] of Object.entries(CSA_DOMAIN_TARGETS)) {
-			expect(domainCounts[domain]).toBe(target);
+			expect(domainCounts.get(domain)).toBe(target);
 		}
 	});
 

@@ -7,7 +7,11 @@ export type StepUpIntent = (typeof STEP_UP_INTENTS)[number];
 export const DELETE_ACCOUNT_STEP_UP_MAX_AGE_SECONDS = 300;
 
 export function isStepUpIntent(value: string | null): value is StepUpIntent {
-	return value !== null && (STEP_UP_INTENTS as readonly string[]).includes(value);
+	if (value === null) return false;
+	for (const intent of STEP_UP_INTENTS) {
+		if (intent === value) return true;
+	}
+	return false;
 }
 
 export function stepUpRedirectPath(intent: StepUpIntent): string {

@@ -40,12 +40,26 @@ function createAuthedClient(workosToken: string): ConvexHttpClient | null {
 	return client;
 }
 
+export type ConvexQueryClient = {
+	query: ConvexHttpClient['query'];
+	mutation: ConvexHttpClient['mutation'];
+};
+
+export type ConvexServerDeps = {
+	createAuthedClient: (workosToken: string) => ConvexQueryClient | null;
+};
+
+const defaultConvexServerDeps: ConvexServerDeps = {
+	createAuthedClient
+};
+
 /** Read-only current user from Convex (no mutation). */
 export async function getConvexCurrentUser(
-	workosToken: string
+	workosToken: string,
+	deps: ConvexServerDeps = defaultConvexServerDeps
 ): Promise<ConvexUserSession | null> {
 	if (isAccessTokenExpired(workosToken)) return null;
-	const convex = createAuthedClient(workosToken);
+	const convex = deps.createAuthedClient(workosToken);
 	if (!convex) return null;
 
 	try {
@@ -67,10 +81,11 @@ export async function getConvexCurrentUser(
 
 /** Practice progress for the signed-in user (SSR dashboard). */
 export async function listProgressForCurrentUser(
-	workosToken: string
+	workosToken: string,
+	deps: ConvexServerDeps = defaultConvexServerDeps
 ): Promise<UserProgressRow[]> {
 	if (isAccessTokenExpired(workosToken)) return [];
-	const convex = createAuthedClient(workosToken);
+	const convex = deps.createAuthedClient(workosToken);
 	if (!convex) return [];
 
 	try {
@@ -81,9 +96,12 @@ export async function listProgressForCurrentUser(
 	}
 }
 
-export async function syncUserToConvex(args: ConvexUserSyncArgs): Promise<void> {
+export async function syncUserToConvex(
+	args: ConvexUserSyncArgs,
+	deps: ConvexServerDeps = defaultConvexServerDeps
+): Promise<void> {
 	const { workosToken, ...profile } = args;
-	const convex = createAuthedClient(workosToken);
+	const convex = deps.createAuthedClient(workosToken);
 	if (!convex) {
 		console.error(
 			'syncUserToConvex skipped: PUBLIC_CONVEX_URL is not set in SvelteKit env (.env.local or Vercel env vars)'
@@ -103,14 +121,20 @@ export async function syncUserToConvex(args: ConvexUserSyncArgs): Promise<void> 
  * Prefer a read-only Convex lookup; only mutate when the user row is missing.
  * Cuts layout TTFB by avoiding createOrUpdateUser on every authenticated page load.
  */
-export async function resolveConvexUser(args: ConvexUserSyncArgs): Promise<ConvexUserSession> {
-	const existing = await getConvexCurrentUser(args.workosToken);
+export async function resolveConvexUser(
+	args: ConvexUserSyncArgs,
+	deps: ConvexServerDeps = defaultConvexServerDeps
+): Promise<ConvexUserSession> {
+	const existing = await getConvexCurrentUser(args.workosToken, deps);
 	if (existing) return existing;
-	return ensureConvexUser(args);
+	return ensureConvexUser(args, deps);
 }
 
 /** Sync profile to Convex and return the stored user (creates or updates). */
-export async function ensureConvexUser(args: ConvexUserSyncArgs): Promise<ConvexUserSession> {
+export async function ensureConvexUser(
+	args: ConvexUserSyncArgs,
+	deps: ConvexServerDeps = defaultConvexServerDeps
+): Promise<ConvexUserSession> {
 	const { workosToken, ...profile } = args;
 	if (isAccessTokenExpired(workosToken)) {
 		return {
@@ -121,7 +145,7 @@ export async function ensureConvexUser(args: ConvexUserSyncArgs): Promise<Convex
 			provider: profile.provider
 		};
 	}
-	const convex = createAuthedClient(workosToken);
+	const convex = deps.createAuthedClient(workosToken);
 	if (!convex) return { role: 'user', email: profile.email };
 
 	const baseSession = {

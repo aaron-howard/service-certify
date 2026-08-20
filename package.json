@@ -27,6 +27,9 @@
 		"prepare": "svelte-kit sync || echo ''",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+		"lint": "oxlint",
+		"lint:anti-slop": "oxlint",
+
 		"verify:workos-env": "node scripts/verify-workos-env.mjs",
 		"verify:upstash": "node scripts/verify-upstash-ratelimit.mjs",
 		"verify:convex-auth-env": "node scripts/verify-convex-auth-env.mjs",
@@ -45,6 +48,7 @@
 	},
 	"devDependencies": {
 		"@axe-core/playwright": "^4.12.1",
+		"@oxlint/plugins": "^1.78.0",
 		"@playwright/test": "^1.61.1",
 		"@sveltejs/adapter-vercel": "^6.3.4",
 		"@sveltejs/kit": "^2.69.2",
@@ -55,6 +59,7 @@
 		"@types/node": "^26.1.1",
 		"happy-dom": "^20.10.6",
 		"jsdom": "^29.1.1",
+		"oxlint": "^1.78.0",
 		"patch-package": "^8.0.1",
 		"sentry": "^0.40.0",
 		"svelte": "^5.56.4",

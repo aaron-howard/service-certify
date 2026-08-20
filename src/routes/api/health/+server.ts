@@ -1,5 +1,7 @@
 import { getAppRevision, getAppVersion, getAppVersionId } from '$lib/appVersion';
+import { readProcessEnv } from '$lib/parse';
 import { rateLimit, RateLimitError } from '$lib/rateLimit';
+import { env as publicEnv } from '$env/dynamic/public';
 import type { RequestHandler } from '@sveltejs/kit';
 
 interface HealthResponse {
@@ -24,6 +26,10 @@ interface HealthResponse {
 		};
 	};
 }
+
+type NodeProcessLike = {
+	uptime?: () => number;
+};
 
 export const GET: RequestHandler = async ({ request }): Promise<Response> => {
 	const startTime = Date.now();
@@ -59,10 +65,15 @@ export const GET: RequestHandler = async ({ request }): Promise<Response> => {
 		rateLimiterMessage = error instanceof Error ? error.message : 'Rate limiter unavailable';
 	}
 
-	const proc = (globalThis as any).process;
-	const uptime = proc?.uptime ? Math.floor(proc.uptime()) : 0;
-	const nodeEnv = proc?.env?.NODE_ENV || 'unknown';
-	const convexUrl = proc?.env?.PUBLIC_CONVEX_URL;
+	const envMap = readProcessEnv();
+	let uptime = 0;
+	if ('process' in globalThis) {
+		// SAFETY: Node attaches process on globalThis; optional uptime() after the `in` check.
+		const proc = (globalThis as typeof globalThis & { process?: NodeProcessLike }).process;
+		if (proc?.uptime) uptime = Math.floor(proc.uptime());
+	}
+	const nodeEnv = envMap?.NODE_ENV || 'unknown';
+	const convexUrl = publicEnv.PUBLIC_CONVEX_URL || envMap?.PUBLIC_CONVEX_URL;
 
 	const response: HealthResponse = {
 		status: 'ok',

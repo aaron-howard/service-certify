@@ -15,11 +15,11 @@
 	let dialogEl = $state<HTMLDivElement | null>(null);
 	let previousFocus = $state<HTMLElement | null>(null);
 
-	const statusClass: Record<QuestionStatus, string> = {
+	const statusClass = {
 		unanswered: 'border-outline-variant/40 bg-surface-container-high text-on-surface-variant',
 		answered: 'border-secondary/40 bg-secondary-container/30 text-primary',
 		flagged: 'border-amber-500/50 bg-amber-500/10 text-primary'
-	};
+	} as const satisfies Record<QuestionStatus, string>;
 
 	$effect(() => {
 		if (!open) {

@@ -11,6 +11,12 @@ export type PracticeQuestionRow = {
 	matchRightItems?: string[];
 };
 
+type PracticeListQueryArgs = {
+	trackCode: string;
+	mode: 'sample' | 'full';
+	sessionSeed?: string;
+};
+
 /** Load practice questions with the user's WorkOS JWT (server-side, httpOnly cookie). */
 export async function loadPracticeQuestions(args: {
 	trackCode: string;
@@ -32,9 +38,13 @@ export async function loadPracticeQuestions(args: {
 		client.setAuth(args.workosToken);
 	}
 
-	return await client.query(api.practiceQuestions.listByTrackCode, {
+	const queryArgs: PracticeListQueryArgs = {
 		trackCode: args.trackCode,
-		mode: args.mode,
-		...(args.sessionSeed ? { sessionSeed: args.sessionSeed } : {})
-	});
+		mode: args.mode
+	};
+	if (args.sessionSeed) {
+		queryArgs.sessionSeed = args.sessionSeed;
+	}
+
+	return await client.query(api.practiceQuestions.listByTrackCode, queryArgs);
 }

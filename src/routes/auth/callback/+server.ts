@@ -79,18 +79,18 @@ export const GET: RequestHandler = async ({ url, cookies }) => {
 			const syncMessage =
 				syncError instanceof Error
 					? syncError.message
-					: typeof syncError === 'string'
-						? syncError
+					: Object.prototype.toString.call(syncError) === '[object String]'
+						? String(syncError)
 						: '';
 			captureException(syncError, {
 				phase: 'oauth_convex_sync',
-				errorCode: /NoAuthProvider/i.test(syncMessage) ? 'NoAuthProvider' : undefined,
-				jwtIss: jwtDiagnostics.iss,
+				errorCode: /NoAuthProvider/i.test(syncMessage) ? 'NoAuthProvider' : null,
+				jwtIss: jwtDiagnostics.iss ?? null,
 				// Never log the raw audience (it is the client ID); only whether it was present.
 				jwtHasAud: jwtDiagnostics.hasAud,
 				hint: !jwtDiagnostics.hasAud
 					? 'WorkOS JWT missing aud claim; set JWT template aud to WORKOS_CLIENT_ID'
-					: undefined
+					: null
 			});
 		}
 	} catch (err) {

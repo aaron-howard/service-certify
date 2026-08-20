@@ -17,6 +17,15 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
+const tag = Object.prototype.toString;
+function readString(value) {
+	if (tag.call(value) !== '[object String]') return null;
+	return String(value);
+}
+function isNumberValue(value) {
+	return tag.call(value) === '[object Number]';
+}
+
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.join(__dirname, '..');
 const outPath = path.join(root, 'src', 'convex', 'seed', 'devQuestionBank.ts');
@@ -123,7 +132,7 @@ function extractLargestJsonArrayFromJsonl(filePath) {
 		}
 		if (o.role !== 'assistant') continue;
 		const t = o.message?.content?.[0]?.text;
-		if (typeof t !== 'string') continue;
+		if (readString(t) === null) continue;
 		const arr = parseFirstJsonArray(t);
 		if (Array.isArray(arr) && (!best || arr.length > best.length)) best = arr;
 	}
@@ -139,8 +148,9 @@ function readExistingBank() {
 	if (markerAt < 0) return [];
 	const start = raw.indexOf('[', markerAt);
 	const castEnd = raw.lastIndexOf('] as unknown as DevPracticeQuestionRow[]');
+	const singleCastEnd = raw.lastIndexOf('] as DevPracticeQuestionRow[]');
 	const plainEnd = raw.lastIndexOf('];');
-	const end = castEnd >= 0 ? castEnd : plainEnd;
+	const end = castEnd >= 0 ? castEnd : singleCastEnd >= 0 ? singleCastEnd : plainEnd;
 	if (start < 0 || end < 0) return [];
 	return JSON.parse(raw.slice(start, end + 1));
 }
@@ -177,7 +187,7 @@ function resolveBatchFiles() {
 }
 
 function validateQuestion(q, { warnDuplicates = true } = {}) {
-	if (!q.trackCode || typeof q.order !== 'number') {
+	if (!q.trackCode || !isNumberValue(q.order)) {
 		throw new Error('missing trackCode/order');
 	}
 	const questionType = q.questionType ?? 'single';
@@ -328,7 +338,9 @@ function writeBank(all) {
 import type { DevPracticeQuestionRow } from './devQuestionBank.types';
 
 /** Dev question bank; merge batches: \`node scripts/extract-questions-from-transcripts.mjs --merge-batches\` */
-export const DEV_PRACTICE_QUESTIONS = ${JSON.stringify(all, null, '\t')} as unknown as DevPracticeQuestionRow[];
+export const DEV_PRACTICE_QUESTIONS =
+	// SAFETY: Generated bank JSON; file is @ts-nocheck due to TS2590; rows match DevPracticeQuestionRow.
+	${JSON.stringify(all, null, '\t')} as DevPracticeQuestionRow[];
 `;
 	fs.writeFileSync(outPath, body, 'utf8');
 	console.log('Wrote', outPath, 'count=', all.length);
@@ -362,7 +374,8 @@ if (mergeBatches) {
 	validateBank(merged, {
 		expectedPerTrack: envInt('EXPECTED_PER_TRACK'),
 		minPerTrack: envInt('MIN_PER_TRACK'),
-		maxPerTrack: envInt('MAX_PER_TRACK')
+		maxPerTrack: envInt('MAX_PER_TRACK'),
+		tracksInBatch
 	});
 	writeBank(merged);
 } else {

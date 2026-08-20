@@ -116,6 +116,7 @@ export async function expirePracticeTimerDraft(
 	await page.evaluate((storageKey) => {
 		const raw = localStorage.getItem(storageKey);
 		if (!raw) throw new Error('No practice draft to expire');
+		// SAFETY: Practice drafts are JSON we wrote; remaining/phase are the timer fields we mutate.
 		const draft = JSON.parse(raw) as { remaining: number; phase: string };
 		draft.remaining = 0;
 		draft.phase = 'live';

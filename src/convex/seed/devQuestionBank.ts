@@ -2,7 +2,9 @@
 import type { DevPracticeQuestionRow } from './devQuestionBank.types';
 
 /** Dev question bank; merge batches: `node scripts/extract-questions-from-transcripts.mjs --merge-batches` */
-export const DEV_PRACTICE_QUESTIONS = [
+export const DEV_PRACTICE_QUESTIONS =
+	// SAFETY: Generated bank JSON; file is @ts-nocheck due to TS2590; rows match DevPracticeQuestionRow.
+	[
 	{
 		"trackCode": "CAD",
 		"order": 0,
@@ -39826,4 +39828,4 @@ export const DEV_PRACTICE_QUESTIONS = [
 		],
 		"domain": "Data Migration and Integration"
 	}
-] as unknown as DevPracticeQuestionRow[];
+] as DevPracticeQuestionRow[];

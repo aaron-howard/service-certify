@@ -14,17 +14,22 @@
 		return `/auth/login?${params.toString()}`;
 	};
 
-	const errorMessages: Record<string, string> = {
+	const errorMessages = {
 		workos_not_configured: 'WorkOS is not configured on the server. Add WORKOS_API_KEY and WORKOS_CLIENT_ID to .env.local.',
 		invalid_provider: 'That sign-in provider is not supported.',
 		no_code: 'Sign-in was cancelled or no authorization code was returned.',
 		authentication_failed: 'Sign-in failed. Check WorkOS redirect URIs and enabled providers.',
 		access_denied: 'Sign-in was cancelled.'
-	};
+	} as const;
 
-	const errorMessage = $derived(
-		data.error ? (errorMessages[data.error] ?? `Sign-in error: ${data.error}`) : null
-	);
+	const errorMessage = $derived.by(() => {
+		if (!data.error) return null;
+		if (Object.hasOwn(errorMessages, data.error)) {
+			// SAFETY: Object.hasOwn confirmed data.error is a key of errorMessages.
+			return errorMessages[data.error as keyof typeof errorMessages];
+		}
+		return `Sign-in error: ${data.error}`;
+	});
 </script>
 
 <svelte:head>

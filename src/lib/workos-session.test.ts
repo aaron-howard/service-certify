@@ -21,7 +21,7 @@ function mockCookies(overrides: Partial<Pick<Cookies, 'get' | 'set' | 'delete'>>
 	};
 }
 
-function jwtWithClaims(claims: Record<string, unknown>): string {
+function jwtWithClaims(claims: Record<string, string | number | boolean | null>): string {
 	const header = Buffer.from(JSON.stringify({ alg: 'none', typ: 'JWT' })).toString('base64url');
 	const payload = Buffer.from(JSON.stringify(claims)).toString('base64url');
 	return `${header}.${payload}.sig`;

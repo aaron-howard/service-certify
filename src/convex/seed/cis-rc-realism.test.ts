@@ -1,7 +1,7 @@
+import { bumpDomainCount, zeroDomainCounts } from '$lib/catalog/domainCounts';
 import { describe, expect, it } from 'vitest';
 import { DEV_PRACTICE_QUESTIONS } from '../../convex/seed/devQuestionBank';
 import {
-	type CisRcQuestionRow,
 	CIS_RC_BANK_SIZE,
 	CIS_RC_DOMAIN_TARGETS,
 	domainForOrder,
@@ -21,7 +21,7 @@ describe('CIS-RC v2 realism', () => {
 	});
 
 	it('passes CIS-RC realism validation', () => {
-		expect(validateCisRcTrack(rows as CisRcQuestionRow[])).toEqual([]);
+		expect(validateCisRcTrack(rows)).toEqual([]);
 	});
 
 	it('meets scenario-style minimum across the v2 bank', () => {
@@ -30,15 +30,13 @@ describe('CIS-RC v2 realism', () => {
 	});
 
 	it('tags each question with the expected domain for its order', () => {
-		const domainCounts = Object.fromEntries(
-			Object.keys(CIS_RC_DOMAIN_TARGETS).map((d) => [d, 0])
-		) as Record<string, number>;
+		const domainCounts = zeroDomainCounts(CIS_RC_DOMAIN_TARGETS);
 		for (const q of rows) {
 			expect(q.domain).toBe(domainForOrder(q.order));
-			domainCounts[q.domain!]++;
+			bumpDomainCount(domainCounts, q.domain);
 		}
 		for (const [domain, target] of Object.entries(CIS_RC_DOMAIN_TARGETS)) {
-			expect(domainCounts[domain]).toBe(target);
+			expect(domainCounts.get(domain)).toBe(target);
 		}
 	});
 

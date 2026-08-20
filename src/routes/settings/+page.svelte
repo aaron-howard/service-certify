@@ -2,11 +2,12 @@
 	import { browser } from '$app/environment';
 	import { goto } from '$app/navigation';
 	import { env } from '$env/dynamic/public';
+	import { readString } from '$lib/parse';
 
 	let { data } = $props();
 
-	const convexConfigured =
-		typeof env.PUBLIC_CONVEX_URL === 'string' && env.PUBLIC_CONVEX_URL.length > 0;
+	const convexUrlFromEnv = readString(env.PUBLIC_CONVEX_URL);
+	const convexConfigured = Boolean(convexUrlFromEnv && convexUrlFromEnv.length > 0);
 
 	let deleting = $state(false);
 	let deleteError = $state<string | null>(null);
@@ -34,7 +35,9 @@
 		deleteError = null;
 		try {
 			const response = await fetch('/api/account/delete', { method: 'POST' });
-			const body = (await response.json()) as {
+			const bodyUnknown: unknown = await response.json();
+			// SAFETY: delete API returns optional error/message/stepUpUrl string fields.
+			const body = bodyUnknown as {
 				error?: string;
 				message?: string;
 				stepUpUrl?: string;

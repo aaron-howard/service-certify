@@ -1,5 +1,6 @@
 import { Redis } from '@upstash/redis';
 import { env } from '$env/dynamic/private';
+import { isPlainObject, readFiniteNumber, type UntypedInput } from './parse';
 
 /**
  * Rate limiter using Upstash Redis with sliding window algorithm.
@@ -76,6 +77,13 @@ function fallbackWhenUnavailable(maxRequests: number, windowSeconds: number) {
 	return unavailableRateLimitResult(maxRequests, windowSeconds);
 }
 
+/** Upstash zrange withScores returns `{ score, member }` objects. */
+function scoreFromZRangeEntry(entry: UntypedInput): number {
+	if (!isPlainObject(entry)) return 0;
+	return readFiniteNumber(entry.score) ?? 0;
+}
+
+
 /**
  * Env values pasted from a dotenv file often keep their surrounding quotes, and
  * Upstash rejects `Bearer "token"` with an opaque `WRONGPASS` error. Strip the
@@ -90,10 +98,20 @@ export function sanitizeCredential(value: string | undefined | null): string {
 	return quoted ? trimmed.slice(1, -1).trim() : trimmed;
 }
 
+/** True when an Upstash REST URL is usable (http or https). */
+export function isValidUpstashRestUrl(url: string): boolean {
+	return /^https?:\/\//.test(url);
+}
+
+/** True when an Upstash error message indicates bad credentials. */
+export function isUpstashAuthFailureMessage(message: string): boolean {
+	return /WRONGPASS|NOPERM|unauthorized/i.test(message);
+}
+
 /** Log Upstash failures once per instance, calling out credential problems explicitly. */
-function logRedisFailure(error: unknown) {
-	const message = error instanceof Error ? error.message : String(error);
-	const isAuthFailure = /WRONGPASS|NOPERM|unauthorized/i.test(message);
+function logRedisFailure(error: Error | string) {
+	const message = error instanceof Error ? error.message : error;
+	const isAuthFailure = isUpstashAuthFailureMessage(message);
 
 	if (isAuthFailure && !warnedRedisFailure) {
 		warnedRedisFailure = true;
@@ -132,7 +150,7 @@ export function initRateLimit() {
 		return;
 	}
 
-	if (!/^https?:\/\//.test(url)) {
+	if (!isValidUpstashRestUrl(url)) {
 		console.error(
 			`Rate limiting unavailable: UPSTASH_REDIS_REST_URL must start with http:// or https:// (got "${url.slice(0, 12)}…").`
 		);
@@ -199,10 +217,14 @@ export async function checkRateLimit(
 
 		// Calculate when window resets (oldest entry + windowSeconds)
 		const oldest = await redis.zrange(key, 0, 0, { withScores: true });
+		const oldestEntry = oldest[0];
 		const resetIn =
-			oldest.length > 0
+			oldestEntry !== undefined
 				? Math.ceil(
-						(((oldest[0] as { score?: number }).score as number) +
+						(scoreFromZRangeEntry(
+							// SAFETY: withScores returns scored member objects from Upstash.
+							oldestEntry as UntypedInput
+						) +
 							windowSeconds * 1000 -
 							now) /
 							1000
@@ -217,7 +239,7 @@ export async function checkRateLimit(
 			outcome: allowed ? 'allowed' : 'limit_exceeded'
 		};
 	} catch (error) {
-		logRedisFailure(error);
+		logRedisFailure(error instanceof Error ? error : String(error));
 		return fallbackWhenUnavailable(maxRequests, windowSeconds);
 	}
 }
@@ -295,10 +317,14 @@ export async function getRateLimitStatus(
 
 		// Get oldest entry for reset time
 		const oldest = await redis.zrange(key, 0, 0, { withScores: true });
+		const oldestEntry = oldest[0];
 		const resetIn =
-			oldest.length > 0
+			oldestEntry !== undefined
 				? Math.ceil(
-						(((oldest[0] as { score?: number }).score as number) +
+						(scoreFromZRangeEntry(
+							// SAFETY: withScores returns scored member objects from Upstash.
+							oldestEntry as UntypedInput
+						) +
 							windowSeconds * 1000 -
 							now) /
 							1000
@@ -313,7 +339,7 @@ export async function getRateLimitStatus(
 			outcome: allowed ? 'allowed' : 'limit_exceeded'
 		};
 	} catch (error) {
-		logRedisFailure(error);
+		logRedisFailure(error instanceof Error ? error : String(error));
 		return fallbackWhenUnavailable(maxRequests, windowSeconds);
 	}
 }

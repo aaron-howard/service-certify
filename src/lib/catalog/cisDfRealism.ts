@@ -1,6 +1,6 @@
 /** CIS-DF (Data Foundations — CMDB and CSDM) exam-realism rules. */
 
-import type { MatchPair, QuestionType } from './questionTypes';
+import type { RealismQuestionRow } from './realismQuestionRow';
 
 /** Bank distribution for 105 questions: 75 official + 30 buffer. */
 export const CIS_DF_DOMAIN_TARGETS = {
@@ -67,20 +67,8 @@ export function domainForOrder(order: number): CisDfDomain {
 
 export const STEM_OPENER_CAP = 4;
 
-export type CisDfQuestionRow = {
-	trackCode: string;
-	order: number;
-	prompt: string;
-	choices: string[];
-	sourceUrls: string[];
-	domain?: string;
+export type CisDfQuestionRow = RealismQuestionRow & {
 	contentDifficulty?: CisDfContentDifficulty;
-	questionType?: QuestionType;
-	correctIndexes?: number[];
-	correctIndex?: number;
-	matchLeftItems?: string[];
-	matchRightItems?: string[];
-	correctMatches?: MatchPair[];
 };
 
 export function fourWordOpener(text: string): string {

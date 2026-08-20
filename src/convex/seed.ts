@@ -2,6 +2,23 @@ import { internalMutation } from './_generated/server';
 import { CERTIFICATION_TRACKS_FOR_SEED } from './catalog/tracksCanonical';
 import { DEV_PRACTICE_QUESTIONS } from './seed/devQuestionBank';
 
+type DevPracticeQuestionInsert = {
+	trackCode: string;
+	order: number;
+	prompt: string;
+	choices: string[];
+	correctIndex: number;
+	questionType?: 'single' | 'multi' | 'match';
+	correctIndexes?: number[];
+	matchLeftItems?: string[];
+	matchRightItems?: string[];
+	correctMatches?: { left: number; right: number }[];
+	explanation: string;
+	sourceUrls: string[];
+	domain?: string;
+	difficulty: 'dev';
+};
+
 /** Dev / CLI: replace all certification track rows with the canonical list. */
 export const apply = internalMutation({
 	args: {},
@@ -33,22 +50,23 @@ export const devQuestions = internalMutation({
 			}
 		}
 		for (const q of DEV_PRACTICE_QUESTIONS) {
-			await ctx.db.insert('practiceQuestions', {
+			const doc: DevPracticeQuestionInsert = {
 				trackCode: q.trackCode,
 				order: q.order,
 				prompt: q.prompt,
 				choices: [...q.choices],
 				correctIndex: q.correctIndex,
-				...(q.questionType ? { questionType: q.questionType } : {}),
-				...(q.correctIndexes ? { correctIndexes: [...q.correctIndexes] } : {}),
-				...(q.matchLeftItems ? { matchLeftItems: [...q.matchLeftItems] } : {}),
-				...(q.matchRightItems ? { matchRightItems: [...q.matchRightItems] } : {}),
-				...(q.correctMatches ? { correctMatches: q.correctMatches.map((p) => ({ ...p })) } : {}),
 				explanation: q.explanation,
 				sourceUrls: q.sourceUrls,
-				...(q.domain ? { domain: q.domain } : {}),
 				difficulty: 'dev'
-			});
+			};
+			if (q.questionType) doc.questionType = q.questionType;
+			if (q.correctIndexes) doc.correctIndexes = [...q.correctIndexes];
+			if (q.matchLeftItems) doc.matchLeftItems = [...q.matchLeftItems];
+			if (q.matchRightItems) doc.matchRightItems = [...q.matchRightItems];
+			if (q.correctMatches) doc.correctMatches = q.correctMatches.map((p) => ({ ...p }));
+			if (q.domain) doc.domain = q.domain;
+			await ctx.db.insert('practiceQuestions', doc);
 		}
 		return { inserted: DEV_PRACTICE_QUESTIONS.length };
 	}
