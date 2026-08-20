@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Fixed
+- Moderate SvelteKit Accept-header ReDoS (GHSA-29g2-3rmr-qm68) by bumping `@sveltejs/kit` to 2.70.3
+- Incomplete post-auth redirect sanitization (CodeQL `js/incomplete-url-sanitization`): `//evil.example` was treated as an internal path because it starts with `/`
+
+
 ## [0.1.0] - 2026-08-03
 
 First soft-launch MVP release. Production continues to deploy from `main` on Vercel;
