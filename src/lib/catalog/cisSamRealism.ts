@@ -1,6 +1,7 @@
 /** CIS-SAM (Certified Implementation Specialist - Software Asset Management) exam-realism rules. */
 
-import type { QuestionType } from './questionTypes';
+import { bumpDomainCount, zeroDomainCounts } from './domainCounts';
+import type { RealismQuestionRow } from './realismQuestionRow';
 
 export const CIS_SAM_BANK_SIZE = 90;
 
@@ -78,17 +79,7 @@ export const BANNED_STEM_PATTERNS = [
 
 export const STEM_OPENER_CAP = 4;
 
-export type CisSamQuestionRow = {
-	trackCode: string;
-	order: number;
-	prompt: string;
-	choices: string[];
-	sourceUrls: string[];
-	domain?: string;
-	questionType?: QuestionType;
-	correctIndexes?: number[];
-	correctIndex?: number;
-};
+export type CisSamQuestionRow = RealismQuestionRow;
 
 export function fourWordOpener(text: string): string {
 	return text.trim().split(/\s+/).slice(0, 4).join(' ').toLowerCase();
@@ -168,9 +159,7 @@ export function validateCisSamScenarioRatio(rows: CisSamQuestionRow[]): string[]
 
 export function validateCisSamDomainTags(rows: CisSamQuestionRow[]): string[] {
 	const issues: string[] = [];
-	const domainCounts = Object.fromEntries(
-		Object.keys(CIS_SAM_DOMAIN_TARGETS).map((d) => [d, 0])
-	) as Record<string, number>;
+	const domainCounts = zeroDomainCounts(CIS_SAM_DOMAIN_TARGETS);
 
 	for (const q of rows) {
 		if (q.trackCode !== 'CIS-SAM') continue;
@@ -182,12 +171,12 @@ export function validateCisSamDomainTags(rows: CisSamQuestionRow[]): string[] {
 		if (q.domain !== expected) {
 			issues.push(`order ${q.order}: domain ${q.domain} does not match order quota ${expected}`);
 		}
-		domainCounts[q.domain]++;
+		bumpDomainCount(domainCounts, q.domain);
 	}
 
 	for (const [domain, target] of Object.entries(CIS_SAM_DOMAIN_TARGETS)) {
-		if (domainCounts[domain] !== target) {
-			issues.push(`domain ${domain}: expected ${target}, got ${domainCounts[domain] ?? 0}`);
+		if (domainCounts.get(domain) !== target) {
+			issues.push(`domain ${domain}: expected ${target}, got ${domainCounts.get(domain) ?? 0}`);
 		}
 	}
 

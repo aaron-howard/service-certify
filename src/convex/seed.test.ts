@@ -51,13 +51,13 @@ describe('Seed Data & Grading Integration', () => {
 			expect(Array.isArray(question.choices)).toBe(true);
 			expect(question.choices.length).toBeGreaterThanOrEqual(2);
 			expect(question.choices.length).toBeLessThanOrEqual(6);
-			expect(question.choices.every((c) => typeof c === 'string')).toBe(true);
+			expect(question.choices.every((c) => Object.prototype.toString.call(c) === '[object String]')).toBe(true);
 		});
 
 		it('should have valid correctIndex', () => {
 			const question = createMockQuestion();
 
-			expect(typeof question.correctIndex).toBe('number');
+			expect(Number.isFinite(question.correctIndex)).toBe(true);
 			expect(question.correctIndex).toBeGreaterThanOrEqual(0);
 			expect(question.correctIndex).toBeLessThan(question.choices.length);
 		});
@@ -164,8 +164,8 @@ describe('Seed Data & Grading Integration', () => {
 			for (const answer of answers) {
 				expect(answer).toHaveProperty('order');
 				expect(answer).toHaveProperty('selectedIndex');
-				expect(typeof answer.order).toBe('number');
-				expect(typeof answer.selectedIndex).toBe('number');
+				expect(Number.isFinite(answer.order)).toBe(true);
+				expect(Number.isFinite(answer.selectedIndex)).toBe(true);
 			}
 		});
 

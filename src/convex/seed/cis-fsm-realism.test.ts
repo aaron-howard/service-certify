@@ -1,7 +1,7 @@
+import { bumpDomainCount, zeroDomainCounts } from '$lib/catalog/domainCounts';
 import { describe, expect, it } from 'vitest';
 import { DEV_PRACTICE_QUESTIONS } from '../../convex/seed/devQuestionBank';
 import {
-	type CisFsmQuestionRow,
 	BANNED_CHOICE_PREFIXES,
 	BANNED_STEM_PREFIXES,
 	CIS_FSM_BANK_SIZE,
@@ -33,7 +33,7 @@ describe('CIS-FSM v2 realism (full track)', () => {
 	});
 
 	it('passes shared realism validation', () => {
-		expect(validateCisFsmTrack(proofBatch as CisFsmQuestionRow[])).toEqual([]);
+		expect(validateCisFsmTrack(proofBatch)).toEqual([]);
 	});
 
 	it('meets scenario-style minimum across the v2 bank', () => {
@@ -42,15 +42,13 @@ describe('CIS-FSM v2 realism (full track)', () => {
 	});
 
 	it('tags each question with the expected domain for its order', () => {
-		const domainCounts = Object.fromEntries(
-			Object.keys(CIS_FSM_DOMAIN_TARGETS).map((d) => [d, 0])
-		) as Record<string, number>;
+		const domainCounts = zeroDomainCounts(CIS_FSM_DOMAIN_TARGETS);
 		for (const q of proofBatch) {
 			expect(q.domain).toBe(domainForOrder(q.order));
-			domainCounts[q.domain!]++;
+			bumpDomainCount(domainCounts, q.domain);
 		}
 		for (const [domain, target] of Object.entries(CIS_FSM_DOMAIN_TARGETS)) {
-			expect(domainCounts[domain]).toBe(target);
+			expect(domainCounts.get(domain)).toBe(target);
 		}
 	});
 

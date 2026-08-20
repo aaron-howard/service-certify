@@ -2,6 +2,7 @@ import { redirect } from '@sveltejs/kit';
 import type { PageServerLoad } from './$types';
 import { env as publicEnv } from '$env/dynamic/public';
 import { listProgressForCurrentUser } from '$lib/convex.server';
+import { readString } from '$lib/parse';
 
 /** Dashboard requires sign-in; progress is loaded on the server for first-paint CWV. */
 export const load: PageServerLoad = async ({ parent, locals, url }) => {
@@ -10,8 +11,8 @@ export const load: PageServerLoad = async ({ parent, locals, url }) => {
 		throw redirect(302, `/auth/signin?redirect=${encodeURIComponent(url.pathname)}`);
 	}
 
-	const convexConfigured =
-		typeof publicEnv.PUBLIC_CONVEX_URL === 'string' && publicEnv.PUBLIC_CONVEX_URL.length > 0;
+	const convexUrl = readString(publicEnv.PUBLIC_CONVEX_URL);
+	const convexConfigured = Boolean(convexUrl && convexUrl.length > 0);
 
 	const progress =
 		convexConfigured && locals.workosToken

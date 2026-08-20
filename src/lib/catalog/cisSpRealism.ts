@@ -1,6 +1,7 @@
 /** CIS-SP (Certified Implementation Specialist - Service Provider) exam-realism rules. */
 
-import type { QuestionType } from './questionTypes';
+import { bumpDomainCount, zeroDomainCounts } from './domainCounts';
+import type { RealismQuestionRow } from './realismQuestionRow';
 
 /** Bank distribution for 75 questions: 45 official + 30 buffer. */
 export const CIS_SP_DOMAIN_TARGETS = {
@@ -62,17 +63,7 @@ export const BANNED_STEM_PATTERNS = [
 
 export const STEM_OPENER_CAP = 4;
 
-export type CisSpQuestionRow = {
-	trackCode: string;
-	order: number;
-	prompt: string;
-	choices: string[];
-	sourceUrls: string[];
-	domain?: string;
-	questionType?: QuestionType;
-	correctIndexes?: number[];
-	correctIndex?: number;
-};
+export type CisSpQuestionRow = RealismQuestionRow;
 
 export function fourWordOpener(text: string): string {
 	return text.trim().split(/\s+/).slice(0, 4).join(' ').toLowerCase();
@@ -144,9 +135,7 @@ export function validateCisSpScenarioRatio(rows: CisSpQuestionRow[]): string[] {
 
 export function validateCisSpDomainTags(rows: CisSpQuestionRow[]): string[] {
 	const issues: string[] = [];
-	const domainCounts = Object.fromEntries(
-		Object.keys(CIS_SP_DOMAIN_TARGETS).map((d) => [d, 0])
-	) as Record<string, number>;
+	const domainCounts = zeroDomainCounts(CIS_SP_DOMAIN_TARGETS);
 
 	for (const q of rows) {
 		if (q.trackCode !== 'CIS-SP') continue;
@@ -158,12 +147,12 @@ export function validateCisSpDomainTags(rows: CisSpQuestionRow[]): string[] {
 		if (q.domain !== expected) {
 			issues.push(`order ${q.order}: domain ${q.domain} does not match order quota ${expected}`);
 		}
-		domainCounts[q.domain]++;
+		bumpDomainCount(domainCounts, q.domain);
 	}
 
 	for (const [domain, target] of Object.entries(CIS_SP_DOMAIN_TARGETS)) {
-		if (domainCounts[domain] !== target) {
-			issues.push(`domain ${domain}: expected ${target}, got ${domainCounts[domain] ?? 0}`);
+		if (domainCounts.get(domain) !== target) {
+			issues.push(`domain ${domain}: expected ${target}, got ${domainCounts.get(domain) ?? 0}`);
 		}
 	}
 

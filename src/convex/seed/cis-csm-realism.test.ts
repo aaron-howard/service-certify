@@ -10,8 +10,7 @@ import {
 	containsBannedStemPrefix,
 	fourWordOpener,
 	isScenarioStylePrompt,
-	validateCisCsmTrack,
-	type CisCsmQuestionRow
+	validateCisCsmTrack
 } from '$lib/catalog/cisCsmRealism';
 
 const TRACK = 'CIS-CSM';
@@ -32,7 +31,7 @@ describe('CIS-CSM v2 realism (full track)', () => {
 	});
 
 	it('passes shared realism validation', () => {
-		expect(validateCisCsmTrack(proofBatch as CisCsmQuestionRow[])).toEqual([]);
+		expect(validateCisCsmTrack(proofBatch)).toEqual([]);
 	});
 
 	it('does not use banned choice wrapper prefixes', () => {
@@ -73,7 +72,7 @@ describe('CIS-CSM v2 realism (full track)', () => {
 	});
 
 	it('tags each question with a blueprint domain', () => {
-		expect(proofBatch.every((q) => typeof q.domain === 'string' && q.domain.length > 0)).toBe(true);
+		expect(proofBatch.every((q) => Boolean(q.domain && q.domain.length > 0))).toBe(true);
 	});
 
 	it('documents banned legacy patterns for future full-track rewrite', () => {

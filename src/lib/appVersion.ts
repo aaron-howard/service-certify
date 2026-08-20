@@ -1,15 +1,5 @@
 import { version as packageVersion } from '../../package.json';
-
-type ProcessEnv = Record<string, string | undefined>;
-
-/** Read `process.env` when running under Node (undefined in some browser contexts). */
-function processEnv(): ProcessEnv | undefined {
-	const proc =
-		typeof globalThis !== 'undefined'
-			? (globalThis as { process?: { env?: ProcessEnv } }).process
-			: undefined;
-	return proc?.env;
-}
+import { readProcessEnv, readString } from './parse';
 
 /** Semver from package.json (human release channel). */
 export function getAppVersion(): string {
@@ -27,14 +17,12 @@ export function getAppVersion(): string {
  * Returns empty string when none are set (local/dev without a commit SHA).
  */
 export function getAppRevision(): string {
-	if (typeof import.meta !== 'undefined' && import.meta.env) {
-		const fromVite = import.meta.env.VITE_GIT_COMMIT_SHA;
-		if (typeof fromVite === 'string' && fromVite.trim()) {
-			return fromVite.trim().slice(0, 12);
-		}
+	const fromVite = readString(import.meta.env.VITE_GIT_COMMIT_SHA);
+	if (fromVite?.trim()) {
+		return fromVite.trim().slice(0, 12);
 	}
 
-	const env = processEnv();
+	const env = readProcessEnv();
 	const sha = env?.VERCEL_GIT_COMMIT_SHA?.trim() || env?.GITHUB_SHA?.trim() || '';
 	return sha ? sha.slice(0, 12) : '';
 }

@@ -1,39 +1,25 @@
-import { afterEach, describe, expect, it, vi } from 'vitest';
-
-const getConvexCurrentUser = vi.fn();
-const resolveConvexUser = vi.fn();
-const getUser = vi.fn();
-
-vi.mock('$lib/convex.server', () => ({
-	getConvexCurrentUser: (...args: unknown[]) => getConvexCurrentUser(...args),
-	resolveConvexUser: (...args: unknown[]) => resolveConvexUser(...args)
-}));
-
-vi.mock('$lib/workos.server', () => ({
-	getWorkOS: () => ({
-		userManagement: { getUser }
-	})
-}));
+import { describe, expect, it, vi } from 'vitest';
+import { getSessionUser, type SessionUserDeps } from './auth.server';
 
 describe('getSessionUser', () => {
-	afterEach(() => {
-		vi.clearAllMocks();
-		vi.resetModules();
-	});
-
 	it('uses Convex profile without calling WorkOS when the user row exists', async () => {
-		getConvexCurrentUser.mockResolvedValueOnce({
-			role: 'admin',
-			email: 'ada@example.com',
-			name: 'Ada Lovelace',
-			profileImage: undefined,
-			provider: 'google'
-		});
-		const { getSessionUser } = await import('./auth.server');
-		const user = await getSessionUser({
-			workosUserId: 'user_1',
-			workosToken: 'token'
-		} as App.Locals);
+		const getUser = vi.fn();
+		const deps: SessionUserDeps = {
+			getConvexCurrentUser: vi.fn().mockResolvedValue({
+				role: 'admin',
+				email: 'ada@example.com',
+				name: 'Ada Lovelace',
+				profileImage: undefined,
+				provider: 'google'
+			}),
+			resolveConvexUser: vi.fn(),
+			getWorkOS: () => ({ userManagement: { getUser } })
+		};
+
+		const user = await getSessionUser(
+			{ workosUserId: 'user_1', workosToken: 'token' },
+			deps
+		);
 
 		expect(user).toEqual({
 			id: 'user_1',
@@ -45,30 +31,33 @@ describe('getSessionUser', () => {
 			provider: 'google'
 		});
 		expect(getUser).not.toHaveBeenCalled();
-		expect(resolveConvexUser).not.toHaveBeenCalled();
+		expect(deps.resolveConvexUser).not.toHaveBeenCalled();
 	});
 
 	it('bootstraps via WorkOS + Convex when no Convex row exists', async () => {
-		getConvexCurrentUser.mockResolvedValueOnce(null);
-		getUser.mockResolvedValueOnce({
+		const getUser = vi.fn().mockResolvedValue({
 			id: 'user_1',
 			email: 'ada@example.com',
 			firstName: 'Ada',
 			lastName: 'Lovelace',
 			profilePictureUrl: null
 		});
-		resolveConvexUser.mockResolvedValueOnce({
+		const resolveConvexUser = vi.fn().mockResolvedValue({
 			role: 'user',
 			name: 'Ada Lovelace',
 			profileImage: undefined,
 			provider: undefined
 		});
+		const deps: SessionUserDeps = {
+			getConvexCurrentUser: vi.fn().mockResolvedValue(null),
+			resolveConvexUser,
+			getWorkOS: () => ({ userManagement: { getUser } })
+		};
 
-		const { getSessionUser } = await import('./auth.server');
-		const user = await getSessionUser({
-			workosUserId: 'user_1',
-			workosToken: 'token'
-		} as App.Locals);
+		const user = await getSessionUser(
+			{ workosUserId: 'user_1', workosToken: 'token' },
+			deps
+		);
 
 		expect(getUser).toHaveBeenCalledWith('user_1');
 		expect(resolveConvexUser).toHaveBeenCalledOnce();
@@ -77,7 +66,6 @@ describe('getSessionUser', () => {
 	});
 
 	it('returns null when session cookies are missing', async () => {
-		const { getSessionUser } = await import('./auth.server');
-		await expect(getSessionUser({} as App.Locals)).resolves.toBeNull();
+		await expect(getSessionUser({})).resolves.toBeNull();
 	});
 });

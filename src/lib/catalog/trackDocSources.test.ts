@@ -24,7 +24,7 @@ import { CSA_DOMAIN_TARGETS } from './csaRealism';
 import { CERTIFICATION_TRACKS_FOR_SEED } from './tracksCanonical';
 import { ALL_TRACK_DOC_SOURCES, getTrackDocSource } from './trackDocSources';
 
-const REALISM_DOMAIN_TARGETS_BY_TRACK: Record<string, Record<string, number>> = {
+const REALISM_DOMAIN_TARGETS_BY_TRACK = {
 	CSA: CSA_DOMAIN_TARGETS,
 	CAD: CAD_DOMAIN_TARGETS,
 	'CIS-DF': CIS_DF_DOMAIN_TARGETS,
@@ -69,7 +69,9 @@ describe('trackDocSources', () => {
 
 	it('matches realism blueprint domain names for every track', () => {
 		for (const track of CERTIFICATION_TRACKS_FOR_SEED) {
-			const targets = REALISM_DOMAIN_TARGETS_BY_TRACK[track.code];
+			// SAFETY: every seed track code is a key of REALISM_DOMAIN_TARGETS_BY_TRACK.
+			const targets =
+				REALISM_DOMAIN_TARGETS_BY_TRACK[track.code as keyof typeof REALISM_DOMAIN_TARGETS_BY_TRACK];
 			expect(targets, `missing realism targets for ${track.code}`).toBeDefined();
 
 			const source = getTrackDocSource(track.code);

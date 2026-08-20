@@ -1,7 +1,7 @@
+import { bumpDomainCount, zeroDomainCounts } from '$lib/catalog/domainCounts';
 import { describe, expect, it } from 'vitest';
 import { DEV_PRACTICE_QUESTIONS } from '../../convex/seed/devQuestionBank';
 import {
-	type CisSirQuestionRow,
 	CIS_SIR_BANK_SIZE,
 	CIS_SIR_DOMAIN_TARGETS,
 	domainForOrder,
@@ -21,7 +21,7 @@ describe('CIS-SIR v2 realism', () => {
 	});
 
 	it('passes CIS-SIR realism validation', () => {
-		expect(validateCisSirTrack(rows as CisSirQuestionRow[])).toEqual([]);
+		expect(validateCisSirTrack(rows)).toEqual([]);
 	});
 
 	it('meets scenario-style minimum across the v2 bank', () => {
@@ -30,15 +30,13 @@ describe('CIS-SIR v2 realism', () => {
 	});
 
 	it('tags each question with the expected domain for its order', () => {
-		const domainCounts = Object.fromEntries(
-			Object.keys(CIS_SIR_DOMAIN_TARGETS).map((d) => [d, 0])
-		) as Record<string, number>;
+		const domainCounts = zeroDomainCounts(CIS_SIR_DOMAIN_TARGETS);
 		for (const q of rows) {
 			expect(q.domain).toBe(domainForOrder(q.order));
-			domainCounts[q.domain!]++;
+			bumpDomainCount(domainCounts, q.domain);
 		}
 		for (const [domain, target] of Object.entries(CIS_SIR_DOMAIN_TARGETS)) {
-			expect(domainCounts[domain]).toBe(target);
+			expect(domainCounts.get(domain)).toBe(target);
 		}
 	});
 

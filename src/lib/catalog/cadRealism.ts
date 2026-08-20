@@ -1,6 +1,7 @@
 /** CAD (Certified Application Developer) exam-realism rules (official blueprint aligned). */
 
-import type { QuestionType } from './questionTypes';
+import { bumpDomainCount, zeroDomainCounts } from './domainCounts';
+import type { RealismQuestionRow } from './realismQuestionRow';
 
 /**
  * Bank distribution for the 90-question CAD dev bank, scaled 1.5x from the
@@ -17,7 +18,14 @@ export const CAD_DOMAIN_TARGETS = {
 
 export type CadDomain = keyof typeof CAD_DOMAIN_TARGETS;
 
-export const CAD_DOMAINS = Object.keys(CAD_DOMAIN_TARGETS) as CadDomain[];
+export const CAD_DOMAINS = [
+	'Designing and Creating an Application',
+	'Application User Interface',
+	'Security and Restricting Access',
+	'Application Automation',
+	'Working with External Data',
+	'Managing Applications'
+] as const satisfies readonly CadDomain[];
 
 /**
  * Legacy template wrappers used by the pre-rewrite CAD bank. These leak the
@@ -67,17 +75,7 @@ export function isScenarioStylePrompt(prompt: string): boolean {
 
 export const STEM_OPENER_CAP = 4;
 
-export type CadQuestionRow = {
-	trackCode: string;
-	order: number;
-	prompt: string;
-	choices: string[];
-	sourceUrls: string[];
-	questionType?: QuestionType;
-	correctIndexes?: number[];
-	correctIndex?: number;
-	domain?: string;
-};
+export type CadQuestionRow = RealismQuestionRow;
 
 export function fourWordOpener(text: string): string {
 	return text.trim().split(/\s+/).slice(0, 4).join(' ').toLowerCase();
@@ -168,19 +166,16 @@ export function validateCadDomainQuotas(rows: CadQuestionRow[]): string[] {
 	if (cad.length === 0) return [];
 
 	const issues: string[] = [];
-	const domainCounts = Object.fromEntries(CAD_DOMAINS.map((d) => [d, 0])) as Record<
-		CadDomain,
-		number
-	>;
+	const domainCounts = zeroDomainCounts(CAD_DOMAIN_TARGETS);
 
 	for (const q of cad) {
 		if (q.domain && q.domain in CAD_DOMAIN_TARGETS) {
-			domainCounts[q.domain as CadDomain]++;
+			bumpDomainCount(domainCounts, q.domain);
 		}
 	}
 
-	for (const [domain, target] of Object.entries(CAD_DOMAIN_TARGETS) as [CadDomain, number][]) {
-		const actual = domainCounts[domain] ?? 0;
+	for (const [domain, target] of Object.entries(CAD_DOMAIN_TARGETS)) {
+		const actual = domainCounts.get(domain) ?? 0;
 		if (actual !== target) {
 			issues.push(`domain ${domain}: expected ${target}, got ${actual}`);
 		}

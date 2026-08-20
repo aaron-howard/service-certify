@@ -2,8 +2,23 @@ import { rateLimit, RateLimitError } from '$lib/rateLimit';
 import { api } from '$convex/_generated/api';
 import { ConvexHttpClient } from 'convex/browser';
 import { env as publicEnv } from '$env/dynamic/public';
+import { readString } from '$lib/parse';
 import { resolveWorkOsSession } from '$lib/workos-session';
 import type { RequestHandler } from '@sveltejs/kit';
+
+type GradeAnswer = {
+	order: number;
+	selectedIndex: number;
+	selectedIndexes?: number[];
+	matchAnswers?: { left: number; right: number }[];
+};
+
+type GradeMutationArgs = {
+	trackCode: string;
+	mode: 'sample' | 'full';
+	sessionSeed?: string;
+	answers: GradeAnswer[];
+};
 
 /**
  * Protected API route for grading practice sessions.
@@ -77,6 +92,7 @@ export const POST: RequestHandler = async ({ request, cookies, locals, url }) =>
 
 	const { trackCode, answers, mode = 'sample', sessionSeed } = body;
 	const practiceMode = mode === 'full' ? 'full' : 'sample';
+	const sessionSeedValue = readString(sessionSeed);
 
 	if (!trackCode || !Array.isArray(answers)) {
 		return new Response(JSON.stringify({ error: 'Missing trackCode or answers array' }), {
@@ -85,7 +101,7 @@ export const POST: RequestHandler = async ({ request, cookies, locals, url }) =>
 		});
 	}
 
-	if (practiceMode === 'full' && (!sessionSeed || typeof sessionSeed !== 'string')) {
+	if (practiceMode === 'full' && !sessionSeedValue) {
 		return new Response(JSON.stringify({ error: 'Missing sessionSeed for full mock' }), {
 			status: 400,
 			headers: { 'Content-Type': 'application/json' }
@@ -123,12 +139,17 @@ export const POST: RequestHandler = async ({ request, cookies, locals, url }) =>
 			convex.setAuth(session.accessToken);
 		}
 
-		const result = await convex.mutation(api.practiceQuestions.gradeAnswers, {
+		const gradeArgs: GradeMutationArgs = {
 			trackCode,
 			mode: practiceMode,
-			...(practiceMode === 'full' ? { sessionSeed } : {}),
-			answers
-		});
+			// SAFETY: request.json() answers validated as an array; Convex validators enforce shape.
+			answers: answers as GradeAnswer[]
+		};
+		if (practiceMode === 'full' && sessionSeedValue) {
+			gradeArgs.sessionSeed = sessionSeedValue;
+		}
+
+		const result = await convex.mutation(api.practiceQuestions.gradeAnswers, gradeArgs);
 
 		return new Response(JSON.stringify(result), {
 			status: 200,

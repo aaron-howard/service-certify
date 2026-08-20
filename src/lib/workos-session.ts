@@ -1,4 +1,11 @@
 import type { Cookies } from '@sveltejs/kit';
+import {
+	isPlainObject,
+	parseJsonValue,
+	readFiniteNumber,
+	readString,
+	type JsonValue
+} from './parse';
 
 export const WORKOS_ACCESS_COOKIE = 'workos_token';
 export const WORKOS_REFRESH_COOKIE = 'workos_refresh_token';
@@ -16,49 +23,69 @@ const authCookieOptions = (secure: boolean) =>
 	}) as const;
 
 type WorkOsAccessTokenPayload = {
-	exp?: unknown;
-	auth_time?: unknown;
-	iss?: unknown;
-	aud?: unknown;
+	exp?: number;
+	auth_time?: number;
+	iss?: string;
+	aud?: string | string[];
 };
+
+function parseJwtPayload(raw: JsonValue): WorkOsAccessTokenPayload | null {
+	if (!isPlainObject(raw)) return null;
+	const iss = readString(raw.iss);
+	const exp = readFiniteNumber(raw.exp);
+	const authTime = readFiniteNumber(raw.auth_time);
+	const audString = readString(raw.aud);
+	const aud = audString
+		? audString
+		: Array.isArray(raw.aud)
+			? raw.aud.flatMap((entry) => {
+					const s = readString(entry);
+					return s === undefined ? [] : [s];
+				})
+			: undefined;
+	const payload: WorkOsAccessTokenPayload = {};
+	if (iss !== undefined) payload.iss = iss;
+	if (exp !== undefined) payload.exp = exp;
+	if (authTime !== undefined) payload.auth_time = authTime;
+	if (aud !== undefined && (Array.isArray(aud) ? aud.length > 0 : true)) payload.aud = aud;
+	return payload;
+}
 
 function decodeJwtPayload(token: string): WorkOsAccessTokenPayload | null {
 	const parts = token.split('.');
 	if (parts.length < 2) return null;
 	try {
-		return JSON.parse(
-			Buffer.from(parts[1].replace(/-/g, '+').replace(/_/g, '/'), 'base64').toString('utf8')
-		) as WorkOsAccessTokenPayload;
+		const json = Buffer.from(parts[1]!.replace(/-/g, '+').replace(/_/g, '/'), 'base64').toString(
+			'utf8'
+		);
+		return parseJwtPayload(parseJsonValue(json));
 	} catch {
 		return null;
 	}
 }
 
+export type JwtAuthDiagnostics = {
+	iss?: string;
+	aud?: string;
+	hasAud: boolean;
+};
+
 /**
  * Non-secret JWT claims for Sentry / logs when Convex rejects a WorkOS token.
  * Never returns the raw token or subject.
  */
-export function getJwtAuthDiagnostics(token: string): {
-	iss?: string;
-	aud?: string;
-	hasAud: boolean;
-} {
+export function getJwtAuthDiagnostics(token: string): JwtAuthDiagnostics {
 	const payload = decodeJwtPayload(token);
-	const iss = typeof payload?.iss === 'string' ? payload.iss : undefined;
+	const iss = payload?.iss;
 	const audRaw = payload?.aud;
-	const aud =
-		typeof audRaw === 'string'
-			? audRaw
-			: Array.isArray(audRaw) && typeof audRaw[0] === 'string'
-				? audRaw[0]
-				: undefined;
+	const aud = readString(audRaw) ?? (Array.isArray(audRaw) ? readString(audRaw[0]) : undefined);
 	return { iss, aud, hasAud: Boolean(aud) };
 }
 
 /** Decode JWT `exp` (seconds since epoch). Returns null if the payload cannot be read. */
 export function getJwtExpirySeconds(token: string): number | null {
 	const payload = decodeJwtPayload(token);
-	return typeof payload?.exp === 'number' ? payload.exp : null;
+	return payload?.exp ?? null;
 }
 
 /**
@@ -67,9 +94,7 @@ export function getJwtExpirySeconds(token: string): number | null {
  */
 export function getJwtAuthTimeSeconds(token: string): number | null {
 	const payload = decodeJwtPayload(token);
-	return typeof payload?.auth_time === 'number' && Number.isFinite(payload.auth_time)
-		? payload.auth_time
-		: null;
+	return payload?.auth_time ?? null;
 }
 
 /**

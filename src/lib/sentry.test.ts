@@ -12,7 +12,7 @@ describe('resolveSentryDsn', () => {
 		vi.stubEnv('VITE_SENTRY_DSN', '');
 		vi.stubEnv('PUBLIC_SENTRY_DSN', '');
 		const { resolveSentryDsn } = await import('./sentry');
-		expect(typeof resolveSentryDsn()).toBe('string');
+		expect(resolveSentryDsn()).toEqual(expect.any(String));
 	});
 
 	it('reads NEXT_PUBLIC_SENTRY_DSN from process.env (Vercel integration)', async () => {
@@ -105,6 +105,6 @@ describe('getSentryInitOptions', () => {
 		expect(opts!.dsn).toBeTruthy();
 		expect(opts!.replaysOnErrorSampleRate).toBe(1.0);
 		expect(opts!.release).toMatch(/^service-certify@\d+\.\d+\.\d+\+1234567890ab$/);
-		expect(typeof opts!.beforeSend).toBe('function');
+		expect(opts!.beforeSend).toEqual(expect.any(Function));
 	});
 });

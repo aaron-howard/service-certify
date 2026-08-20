@@ -1,3 +1,4 @@
+import { bumpDomainCount, zeroDomainCounts } from '$lib/catalog/domainCounts';
 import { describe, expect, it } from 'vitest';
 import { DEV_PRACTICE_QUESTIONS } from '../../convex/seed/devQuestionBank';
 import {
@@ -23,17 +24,15 @@ describe('CPOP v2 realism', () => {
 	});
 
 	it('tags every question with the domain quota for its order slot', () => {
-		const counts = Object.fromEntries(
-			Object.keys(CPOP_DOMAIN_TARGETS).map((d) => [d, 0])
-		) as Record<string, number>;
+		const counts = zeroDomainCounts(CPOP_DOMAIN_TARGETS);
 
 		for (const q of rows) {
 			expect(q.domain).toBe(domainForOrder(q.order));
-			counts[q.domain!]++;
+			bumpDomainCount(counts, q.domain);
 		}
 
 		for (const [domain, target] of Object.entries(CPOP_DOMAIN_TARGETS)) {
-			expect(counts[domain]).toBe(target);
+			expect(counts.get(domain)).toBe(target);
 		}
 	});
 

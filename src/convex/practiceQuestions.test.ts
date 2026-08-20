@@ -83,13 +83,13 @@ describe('Practice Questions - Input Validation', () => {
 				{ order: 5, selectedIndex: 'two' } // wrong type
 			];
 
-			expect(typeof validAnswer.order === 'number').toBe(true);
-			expect(typeof validAnswer.selectedIndex === 'number').toBe(true);
+			expect(Number.isFinite(validAnswer.order)).toBe(true);
+			expect(Number.isFinite(validAnswer.selectedIndex)).toBe(true);
 
 			for (const answer of invalidAnswers) {
-				const isValid =
-					typeof (answer as any).order === 'number' &&
-					typeof (answer as any).selectedIndex === 'number';
+				const order = 'order' in answer ? answer.order : undefined;
+				const selectedIndex = 'selectedIndex' in answer ? answer.selectedIndex : undefined;
+				const isValid = Number.isFinite(order) && Number.isFinite(selectedIndex);
 				expect(isValid).toBe(false);
 			}
 		});

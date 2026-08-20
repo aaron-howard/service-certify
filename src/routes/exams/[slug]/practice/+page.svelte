@@ -26,12 +26,13 @@
 		shouldSyncQuestionUrl,
 		urlWithQuestionIndex
 	} from '$lib/practice/sessionDraft';
+	import { readString } from '$lib/parse';
 	import { useConvexClient, useQuery } from 'convex-svelte';
 	import { api } from '$convex/_generated/api.js';
 
 	let { data } = $props();
 	const exam = $derived(data.exam);
-	const mode = $derived(data.mode as 'sample' | 'full');
+	const mode = $derived(data.mode === 'full' ? 'full' : 'sample');
 	const isFullMock = $derived(mode === 'full');
 	const convex = useConvexClient();
 	let activeSessionSeed = $state('');
@@ -71,8 +72,8 @@
 
 	type Phase = 'intro' | 'live' | 'review' | 'summary';
 
-	const convexConfigured =
-		typeof env.PUBLIC_CONVEX_URL === 'string' && env.PUBLIC_CONVEX_URL.length > 0;
+	const convexUrlFromEnv = readString(env.PUBLIC_CONVEX_URL);
+	const convexConfigured = Boolean(convexUrlFromEnv && convexUrlFromEnv.length > 0);
 
 	function toDisplayQuestions(
 		rows: {
@@ -188,11 +189,10 @@
 		}
 		if (!browser) return;
 		const draft = loadSessionDraft(draftStorageKey(exam.code, mode));
+		const canRandomUUID = 'crypto' in globalThis && 'randomUUID' in globalThis.crypto;
 		activeSessionSeed =
 			draft?.sessionSeed ??
-			(typeof crypto !== 'undefined' && 'randomUUID' in crypto
-				? crypto.randomUUID()
-				: `mock-${Date.now()}`);
+			(canRandomUUID ? crypto.randomUUID() : `mock-${Date.now()}`);
 	});
 
 	$effect(() => {
@@ -381,18 +381,27 @@
 		};
 	}
 
+	type GradePayload = {
+		trackCode: string;
+		mode: 'sample' | 'full';
+		sessionSeed?: string;
+		answers: ReturnType<typeof buildAnswerPayload>[];
+	};
+
 	async function submit() {
 		if (!browser || !env.PUBLIC_CONVEX_URL || grading || submitted) return;
 		submitModalOpen = false;
 		grading = true;
 		gradeError = null;
 		try {
-			const payload = {
+			const payload: GradePayload = {
 				trackCode: exam.code,
 				mode,
-				...(isFullMock ? { sessionSeed: activeSessionSeed } : {}),
 				answers: questions.map((q) => buildAnswerPayload(q))
 			};
+			if (isFullMock) {
+				payload.sessionSeed = activeSessionSeed;
+			}
 
 			type GradeResponse = {
 				correct: number;
@@ -409,7 +418,9 @@
 					headers: { 'Content-Type': 'application/json' },
 					body: JSON.stringify(payload)
 				});
-				const body = (await response.json()) as GradeResponse & { error?: string };
+				const bodyUnknown: unknown = await response.json();
+				// SAFETY: grade API returns GradeResponse fields, optionally with error string.
+				const body = bodyUnknown as GradeResponse & { error?: string };
 				if (!response.ok) {
 					throw new Error(body.error ?? 'Could not grade answers');
 				}
