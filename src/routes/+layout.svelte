@@ -14,16 +14,15 @@
 	import { setupConvex } from 'convex-svelte';
 	import { injectSpeedInsights } from '@vercel/speed-insights/sveltekit';
 	import { clearSentryUser, setSentryUser } from '$lib/sentry';
+	import { readString } from '$lib/parse';
 
 	let { children, data } = $props();
 
 	const showDeployBanner = $derived(data.deployEnvironment !== 'production');
 
-	const convexConfigured =
-		typeof env.PUBLIC_CONVEX_URL === 'string' && env.PUBLIC_CONVEX_URL.length > 0;
-	const convexUrl: string = convexConfigured
-		? env.PUBLIC_CONVEX_URL!
-		: 'https://placeholder.invalid.convex.cloud';
+	const convexUrlFromEnv = readString(env.PUBLIC_CONVEX_URL);
+	const convexConfigured = Boolean(convexUrlFromEnv && convexUrlFromEnv.length > 0);
+	const convexUrl: string = convexUrlFromEnv ?? 'https://placeholder.invalid.convex.cloud';
 	const convexClient = setupConvex(convexUrl, {
 		disabled: !browser || !convexConfigured
 	});
@@ -33,7 +32,9 @@
 			try {
 				const response = await fetch('/api/auth/convex-token');
 				if (!response.ok) return null;
-				const body = (await response.json()) as { token?: string };
+				const bodyUnknown: unknown = await response.json();
+				// SAFETY: /api/auth/convex-token returns `{ token?: string }` on success.
+				const body = bodyUnknown as { token?: string };
 				return body.token ?? null;
 			} catch {
 				return null;

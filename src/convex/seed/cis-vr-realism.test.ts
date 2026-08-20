@@ -1,3 +1,4 @@
+import { bumpDomainCount, zeroDomainCounts } from '$lib/catalog/domainCounts';
 import { describe, expect, it } from 'vitest';
 import { DEV_PRACTICE_QUESTIONS } from '../../convex/seed/devQuestionBank';
 import {
@@ -66,15 +67,13 @@ describe('CIS-VR v2 realism (full track)', () => {
 	});
 
 	it('tags each question with the official blueprint domain for its order', () => {
-		const counts = Object.fromEntries(
-			Object.keys(CIS_VR_DOMAIN_TARGETS).map((d) => [d, 0])
-		) as Record<string, number>;
+		const counts = zeroDomainCounts(CIS_VR_DOMAIN_TARGETS);
 		for (const q of proofBatch) {
 			expect(q.domain).toBe(domainForOrder(q.order));
-			counts[q.domain!]++;
+			bumpDomainCount(counts, q.domain);
 		}
 		for (const [domain, target] of Object.entries(CIS_VR_DOMAIN_TARGETS)) {
-			expect(counts[domain]).toBe(target);
+			expect(counts.get(domain)).toBe(target);
 		}
 	});
 

@@ -1,6 +1,7 @@
 /** CIS-VR (Certified Implementation Specialist - Vulnerability Response) exam-realism rules. */
 
-import type { QuestionType } from './questionTypes';
+import { bumpDomainCount, zeroDomainCounts } from './domainCounts';
+import type { RealismQuestionRow } from './realismQuestionRow';
 
 /** Bank distribution for 75 questions (45 official + 30 buffer). */
 
@@ -55,17 +56,7 @@ export const BANNED_STEM_PATTERNS = [
 
 export const STEM_OPENER_CAP = 4;
 
-export type CisVrQuestionRow = {
-	trackCode: string;
-	order: number;
-	prompt: string;
-	choices: string[];
-	sourceUrls: string[];
-	domain?: string;
-	questionType?: QuestionType;
-	correctIndexes?: number[];
-	correctIndex?: number;
-};
+export type CisVrQuestionRow = RealismQuestionRow;
 
 export function fourWordOpener(text: string): string {
 	return text.trim().split(/\s+/).slice(0, 4).join(' ').toLowerCase();
@@ -132,9 +123,7 @@ export function validateCisVrQuestion(q: CisVrQuestionRow): string[] {
 
 export function validateCisVrDomainTags(rows: CisVrQuestionRow[]): string[] {
 	const issues: string[] = [];
-	const domainCounts = Object.fromEntries(
-		Object.keys(CIS_VR_DOMAIN_TARGETS).map((d) => [d, 0])
-	) as Record<string, number>;
+	const domainCounts = zeroDomainCounts(CIS_VR_DOMAIN_TARGETS);
 
 	for (const q of rows) {
 		if (q.trackCode !== 'CIS-VR') continue;
@@ -146,12 +135,12 @@ export function validateCisVrDomainTags(rows: CisVrQuestionRow[]): string[] {
 		if (q.domain !== expected) {
 			issues.push(`order ${q.order}: domain ${q.domain} does not match order quota ${expected}`);
 		}
-		domainCounts[q.domain]++;
+		bumpDomainCount(domainCounts, q.domain);
 	}
 
 	for (const [domain, target] of Object.entries(CIS_VR_DOMAIN_TARGETS)) {
-		if (domainCounts[domain] !== target) {
-			issues.push(`domain ${domain}: expected ${target}, got ${domainCounts[domain] ?? 0}`);
+		if (domainCounts.get(domain) !== target) {
+			issues.push(`domain ${domain}: expected ${target}, got ${domainCounts.get(domain) ?? 0}`);
 		}
 	}
 

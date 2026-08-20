@@ -4,6 +4,14 @@ import { isAdminEmail } from './lib/adminEmails';
 import { isAdminUser, resolveUserRole, getAuthenticatedUser } from './lib/authorization';
 import { canonicalAuthEmail, workosUserIdFromIdentity } from './lib/workosIdentity';
 
+type UserProfilePatch = {
+	email: string;
+	name?: string;
+	profileImage?: string;
+	provider?: string;
+	role?: 'admin';
+};
+
 /**
  * Get or create user from WorkOS identity.
  * Requires a valid WorkOS JWT (`setAuth`); identity.subject must match workosId.
@@ -39,13 +47,7 @@ export const createOrUpdateUser = mutation({
 			.unique();
 
 		if (existing) {
-			const patch: {
-				email: string;
-				name?: string;
-				profileImage?: string;
-				provider?: string;
-				role?: 'admin';
-			} = {
+			const patch: UserProfilePatch = {
 				email,
 				name: args.name,
 				profileImage: args.profileImage,

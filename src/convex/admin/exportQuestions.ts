@@ -4,8 +4,32 @@
  */
 
 import { query } from '../_generated/server';
-import { v } from 'convex/values';
 import { requireAdmin } from '../lib/authorization';
+
+type QualityIssue = {
+	order: number;
+	trackCode: string;
+	issue: string;
+};
+
+type ExportStats = {
+	totalQuestions: number;
+	byTrackCode: Record<string, number>;
+	byQuestionType: Record<string, number>;
+	qualityIssues: QualityIssue[];
+	sourceUrlStats: {
+		total: number;
+		withUrls: number;
+		missingUrls: number;
+		averageUrlsPerQuestion: number;
+	};
+	explanationStats: {
+		total: number;
+		tooShort: number;
+		tooLong: number;
+		missing: number;
+	};
+};
 
 export const exportAllQuestions = query({
 	args: {},
@@ -14,15 +38,11 @@ export const exportAllQuestions = query({
 
 		const questions = await ctx.db.query('practiceQuestions').collect();
 
-		const stats = {
+		const stats: ExportStats = {
 			totalQuestions: questions.length,
-			byTrackCode: {} as Record<string, number>,
-			byQuestionType: {} as Record<string, number>,
-			qualityIssues: [] as Array<{
-				order: number;
-				trackCode: string;
-				issue: string;
-			}>,
+			byTrackCode: {},
+			byQuestionType: {},
+			qualityIssues: [],
 			sourceUrlStats: {
 				total: 0,
 				withUrls: 0,

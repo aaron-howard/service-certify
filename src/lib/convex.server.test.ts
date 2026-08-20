@@ -1,38 +1,11 @@
-import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
-
-const { queryMock, mutationMock, setAuthMock, ConvexHttpClientMock } = vi.hoisted(() => {
-	const queryMock = vi.fn();
-	const mutationMock = vi.fn();
-	const setAuthMock = vi.fn();
-	const ConvexHttpClientMock = vi.fn(function MockClient() {
-		return {
-			setAuth: setAuthMock,
-			query: queryMock,
-			mutation: mutationMock
-		};
-	});
-	return { queryMock, mutationMock, setAuthMock, ConvexHttpClientMock };
-});
-
-vi.mock('convex/browser', () => ({
-	ConvexHttpClient: ConvexHttpClientMock
-}));
-
-vi.mock('$env/dynamic/public', () => ({
-	env: { PUBLIC_CONVEX_URL: 'https://example.convex.cloud' }
-}));
-
-vi.mock('$convex/_generated/api', () => ({
-	api: {
-		auth: {
-			getCurrentUser: 'auth:getCurrentUser',
-			createOrUpdateUser: 'auth:createOrUpdateUser'
-		},
-		userProgress: {
-			listForCurrentUser: 'userProgress:listForCurrentUser'
-		}
-	}
-}));
+import { beforeEach, describe, expect, it, vi } from 'vitest';
+import {
+	ensureConvexUser,
+	getConvexCurrentUser,
+	listProgressForCurrentUser,
+	resolveConvexUser,
+	type ConvexServerDeps
+} from './convex.server';
 
 function jwtWithExp(secondsFromNow: number): string {
 	const exp = Math.floor(Date.now() / 1000) + secondsFromNow;
@@ -41,15 +14,19 @@ function jwtWithExp(secondsFromNow: number): string {
 }
 
 describe('convex.server helpers', () => {
+	const queryMock = vi.fn();
+	const mutationMock = vi.fn();
+
+	const deps: ConvexServerDeps = {
+		createAuthedClient: () => ({
+			query: queryMock,
+			mutation: mutationMock
+		})
+	};
+
 	beforeEach(() => {
 		queryMock.mockReset();
 		mutationMock.mockReset();
-		setAuthMock.mockReset();
-		ConvexHttpClientMock.mockClear();
-	});
-
-	afterEach(() => {
-		vi.resetModules();
 	});
 
 	it('getConvexCurrentUser returns a mapped session without mutating', async () => {
@@ -60,8 +37,7 @@ describe('convex.server helpers', () => {
 			profileImage: 'https://img.example/a.png',
 			provider: 'google'
 		});
-		const { getConvexCurrentUser } = await import('./convex.server');
-		const result = await getConvexCurrentUser(jwtWithExp(3600));
+		const result = await getConvexCurrentUser(jwtWithExp(3600), deps);
 		expect(result).toEqual({
 			role: 'admin',
 			email: 'a@example.com',
@@ -78,12 +54,14 @@ describe('convex.server helpers', () => {
 			name: 'Ada',
 			role: 'user'
 		});
-		const { resolveConvexUser } = await import('./convex.server');
-		const result = await resolveConvexUser({
-			workosId: 'user_1',
-			email: 'a@example.com',
-			workosToken: jwtWithExp(3600)
-		});
+		const result = await resolveConvexUser(
+			{
+				workosId: 'user_1',
+				email: 'a@example.com',
+				workosToken: jwtWithExp(3600)
+			},
+			deps
+		);
 		expect(result.role).toBe('user');
 		expect(mutationMock).not.toHaveBeenCalled();
 	});
@@ -96,14 +74,16 @@ describe('convex.server helpers', () => {
 			profileImage: undefined,
 			provider: 'google'
 		});
-		const { resolveConvexUser } = await import('./convex.server');
-		const result = await resolveConvexUser({
-			workosId: 'user_1',
-			email: 'a@example.com',
-			name: 'Ada',
-			provider: 'google',
-			workosToken: jwtWithExp(3600)
-		});
+		const result = await resolveConvexUser(
+			{
+				workosId: 'user_1',
+				email: 'a@example.com',
+				name: 'Ada',
+				provider: 'google',
+				workosToken: jwtWithExp(3600)
+			},
+			deps
+		);
 		expect(result).toMatchObject({ role: 'user', name: 'Ada', email: 'a@example.com' });
 		expect(mutationMock).toHaveBeenCalledOnce();
 	});
@@ -119,13 +99,28 @@ describe('convex.server helpers', () => {
 			}
 		];
 		queryMock.mockResolvedValueOnce(rows);
-		const { listProgressForCurrentUser } = await import('./convex.server');
-		await expect(listProgressForCurrentUser(jwtWithExp(3600))).resolves.toEqual(rows);
+		await expect(listProgressForCurrentUser(jwtWithExp(3600), deps)).resolves.toEqual(rows);
 	});
 
 	it('returns empty progress when the access token is expired', async () => {
-		const { listProgressForCurrentUser } = await import('./convex.server');
-		await expect(listProgressForCurrentUser(jwtWithExp(-60))).resolves.toEqual([]);
-		expect(ConvexHttpClientMock).not.toHaveBeenCalled();
+		const createAuthedClient = vi.fn();
+		await expect(
+			listProgressForCurrentUser(jwtWithExp(-60), { createAuthedClient })
+		).resolves.toEqual([]);
+		expect(createAuthedClient).not.toHaveBeenCalled();
+	});
+
+	it('ensureConvexUser returns profile fields when token is expired', async () => {
+		const result = await ensureConvexUser({
+			workosId: 'user_1',
+			email: 'a@example.com',
+			name: 'Ada',
+			workosToken: jwtWithExp(-60)
+		});
+		expect(result).toMatchObject({
+			role: 'user',
+			email: 'a@example.com',
+			name: 'Ada'
+		});
 	});
 });

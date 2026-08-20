@@ -17,6 +17,10 @@ export type PracticeSessionDraft = {
 
 const STORAGE_PREFIX = 'service-certify:practice';
 
+function hasLocalStorage(): boolean {
+	return 'localStorage' in globalThis;
+}
+
 export function draftStorageKey(trackCode: string, mode: 'sample' | 'full'): string {
 	return `${STORAGE_PREFIX}:${trackCode}:${mode}`;
 }
@@ -33,11 +37,13 @@ export function questionQueryValue(index: number): string {
 }
 
 export function loadSessionDraft(key: string): PracticeSessionDraft | null {
-	if (typeof localStorage === 'undefined') return null;
+	if (!hasLocalStorage()) return null;
 	try {
 		const raw = localStorage.getItem(key);
 		if (!raw) return null;
-		const parsed = JSON.parse(raw) as PracticeSessionDraft;
+		const parsedUnknown: unknown = JSON.parse(raw);
+		// SAFETY: Draft JSON is written by saveSessionDraft in this module's PracticeSessionDraft shape.
+		const parsed = parsedUnknown as PracticeSessionDraft;
 		if (parsed?.version !== 1) return null;
 		if (!parsed.trackCode || !parsed.sessionSeed) return null;
 		return parsed;
@@ -47,7 +53,7 @@ export function loadSessionDraft(key: string): PracticeSessionDraft | null {
 }
 
 export function saveSessionDraft(key: string, draft: PracticeSessionDraft): void {
-	if (typeof localStorage === 'undefined') return;
+	if (!hasLocalStorage()) return;
 	try {
 		localStorage.setItem(key, JSON.stringify(draft));
 	} catch {
@@ -56,7 +62,7 @@ export function saveSessionDraft(key: string, draft: PracticeSessionDraft): void
 }
 
 export function clearSessionDraft(key: string): void {
-	if (typeof localStorage === 'undefined') return;
+	if (!hasLocalStorage()) return;
 	try {
 		localStorage.removeItem(key);
 	} catch {

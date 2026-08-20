@@ -1,15 +1,13 @@
 import * as Sentry from '@sentry/sveltekit';
 import { resolveSentryReleaseName } from './appVersion';
-
-type ProcessEnv = Record<string, string | undefined>;
-
-function processEnv(): ProcessEnv | undefined {
-	const proc =
-		typeof globalThis !== 'undefined'
-			? (globalThis as { process?: { env?: ProcessEnv } }).process
-			: undefined;
-	return proc?.env;
-}
+import {
+	isPlainObject,
+	isStringValue,
+	readProcessEnv,
+	readString,
+	type JsonObject,
+	type JsonValue
+} from './parse';
 
 /**
  * Sentry release: `service-certify@<semver>+<12-char-sha>` on Vercel,
@@ -21,15 +19,22 @@ export function resolveSentryRelease(): string {
 
 const BOT_NOISE_ERROR_PATTERNS = [/No form actions exist for this page/i, /Method Not Allowed/i];
 
+function messageFromObject(value: JsonObject): string {
+	const message = value.message;
+	if (isStringValue(message)) return `${message}`;
+	if (message != null) return String(message);
+	return '';
+}
+
 /** Drop known scanner/bot noise that still slips past status filtering. */
-export function isBotNoiseError(error: unknown): boolean {
+export function isBotNoiseError(error: Error | string | JsonObject | null | undefined): boolean {
 	const message =
 		error instanceof Error
 			? error.message
-			: typeof error === 'string'
-				? error
-				: error && typeof error === 'object' && 'message' in error
-					? String((error as { message: unknown }).message)
+			: isStringValue(error)
+				? `${error}`
+				: error && isPlainObject(error)
+					? messageFromObject(error)
 					: '';
 	return BOT_NOISE_ERROR_PATTERNS.some((pattern) => pattern.test(message));
 }
@@ -41,16 +46,14 @@ export function isBotNoiseError(error: unknown): boolean {
  * (Next.js-oriented). We also accept SvelteKit/Vite names used in this repo.
  */
 export function resolveSentryDsn(): string {
-	if (typeof import.meta !== 'undefined' && import.meta.env) {
-		const fromVite =
-			import.meta.env.VITE_SENTRY_DSN ||
-			import.meta.env.PUBLIC_SENTRY_DSN ||
-			import.meta.env.NEXT_PUBLIC_SENTRY_DSN ||
-			'';
-		if (fromVite) return String(fromVite);
-	}
+	const fromVite =
+		import.meta.env.VITE_SENTRY_DSN ||
+		import.meta.env.PUBLIC_SENTRY_DSN ||
+		import.meta.env.NEXT_PUBLIC_SENTRY_DSN ||
+		'';
+	if (fromVite) return String(fromVite);
 
-	const env = processEnv();
+	const env = readProcessEnv();
 	if (!env) return '';
 
 	return (
@@ -63,12 +66,11 @@ export function resolveSentryDsn(): string {
 }
 
 export function resolveSentryEnvironment(): string {
-	const env = processEnv();
+	const env = readProcessEnv();
 	if (env?.VERCEL_ENV) return env.VERCEL_ENV;
 	if (env?.NODE_ENV) return env.NODE_ENV;
-	if (typeof import.meta !== 'undefined' && import.meta.env?.MODE) {
-		return String(import.meta.env.MODE);
-	}
+	const mode = readString(import.meta.env?.MODE);
+	if (mode) return mode;
 	return 'development';
 }
 
@@ -84,7 +86,7 @@ const ignoreErrors = [
 
 export type SentryInitExtras = {
 	/** Client-only options (e.g. Session Replay). Do not pass from server. */
-	integrations?: unknown[];
+	integrations?: object[];
 	replaysSessionSampleRate?: number;
 	replaysOnErrorSampleRate?: number;
 };
@@ -104,8 +106,15 @@ export function getSentryInitOptions(extras: SentryInitExtras = {}) {
 		tracesSampleRate: environment === 'production' ? 0.1 : 1.0,
 		release: resolveSentryRelease(),
 		ignoreErrors,
-		beforeSend(event: { message?: string }, hint: { originalException?: unknown }) {
-			if (isBotNoiseError(hint.originalException ?? event.message)) {
+		beforeSend(event: { message?: string }, hint: { originalException?: JsonValue | Error }) {
+			const original = hint.originalException;
+			if (original instanceof Error) {
+				if (isBotNoiseError(original)) return null;
+			} else if (isStringValue(original)) {
+				if (isBotNoiseError(`${original}`)) return null;
+			} else if (isPlainObject(original)) {
+				if (isBotNoiseError(original)) return null;
+			} else if (event.message && isBotNoiseError(event.message)) {
 				return null;
 			}
 			return event;
@@ -124,6 +133,7 @@ export function getSentryInitOptions(extras: SentryInitExtras = {}) {
 export function initSentry(extras: SentryInitExtras = {}) {
 	const initOptions = getSentryInitOptions(extras);
 	if (!initOptions) return;
+	// SAFETY: getSentryInitOptions builds the subset Sentry.init accepts; extras are client-only options.
 	Sentry.init(initOptions as Parameters<typeof Sentry.init>[0]);
 }
 
@@ -156,14 +166,31 @@ export function captureMessage(message: string, level: 'info' | 'warning' | 'err
 	Sentry.captureMessage(message, level);
 }
 
+export type SentryExceptionContext = Record<string, string | number | boolean | null>;
+
+function toCaptureableError(cause: unknown): Error | string {
+	if (cause instanceof Error) return cause;
+	const tag = Object.prototype.toString.call(cause);
+	if (tag === '[object String]') return String(cause);
+	if (tag === '[object Object]' && cause !== null) {
+		// SAFETY: plain object branch after tag check; message is optional telemetry.
+		const message = (cause as JsonObject).message;
+		if (isStringValue(message)) return new Error(`${message}`);
+		if (message != null) return new Error(String(message));
+		return new Error('Unknown error');
+	}
+	return new Error(String(cause));
+}
+
 /** Capture an exception (no-op if Sentry was never initialized). */
-export function captureException(error: unknown, context?: Record<string, unknown>) {
+export function captureException(cause: unknown, context?: SentryExceptionContext) {
+	const captureable = toCaptureableError(cause);
 	if (context) {
 		Sentry.withScope((scope) => {
 			scope.setExtras(context);
-			Sentry.captureException(error);
+			Sentry.captureException(captureable);
 		});
 		return;
 	}
-	Sentry.captureException(error);
+	Sentry.captureException(captureable);
 }

@@ -6,6 +6,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { readString } from './_url-parse.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const bankPath = path.join(__dirname, '..', '..', 'src', 'convex', 'seed', 'devQuestionBank.ts');
@@ -22,7 +23,9 @@ const EXACT = {
 };
 
 function normalizeUrl(url) {
-	if (typeof url !== 'string' || !url.includes('servicenow.com/docs')) return url;
+	const text = readString(url);
+	if (!text || !text.includes('servicenow.com/docs')) return url;
+	url = text;
 	if (EXACT[url]) return EXACT[url];
 	if (url.includes('/docs/r/') && !url.includes('/australia/') && !url.includes('/bundle/')) {
 		return url;
@@ -84,8 +87,9 @@ const marker = 'export const DEV_PRACTICE_QUESTIONS';
 const markerAt = raw.indexOf(marker);
 const start = raw.indexOf('[', markerAt);
 const castEnd = raw.lastIndexOf('] as unknown as DevPracticeQuestionRow[]');
+const singleCastEnd = raw.lastIndexOf('] as DevPracticeQuestionRow[]');
 const plainEnd = raw.lastIndexOf('];');
-const end = castEnd >= 0 ? castEnd : plainEnd;
+const end = castEnd >= 0 ? castEnd : singleCastEnd >= 0 ? singleCastEnd : plainEnd;
 const prefix = raw.slice(0, start);
 const suffix = raw.slice(end + 1);
 const bank = JSON.parse(raw.slice(start, end + 1));

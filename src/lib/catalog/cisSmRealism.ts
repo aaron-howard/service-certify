@@ -1,6 +1,7 @@
 /** CIS-SM (Certified Implementation Specialist - Service Mapping) exam-realism rules. */
 
-import type { QuestionType } from './questionTypes';
+import { bumpDomainCount, zeroDomainCounts } from './domainCounts';
+import type { RealismQuestionRow } from './realismQuestionRow';
 
 export const CIS_SM_BANK_SIZE = 90;
 
@@ -77,17 +78,7 @@ export const BANNED_STEM_PATTERNS = [
 
 export const STEM_OPENER_CAP = 4;
 
-export type CisSmQuestionRow = {
-	trackCode: string;
-	order: number;
-	prompt: string;
-	choices: string[];
-	sourceUrls: string[];
-	domain?: string;
-	questionType?: QuestionType;
-	correctIndexes?: number[];
-	correctIndex?: number;
-};
+export type CisSmQuestionRow = RealismQuestionRow;
 
 export function fourWordOpener(text: string): string {
 	return text.trim().split(/\s+/).slice(0, 4).join(' ').toLowerCase();
@@ -167,9 +158,7 @@ export function validateCisSmScenarioRatio(rows: CisSmQuestionRow[]): string[] {
 
 export function validateCisSmDomainTags(rows: CisSmQuestionRow[]): string[] {
 	const issues: string[] = [];
-	const domainCounts = Object.fromEntries(
-		Object.keys(CIS_SM_DOMAIN_TARGETS).map((d) => [d, 0])
-	) as Record<string, number>;
+	const domainCounts = zeroDomainCounts(CIS_SM_DOMAIN_TARGETS);
 
 	for (const q of rows) {
 		if (q.trackCode !== 'CIS-SM') continue;
@@ -181,12 +170,12 @@ export function validateCisSmDomainTags(rows: CisSmQuestionRow[]): string[] {
 		if (q.domain !== expected) {
 			issues.push(`order ${q.order}: domain ${q.domain} does not match order quota ${expected}`);
 		}
-		domainCounts[q.domain]++;
+		bumpDomainCount(domainCounts, q.domain);
 	}
 
 	for (const [domain, target] of Object.entries(CIS_SM_DOMAIN_TARGETS)) {
-		if (domainCounts[domain] !== target) {
-			issues.push(`domain ${domain}: expected ${target}, got ${domainCounts[domain] ?? 0}`);
+		if (domainCounts.get(domain) !== target) {
+			issues.push(`domain ${domain}: expected ${target}, got ${domainCounts.get(domain) ?? 0}`);
 		}
 	}
 

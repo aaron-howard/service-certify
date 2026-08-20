@@ -25,6 +25,12 @@ import { existsSync, readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { spawnSync } from 'node:child_process';
 
+const tag = Object.prototype.toString;
+function readString(value) {
+	if (tag.call(value) !== '[object String]') return null;
+	return String(value);
+}
+
 const ROOT = resolve(import.meta.dirname, '..');
 const ENV_LOCAL = resolve(ROOT, '.env.local');
 const SENTRY_BIN = resolve(ROOT, 'node_modules/.bin/sentry');
@@ -163,8 +169,8 @@ function resolveMemberId(org, email) {
 	const body = parseJson(stdout);
 	const members = Array.isArray(body) ? body : [];
 	const match = members.find((m) => {
-		const memberEmail = m.email ?? m.user?.email;
-		return typeof memberEmail === 'string' && memberEmail.toLowerCase() === email.toLowerCase();
+		const memberEmail = readString(m.email ?? m.user?.email);
+		return memberEmail !== null && memberEmail.toLowerCase() === email.toLowerCase();
 	});
 	const userId = match?.user?.id ?? match?.userId ?? match?.id;
 	if (!userId) {
