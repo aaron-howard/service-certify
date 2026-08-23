@@ -46,13 +46,6 @@ export function createMockAnswer(overrides: { order?: number; selectedIndex?: nu
 }
 
 /**
- * Validate that a value is within a range.
- */
-export function isInRange(value: number, min: number, max: number): boolean {
-	return value >= min && value <= max;
-}
-
-/**
  * Generate random practice answers.
  */
 export function generateRandomAnswers(count: number) {
