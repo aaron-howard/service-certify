@@ -1,6 +1,6 @@
 import { internalMutation } from './_generated/server';
 import { CERTIFICATION_TRACKS_FOR_SEED } from './catalog/tracksCanonical';
-import { DEV_PRACTICE_QUESTIONS } from './seed/devQuestionBank';
+import { DEV_PRACTICE_QUESTIONS, isFullQuestionBank } from './seed/devQuestionBank';
 
 type DevPracticeQuestionInsert = {
 	trackCode: string;
@@ -43,6 +43,12 @@ export const apply = internalMutation({
 export const devQuestions = internalMutation({
 	args: {},
 	handler: async (ctx) => {
+		if (!isFullQuestionBank()) {
+			throw new Error(
+				'Refusing to seed: full practice bank is missing. Copy the private bank to src/convex/seed/devQuestionBank.private.ts (see src/convex/seed/QUESTION_BANK.md).'
+			);
+		}
+
 		const existing = await ctx.db.query('practiceQuestions').collect();
 		for (const row of existing) {
 			if (row.difficulty === 'dev') {

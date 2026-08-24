@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { DEV_PRACTICE_QUESTIONS } from './devQuestionBank';
+import { DEV_PRACTICE_QUESTIONS, isFullQuestionBank } from './devQuestionBank';
 import { CERTIFICATION_TRACKS_FOR_SEED } from '../catalog/tracksCanonical';
 import {
 	EXAM_QUESTION_BANK_TARGETS,
@@ -11,7 +11,7 @@ import {
 const DEFAULT_QUESTIONS_PER_TRACK = 5;
 
 describe('DEV_PRACTICE_QUESTIONS bank', () => {
-	it('tracks bank progress toward official+30 targets', () => {
+	it.skipIf(!isFullQuestionBank())('tracks bank progress toward official+30 targets', () => {
 		for (const [trackCode, target] of Object.entries(EXAM_QUESTION_BANK_TARGETS)) {
 			const rows = DEV_PRACTICE_QUESTIONS.filter((q) => q.trackCode === trackCode);
 			expect(rows.length).toBeGreaterThanOrEqual(DEFAULT_QUESTIONS_PER_TRACK);

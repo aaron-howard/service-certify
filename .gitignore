@@ -43,3 +43,6 @@ vite.config.ts.timestamp-*
 
 .vercel
 .env*.local
+
+# Full practice question bank (not public)
+src/convex/seed/devQuestionBank.private.ts
