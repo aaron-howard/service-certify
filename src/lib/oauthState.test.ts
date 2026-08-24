@@ -74,7 +74,7 @@ describe('consumeOAuthState', () => {
 
 	it('rejects a missing cookie or query state and still deletes the cookie', () => {
 		const cookies = {
-			get: vi.fn(() => undefined),
+			get: vi.fn<() => string | undefined>(() => undefined),
 			set: vi.fn(),
 			delete: vi.fn()
 		};

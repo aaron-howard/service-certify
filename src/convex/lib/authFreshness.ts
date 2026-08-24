@@ -6,17 +6,14 @@
 /** Same window as SvelteKit `DELETE_ACCOUNT_STEP_UP_MAX_AGE_SECONDS`. */
 export const DELETE_ACCOUNT_MAX_AGE_SECONDS = 300;
 
-type IdentityAuthTimeClaims = {
-	auth_time?: unknown;
-	authTime?: unknown;
-};
-
 /**
  * Read OIDC `auth_time` (seconds since epoch) from a Convex identity.
  * WorkOS may mint `auth_time`; Convex may surface it as `authTime`.
+ * Accepts `object` so Convex `UserIdentity` (no declared auth_time fields) typechecks.
  */
-export function authTimeSecondsFromIdentity(identity: IdentityAuthTimeClaims): number | undefined {
-	const raw = identity.auth_time ?? identity.authTime;
+export function authTimeSecondsFromIdentity(identity: object): number | undefined {
+	const claims = identity as { auth_time?: unknown; authTime?: unknown };
+	const raw = claims.auth_time ?? claims.authTime;
 	if (typeof raw !== 'number' || !Number.isFinite(raw)) return undefined;
 	return raw;
 }
