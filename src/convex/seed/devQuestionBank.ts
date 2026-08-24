@@ -1,4 +1,10 @@
 // @ts-nocheck — large generated bank exceeds TS2590 union limits
+/**
+ * Public MIT seed for Convex (`npm run seed:dev:questions`).
+ * Prompts, choices, correctIndex, and explanations are included by design
+ * so a clone can seed a deployment. Do not treat this file as a secret;
+ * the live-app admin gate on full mocks is a product limiter, not IP protection.
+ */
 import type { DevPracticeQuestionRow } from './devQuestionBank.types';
 
 /** Dev question bank; merge batches: `node scripts/extract-questions-from-transcripts.mjs --merge-batches` */

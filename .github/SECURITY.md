@@ -56,6 +56,12 @@ Security issues in **this repository** and the Service Certify application it bu
 - Static design prototypes under `stitch_service_certify_prd/`
 - Unimplemented features (for example Phase D payments / membership billing)
 
+## Practice question bank
+
+The committed seed (`src/convex/seed/devQuestionBank.ts`) includes prompts, choices, `correctIndex`, and explanations so this MIT-licensed repo can seed Convex (`npm run seed:dev:questions`). Anyone who clones the repository can read the answers. That is expected for this project.
+
+The live app still requires admin for full-mock APIs. That gate is a **product limiter** (who can run a full mock in the live app), not intellectual-property protection or a confidentiality boundary. Do not report “answers are in git” as a vulnerability.
+
 ## Safe harbor
 
 We welcome good-faith security research. If you follow this policy and:
