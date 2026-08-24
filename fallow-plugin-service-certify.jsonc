@@ -1,0 +1,29 @@
+{
+	"$schema": "./docs/schemas/fallow-plugin.schema.json",
+	"name": "service-certify",
+	"detection": { "type": "fileExists", "pattern": "convex.json" },
+	"entryPoints": [
+		"src/convex/**/*.ts",
+		"src/instrumentation.server.ts",
+		"scripts/**/*.{js,mjs}",
+		"tools/oxlint/**/*.ts",
+		"src/lib/test-stubs/**/*.ts"
+	],
+	"configPatterns": ["src/convex/auth.config.ts", "convex.json"],
+	"alwaysUsed": [
+		"src/convex/auth.config.ts",
+		"src/instrumentation.server.ts",
+		"src/lib/test-stubs/env-public.ts",
+		"src/lib/test-stubs/env-private.ts"
+	],
+	"usedExports": [
+		{
+			"pattern": "src/convex/**/*.{ts,js}",
+			"exports": ["*"]
+		},
+		{
+			"pattern": "src/convex/_generated/**/*.{ts,js}",
+			"exports": ["*"]
+		}
+	]
+}

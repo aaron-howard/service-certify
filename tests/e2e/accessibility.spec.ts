@@ -1,4 +1,5 @@
 import { test, expect } from '@playwright/test';
+import AxeBuilder from '@axe-core/playwright';
 import { examCardLinks, gotoFirstExam, gotoFirstPractice, hasPracticeQuestions } from './helpers';
 
 /**
@@ -7,6 +8,17 @@ import { examCardLinks, gotoFirstExam, gotoFirstPractice, hasPracticeQuestions }
  */
 
 test.describe('Accessibility (WCAG 2.1 AA)', () => {
+	test('landing page should have no critical axe violations', async ({ page }) => {
+		await page.goto('/');
+		await expect(page.getByRole('main')).toBeVisible();
+
+		const results = await new AxeBuilder({ page })
+			.withTags(['wcag2a', 'wcag2aa'])
+			.analyze();
+
+		expect(results.violations, JSON.stringify(results.violations, null, 2)).toEqual([]);
+	});
+
 	test('landing page should be accessible', async ({ page }) => {
 		await page.goto('/');
 

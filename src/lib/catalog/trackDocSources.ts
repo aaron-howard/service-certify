@@ -22,12 +22,6 @@ export type TrackDocSource = {
 	domains: TrackDocDomain[];
 };
 
-/** Build a raw GitHub markdown URL for a topic file within a publication. */
-export function snDocsRawUrl(publication: string, filePath: string): string {
-	const path = filePath.startsWith('/') ? filePath.slice(1) : filePath;
-	return `${SN_DOCS_RAW_BASE}/${publication}/${path}`;
-}
-
 export const PHASE1_TRACK_DOC_SOURCES: TrackDocSource[] = [
 	{
 		trackCode: 'CSA',
@@ -148,30 +142,6 @@ export const PHASE1_TRACK_DOC_SOURCES: TrackDocSource[] = [
 		]
 	}
 ];
-
-/** Full mock-exam question bank targets: official count + {@link QUESTION_BANK_BUFFER}. */
-import {
-	EXAM_QUESTION_BANK_TARGETS,
-	QUESTION_BANK_BUFFER,
-	OFFICIAL_EXAM_QUESTION_COUNTS,
-	getOfficialQuestionCount,
-	getQuestionBankTarget
-} from './examQuestionPolicy';
-
-export { EXAM_QUESTION_BANK_TARGETS as EXAM_QUESTION_TARGETS };
-export {
-	QUESTION_BANK_BUFFER,
-	OFFICIAL_EXAM_QUESTION_COUNTS,
-	getOfficialQuestionCount,
-	getQuestionBankTarget
-};
-
-/** @deprecated Use EXAM_QUESTION_TARGETS */
-export const FEATURED_EXAM_QUESTION_TARGETS = {
-	CSA: { targetCount: EXAM_QUESTION_BANK_TARGETS.CSA, slug: 'csa' },
-	CAD: { targetCount: EXAM_QUESTION_BANK_TARGETS.CAD, slug: 'cad' },
-	'CIS-ITSM': { targetCount: EXAM_QUESTION_BANK_TARGETS['CIS-ITSM'], slug: 'cis-itsm' }
-} as const;
 
 export const PHASE3_TRACK_DOC_SOURCES: TrackDocSource[] = [
 	{

@@ -30,8 +30,6 @@ export const OFFICIAL_EXAM_QUESTION_COUNTS = {
 	'CIS-HR': 60
 } as const;
 
-export type OfficialExamTrackCode = keyof typeof OFFICIAL_EXAM_QUESTION_COUNTS;
-
 function officialCountForTrack(trackCode: string): number | undefined {
 	for (const [code, count] of Object.entries(OFFICIAL_EXAM_QUESTION_COUNTS)) {
 		if (code === trackCode) return count;

@@ -5,8 +5,6 @@ import type { RealismQuestionRow } from './realismQuestionRow';
 
 /** Bank distribution for 90 questions scaled 1.5x from the 60-question official exam. */
 
-export const CIS_TPRM_BANK_SIZE = 90;
-
 export const CIS_TPRM_DOMAIN_TARGETS = {
 	'TPRM Fundamentals and Review': 20,
 	'Core Configuration': 13,
