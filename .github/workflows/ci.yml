@@ -17,6 +17,18 @@ jobs:
         with:
           node-version: "24"
           cache: npm
+      - name: Guard private question bank
+        run: |
+          set -euo pipefail
+          if git ls-files --error-unmatch src/convex/seed/devQuestionBank.private.ts >/dev/null 2>&1; then
+            echo "src/convex/seed/devQuestionBank.private.ts must not be tracked"
+            exit 1
+          fi
+          loader_bytes=$(wc -c < src/convex/seed/devQuestionBank.ts)
+          if [ "$loader_bytes" -gt 20000 ]; then
+            echo "Tracked loader src/convex/seed/devQuestionBank.ts is ${loader_bytes} bytes; the full bank may have leaked into git"
+            exit 1
+          fi
       - run: npm ci
       - run: npm run check
       - run: npm test

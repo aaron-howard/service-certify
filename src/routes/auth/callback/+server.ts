@@ -7,6 +7,7 @@ import {
 	toOAuthProviderSlug
 } from '$lib/workos.server';
 import { buildConvexUserSyncPayload } from '$lib/auth.server';
+import { consumeOAuthState } from '$lib/oauthState';
 import { safeInternalRedirect } from '$lib/safeRedirect';
 import { setWorkOsAuthCookies } from '$lib/workos-session';
 
@@ -33,6 +34,11 @@ export const GET: RequestHandler = async ({ url, cookies }) => {
 	if (!code) {
 		console.error('No authorization code received');
 		throw redirect(302, '/auth/signin?error=no_code');
+	}
+
+	const queryState = url.searchParams.get('state');
+	if (!consumeOAuthState(cookies, queryState)) {
+		throw redirect(302, '/auth/signin?error=invalid_state');
 	}
 
 	const secure = url.protocol === 'https:';

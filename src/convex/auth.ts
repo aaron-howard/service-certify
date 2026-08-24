@@ -1,7 +1,12 @@
 import { mutation, query } from './_generated/server';
 import { v } from 'convex/values';
 import { isAdminEmail } from './lib/adminEmails';
-import { isAdminUser, resolveUserRole, getAuthenticatedUser } from './lib/authorization';
+import { resolveUserRole, getAuthenticatedUser } from './lib/authorization';
+import {
+	DELETE_ACCOUNT_MAX_AGE_SECONDS,
+	authTimeSecondsFromIdentity,
+	isAuthTimeFresh
+} from './lib/authFreshness';
 import { canonicalAuthEmail, workosUserIdFromIdentity } from './lib/workosIdentity';
 
 type UserProfilePatch = {
@@ -9,7 +14,7 @@ type UserProfilePatch = {
 	name?: string;
 	profileImage?: string;
 	provider?: string;
-	role?: 'admin';
+	role?: 'admin' | 'user';
 };
 
 /**
@@ -51,13 +56,10 @@ export const createOrUpdateUser = mutation({
 				email,
 				name: args.name,
 				profileImage: args.profileImage,
-				provider: args.provider
+				provider: args.provider,
+				// Re-evaluate on every sync so removed allowlist emails lose admin.
+				role: isAdminEmail(email) ? 'admin' : 'user'
 			};
-
-			// Promote allowlisted emails; never downgrade admins on profile sync.
-			if (!isAdminUser(existing) && isAdminEmail(email)) {
-				patch.role = 'admin';
-			}
 
 			await ctx.db.patch(existing._id, patch);
 			const updated = await ctx.db.get(existing._id);
@@ -141,6 +143,22 @@ export const getUserByEmail = query({
 export const deleteAccount = mutation({
 	args: {},
 	handler: async (ctx) => {
+		const identity = await ctx.auth.getUserIdentity();
+		if (!identity) {
+			throw new Error('Not authenticated');
+		}
+
+		const nowSeconds = Date.now() / 1000;
+		if (
+			!isAuthTimeFresh(
+				authTimeSecondsFromIdentity(identity),
+				nowSeconds,
+				DELETE_ACCOUNT_MAX_AGE_SECONDS
+			)
+		) {
+			throw new Error('Recent re-authentication required');
+		}
+
 		const user = await getAuthenticatedUser(ctx);
 		if (!user) {
 			throw new Error('Not authenticated');

@@ -8,7 +8,7 @@ import { fileURLToPath } from 'node:url';
 import { readString } from './_url-parse.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const bankPath = path.join(__dirname, '..', '..', 'src', 'convex', 'seed', 'devQuestionBank.ts');
+const bankPath = path.join(__dirname, '..', '..', 'src', 'convex', 'seed', 'devQuestionBank.private.ts');
 
 function normalizeUrl(url) {
 	const text = readString(url);

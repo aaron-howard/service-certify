@@ -63,7 +63,7 @@ src/
 | **Rate limiting** | `rateLimit.test.ts` |
 | **Practice / grading** | `practiceQuestions.test.ts`, choice shuffle, grade API |
 | **Health endpoint** | `health/__tests__/health.test.ts` |
-| **Question bank quality** | `devQuestionBank.test.ts`, `trackQuality.test.ts`, per-track `*Realism.test.ts` |
+| **Question bank quality** | `devQuestionBank.test.ts`, `trackQuality.test.ts`, per-track `*realism.test.ts` (full-bank tests skip in CI when only the public stub is present) |
 | **Auth / progress** | Authorization helpers, `userProgress` |
 
 **Goal: 70%+ coverage for critical paths**

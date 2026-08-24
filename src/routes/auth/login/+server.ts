@@ -1,5 +1,6 @@
 import { redirect } from '@sveltejs/kit';
 import type { RequestHandler } from '@sveltejs/kit';
+import { generateOAuthState, setOAuthStateCookie } from '$lib/oauthState';
 import { safeInternalRedirect } from '$lib/safeRedirect';
 import {
 	getOAuthAuthorizationUrl,
@@ -37,7 +38,10 @@ export const GET: RequestHandler = async ({ url, cookies }) => {
 		maxAge: 10 * 60
 	});
 
-	const authorizationUrl = getOAuthAuthorizationUrl(url.origin, provider);
+	const state = generateOAuthState();
+	setOAuthStateCookie(cookies, state, url.protocol === 'https:');
+
+	const authorizationUrl = getOAuthAuthorizationUrl(url.origin, provider, state);
 
 	if (!authorizationUrl) {
 		throw redirect(302, '/auth/signin?error=workos_not_configured');

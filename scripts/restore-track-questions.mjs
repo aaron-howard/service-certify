@@ -11,7 +11,7 @@ import { execSync } from 'node:child_process';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.join(__dirname, '..');
-const bankPath = path.join(root, 'src', 'convex', 'seed', 'devQuestionBank.ts');
+const bankPath = path.join(root, 'src', 'convex', 'seed', 'devQuestionBank.private.ts');
 const batchesDir = path.join(root, 'scripts', 'question-batches');
 
 /** Boilerplate appended by rebalance-question-choices.mjs — must not appear in choices. */
@@ -54,12 +54,16 @@ function shuffleQuestionChoices(q) {
 function readBank() {
 	const raw = fs.readFileSync(bankPath, 'utf8');
 	const match = raw.match(/DEV_PRACTICE_QUESTIONS[^=]*=\s*(\[[\s\S]*\]);/);
-	if (!match) throw new Error('Could not parse devQuestionBank.ts');
+	if (!match) throw new Error('Could not parse devQuestionBank.private.ts');
 	return JSON.parse(match[1]);
 }
 
 function writeBank(all) {
-	const body = `import type { DevPracticeQuestionRow } from './devQuestionBank.types';
+	const body = `// @ts-nocheck — large generated bank exceeds TS2590 union limits
+/**
+ * PRIVATE practice bank. Do not commit this file (see .gitignore).
+ */
+import type { DevPracticeQuestionRow } from './devQuestionBank.types';
 
 /** Dev question bank; merge batches: \`node scripts/extract-questions-from-transcripts.mjs --merge-batches\` */
 export const DEV_PRACTICE_QUESTIONS: DevPracticeQuestionRow[] = ${JSON.stringify(all, null, '\t')};
