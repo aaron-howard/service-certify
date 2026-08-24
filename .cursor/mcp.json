@@ -4,7 +4,7 @@
 			"command": "npx",
 			"args": [
 				"-y",
-				"convex@latest",
+				"convex@1.43.0",
 				"mcp",
 				"start",
 				"--project-dir",
@@ -18,7 +18,7 @@
 		},
 		"upstash": {
 			"command": "npx",
-			"args": ["-y", "@upstash/mcp-server@latest"],
+			"args": ["-y", "@upstash/mcp-server@0.3.0"],
 			"env": {
 				"UPSTASH_EMAIL": "${env:UPSTASH_EMAIL}",
 				"UPSTASH_API_KEY": "${env:UPSTASH_API_KEY}"

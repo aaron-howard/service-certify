@@ -11,7 +11,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const bankPath = path.join(__dirname, '..', 'src', 'convex', 'seed', 'devQuestionBank.ts');
+const bankPath = path.join(__dirname, '..', 'src', 'convex', 'seed', 'devQuestionBank.private.ts');
 
 const sampleArg = process.argv.find((a) => a.startsWith('--sample='));
 const sampleCount = sampleArg ? Number(sampleArg.split('=')[1]) : 10;
@@ -20,7 +20,7 @@ const checkAll = process.argv.includes('--all');
 function readBank() {
 	const raw = fs.readFileSync(bankPath, 'utf8');
 	const match = raw.match(/DEV_PRACTICE_QUESTIONS[^=]*=\s*(\[[\s\S]*\]);/);
-	if (!match) throw new Error('Could not parse devQuestionBank.ts');
+	if (!match) throw new Error('Could not parse devQuestionBank.private.ts');
 	return JSON.parse(match[1]);
 }
 

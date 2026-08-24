@@ -35,6 +35,8 @@ npm run seed:dev            # certification tracks
 npm run seed:dev:questions  # practice question bank (22 tracks)
 ```
 
+The full practice bank is **not** in git. Place it at `src/convex/seed/devQuestionBank.private.ts` before seeding (see [`src/convex/seed/QUESTION_BANK.md`](./src/convex/seed/QUESTION_BANK.md)). `npm run seed:dev:questions` refuses to run if only the public stub is present.
+
 More detail for Convex workflows and agent-driven question generation: [`AGENTS.md`](./AGENTS.md).
 
 Authentication (WorkOS) is documented in [`docs/AUTH-WORKOS.md`](./docs/AUTH-WORKOS.md) and [`docs/auth-setup.md`](./docs/auth-setup.md).

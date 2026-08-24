@@ -9,7 +9,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const bankPath = path.join(__dirname, '..', 'src', 'convex', 'seed', 'devQuestionBank.ts');
+const bankPath = path.join(__dirname, '..', 'src', 'convex', 'seed', 'devQuestionBank.private.ts');
 const dryRun = process.argv.includes('--dry-run');
 const TARGET_RATE = 0.85;
 
@@ -280,7 +280,7 @@ function readBank() {
 	const castEnd = raw.lastIndexOf('] as unknown as DevPracticeQuestionRow[]');
 	const plainEnd = raw.lastIndexOf('];');
 	const end = castEnd >= 0 ? castEnd : plainEnd;
-	if (start < 0 || end < 0) throw new Error('Could not parse devQuestionBank.ts');
+	if (start < 0 || end < 0) throw new Error('Could not parse devQuestionBank.private.ts');
 	return JSON.parse(raw.slice(start, end + 1));
 }
 

@@ -1,6 +1,8 @@
+import type { Doc } from '../_generated/dataModel';
+import type { UserIdentity } from 'convex/server';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import { isAdminEmail, parseAdminEmailAllowlist } from './adminEmails';
-import { resolveUserRole, SAMPLE_QUESTION_LIMIT } from './authorization';
+import { lookupUserForIdentity, resolveUserRole, SAMPLE_QUESTION_LIMIT } from './authorization';
 
 describe('admin email allowlist', () => {
 	afterEach(() => {
@@ -36,5 +38,56 @@ describe('authorization helpers', () => {
 
 	it('documents the sample question limit', () => {
 		expect(SAMPLE_QUESTION_LIMIT).toBe(3);
+	});
+});
+
+function identity(
+	partial: Partial<UserIdentity> & Pick<UserIdentity, 'subject' | 'issuer' | 'tokenIdentifier'>
+): UserIdentity {
+	return partial;
+}
+
+describe('lookupUserForIdentity', () => {
+	const adminRow = { email: 'admin@example.com', workosId: 'user_ADMIN' } as Doc<'users'>;
+	const attackerRow = { email: 'admin@example.com', workosId: 'user_ATTACKER' } as Doc<'users'>;
+
+	it('looks up only by workosId even when email matches another user', async () => {
+		const findByWorkosId = vi.fn(async (workosId: string) => {
+			if (workosId === 'user_ATTACKER') return attackerRow;
+			if (workosId === 'user_ADMIN') return adminRow;
+			return null;
+		});
+
+		const user = await lookupUserForIdentity(
+			identity({
+				subject: 'user_ATTACKER',
+				issuer: 'https://api.workos.com',
+				tokenIdentifier: 'https://api.workos.com|user_ATTACKER',
+				email: 'admin@example.com'
+			}),
+			findByWorkosId
+		);
+
+		expect(user).toBe(attackerRow);
+		expect(findByWorkosId).toHaveBeenCalledOnce();
+		expect(findByWorkosId).toHaveBeenCalledWith('user_ATTACKER');
+	});
+
+	it('returns null when workosId is missing even if email is present', async () => {
+		const findByWorkosId = vi.fn(async () => adminRow);
+
+		await expect(
+			lookupUserForIdentity(
+				identity({
+					subject: 'not-a-workos-id',
+					issuer: 'https://api.workos.com',
+					tokenIdentifier: 'https://api.workos.com|not-a-workos-id',
+					email: 'admin@example.com'
+				}),
+				findByWorkosId
+			)
+		).resolves.toBeNull();
+
+		expect(findByWorkosId).not.toHaveBeenCalled();
 	});
 });

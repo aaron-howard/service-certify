@@ -43,6 +43,7 @@ Security issues in **this repository** and the Service Certify application it bu
 - Insecure direct object references (IDOR) on account, progress, grading, or related APIs
 - Cross-site scripting (XSS), CSRF, injection, or similar issues in SvelteKit routes or Convex functions
 - Exposure of secrets or credentials in this repo, build artifacts, or deploy configuration for this app
+- Exposure of the private practice question bank (`src/convex/seed/devQuestionBank.private.ts`)
 - Rate-limit bypasses on public APIs with clear security or abuse impact
 - Dependency vulnerabilities that are **exploitable in this application**
 
@@ -55,6 +56,12 @@ Security issues in **this repository** and the Service Certify application it bu
 - Denial of service without a distinct application vulnerability
 - Static design prototypes under `stitch_service_certify_prd/`
 - Unimplemented features (for example Phase D payments / membership billing)
+
+## Practice question bank
+
+The full practice bank (prompts, choices, answers, explanations) is **not** part of the public git tree. It lives in gitignored `src/convex/seed/devQuestionBank.private.ts`. The tracked file `devQuestionBank.private.example.ts` is a one-row stub so CI can typecheck.
+
+Do report a vulnerability if a change **re-introduces the full bank** (or answer keys) into a tracked file. Older git history may still contain a former public copy until that history is rewritten.
 
 ## Safe harbor
 

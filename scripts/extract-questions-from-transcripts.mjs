@@ -1,6 +1,6 @@
 /**
  * Parse Convex question batches from Cursor subagent .jsonl transcripts or JSON batch
- * files and write/merge src/convex/seed/devQuestionBank.ts
+ * files and write/merge src/convex/seed/devQuestionBank.private.ts
  *
  * Usage (from repo root):
  *   node scripts/extract-questions-from-transcripts.mjs
@@ -28,7 +28,7 @@ function isNumberValue(value) {
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.join(__dirname, '..');
-const outPath = path.join(root, 'src', 'convex', 'seed', 'devQuestionBank.ts');
+const outPath = path.join(root, 'src', 'convex', 'seed', 'devQuestionBank.private.ts');
 const batchesDir = path.join(root, 'scripts', 'question-batches');
 
 const defaultSubagents = path.join(
@@ -335,6 +335,9 @@ function mergeQuestions(existing, incoming) {
 
 function writeBank(all) {
 	const body = `// @ts-nocheck — large generated bank exceeds TS2590 union limits
+/**
+ * PRIVATE practice bank. Do not commit this file (see .gitignore).
+ */
 import type { DevPracticeQuestionRow } from './devQuestionBank.types';
 
 /** Dev question bank; merge batches: \`node scripts/extract-questions-from-transcripts.mjs --merge-batches\` */

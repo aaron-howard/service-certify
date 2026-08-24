@@ -30,7 +30,7 @@ This is the living checklist referenced by monitoring, testing, and rate-limitin
 - [x] Practice sessions with single, multi-select, and match item types
 - [x] Choice/match shuffle at display time
 - [x] Official exam timing via `examQuestionPolicy`
-- [x] Question bank v2 complete (seed: `devQuestionBank.ts`)
+- [x] Question bank v2 complete (private seed: `devQuestionBank.private.ts`; see `src/convex/seed/QUESTION_BANK.md`)
 - [x] Quality gates: track quality + per-track realism tests
 
 ### Auth
