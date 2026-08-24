@@ -58,7 +58,7 @@
 		"@testing-library/user-event": "^14.6.4",
 		"@types/node": "^26.2.0",
 		"happy-dom": "^20.11.2",
-		"jsdom": "^29.1.1",
+		"jsdom": "^30.0.1",
 		"oxlint": "^1.78.0",
 		"patch-package": "^8.0.1",
 		"sentry": "^0.42.2",
