@@ -3,7 +3,7 @@ name: servicenow-exam-question-gen
 description: >-
   Generate or audit doc-grounded ServiceNow certification practice-exam questions
   for the Service Certify app (banks in question-gen/banks/, seeded via
-  src/convex/seed/devQuestionBank.ts). Use when asked to write, expand, review,
+  gitignored src/convex/seed/devQuestionBank.private.ts). Use when asked to write, expand, review,
   or validate exam question banks for any of the 22 certification tracks.
 ---
 
@@ -15,9 +15,9 @@ Generate high-quality, doc-grounded certification practice questions for Service
 
 - `question-gen/METHODOLOGY.md` ΓÇö full methodology; **read it first**.
 - `question-gen/tracks.config.json` ΓÇö all 22 tracks: doc publications, exact domain names, target counts, keywords (mirrored from `trackDocSources.ts` + `examQuestionPolicy.ts`).
-- `question-gen/validate.mjs` ΓÇö structural gate. Run `npm run validate:questions` (or `node question-gen/validate.mjs <slug>`). Use `--seed` to validate `devQuestionBank.ts` directly.
+- `question-gen/validate.mjs` ΓÇö structural gate. Run `npm run validate:questions` (or `node question-gen/validate.mjs <slug>`). Use `--seed` to validate the private bank directly.
 - `question-gen/banks/<examSlug>.json` ΓÇö one bank per exam slug (export with `npm run export:question-banks`).
-- `src/convex/seed/devQuestionBank.ts` ΓÇö live seed bank consumed by Convex (`npm run seed:dev:questions`).
+- `src/convex/seed/devQuestionBank.private.ts` ΓÇö gitignored live seed bank consumed by Convex (`npm run seed:dev:questions`). See `src/convex/seed/QUESTION_BANK.md`.
 - Domain names on questions MUST exactly match `domains[].name` in `tracks.config.json` / `src/lib/catalog/trackDocSources.ts`.
 
 ## Grounding source

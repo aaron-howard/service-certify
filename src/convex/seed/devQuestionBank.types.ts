@@ -1,6 +1,6 @@
 import type { MatchPair, QuestionType } from '../../lib/catalog/questionTypes';
 
-/** Row shape for `practiceQuestions` dev seed (checked into repo). */
+/** Row shape for the gitignored private practice bank. */
 export type { MatchPair, QuestionType } from '../../lib/catalog/questionTypes';
 
 export type DevPracticeQuestionRow = {

@@ -38,6 +38,7 @@ Welcome to the Service Certify docs. Use this directory to understand how the ap
 - [GitHub Wiki](https://github.com/aaron-howard/service-certify/wiki) — Contributor orientation (source: [`wiki/`](../wiki/))
 
 **Question bank?**
+- [`../src/convex/seed/QUESTION_BANK.md`](../src/convex/seed/QUESTION_BANK.md) — Private bank location (not in public git)
 - [`agent-prompts/certification-questions.md`](./agent-prompts/certification-questions.md) — Authoring / merge / seed pipeline
 - Exam detail **domain cards** (names + weights) come from [`trackDocSources.ts`](../src/lib/catalog/trackDocSources.ts); per-question `domain` tags are stored on Convex `practiceQuestions` after `npm run seed:dev:questions`
 - [`agent-prompts/batch-assignments/`](./agent-prompts/batch-assignments/) — Per-track v2 plans (complete)
