@@ -16,17 +16,6 @@ export const CAD_DOMAIN_TARGETS = {
 	'Managing Applications': 9
 } as const;
 
-export type CadDomain = keyof typeof CAD_DOMAIN_TARGETS;
-
-export const CAD_DOMAINS = [
-	'Designing and Creating an Application',
-	'Application User Interface',
-	'Security and Restricting Access',
-	'Application Automation',
-	'Working with External Data',
-	'Managing Applications'
-] as const satisfies readonly CadDomain[];
-
 /**
  * Legacy template wrappers used by the pre-rewrite CAD bank. These leak the
  * "quiz template" tone and are banned in both stems and choices.

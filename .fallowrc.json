@@ -1,0 +1,48 @@
+{
+	"$schema": "https://raw.githubusercontent.com/fallow-rs/fallow/main/schema.json",
+	"ignoreExportsUsedInFile": true,
+	"ignorePatterns": [
+		"src/convex/_generated/**",
+		"fallow-results.json",
+		".fallow/**"
+	],
+	"ignoreDependencies": [
+		"@sveltejs/kit",
+		"tailwindcss"
+	],
+	"ignoreExports": [
+		{
+			"file": "src/lib/catalog/**/*.{ts,js}",
+			"exports": [
+				"SN_DOCS_BRANCH",
+				"SN_DOCS_RAW_BASE",
+				"BANNED_CHOICE_PREFIXES",
+				"BANNED_STEM_PATTERNS",
+				"BANNED_STEM_PREFIXES",
+				"STEM_OPENER_CAP",
+				"containsBannedChoicePrefix",
+				"containsBannedStemPattern",
+				"containsBannedStemPrefix",
+				"domainForOrder",
+				"fourWordOpener",
+				"isScenarioStylePrompt"
+			]
+		},
+		{
+			"file": "src/lib/data/{exams,certification-tracks}.ts",
+			"exports": [
+				"certificationTracks",
+				"CertificationTrack"
+			]
+		}
+	],
+	"duplicates": {
+		"ignore": [
+			"scripts/**",
+			"tools/**"
+		]
+	},
+	"rules": {
+		"dev-dependencies-in-production": "off"
+	}
+}

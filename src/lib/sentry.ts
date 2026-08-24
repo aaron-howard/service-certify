@@ -161,11 +161,6 @@ export function clearSentryUser() {
 	Sentry.setUser(null);
 }
 
-/** Capture a message (info, warning, error). */
-export function captureMessage(message: string, level: 'info' | 'warning' | 'error' = 'info') {
-	Sentry.captureMessage(message, level);
-}
-
 export type SentryExceptionContext = Record<string, string | number | boolean | null>;
 
 function toCaptureableError(cause: unknown): Error | string {

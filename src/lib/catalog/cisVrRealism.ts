@@ -5,8 +5,6 @@ import type { RealismQuestionRow } from './realismQuestionRow';
 
 /** Bank distribution for 75 questions (45 official + 30 buffer). */
 
-export const CIS_VR_BANK_SIZE = 75;
-
 export const CIS_VR_DOMAIN_TARGETS = {
 	'VR Applications and Modules': 19,
 	'Getting Data into Vulnerability Response': 19,

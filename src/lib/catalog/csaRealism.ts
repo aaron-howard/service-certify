@@ -14,17 +14,6 @@ export const CSA_DOMAIN_TARGETS = {
 	'Data Migration and Integration': 12
 } as const;
 
-export type CsaDomain = keyof typeof CSA_DOMAIN_TARGETS;
-
-export const CSA_DOMAINS = [
-	'Platform Overview and Navigation',
-	'Instance Configuration',
-	'Configuring Applications for Collaboration',
-	'Self Service and Automation',
-	'Database Management and Platform Security',
-	'Data Migration and Integration'
-] as const satisfies readonly CsaDomain[];
-
 export const BANNED_CHOICE_PREFIXES = [
 	'Typically,',
 	'Operationally,',
