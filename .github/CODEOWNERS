@@ -1,0 +1,4 @@
+# CI/CD — require owner review on workflow and bot config changes
+.github/workflows/ @aaron-howard
+.github/dependabot.yml @aaron-howard
+.github/CODEOWNERS @aaron-howard

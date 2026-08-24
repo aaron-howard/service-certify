@@ -17,6 +17,7 @@
 	const errorMessages = {
 		workos_not_configured: 'WorkOS is not configured on the server. Add WORKOS_API_KEY and WORKOS_CLIENT_ID to .env.local.',
 		invalid_provider: 'That sign-in provider is not supported.',
+		invalid_state: 'Sign-in could not be verified. Please try again.',
 		no_code: 'Sign-in was cancelled or no authorization code was returned.',
 		authentication_failed: 'Sign-in failed. Check WorkOS redirect URIs and enabled providers.',
 		access_denied: 'Sign-in was cancelled.'

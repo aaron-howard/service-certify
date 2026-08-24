@@ -7,7 +7,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const bankPath = path.join(__dirname, '..', 'src', 'convex', 'seed', 'devQuestionBank.ts');
+const bankPath = path.join(__dirname, '..', 'src', 'convex', 'seed', 'devQuestionBank.private.ts');
 
 export function domainForOrder(order) {
 	if (order <= 1) return 'SPM Implementation Overview';

@@ -1,6 +1,6 @@
 # Agent prompt: certification practice questions (dev bank)
 
-Use this template when spinning up **one subagent per track** or **one subagent per batch of tracks** to expand the dev question bank in [`src/convex/seed/devQuestionBank.ts`](../../src/convex/seed/devQuestionBank.ts).
+Use this template when spinning up **one subagent per track** or **one subagent per batch of tracks** to expand the private dev question bank in [`src/convex/seed/devQuestionBank.private.ts`](../../src/convex/seed/devQuestionBank.private.ts) (gitignored; see [`QUESTION_BANK.md`](../../src/convex/seed/QUESTION_BANK.md)).
 
 Track-to-publication mappings live in [`src/lib/catalog/trackDocSources.ts`](../../src/lib/catalog/trackDocSources.ts). Batch topic assignments for Phase 1 are in [`batch-assignments/phase1-csa-cad-cis-itsm.md`](batch-assignments/phase1-csa-cad-cis-itsm.md).
 
@@ -76,7 +76,7 @@ Batch variant: list all `(trackCode, officialName, orderRange, topicUrls)` tuple
 From repo root:
 
 ```bash
-# Merge JSON batch files into devQuestionBank.ts (append + dedupe by trackCode+order)
+# Merge JSON batch files into the private bank (append + dedupe by trackCode+order)
 node scripts/extract-questions-from-transcripts.mjs --merge-batches
 
 # Merge specific batch files
