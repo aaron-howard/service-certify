@@ -46,18 +46,20 @@ export function workOSRedirectUri(origin: string): string {
 
 export function getOAuthAuthorizationUrl(
 	origin: string,
-	provider: OAuthProviderSlug
+	provider: OAuthProviderSlug,
+	state: string
 ): string | null {
 	const workos = getWorkOS();
 	const clientId = getWorkOSClientId();
 	const workosProvider = OAUTH_PROVIDERS[provider];
 
-	if (!workos || !clientId || !workosProvider) return null;
+	if (!workos || !clientId || !workosProvider || !state) return null;
 
 	return workos.userManagement.getAuthorizationUrl({
 		clientId,
 		provider: workosProvider,
-		redirectUri: workOSRedirectUri(origin)
+		redirectUri: workOSRedirectUri(origin),
+		state
 	});
 }
 

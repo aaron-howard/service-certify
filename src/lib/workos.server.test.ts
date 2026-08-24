@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { OAUTH_PROVIDERS, toOAuthProviderSlug } from '$lib/workos.server';
+import { getOAuthAuthorizationUrl, OAUTH_PROVIDERS, toOAuthProviderSlug } from '$lib/workos.server';
 
 describe('toOAuthProviderSlug', () => {
 	it('accepts every configured provider slug', () => {
@@ -32,5 +32,15 @@ describe('toOAuthProviderSlug', () => {
 		expect(toOAuthProviderSlug('constructor')).toBeUndefined();
 		expect(toOAuthProviderSlug('toString')).toBeUndefined();
 		expect(toOAuthProviderSlug('__proto__')).toBeUndefined();
+	});
+});
+
+describe('getOAuthAuthorizationUrl', () => {
+	it('returns null when WorkOS is not configured', () => {
+		expect(getOAuthAuthorizationUrl('http://localhost:5173', 'google', 'csrf-state-nonce')).toBeNull();
+	});
+
+	it('returns null when state is empty even if a provider is valid', () => {
+		expect(getOAuthAuthorizationUrl('http://localhost:5173', 'google', '')).toBeNull();
 	});
 });

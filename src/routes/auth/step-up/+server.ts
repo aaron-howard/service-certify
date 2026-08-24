@@ -10,6 +10,7 @@ import {
 	stepUpRedirectPath,
 	type StepUpIntent
 } from '$lib/workos-step-up';
+import { generateOAuthState, setOAuthStateCookie } from '$lib/oauthState';
 import { safeInternalRedirect } from '$lib/safeRedirect';
 import { isAccessTokenExpired } from '$lib/workos-session';
 
@@ -63,9 +64,13 @@ export const GET: RequestHandler = async ({ url, cookies }) => {
 		}
 	}
 
+	const state = generateOAuthState();
+	setOAuthStateCookie(cookies, state, url.protocol === 'https:');
+
 	const authorizationUrl = getAuthKitStepUpAuthorizationUrl(url.origin, {
 		maxAge: 0,
-		loginHint
+		loginHint,
+		state
 	});
 
 	if (!authorizationUrl) {
