@@ -1,0 +1,41 @@
+---
+description: WorkOS OAuth session, Convex JWT, admin bootstrap, and account-deletion step-up
+globs: src/lib/workos*.ts,src/lib/auth.server.ts,src/lib/oauthState.ts,src/convex/auth*.ts,src/convex/lib/authorization.ts,src/convex/lib/workosIdentity.ts,src/convex/lib/adminEmails.ts,src/convex/lib/authFreshness.ts,src/routes/auth/**/*,src/hooks.server.ts,src/routes/api/auth/**/*,src/routes/api/account/**/*
+alwaysApply: false
+---
+
+# WorkOS auth
+
+Full setup: `docs/AUTH-WORKOS.md`, `docs/WORKOS-ENVIRONMENTS.md`.
+
+## Flow
+
+1. `/auth/login?provider=google|microsoft` → WorkOS
+2. `/auth/callback` sets httpOnly session cookies
+3. `hooks.server.ts` populates `locals.workosToken` / `workosUserId`
+4. Layout syncs Convex `createOrUpdateUser` when `PUBLIC_CONVEX_URL` is set
+5. Browser Convex client fetches JWT from `/api/auth/convex-token`
+
+Redirect URI is **derived**: `{request origin}/auth/callback`. Do not hardcode a single production URL.
+
+## Env
+
+| Where | Vars |
+| --- | --- |
+| SvelteKit `.env.local` | `WORKOS_API_KEY`, `WORKOS_CLIENT_ID` (server-only) |
+| Convex dashboard | `WORKOS_CLIENT_ID`, `ADMIN_EMAILS` |
+
+WorkOS JWT template must include `"aud": "<CLIENT_ID>"` or Convex throws `NoAuthProvider`. Use `sk_test_` / staging on local + Vercel Preview; `sk_live_` only on production.
+
+## Authorization
+
+- Convex: `workosUserIdFromIdentity` → `users.by_workosId`. **Never** bind a session to a user by email
+- Admin: `ADMIN_EMAILS` promotes allowlisted emails to `role: "admin"` on sync; subsequent checks use `requireAdmin`
+- Account deletion: `/auth/step-up` + `authFreshness` — do not delete on a stale session
+- `POST /api/account/delete` is step-up gated
+
+## Do not
+
+- Expose WorkOS keys as `PUBLIC_*`
+- Authorize full-mock or admin export from a client-supplied role flag
+- Treat `/membership` as payment gating (not wired)

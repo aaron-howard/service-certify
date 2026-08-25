@@ -18,6 +18,7 @@ Convex agent skills for common tasks can be installed by running
 - Architecture: [`docs/architecture.md`](./docs/architecture.md)
 - Auth: [`docs/AUTH-WORKOS.md`](./docs/AUTH-WORKOS.md)
 - Doc index: [`docs/README.md`](./docs/README.md)
+- Cursor rules: [`.cursor/rules/`](./.cursor/rules/) (`service-certify.mdc` always applies; others attach by glob)
 
 ## Cursor Cloud specific instructions
 

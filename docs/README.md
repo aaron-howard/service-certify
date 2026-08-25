@@ -9,6 +9,7 @@ Welcome to the Service Certify docs. Use this directory to understand how the ap
 **Getting started?**
 - Start with root [`README.md`](../README.md) for setup and quick start
 - Env template: [`.env.example`](../.env.example)
+- Cursor agent rules: [`.cursor/rules/`](../.cursor/rules/)
 
 **Want to understand the system?**
 - Read [`architecture.md`](./architecture.md) — System design, data flow, known gaps

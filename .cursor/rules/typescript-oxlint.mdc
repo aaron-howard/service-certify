@@ -1,0 +1,34 @@
+---
+description: Oxlint anti-slop rules and $lib/parse boundary decoding (no typeof / unknown params)
+globs: src/**/*.{ts,svelte},oxlint.config.ts
+alwaysApply: false
+---
+
+# TypeScript + oxlint anti-slop
+
+Lint is **oxlint** (`npm run lint`), plugin `tools/oxlint/anti-slop`. Config: `oxlint.config.ts`. Typecheck: `npm run check`.
+
+## Banned patterns (error)
+
+- `typeof` runtime checks → `anti-slop/no-runtime-typeof`
+- `unknown` params / returns / aliases
+- `any`, chained assertions, widen-then-assert
+- Bare `object` parameters and unsafe `Record` dictionaries
+- Module mocking patterns the plugin flags
+
+## Boundary decoding
+
+Use `$lib/parse` instead of `typeof` / `unknown`:
+
+- `UntypedInput` / `JsonValue` / `JsonObject`
+- `isStringValue`, `isPlainObject`, `readString`, `readFiniteNumber`, `parseJsonValue`, `readProcessEnv`
+
+At I/O edges, parse into a named domain type, then use that type inward.
+
+## Assertions
+
+If a type assertion is unavoidable, put a `// SAFETY:` comment on the preceding line explaining why it is sound (see `parseJsonValue` and the Convex token fetch in `+layout.svelte`). Do not add SAFETY comments to silence the rule.
+
+## Convex / Svelte interop
+
+Generated `src/convex/_generated/**` is ignored by oxlint. Do not disable anti-slop in app source to match Convex guideline snippets that use `typeof` or `unknown` — adapt those snippets to `$lib/parse`.

@@ -1,0 +1,39 @@
+---
+description: Practice sessions, grading API, private question bank, and seed pipeline
+globs: src/convex/practiceQuestions.ts,src/convex/lib/practiceAccess.ts,src/convex/userProgress.ts,src/convex/seed/**/*,src/lib/practice/**/*,src/lib/catalog/**/*,src/lib/data/exams.ts,src/routes/exams/**/*,src/routes/api/practice/**/*,docs/agent-prompts/**/*,scripts/**/*question*
+alwaysApply: false
+---
+
+# Practice questions
+
+## Runtime
+
+- Catalog UI reads static `$lib/data/exams.ts`. Domain names/weights: `$lib/catalog/trackDocSources.ts` — question `domain` tags must match `domains[].name` exactly
+- Session UI: `/exams/[slug]/practice`. Client helpers in `$lib/practice/` (timer, shuffle, draft, keyboard)
+- Load questions via Convex `listByTrackCode` (sample public ≤3; full = admin + `sessionSeed`)
+- Submit via **`POST /api/practice/grade`** (Upstash IP rate limit) → `gradeAnswers`. Do not grade in the browser with leaked keys
+- List payloads omit `correctIndex` / explanations. Keep it that way
+
+## Private bank
+
+| Path | Git | Role |
+| --- | --- | --- |
+| `src/convex/seed/devQuestionBank.ts` | tracked | loader + `isFullQuestionBank()` (≥400 rows) |
+| `src/convex/seed/devQuestionBank.private.ts` | **gitignored** | full prompts/answers |
+| `src/convex/seed/devQuestionBank.private.example.ts` | tracked | one-row stub |
+
+`npm prepare` copies the stub when the private file is missing. `npm run seed:dev:questions` **refuses** if only the stub is loaded (prevents wiping Convex).
+
+## Authoring
+
+Use `.cursor/skills/servicenow-exam-question-gen/SKILL.md` and `docs/agent-prompts/certification-questions.md`.
+
+- Ground in [ServiceNow/ServiceNowDocs](https://github.com/ServiceNow/ServiceNowDocs) markdown (`australia` family). Never scrape servicenow.com/docs
+- Never copy Pearson VUE / confidential exams / brain dumps
+- Realism tests: `src/convex/seed/*-realism.test.ts` (skip when the stub bank is tiny)
+
+## Do not
+
+- Commit the private bank or put answer keys in `$lib/data`
+- Seed production with the stub
+- Change official domain strings in one file only — keep `trackDocSources.ts` and seed `domain` fields in sync

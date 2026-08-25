@@ -1,0 +1,41 @@
+---
+description: Convex backend conventions for Service Certify (src/convex, authz, catalog re-exports)
+globs: src/convex/**/*.ts
+alwaysApply: false
+---
+
+# Convex (`src/convex`)
+
+Before editing Convex functions, read `src/convex/_generated/ai/guidelines.md`. Functions live under `src/convex/` (`convex.json` `"functions": "src/convex/"`). Import generated API as `import { api } from '$convex/_generated/api'` from the app, or `./_generated/api` inside Convex.
+
+## Tables
+
+`users`, `certificationTracks`, `practiceQuestions`, `userProgress` — see `schema.ts`. Index foreign keys (`by_workosId`, `by_trackCode`, …). Prefer `.withIndex()` over `.filter()`.
+
+## Authz (non-negotiable)
+
+- Resolve the current user with `getAuthenticatedUser` / `requireUser` / `requireAdmin` from `lib/authorization.ts`
+- Lookup **only** by WorkOS JWT subject → `workosId`. **Never** authorize by email (no unique constraint on `by_email`)
+- Seeds are `internalMutation` (`internal.seed.apply`, `internal.seed.devQuestions`). Do not expose seed as a public API
+- Schedule only `internal.*` functions
+
+## Practice APIs
+
+- `listByTrackCode`: strips answers/explanations. Sample ≤3; full requires admin + `sessionSeed` (≥8 chars)
+- `gradeAnswers`: server-side scoring; authenticated calls also write `userProgress`
+- Shared access helpers: `lib/practiceAccess.ts` (`applyModeLimit`, `validateAnswersForMode`)
+
+## Catalog source of truth
+
+Edit track metadata, domain names, and question policy in `src/lib/catalog/` (and `$lib/data`). `src/convex/catalog/*.ts` are **thin re-exports** — do not fork copies.
+
+## Validators
+
+Always define `args` with `v.*`. This repo historically omits `returns:` validators; do not mass-add them in an unrelated change. Await every `ctx.db.*` and `ctx.scheduler.*` call.
+
+## Do not
+
+- Create a root `convex/` directory
+- Use `Date.now()` inside queries
+- Trust client-sent `role` or email for admin checks
+- Commit or regenerate a public copy of `devQuestionBank.private.ts`
