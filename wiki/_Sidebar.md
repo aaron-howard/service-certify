@@ -7,6 +7,7 @@
 ### Docs (in repo)
 
 * [Doc index](https://github.com/aaron-howard/service-certify/blob/main/docs/README.md)
+* [Tutorial: first practice](https://github.com/aaron-howard/service-certify/blob/main/docs/tutorial-first-practice-session.md)
 * [Architecture](https://github.com/aaron-howard/service-certify/blob/main/docs/architecture.md)
 * [Auth (WorkOS)](https://github.com/aaron-howard/service-certify/blob/main/docs/AUTH-WORKOS.md)
 * [Launch checklist](https://github.com/aaron-howard/service-certify/blob/main/docs/PRODUCTION_READINESS_AUDIT.md)

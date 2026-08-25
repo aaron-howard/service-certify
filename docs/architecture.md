@@ -1,6 +1,6 @@
 # System Architecture
 
-**Last updated:** 2026-07-16
+**Last updated:** 2026-08-25
 
 ## Overview
 
@@ -35,8 +35,9 @@ Service Certify is a three-tier web application for practicing ServiceNow certif
 │                                                                      │
 │  Queries                          Mutations                          │
 │  • listByTrackCode (sample/full)  • gradeAnswers                     │
-│  • getUserByEmail                 • createOrUpdateUser               │
-│  • certification tracks           • deleteAccount                    │
+│  • tracks.list                    • createOrUpdateUser               │
+│  • getCurrentUser / getUserByEmail• deleteAccount                    │
+│  • listForCurrentUser             • recordSession                    │
 │                                                                      │
 │  Tables:                                                             │
 │  • users (workosId, email, role, …)                                  │
@@ -56,7 +57,7 @@ Service Certify is a three-tier web application for practicing ServiceNow certif
 2. **Open exam detail** → Static exam metadata + CTA for sample or full mock.
 3. **Practice session** → Client loads questions via Convex `listByTrackCode` (`mode=sample` public, up to 3 questions; `mode=full` requires admin JWT).
 4. **Submit** → `POST /api/practice/grade` (IP rate-limited) → Convex `gradeAnswers` → score + explanations returned to client.
-5. **Progress** → Authenticated `gradeAnswers` calls `recordPracticeSession` in `userProgress.ts`; `/dashboard` lists live progress via `listForCurrentUser`.
+5. **Progress** → `gradeAnswers` calls `recordPracticeSession` when Convex sees a JWT. The SvelteKit grade route attaches that JWT for `mode=full` only. `/dashboard` lists progress via `listForCurrentUser`. Details: [explanation-access-model.md](./explanation-access-model.md).
 
 ### Authentication (implemented)
 
@@ -135,6 +136,11 @@ Without Convex, the UI still runs using static catalog data; practice questions 
 - [PRODUCTION_READINESS_AUDIT.md](./PRODUCTION_READINESS_AUDIT.md)
 - [AUTH-WORKOS.md](./AUTH-WORKOS.md)
 - [auth-setup.md](./auth-setup.md)
+- [explanation-data-split.md](./explanation-data-split.md) — static catalog vs Convex questions
+- [explanation-access-model.md](./explanation-access-model.md) — sample vs full mock
+- [reference-convex-api.md](./reference-convex-api.md)
+- [reference-http-api.md](./reference-http-api.md)
+- [reference-catalog.md](./reference-catalog.md)
 - [Convex docs](https://docs.convex.dev)
 - [SvelteKit docs](https://kit.svelte.dev)
 - [Vercel + SvelteKit guide](https://vercel.com/docs/frameworks/sveltekit)

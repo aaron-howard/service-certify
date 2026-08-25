@@ -119,7 +119,11 @@ Versioning / releases: [`docs/RELEASES.md`](./docs/RELEASES.md), [`CHANGELOG.md`
 
 | Doc | Purpose |
 | --- | ------- |
-| [`docs/README.md`](./docs/README.md) | Doc index |
+| [`docs/README.md`](./docs/README.md) | Doc index (includes Diataxis map) |
+| [`docs/tutorial-first-practice-session.md`](./docs/tutorial-first-practice-session.md) | Tutorial: catalog + sample practice |
+| [`docs/howto-run-convex-locally.md`](./docs/howto-run-convex-locally.md) | How-to: Convex + seed |
+| [`docs/reference-convex-api.md`](./docs/reference-convex-api.md) | Reference: Convex schema and functions |
+| [`docs/explanation-data-split.md`](./docs/explanation-data-split.md) | Why catalog is static and questions are Convex |
 | [`docs/PRODUCTION_READINESS_AUDIT.md`](./docs/PRODUCTION_READINESS_AUDIT.md) | Launch checklist |
 | [`docs/architecture.md`](./docs/architecture.md) | System design |
 | [`docs/AUTH-WORKOS.md`](./docs/AUTH-WORKOS.md) | Auth setup |

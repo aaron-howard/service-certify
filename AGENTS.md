@@ -17,7 +17,9 @@ Convex agent skills for common tasks can be installed by running
 - Launch checklist: [`docs/PRODUCTION_READINESS_AUDIT.md`](./docs/PRODUCTION_READINESS_AUDIT.md)
 - Architecture: [`docs/architecture.md`](./docs/architecture.md)
 - Auth: [`docs/AUTH-WORKOS.md`](./docs/AUTH-WORKOS.md)
-- Doc index: [`docs/README.md`](./docs/README.md)
+- Doc index: [`docs/README.md`](./docs/README.md) (Diataxis tutorial / how-to / reference / explanation)
+- First practice loop: [`docs/tutorial-first-practice-session.md`](./docs/tutorial-first-practice-session.md)
+- Convex API: [`docs/reference-convex-api.md`](./docs/reference-convex-api.md)
 - Cursor rules: [`.cursor/rules/`](./.cursor/rules/) (`service-certify.mdc` always applies; others attach by glob)
 
 ## Cursor Cloud specific instructions
