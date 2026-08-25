@@ -1,0 +1,33 @@
+---
+description: Vitest colocated unit tests, Playwright e2e/a11y, and question-bank test skip behavior
+globs: "**/*.test.ts,**/*.spec.ts,tests/e2e/**/*,vitest.config.ts,playwright.config.ts,src/lib/test-utils.ts,src/lib/test-stubs/**"
+alwaysApply: false
+---
+
+# Testing
+
+Guide: `docs/TESTING.md`, `docs/E2E-AND-A11Y.md`.
+
+## Unit (Vitest)
+
+- Colocate `*.test.ts` / `*.spec.ts` next to source under `src/`
+- Route tests may use `__tests__/` (e.g. `src/routes/api/health/__tests__/`)
+- `happy-dom`, `globals: true`
+- `$env/*` is aliased to `src/lib/test-stubs/` in `vitest.config.ts`
+- Shared helpers: `src/lib/test-utils.ts`
+- Run: `npm test` (file: `npm test src/lib/rateLimit.test.ts`)
+
+When you change a module that already has tests, update those tests. Add tests for new public helpers.
+
+## E2E / a11y (Playwright)
+
+- Specs: `tests/e2e/*.spec.ts`
+- `npm run test:e2e` · a11y only: `npm run test:a11y` (`accessibility.spec.ts` + axe)
+
+## Question-bank realism
+
+Per-track `src/convex/seed/*-realism.test.ts` and large-bank checks **auto-skip** when `devQuestionBank.private.ts` is the tiny stub (`< ~100KB` / `< 400` rows). Do not “fix” CI by weakening realism assertions; keep skips tied to `isFullQuestionBank()`.
+
+## Convex tests
+
+Prefer testing pure helpers (`lib/authorization.ts`, `lib/practiceAccess.ts`, catalog realism) without a live deployment. Do not call production Convex or commit secrets in fixtures.

@@ -1,0 +1,40 @@
+---
+description: Editorial Architect design tokens, Tailwind v4, and UI do/don't for Service Certify
+globs: src/routes/**/*.svelte,src/lib/components/**/*.svelte,src/routes/layout.css
+alwaysApply: false
+---
+
+# Editorial Architect UI
+
+Canonical spec: `stitch_service_certify_prd/stitch_service_certify_prd/nexus_academy/DESIGN.md`. Tokens live in `src/routes/layout.css` (`@theme`). Tailwind v4 via `@tailwindcss/vite` — there is no `tailwind.config.js`.
+
+## Tokens
+
+- Primary: `#001b44` / container `#002f6c` (midnight)
+- Action / success: secondary `#4a6700` and container `#bdf14f` — not generic “success green”
+- Text: `on-surface` `#191c1d` — never pure black
+- Type: Manrope (`font-headline`) + Inter (`font-body` / `font-label`)
+- Utilities: `editorial-gradient`, `glass-card`, `shadow-ambient`
+
+## The no-line rule
+
+Do not use 1px solid borders to section content. Separate regions with surface shifts:
+
+- Level 0: `bg-surface`
+- Level 1: `bg-surface-container-low`
+- Level 2 (cards): `bg-surface-container-lowest`
+
+If a divider is required for a11y, use `outline-variant` at ~15% opacity.
+
+## Components
+
+- Primary CTA: `bg-secondary text-on-secondary` (e.g. Start practice)
+- Cards: no divider lines; sit on a shifted surface
+- Inputs: avoid boxed outlines; prefer `surface-container-high` fill
+- Icons: `$lib/components/MaterialIcon.svelte` (wght font only; “filled” = weight 600)
+
+## Do not
+
+- Flat purple/indigo SaaS palettes, heavy drop shadows, or a second component library
+- Import Google Fonts CSS when fontsource `wght.css` is already in `+layout.svelte`
+- Import Material Symbols `full.css` (~3.8MB)

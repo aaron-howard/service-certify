@@ -1,0 +1,34 @@
+---
+description: SvelteKit 2 / Svelte 5 runes, routing, loads, and $lib component conventions
+globs: src/routes/**/*.{ts,svelte},src/lib/**/*.svelte,src/hooks*.ts,src/app.d.ts,svelte.config.js
+alwaysApply: false
+---
+
+# SvelteKit / Svelte 5
+
+`vitePlugin.dynamicCompileOptions` forces **`runes: true`** for all non-`node_modules` files. Use `$props()`, `$state()`, `$derived`, `$effect`. Do not use Svelte 4 `export let` or implicit reactivity.
+
+## Files
+
+- Pages: `+page.svelte` + optional `+page.server.ts` (`PageServerLoad` from `./$types`)
+- Layout data: `src/routes/+layout.server.ts` returns `{ user, deployEnvironment }` via `getSessionUser`
+- Auth-gated pages (`/dashboard`, `/settings`): `const { user } = await parent();` then `redirect(302, `/auth/signin?redirect=…`)`
+- Secrets stay in `.server.ts` / `$env/dynamic/private`. Never `PUBLIC_WORKOS_*`
+
+## Imports
+
+- `$lib` → `src/lib`
+- `$convex` → `src/convex` (custom alias in `svelte.config.js`)
+- `$env/dynamic/public` | `private` — Vitest stubs these via `src/lib/test-stubs/`
+
+## UI
+
+Reuse `$lib/components/*` (`AppNav`, `AppFooter`, `MaterialIcon`, practice cards). Do not add shadcn/MUI. Icons: `MaterialIcon` + Material Symbols names. Fonts: `@fontsource-variable/.../wght.css` only — **never** `full.css`.
+
+## Convex on the client
+
+Root layout calls `setupConvex` only when `PUBLIC_CONVEX_URL` is set; otherwise the client is disabled. Browser JWT comes from `GET /api/auth/convex-token`. SSR practice/progress uses `$lib/convex.server.ts` with the WorkOS session token.
+
+## CSP
+
+`svelte.config.js` `kit.csp` is the source of truth. New third-party origins need a directive update (Convex, Sentry ingest, Vercel insights are already listed).

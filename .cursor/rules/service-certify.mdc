@@ -1,0 +1,52 @@
+---
+description: Service Certify project identity, stack, env files, and agent gotchas
+alwaysApply: true
+---
+
+# Service Certify
+
+SvelteKit 2 / Svelte 5 practice platform for ServiceNow certification exams. Visual design is **Editorial Architect** (Stitch prototypes), not a generic purple SaaS template.
+
+## Stack
+
+- Frontend: SvelteKit 2, Svelte 5 **runes only**, Tailwind CSS v4, `convex-svelte`
+- Backend: Convex at **`src/convex/`** (not repo-root `convex/`). Alias: `$convex` → `src/convex`
+- Auth: WorkOS OAuth (Google / Microsoft). Identity is **`workosId`**, never email
+- Host: Vercel (`@sveltejs/adapter-vercel`). Node `>=22.11.0`
+- Lint: **oxlint** + anti-slop plugin (`npm run lint`). Not ESLint
+
+## Data split (do not invert)
+
+- Exam catalog / domain cards: **static** — `$lib/data/exams.ts`, `$lib/catalog/trackDocSources.ts`
+- Practice questions, grading, OAuth→Convex user sync, progress: **Convex** (`PUBLIC_CONVEX_URL`)
+- Without Convex the UI still renders from static data. Do not invent client-side answer keys to “fix” empty practice
+
+## Env files (two of them)
+
+- `.env.convex` — committed; Convex CLI (`npm run convex:dev`, seeds) via `--env-file`
+- `.env.local` — gitignored; SvelteKit/Vite. Copy `PUBLIC_CONVEX_URL` from `.env.convex`
+- Convex dashboard env (not `.env.local`): `ADMIN_EMAILS`, `WORKOS_CLIENT_ID`
+
+## Access model
+
+- Sample practice: public, **≤3 questions**, answers stripped from list queries
+- Full mock: **admin role** (`ADMIN_EMAILS` bootstrap), not paid membership. Membership UI is Phase D placeholder
+- There is **no `/admin` route tree**. Admin is `users.role === "admin"`
+
+## Never edit / never commit
+
+- `src/convex/_generated/**` (codegen)
+- `src/convex/seed/devQuestionBank.private.ts` (gitignored full bank)
+- `patches/**` unless intentionally upgrading adapter-vercel
+- `.svelte-kit/`, `build/`, `.vercel/`
+
+## Commands
+
+- App: `npm run dev` (http://localhost:5173)
+- Convex: `npm run convex:dev`
+- Check: `npm run check` · Tests: `npm test` · Lint: `npm run lint`
+- Seed: `npm run seed:dev` then `npm run seed:dev:questions` (refuses stub bank)
+
+## Docs
+
+Read `docs/architecture.md`, `docs/AUTH-WORKOS.md`, `src/convex/_generated/ai/guidelines.md` (before Convex edits), and `AGENTS.md`.
