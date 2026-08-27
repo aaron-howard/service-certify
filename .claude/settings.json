@@ -6,5 +6,8 @@
       "Bash(git add *)",
       "Bash(git commit -m ' *)"
     ]
+  },
+  "enabledPlugins": {
+    "vercel@claude-plugins-official": true
   }
 }

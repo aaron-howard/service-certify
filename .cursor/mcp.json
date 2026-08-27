@@ -35,6 +35,29 @@
 				"SEMGREP_APP_TOKEN": "${env:SEMGREP_APP_TOKEN}"
 			},
 			"envFile": "${workspaceFolder}/.env.mcp.local"
+		},
+		"svelte": {
+			"command": "npx",
+			"args": ["-y", "@sveltejs/mcp@0.1.26"]
+		},
+		"context7": {
+			"transport": "http",
+			"url": "https://mcp.context7.com/mcp",
+			"headers": {
+				"Authorization": "Bearer ${env:CONTEXT7_API_KEY}"
+			}
+		},
+		"github": {
+			"command": "npx",
+			"args": ["-y", "@modelcontextprotocol/server-github@2025.4.8"],
+			"env": {
+				"GITHUB_PERSONAL_ACCESS_TOKEN": "${env:GITHUB_PERSONAL_ACCESS_TOKEN}"
+			},
+			"type": "stdio"
+		},
+		"vercel": {
+			"type": "http",
+			"url": "https://mcp.vercel.com"
 		}
 	}
 }
