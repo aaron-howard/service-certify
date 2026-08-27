@@ -313,6 +313,8 @@ After setup:
 ## Related
 
 - [auth-setup.md](./auth-setup.md) — Short checklist
+- [howto-unlock-full-mock.md](./howto-unlock-full-mock.md) — local admin + full mock
+- [explanation-access-model.md](./explanation-access-model.md) — sample vs full, identity
 - [PRODUCTION_READINESS_AUDIT.md](./PRODUCTION_READINESS_AUDIT.md)
 - [TESTING.md](./TESTING.md) — Unit / E2E testing
 - WorkOS: [Documentation](https://workos.com/docs)
@@ -322,7 +324,7 @@ After setup:
 
 ## Admin access and full mock exams
 
-Admins can take **full mock exams** (all questions in the Convex bank). Anonymous users get a **sample** of up to 3 questions per track.
+Admins can take **full mock exams** (official exam length, randomized from the bank via `sessionSeed`). Anonymous users get a **sample** of up to 3 questions per track.
 
 ### Bootstrap an admin account
 

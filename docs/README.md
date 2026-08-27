@@ -2,17 +2,35 @@
 
 Welcome to the Service Certify docs. Use this directory to understand how the app is built and how to operate it.
 
-**Last updated:** 2026-07-16
+**Last updated:** 2026-08-25
+
+## Diataxis (learn / do / look up / understand)
+
+Start here if you are new to the codebase. Ops runbooks and ADRs stay in the sections below.
+
+| Quadrant | Doc |
+| --- | --- |
+| Tutorial | [`tutorial-first-practice-session.md`](./tutorial-first-practice-session.md) — clone → catalog → sample practice |
+| How-to | [`howto-run-convex-locally.md`](./howto-run-convex-locally.md) — two terminals + seed |
+| How-to | [`howto-add-exam-track.md`](./howto-add-exam-track.md) — new certification in catalog + policy |
+| How-to | [`howto-unlock-full-mock.md`](./howto-unlock-full-mock.md) — `ADMIN_EMAILS` full mock |
+| Reference | [`reference-convex-api.md`](./reference-convex-api.md) — schema + queries/mutations |
+| Reference | [`reference-http-api.md`](./reference-http-api.md) — health, grade, token, delete |
+| Reference | [`reference-catalog.md`](./reference-catalog.md) — 22 tracks, counts, `Exam` type |
+| Explanation | [`explanation-data-split.md`](./explanation-data-split.md) — static catalog vs Convex questions |
+| Explanation | [`explanation-access-model.md`](./explanation-access-model.md) — sample vs full, why admin not paid |
 
 ## For Developers
 
 **Getting started?**
 - Start with root [`README.md`](../README.md) for setup and quick start
+- Walk through [`tutorial-first-practice-session.md`](./tutorial-first-practice-session.md)
 - Env template: [`.env.example`](../.env.example)
 - Cursor agent rules: [`.cursor/rules/`](../.cursor/rules/)
 
 **Want to understand the system?**
 - Read [`architecture.md`](./architecture.md) — System design, data flow, known gaps
+- Read [`explanation-data-split.md`](./explanation-data-split.md) and [`explanation-access-model.md`](./explanation-access-model.md)
 - Read [`PRODUCTION_READINESS_AUDIT.md`](./PRODUCTION_READINESS_AUDIT.md) — Launch checklist (done vs remaining)
 
 **Auth?**
@@ -63,6 +81,15 @@ Welcome to the Service Certify docs. Use this directory to understand how the ap
 ```
 docs/
 ├── README.md                      ← You are here
+├── tutorial-first-practice-session.md
+├── howto-run-convex-locally.md
+├── howto-add-exam-track.md
+├── howto-unlock-full-mock.md
+├── reference-convex-api.md
+├── reference-http-api.md
+├── reference-catalog.md
+├── explanation-data-split.md
+├── explanation-access-model.md
 ├── PRODUCTION_READINESS_AUDIT.md  ← Launch checklist (done / remaining / Phase D)
 ├── architecture.md                ← System design and data flow
 ├── AUTH-WORKOS.md                 ← WorkOS OAuth + admin full mock

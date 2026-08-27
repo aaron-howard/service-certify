@@ -67,6 +67,9 @@ Convex (practiceQuestions, users, userProgress, gradeAnswers, …)
 | Topic | In-repo doc |
 | --- | --- |
 | Doc index | [docs/README.md](https://github.com/aaron-howard/service-certify/blob/main/docs/README.md) |
+| Tutorial (first practice) | [tutorial-first-practice-session.md](https://github.com/aaron-howard/service-certify/blob/main/docs/tutorial-first-practice-session.md) |
+| Convex + seed | [howto-run-convex-locally.md](https://github.com/aaron-howard/service-certify/blob/main/docs/howto-run-convex-locally.md) |
+| Convex API | [reference-convex-api.md](https://github.com/aaron-howard/service-certify/blob/main/docs/reference-convex-api.md) |
 | Launch checklist | [PRODUCTION_READINESS_AUDIT.md](https://github.com/aaron-howard/service-certify/blob/main/docs/PRODUCTION_READINESS_AUDIT.md) |
 | Auth (WorkOS) | [AUTH-WORKOS.md](https://github.com/aaron-howard/service-certify/blob/main/docs/AUTH-WORKOS.md) |
 | Rate limiting | [RATE-LIMITING.md](https://github.com/aaron-howard/service-certify/blob/main/docs/RATE-LIMITING.md) |
