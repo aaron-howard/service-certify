@@ -7,6 +7,10 @@
  *   node scripts/extract-questions-from-transcripts.mjs --merge-batches
  *   node scripts/extract-questions-from-transcripts.mjs --merge-batches scripts/question-batches/phase1-batch1.json
  *
+ * Merge order: batch JSON files are applied alphabetically by filename; later files
+ * overwrite the same trackCode+order. Name durable audit restores `zz-<track>-*.json`
+ * so they win over phase/gap/v2/fix batches (see zz-cpoe-round2-restore.json).
+ *
  * Env:
  *   TRANSCRIPT_SUBAGENTS — override path to subagent .jsonl folder
  *   MIN_PER_TRACK — minimum questions per track (optional)
